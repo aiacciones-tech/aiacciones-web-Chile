@@ -11,7 +11,7 @@ M = json.load(open(os.path.join(ROOT, "web", "assets", "mercado.json"), encoding
 ACC = M["acciones"]
 _hp = os.path.join(ROOT, "web", "assets", "hechos.json")
 HE = json.load(open(_hp, encoding="utf-8")) if os.path.exists(_hp) else {"items": []}
-DESDE = "4-oct-2026"  # desde cuándo seguimos los hechos esenciales
+DESDE = "27-sep-2026"  # desde cuándo seguimos los hechos esenciales
 MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
 
 
