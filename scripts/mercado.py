@@ -110,5 +110,67 @@ def fetch():
     print(len(out["acciones"]), "acciones")
 
 
+# Hechos esenciales (CMF): portada con los recibidos en los últimos 7 días; se acumulan en hechos.json
+EMISORES = {"andina-a": ["EMBOTELLADORA ANDINA S.A."], "bci": ["BANCO DE CREDITO E INVERSIONES"],
+            "besalco": ["BESALCO S.A."], "bsantander": ["BANCO SANTANDER-CHILE", "BANCO SANTANDER CHILE"],
+            "cap": ["CAP S.A."], "cencomalls": ["CENCOSUD SHOPPING S.A."], "cencosud": ["CENCOSUD S.A."],
+            "cge": ["CGE S.A.", "COMPANIA GENERAL DE ELECTRICIDAD S.A."], "chile": ["BANCO DE CHILE"],
+            "cmpc": ["EMPRESAS CMPC S.A."], "colbun": ["COLBUN S.A."], "copec": ["EMPRESAS COPEC S.A."],
+            "ecl": ["ENGIE ENERGIA CHILE S.A."], "enelchile": ["ENEL CHILE S.A."],
+            "enelgxch": ["ENEL GENERACION CHILE S.A."], "falabella": ["FALABELLA S.A."],
+            "habitat": ["ADMINISTRADORA DE FONDOS DE PENSIONES HABITAT S.A.", "AFP HABITAT S.A."],
+            "iam": ["INVERSIONES AGUAS METROPOLITANAS S.A."], "itau": ["BANCO ITAU CHILE", "ITAU CORPBANCA"],
+            "mallplaza": ["PLAZA S.A."], "parauco": ["PARQUE ARAUCO S.A."], "planvital": ["AFP PLANVITAL S.A."],
+            "provida": ["AFP PROVIDA S.A.", "ADMINISTRADORA DE FONDOS DE PENSIONES PROVIDA S.A."],
+            "quinenco": ["QUINENCO S.A."], "ripley": ["RIPLEY CORP S.A."], "schwager": ["SCHWAGER S.A."],
+            "sk": ["SIGDO KOPPERS S.A."], "sqm-b": ["SOCIEDAD QUIMICA Y MINERA DE CHILE S.A."],
+            "vapores": ["COMPANIA SUD AMERICANA DE VAPORES S.A."], "aes-andes": ["AES ANDES S.A."],
+            "afpcapital": ["AFP CAPITAL S.A.", "ADMINISTRADORA DE FONDOS DE PENSIONES CAPITAL S.A."]}
+HOUT = os.path.join(ROOT, "web", "assets", "hechos.json")
+
+
+def norm(t):
+    import unicodedata
+    t = unicodedata.normalize("NFD", t.upper())
+    return re.sub(r"\s+", " ", "".join(c for c in t if unicodedata.category(c) != "Mn")).strip()
+
+
+def hechos():
+    import html as H
+    idx = {norm(n): fid for fid, ns in EMISORES.items() for n in ns}
+    old = json.load(open(HOUT)) if os.path.exists(HOUT) else {"items": []}
+    items = {i["num"]: i for i in old["items"]}
+    b = get("https://www.cmfchile.cl/institucional/hechos/hechos_portada.php")
+    n = 0
+    for tr in re.findall(r"<tr>(.*?)</tr>", b, re.S):
+        tds = re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)
+        a = re.search(r'href="([^"]*ver_sgd\.php[^"]*)"[^>]*>\s*(\d+)', tr)
+        if len(tds) < 4 or not a:
+            continue
+        ent = H.unescape(re.sub("<[^>]+>", " ", tds[2])).strip()
+        fid = idx.get(norm(ent))
+        if not fid:
+            continue
+        f = re.match(r"(\d\d)/(\d\d)/(\d{4}) (\d\d:\d\d)", re.sub("<[^>]+>", "", tds[0]).strip())
+        mat = [H.unescape(x).strip() for x in re.split(r"<br\s*/?>|\n", " | ".join(tds[3:])) if x.strip()]
+        mat = [m.strip(" |") for m in " | ".join(mat).split(" | ") if m.strip(" |")]
+        items[a.group(2)] = {"num": a.group(2), "id": fid, "ent": ent, "fecha": f"{f.group(3)}-{f.group(2)}-{f.group(1)} {f.group(4)}" if f else "",
+                             "materias": mat, "url": "https://www.cmfchile.cl" + H.unescape(a.group(1))}
+        n += 1
+    keep = sorted(items.values(), key=lambda i: i["fecha"], reverse=True)
+    corte = (datetime.date.today() - datetime.timedelta(days=400)).isoformat()
+    keep = [i for i in keep if i["fecha"] >= corte]
+    json.dump({"actualizado": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%MZ"), "items": keep},
+              open(HOUT, "w"), ensure_ascii=False, indent=1)
+    print("hechos esenciales:", n, "nuevos/vistos hoy,", len(keep), "guardados")
+
+
 if __name__ == "__main__":
-    fetch() if sys.argv[1:] == ["fetch"] else print(__doc__)
+    if sys.argv[1:] == ["fetch"]:
+        fetch()
+        try:
+            hechos()
+        except Exception as e:
+            print("hechos falló:", e)
+    else:
+        print(__doc__)

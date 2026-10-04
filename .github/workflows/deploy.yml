@@ -2,6 +2,7 @@
 # Credenciales: Settings > Secrets and variables > Actions (FTP_SERVER, FTP_USERNAME, FTP_PASSWORD).
 # Usa lftp porque el hosting corta el canal de datos TLS con el cliente de FTP-Deploy-Action (ECONNRESET).
 name: Publicar aiacciones.cl
+concurrency: publicar
 on:
   push:
     branches: [main]

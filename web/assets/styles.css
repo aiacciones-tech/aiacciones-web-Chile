@@ -356,3 +356,17 @@ select, input, textarea { font: inherit; color: var(--ink); background: var(--su
 @media (min-width: 1181px) { .xbtn span { display: none; } .xbtn { padding: 8px; } }
 .brand-logo { display: block; height: 44px; width: auto; }
 @media (max-width: 640px) { .brand-logo { height: 38px; } }
+
+
+/*mercado*/
+.hechos-l { list-style: none; margin: 0 0 8px; padding: 0; }
+.hechos-l li { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.hechos-l .hf { display: inline-block; min-width: 92px; font: 500 13px/1 var(--f-mono); color: var(--muted); }
+.hechos-l .tkr { font: 600 13px/1 var(--f-mono); margin-right: 4px; }
+.hdiv { font: 600 11px/1 var(--f-mono); padding: 3px 6px; border-radius: 3px; background: #4cc38a; color: #10241a; margin-right: 4px; }
+.hero { overflow: hidden; }
+.mkt .idx-t { min-width: 640px; }
+.idx-t th, .idx-t td { padding-left: 8px; padding-right: 8px; }
+.idx-t th .sub { display: block; font: 400 12px/1.3 var(--f-body); color: var(--muted); }
+.quote .note + .note { margin-top: 2px; }
+/*/mercado*/
