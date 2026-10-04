@@ -3,7 +3,7 @@ uso: python3 scripts/hornear.py [carpeta]   (por defecto web/)
 - cinta de precios de todas las páginas: precio de cierre y variación 12 meses
 - recuadro de precio de cada ficha: precio de cierre, variación del día y 12 meses
 - listado acciones/: columna de precio y variación 12 meses
-- portada: tabla de índices (IPSA, IGPA) con P/E, forward P/E y promedios de 5 y 10 años"""
+- portada: precio de cierre en las tarjetas de acciones y tabla de índices (IPSA, IGPA) con P/E, forward P/E y promedios de 5 y 10 años"""
 import json, os, re, sys, glob, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIR = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.join(ROOT, "web")
@@ -86,6 +86,24 @@ def listado(s):
             return m.group(0)
         return f'{m.group(1)}<td>{px(a["px"])}</td>{m.group(3)}<td class="{cls(a["y1"])}">{pct(a["y1"], 0)}</td></tr>'
     return re.sub(r'(<tr><th scope="row"><a href="([\w-]+)/index\.html">[^<]+</a></th><td class="txt">[^<]*</td><td class="txt">[^<]*</td>)<td>[^<]*</td>(<td>[^<]*</td><td>[^<]*</td>)<td class="(?:up|down)">[^<]*</td></tr>', rep, s)
+
+
+def tarjetas(s):
+    """Tarjetas de la portada: precio de cierre, variación del día y variación 12 meses."""
+    def rep(m):
+        a = ACC.get(m.group(3))
+        if not a:
+            return m.group(0)
+        c = re.sub(r'\n  <span class="cpx">.*?</span></span>', "", m.group(4), flags=re.S)
+        c = c.replace('</span>\n  <span class="row">',
+                      f'</span>\n  <span class="cpx">{px(a["px"])} <span class="{cls(a["d1"])}">{pct(a["d1"], 2)}</span></span>\n  <span class="row">', 1)
+        c = re.sub(r'<span class="(?:up|down)">[^<]*</span></span>\s*$',
+                   f'<span class="{cls(a["y1"])}">{pct(a["y1"], 0)} 12m</span></span>\n', c)
+        return m.group(1) + c + "</a>"
+    s = re.sub(r'(<h2 class="h-sec">Acciones analizadas</h2>)(<p class="note cards-n">.*?</p>)?',
+               lambda m: m.group(1) + f'<p class="note cards-n">Precio de cierre y variación del día al {FECHA}; variación de 12 meses al mismo cierre. P/E y dividendo: de la ficha de cada empresa.</p>', s)
+    return re.sub(r'(<a class="stock-card" href="((?:\.\./)*acciones/([\w-]+))/index\.html">)(.*?)</a>',
+                  rep, s, flags=re.S)
 
 
 def x(v):
@@ -181,6 +199,9 @@ CSS = """/*mercado*/
 .idx-t th, .idx-t td { padding-left: 8px; padding-right: 8px; }
 .idx-t th .sub { display: block; font: 400 12px/1.3 var(--f-body); color: var(--muted); }
 .quote .note + .note { margin-top: 2px; }
+.stock-card .cpx { margin-top: 6px; font: 600 18px/1.2 var(--f-mono); color: var(--ink); }
+.cards-n { margin: -6px 0 14px; }
+.stock-card .cpx span { font-size: 13px; font-weight: 500; margin-left: 6px; }
 /*/mercado*/"""
 
 for p in glob.glob(os.path.join(DIR, "**", "*.html"), recursive=True):
@@ -195,6 +216,7 @@ for p in glob.glob(os.path.join(DIR, "**", "*.html"), recursive=True):
         s = listado(s)
     if rel == "index.html":
         s = indices(s)
+        s = tarjetas(s)
         s = hechos_home(s)
     if s != s0:
         open(p, "w", encoding="utf-8").write(s)
