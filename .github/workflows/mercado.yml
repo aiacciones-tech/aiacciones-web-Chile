@@ -1,0 +1,21 @@
+# Actualiza precios de cierre e índices después del cierre de la Bolsa de Santiago y publica.
+name: Actualizar precios
+on:
+  schedule:
+    - cron: "40 21 * * 1-5"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar datos de mercado
+        run: python3 scripts/mercado.py fetch
+      - name: Guardar cambios
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add web
+          git diff --cached --quiet && echo "sin cambios" || (git commit -m "Precios de cierre $(date -u +%F)" && git push)

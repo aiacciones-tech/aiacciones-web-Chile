@@ -1,0 +1,200 @@
+[
+{
+"n": "AFP Habitat",
+"t": "HABITAT",
+"monto": "$20,00",
+"tipo": "Provisorio",
+"limite": "15 oct 2026",
+"pago": "21 oct 2026",
+"st": "C",
+"nota": "Suele pagar otro en enero.",
+"sort": "2026-10-21"
+},
+{
+"n": "Falabella",
+"t": "FALABELLA",
+"monto": "$46,00",
+"tipo": "Provisorio",
+"limite": "16 oct 2026",
+"pago": "22 oct 2026",
+"st": "C",
+"nota": "",
+"sort": "2026-10-22"
+},
+{
+"n": "Embotelladora Andina",
+"t": "ANDINA-B",
+"monto": "$40,15",
+"tipo": "Provisorio",
+"limite": "23 oct 2026",
+"pago": "29 oct 2026",
+"st": "C",
+"nota": "En dic-2025 pagó además $22.",
+"sort": "2026-10-29"
+},
+{
+"n": "Embotelladora Andina",
+"t": "ANDINA-A",
+"monto": "$36,50",
+"tipo": "Provisorio",
+"limite": "23 oct 2026",
+"pago": "29 oct 2026",
+"st": "C",
+"nota": "",
+"sort": "2026-10-29"
+},
+{
+"n": "Besalco",
+"t": "BESALCO",
+"monto": "Ref. $10 (nov-2025)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Noviembre",
+"st": "E",
+"nota": "",
+"sort": "2026-11-26"
+},
+{
+"n": "Aguas Andinas",
+"t": "AGUAS-A",
+"monto": "Ref. $6,86 (dic-2025)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Nov o dic",
+"st": "E",
+"nota": "",
+"sort": "2026-12-02"
+},
+{
+"n": "IAM",
+"t": "IAM",
+"monto": "Ref. $20,69 (dic-2025)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Diciembre",
+"st": "E",
+"nota": "",
+"sort": "2026-12-05"
+},
+{
+"n": "Sigdo Koppers",
+"t": "SK",
+"monto": "Ref. ≈$9,22 (dic-2025)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Diciembre",
+"st": "E",
+"nota": "Ya pagó uno en septiembre de 2026.",
+"sort": "2026-12-09"
+},
+{
+"n": "AFP PlanVital",
+"t": "PLANVITAL",
+"monto": "Ref. $7,54 (dic-2025)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Diciembre",
+"st": "E",
+"nota": "",
+"sort": "2026-12-11"
+},
+{
+"n": "Colbún",
+"t": "COLBUN",
+"monto": "Ref. ≈$4,12 (dic-2025)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Diciembre",
+"st": "E",
+"nota": "Se declara en dólares.",
+"sort": "2026-12-12"
+},
+{
+"n": "Schwager",
+"t": "SCHWAGER",
+"monto": "Ref. $0,024 (dic-2025)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Nov o dic",
+"st": "E",
+"nota": "",
+"sort": "2026-12-17"
+},
+{
+"n": "Quiñenco",
+"t": "QUINENCO",
+"monto": "Ref. $60,14 (dic-2025)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Diciembre",
+"st": "E",
+"nota": "",
+"sort": "2026-12-18"
+},
+{
+"n": "Empresas Copec",
+"t": "COPEC",
+"monto": "Ref. $66,93 (dic-2025)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Diciembre",
+"st": "E",
+"nota": "",
+"sort": "2026-12-18"
+},
+{
+"n": "AFP Provida",
+"t": "PROVIDA",
+"monto": "Ref. $237 (dic-2025)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Diciembre",
+"st": "E",
+"nota": "",
+"sort": "2026-12-22"
+},
+{
+"n": "CMPC",
+"t": "CMPC",
+"monto": "Ref. $16,65 (dic-2024)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Diciembre, si el directorio lo aprueba",
+"st": "E",
+"nota": "En dic-2025 el directorio no pagó el provisorio.",
+"sort": "2026-12-30"
+},
+{
+"n": "AFP Habitat",
+"t": "HABITAT",
+"monto": "Ref. $20 (ene-2026)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Enero 2027",
+"st": "E",
+"nota": "",
+"sort": "2027-01-09"
+},
+{
+"n": "Enel Generación Chile",
+"t": "ENELGXCH",
+"monto": "Ref. $6,31 (ene-2026)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Enero 2027",
+"st": "E",
+"nota": "",
+"sort": "2027-01-16"
+},
+{
+"n": "Enel Chile",
+"t": "ENELCHILE",
+"monto": "Ref. $0,67 (ene-2026)",
+"tipo": "Provisorio",
+"limite": "Por anunciar",
+"pago": "Enero 2027",
+"st": "E",
+"nota": "",
+"sort": "2027-01-23"
+}
+]
