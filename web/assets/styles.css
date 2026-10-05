@@ -372,4 +372,10 @@ select, input, textarea { font: inherit; color: var(--ink); background: var(--su
 .stock-card .cpx { margin-top: 6px; font: 600 18px/1.2 var(--f-mono); color: var(--ink); }
 .cards-n { margin: -6px 0 14px; }
 .stock-card .cpx span { font-size: 13px; font-weight: 500; margin-left: 6px; }
+table.sortable th[data-k] { cursor: pointer; user-select: none; white-space: nowrap; }
+table.sortable th[data-k]::after { content: " ↕"; color: var(--muted); font-size: 11px; }
+table.sortable th[aria-sort="ascending"]::after { content: " ▲"; color: var(--copper); }
+table.sortable th[aria-sort="descending"]::after { content: " ▼"; color: var(--copper); }
+.vals { min-width: 960px; }
+.vals td.txt { min-width: 200px; font-size: 14px; }
 /*/mercado*/

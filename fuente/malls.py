@@ -159,7 +159,7 @@ main = f'''<main class="wrap">
 wr("comparadores/malls/index.html", head + main + foot)
 
 p = "comparadores/index.html"; t = rd(p)
-if "malls/index.html" not in t:
+if 'href="malls/index.html"' not in t:
     card = f'<a class="cmp-card" href="malls/index.html"><span class="ct">{TITLE}</span>\n<span class="cd">{LEDE}</span><span class="cm"><b class="period-mini">2T 2026</b> {len(BLOCKS)} bloques · {nind} indicadores · gráficos comparativos · {len(vids)} videos</span></a>'
     t = t.replace('<div class="cmp-cards">', '<div class="cmp-cards">' + card, 1)
     wr(p, t)

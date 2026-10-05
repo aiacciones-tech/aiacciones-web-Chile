@@ -3,6 +3,7 @@ uso: python3 scripts/hornear.py [carpeta]   (por defecto web/)
 - cinta de precios de todas las páginas: precio de cierre y variación 12 meses
 - recuadro de precio de cada ficha: precio de cierre, variación del día y 12 meses
 - listado acciones/: columna de precio y variación 12 meses
+- valoraciones/: tabla con todas las acciones que cotizan, ordenable
 - portada: precio de cierre en las tarjetas de acciones y tabla de índices (IPSA, IGPA) con P/E, forward P/E y promedios de 5 y 10 años"""
 import json, os, re, sys, glob, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -106,6 +107,42 @@ def tarjetas(s):
                   rep, s, flags=re.S)
 
 
+def valoraciones(s):
+    """Tabla de valoraciones con todas las fichas: múltiplos leídos de cada ficha, precio de cierre del día."""
+    lst = open(os.path.join(DIR, "acciones", "index.html"), encoding="utf-8").read()
+    meta = {m.group(1): (m.group(2), m.group(3)) for m in re.finditer(
+        r'<tr><th scope="row"><a href="([\w-]+)/index\.html">([^<]+)</a></th><td class="txt">[^<]*</td><td class="txt">([^<]*)</td>', lst)}
+    rows = []
+    for fid, (tk, sec) in meta.items():
+        if fid not in ACC:  # sin cotización (AES Andes, AFP Capital): múltiplos implícitos, no de mercado
+            continue
+        f = open(os.path.join(DIR, "acciones", fid, "index.html"), encoding="utf-8").read()
+        v = re.search(r'<h2 class="h-sec">Valoración</h2>(.*?)</section>', f, re.S)
+        v = v.group(1) if v else ""
+        tiles = re.findall(r'<span class="lbl">([^<]+)</span><span class="val">([^<]+)</span>', v)
+        small = dict(re.findall(r'(P/BV|ROE) <b>([^<]+)</b>', v))
+
+        def get(*labels, pre=False):
+            for l, val in tiles:
+                if any(l == x or (pre and l.startswith(x)) for x in labels):
+                    return val
+            return next((small[x] for x in labels if x in small), "—")
+        a = ACC[fid]
+        rows.append((tk, f'<tr><th scope="row"><a href="../acciones/{fid}/index.html">{tk}</a></th><td class="txt">{sec}</td>'
+                     f'<td>{px(a["px"])}</td><td>{get("P/E")}</td><td>{get("Forward P/E")}</td><td>{get("P/BV")}</td>'
+                     f'<td>{get("EV/EBITDA", pre=True)}</td><td>{get("Dividend Yield", pre=True)}</td><td>{get("ROE")}</td>'
+                     f'<td class="{cls(a["y1"])}">{pct(a["y1"], 0)}</td></tr>'))
+    head = ('<thead><tr><th scope="col">Acción</th><th scope="col" class="txt">Sector</th><th scope="col">Precio de cierre</th>'
+            '<th scope="col">P/E</th><th scope="col">Forward P/E</th><th scope="col">P/BV</th><th scope="col">EV/EBITDA</th>'
+            '<th scope="col">Dividend Yield</th><th scope="col">ROE</th><th scope="col">Var. 12m</th></tr></thead>')
+    body = "<tbody>" + "".join(r for _, r in rows) + "</tbody>"
+    s = re.sub(r'<table class="data[^"]*">\s*<thead>.*?</tbody>', lambda _: '<table class="data sortable vals">' + head + body, s, count=1, flags=re.S)
+    note = (f'<p class="note vals-n">{len(rows)} acciones. Haz clic en el título de una columna para ordenar la tabla. Precio de cierre y variación 12 meses al {FECHA} (TradingView). '
+            'Múltiplos: los de la ficha de cada empresa, de nuestros videos de resultados 2T 2026 (precios de septiembre de 2026); las empresas del recuadro de arriba tienen cifras ilustrativas. '
+            'n/a: el múltiplo no aplica (por ejemplo EV/EBITDA en bancos y AFP o P/E con pérdidas); —: sin dato. AES Andes y AFP Capital no cotizan en bolsa y no aparecen. Fuente oficial: estados financieros en CMF.</p>')
+    return re.sub(r'(</table></div>\s*)<p class="note[^"]*">.*?</p>', lambda m: m.group(1) + note, s, count=1, flags=re.S)
+
+
 def x(v):
     return num(v, 1) + "x" if v else "—"
 
@@ -202,6 +239,12 @@ CSS = """/*mercado*/
 .stock-card .cpx { margin-top: 6px; font: 600 18px/1.2 var(--f-mono); color: var(--ink); }
 .cards-n { margin: -6px 0 14px; }
 .stock-card .cpx span { font-size: 13px; font-weight: 500; margin-left: 6px; }
+table.sortable th[data-k] { cursor: pointer; user-select: none; white-space: nowrap; }
+table.sortable th[data-k]::after { content: " ↕"; color: var(--muted); font-size: 11px; }
+table.sortable th[aria-sort="ascending"]::after { content: " ▲"; color: var(--copper); }
+table.sortable th[aria-sort="descending"]::after { content: " ▼"; color: var(--copper); }
+.vals { min-width: 960px; }
+.vals td.txt { min-width: 200px; font-size: 14px; }
 /*/mercado*/"""
 
 for p in glob.glob(os.path.join(DIR, "**", "*.html"), recursive=True):
@@ -214,6 +257,8 @@ for p in glob.glob(os.path.join(DIR, "**", "*.html"), recursive=True):
         s = hechos_ficha(s, m.group(1))
     if rel == "acciones/index.html":
         s = listado(s)
+    if rel == "valoraciones/index.html":
+        s = valoraciones(s)
     if rel == "index.html":
         s = indices(s)
         s = tarjetas(s)
