@@ -132,6 +132,10 @@ def valoraciones(s):
                      f'<td>{px(a["px"])}</td><td>{get("P/E")}</td><td>{get("Forward P/E")}</td><td>{get("P/BV")}</td>'
                      f'<td>{get("EV/EBITDA", pre=True)}</td><td>{get("Dividend Yield", pre=True)}</td><td>{get("ROE")}</td>'
                      f'<td class="{cls(a["y1"])}">{pct(a["y1"], 0)}</td></tr>'))
+    # sin ficha propia: cifras ilustrativas (ver recuadro de la página)
+    for tk, sec, vals in [("AGUAS-A", "Servicios sanitarios", ["15,2x", "14,1x", "2,0x", "10,5x", "6,4%", "13,0%"]),
+                          ("ORO BLANCO", "Holding (cascada SQM)", ["19,0x", "14,0x", "1,9x", "n/a", "2,1%", "9,0%"])]:
+        rows.append((tk, f'<tr><th scope="row">{tk}</th><td class="txt">{sec}</td><td>—</td>' + "".join(f"<td>{v}</td>" for v in vals) + "<td>—</td></tr>"))
     head = ('<thead><tr><th scope="col">Acción</th><th scope="col" class="txt">Sector</th><th scope="col">Precio de cierre</th>'
             '<th scope="col">P/E</th><th scope="col">Forward P/E</th><th scope="col">P/BV</th><th scope="col">EV/EBITDA</th>'
             '<th scope="col">Dividend Yield</th><th scope="col">ROE</th><th scope="col">Var. 12m</th></tr></thead>')
@@ -139,7 +143,7 @@ def valoraciones(s):
     s = re.sub(r'<table class="data[^"]*">\s*<thead>.*?</tbody>', lambda _: '<table class="data sortable vals">' + head + body, s, count=1, flags=re.S)
     note = (f'<p class="note vals-n">{len(rows)} acciones. Haz clic en el título de una columna para ordenar la tabla. Precio de cierre y variación 12 meses al {FECHA} (TradingView). '
             'Múltiplos: los de la ficha de cada empresa, de nuestros videos de resultados 2T 2026 (precios de septiembre de 2026); las empresas del recuadro de arriba tienen cifras ilustrativas. '
-            'n/a: el múltiplo no aplica (por ejemplo EV/EBITDA en bancos y AFP o P/E con pérdidas); —: sin dato. AES Andes y AFP Capital no cotizan en bolsa y no aparecen. Fuente oficial: estados financieros en CMF.</p>')
+            'n/a: el múltiplo no aplica (por ejemplo EV/EBITDA en bancos y AFP o P/E con pérdidas); —: sin dato. AES Andes y AFP Capital no cotizan en bolsa y no aparecen; Aguas Andinas y Oro Blanco aún no tienen ficha ni precio diario. Fuente oficial: estados financieros en CMF.</p>')
     return re.sub(r'(</table></div>\s*)<p class="note[^"]*">.*?</p>', lambda m: m.group(1) + note, s, count=1, flags=re.S)
 
 
