@@ -1,0 +1,40 @@
+# Sube a YouTube (como privados) los videos que la rutina nocturna deja en cola/ de la rama youtube-cola.
+# Credenciales: Settings > Secrets and variables > Actions (YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN).
+# "Run workflow" con modo=verificar solo prueba las credenciales y muestra el canal.
+name: Subir videos a YouTube
+concurrency: youtube
+on:
+  push:
+    branches: [youtube-cola]
+    paths: ['cola/**/meta.json']
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "verificar (solo credenciales) o subir (desde la rama youtube-cola)"
+        default: verificar
+permissions:
+  contents: write
+jobs:
+  subir:
+    runs-on: ubuntu-latest
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ (github.event_name == 'push' || inputs.modo == 'subir') && 'youtube-cola' || github.ref }}
+      - name: Verificar credenciales
+        if: github.event_name == 'workflow_dispatch' && inputs.modo != 'subir'
+        run: python3 scripts/youtube.py verificar
+      - name: Subir videos pendientes
+        if: github.event_name == 'push' || inputs.modo == 'subir'
+        run: python3 scripts/youtube.py subir cola
+      - name: Guardar IDs de YouTube
+        if: github.event_name == 'push' || inputs.modo == 'subir'
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add cola
+          git diff --cached --quiet || { git commit -m "IDs de YouTube $(date -u +%F)" && git push; }
