@@ -40,14 +40,18 @@ def token():
 
 def verificar():
     t = token()
-    _, _, cuerpo = pedir(f"{API}/youtube/v3/channels?part=snippet,statistics&mine=true",
-                         headers={"Authorization": f"Bearer {t}"})
-    items = json.loads(cuerpo).get("items", [])
-    if not items:
-        sys.exit("Las credenciales funcionan, pero esa cuenta no tiene canal de YouTube.")
-    c = items[0]
-    print(f"OK: canal \"{c['snippet']['title']}\" ({c['id']}), "
-          f"{c['statistics'].get('videoCount', '?')} videos.")
+    _, _, cuerpo = pedir(f"https://oauth2.googleapis.com/tokeninfo?access_token={t}")
+    scopes = json.loads(cuerpo).get("scope", "").split()
+    print("Permisos del token:", ", ".join(s.rsplit("/", 1)[-1] for s in scopes) or "ninguno")
+    if not any(s.endswith(("/youtube.upload", "/youtube", "/youtube.force-ssl")) for s in scopes):
+        sys.exit("El token no tiene permiso para subir videos (falta youtube.upload).")
+    # Ver el canal requiere además youtube.readonly; con solo youtube.upload se puede subir igual.
+    if any(s.endswith(("/youtube", "/youtube.readonly", "/youtube.force-ssl")) for s in scopes):
+        _, _, cuerpo = pedir(f"{API}/youtube/v3/channels?part=snippet&mine=true",
+                             headers={"Authorization": f"Bearer {t}"})
+        items = json.loads(cuerpo).get("items", [])
+        print(f"Canal: {items[0]['snippet']['title']} ({items[0]['id']})" if items else "Sin canal.")
+    print("OK: las credenciales sirven para subir videos.")
 
 
 def subir_uno(t, carpeta):
