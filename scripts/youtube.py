@@ -54,12 +54,24 @@ def verificar():
     print("OK: las credenciales sirven para subir videos.")
 
 
+def titulo(t, maximo=100):
+    """YouTube acepta 100 caracteres: corta en el último " | " o espacio que quepa."""
+    t = t.strip()
+    if len(t) <= maximo:
+        return t
+    for sep in (" | ", " "):
+        i = t.rfind(sep, 0, maximo + 1)
+        if i > 0:
+            return t[:i].rstrip(" :|-")
+    return t[:maximo]
+
+
 def subir_uno(t, carpeta):
     meta = json.load(open(os.path.join(carpeta, "meta.json"), encoding="utf-8"))
     video = os.path.join(carpeta, "video.mp4")
     cuerpo = json.dumps({
         "snippet": {
-            "title": meta["title"][:100],
+            "title": titulo(meta["title"]),
             "description": meta.get("description", "")[:5000],
             "tags": meta.get("tags", []),
             "categoryId": str(meta.get("categoryId", "27")),
