@@ -37,6 +37,7 @@
 - [ECL](https://aiacciones.cl/acciones/ecl/): Ficha de Engie Energía Chile: resultados 2T 2026, valoración y claves. Generadora y transmisora eléctrica del grupo francés Engie, con foco en el norte de Chile y clientes mineros.
 - [ENELCHILE](https://aiacciones.cl/acciones/enelchile/): Ficha de Enel Chile: resultados 2T 2026, valoración y claves. Holding eléctrico del grupo italiano Enel: controla Enel Generación Chile (~93,6%) y Enel Distribución, que abastece Santiago.
 - [ENELGXCH](https://aiacciones.cl/acciones/enelgxch/): Ficha de Enel Generación Chile: resultados 2T 2026, valoración y claves. Generadora eléctrica filial de Enel Chile (~93,6%), del grupo italiano Enel.
+- [PEHUENCHE](https://aiacciones.cl/acciones/pehuenche/): Ficha de Empresa Eléctrica Pehuenche: resultados 2T 2026, valoración y claves. Hidroeléctrica del río Maule controlada por Enel Generación Chile.
 - [FALABELLA](https://aiacciones.cl/acciones/falabella/): Ficha de Falabella: resultados 2T 2026, valoración y claves.
 - [HABITAT](https://aiacciones.cl/acciones/habitat/): Ficha de AFP Habitat: resultados, valoración y claves. Administradora de fondos de pensiones controlada en partes iguales por la Cámara Chilena de la Construcción y Prudential Financial.
 - [IAM](https://aiacciones.cl/acciones/iam/): Ficha de Inversiones Aguas Metropolitanas: resultados, valoración y claves. Holding que controla alrededor del 50% de Aguas Andinas, la sanitaria que abastece a Santiago.

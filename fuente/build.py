@@ -1,6 +1,6 @@
 import os, re, json
 
-S = "/tmp/claude-0/-home-claude/51bbcb85-f720-5650-9a37-2f75843c73b7/scratchpad/site"
+S = os.environ.get("SITE", os.path.abspath("site"))
 def rd(p): return open(os.path.join(S, p), encoding="utf-8").read()
 def wr(p, t):
     os.makedirs(os.path.dirname(os.path.join(S, p)), exist_ok=True)
