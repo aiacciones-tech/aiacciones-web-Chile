@@ -110,6 +110,38 @@
     });
   });
 
+  // ---------- Tablas ordenables (clic en el título de la columna)
+  var numOf = function (txt) {
+    var t = txt.replace(/[~$%x\s]/g, "").replace(/\./g, "").replace(",", ".").replace("\u2212", "-");
+    var v = parseFloat(t);
+    return isNaN(v) ? null : v;
+  };
+  document.querySelectorAll("table.sortable").forEach(function (tb) {
+    var ths = tb.querySelectorAll("thead th"), body = tb.tBodies[0];
+    ths.forEach(function (th, i) {
+      th.setAttribute("data-k", i);
+      th.tabIndex = 0;
+      var go = function () {
+        var asc = th.getAttribute("aria-sort") !== "ascending";
+        ths.forEach(function (o) { o.removeAttribute("aria-sort"); });
+        th.setAttribute("aria-sort", asc ? "ascending" : "descending");
+        var rows = Array.prototype.slice.call(body.rows), txt = th.classList.contains("txt") || i === 0;
+        rows.sort(function (a, b) {
+          var x = a.cells[i].textContent.trim(), y = b.cells[i].textContent.trim();
+          if (txt) return (asc ? 1 : -1) * x.localeCompare(y, "es");
+          var nx = numOf(x), ny = numOf(y);
+          if (nx === null && ny === null) return 0;
+          if (nx === null) return 1;
+          if (ny === null) return -1;
+          return (asc ? 1 : -1) * (nx - ny);
+        });
+        rows.forEach(function (r) { body.appendChild(r); });
+      };
+      th.addEventListener("click", go);
+      th.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
+    });
+  });
+
   // ---------- Formulario de contacto (enviar.php en el propio hosting)
   var form = document.getElementById("contact");
   if (form) {

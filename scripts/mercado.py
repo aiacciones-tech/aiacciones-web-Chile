@@ -12,7 +12,7 @@ FICHAS = {"andina-a": "ANDINA-A", "bci": "BCI", "besalco": "BESALCO", "bsantande
           "cencomalls": "CENCOMALLS", "cencosud": "CENCOSUD", "cge": "CGE", "chile": "CHILE", "cmpc": "CMPC",
           "colbun": "COLBUN", "copec": "COPEC", "ecl": "ECL", "enelchile": "ENELCHILE", "enelgxch": "ENELGXCH",
           "falabella": "FALABELLA", "habitat": "HABITAT", "iam": "IAM", "itau": "ITAUCL", "mallplaza": "MALLPLAZA",
-          "parauco": "PARAUCO", "planvital": "PLANVITAL", "provida": "PROVIDA", "quinenco": "QUINENCO",
+          "parauco": "PARAUCO", "pehuenche": "PEHUENCHE", "planvital": "PLANVITAL", "provida": "PROVIDA", "quinenco": "QUINENCO",
           "ripley": "RIPLEY", "schwager": "SCHWAGER", "sk": "SK", "sqm-b": "SQM-B", "vapores": "VAPORES"}
 INDICES = [("ipsa", "IPSA", "BCS:MXIPSAGC", "MSCI IPSA (con dividendos)"),
            ("igpa", "IGPA", "BCS:MXIGPAGC", "MSCI IGPA (con dividendos)")]
