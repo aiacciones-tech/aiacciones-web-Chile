@@ -1,6 +1,16 @@
 {
- "actualizado": "2026-10-07T21:53Z",
+ "actualizado": "2026-10-08T21:54Z",
  "items": [
+  {
+   "num": "2026100651619",
+   "id": "itau",
+   "ent": "BANCO ITAÚ CHILE",
+   "fecha": "2026-10-08 11:12",
+   "materias": [
+    "Colocaciones relacionadas"
+   ],
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=2c5e74ca407599a447dfc5909837a12dVFdwQmVVNXFSWGROUkZreFRWUlplRTlSUFQwPQ==&secuencia=-1&t=1791496441"
+  },
   {
    "num": "2026100648731",
    "id": "itau",
@@ -9,7 +19,7 @@
    "materias": [
     "Colocaciones relacionadas"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=51b9274ade63efdf3bfc7f687b1d23f1VFdwQmVVNXFSWGROUkZrd1QwUmplazFSUFQwPQ==&secuencia=-1&t=1791409982"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=51b9274ade63efdf3bfc7f687b1d23f1VFdwQmVVNXFSWGROUkZrd1QwUmplazFSUFQwPQ==&secuencia=-1&t=1791496441"
   },
   {
    "num": "2026100646237",
@@ -19,7 +29,7 @@
    "materias": [
     "Otros"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3dfc445b56e75609d9148ec004d8a013VFdwQmVVNXFSWGROUkZrd1RtcEplazUzUFQwPQ==&secuencia=-1&t=1791409982"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3dfc445b56e75609d9148ec004d8a013VFdwQmVVNXFSWGROUkZrd1RtcEplazUzUFQwPQ==&secuencia=-1&t=1791496441"
   },
   {
    "num": "2026100642859",
@@ -29,7 +39,7 @@
    "materias": [
     "Otros"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=1440b7b0cd7df71e56d6bb71002e7924VFdwQmVVNXFSWGROUkZrd1RXcG5NVTlSUFQwPQ==&secuencia=-1&t=1791409982"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=1440b7b0cd7df71e56d6bb71002e7924VFdwQmVVNXFSWGROUkZrd1RXcG5NVTlSUFQwPQ==&secuencia=-1&t=1791496441"
   },
   {
    "num": "2026100642205",
@@ -39,7 +49,7 @@
    "materias": [
     "Activos o paquetes accionarios, adquisición o enajenación"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=11688b65ac01f950169b882c338bf3aeVFdwQmVVNXFSWGROUkZrd1RXcEpkMDVSUFQwPQ==&secuencia=-1&t=1791409982"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=11688b65ac01f950169b882c338bf3aeVFdwQmVVNXFSWGROUkZrd1RXcEpkMDVSUFQwPQ==&secuencia=-1&t=1791496441"
   },
   {
    "num": "2026090640916",
