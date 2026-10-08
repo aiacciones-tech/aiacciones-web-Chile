@@ -1,6 +1,6 @@
 # AI Acciones Chile
 
-> Sitio en español sobre acciones chilenas: resultados trimestrales explicados en simple, múltiplos de valoración, comparadores sectoriales, rankings, calendario de reportes y dividendos, y videos en YouTube. Las cifras salen de estados financieros, análisis razonados y fuentes de mercado; algunas fichas y comparadores usan datos ilustrativos y lo indican en la página. No es recomendación de inversión.
+> Sitio en español sobre acciones chilenas: resultados trimestrales explicados en simple, múltiplos de valoración, comparadores sectoriales, rankings, calendario de reportes y dividendos, y videos en YouTube. Las cifras salen de estados financieros, análisis razonados y fuentes de mercado. No es recomendación de inversión.
 
 - Período actual: segundo trimestre de 2026 (se actualiza cada trimestre).
 - YouTube: https://www.youtube.com/channel/UCDGmimmfYaYYP1jYBo6bA3g
@@ -10,10 +10,12 @@
 
 - [Acciones](https://aiacciones.cl/acciones/): Fichas de acciones chilenas del IPSA y más: resultados del último trimestre, múltiplos de valoración, dividendos y video de análisis de cada empresa.
 - [Análisis técnico](https://aiacciones.cl/analisis-tecnico/): Curso de análisis técnico con ejemplos en acciones chilenas: tendencias, medias móviles, RSI, estocástico, MACD y más.
+- [Aviso legal](https://aiacciones.cl/aviso-legal/): Aviso legal de AI Acciones Chile: el contenido es informativo y educativo, no una recomendación de inversión. Fuentes, riesgos, publicidad y uso del contenido.
 - [Calendario](https://aiacciones.cl/calendario/): Calendario de reportes de resultados y dividendos próximos de acciones chilenas, por año y trimestre.
 - [Comparadores](https://aiacciones.cl/comparadores/): Comparadores de acciones chilenas por sector: bancos, retail, energía, centros comerciales, AFP y más, con gráficos y resultados trimestrales.
 - [Contacto](https://aiacciones.cl/contacto/): Escríbenos para sugerir empresas, reportar un error o proponer una colaboración con AI Acciones Chile.
 - [Educación](https://aiacciones.cl/educacion/): Conceptos para analizar acciones explicados en simple: P/E, EBITDA, flujo de caja libre, dividend yield, deuda y más.
+- [Quiénes somos](https://aiacciones.cl/nosotros/): Quiénes somos: AI Acciones Chile explica en simple los resultados trimestrales de las empresas de la Bolsa de Santiago. Qué publicamos, de dónde salen las cifras y cómo hacemos cada análisis.
 - [Rankings](https://aiacciones.cl/rankings/): Ranking y filtro de acciones chilenas por P/E, crecimiento de utilidades, dividend yield y caída de precio.
 - [Resultados](https://aiacciones.cl/resultados/): Resultados trimestrales de empresas chilenas: ingresos, EBITDA y utilidad frente al año anterior y frente al consenso de analistas.
 - [Valoraciones](https://aiacciones.cl/valoraciones/): Múltiplos de valoración de acciones chilenas: P/E, forward P/E, P/BV, EV/EBITDA, dividend yield y ROE en una sola tabla.
@@ -21,49 +23,38 @@
 ## Fichas de empresas (resultados 2T 2026)
 
 - [AES ANDES](https://aiacciones.cl/acciones/aes-andes/): Ficha de AES Andes: resultados 2T 2026, valoración y claves. Ex AES Gener.
-- [AFPCAPITAL](https://aiacciones.cl/acciones/afpcapital/): Ficha de AFP Capital: resultados, valoración y claves. Administradora de fondos de pensiones controlada por el grupo colombiano Sura.
-- [ANDINA-A](https://aiacciones.cl/acciones/andina-a/): Ficha de Embotelladora Andina (Serie A): resultados, valoración y claves. Embotelladora de Coca-Cola en Chile, Argentina, Brasil y Paraguay.
-- [BCI](https://aiacciones.cl/acciones/bci/): Ficha de Banco de Crédito e Inversiones: resultados, valoración y claves. Banco controlado por la familia Yarur.
-- [BESALCO](https://aiacciones.cl/acciones/besalco/): Ficha de Besalco S.A.: resultados, valoración y claves. Grupo de ingeniería y construcción con obras civiles, montaje industrial, maquinaria, desarrollo inmobiliario y concesiones.
-- [BSANTANDER](https://aiacciones.cl/acciones/bsantander/): Ficha de Banco Santander Chile: resultados, valoración y claves. El banco más grande de Chile por colocaciones, filial del español Banco Santander.
-- [CAP](https://aiacciones.cl/acciones/cap/): Ficha de CAP S.A.: resultados, valoración y claves. Principal productor de mineral de hierro de Chile, con negocios en procesamiento de acero e infraestructura (agua desalada, puerto y transmisión).
+- [AFPCAPITAL](https://aiacciones.cl/acciones/afpcapital/): Ficha de AFP Capital: resultados 2T 2026, valoración y claves. Administradora de fondos de pensiones controlada por SURA Asset Management (grupo colombiano Sura) desde 2011.
+- [ANDINA-A](https://aiacciones.cl/acciones/andina-a/): Ficha de Embotelladora Andina (Serie A): resultados 2T 2026, valoración y claves. Embotelladora de Coca-Cola en Chile, Argentina, Brasil y Paraguay.
+- [BESALCO](https://aiacciones.cl/acciones/besalco/): Ficha de Besalco S.A.: resultados 2T 2026, valoración y claves. Grupo de ingeniería y construcción con obras civiles, montaje industrial, arriendo de maquinaria, desarrollo inmobiliario y concesiones.
 - [CENCOMALLS](https://aiacciones.cl/acciones/cencomalls/): Ficha de Cencosud Shopping: resultados 2T 2026, valoración y claves.
 - [CENCOSUD](https://aiacciones.cl/acciones/cencosud/): Ficha de Cencosud: resultados 2T 2026, valoración y claves.
 - [CGE](https://aiacciones.cl/acciones/cge/): Ficha de CGE: resultados 2T 2026, valoración y claves.
-- [CHILE](https://aiacciones.cl/acciones/chile/): Ficha de Banco de Chile: resultados, valoración y claves. Uno de los dos bancos privados más grandes del país, controlado por Quiñenco (grupo Luksic) junto a Citigroup.
-- [CMPC](https://aiacciones.cl/acciones/cmpc/): Ficha de Empresas CMPC: resultados, valoración y claves.
+- [CHILE](https://aiacciones.cl/acciones/chile/): Ficha de Banco de Chile: resultados 2T 2026, valoración y claves. Uno de los dos bancos privados más grandes del país, controlado por Quiñenco (grupo Luksic) junto a Citigroup.
+- [CMPC](https://aiacciones.cl/acciones/cmpc/): Ficha de Empresas CMPC: resultados 2T 2026, valoración y claves.
 - [COLBUN](https://aiacciones.cl/acciones/colbun/): Ficha de Colbún: resultados 2T 2026, valoración y claves.
-- [COPEC](https://aiacciones.cl/acciones/copec/): Ficha de Empresas Copec: resultados, valoración y claves.
+- [COPEC](https://aiacciones.cl/acciones/copec/): Ficha de Empresas Copec: resultados 2T 2026, valoración y claves.
 - [ECL](https://aiacciones.cl/acciones/ecl/): Ficha de Engie Energía Chile: resultados 2T 2026, valoración y claves. Generadora y transmisora eléctrica del grupo francés Engie, con foco en el norte de Chile y clientes mineros.
 - [ENELCHILE](https://aiacciones.cl/acciones/enelchile/): Ficha de Enel Chile: resultados 2T 2026, valoración y claves. Holding eléctrico del grupo italiano Enel: controla Enel Generación Chile (~93,6%) y Enel Distribución, que abastece Santiago.
 - [ENELGXCH](https://aiacciones.cl/acciones/enelgxch/): Ficha de Enel Generación Chile: resultados 2T 2026, valoración y claves. Generadora eléctrica filial de Enel Chile (~93,6%), del grupo italiano Enel.
-- [PEHUENCHE](https://aiacciones.cl/acciones/pehuenche/): Ficha de Empresa Eléctrica Pehuenche: resultados 2T 2026, valoración y claves. Hidroeléctrica del río Maule controlada por Enel Generación Chile.
 - [FALABELLA](https://aiacciones.cl/acciones/falabella/): Ficha de Falabella: resultados 2T 2026, valoración y claves.
-- [HABITAT](https://aiacciones.cl/acciones/habitat/): Ficha de AFP Habitat: resultados, valoración y claves. Administradora de fondos de pensiones controlada en partes iguales por la Cámara Chilena de la Construcción y Prudential Financial.
-- [IAM](https://aiacciones.cl/acciones/iam/): Ficha de Inversiones Aguas Metropolitanas: resultados, valoración y claves. Holding que controla alrededor del 50% de Aguas Andinas, la sanitaria que abastece a Santiago.
-- [ITAUCL](https://aiacciones.cl/acciones/itau/): Ficha de Itaú Chile: resultados, valoración y claves. Banco formado por la fusión de CorpBanca con Itaú Unibanco, su controlador brasileño.
+- [HABITAT](https://aiacciones.cl/acciones/habitat/): Ficha de AFP Habitat: resultados 2T 2026, valoración y claves. Administradora de fondos de pensiones controlada en partes iguales por la Cámara Chilena de la Construcción y Prudential Financial.
+- [IAM](https://aiacciones.cl/acciones/iam/): Ficha de Inversiones Aguas Metropolitanas: resultados 2T 2026, valoración y claves. Holding que controla el 50,1% de Aguas Andinas, la sanitaria que abastece a Santiago.
 - [MALLPLAZA](https://aiacciones.cl/acciones/mallplaza/): Ficha de Mallplaza: resultados 2T 2026, valoración y claves. Plaza S.A., el mayor operador de centros comerciales de Chile, con malls en Perú y Colombia; Falabella es su controlador.
 - [PARAUCO](https://aiacciones.cl/acciones/parauco/): Ficha de Parque Arauco: resultados 2T 2026, valoración y claves. Operador de centros comerciales en Chile, Perú y Colombia (Parque Arauco Kennedy, Kennedy Oriente, MegaPlaza y Minka, entre otros).
-- [PLANVITAL](https://aiacciones.cl/acciones/planvital/): Ficha de AFP PlanVital: resultados, valoración y claves. AFP controlada por la italiana Generali.
-- [PROVIDA](https://aiacciones.cl/acciones/provida/): Ficha de AFP Provida: resultados, valoración y claves. La AFP con más afiliados del sistema, controlada por la estadounidense MetLife.
+- [PEHUENCHE](https://aiacciones.cl/acciones/pehuenche/): Ficha de Empresa Eléctrica Pehuenche: resultados 2T 2026, valoración y claves. Dueña de tres centrales hidroeléctricas en la cuenca del río Maule (Pehuenche, Curillinque y Loma Alta, 699 MW).
+- [PLANVITAL](https://aiacciones.cl/acciones/planvital/): Ficha de AFP PlanVital: resultados 2T 2026, valoración y claves. AFP controlada por la italiana Generali.
+- [PROVIDA](https://aiacciones.cl/acciones/provida/): Ficha de AFP Provida: resultados 2T 2026, valoración y claves. La AFP con más afiliados del sistema (2,49 millones), controlada por la estadounidense MetLife.
 - [QUINENCO](https://aiacciones.cl/acciones/quinenco/): Ficha de Quiñenco: resultados 2T 2026, valoración y claves. Holding con participaciones en Banco de Chile (vía LQIF), Enex (combustibles), CCU, CSAV, SM SAAM y Nexans.
 - [RIPLEY](https://aiacciones.cl/acciones/ripley/): Ficha de Ripley Corp: resultados 2T 2026, valoración y claves. Tiendas por departamento, Banco Ripley y centros comerciales en Chile y Perú (Mall Aventura).
-- [SCHWAGER](https://aiacciones.cl/acciones/schwager/): Ficha de Schwager S.A.: resultados, valoración y claves. Empresa de servicios para la minería, la industria y proyectos de energía.
 - [SK](https://aiacciones.cl/acciones/sk/): Ficha de Sigdo Koppers: resultados 2T 2026, valoración y claves.
-- [SQM-B](https://aiacciones.cl/acciones/sqm-b/): Ficha de SQM (Serie B): resultados, valoración y claves.
 - [VAPORES](https://aiacciones.cl/acciones/vapores/): Ficha de CSAV (Vapores): resultados 2T 2026, valoración y claves.
 
 ## Comparadores por sector
 
-- [AFP: Provida vs. PlanVital vs. Capital vs. Habitat · Comparador](https://aiacciones.cl/comparadores/afp/): Comparación profunda AFP: Provida vs. PlanVital vs. Capital vs. Habitat: valoración, rentabilidad, riesgo, solvencia, eficiencia, crecimiento y dividendos.
-- [Aguas Andinas vs. IAM · Comparador](https://aiacciones.cl/comparadores/aguas-iam/): Comparación profunda Aguas Andinas vs. IAM: valoración, rentabilidad, riesgo, solvencia, eficiencia, crecimiento y dividendos.
-- [Bancos: BCI vs. Santander vs. Banco de Chile vs. Itaú · Comparador](https://aiacciones.cl/comparadores/bancos/): Comparación profunda Bancos: BCI vs. Santander vs. Banco de Chile vs. Itaú: valoración, rentabilidad, riesgo, solvencia, eficiencia, crecimiento y dividendos.
-- [CAP vs. CMPC · Comparador](https://aiacciones.cl/comparadores/cap-cmpc/): Comparación profunda CAP vs. CMPC: valoración, rentabilidad, riesgo, solvencia, eficiencia, crecimiento y dividendos.
-- [Banco de Chile vs. Santander Chile · Comparador](https://aiacciones.cl/comparadores/chile-santander/): Comparación profunda Banco de Chile vs. Santander Chile: valoración, rentabilidad, riesgo, solvencia, eficiencia, crecimiento y dividendos.
-- [Empresas de energía](https://aiacciones.cl/comparadores/energia/): Comparador de Colbún, Engie Energía Chile, AES Andes, CGE, Enel Chile y Enel Generación con los resultados del 2T 2026: valoración, márgenes, deuda, crecimiento y dividendos.
+- [AFP](https://aiacciones.cl/comparadores/afp/): Comparador de AFP Habitat, Provida, Capital y PlanVital con los resultados del 2T 2026: valoración, crecimiento, márgenes, encaje y comisiones.
+- [Empresas de energía](https://aiacciones.cl/comparadores/energia/): Comparador de Colbún, Engie Energía Chile, AES Andes, CGE, Enel Chile, Enel Generación y Pehuenche con los resultados del 2T 2026: valoración, márgenes, deuda, crecimiento y dividendos.
 - [Centros comerciales](https://aiacciones.cl/comparadores/malls/): Comparador de Mall Plaza, Parque Arauco y Cencosud Shopping con los resultados del 2T 2026: valoración, márgenes, deuda, crecimiento y dividendos.
 - [Retail: Falabella vs. Ripley vs. Cencosud](https://aiacciones.cl/comparadores/retail/): Comparador de Falabella, Ripley y Cencosud con los resultados del 2T 2026: valoración, márgenes, deuda, crecimiento y dividendos.
-- [SQM vs. Oro Blanco · Comparador](https://aiacciones.cl/comparadores/sqm-oroblanco/): Comparación profunda SQM vs. Oro Blanco: valoración, rentabilidad, riesgo, solvencia, eficiencia, crecimiento y dividendos.
 
 ## Curso de análisis técnico
 
