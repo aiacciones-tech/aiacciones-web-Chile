@@ -1,6 +1,6 @@
 # SEO / IA para la versión zip (aiacciones.cl). Se ejecuta desde mkzip.sh sobre web/.
 import re, os, glob, json, html, datetime
-W = "/tmp/claude-0/-home-claude/51bbcb85-f720-5650-9a37-2f75843c73b7/scratchpad/web"
+W = os.environ.get("WEB", "web")
 BASE = "https://aiacciones.cl/"
 TODAY = datetime.date.today().isoformat()
 LOGO = BASE + "assets/logo-aiacciones-chile.png"
@@ -14,6 +14,8 @@ DESC = {
  "educacion/index.html": "Conceptos para analizar acciones explicados en simple: P/E, EBITDA, flujo de caja libre, dividend yield, deuda y más.",
  "contacto/index.html": "Escríbenos para sugerir empresas, reportar un error o proponer una colaboración con AI Acciones Chile.",
  "privacidad/index.html": "Política de privacidad de AI Acciones Chile: uso de cookies, Google Analytics y Google AdSense.",
+ "nosotros/index.html": "Quiénes somos: AI Acciones Chile explica en simple los resultados trimestrales de las empresas de la Bolsa de Santiago. Qué publicamos, de dónde salen las cifras y cómo hacemos cada análisis.",
+ "aviso-legal/index.html": "Aviso legal de AI Acciones Chile: el contenido es informativo y educativo, no una recomendación de inversión. Fuentes, riesgos, publicidad y uso del contenido.",
 }
 TITLE = {"index.html": "AI Acciones Chile · Resultados y análisis de acciones chilenas"}
 DEFAULT_GENERIC = "Análisis de acciones chilenas: resultados, valoraciones, comparadores, rankings y educación financiera."
@@ -96,7 +98,7 @@ for p in sorted(glob.glob(W + "/**/*.html", recursive=True)):
 pri = lambda rel: "1.0" if rel == "index.html" else ("0.8" if rel.count("/") == 1 else "0.6")
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 for rel, url, _, _ in pages:
-    if rel == "privacidad/index.html": continue
+    if rel in ("privacidad/index.html", "aviso-legal/index.html"): continue
     sm += f"  <url><loc>{url}</loc><lastmod>{TODAY}</lastmod><priority>{pri(rel)}</priority></url>\n"
 open(W + "/sitemap.xml", "w").write(sm + "</urlset>\n")
 
@@ -108,7 +110,7 @@ groups = [("Secciones principales", lambda r: r.count("/") == 1 and r != "privac
           ("Fichas de empresas (resultados 2T 2026)", lambda r: r.startswith("acciones/") and r.count("/") == 2),
           ("Comparadores por sector", lambda r: r.startswith("comparadores/") and r.count("/") == 2),
           ("Curso de análisis técnico", lambda r: r.startswith("analisis-tecnico/") and r.count("/") == 2)]
-lt = ("# AI Acciones Chile\n\n> Sitio en español sobre acciones chilenas: resultados trimestrales explicados en simple, múltiplos de valoración, comparadores sectoriales, rankings, calendario de reportes y dividendos, y videos en YouTube. Las cifras salen de estados financieros, análisis razonados y fuentes de mercado; algunas fichas y comparadores usan datos ilustrativos y lo indican en la página. No es recomendación de inversión.\n\n"
+lt = ("# AI Acciones Chile\n\n> Sitio en español sobre acciones chilenas: resultados trimestrales explicados en simple, múltiplos de valoración, comparadores sectoriales, rankings, calendario de reportes y dividendos, y videos en YouTube. Las cifras salen de estados financieros, análisis razonados y fuentes de mercado. No es recomendación de inversión.\n\n"
       "- Período actual: segundo trimestre de 2026 (se actualiza cada trimestre).\n- YouTube: https://www.youtube.com/channel/UCDGmimmfYaYYP1jYBo6bA3g\n- X: https://x.com/aiacciones\n\n")
 for g, cond in groups:
     lt += f"## {g}\n\n" + "".join(f"- [{t.replace(' · AI Acciones Chile', '')}]({u}): {d}\n" for r, u, t, d in pages if cond(r)) + "\n"
