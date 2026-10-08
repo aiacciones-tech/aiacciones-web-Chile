@@ -1,4 +1,5 @@
-# Manda a Buffer (para X) los posts que la rutina nocturna deja en cola/<slug>/post-x.txt de la rama youtube-cola.
+# Manda a Buffer los posts que la rutina nocturna deja en cola/<slug>/post-x.txt (X) y post-linkedin.txt (LinkedIn)
+# de la rama youtube-cola.
 # Clave: Settings > Secrets and variables > Actions > Secrets (BUFFER_API_KEY).
 # Modo: variable BUFFER_MODO = ahora (por defecto, publica en X al tiro), cola (próximo horario de Buffer) o borrador.
 # También corre cuando termina "Subir videos a YouTube", para los posts que esperaban el enlace del video.
@@ -8,7 +9,7 @@ concurrency: youtube-cola
 on:
   push:
     branches: [youtube-cola]
-    paths: ['cola/**/post-x.txt']
+    paths: ['cola/**/post-x.txt', 'cola/**/post-linkedin.txt']
   workflow_run:
     workflows: ["Subir videos a YouTube"]
     types: [completed]
@@ -26,6 +27,7 @@ jobs:
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
       BUFFER_MODO: ${{ vars.BUFFER_MODO }}
       BUFFER_CANAL: ${{ vars.BUFFER_CANAL }}
+      BUFFER_CANAL_LINKEDIN: ${{ vars.BUFFER_CANAL_LINKEDIN }}
     steps:
       - uses: actions/checkout@v4
         with:
