@@ -88,9 +88,11 @@ def subir_uno(t, carpeta):
     destino = cab.get("Location") or cab.get("location")
     with open(video, "rb") as f:
         _, _, r = pedir(destino, f.read(), {"Content-Type": "video/mp4"}, "PUT")
-    vid = json.loads(r)["id"]
+    subido = json.loads(r)
+    vid = subido["id"]
+    # La privacidad real: YouTube deja privados los videos de proyectos de API sin auditar.
     res = {"videoId": vid, "url": f"https://www.youtube.com/watch?v={vid}",
-           "privacy": meta.get("privacy", "private"),
+           "privacy": subido.get("status", {}).get("privacyStatus", meta.get("privacy", "private")),
            "subido": datetime.now(timezone.utc).isoformat(timespec="seconds"), "miniatura": "no"}
     mini = os.path.join(carpeta, "miniatura.png")
     if os.path.exists(mini):
