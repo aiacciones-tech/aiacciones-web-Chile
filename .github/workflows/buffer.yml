@@ -1,0 +1,44 @@
+# Manda a Buffer (para X) los posts que la rutina nocturna deja en cola/<slug>/post-x.txt de la rama youtube-cola.
+# Clave: Settings > Secrets and variables > Actions > Secrets (BUFFER_API_KEY).
+# Modo: variable BUFFER_MODO = borrador (por defecto, Daniel aprueba en Buffer) o cola (se publica solo).
+# "Run workflow" con modo=verificar solo prueba la clave y muestra los canales.
+name: Mandar posts de X a Buffer
+concurrency: youtube-cola
+on:
+  push:
+    branches: [youtube-cola]
+    paths: ['cola/**/post-x.txt']
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "verificar (solo la clave) o programar (desde la rama youtube-cola)"
+        default: verificar
+permissions:
+  contents: write
+jobs:
+  buffer:
+    runs-on: ubuntu-latest
+    env:
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      BUFFER_MODO: ${{ vars.BUFFER_MODO }}
+      BUFFER_CANAL: ${{ vars.BUFFER_CANAL }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ (github.event_name == 'push' || inputs.modo == 'programar') && 'youtube-cola' || github.ref }}
+      - name: Verificar clave
+        if: github.event_name == 'workflow_dispatch' && inputs.modo != 'programar'
+        run: python3 scripts/buffer.py verificar
+      - name: Mandar posts pendientes
+        if: github.event_name == 'push' || inputs.modo == 'programar'
+        run: python3 scripts/buffer.py programar cola
+      - name: Guardar IDs de Buffer
+        if: always() && (github.event_name == 'push' || inputs.modo == 'programar')
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add cola
+          git diff --cached --quiet && exit 0
+          git commit -m "IDs de Buffer $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
+          exit 1
