@@ -8,7 +8,7 @@ OUT = os.path.join(ROOT, "web", "assets", "mercado.json")
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36",
       "Origin": "https://www.tradingview.com", "Referer": "https://www.tradingview.com/", "Content-Type": "application/json"}
 # id de ficha -> ticker de la Bolsa de Santiago (las que no cotizan no van)
-FICHAS = {"andina-a": "ANDINA-A", "ccu": "CCU", "ltm": "LTM", "aguas-a": "AGUAS-A", "bci": "BCI", "besalco": "BESALCO", "bsantander": "BSANTANDER", "cap": "CAP",
+FICHAS = {"andina-a": "ANDINA-A", "entel": "ENTEL", "ccu": "CCU", "ltm": "LTM", "aguas-a": "AGUAS-A", "bci": "BCI", "besalco": "BESALCO", "bsantander": "BSANTANDER", "cap": "CAP",
           "cencomalls": "CENCOMALLS", "cencosud": "CENCOSUD", "cge": "CGE", "chile": "CHILE", "cmpc": "CMPC",
           "colbun": "COLBUN", "copec": "COPEC", "ecl": "ECL", "enelchile": "ENELCHILE", "enelgxch": "ENELGXCH",
           "falabella": "FALABELLA", "habitat": "HABITAT", "iam": "IAM", "itau": "ITAUCL", "mallplaza": "MALLPLAZA",
@@ -119,7 +119,7 @@ EMISORES = {"andina-a": ["EMBOTELLADORA ANDINA S.A."], "bci": ["BANCO DE CREDITO
             "ecl": ["ENGIE ENERGIA CHILE S.A."], "enelchile": ["ENEL CHILE S.A."],
             "enelgxch": ["ENEL GENERACION CHILE S.A."], "falabella": ["FALABELLA S.A."],
             "habitat": ["ADMINISTRADORA DE FONDOS DE PENSIONES HABITAT S.A.", "AFP HABITAT S.A."],
-            "iam": ["INVERSIONES AGUAS METROPOLITANAS S.A."], "aguas-a": ["AGUAS ANDINAS S.A."], "itau": ["BANCO ITAU CHILE", "ITAU CORPBANCA"],
+            "iam": ["INVERSIONES AGUAS METROPOLITANAS S.A."], "aguas-a": ["AGUAS ANDINAS S.A."], "entel": ["EMPRESA NACIONAL DE TELECOMUNICACIONES S.A."], "itau": ["BANCO ITAU CHILE", "ITAU CORPBANCA"],
             "mallplaza": ["PLAZA S.A."], "parauco": ["PARQUE ARAUCO S.A."], "planvital": ["AFP PLANVITAL S.A."],
             "provida": ["AFP PROVIDA S.A.", "ADMINISTRADORA DE FONDOS DE PENSIONES PROVIDA S.A."],
             "quinenco": ["QUINENCO S.A."], "ripley": ["RIPLEY CORP S.A."], "schwager": ["SCHWAGER S.A."],
