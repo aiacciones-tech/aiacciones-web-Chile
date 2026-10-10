@@ -52,6 +52,7 @@
 - [QUINENCO](https://aiacciones.cl/acciones/quinenco/): Ficha de Quiñenco: resultados 2T 2026, valoración y claves. Holding con participaciones en Banco de Chile (vía LQIF), Enex (combustibles), CCU, CSAV, SM SAAM y Nexans.
 - [RIPLEY](https://aiacciones.cl/acciones/ripley/): Ficha de Ripley Corp: resultados 2T 2026, valoración y claves. Tiendas por departamento, Banco Ripley y centros comerciales en Chile y Perú (Mall Aventura).
 - [SK](https://aiacciones.cl/acciones/sk/): Ficha de Sigdo Koppers: resultados 2T 2026, valoración y claves.
+- [SMU](https://aiacciones.cl/acciones/smu/): Ficha de SMU: resultados 2T 2026, valoración y claves. Segunda cadena de supermercados de Chile: Unimarc, los formatos de precio bajo Alvi y Super10, y Maxiahorro y Mayorsa en Perú.
 - [SQM-B](https://aiacciones.cl/acciones/sqm-b/): Ficha de SQM: resultados 2T 2026, valoración y claves.
 - [VAPORES](https://aiacciones.cl/acciones/vapores/): Ficha de CSAV (Vapores): resultados 2T 2026, valoración y claves.
 

@@ -13,7 +13,7 @@ FICHAS = {"andina-a": "ANDINA-A", "ccu": "CCU", "ltm": "LTM", "aguas-a": "AGUAS-
           "colbun": "COLBUN", "copec": "COPEC", "ecl": "ECL", "enelchile": "ENELCHILE", "enelgxch": "ENELGXCH",
           "falabella": "FALABELLA", "habitat": "HABITAT", "iam": "IAM", "itau": "ITAUCL", "mallplaza": "MALLPLAZA",
           "parauco": "PARAUCO", "pehuenche": "PEHUENCHE", "planvital": "PLANVITAL", "provida": "PROVIDA", "quinenco": "QUINENCO",
-          "ripley": "RIPLEY", "schwager": "SCHWAGER", "sk": "SK", "sqm-b": "SQM-B", "vapores": "VAPORES"}
+          "ripley": "RIPLEY", "schwager": "SCHWAGER", "sk": "SK", "smu": "SMU", "sqm-b": "SQM-B", "vapores": "VAPORES"}
 INDICES = [("ipsa", "IPSA", "BCS:MXIPSAGC", "MSCI IPSA (con dividendos)"),
            ("igpa", "IGPA", "BCS:MXIGPAGC", "MSCI IGPA (con dividendos)")]
 COLS = ["name", "description", "close", "change", "Perf.YTD", "Perf.Y", "time", "market_cap_basic",
