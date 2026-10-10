@@ -1,0 +1,12 @@
+C = dict(id="sqm-b", t="SQM-B", n="SQM", s="Minería no metálica (litio, yodo, nutrientes)", px="ADR US$63,91", chg=53, next="17 de noviembre",
+  pe=13.2, fpe=8.7, pbv=2.1, ev=6.4, dy=3.0, roe=None, epsg=645.0, vid="phMBUXed2To", q="SQM",
+  lede="Sociedad Química y Minera: el mayor productor de litio de Chile, a través de Novandino (su sociedad con Codelco en el Salar de Atacama) y de la mina Mt. Holland en Australia. También es líder mundial en yodo y en nutrición vegetal de especialidad. Sus acciones serie B cotizan en Santiago y como ADR en Nueva York (1 ADR = 1 acción B). Reporta en dólares.",
+  vtitle="SQM: utilidad 7,5 veces mayor por el litio y sobre el consenso (2T 2026)",
+  cap="Cifras en US$ millones salvo EPS · 2T 2026 vs. 2T 2025 · EBITDA ajustado (definición de la empresa)",
+  rows=[("Ingresos",1042.7,2468.4,1),("Ingresos de litio",445.2,1779.2,1),("EBITDA ajustado",307.7,1317.8,1),("Utilidad neta (controladora)",88.4,660.0,1),("EPS (US$ por acción)",0.31,2.31,2)],
+  derived=("Margen EBITDA ajustado","29,5%","53,4%"),
+  kpi="El precio promedio del litio de Novandino subió cerca de <b>160%</b> a/a (~US$21,8 por kg) y el volumen llegó a un récord de <b>84,1 mil toneladas</b>. La utilidad por acción (US$2,31) superó el consenso de US$1,91 (Investing.com). Flujo libre del trimestre US$768 MM; deuda neta ~US$864 MM (c), cerca de 0,3x EBITDA.",
+  tiles=[("P/E","13,2x"),("Forward P/E","8,7x"),("EV/EBITDA","~6,4x"),("FCF yield","~10,7%"),("Dividend Yield","~3%"),("P/BV","~2,1x")],
+  small="Precio: ADR US$63,91 al 9-oct-2026 (MarketScreener) · Capitalización ~US$18.255 MM (c) · Forward P/E y dividend yield: consenso 2026e (MarketScreener) · FCF yield: flujo libre 12 meses (StockAnalysis) · P/BV con patrimonio total a jun-2026 (c) · Albemarle transa a 10,9x utilidad esperada y 8,3x EV/EBITDA.",
+  mirar=["Precio del litio: para el 3T la empresa espera precios cercanos al promedio del primer semestre y un volumen similar al 2T.","Producción de Novandino: 280–290 mil toneladas en 2026 y más de 300 mil a fines de 2027.","Plan de inversión de ~US$3.000 MM entre 2026 y 2028, y el proyecto Salar Futuro con Codelco en evaluación ambiental.","Aportes al Estado (impuestos y arriendo a Corfo): más de US$1.600 MM en el primer semestre. Próximo reporte (3T 2026): 17 de noviembre."])
+VAROV.update({('sqm-b','Ingresos'):136.7,('sqm-b','Ingresos de litio'):299.7,('sqm-b','EBITDA ajustado'):328.3,('sqm-b','Utilidad neta (controladora)'):646.4,('sqm-b','EPS (US$ por acción)'):645.2})
