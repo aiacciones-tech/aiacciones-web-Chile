@@ -2,6 +2,8 @@
 
 Cada video es una carpeta cola/<slug>/ con video.mp4, miniatura.png (opcional) y meta.json:
   {"title": "...", "description": "...", "tags": [...], "privacy": "private"}
+En la descripción, {video:<otro-slug>} se reemplaza por el enlace del video ya subido de cola/<otro-slug>/
+(sirve para que el Short de cola/<slug>-short/ enlace al video largo de cola/<slug>/, que se sube antes).
 Al subir escribe cola/<slug>/resultado.json con el ID y el enlace, y no vuelve a subir esa carpeta.
 
   python3 scripts/youtube.py verificar   # solo prueba las credenciales y muestra el canal
@@ -10,7 +12,7 @@ Al subir escribe cola/<slug>/resultado.json con el ID y el enlace, y no vuelve a
 Credenciales (secretos del repo): YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN.
 Solo usa la biblioteca estándar de Python.
 """
-import json, os, sys, urllib.parse, urllib.request
+import json, os, re, sys, urllib.parse, urllib.request
 from datetime import datetime, timezone
 
 API = "https://www.googleapis.com"
@@ -50,8 +52,17 @@ def verificar():
           f"{c['statistics'].get('videoCount', '?')} videos.")
 
 
+def enlazar(texto, base):
+    """Reemplaza {video:<slug>} por la URL guardada en cola/<slug>/resultado.json (o la borra si no existe)."""
+    def url(m):
+        res = os.path.join(base, m.group(1), "resultado.json")
+        return json.load(open(res, encoding="utf-8"))["url"] if os.path.exists(res) else ""
+    return re.sub(r"\{video:([\w.-]+)\}", url, texto)
+
+
 def subir_uno(t, carpeta):
     meta = json.load(open(os.path.join(carpeta, "meta.json"), encoding="utf-8"))
+    meta["description"] = enlazar(meta.get("description", ""), os.path.dirname(carpeta))
     video = os.path.join(carpeta, "video.mp4")
     cuerpo = json.dumps({
         "snippet": {
