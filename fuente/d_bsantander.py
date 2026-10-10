@@ -1,0 +1,12 @@
+C = dict(id="bsantander", t="BSANTANDER", n="Banco Santander Chile", s="Banca", px="$78,6", chg=24, next="30 de octubre",
+  pe=12.8, fpe=12.1, pbv=3.0, ev=None, dy=4.3, roe=31.5, epsg=38.0, vid="8hqNrmZMGlw", q="Santander Chile",
+  lede="Uno de los dos mayores bancos privados de Chile, filial del grupo español Santander: 4,8 millones de clientes y $41,4 billones en colocaciones a junio de 2026. Cotiza en Santiago y como ADR en Nueva York (1 ADR = 400 acciones). Su margen depende en parte de la inflación, porque tiene más activos que pasivos en UF.",
+  vtitle="Santander Chile: utilidad +40% y ROAE récord de 31,5% (2T 2026)",
+  cap="Cifras en CLP miles de millones salvo BPA · 2T 2026 vs. 2T 2025 · Ingresos operacionales = intereses y reajustes + comisiones + resultado financiero (c)",
+  rows=[("Ingresos operacionales",731.3,832.8,1),("Margen de intereses y reajustes",519.9,621.0,1),("Gasto en provisiones",147.3,126.8,1),("Utilidad atribuible",272.5,382.6,1),("BPA (CLP por acción)",1.45,2.00,2)],
+  derived=("Eficiencia","35,6%","30,8%"),
+  kpi="BPA de US$0,85 por ADR vs. US$0,69 esperado por el consenso (<b>+23,5%</b>, Investing.com). ROAE <b>31,5%</b>, el más alto del sistema; NIM 4,7%, costo de riesgo 1,22%, morosidad 90 días 3,4% (3,0% hace un año) y CET1 11,1%. La UF subió 2,5% en el trimestre y los reajustes se duplicaron. Subió su guía de ROAE 2026 a más de 24%.",
+  tiles=[("P/E","12,8x"),("Forward P/E","12,1x"),("P/BV","3,0x"),("ROAE","31,5%"),("Dividend Yield","4,3%"),("Eficiencia","30,8%")],
+  small="Precio: $78,6 al cierre del 9-oct-2026 · Capitalización ~$14.812 mil MM (c) · P/E sobre utilidad de 12 meses (c) · Forward P/E: StockAnalysis (ADR) · Dividendo $3,35 pagado en 2026 · EV/EBITDA y FCF yield no aplican a bancos · Banco de Chile (ADR): P/E 14,7x, P/BV 3,1x.",
+  mirar=["Inflación: los reajustes por UF explican buena parte del alza y se diluyen si la UF se calma.","Morosidad 3,4% y cobertura de 107,6% (120,5% hace un año); guía de costo de riesgo ~1,35%.","Colocaciones casi planas (+1,2% en el año) y comisiones −4,8%; posible regulación de tasas de intercambio.","Próximo reporte (3T 2026): 30 de octubre."])
+VAROV.update({('bsantander','Utilidad atribuible'):40.4,('bsantander','BPA (CLP por acción)'):38.0,('bsantander','Ingresos operacionales'):13.9,('bsantander','Margen de intereses y reajustes'):19.4,('bsantander','Gasto en provisiones'):-13.9})
