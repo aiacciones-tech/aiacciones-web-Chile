@@ -1,0 +1,12 @@
+C = dict(id="entel", t="ENTEL", n="Entel", s="Telecomunicaciones (móvil y fijo, Chile y Perú)", px="$4.250", chg=-4, next="2 de noviembre",
+  pe=6.3, fpe=10.0, pbv=0.65, ev=3.9, dy=6.0, roe=5.5, epsg=39.4, vid=None, q="Entel",
+  lede="La mayor empresa de telefonía móvil de Chile (10,2 millones de clientes y 42,6% de los ingresos por servicios móviles) y la segunda de Perú (10,0 millones). También vende internet por fibra a hogares, servicios fijos y de TI a empresas, y es la única operadora de la región con mensajería satelital directa al celular de Starlink. Reporta en pesos; Perú aporta cerca de un tercio de los ingresos.",
+  vtitle="Entel: utilidad +39%, en línea con el consenso, por el negocio móvil y menor gasto financiero (2T 2026)",
+  cap="Cifras en millones de pesos salvo EPS · 2T 2026 vs. 2T 2025 · 302,0 millones de acciones",
+  rows=[("Ingresos",723018,780531,0),("EBITDA",202649,219648,0),("Resultado operacional",57760,68660,0),("Utilidad neta",18570,25895,0),("EPS ($ por acción)",61.49,85.74,2)],
+  derived=("Margen EBITDA","28,0%","28,1%"),
+  kpi="Los servicios móviles en Chile crecieron <b>10,2%</b> con un ARPU 10,1% mayor por alzas de precio, y el gasto financiero cayó <b>34%</b> tras el refinanciamiento de 2025. La utilidad por acción ($85,74) quedó en línea con el consenso de $84,85 (Investing.com). El EBITDA fijo en Chile cayó 46%. Perú: EBITDA US$82,2 MM (+12,5%). Deuda financiera neta 1,67x EBITDA (2,42x con arriendos).",
+  tiles=[("P/E","6,3x"),("Forward P/E","10,0x"),("EV/EBITDA","~3,9x"),("FCF 1S 2026","Negativo"),("Dividend Yield","~6%"),("P/BV","0,65x")],
+  small="Precio: $4.250 al 9-oct-2026 (MarketScreener) · Capitalización ~$1,28 billones (c) · P/E 12 meses inflado por un efecto tributario extraordinario del 4T25; sobre el 1S 2026 anualizado: 12,0x (c) · Forward P/E: consenso 2026e (MarketScreener) · EV/EBITDA con arriendos IFRS 16 (c) · Dividend yield de 12 meses (c).",
+  mirar=["Inversión: guía de capex 2026 de $520–550 mil MM; en el 1S invirtió $217 mil MM, así que el 2S será más intenso.","Flujo de caja: el flujo antes de dividendos del 1S fue −$40 mil MM por compra anticipada de equipos; la deuda neta subió a $1.454 mil MM.","Negocio fijo en Chile: EBITDA −46% y datos de empresas a la baja, mientras la fibra crece 26%.","Prepago en caída (−18%) y competencia en Perú; próximo reporte (3T 2026): 2 de noviembre."])
+VAROV.update({('entel','Ingresos'):8.0,('entel','EBITDA'):8.4,('entel','Resultado operacional'):18.9,('entel','Utilidad neta'):39.4,('entel','EPS ($ por acción)'):39.4})
