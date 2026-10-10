@@ -24,6 +24,7 @@
 
 - [AES ANDES](https://aiacciones.cl/acciones/aes-andes/): Ficha de AES Andes: resultados 2T 2026, valoración y claves. Ex AES Gener.
 - [AFPCAPITAL](https://aiacciones.cl/acciones/afpcapital/): Ficha de AFP Capital: resultados 2T 2026, valoración y claves. Administradora de fondos de pensiones controlada por SURA Asset Management (grupo colombiano Sura) desde 2011.
+- [AGUAS-A](https://aiacciones.cl/acciones/aguas-a/): Ficha de Aguas Andinas: resultados 2T 2026, valoración y claves.
 - [ANDINA-A](https://aiacciones.cl/acciones/andina-a/): Ficha de Embotelladora Andina (Serie A): resultados 2T 2026, valoración y claves. Embotelladora de Coca-Cola en Chile, Argentina, Brasil y Paraguay.
 - [BESALCO](https://aiacciones.cl/acciones/besalco/): Ficha de Besalco S.A.: resultados 2T 2026, valoración y claves. Grupo de ingeniería y construcción con obras civiles, montaje industrial, arriendo de maquinaria, desarrollo inmobiliario y concesiones.
 - [BSANTANDER](https://aiacciones.cl/acciones/bsantander/): Ficha de Banco Santander Chile: resultados 2T 2026, valoración y claves.
