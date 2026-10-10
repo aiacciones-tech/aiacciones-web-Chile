@@ -4,7 +4,6 @@ acciones/bsantander   ../../acciones/
 acciones/itau         ../../acciones/
 acciones/cap          ../../acciones/
 acciones/schwager     ../../acciones/
-acciones/sqm-b        ../../acciones/
 comparadores/bancos           ../../comparadores/
 comparadores/cap-cmpc         ../../comparadores/
 comparadores/chile-santander  ../../comparadores/
