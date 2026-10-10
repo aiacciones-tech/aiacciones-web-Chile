@@ -35,6 +35,7 @@
 - [CHILE](https://aiacciones.cl/acciones/chile/): Ficha de Banco de Chile: resultados 2T 2026, valoración y claves. Uno de los dos bancos privados más grandes del país, controlado por Quiñenco (grupo Luksic) junto a Citigroup.
 - [CMPC](https://aiacciones.cl/acciones/cmpc/): Ficha de Empresas CMPC: resultados 2T 2026, valoración y claves.
 - [COLBUN](https://aiacciones.cl/acciones/colbun/): Ficha de Colbún: resultados 2T 2026, valoración y claves.
+- [CONCHATORO](https://aiacciones.cl/acciones/conchatoro/): Ficha de Viña Concha y Toro: resultados 2T 2026, valoración y claves. La mayor viña de Chile y la tercera del mundo en ventas en 2025: marcas como Casillero del Diablo, Don Melchor, Diablo y Bonterra.
 - [COPEC](https://aiacciones.cl/acciones/copec/): Ficha de Empresas Copec: resultados 2T 2026, valoración y claves.
 - [ECL](https://aiacciones.cl/acciones/ecl/): Ficha de Engie Energía Chile: resultados 2T 2026, valoración y claves. Generadora y transmisora eléctrica del grupo francés Engie, con foco en el norte de Chile y clientes mineros.
 - [ENELCHILE](https://aiacciones.cl/acciones/enelchile/): Ficha de Enel Chile: resultados 2T 2026, valoración y claves. Holding eléctrico del grupo italiano Enel: controla Enel Generación Chile (~93,6%) y Enel Distribución, que abastece Santiago.

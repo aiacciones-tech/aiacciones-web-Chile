@@ -1,0 +1,12 @@
+C = dict(id="conchatoro", t="CONCHATORO", n="Viña Concha y Toro", s="Vinos (exportación y Chile)", px="$862", chg=-12, next="2 de noviembre",
+  pe=9.8, fpe=None, pbv=0.72, ev=7.4, dy=5.0, roe=7.5, epsg=6.1, vid=None, q="Concha y Toro",
+  lede="La mayor viña de Chile y la tercera del mundo en ventas en 2025: marcas como Casillero del Diablo, Don Melchor, Diablo y Bonterra. Más del 70% de sus ventas son exportaciones, por lo que el tipo de cambio pesa en sus resultados. También vende cerveza y licores en Chile.",
+  vtitle="Concha y Toro: vendió menos, pero la utilidad superó al consenso en 37% (2T 2026)",
+  cap="Cifras en $ millones salvo UPA · 2T 2026 vs. 2T 2025",
+  rows=[("Ingresos",244831,233282,0),("EBITDA",37209,35161,0),("Resultado operacional",28161,25926,0),("Utilidad neta (controladora)",19001,19407,0),("UPA ($ por acción)",25.7,27.3,1)],
+  derived=("Margen bruto","39,5%","40,0%"),
+  kpi="La utilidad (<b>$19.407 MM</b>) superó en <b>37%</b> el consenso de corredoras de $14.200 MM y el EBITDA ($35.161 MM) el de $32.000 MM (Diario Financiero). Las ventas cayeron 4,7% por EE.UU. (−14%, cambio de distribuidor), Asia (−31%) y el peso fuerte, mientras Latinoamérica creció 15%. La recompra de 3,9% de las acciones subió la UPA 6,1%. Deuda financiera neta 3,1x EBITDA, sobre su meta de 2,5x.",
+  tiles=[("P/E","9,8x"),("EV/EBITDA","7,4x"),("FCF yield","~5,3%"),("Dividend Yield","~5,0%"),("P/BV","0,7x"),("ROE","7,5%")],
+  small="Precio: $862 al 7-oct-2026 · 709,7 MM de acciones en circulación · Capitalización ~$611.800 MM (c) · P/E, EV/EBITDA y FCF yield con cifras de 12 meses a jun-2026 (c) · Dividend yield: dividendos pagados en 12 meses ($42,9 por acción) sobre el precio (c) · Sin consenso público de utilidad 2026 para el forward P/E.",
+  mirar=["Estados Unidos: la empresa espera crecer en el 2S con su nuevo distribuidor (Reyes) e inventarios normalizados.","Deuda: 3,1x EBITDA a junio por la vendimia, la recompra y la compra de Maison Mirabeau; la meta es 2,5x.","Costo del vino a la baja y plan de ahorros de ~$28.000 MM en 2026–2027; espera un 2S 2026 más sólido que el 2S 2025.","Tipo de cambio: el peso más fuerte frente al dólar restó 1,4 puntos a las ventas del trimestre. Próximo reporte (3T 2026): 2 de noviembre."])
+VAROV.update({('conchatoro','Ingresos'):-4.7,('conchatoro','EBITDA'):-5.5,('conchatoro','Resultado operacional'):-7.9,('conchatoro','Utilidad neta (controladora)'):2.1,('conchatoro','UPA ($ por acción)'):6.1})

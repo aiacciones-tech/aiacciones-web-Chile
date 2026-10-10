@@ -8,7 +8,7 @@ D = lambda y, m, d: dt.date(y, m, d)
 FICHA = {"ANDINA-B":"andina-a","ANDINA-A":"andina-a","HABITAT":"habitat","BESALCO":"besalco","ENELGXCH":"enelgxch","PROVIDA":"provida","AFPCAPITAL":"afpcapital",
  "PLANVITAL":"planvital","CHILE":"chile","CENCOSUD":"cencosud","CMPC":"cmpc","COPEC":"copec","FALABELLA":"falabella","RIPLEY":"ripley","VAPORES":"vapores","SK":"sk",
  "IAM":"iam","QUINENCO":"quinenco","COLBUN":"colbun","ENELCHILE":"enelchile","ECL":"ecl","BSANTANDER":"bsantander","CAP":"cap","ITAUCL":"itau","SQM-B":"sqm-b",
- "CGE":"cge","PARAUCO":"parauco","MALLPLAZA":"mallplaza","CENCOMALLS":"cencomalls","AES ANDES":"aes-andes","BCI":"bci","SCHWAGER":"schwager","LTM":"ltm","AGUAS-A":"aguas-a","CCU":"ccu"}
+ "CGE":"cge","PARAUCO":"parauco","MALLPLAZA":"mallplaza","CENCOMALLS":"cencomalls","AES ANDES":"aes-andes","BCI":"bci","SCHWAGER":"schwager","LTM":"ltm","CONCHATORO":"conchatoro","AGUAS-A":"aguas-a","CCU":"ccu"}
 CMF = "Fecha informada a la CMF"
 # ---------------------------------------------------------------- datos por trimestre (agregar nuevos trimestres aquí)
 Q = [dict(
