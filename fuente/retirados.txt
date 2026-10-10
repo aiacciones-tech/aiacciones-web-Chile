@@ -1,6 +1,5 @@
 # URL retirada (relativa a web/)    destino (relativo a esa URL)
 acciones/bci          ../../acciones/
-acciones/itau         ../../acciones/
 acciones/cap          ../../acciones/
 acciones/schwager     ../../acciones/
 comparadores/bancos           ../../comparadores/

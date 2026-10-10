@@ -1,0 +1,12 @@
+C = dict(id="itau", t="ITAUCL", n="Banco Itaú Chile", s="Banca", px="$23.300", chg=52, next="se espera a inicios de noviembre",
+  pe=12.5, fpe=10.4, pbv=1.15, ev=None, dy=5.1, roe=11.4, epsg=15.6, vid=None, q="Banco Itaú Chile",
+  lede="El quinto banco privado de Chile, controlado por Itaú Unibanco (Brasil). Opera en Chile y en Colombia, donde desde agosto de 2026 se enfoca en banca de empresas tras vender su banca de personas a Banco de Bogotá. Reporta en pesos chilenos.",
+  vtitle="Itaú Chile: utilidad +16% y 21% sobre el consenso, pero su rentabilidad sigue bajo la meta (2T 2026)",
+  cap="Cifras consolidadas en Ch$ miles de millones salvo EPS · 2T 2026 vs. 2T 2025 · utilidad recurrente según la empresa",
+  rows=[("Ingresos antes de provisiones",367.8,413.0,1),("Utilidad neta (controladora)",95.5,110.4,1),("Utilidad recurrente",98.8,108.9,1),("EPS (Ch$ por acción)",441.4,510.3,1)],
+  derived=("Margen con clientes Chile (NIM)","3,7%","3,2%"),
+  kpi="La utilidad por acción (Ch$510) superó en <b>21%</b> al consenso de Ch$421 (Investing.com). El costo de crédito en Chile bajó 11% a/a (costo de riesgo 1,0%) y las colocaciones en Chile crecieron 9,6%, más del doble que la industria. En contra: el margen con clientes (3,2%) y la rentabilidad (<b>RoTE 10,4% en el semestre vs. meta de 12–13%</b>) siguen bajo la guía. CET1 11,5%.",
+  tiles=[("P/E","12,5x"),("Forward P/E","~10,4x"),("P/BV","1,15x"),("Dividend Yield","5,1%"),("RoTE recurrente","11,4%"),("Eficiencia","46,6%")],
+  small="Precio: $23.300 al 9-oct-2026 · Capitalización ~Ch$5,0 billones (c) · P/E con utilidad de 12 meses (Ch$1.857 por acción) (c) · Forward P/E: utilidad esperada (StockAnalysis) (c) · Dividend yield: $1.187 pagado en abril 2026 (60% de la utilidad 2025) (c) · Bci transa a 1,7x libro, Santander a 2,9x y Banco de Chile a 3,4x.",
+  mirar=["Margen con clientes: 3,2% en Chile, bajo la guía 2026 de 3,3–3,5%.","Rentabilidad: RoTE de 10,4% en el semestre contra una meta de 12–13% para el año.","Colombia: gastos no recurrentes de ~US$158 MM en julio por la venta de la banca de personas (pesarán en el 3T 2026).","Capital: CET1 de 11,5% tras pagar como dividendo el 60% de la utilidad 2025; posible rebaja del impuesto corporativo (impacto no recurrente de Ch$30–40 mil MM)."])
+VAROV.update({('itau','Ingresos antes de provisiones'):12.3,('itau','Utilidad neta (controladora)'):15.6,('itau','Utilidad recurrente'):10.3,('itau','EPS (Ch$ por acción)'):15.6})
