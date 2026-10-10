@@ -11,7 +11,7 @@ exec(open("d_reales.py").read())
 ROOT = os.path.dirname(os.path.abspath(__file__))
 ACC = json.load(open(os.path.join(ROOT, "..", "web", "assets", "mercado.json"), encoding="utf-8"))["acciones"]
 
-RETIRADOS_F = ["bci", "bsantander", "itau", "cap", "schwager", "sqm-b"]
+RETIRADOS_F = ["bci", "bsantander", "cap", "schwager", "sqm-b"]
 RETIRADOS_C = ["bancos", "cap-cmpc", "chile-santander", "aguas-iam", "sqm-oroblanco"]
 AFP = {"habitat", "provida", "afpcapital", "planvital"}
 RID = {c["id"]: c for c in R}

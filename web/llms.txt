@@ -40,6 +40,7 @@
 - [FALABELLA](https://aiacciones.cl/acciones/falabella/): Ficha de Falabella: resultados 2T 2026, valoración y claves.
 - [HABITAT](https://aiacciones.cl/acciones/habitat/): Ficha de AFP Habitat: resultados 2T 2026, valoración y claves. Administradora de fondos de pensiones controlada en partes iguales por la Cámara Chilena de la Construcción y Prudential Financial.
 - [IAM](https://aiacciones.cl/acciones/iam/): Ficha de Inversiones Aguas Metropolitanas: resultados 2T 2026, valoración y claves. Holding que controla el 50,1% de Aguas Andinas, la sanitaria que abastece a Santiago.
+- [ITAUCL](https://aiacciones.cl/acciones/itau/): Ficha de Banco Itaú Chile: resultados 2T 2026, valoración y claves. El quinto banco privado de Chile, controlado por Itaú Unibanco (Brasil).
 - [LTM](https://aiacciones.cl/acciones/ltm/): Ficha de LATAM Airlines Group: resultados 2T 2026, valoración y claves.
 - [MALLPLAZA](https://aiacciones.cl/acciones/mallplaza/): Ficha de Mallplaza: resultados 2T 2026, valoración y claves. Plaza S.A., el mayor operador de centros comerciales de Chile, con malls en Perú y Colombia; Falabella es su controlador.
 - [PARAUCO](https://aiacciones.cl/acciones/parauco/): Ficha de Parque Arauco: resultados 2T 2026, valoración y claves. Operador de centros comerciales en Chile, Perú y Colombia (Parque Arauco Kennedy, Kennedy Oriente, MegaPlaza y Minka, entre otros).
