@@ -89,6 +89,7 @@ def chg_s(c): return f'{"+" if c["chg"] > 0 else ""}{n(c["chg"], 0, "%")}'
 def ficha(c):
     h = head.replace("<title>AFPCAPITAL · AI ACCIONES CHILE</title>", f"<title>{c['t']} · AI ACCIONES CHILE</title>")
     h = h.replace("Ficha de AFP Capital: resultados, valoración y claves.", f"Ficha de {c['n']}: resultados 2T 2026, valoración y claves.")
+    h = h.replace("Ficha de AFP Capital: resultados 2T 2026, valoración y claves.", f"Ficha de {c['n']}: resultados 2T 2026, valoración y claves.")
     if c["chg"] is None:
         q = f'<span class="tk">{c["t"]}</span>\n    <span class="px">{c["px"]}</span>\n    <span class="note">{c["pxnote"]}</span>'
     else:

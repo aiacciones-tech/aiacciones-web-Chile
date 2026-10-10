@@ -8,7 +8,7 @@ OUT = os.path.join(ROOT, "web", "assets", "mercado.json")
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36",
       "Origin": "https://www.tradingview.com", "Referer": "https://www.tradingview.com/", "Content-Type": "application/json"}
 # id de ficha -> ticker de la Bolsa de Santiago (las que no cotizan no van)
-FICHAS = {"andina-a": "ANDINA-A", "bci": "BCI", "besalco": "BESALCO", "bsantander": "BSANTANDER", "cap": "CAP",
+FICHAS = {"andina-a": "ANDINA-A", "ltm": "LTM", "bci": "BCI", "besalco": "BESALCO", "bsantander": "BSANTANDER", "cap": "CAP",
           "cencomalls": "CENCOMALLS", "cencosud": "CENCOSUD", "cge": "CGE", "chile": "CHILE", "cmpc": "CMPC",
           "colbun": "COLBUN", "copec": "COPEC", "ecl": "ECL", "enelchile": "ENELCHILE", "enelgxch": "ENELGXCH",
           "falabella": "FALABELLA", "habitat": "HABITAT", "iam": "IAM", "itau": "ITAUCL", "mallplaza": "MALLPLAZA",
