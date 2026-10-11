@@ -1,5 +1,5 @@
 C = dict(id="bci", t="BCI", n="Bci (Banco de Crédito e Inversiones)", s="Banca", px="$63.200", chg=42, next="sin fecha confirmada",
-  pe=12.5, fpe=11.8, pbv=1.75, ev=None, dy=2.4, roe=14.8, epsg=37.5, vid=None, q="Bci",
+  pe=12.5, fpe=11.8, pbv=1.75, ev=None, dy=2.4, roe=14.8, epsg=37.5, vid="Fr6YsJ30EMY", q="Bci",
   lede="Banco controlado por la familia Yarur, uno de los mayores de Chile, con $59,3 billones en colocaciones a junio de 2026. Es dueño de City National Bank of Florida (CNB), que aporta cerca de un tercio de las colocaciones y un cuarto de la utilidad, y opera también Bci Miami, Bci Perú y Lider Bci. Su margen depende en parte de la inflación (UF).",
   vtitle="Bci: utilidad récord +37,5%, sobre el consenso, y sube su guía 2026 (2T 2026)",
   cap="Cifras en CLP miles de millones salvo UPA · 2T 2026 vs. 2T 2025 · Consolidado (incluye City National Bank) · UPA calculada con 218,6 MM de acciones (c)",
