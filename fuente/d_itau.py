@@ -1,5 +1,5 @@
 C = dict(id="itau", t="ITAUCL", n="Banco Itaú Chile", s="Banca", px="$23.300", chg=52, next="se espera a inicios de noviembre",
-  pe=12.5, fpe=10.4, pbv=1.15, ev=None, dy=5.1, roe=11.4, epsg=15.6, vid="mbmHzuvuxi0", q="Banco Itaú Chile",
+  pe=12.5, fpe=10.4, pbv=1.15, ev=None, dy=5.1, roe=11.4, epsg=15.6, vid="7FhzUuhK9mA", q="Banco Itaú Chile",
   lede="El quinto banco privado de Chile, controlado por Itaú Unibanco (Brasil). Opera en Chile y en Colombia, donde desde agosto de 2026 se enfoca en banca de empresas tras vender su banca de personas a Banco de Bogotá. Reporta en pesos chilenos.",
   vtitle="Itaú Chile: utilidad +16% y 21% sobre el consenso, pero su rentabilidad sigue bajo la meta (2T 2026)",
   cap="Cifras consolidadas en Ch$ miles de millones salvo EPS · 2T 2026 vs. 2T 2025 · utilidad recurrente según la empresa",
