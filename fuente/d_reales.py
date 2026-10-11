@@ -29,7 +29,7 @@ R = [
   mirar=["Backlog récord de UF 44 MM, que anticipa ingresos.", "Margen bruto que bajó a 12,5% (14,5% un año antes).", "Deuda neta que subió a 2,44x EBITDA.", "Flujo de caja libre negativo en el semestre."],
   var={"Ingresos": -6.6, "EBITDA": -8.2, "Utilidad controladora": -9.0}),
  dict(id="chile", t="CHILE", n="Banco de Chile", s="Banca", px="ADS US$42,07", chg=29,
-  pe=15.9, fpe=14.7, pbv=3.3, ev=None, dy=4.7, roe=27.9, epsg=28.1, vid="2oA-4YLJhQI", q="Banco de Chile",
+  pe=15.9, fpe=14.7, pbv=3.3, ev=None, dy=4.7, roe=27.9, epsg=28.1, vid="3yQwxCvjWVU", q="Banco de Chile",
   lede="Uno de los dos bancos privados más grandes del país, controlado por Quiñenco (grupo Luksic) junto a Citigroup. Destaca por su alta rentabilidad sobre el patrimonio, baja morosidad y una política de dividendos generosa. Cotiza en Santiago y como ADS en Nueva York.",
   vtitle="Banco de Chile: utilidad récord, 24% sobre el consenso (2T 2026)",
   cap="Cifras en CLP miles de millones salvo BPA · 2T 2026 vs. 2T 2025",

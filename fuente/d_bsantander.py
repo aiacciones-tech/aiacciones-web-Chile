@@ -1,5 +1,5 @@
 C = dict(id="bsantander", t="BSANTANDER", n="Banco Santander Chile", s="Banca", px="$78,6", chg=24, next="30 de octubre",
-  pe=12.8, fpe=12.1, pbv=3.0, ev=None, dy=4.3, roe=31.5, epsg=38.0, vid="8hqNrmZMGlw", q="Santander Chile",
+  pe=12.8, fpe=12.1, pbv=3.0, ev=None, dy=4.3, roe=31.5, epsg=38.0, vid="7yx2MtfdACE", q="Santander Chile",
   lede="Uno de los dos mayores bancos privados de Chile, filial del grupo español Santander: 4,8 millones de clientes y $41,4 billones en colocaciones a junio de 2026. Cotiza en Santiago y como ADR en Nueva York (1 ADR = 400 acciones). Su margen depende en parte de la inflación, porque tiene más activos que pasivos en UF.",
   vtitle="Santander Chile: utilidad +40% y ROAE récord de 31,5% (2T 2026)",
   cap="Cifras en CLP miles de millones salvo BPA · 2T 2026 vs. 2T 2025 · Ingresos operacionales = intereses y reajustes + comisiones + resultado financiero (c)",
