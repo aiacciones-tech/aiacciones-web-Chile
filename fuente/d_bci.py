@@ -1,0 +1,12 @@
+C = dict(id="bci", t="BCI", n="Bci (Banco de Crédito e Inversiones)", s="Banca", px="$63.200", chg=42, next="sin fecha confirmada",
+  pe=12.5, fpe=11.8, pbv=1.75, ev=None, dy=2.4, roe=14.8, epsg=37.5, vid=None, q="Bci",
+  lede="Banco controlado por la familia Yarur, uno de los mayores de Chile, con $59,3 billones en colocaciones a junio de 2026. Es dueño de City National Bank of Florida (CNB), que aporta cerca de un tercio de las colocaciones y un cuarto de la utilidad, y opera también Bci Miami, Bci Perú y Lider Bci. Su margen depende en parte de la inflación (UF).",
+  vtitle="Bci: utilidad récord +37,5%, sobre el consenso, y sube su guía 2026 (2T 2026)",
+  cap="Cifras en CLP miles de millones salvo UPA · 2T 2026 vs. 2T 2025 · Consolidado (incluye City National Bank) · UPA calculada con 218,6 MM de acciones (c)",
+  rows=[("Ingresos operacionales",759.1,908.9,1),("Margen de intereses y reajustes",586.0,672.6,1),("Gasto en provisiones",79.3,78.0,1),("Utilidad neta",259.3,356.7,1),("UPA (CLP por acción)",1186,1632,0)],
+  derived=("Eficiencia (c)","48,8%","44,8%"),
+  kpi="Utilidad por acción ~$1.632 (c) vs. $1.525 esperado por el consenso (<b>+7%</b>, Investing.com). La UF subió 2,5% en el trimestre y los ingresos por reajustes casi se duplicaron; el resultado financiero subió 99%. NIM 3,67% (Chile 4,1%, CNB 3,0%), costo de riesgo 0,54%, morosidad 90 días 1,36%, CET1 11,3%. <b>Subió su guía 2026</b>: utilidad +17–19% y ROAE ~15%.",
+  tiles=[("P/E","12,5x"),("Forward P/E","11,8x"),("P/BV","1,75x"),("ROAE","14,8%"),("Dividend Yield","2,4%"),("Eficiencia","44,8%")],
+  small="Precio: $63.200 al cierre del 9-oct-2026 · Capitalización ~$13,8 billones (c) · P/E sobre utilidad de 12 meses (c) · Forward P/E con la guía 2026 (c) · Dividendo $1.500 pagado en abril 2026 · EV/EBITDA y FCF yield no aplican a bancos · A fines de 2025 transaba a 12,8x la utilidad del año (c).",
+  mirar=["Inflación: el margen sin reajustes cayó 3,3%; cada 10 pb de UF mueve unos US$5 MM.","City National Bank: guía de utilidad +35% y colocaciones +8–10% en 2026.","Reforma tributaria (excluida de la guía) y economía chilena débil.","Reestructuración en Bci Group: el CET1 local podría bajar ~100 pb al inicio."])
+VAROV.update({('bci','Ingresos operacionales'):19.7,('bci','Margen de intereses y reajustes'):14.8,('bci','Gasto en provisiones'):-1.6,('bci','Utilidad neta'):37.5,('bci','UPA (CLP por acción)'):37.5})
