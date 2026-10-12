@@ -16,9 +16,13 @@ Variables del repo (opcionales, Settings > Secrets and variables > Actions > Var
                 de la cola de Buffer) o borrador (queda en Borradores y Daniel lo aprueba)
   BUFFER_CANAL           ID del canal de X, si la cuenta tiene más de uno
   BUFFER_CANAL_LINKEDIN  ID del canal de LinkedIn, si hay más de uno (perfil y página)
+  BUFFER_CANAL_LINKEDIN_ES  ID de la página de LinkedIn de AIAcciones España (para cola-es/)
+España: `programar cola-es` manda los posts de cola-es/ solo a canales cuyo nombre diga "espana"/"españa"
+(hoy, la página de LinkedIn); si no hay canal de España para esa red, el post espera. Con dos páginas
+de LinkedIn conectadas, Chile usa la que se llama "chile".
 Solo usa la biblioteca estándar de Python.
 """
-import json, os, re, sys, urllib.request
+import json, os, re, sys, unicodedata, urllib.request
 from datetime import datetime, timezone
 
 API = "https://api.buffer.com"
@@ -75,18 +79,34 @@ REDES = {
 }
 
 
-def elegir_canal(red, lista):
-    """El canal de Buffer de esa red, o None si no está conectado y la red es opcional."""
+def sin_tildes(t):
+    return unicodedata.normalize("NFKD", t or "").encode("ascii", "ignore").decode().lower()
+
+
+def es_de(c, pais):
+    return pais in sin_tildes(f"{c['name']} {c.get('displayName') or ''}")
+
+
+def elegir_canal(red, lista, pais="chile"):
+    """El canal de Buffer de esa red para ese país, o None si no está conectado y la red es opcional."""
     r = REDES[red]
-    if os.environ.get(r["variable"]):
-        elegido = [c for c in lista if c["id"] == os.environ[r["variable"]]]
+    variable = r["variable"] + ("_ES" if pais == "espana" else "")
+    if os.environ.get(variable):
+        elegido = [c for c in lista if c["id"] == os.environ[variable]]
     else:
         elegido = [c for c in lista if c["service"].lower() in r["servicios"]]
-    if not elegido and not r["obligatoria"]:
+        if pais == "espana":
+            elegido = [c for c in elegido if es_de(c, "espana")]
+        elif len(elegido) > 1:
+            # Chile: si también está conectado el canal de España, ese no cuenta
+            elegido = [c for c in elegido if not es_de(c, "espana")] or elegido
+            if len(elegido) > 1:
+                elegido = [c for c in elegido if es_de(c, "chile")] or elegido
+    if not elegido and (pais == "espana" or not r["obligatoria"]):
         return None
     if len(elegido) != 1:
         sys.exit(f"Encontré {len(elegido)} canales de {r['nombre']} en Buffer; conecta uno o define la variable "
-                 f"{r['variable']}. Canales: {[(c['service'], c['name'], c['id']) for c in lista]}")
+                 f"{variable}. Canales: {[(c['service'], c['name'], c['id']) for c in lista]}")
     return elegido[0]
 
 
@@ -101,6 +121,9 @@ def verificar():
     li = elegir_canal("linkedin", lista)
     print(f"OK: LinkedIn como {li.get('displayName') or li['name']}." if li
           else "LinkedIn todavía no está conectado en Buffer.")
+    for red in REDES:
+        es = elegir_canal(red, lista, "espana")
+        print(f"España, {REDES[red]['nombre']}: " + (es.get("displayName") or es["name"] if es else "sin canal"))
 
 
 def texto_final(carpeta, archivo="post-x.txt"):
@@ -118,6 +141,7 @@ def texto_final(carpeta, archivo="post-x.txt"):
 
 
 def programar(base):
+    pais = "espana" if os.path.basename(os.path.normpath(base)) == "cola-es" else "chile"
     modo = (os.environ.get("BUFFER_MODO") or "ahora").strip().lower()
     if modo not in MODOS:
         sys.exit(f"BUFFER_MODO debe ser ahora, cola o borrador, no {modo!r}.")
@@ -132,7 +156,7 @@ def programar(base):
     for slug, red in pendientes:
         r = REDES[red]
         carpeta = os.path.join(base, slug)
-        canal = elegir_canal(red, lista)
+        canal = elegir_canal(red, lista, pais)
         if canal is None:
             print(f"{slug}: {r['nombre']} no está conectado en Buffer; queda pendiente.")
             continue
