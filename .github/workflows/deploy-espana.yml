@@ -1,7 +1,7 @@
 # Publica la web de AIAcciones España (carpeta espana/web/) por FTPS cada vez que cambia en main.
 # Es independiente de la web chilena: otros secretos y otro hosting.
 # Credenciales: Settings > Secrets and variables > Actions > Secrets: FTP_ES_SERVER, FTP_ES_USERNAME, FTP_ES_PASSWORD.
-# Carpeta remota: variable FTP_ES_DIR (por defecto public_html/). Si el hosting no acepta FTPS, variable FTP_ES_TLS = no.
+# Carpeta remota: variable FTP_ES_DIR (por defecto aiacciones.es/, la carpeta del dominio en el hosting). Si el hosting no acepta FTPS, variable FTP_ES_TLS = no.
 name: Publicar web España
 concurrency: publicar-espana
 on:
@@ -16,7 +16,7 @@ jobs:
       FTP_SERVER: ${{ secrets.FTP_ES_SERVER }}
       FTP_USERNAME: ${{ secrets.FTP_ES_USERNAME }}
       FTP_PASSWORD: ${{ secrets.FTP_ES_PASSWORD }}
-      FTP_DIR: ${{ vars.FTP_ES_DIR || 'public_html/' }}
+      FTP_DIR: ${{ vars.FTP_ES_DIR || 'aiacciones.es/' }}
       FTP_TLS: ${{ vars.FTP_ES_TLS || 'si' }}
     steps:
       - name: Revisar que estén los secretos
