@@ -20,7 +20,7 @@ CHILE_CSS = AQUI.parent / "web" / "assets" / "styles.css"
 # Rellenar cuando estén: dominio (sin barra final) y datos del titular que exige la LSSI (art. 10).
 DOMINIO = "https://aiacciones.es"
 TITULAR = {
-    "nombre": "",       # nombre y apellidos o razón social
+    "nombre": "AIAcciones",  # nombre y apellidos o razón social
     "nif": "",
     "domicilio": "",
     "email": "",
