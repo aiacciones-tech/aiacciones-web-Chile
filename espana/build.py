@@ -22,7 +22,7 @@ DOMINIO = "https://aiacciones.es"
 TITULAR = {
     "nombre": "Daniel Weinstein",  # nombre y apellidos o razón social
     "empresa": "AIAcciones",       # nombre comercial
-    "nif": "",
+    "nif": "RUT 8.494.956-6 (Chile)",
     "domicilio": "",
     "email": "",
 }
@@ -264,7 +264,7 @@ def metodologia():
 
 
 def aviso_legal():
-    datos = [("Titular", TITULAR["nombre"] or SITIO), ("Empresa", TITULAR.get("empresa", "")), ("NIF", TITULAR["nif"]), ("Domicilio", TITULAR["domicilio"]),
+    datos = [("Titular", TITULAR["nombre"] or SITIO), ("Empresa", TITULAR.get("empresa", "")), ("Identificación fiscal", TITULAR["nif"]), ("Domicilio", TITULAR["domicilio"]),
              ("Correo de contacto", TITULAR["email"])]
     filas = "".join(f"<li><b>{a}:</b> {e(b)}</li>" for a, b in datos if b)
     cuerpo = f"""<section class="page-head"><p class="eyebrow">Información legal</p><h1>Aviso legal</h1></section>
