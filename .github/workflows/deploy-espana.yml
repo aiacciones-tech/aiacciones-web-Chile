@@ -1,0 +1,47 @@
+# Publica la web de AIAcciones España (carpeta espana/web/) por FTPS cada vez que cambia en main.
+# Es independiente de la web chilena: otros secretos y otro hosting.
+# Credenciales: Settings > Secrets and variables > Actions > Secrets: FTP_ES_SERVER, FTP_ES_USERNAME, FTP_ES_PASSWORD.
+# Carpeta remota: variable FTP_ES_DIR (por defecto aiacciones.es/, la carpeta del dominio en el hosting). Si el hosting no acepta FTPS, variable FTP_ES_TLS = no.
+name: Publicar web España
+concurrency: publicar-espana
+on:
+  push:
+    branches: [main]
+    paths: ['espana/web/**', '.github/workflows/deploy-espana.yml']
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      FTP_SERVER: ${{ secrets.FTP_ES_SERVER }}
+      FTP_USERNAME: ${{ secrets.FTP_ES_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.FTP_ES_PASSWORD }}
+      FTP_DIR: ${{ vars.FTP_ES_DIR || 'aiacciones.es/' }}
+      FTP_TLS: ${{ vars.FTP_ES_TLS || 'si' }}
+    steps:
+      - name: Revisar que estén los secretos
+        id: sec
+        run: |
+          if [ -z "$FTP_SERVER" ] || [ -z "$FTP_USERNAME" ] || [ -z "$FTP_PASSWORD" ]; then
+            echo "Faltan los secretos FTP_ES_SERVER / FTP_ES_USERNAME / FTP_ES_PASSWORD: no se publica." >> "$GITHUB_STEP_SUMMARY"
+            echo "listo=no" >> "$GITHUB_OUTPUT"
+          else echo "listo=si" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/checkout@v4
+        if: steps.sec.outputs.listo == 'si'
+      - name: Instalar lftp
+        if: steps.sec.outputs.listo == 'si'
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+      - name: Subir por FTP
+        if: steps.sec.outputs.listo == 'si'
+        run: |
+          if [ "$FTP_TLS" = "no" ]; then SSL="set ftp:ssl-allow false"; else SSL="set ftp:ssl-force true
+          set ftp:ssl-protect-data true"; fi
+          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_SERVER" <<LFTP
+          $SSL
+          set ssl:verify-certificate no
+          set ftp:passive-mode true
+          set net:max-retries 3
+          set net:timeout 30
+          mirror --reverse --verbose --parallel=4 espana/web/ $FTP_DIR
+          bye
+          LFTP

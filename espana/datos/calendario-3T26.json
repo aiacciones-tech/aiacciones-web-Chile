@@ -1,0 +1,321 @@
+{
+ "trimestre": "3T 2026",
+ "actualizado": "2026-10-12",
+ "empresas": [
+  {
+   "fecha": "2026-10-20",
+   "empresa": "Enagás",
+   "ticker": "ENG",
+   "sector": "Gas (regulado)",
+   "estado": "Estimada",
+   "nota": "3T24: 22-oct-2024 (abre temporada).",
+   "fuente": "Bolsamanía, 21-oct-2024"
+  },
+  {
+   "fecha": "2026-10-21",
+   "empresa": "Iberdrola",
+   "ticker": "IBE",
+   "sector": "Eléctricas",
+   "estado": "Confirmada",
+   "nota": "Antes de apertura.",
+   "fuente": "DailyForex, oct-2026"
+  },
+  {
+   "fecha": "2026-10-22",
+   "empresa": "Bankinter",
+   "ticker": "BKT",
+   "sector": "Banca",
+   "estado": "Confirmada",
+   "nota": "",
+   "fuente": "DailyForex, oct-2026"
+  },
+  {
+   "fecha": "2026-10-27",
+   "empresa": "Ferrovial",
+   "ticker": "FER",
+   "sector": "Infraestructuras",
+   "estado": "Estimada",
+   "nota": "3T25: 28-oct-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-10-28",
+   "empresa": "Aena",
+   "ticker": "AENA",
+   "sector": "Aeropuertos",
+   "estado": "Estimada",
+   "nota": "3T25: 29-oct-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-10-28",
+   "empresa": "Banco Santander",
+   "ticker": "SAN",
+   "sector": "Banca",
+   "estado": "Confirmada",
+   "nota": "",
+   "fuente": "DailyForex, oct-2026"
+  },
+  {
+   "fecha": "2026-10-28",
+   "empresa": "Endesa",
+   "ticker": "ELE",
+   "sector": "Eléctricas",
+   "estado": "Estimada",
+   "nota": "3T25: 29-oct-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-10-28",
+   "empresa": "Naturgy",
+   "ticker": "NTGY",
+   "sector": "Eléctricas y gas",
+   "estado": "Estimada",
+   "nota": "3T25: 29-oct-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-10-28",
+   "empresa": "Redeia",
+   "ticker": "RED",
+   "sector": "Eléctricas (red)",
+   "estado": "Estimada",
+   "nota": "3T25: 29-oct-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-10-29",
+   "empresa": "BBVA",
+   "ticker": "BBVA",
+   "sector": "Banca",
+   "estado": "Confirmada",
+   "nota": "",
+   "fuente": "DailyForex, oct-2026"
+  },
+  {
+   "fecha": "2026-10-29",
+   "empresa": "Fluidra",
+   "ticker": "FDR",
+   "sector": "Industrial",
+   "estado": "Estimada",
+   "nota": "3T25: 30-oct-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-10-29",
+   "empresa": "Puig",
+   "ticker": "PUIG",
+   "sector": "Consumo (belleza)",
+   "estado": "Estimada",
+   "nota": "3T25: 30-oct-2025. Publica solo ventas en el 3T.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-10-29",
+   "empresa": "Repsol",
+   "ticker": "REP",
+   "sector": "Petróleo y gas",
+   "estado": "Confirmada",
+   "nota": "Antes de apertura; presentación 08:00 CET.",
+   "fuente": "repsol.com, calendario del inversor"
+  },
+  {
+   "fecha": "2026-10-30",
+   "empresa": "Acerinox",
+   "ticker": "ACX",
+   "sector": "Acero",
+   "estado": "Estimada",
+   "nota": "3T25: 31-oct-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-10-30",
+   "empresa": "CaixaBank",
+   "ticker": "CABK",
+   "sector": "Banca",
+   "estado": "Confirmada",
+   "nota": "",
+   "fuente": "DailyForex, oct-2026"
+  },
+  {
+   "fecha": "2026-10-30",
+   "empresa": "Mapfre",
+   "ticker": "MAP",
+   "sector": "Seguros",
+   "estado": "Estimada",
+   "nota": "3T25: 31-oct-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-10-30",
+   "empresa": "Unicaja",
+   "ticker": "UNI",
+   "sector": "Banca",
+   "estado": "Estimada",
+   "nota": "3T25: 31-oct-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-11-03",
+   "empresa": "Grifols",
+   "ticker": "GRF",
+   "sector": "Farmacia",
+   "estado": "Estimada",
+   "nota": "3T25: 4-nov-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-11-03",
+   "empresa": "Telefónica",
+   "ticker": "TEF",
+   "sector": "Telecomunicaciones",
+   "estado": "Estimada",
+   "nota": "3T25: 4-nov-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-11-05",
+   "empresa": "ArcelorMittal",
+   "ticker": "MTS",
+   "sector": "Acero",
+   "estado": "Estimada",
+   "nota": "3T25: 6-nov-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-11-05",
+   "empresa": "Laboratorios Rovi",
+   "ticker": "ROVI",
+   "sector": "Farmacia",
+   "estado": "Estimada",
+   "nota": "3T25: 6-nov-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-11-05",
+   "empresa": "Logista",
+   "ticker": "LOG",
+   "sector": "Distribución",
+   "estado": "Estimada",
+   "nota": "Año fiscal oct-sep: en noviembre publica el año completo, no un 3T.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-11-06",
+   "empresa": "Amadeus",
+   "ticker": "AMS",
+   "sector": "Tecnología",
+   "estado": "Estimada",
+   "nota": "3T25: 7-nov-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-11-06",
+   "empresa": "Cellnex",
+   "ticker": "CLNX",
+   "sector": "Telecom (torres)",
+   "estado": "Estimada",
+   "nota": "3T25: 7-nov-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-11-06",
+   "empresa": "IAG",
+   "ticker": "IAG",
+   "sector": "Aerolínea",
+   "estado": "Estimada",
+   "nota": "3T25: 7-nov-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-11-12",
+   "empresa": "Acciona",
+   "ticker": "ANA",
+   "sector": "Infraestructuras / energía",
+   "estado": "Estimada",
+   "nota": "3T25: 13-nov-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-11-12",
+   "empresa": "Acciona Energía",
+   "ticker": "ANE",
+   "sector": "Renovables",
+   "estado": "Estimada",
+   "nota": "3T25: 13-nov-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-11-12",
+   "empresa": "Banco Sabadell",
+   "ticker": "SAB",
+   "sector": "Banca",
+   "estado": "Estimada",
+   "nota": "3T25: 13-nov-2025, fecha atípica (OPA de BBVA). Puede volver a fines de octubre: revisar.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-11-13",
+   "empresa": "Merlin Properties",
+   "ticker": "MRL",
+   "sector": "Inmobiliario (SOCIMI)",
+   "estado": "Estimada",
+   "nota": "3T25: 14-nov-2025.",
+   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-12-02",
+   "empresa": "Inditex",
+   "ticker": "ITX",
+   "sector": "Textil",
+   "estado": "Estimada",
+   "nota": "Ejercicio feb-ene: en diciembre publica 9M (feb-oct), no el 3T calendario.",
+   "fuente": "PcBolsa (3T25: inicios de diciembre)"
+  },
+  {
+   "fecha": null,
+   "empresa": "ACS",
+   "ticker": "ACS",
+   "sector": "Construcción",
+   "estado": "Por confirmar",
+   "nota": "Suele publicar a fines de octubre.",
+   "fuente": "Sin fuente de fecha"
+  },
+  {
+   "fecha": null,
+   "empresa": "Colonial",
+   "ticker": "COL",
+   "sector": "Inmobiliario (SOCIMI)",
+   "estado": "Por confirmar",
+   "nota": "Suele publicar en noviembre.",
+   "fuente": "Sin fuente de fecha"
+  },
+  {
+   "fecha": null,
+   "empresa": "Indra",
+   "ticker": "IDR",
+   "sector": "Defensa / tecnología",
+   "estado": "Por confirmar",
+   "nota": "Suele publicar a fines de octubre.",
+   "fuente": "Sin fuente de fecha"
+  },
+  {
+   "fecha": null,
+   "empresa": "Sacyr",
+   "ticker": "SCYR",
+   "sector": "Construcción / concesiones",
+   "estado": "Por confirmar",
+   "nota": "Suele publicar a fines de octubre o inicios de noviembre.",
+   "fuente": "Sin fuente de fecha"
+  },
+  {
+   "fecha": null,
+   "empresa": "Solaria",
+   "ticker": "SLR",
+   "sector": "Renovables",
+   "estado": "Por confirmar",
+   "nota": "Suele publicar a fines de octubre o inicios de noviembre.",
+   "fuente": "Sin fuente de fecha"
+  }
+ ]
+}
