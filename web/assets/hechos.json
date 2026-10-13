@@ -1,6 +1,26 @@
 {
- "actualizado": "2026-10-12T21:53Z",
+ "actualizado": "2026-10-13T22:04Z",
  "items": [
+  {
+   "num": "2026100656470",
+   "id": "bci",
+   "ent": "BANCO DE CREDITO E INVERSIONES",
+   "fecha": "2026-10-13 14:27",
+   "materias": [
+    "Otros"
+   ],
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=7494c10c7890a33140319dcc9a31a58eVFdwQmVVNXFSWGROUkZreFRtcFJNMDFCUFQwPQ==&secuencia=-1&t=1791929041"
+  },
+  {
+   "num": "2026100655530",
+   "id": "itau",
+   "ent": "BANCO ITAÚ CHILE",
+   "fecha": "2026-10-13 10:49",
+   "materias": [
+    "Colocaciones relacionadas"
+   ],
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f3d9d987ecc6f7f5857b94ab0d71dfcfVFdwQmVVNXFSWGROUkZreFRsUlZlazFCUFQwPQ==&secuencia=-1&t=1791929041"
+  },
   {
    "num": "2026100651619",
    "id": "itau",
@@ -9,7 +29,7 @@
    "materias": [
     "Colocaciones relacionadas"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=2c5e74ca407599a447dfc5909837a12dVFdwQmVVNXFSWGROUkZreFRWUlplRTlSUFQwPQ==&secuencia=-1&t=1791841981"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=2c5e74ca407599a447dfc5909837a12dVFdwQmVVNXFSWGROUkZreFRWUlplRTlSUFQwPQ==&secuencia=-1&t=1791929041"
   },
   {
    "num": "2026100648731",
@@ -19,7 +39,7 @@
    "materias": [
     "Colocaciones relacionadas"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=51b9274ade63efdf3bfc7f687b1d23f1VFdwQmVVNXFSWGROUkZrd1QwUmplazFSUFQwPQ==&secuencia=-1&t=1791841981"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=51b9274ade63efdf3bfc7f687b1d23f1VFdwQmVVNXFSWGROUkZrd1QwUmplazFSUFQwPQ==&secuencia=-1&t=1791929041"
   },
   {
    "num": "2026100646237",
