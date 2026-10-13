@@ -20,10 +20,11 @@ CHILE_CSS = AQUI.parent / "web" / "assets" / "styles.css"
 # Rellenar cuando estén: dominio (sin barra final) y datos del titular que exige la LSSI (art. 10).
 DOMINIO = "https://aiacciones.es"
 TITULAR = {
-    "nombre": "",       # nombre y apellidos o razón social
-    "nif": "",
-    "domicilio": "",
-    "email": "",
+    "nombre": "Daniel Weinstein",  # nombre y apellidos o razón social
+    "empresa": "AIAcciones",       # nombre comercial
+    "nif": "RUT 8.494.956-6 (Chile)",
+    "domicilio": "11 Norte 620, departamento 1101, Viña del Mar, Chile",
+    "email": "aiacciones@gmail.com",
 }
 
 YT_CANAL = "https://www.youtube.com/@AIAccionesEspa%C3%B1a"
@@ -263,7 +264,7 @@ def metodologia():
 
 
 def aviso_legal():
-    datos = [("Titular", TITULAR["nombre"] or SITIO), ("NIF", TITULAR["nif"]), ("Domicilio", TITULAR["domicilio"]),
+    datos = [("Titular", TITULAR["nombre"] or SITIO), ("Empresa", TITULAR.get("empresa", "")), ("Identificación fiscal", TITULAR["nif"]), ("Domicilio", TITULAR["domicilio"]),
              ("Correo de contacto", TITULAR["email"])]
     filas = "".join(f"<li><b>{a}:</b> {e(b)}</li>" for a, b in datos if b)
     cuerpo = f"""<section class="page-head"><p class="eyebrow">Información legal</p><h1>Aviso legal</h1></section>
@@ -290,7 +291,7 @@ def aviso_legal():
 
 
 def privacidad():
-    responsable = TITULAR["nombre"] or SITIO
+    responsable = ", ".join(x for x in (TITULAR["nombre"], TITULAR.get("empresa", "")) if x) or SITIO
     cuerpo = f"""<section class="page-head"><p class="eyebrow">Información legal</p><h1>Privacidad y cookies</h1></section>
 <section class="prose">
 <h2>Formulario de contacto</h2>
