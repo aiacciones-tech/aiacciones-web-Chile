@@ -24,7 +24,7 @@ TITULAR = {
     "empresa": "AIAcciones",       # nombre comercial
     "nif": "RUT 8.494.956-6 (Chile)",
     "domicilio": "11 Norte 620, departamento 1101, Viña del Mar, Chile",
-    "email": "",
+    "email": "aiacciones@gmail.com",
 }
 
 YT_CANAL = "https://www.youtube.com/@AIAccionesEspa%C3%B1a"
