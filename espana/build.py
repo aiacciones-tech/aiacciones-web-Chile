@@ -263,10 +263,19 @@ def metodologia():
     return pagina("metodologia", "Metodología", "De dónde salen las cifras de AIAcciones España, qué calculamos y cómo presentamos la valoración.", cuerpo, "Metodología")
 
 
+def correo_oculto():
+    """Botón que arma el correo en el navegador al pulsarlo: el correo no aparece en el HTML (anti-spam)."""
+    if not TITULAR["email"]:
+        return ""
+    usuario, dominio = TITULAR["email"].split("@")
+    return (f'<button type="button" class="btn ghost mail-btn" data-u="{e(usuario[::-1])}" data-d="{e(dominio[::-1])}">Mostrar correo</button>'
+            '<noscript> (escríbenos desde la página de Contacto)</noscript>')
+
+
 def aviso_legal():
     datos = [("Titular", TITULAR["nombre"] or SITIO), ("Empresa", TITULAR.get("empresa", "")), ("Identificación fiscal", TITULAR["nif"]), ("Domicilio", TITULAR["domicilio"]),
-             ("Correo de contacto", TITULAR["email"])]
-    filas = "".join(f"<li><b>{a}:</b> {e(b)}</li>" for a, b in datos if b)
+             ("Correo de contacto", "@" if TITULAR["email"] else "")]
+    filas = "".join(f"<li><b>{a}:</b> {correo_oculto() if b == '@' else e(b)}</li>" for a, b in datos if b)
     cuerpo = f"""<section class="page-head"><p class="eyebrow">Información legal</p><h1>Aviso legal</h1></section>
 <section class="prose">
 <h2>Titular del sitio</h2>
@@ -295,7 +304,7 @@ def privacidad():
     cuerpo = f"""<section class="page-head"><p class="eyebrow">Información legal</p><h1>Privacidad y cookies</h1></section>
 <section class="prose">
 <h2>Formulario de contacto</h2>
-<p>Si nos escribes desde la página de <a href="../contacto/index.html">Contacto</a>, tratamos tu nombre, tu correo y tu mensaje con un único fin: responderte. Responsable: {e(responsable)}{" (" + e(TITULAR["email"]) + ")" if TITULAR["email"] else ""}. Base legal: tu consentimiento, que das al marcar la casilla del formulario (art. 6.1.a del RGPD). El mensaje llega a nuestro correo de Gmail (Google), por lo que Google actúa como proveedor de correo. Conservamos los mensajes el tiempo necesario para responderte y, como máximo, un año; no los cedemos a terceros ni los usamos para enviarte publicidad.</p>
+<p>Si nos escribes desde la página de <a href="../contacto/index.html">Contacto</a>, tratamos tu nombre, tu correo y tu mensaje con un único fin: responderte. Responsable: {e(responsable)}{" (correo: " + correo_oculto() + ")" if TITULAR["email"] else ""}. Base legal: tu consentimiento, que das al marcar la casilla del formulario (art. 6.1.a del RGPD). El mensaje llega a nuestro correo de Gmail (Google), por lo que Google actúa como proveedor de correo. Conservamos los mensajes el tiempo necesario para responderte y, como máximo, un año; no los cedemos a terceros ni los usamos para enviarte publicidad.</p>
 <p>Puedes pedir el acceso, la rectificación o la supresión de tus datos, oponerte a su tratamiento o retirar tu consentimiento escribiéndonos desde el mismo formulario. Si crees que no hemos atendido bien tu solicitud, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
 <h2>Otros datos</h2>
 <p>Este sitio no tiene registro de usuarios. El servidor de alojamiento puede guardar registros técnicos de acceso (como la dirección IP) por seguridad, durante el tiempo que fije el proveedor.</p>
@@ -343,6 +352,7 @@ EXTRA_CSS = """
 .prose ul { padding-left: 18px; }
 .contact .chk { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 14px; color: var(--muted); }
 .contact .chk input { margin-top: 4px; }
+.mail-btn { padding: 4px 10px; font-size: 14px; vertical-align: baseline; }
 """
 
 

@@ -24,3 +24,16 @@
       .then(function () { send.disabled = false; send.textContent = "Enviar mensaje"; });
   });
 })();
+
+// Correo del titular oculto: se arma al pulsar el botón para que los robots de spam no lo lean en el HTML.
+(function () {
+  document.querySelectorAll(".mail-btn").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var rev = function (s) { return s.split("").reverse().join(""); };
+      var m = rev(b.dataset.u) + "@" + rev(b.dataset.d);
+      var a = document.createElement("a");
+      a.href = "mailto:" + m; a.textContent = m;
+      b.replaceWith(a);
+    });
+  });
+})();
