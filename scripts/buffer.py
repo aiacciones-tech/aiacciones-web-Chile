@@ -89,6 +89,9 @@ def sin_tildes(t):
 
 
 def es_de(c, pais):
+    # todo canal de la cuenta de Buffer de España es de España, aunque su nombre no lo diga (p. ej. @AIAccionesES)
+    if c.get("clave") == "BUFFER_API_KEY_ES":
+        return pais == "espana"
     return pais in sin_tildes(f"{c['name']} {c.get('displayName') or ''}")
 
 
