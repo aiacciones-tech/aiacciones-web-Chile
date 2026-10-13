@@ -23,7 +23,7 @@ TITULAR = {
     "nombre": "Daniel Weinstein",  # nombre y apellidos o razón social
     "empresa": "AIAcciones",       # nombre comercial
     "nif": "RUT 8.494.956-6 (Chile)",
-    "domicilio": "",
+    "domicilio": "11 Norte 620, departamento 1101, Viña del Mar, Chile",
     "email": "",
 }
 
