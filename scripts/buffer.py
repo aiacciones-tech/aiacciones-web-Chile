@@ -17,6 +17,8 @@ Variables del repo (opcionales, Settings > Secrets and variables > Actions > Var
   BUFFER_CANAL           ID del canal de X, si la cuenta tiene más de uno
   BUFFER_CANAL_LINKEDIN  ID del canal de LinkedIn, si hay más de uno (perfil y página)
   BUFFER_CANAL_LINKEDIN_ES  ID de la página de LinkedIn de AIAcciones España (para cola-es/)
+Secreto opcional BUFFER_API_KEY_ES: clave de una segunda cuenta de Buffer solo para España (el plan gratis
+admite 3 canales por cuenta). Si existe, cola-es/ usa esa cuenta; si no, la de Chile.
 España: `programar cola-es` manda los posts de cola-es/ solo a canales cuyo nombre diga "espana"/"españa"
 (hoy, la página de LinkedIn); si no hay canal de España para esa red, el post espera. Con dos páginas
 de LinkedIn conectadas, Chile usa la que se llama "chile".
@@ -29,10 +31,13 @@ API = "https://api.buffer.com"
 MODOS = {"ahora": "shareNow", "cola": "addToQueue", "borrador": "addToQueue"}
 
 
+CLAVE = "BUFFER_API_KEY"  # España usa BUFFER_API_KEY_ES (su propia cuenta de Buffer) si existe
+
+
 def gql(consulta):
     req = urllib.request.Request(API, json.dumps({"query": consulta}).encode(), {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer {os.environ['BUFFER_API_KEY']}",
+        "Authorization": f"Bearer {os.environ[CLAVE]}",
     })
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
@@ -40,7 +45,7 @@ def gql(consulta):
     except urllib.error.HTTPError as e:
         cuerpo = e.read().decode("utf-8", "replace")
         if e.code == 401:
-            sys.exit("Buffer rechazó la clave (401). Revisa el secreto BUFFER_API_KEY.")
+            sys.exit(f"Buffer rechazó la clave (401). Revisa el secreto {CLAVE}.")
         sys.exit(f"Error HTTP {e.code} de Buffer: {cuerpo[:800]}")
     if datos.get("errors"):
         sys.exit(f"Error de Buffer: {json.dumps(datos['errors'], ensure_ascii=False)[:800]}")
@@ -66,7 +71,7 @@ def canales():
     for org in orgs:
         q = 'query { channels(input: {organizationId: %s}) { id name displayName service isQueuePaused } }'
         for c in gql(q % json.dumps(org["id"]))["channels"]:
-            todos.append(dict(c, org=org["name"]))
+            todos.append(dict(c, org=org["name"], clave=CLAVE))
     return todos
 
 
@@ -110,7 +115,13 @@ def elegir_canal(red, lista, pais="chile"):
     return elegido[0]
 
 
+def usar_clave(pais):
+    global CLAVE
+    CLAVE = "BUFFER_API_KEY_ES" if pais == "espana" and os.environ.get("BUFFER_API_KEY_ES") else "BUFFER_API_KEY"
+
+
 def verificar():
+    usar_clave("chile")
     lista = canales()
     for c in lista:
         pausa = " (cola en pausa)" if c.get("isQueuePaused") else ""
@@ -121,6 +132,14 @@ def verificar():
     li = elegir_canal("linkedin", lista)
     print(f"OK: LinkedIn como {li.get('displayName') or li['name']}." if li
           else "LinkedIn todavía no está conectado en Buffer.")
+    usar_clave("espana")
+    if CLAVE != "BUFFER_API_KEY":
+        print("España usa su propia cuenta de Buffer (BUFFER_API_KEY_ES):")
+        propios = canales()
+        for c in propios:
+            print(f"- {c['service']}: {c.get('displayName') or c['name']} [{c['id']}] en {c['org']}")
+        servicios = {c["service"].lower() for c in propios if es_de(c, "espana")}
+        lista = propios + [c for c in lista if c["service"].lower() not in servicios]
     for red in REDES:
         es = elegir_canal(red, lista, "espana")
         print(f"España, {REDES[red]['nombre']}: " + (es.get("displayName") or es["name"] if es else "sin canal"))
@@ -141,6 +160,7 @@ def texto_final(carpeta, archivo="post-x.txt"):
 
 
 def programar(base):
+    global CLAVE
     pais = "espana" if os.path.basename(os.path.normpath(base)) == "cola-es" else "chile"
     modo = (os.environ.get("BUFFER_MODO") or "ahora").strip().lower()
     if modo not in MODOS:
@@ -151,7 +171,14 @@ def programar(base):
     if not pendientes:
         print("No hay posts pendientes.")
         return
+    # España: canales de su propia cuenta de Buffer (si hay clave) y, como respaldo, los de la cuenta de Chile
+    usar_clave("chile")
     lista = canales()
+    usar_clave(pais)
+    if CLAVE != "BUFFER_API_KEY":
+        propios = canales()
+        servicios = {c["service"].lower() for c in propios if es_de(c, "espana")}
+        lista = propios + [c for c in lista if c["service"].lower() not in servicios]
     fallas = []
     for slug, red in pendientes:
         r = REDES[red]
@@ -169,6 +196,7 @@ def programar(base):
             fallas.append(f"{slug}: {largo} caracteres para {r['nombre']} (máximo {r['limite']})")
             continue
         # Un enlace a un video privado no se ve: ese post va a Borradores para publicarlo a mano.
+        CLAVE = canal["clave"]
         modo_post = "borrador" if privado else modo
         extra = ", saveToDraft: true" if modo_post == "borrador" else ""
         resp = gql("mutation { createPost(input: {text: %s, channelId: %s, schedulingType: automatic, "
