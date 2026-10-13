@@ -50,7 +50,7 @@ YT_SVG = ('<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><p
           '31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>')
 
 NAV = [("empresas/index.html", "Empresas"), ("calendario/index.html", "Calendario"),
-       ("metodologia/index.html", "Metodología"), ("aviso-legal/index.html", "Aviso legal")]
+       ("metodologia/index.html", "Metodología"), ("contacto/index.html", "Contacto")]
 
 
 def pagina(ruta, titulo, descripcion, cuerpo, actual=None):
@@ -96,14 +96,15 @@ def pagina(ruta, titulo, descripcion, cuerpo, actual=None):
   <div class="wrap foot-grid">
     <div>
       <p class="brand-sm">AIACCIONES ESPAÑA</p>
-      <p>Resultados de las cotizadas españolas explicados en vídeo, con las cifras que publica cada empresa en la CNMV. Síguenos en <a href="{YT_CANAL}" target="_blank" rel="noopener">YouTube</a>.</p>
+      <p>Resultados de las cotizadas españolas explicados en vídeo, con las cifras que publica cada empresa en la CNMV. Síguenos en <a href="{YT_CANAL}" target="_blank" rel="noopener">YouTube</a> o escríbenos desde <a href="{r}contacto/index.html">Contacto</a>.</p>
     </div>
     <div class="disclaimer">
       <p><b>Aviso.</b> Contenido informativo y educativo. No es una recomendación de inversión ni asesoramiento personalizado, y no emitimos precio objetivo ni opinión sobre si una acción está cara o barata. AIAcciones España no tiene posiciones en las empresas analizadas. Invertir en bolsa implica riesgo de pérdida, incluso de todo el capital. Verifica siempre las cifras en la <a href="https://www.cnmv.es" target="_blank" rel="noopener">CNMV</a>.</p>
-      <p><a href="{r}aviso-legal/index.html">Aviso legal</a> · <a href="{r}privacidad/index.html">Privacidad y cookies</a> · <a href="{r}metodologia/index.html">Metodología</a></p>
+      <p><a href="{r}aviso-legal/index.html">Aviso legal</a> · <a href="{r}privacidad/index.html">Privacidad y cookies</a> · <a href="{r}metodologia/index.html">Metodología</a> · <a href="{r}contacto/index.html">Contacto</a></p>
     </div>
   </div>
 </footer>
+<script src="{r}assets/app.js" defer></script>
 </body>
 </html>
 """
@@ -289,15 +290,42 @@ def aviso_legal():
 
 
 def privacidad():
-    cuerpo = """<section class="page-head"><p class="eyebrow">Información legal</p><h1>Privacidad y cookies</h1></section>
+    responsable = TITULAR["nombre"] or SITIO
+    cuerpo = f"""<section class="page-head"><p class="eyebrow">Información legal</p><h1>Privacidad y cookies</h1></section>
 <section class="prose">
-<h2>Datos personales</h2>
-<p>Este sitio no tiene formularios ni registro de usuarios y no recoge datos personales. El servidor de alojamiento puede guardar registros técnicos de acceso (como la dirección IP) por seguridad, durante el tiempo que fije el proveedor.</p>
+<h2>Formulario de contacto</h2>
+<p>Si nos escribes desde la página de <a href="../contacto/index.html">Contacto</a>, tratamos tu nombre, tu correo y tu mensaje con un único fin: responderte. Responsable: {e(responsable)}{" (" + e(TITULAR["email"]) + ")" if TITULAR["email"] else ""}. Base legal: tu consentimiento, que das al marcar la casilla del formulario (art. 6.1.a del RGPD). El mensaje llega a nuestro correo de Gmail (Google), por lo que Google actúa como proveedor de correo. Conservamos los mensajes el tiempo necesario para responderte y, como máximo, un año; no los cedemos a terceros ni los usamos para enviarte publicidad.</p>
+<p>Puedes pedir el acceso, la rectificación o la supresión de tus datos, oponerte a su tratamiento o retirar tu consentimiento escribiéndonos desde el mismo formulario. Si crees que no hemos atendido bien tu solicitud, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
+<h2>Otros datos</h2>
+<p>Este sitio no tiene registro de usuarios. El servidor de alojamiento puede guardar registros técnicos de acceso (como la dirección IP) por seguridad, durante el tiempo que fije el proveedor.</p>
 <h2>Cookies</h2>
 <p>Este sitio no usa cookies propias ni de terceros, ni herramientas de analítica o publicidad. Las tipografías son las del sistema y los vídeos se enlazan a YouTube sin incrustarlos: solo al abrir un vídeo pasas a YouTube, que aplica su propia política de privacidad.</p>
 <p>Si en el futuro añadimos analítica o publicidad, lo indicaremos aquí y pediremos tu consentimiento antes de activar cualquier cookie no necesaria.</p>
 </section>"""
     return pagina("privacidad", "Privacidad y cookies", "Política de privacidad y cookies de AIAcciones España.", cuerpo)
+
+
+def contacto():
+    cuerpo = """<section class="page-head"><p class="eyebrow">Contacto</p><h1>Escríbenos</h1>
+<p class="lede">Propón una empresa para el próximo vídeo, envía una corrección o haz una pregunta. Te respondemos al correo que nos dejes.</p></section>
+<div class="two">
+<form id="contact" class="contact" action="../enviar.php" method="POST">
+  <input type="hidden" name="_t" value="">
+  <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <label for="c-nombre">Nombre<input id="c-nombre" name="nombre" required maxlength="100" autocomplete="name"></label>
+  <label for="c-email">Correo electrónico<input id="c-email" name="email" type="email" required maxlength="150" autocomplete="email"></label>
+  <label for="c-asunto">Asunto<select id="c-asunto" name="asunto">
+    <option>Propuesta de empresa para analizar</option><option>Pregunta sobre un vídeo</option><option>Corrección de datos</option><option>Otro</option></select></label>
+  <label for="c-mensaje">Mensaje<textarea id="c-mensaje" name="mensaje" rows="6" required maxlength="5000"></textarea></label>
+  <label class="chk"><input type="checkbox" name="privacidad" value="si" required> <span>He leído la <a href="../privacidad/index.html">política de privacidad</a> y acepto que usen mis datos para responderme.</span></label>
+  <button class="btn" type="submit" id="c-send">Enviar mensaje</button>
+  <p class="form-msg" id="c-msg" role="status" hidden></p>
+</form>
+<aside class="aside-box"><h2 class="h-sec">Antes de escribir</h2>
+<p>No damos recomendaciones de inversión ni asesoramiento personalizado, así que no podemos responder si debes comprar o vender una acción.</p>
+<p>Si encuentras un error en una cifra, indícanos la empresa, el dato y la fuente: lo corregiremos indicándolo en la ficha y en el vídeo.</p></aside>
+</div>"""
+    return pagina("contacto", "Contacto", "Escribe a AIAcciones España: propuestas de empresas, preguntas y correcciones.", cuerpo, "Contacto")
 
 
 EXTRA_CSS = """
@@ -312,6 +340,8 @@ EXTRA_CSS = """
 .aviso-es { padding: 18px 20px; border: 1px dashed var(--line); border-radius: 4px; font-size: 14px; color: var(--muted); }
 .aviso-es ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
 .prose ul { padding-left: 18px; }
+.contact .chk { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 14px; color: var(--muted); }
+.contact .chk input { margin-top: 4px; }
 """
 
 
@@ -333,8 +363,11 @@ def main():
     escribir("metodologia/index.html", metodologia())
     escribir("aviso-legal/index.html", aviso_legal())
     escribir("privacidad/index.html", privacidad())
+    escribir("contacto/index.html", contacto())
+    for nombre, destino in (("enviar.php", "enviar.php"), ("app.js", "assets/app.js")):
+        shutil.copyfile(AQUI / "extra" / nombre, WEB / destino)
     if DOMINIO:
-        rutas = ["", "empresas/", "calendario/", "metodologia/", "aviso-legal/", "privacidad/"] + [f"empresas/{f['id']}/" for f in FICHAS]
+        rutas = ["", "empresas/", "calendario/", "metodologia/", "aviso-legal/", "privacidad/", "contacto/"] + [f"empresas/{f['id']}/" for f in FICHAS]
         urls = "".join(f"<url><loc>{DOMINIO}/{r}</loc><lastmod>{HOY.isoformat()}</lastmod></url>" for r in rutas)
         escribir("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
         escribir("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {DOMINIO}/sitemap.xml\n")
