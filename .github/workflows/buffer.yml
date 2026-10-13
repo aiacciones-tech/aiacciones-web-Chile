@@ -25,6 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      BUFFER_API_KEY_ES: ${{ secrets.BUFFER_API_KEY_ES }}
       BUFFER_MODO: ${{ vars.BUFFER_MODO }}
       BUFFER_CANAL: ${{ vars.BUFFER_CANAL }}
       BUFFER_CANAL_LINKEDIN: ${{ vars.BUFFER_CANAL_LINKEDIN }}
