@@ -390,3 +390,5 @@ table.sortable th[aria-sort="descending"]::after { content: " ▼"; color: var(-
 .aviso-es { padding: 18px 20px; border: 1px dashed var(--line); border-radius: 4px; font-size: 14px; color: var(--muted); }
 .aviso-es ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
 .prose ul { padding-left: 18px; }
+.contact .chk { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 14px; color: var(--muted); }
+.contact .chk input { margin-top: 4px; }
