@@ -16,6 +16,8 @@ from fichas import FICHAS
 AQUI = Path(__file__).resolve().parent
 WEB = AQUI / "web"
 CHILE_CSS = AQUI.parent / "web" / "assets" / "styles.css"
+# Google Analytics 4 (Daniel, 13-oct-2026). Solo se carga si el visitante acepta en el aviso de cookies (RGPD/LSSI).
+GA_ID = "G-YBK7SY7FN2"
 
 # Rellenar cuando estén: dominio (sin barra final) y datos del titular que exige la LSSI (art. 10).
 DOMINIO = "https://aiacciones.es"
@@ -101,10 +103,14 @@ def pagina(ruta, titulo, descripcion, cuerpo, actual=None):
     </div>
     <div class="disclaimer">
       <p><b>Aviso.</b> Contenido informativo y educativo. No es una recomendación de inversión ni asesoramiento personalizado, y no emitimos precio objetivo ni opinión sobre si una acción está cara o barata. AIAcciones España no tiene posiciones en las empresas analizadas. Invertir en bolsa implica riesgo de pérdida, incluso de todo el capital. Verifica siempre las cifras en la <a href="https://www.cnmv.es" target="_blank" rel="noopener">CNMV</a>.</p>
-      <p><a href="{r}aviso-legal/index.html">Aviso legal</a> · <a href="{r}privacidad/index.html">Privacidad y cookies</a> · <a href="{r}metodologia/index.html">Metodología</a> · <a href="{r}contacto/index.html">Contacto</a></p>
+      <p><a href="{r}aviso-legal/index.html">Aviso legal</a> · <a href="{r}privacidad/index.html">Privacidad y cookies</a> · <a href="{r}metodologia/index.html">Metodología</a> · <a href="{r}contacto/index.html">Contacto</a> · <button class="linkish" type="button" data-cookies="config">Configurar cookies</button></p>
     </div>
   </div>
 </footer>
+<div class="consent" id="cookie-bar" data-ga="{GA_ID}" role="dialog" aria-live="polite" aria-label="Aviso de cookies" hidden>
+  <p>Usamos cookies de Google Analytics para medir las visitas, solo si las aceptas. Más información en <a href="{r}privacidad/index.html#cookies">Privacidad y cookies</a>.</p>
+  <div class="consent-btns"><button class="btn" type="button" data-cookies="no">Rechazar</button><button class="btn" type="button" data-cookies="si">Aceptar</button></div>
+</div>
 <script src="{r}assets/app.js" defer></script>
 </body>
 </html>
@@ -308,9 +314,15 @@ def privacidad():
 <p>Puedes pedir el acceso, la rectificación o la supresión de tus datos, oponerte a su tratamiento o retirar tu consentimiento escribiéndonos desde el mismo formulario. Si crees que no hemos atendido bien tu solicitud, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
 <h2>Otros datos</h2>
 <p>Este sitio no tiene registro de usuarios. El servidor de alojamiento puede guardar registros técnicos de acceso (como la dirección IP) por seguridad, durante el tiempo que fije el proveedor.</p>
-<h2>Cookies</h2>
-<p>Este sitio no usa cookies propias ni de terceros, ni herramientas de analítica o publicidad. Las tipografías son las del sistema y los vídeos se enlazan a YouTube sin incrustarlos: solo al abrir un vídeo pasas a YouTube, que aplica su propia política de privacidad.</p>
-<p>Si en el futuro añadimos analítica o publicidad, lo indicaremos aquí y pediremos tu consentimiento antes de activar cualquier cookie no necesaria.</p>
+<h2 id="cookies">Cookies</h2>
+<p>Este sitio solo usa cookies de analítica, y únicamente si las aceptas en el aviso que aparece en tu primera visita. Si las rechazas o no eliges, no se carga ningún script de Google y la web funciona igual.</p>
+<div class="table-scroll"><table class="data"><thead><tr><th scope="col" class="txt">Cookie</th><th scope="col" class="txt">Proveedor</th><th scope="col" class="txt">Finalidad</th><th scope="col" class="txt">Duración</th></tr></thead><tbody>
+<tr><td class="txt">_ga</td><td class="txt">Google Analytics (Google Ireland Ltd.)</td><td class="txt">Distinguir visitantes de forma anónima para contar visitas</td><td class="txt">2 años</td></tr>
+<tr><td class="txt">_ga_{GA_ID[2:]}</td><td class="txt">Google Analytics (Google Ireland Ltd.)</td><td class="txt">Mantener el estado de la sesión</td><td class="txt">2 años</td></tr>
+</tbody></table></div>
+<p>Con Google Analytics 4 medimos de forma agregada qué páginas se visitan, desde qué país y tipo de dispositivo, y cómo llegaste al sitio. Google Analytics 4 no registra ni guarda tu dirección IP. Base legal: tu consentimiento (art. 6.1.a del RGPD y art. 22.2 de la LSSI). Google puede tratar datos en Estados Unidos, amparado en el Marco de Privacidad de Datos UE-EE. UU. Más información en la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad de Google</a>.</p>
+<p>Tu elección se guarda en tu navegador (almacenamiento local, no es una cookie) y te la volvemos a pedir pasados 12 meses. Puedes cambiarla cuando quieras con el botón «Configurar cookies» del pie de página; si retiras el consentimiento, borramos las cookies de Google Analytics de este sitio.</p>
+<p>Los vídeos se enlazan a YouTube sin incrustarlos: solo al abrir un vídeo pasas a YouTube, que aplica su propia política de privacidad.</p>
 </section>"""
     return pagina("privacidad", "Privacidad y cookies", "Política de privacidad y cookies de AIAcciones España.", cuerpo)
 
@@ -353,6 +365,7 @@ EXTRA_CSS = """
 .contact .chk { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 14px; color: var(--muted); }
 .contact .chk input { margin-top: 4px; }
 .mail-btn { padding: 4px 10px; font-size: 14px; vertical-align: baseline; }
+.consent[hidden] { display: none; }
 """
 
 
