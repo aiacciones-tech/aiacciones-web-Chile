@@ -36,10 +36,11 @@ jobs:
         if: github.event_name == 'push' || inputs.modo == 'subir'
         run: python3 scripts/youtube.py subir cola-es
       - name: Reintentar miniaturas que fallaron
-        if: github.event_name == 'push' || inputs.modo == 'subir'
+        # Corre aunque la subida falle (p. ej. por el límite diario de YouTube).
+        if: ${{ !cancelled() && (github.event_name == 'push' || inputs.modo == 'subir') }}
         run: python3 scripts/youtube.py miniaturas cola-es
       - name: Guardar IDs de YouTube
-        if: github.event_name == 'push' || inputs.modo == 'subir'
+        if: ${{ !cancelled() && (github.event_name == 'push' || inputs.modo == 'subir') }}
         run: |
           git config user.name "aiacciones-bot"
           git config user.email "aiacciones-bot@users.noreply.github.com"
