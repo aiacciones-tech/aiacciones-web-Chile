@@ -8,6 +8,7 @@ Al subir escribe cola/<slug>/resultado.json con el ID y el enlace, y no vuelve a
 
   python3 scripts/youtube.py verificar   # solo prueba las credenciales y muestra el canal
   python3 scripts/youtube.py subir cola  # sube lo pendiente
+  python3 scripts/youtube.py miniaturas cola  # reintenta las miniaturas que fallaron (p. ej. antes de verificar el canal)
 
 Credenciales (secretos del repo): YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN.
 Solo usa la biblioteca estándar de Python.
@@ -60,6 +61,36 @@ def enlazar(texto, base):
     return re.sub(r"\{video:([\w.-]+)\}", url, texto)
 
 
+def poner_miniatura(t, vid, mini):
+    req = urllib.request.Request(f"{API}/upload/youtube/v3/thumbnails/set?videoId={vid}",
+                                 open(mini, "rb").read(),
+                                 {"Authorization": f"Bearer {t}", "Content-Type": "image/png"})
+    try:
+        urllib.request.urlopen(req, timeout=120)
+        return "si"
+    except urllib.error.HTTPError as e:
+        # Miniaturas propias requieren canal verificado; el video queda subido igual.
+        return f"error {e.code}: {e.read().decode('utf-8', 'replace')[:300]}"
+
+
+def miniaturas(base):
+    """Vuelve a poner la miniatura en los videos ya subidos cuya miniatura falló."""
+    t = None
+    for d in sorted(os.listdir(base)):
+        res_p, mini = os.path.join(base, d, "resultado.json"), os.path.join(base, d, "miniatura.png")
+        if not (os.path.exists(res_p) and os.path.exists(mini)):
+            continue
+        res = json.load(open(res_p, encoding="utf-8"))
+        if not res.get("miniatura", "").startswith("error"):
+            continue
+        t = t or token()
+        res["miniatura"] = poner_miniatura(t, res["videoId"], mini)
+        json.dump(res, open(res_p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print(f"{d}: miniatura {res['miniatura']}")
+    if t is None:
+        print("No hay miniaturas pendientes.")
+
+
 def subir_uno(t, carpeta):
     meta = json.load(open(os.path.join(carpeta, "meta.json"), encoding="utf-8"))
     meta["description"] = enlazar(meta.get("description", ""), os.path.dirname(carpeta))
@@ -89,15 +120,7 @@ def subir_uno(t, carpeta):
            "subido": datetime.now(timezone.utc).isoformat(timespec="seconds"), "miniatura": "no"}
     mini = os.path.join(carpeta, "miniatura.png")
     if os.path.exists(mini):
-        req = urllib.request.Request(f"{API}/upload/youtube/v3/thumbnails/set?videoId={vid}",
-                                     open(mini, "rb").read(),
-                                     {"Authorization": f"Bearer {t}", "Content-Type": "image/png"})
-        try:
-            urllib.request.urlopen(req, timeout=120)
-            res["miniatura"] = "si"
-        except urllib.error.HTTPError as e:
-            # Miniaturas propias requieren canal verificado; el video queda subido igual.
-            res["miniatura"] = f"error {e.code}: {e.read().decode('utf-8', 'replace')[:300]}"
+        res["miniatura"] = poner_miniatura(t, vid, mini)
     json.dump(res, open(os.path.join(carpeta, "resultado.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
     print(f"{os.path.basename(carpeta)}: {res['url']} ({res['privacy']}, miniatura {res['miniatura']})")
@@ -117,4 +140,10 @@ def subir(base):
 
 if __name__ == "__main__":
     modo = sys.argv[1] if len(sys.argv) > 1 else "verificar"
-    verificar() if modo == "verificar" else subir(sys.argv[2] if len(sys.argv) > 2 else "cola")
+    base = sys.argv[2] if len(sys.argv) > 2 else "cola"
+    if modo == "verificar":
+        verificar()
+    elif modo == "miniaturas":
+        miniaturas(base)
+    else:
+        subir(base)

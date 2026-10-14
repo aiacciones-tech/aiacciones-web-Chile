@@ -35,6 +35,9 @@ jobs:
       - name: Subir videos pendientes
         if: github.event_name == 'push' || inputs.modo == 'subir'
         run: python3 scripts/youtube.py subir cola-es
+      - name: Reintentar miniaturas que fallaron
+        if: github.event_name == 'push' || inputs.modo == 'subir'
+        run: python3 scripts/youtube.py miniaturas cola-es
       - name: Guardar IDs de YouTube
         if: github.event_name == 'push' || inputs.modo == 'subir'
         run: |
