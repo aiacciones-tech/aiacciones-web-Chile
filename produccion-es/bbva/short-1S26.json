@@ -1,0 +1,113 @@
+{
+ "empresa": "BBVA",
+ "trimestre": "1S 2026",
+ "out": "/mnt/project-files/espana/bbva/short-bbva-1S26.mp4",
+ "fuente": "Fuente: BBVA, resultados 1S26 (30-jul-2026); consenso BBVA;\nprecio y múltiplos stockanalysis 9-oct-2026.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Resultados 1S 2026",
+   "titulo": "BBVA",
+   "sub": "Banca · IBEX 35",
+   "big": "+11,1%",
+   "big_label": "beneficio neto vs 1S 2025",
+   "color": "acc",
+   "pregunta": "Las 3 cifras clave del semestre",
+   "voz": "BBVA ganó un once coma uno por ciento más en el primer semestre, un beneficio récord. Tres cifras clave.",
+   "big_fs": 185
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Beneficio neto",
+   "big": "6.051 M€",
+   "delta": "+11,1% a/a",
+   "color": "acc",
+   "barras": [
+    [
+     "1S 2025",
+     5.447
+    ],
+    [
+     "1S 2026",
+     6.051
+    ]
+   ],
+   "fmt": "{:.1f} mil M€",
+   "nota": "2T26: 3.062 M€, un 4,5% sobre el consenso\nde BBVA (calculado).",
+   "voz": "Uno. Seis mil cincuenta y un millones de beneficio. En el segundo trimestre, un récord, superó en un cuatro coma cinco por ciento al consenso que recopila el banco."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Margen de intereses",
+   "big": "15.164 M€",
+   "delta": "+20,3% a/a",
+   "color": "acc2",
+   "barras": [
+    [
+     "1S 2025",
+     12.607
+    ],
+    [
+     "1S 2026",
+     15.164
+    ]
+   ],
+   "fmt": "{:.1f} mil M€",
+   "nota": "México: 2.979 M€ de beneficio.\nEspaña: 2.172 M€ (+2,3%).",
+   "voz": "Dos. El margen de intereses creció un veinte por ciento. México aporta casi la mitad del beneficio; España creció solo un dos coma tres por ciento."
+  },
+  {
+   "tipo": "cifra",
+   "n": 3,
+   "label": "ROTE",
+   "big": "22,2%",
+   "delta": "20,4% en 1S 2025",
+   "color": "acc",
+   "barras": [
+    [
+     "1S 2025",
+     20.4
+    ],
+    [
+     "1S 2026",
+     22.2
+    ]
+   ],
+   "fmt": "{:.1f}",
+   "nota": "Guía 2026: ROTE ~21%. Morosidad 2,6%;\nCET1 12,90%. Recompra de 2.000 M€.",
+   "voz": "Tres. La rentabilidad tangible llegó al veintidós coma dos por ciento, un máximo, y el banco lanzó otra recompra de dos mil millones."
+  },
+  {
+   "tipo": "kpis",
+   "label": "Valoración",
+   "items": [
+    [
+     "12,2x",
+     "PER 12 meses",
+     "fg"
+    ],
+    [
+     "1,99x",
+     "Precio / libros",
+     "fg"
+    ],
+    [
+     "4,0%",
+     "Rentab. dividendo",
+     "acc"
+    ]
+   ],
+   "nota": "Acción 23,11 € (9-oct-2026). Solo datos.",
+   "voz": "Cotiza a doce coma dos veces beneficio y unas dos veces su valor en libros. Próximos resultados, el veintinueve de octubre."
+  },
+  {
+   "tipo": "fin",
+   "titular": "Beneficio récord, con\nMéxico como motor.",
+   "cta": "Análisis completo en el canal",
+   "voz": "El análisis completo está en nuestro canal. Contenido informativo, no es una recomendación de inversión, y no tenemos posiciones en la empresa."
+  }
+ ],
+ "length_scale": 0.95
+}

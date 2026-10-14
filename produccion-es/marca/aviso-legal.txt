@@ -1,0 +1,14 @@
+AVISO LEGAL · AIAcciones España
+Plantilla para el final de cada descripción de YouTube, posts y web. Cubre lo que pide la guía de la CNMV para finfluencers (mayo 2026) y el Reglamento Delegado (UE) 2016/958 sobre recomendaciones de inversión (MAR).
+Rellenar {fecha_hora}, {empresa} y {fuentes} en cada vídeo.
+
+--- TEXTO ---
+AVISO IMPORTANTE
+• Elaborado por AIAcciones España el {fecha_hora} (hora de Madrid). Se actualiza con cada informe trimestral de la empresa.
+• Contenido informativo y educativo sobre información pública. No es una recomendación de inversión, ni una invitación a comprar o vender valores, ni asesoramiento personalizado: no tiene en cuenta tu situación, objetivos ni perfil de riesgo. Antes de invertir, consulta a una entidad autorizada por la CNMV.
+• Hechos y opiniones: las cifras proceden de la información que {empresa} publica en la CNMV y en su web, y de las fuentes de mercado indicadas ({fuentes}). Los cálculos propios están marcados como "calculado". No emitimos precio objetivo ni opinión sobre si la acción está cara o barata.
+• Metodología de valoración: múltiplos (PER, EV/EBITDA, rentabilidad por dividendo y por flujo libre) calculados con el precio de la fecha indicada y comparados con los de la propia empresa en años anteriores. Hipótesis: datos publicados, sin estimaciones propias de resultados futuros.
+• Conflictos de interés: AIAcciones España y sus autores no tienen posiciones en las empresas analizadas, no reciben pago de ellas y el contenido no se ha enviado a la empresa antes de publicarse. Cualquier cambio se indicará aquí.
+• Riesgos: invertir en bolsa implica riesgo de pérdida, incluso de todo el capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Los datos pueden contener errores; verifícalos en las fuentes originales.
+• Producción: guion, gráficos y locución (voz sintética) generados con herramientas de inteligencia artificial y revisados con las fuentes citadas.
+--- FIN ---

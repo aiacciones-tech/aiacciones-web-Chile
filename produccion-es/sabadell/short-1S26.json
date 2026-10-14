@@ -1,0 +1,114 @@
+{
+ "empresa": "Banco Sabadell",
+ "trimestre": "1S 2026",
+ "out": "/mnt/project-files/espana/sabadell/short-sabadell-1S26.mp4",
+ "fuente": "Fuente: Banco Sabadell, resultados 1S26 (24-jul-2026);\nRenta 4; precio y múltiplos stockanalysis 13-oct-2026.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Resultados 1S 2026",
+   "titulo": "Banco Sabadell",
+   "sub": "Banca · IBEX 35",
+   "big": "971 M€",
+   "big_label": "beneficio neto (-0,5% a/a)",
+   "color": "acc",
+   "pregunta": "Las 3 cifras clave del semestre",
+   "voz": "Sabadell ganó novecientos setenta y un millones en el primer semestre, sostenido por la venta de TSB. Tres cifras clave.",
+   "big_fs": 185
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Beneficio recurrente",
+   "big": "691 M€",
+   "delta": "-14,1% a/a",
+   "color": "neg",
+   "barras": [
+    [
+     "1S 2025",
+     804
+    ],
+    [
+     "1S 2026",
+     691
+    ]
+   ],
+   "fmt": "{:.0f}",
+   "nota": "Sin TSB ni extraordinarios. Plusvalía\nneta por la venta de TSB: 322 M€.",
+   "voz": "Uno. Sin TSB ni extraordinarios, el beneficio recurrente fue de seiscientos noventa y un millones, un catorce por ciento menos."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Margen de intereses 2T",
+   "big": "902 M€",
+   "delta": "+3,4% vs 1T26",
+   "color": "acc2",
+   "barras": [
+    [
+     "1T 2026",
+     872
+    ],
+    [
+     "2T 2026",
+     902
+    ]
+   ],
+   "fmt": "{:.0f}",
+   "nota": "1T26 calculado. Comisiones 2T: 328 M€\n(+4% t/t). Semestre: -2,0% a/a.",
+   "voz": "Dos. El margen de intereses subió un tres coma cuatro por ciento en el segundo trimestre, tras caer en el semestre."
+  },
+  {
+   "tipo": "cifra",
+   "n": 3,
+   "label": "Capital CET1",
+   "big": "13,11%",
+   "delta": "+20 pb vs 1T26",
+   "color": "acc",
+   "barras": [
+    [
+     "1T 2026",
+     12.91
+    ],
+    [
+     "2T 2026",
+     13.11
+    ]
+   ],
+   "fmt": "{:.2f}",
+   "nota": "Nueva recompra de 331 M€. Morosidad\n2,47%; ROTE recurrente 13,6%.",
+   "voz": "Tres. Capital del trece coma uno uno por ciento y una nueva recompra de trescientos treinta y un millones."
+  },
+  {
+   "tipo": "kpis",
+   "label": "Valoración",
+   "items": [
+    [
+     "11,5x",
+     "PER forward",
+     "fg"
+    ],
+    [
+     "1,42x",
+     "Precio / libros",
+     "fg"
+    ],
+    [
+     "7,4%",
+     "Rentab. dividendo",
+     "acc"
+    ]
+   ],
+   "nota": "Acción 3,583 € (13-oct-2026). Solo datos.",
+   "voz": "Cotiza a once coma cinco veces el beneficio esperado y uno coma cuatro veces su valor en libros. Próximos resultados, previstos a finales de octubre."
+  },
+  {
+   "tipo": "fin",
+   "titular": "Beneficio sostenido por TSB;\nel 2T recurrente mejora.",
+   "cta": "Análisis completo en el canal",
+   "voz": "El análisis completo está en nuestro canal. Contenido informativo, no es una recomendación de inversión, y no tenemos posiciones en la empresa.",
+   "nombre": "Sabadell · 1S 2026"
+  }
+ ],
+ "length_scale": 0.95
+}

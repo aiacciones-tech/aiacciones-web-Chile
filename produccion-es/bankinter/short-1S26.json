@@ -1,0 +1,113 @@
+{
+ "empresa": "Bankinter",
+ "trimestre": "1S 2026",
+ "out": "/mnt/project-files/espana/bankinter/short-bankinter-1S26.mp4",
+ "fuente": "Fuente: Bankinter, resultados 1S26 (23-jul-2026);\nRenta 4; precio y múltiplos stockanalysis 9-oct-2026.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Resultados 1S 2026",
+   "titulo": "Bankinter",
+   "sub": "Banca · IBEX 35",
+   "big": "+11,7%",
+   "big_label": "beneficio neto vs 1S 2025",
+   "color": "acc",
+   "pregunta": "Las 3 cifras clave del semestre",
+   "voz": "Bankinter ganó un once coma siete por ciento más en el primer semestre, un beneficio récord. Tres cifras clave.",
+   "big_fs": 185
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Beneficio neto",
+   "big": "605 M€",
+   "delta": "+11,7% a/a",
+   "color": "acc",
+   "barras": [
+    [
+     "1S 2025",
+     541.6
+    ],
+    [
+     "1S 2026",
+     605
+    ]
+   ],
+   "fmt": "{:.0f}",
+   "nota": "2T26: 315 M€, un 8% sobre el consenso\n(Renta 4); incluye 23 M€ extraordinarios.",
+   "voz": "Uno. Seiscientos cinco millones de beneficio. En el segundo trimestre superó al consenso en un ocho por ciento, con ayuda de comisiones extraordinarias."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Comisiones netas",
+   "big": "440 M€",
+   "delta": "~+16% a/a",
+   "color": "acc2",
+   "barras": [
+    [
+     "1S 2025",
+     380
+    ],
+    [
+     "1S 2026",
+     440.4
+    ]
+   ],
+   "fmt": "{:.0f}",
+   "nota": "Margen de intereses: 1.160 M€ (+5,4%).\n1S25 de comisiones calculado.",
+   "voz": "Dos. Las comisiones crecieron cerca de un dieciséis por ciento, el triple que el margen de intereses."
+  },
+  {
+   "tipo": "cifra",
+   "n": 3,
+   "label": "Eficiencia",
+   "big": "34,3%",
+   "delta": "35,9% en 1S 2025",
+   "color": "acc",
+   "barras": [
+    [
+     "1S 2025",
+     35.9
+    ],
+    [
+     "1S 2026",
+     34.3
+    ]
+   ],
+   "fmt": "{:.1f}",
+   "nota": "Costes / margen bruto. ROTE 20,4%;\nmorosidad 1,92%; CET1 12,91%.",
+   "voz": "Tres. Eficiencia del treinta y cuatro coma tres por ciento: los costes subieron menos que los ingresos. La rentabilidad tangible llegó al veinte por ciento."
+  },
+  {
+   "tipo": "kpis",
+   "label": "Valoración",
+   "items": [
+    [
+     "12,2x",
+     "PER 12 meses",
+     "fg"
+    ],
+    [
+     "~2,0x",
+     "Precio / libros",
+     "fg"
+    ],
+    [
+     "4,0%",
+     "Rentab. dividendo",
+     "acc"
+    ]
+   ],
+   "nota": "Acción 15,00 € (9-oct-2026). Solo datos.",
+   "voz": "Cotiza a doce coma dos veces beneficio y unas dos veces su valor en libros. Próximos resultados, el veintidós de octubre."
+  },
+  {
+   "tipo": "fin",
+   "titular": "Beneficio récord, con\ncomisiones y eficiencia.",
+   "cta": "Análisis completo en el canal",
+   "voz": "El análisis completo está en nuestro canal. Contenido informativo, no es una recomendación de inversión, y no tenemos posiciones en la empresa."
+  }
+ ],
+ "length_scale": 0.95
+}

@@ -1,0 +1,113 @@
+{
+ "empresa": "Unicaja",
+ "trimestre": "1S 2026",
+ "out": "/mnt/project-files/espana/unicaja/short-unicaja-1S26.mp4",
+ "fuente": "Fuente: Unicaja, resultados 1S26 (31-jul-2026);\nInvesting.com; precio y múltiplos stockanalysis 13-oct-2026.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Resultados 1S 2026",
+   "titulo": "Unicaja",
+   "sub": "Banca · IBEX 35",
+   "big": "+7,1%",
+   "big_label": "beneficio neto vs 1S 2025",
+   "color": "acc",
+   "pregunta": "Las 3 cifras clave del semestre",
+   "voz": "Unicaja ganó un siete coma uno por ciento más en el primer semestre, y su segundo trimestre superó al consenso. Tres cifras clave.",
+   "big_fs": 185
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Beneficio 2T26",
+   "big": "201 M€",
+   "delta": "+10% vs consenso",
+   "color": "acc",
+   "barras": [
+    [
+     "Consenso",
+     183
+    ],
+    [
+     "2T 2026",
+     201
+    ]
+   ],
+   "fmt": "{:.0f}",
+   "nota": "Consenso según Investing.com. Clave: menos\ndeterioros (41 M€ vs 55 esperados).",
+   "voz": "Uno. Doscientos un millones en el segundo trimestre, un diez por ciento sobre el consenso, gracias sobre todo a menos deterioros."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Morosidad",
+   "big": "1,8%",
+   "delta": "-38 pb en un año",
+   "color": "acc",
+   "barras": [
+    [
+     "Jun 2025",
+     2.2
+    ],
+    [
+     "Jun 2026",
+     1.8
+    ]
+   ],
+   "fmt": "{:.1f}",
+   "nota": "Coste del riesgo 19 pb; guía rebajada\na 20-25 pb. CET1 15,8%.",
+   "voz": "Dos. La morosidad bajó al uno coma ocho por ciento, y el banco rebajó su previsión de coste del riesgo."
+  },
+  {
+   "tipo": "cifra",
+   "n": 3,
+   "label": "Margen de intereses",
+   "big": "755 M€",
+   "delta": "+1,7% a/a",
+   "color": "acc2",
+   "barras": [
+    [
+     "1S 2025",
+     742
+    ],
+    [
+     "1S 2026",
+     755
+    ]
+   ],
+   "fmt": "{:.0f}",
+   "nota": "Costes ~+5%: eficiencia 45,6%.\n1S25 calculado.",
+   "voz": "Tres. El margen de intereses solo creció un uno coma siete por ciento, y los costes, cerca de un cinco."
+  },
+  {
+   "tipo": "kpis",
+   "label": "Valoración",
+   "items": [
+    [
+     "12,9x",
+     "PER 12 meses",
+     "fg"
+    ],
+    [
+     "1,23x",
+     "Precio / libros",
+     "fg"
+    ],
+    [
+     "5,3%",
+     "Rentab. dividendo",
+     "acc"
+    ]
+   ],
+   "nota": "Acción 3,242 € (13-oct-2026). Solo datos.",
+   "voz": "Cotiza a doce coma nueve veces beneficio y uno coma dos veces su valor en libros. Próximos resultados, el treinta de octubre."
+  },
+  {
+   "tipo": "fin",
+   "titular": "Más beneficio por menos\ndeterioros; guía al alza.",
+   "cta": "Análisis completo en el canal",
+   "voz": "El análisis completo está en nuestro canal. Contenido informativo, no es una recomendación de inversión, y no tenemos posiciones en la empresa."
+  }
+ ],
+ "length_scale": 0.95
+}

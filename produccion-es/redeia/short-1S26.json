@@ -1,0 +1,29 @@
+{
+ "empresa": "Redeia",
+ "trimestre": "1S 2026",
+ "out": "/mnt/project-files/espana/redeia/short-redeia-1S26.mp4",
+ "fuente": "Fuente: Redeia, resultados 1S26 (29-jul-2026);\nprecio y múltiplos stockanalysis 2-oct-2026.",
+ "escenas": [
+  {"tipo": "titulo", "kicker": "Resultados 1S 2026", "titulo": "Redeia", "sub": "Red Eléctrica · IBEX 35",
+   "big": "+4%", "big_label": "beneficio neto vs 1S 2025", "color": "acc", "pregunta": "Las 3 cifras clave del semestre",
+   "voz": "Redeia, la dueña de Red Eléctrica, ganó un cuatro por ciento más en el primer semestre, en línea con lo esperado. Tres cifras clave."},
+  {"tipo": "cifra", "n": 1, "label": "Beneficio neto", "big": "280,4 M€", "delta": "+4,0% a/a", "color": "acc",
+   "barras": [["1S 2025", 269.6], ["1S 2026", 280.4]], "fmt": "{:.1f}",
+   "nota": "Ya suma el 55% de la guía anual\n(~510 M€). Cálculo propio.",
+   "voz": "Uno. Beneficio de doscientos ochenta millones de euros, un cuatro por ciento más. Ya lleva el cincuenta y cinco por ciento de su objetivo anual."},
+  {"tipo": "cifra", "n": 2, "label": "EBITDA", "big": "672,6 M€", "delta": "+5,8% a/a", "color": "acc2",
+   "barras": [["1S 2025", 635.7], ["1S 2026", 672.6]], "fmt": "{:.0f}",
+   "nota": "Incluye 24 M€ de un cambio contable;\nsin él, ~+2% (cálculo propio).",
+   "voz": "Dos. EBITDA de seiscientos setenta y tres millones, un cinco coma ocho por ciento más, aunque veinticuatro millones vienen de un cambio contable."},
+  {"tipo": "cifra", "n": 3, "label": "Deuda neta", "big": "5.009 M€", "delta": "-465 M€ vs diciembre", "color": "acc",
+   "barras": [["Dic 2025", 5474.2], ["Jun 2026", 5009.4]], "fmt": "{:.0f}",
+   "nota": "Con un bono híbrido de 500 M€\ny subvenciones.",
+   "voz": "Tres. La deuda neta bajó cuatrocientos sesenta y cinco millones, a cinco mil nueve millones de euros, pese a invertir un nueve por ciento más."},
+  {"tipo": "kpis", "label": "Valoración", "items": [["16,6x", "PER 12 meses", "fg"], ["11,3x", "EV / EBITDA", "fg"], ["5,4%", "Rentab. dividendo", "acc"]],
+   "nota": "Acción 14,80 € (2-oct-2026). Solo datos.",
+   "voz": "Cotiza a dieciséis coma seis veces beneficio, con una rentabilidad por dividendo del cinco coma cuatro por ciento."},
+  {"tipo": "fin", "titular": "En línea con lo esperado:\nmás inversión, menos deuda.", "cta": "Análisis completo en el canal",
+   "voz": "El análisis completo está en nuestro canal. Contenido informativo, no es una recomendación de inversión, y no tenemos posiciones en la empresa."}
+ ],
+ "length_scale": 0.95
+}

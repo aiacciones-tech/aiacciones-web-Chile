@@ -1,0 +1,29 @@
+{
+ "empresa": "Iberdrola",
+ "trimestre": "1S 2026",
+ "out": "/mnt/project-files/espana/iberdrola/short-iberdrola-1S26.mp4",
+ "fuente": "Fuente: Iberdrola, resultados 1S26 (22-jul-2026);\nconsenso Bankinter; precio stockanalysis 9-oct-2026.",
+ "escenas": [
+  {"tipo": "titulo", "kicker": "Resultados 1S 2026", "titulo": "Iberdrola", "sub": "Eléctrica · IBEX 35",
+   "big": "+7,8%", "big_label": "beneficio ajustado vs 1S 2025", "color": "acc", "pregunta": "Las 3 cifras clave del semestre",
+   "voz": "Iberdrola ganó un siete coma ocho por ciento más en el primer semestre, sin extraordinarios, y superó lo que esperaba el mercado. Tres cifras clave."},
+  {"tipo": "cifra", "n": 1, "label": "Beneficio ajustado", "big": "3.565 M€", "delta": "+5,5% vs consenso", "color": "acc",
+   "barras": [["1S 2025", 3308], ["Consenso", 3380], ["1S 2026", 3565]], "fmt": "{:.0f}",
+   "nota": "Reportado: 4.336 M€ (+21,7%), con\n953 M€ de plusvalía por México.",
+   "voz": "Uno. Beneficio ajustado de tres mil quinientos sesenta y cinco millones de euros, un cinco coma cinco por ciento por encima del consenso."},
+  {"tipo": "cifra", "n": 2, "label": "EBITDA de redes", "big": "4.213 M€", "delta": "+13% a/a", "color": "acc2",
+   "barras": [["Redes", 4213], ["Generación\ny clientes", 3790]], "fmt": "{:.0f}",
+   "nota": "Generación y clientes: +1%.",
+   "voz": "Dos. Las redes tiran del crecimiento: su EBITDA subió un trece por ciento, frente al uno por ciento de generación y clientes."},
+  {"tipo": "cifra", "n": 3, "label": "Deuda neta", "big": "54.000 M€", "delta": "3,5x EBITDA", "color": "neg",
+   "barras": [["Dic 2025", 50182], ["Jun 2026", 54000]], "fmt": "{:.0f}",
+   "nota": "Inversión de 7.010 M€ (+25%)\nen el semestre.",
+   "voz": "Tres. La deuda neta subió a cincuenta y cuatro mil millones, tres coma cinco veces el EBITDA, con una inversión récord."},
+  {"tipo": "kpis", "label": "Valoración", "items": [["25,9x", "PER 12 meses", "fg"], ["13,7x", "EV / EBITDA", "fg"], ["3,2%", "Rentab. dividendo", "acc"]],
+   "nota": "Acción 21,35 € (9-oct-2026). Solo datos.",
+   "voz": "Cotiza a veintiséis veces beneficio, con una rentabilidad por dividendo del tres coma dos por ciento."},
+  {"tipo": "fin", "titular": "Redes al alza y beneficio\nsobre el consenso.", "cta": "Análisis completo en el canal",
+   "voz": "El análisis completo está en nuestro canal. Contenido informativo, no es una recomendación de inversión, y no tenemos posiciones en la empresa."}
+ ],
+ "length_scale": 0.95
+}

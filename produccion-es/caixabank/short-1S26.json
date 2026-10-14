@@ -1,0 +1,113 @@
+{
+ "empresa": "CaixaBank",
+ "trimestre": "1S 2026",
+ "out": "/mnt/project-files/espana/caixabank/short-caixabank-1S26.mp4",
+ "fuente": "Fuente: CaixaBank, resultados 1S26 (29-jul-2026);\nXTB; precio y múltiplos stockanalysis 6-oct-2026.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Resultados 1S 2026",
+   "titulo": "CaixaBank",
+   "sub": "Banca · IBEX 35",
+   "big": "+8,5%",
+   "big_label": "beneficio neto vs 1S 2025",
+   "color": "acc",
+   "pregunta": "Las 3 cifras clave del semestre",
+   "voz": "CaixaBank ganó un ocho coma cinco por ciento más en el primer semestre, otro beneficio récord. Tres cifras clave.",
+   "big_fs": 185
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Beneficio neto",
+   "big": "3.203 M€",
+   "delta": "+8,5% a/a",
+   "color": "acc",
+   "barras": [
+    [
+     "1S 2025",
+     2951
+    ],
+    [
+     "1S 2026",
+     3203
+    ]
+   ],
+   "fmt": "{:.0f}",
+   "nota": "2T26: 1.631 M€, un 4,6% sobre el consenso\ndel banco (XTB, calculado). La acción cayó.",
+   "voz": "Uno. Tres mil doscientos tres millones de beneficio. En el segundo trimestre superó al consenso, aunque la acción cayó un siete por ciento ese día."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Gestión patrimonial",
+   "big": "1.091 M€",
+   "delta": "+12,1% a/a",
+   "color": "acc2",
+   "barras": [
+    [
+     "1S 2025",
+     973
+    ],
+    [
+     "1S 2026",
+     1091
+    ]
+   ],
+   "fmt": "{:.0f}",
+   "nota": "Seguros de protección +14,5%; comisiones\nbancarias -1,1%. 1S25 calculado.",
+   "voz": "Dos. La gestión patrimonial creció un doce por ciento, y los seguros de protección casi un quince. Las comisiones bancarias, en cambio, bajaron."
+  },
+  {
+   "tipo": "cifra",
+   "n": 3,
+   "label": "Morosidad",
+   "big": "1,78%",
+   "delta": "2,07% en dic-2025",
+   "color": "acc",
+   "barras": [
+    [
+     "Dic 2025",
+     2.07
+    ],
+    [
+     "Jun 2026",
+     1.78
+    ]
+   ],
+   "fmt": "{:.2f}",
+   "nota": "Mínimo histórico. Cobertura 81%;\ncrédito sano +8,2%; CET1 12,54%.",
+   "voz": "Tres. La morosidad bajó al uno coma siete ocho por ciento, un mínimo histórico, mientras el crédito crece un ocho por ciento."
+  },
+  {
+   "tipo": "kpis",
+   "label": "Valoración",
+   "items": [
+    [
+     "14,7x",
+     "PER 12 meses",
+     "fg"
+    ],
+    [
+     "~2,2x",
+     "Precio / libros",
+     "fg"
+    ],
+    [
+     "4,1%",
+     "Rentab. dividendo",
+     "acc"
+    ]
+   ],
+   "nota": "Acción 12,36 € (6-oct-2026). Solo datos.",
+   "voz": "Cotiza a catorce coma siete veces beneficio y unas dos coma dos veces su valor en libros. Próximos resultados, el treinta de octubre."
+  },
+  {
+   "tipo": "fin",
+   "titular": "Beneficio récord, con\ncrédito y seguros.",
+   "cta": "Análisis completo en el canal",
+   "voz": "El análisis completo está en nuestro canal. Contenido informativo, no es una recomendación de inversión, y no tenemos posiciones en la empresa."
+  }
+ ],
+ "length_scale": 0.95
+}

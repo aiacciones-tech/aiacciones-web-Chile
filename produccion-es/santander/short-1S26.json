@@ -1,0 +1,113 @@
+{
+ "empresa": "Banco Santander",
+ "trimestre": "1S 2026",
+ "out": "/mnt/project-files/espana/santander/short-santander-1S26.mp4",
+ "fuente": "Fuente: Banco Santander, resultados 1S26 (22-jul-2026);\nReuters; precio y múltiplos stockanalysis 9-oct-2026.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Resultados 1S 2026",
+   "titulo": "Banco Santander",
+   "sub": "Banca · IBEX 35",
+   "big": "+15%",
+   "big_label": "beneficio ordinario vs 1S 2025",
+   "color": "acc",
+   "pregunta": "Las 3 cifras clave del semestre",
+   "voz": "Banco Santander ganó un quince por ciento más en el primer semestre, un beneficio ordinario récord. Tres cifras clave."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Beneficio ordinario",
+   "big": "7.328 M€",
+   "delta": "+15% a/a",
+   "color": "acc",
+   "barras": [
+    [
+     "1S 2025",
+     6377
+    ],
+    [
+     "1S 2026",
+     7328
+    ]
+   ],
+   "fmt": "{:.0f}",
+   "nota": "2T26: 3.768 M€, en línea con el consenso\n(Reuters). Atribuido 8.973 M€, con Polonia.",
+   "voz": "Uno. Siete mil trescientos veintiocho millones de beneficio ordinario. El segundo trimestre quedó en línea con lo que esperaban los analistas."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Eficiencia",
+   "big": "42,8%",
+   "delta": "-2,9 pp a/a",
+   "color": "acc2",
+   "barras": [
+    [
+     "1S 2025",
+     45.7
+    ],
+    [
+     "1S 2026",
+     42.8
+    ]
+   ],
+   "fmt": "{:.1f}",
+   "nota": "Ingresos +6%; costes planos (-1% en\neuros constantes). 1S25 calculado.",
+   "voz": "Dos. Los ingresos subieron un seis por ciento y los costes se mantuvieron planos: la eficiencia mejoró casi tres puntos."
+  },
+  {
+   "tipo": "cifra",
+   "n": 3,
+   "label": "Capital CET1",
+   "big": "14,0%",
+   "delta": "+1,0 pp a/a",
+   "color": "acc",
+   "barras": [
+    [
+     "Jun 2025",
+     13.0
+    ],
+    [
+     "Jun 2026",
+     14.0
+    ]
+   ],
+   "fmt": "{:.1f}",
+   "nota": "Tras comprar TSB. Recompras 2025-26:\n~9.000 M€. Morosidad 2,93%.",
+   "voz": "Tres. Capital del catorce por ciento, aun después de comprar TSB, y unos nueve mil millones en recompras."
+  },
+  {
+   "tipo": "kpis",
+   "label": "Valoración",
+   "items": [
+    [
+     "13,6x",
+     "PER 12 meses",
+     "fg"
+    ],
+    [
+     "1,49x",
+     "Precio / libros",
+     "fg"
+    ],
+    [
+     "2,1%",
+     "Rentab. dividendo",
+     "acc"
+    ]
+   ],
+   "nota": "Acción 12,02 € (9-oct-2026). Solo datos.",
+   "voz": "Cotiza a trece coma seis veces beneficio y una vez y media su valor en libros. Próximos resultados, el veintiocho de octubre."
+  },
+  {
+   "tipo": "fin",
+   "titular": "Beneficio ordinario récord,\ncon menos costes.",
+   "cta": "Análisis completo en el canal",
+   "voz": "El análisis completo está en nuestro canal. Contenido informativo, no es una recomendación de inversión, y no tenemos posiciones en la empresa.",
+   "nombre": "Santander · 1S 2026"
+  }
+ ],
+ "length_scale": 0.95
+}
