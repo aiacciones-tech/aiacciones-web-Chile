@@ -392,4 +392,163 @@ FICHAS = [
                 '6-oct-2026).',
      'fuentes_corto': 'XTB, Renta 4, Capitalbolsa y stockanalysis.com',
      'elaborado': '13-oct-2026, 19:00'},
+    {'id': 'repsol',
+     'nombre': 'Repsol',
+     'ticker': 'REP',
+     'sector': 'Petróleo y gas · integrada',
+     'lede': 'Compañía energética integrada: exploración y producción de petróleo y gas (Upstream), refino y química (Industrial), estaciones de '
+             'servicio, electricidad y gas para clientes (Cliente) y generación renovable. En una petrolera, el resultado ajustado a coste de reposición '
+             '(CCS) quita el efecto del precio de los inventarios.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Resultado neto ajustado de 2.711 M€ (+134,7%), impulsado por el refino. El beneficio reportado, 2.201 M€ (603 M€ en 1S 2025), incluye '
+                '+823 M€ de efecto inventario y -1.333 M€ de deterioros. En el 2T, 1.838 M€ ajustados: un 12,5% sobre el consenso publicado por Repsol '
+                '(1.634 M€, según Benzinga; calculado).',
+     'precio': '29,11 €',
+     'precio_fecha': '7-oct-2026',
+     'multiplos': [('PER 12 meses', '9,3x'),
+                   ('PER forward', '5,9x'),
+                   ('EV/EBITDA', '4,9x'),
+                   ('Precio / valor en libros', '1,15x'),
+                   ('Rentab. dividendo', '3,7%'),
+                   ('Capitalización', '~31.290 M€')],
+     'multiplos_nota': 'Con precio de 29,11 € al 7-oct-2026 (stockanalysis.com); EV/EBITDA y precio / valor en libros a 25-sep-2026 (30,75 €). A cierre '
+                       'de 2023, 2024 y 2025 el PER era 5,5x, 8,2x y 9,8x, y el EV/EBITDA 3,3x, 4,6x y 4,7x. La acción subió un 100,9% en 12 meses (a '
+                       '25-sep-2026).',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Ventas', '33.697', '+21,5%'),
+               ('EBITDA CCS', '5.006', '+70,6%'),
+               ('Resultado ajustado Industrial', '1.683', '235 en 1S25'),
+               ('Resultado ajustado Upstream', '673', '+6,7%'),
+               ('Resultado ajustado Cliente', '369', '+5,1%'),
+               ('Resultado neto ajustado (CCS)', '2.711', '+134,7%'),
+               ('Resultado neto reportado', '2.201', '+265%'),
+               ('BPA reportado', '1,96 €', '0,50 € en 1S25')],
+     'kpi': 'Margen de refino en España 12,4 $/barril (5,6); 14,0 en el 2T. Producción 548 kbep/d (549); 558 en el 2T. Margen EBITDA CCS 14,9% (10,6%, '
+            'calculado). Flujo de caja de las operaciones 2.977 M€ (+15,1%) tras 2.400 M€ invertidos en inventarios; flujo de caja libre 1.302 M€ (636). '
+            'Deuda neta 3.667 M€ (-1.133 M€ frente a marzo); apalancamiento 11,3%; deuda neta / EBITDA ~0,4x (calculado). Liquidez 10.117 M€.',
+     'guia': 'Producción 2026 prevista de 560.000-570.000 bep/d (más de 580.000 a inicios de julio). Dividendo en efectivo 2026 de 1,051 €/acción (+8%) '
+             'y 0,53 € en enero de 2027. Recompras de hasta 850 M€ en 2026 y una tercera prevista en octubre, para repartir el 30-40% del flujo de caja '
+             'de las operaciones.',
+     'positivos': ['El margen de refino se duplicó y el negocio Industrial multiplicó por siete su resultado.',
+                   'El 2T superó al consenso; el flujo de caja libre se duplicó y la deuda neta bajó.',
+                   'Más retribución: dividendo +8% y recompras de hasta 850 M€.'],
+     'riesgos': ['El beneficio depende mucho del precio del crudo y del margen de refino, hoy altos por las tensiones geopolíticas.',
+                 'Deterioros y provisiones de 1.333 M€, sobre todo en Química y en renovables en Chile.',
+                 'La producción no crece frente a 2025, Upstream quedó por debajo de lo esperado (Bankinter) y hay exposición a Venezuela.'],
+     'videos': [('LDjyCZImFpQ', 'Repsol resultados 1S 2026: beneficio ajustado +134,7% por el refino; el 2T supera al consenso'),
+                ('OMP1V-cPw9s', 'Repsol 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-10-29',
+     'fuentes': 'Repsol, informe de resultados del segundo trimestre 2026 y nota de prensa (CNMV, 23-jul-2026); Benzinga (consenso de Repsol, '
+                '23-jul-2026); Jefferies / Bolsamania y Bankinter Análisis / Capitalbolsa (23-jul-2026); stockanalysis.com (precio y múltiplos, 25-sep y '
+                '7-oct-2026).',
+     'fuentes_corto': 'Benzinga, Jefferies, Bankinter Análisis y stockanalysis.com',
+     'elaborado': '15-oct-2026, 13:30'},
+    {'id': 'telefonica',
+     'nombre': 'Telefónica',
+     'ticker': 'TEF',
+     'sector': 'Telecomunicaciones',
+     'lede': 'Operadora de telecomunicaciones con cuatro mercados principales: España, Brasil, Alemania y Reino Unido (Virgin Media O2, al 50%). Está '
+             'saliendo de Hispanoamérica: Colombia y Chile se vendieron en el 1T 2026 y la venta de México está firmada y pendiente de autorizaciones.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'EBITDA ajustado de 5.768 M€ (+3,8%; +2,3% a tipos constantes), con Brasil (+10% constante) y España (+2,1%) al alza y Alemania a la '
+                'baja. Resultado neto atribuido de −338 M€ (pérdida un 75% menor que en el 1S 2025) por el impacto de 1.001 M€ de la venta de Chile. En '
+                'el 2T, ingresos y EBITDA ligeramente por encima del consenso recopilado por Telefónica; el beneficio, muy por debajo por una provisión '
+                'de 265 M€ en Alemania.',
+     'precio': '3,252 €',
+     'precio_fecha': '13-oct-2026',
+     'multiplos': [('PER 12 meses', 'n/d (pérdidas)'),
+                   ('PER forward', '8,9x'),
+                   ('EV/EBITDA', '7,4x'),
+                   ('Rentab. dividendo 12 m', '9,2%'),
+                   ('FCF yield', '19,1%'),
+                   ('Capitalización', '~18.300 M€')],
+     'multiplos_nota': 'Precio, PER forward, rentabilidad por dividendo (0,30 € en 12 meses) y capitalización a 13-oct-2026; EV/EBITDA y FCF yield a '
+                       '25-sep-2026 (stockanalysis.com). Con el dividendo de 2026 (0,15 €) la rentabilidad sería del 4,6% (calculado). A cierre de 2023, '
+                       '2024 y 2025 el EV/EBITDA era 8,6x, 6,6x y 8,7x, y el precio / valor contable 0,74x, 0,98x y 1,11x. Sin PER en esos años por '
+                       'pérdidas.',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025 (operaciones continuadas salvo el resultado total)',
+     'tabla': [('Ingresos', '16.392', '+1,7%'),
+               ('EBITDA ajustado', '5.768', '+3,8%'),
+               ('EBITDA ajustado España', '2.301', '+2,1%'),
+               ('EBITDA ajustado Brasil', '2.215', '+15,1%'),
+               ('EBITDAaL-CapEx', '2.654', '+4,0%'),
+               ('Beneficio neto ajustado (continuadas)', '954', ''),
+               ('Resultado neto atribuido (total)', '−338', '−75% de pérdida'),
+               ('BPA ajustado continuadas (calculado)', '~0,17 €', '')],
+     'kpi': 'Margen EBITDA ajustado 35,2% (34,5% en 1S 2025, calculado). Alemania: ingresos −11% y EBITDA ajustado −7,2% en el 2T por la migración de '
+            'clientes de 1&1. Virgin Media O2 (2T): ingresos de servicio −3,9% y EBITDA ajustado −2,9%. CapEx 1.908 M€ (11,6% de los ingresos). Flujo de '
+            'caja libre 944 M€. Deuda financiera neta 25.278 M€ (−8,4% a/a; −1.546 M€ desde diciembre), apalancamiento 2,68x EBITDAaL.',
+     'guia': 'Guía 2026 (tipos constantes): EBITDAaL-CapEx más de +3% (antes, más de +2%); ingresos y EBITDA ajustado +1,5% a +2,5% (ingresos hacia la '
+             'parte baja, según la conferencia); CapEx / ingresos ~12%; flujo de caja libre ~3.000 M€; apalancamiento de 2,5x en 2028. Dividendo 2026 de '
+             '0,15 € en efectivo, pagadero en junio de 2027 (0,30 € en el ejercicio 2025).',
+     'positivos': ['Brasil (EBITDA +10% constante) y España (bajas de clientes en mínimos) tiran del grupo.',
+                   'La deuda neta baja un 8,4% y el apalancamiento cae a 2,68x.',
+                   'Sube la previsión de caja operativa para 2026 a más de +3%.'],
+     'riesgos': ['Alemania: ingresos −11% en el 2T y unos 155 M€ más de reestructuración previstos en el segundo semestre.',
+                 'Reino Unido: competencia intensa y deuda de Virgin Media O2 de unas 5,9 veces el EBITDA.',
+                 'La salida de Hispanoamérica resta 812 M€ en el semestre y la venta de México sigue pendiente.'],
+     'videos': [('u63YAPRgUtE', 'Telefónica resultados 1S 2026: EBITDA ajustado +3,8% y sube la guía de caja | Brasil +10%'),
+                ('0Acp3sPlQZE', 'Telefónica 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-11-12',
+     'fuentes': 'Telefónica, nota de resultados del primer semestre 2026 (29-jul-2026, CNMV y telefonica.com) y del 1T 2026; Renta 4 Banco (resultados y '
+                'conferencia, 29-jul-2026); Benzinga España (consenso de Telefónica y Alemania, 23 y 30-jul-2026); Investing.com (conferencia, '
+                '29-jul-2026); El Conciso (29-jul-2026); Virgin Media O2 (resultados 2T26); stockanalysis.com (precio y múltiplos, 25-sep y '
+                '13-oct-2026).',
+     'fuentes_corto': 'Renta 4 Banco, Benzinga, Investing.com, El Conciso, Virgin Media O2 y stockanalysis.com',
+     'elaborado': '15-oct-2026, 13:30'},
+    {'id': 'endesa',
+     'nombre': 'Endesa',
+     'ticker': 'ELE',
+     'sector': 'Eléctricas · redes, generación y comercialización',
+     'lede': 'Eléctrica integrada, controlada por Enel, con distribución regulada, generación (renovable, convencional y extrapeninsular) y '
+             'comercialización de electricidad y gas en España y Portugal. Las actividades reguladas aportan cerca de la mitad del EBITDA.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Beneficio neto de 1.470 M€ (+41,2%), un 6,8% por encima del consenso (1.376 M€, Bankinter Análisis; diferencia calculada). Beneficio '
+                'ordinario neto 1.480 M€ (+42,2%). Unos 200 M€ del EBITDA fueron no recurrentes.',
+     'precio': '42,18 €',
+     'precio_fecha': '25-sep-2026',
+     'multiplos': [('PER 12 meses', '16,6x'),
+                   ('PER forward', '17,8x'),
+                   ('EV/EBITDA', '9,3x'),
+                   ('Precio / valor contable', '4,7x'),
+                   ('Rentab. dividendo', '3,8%'),
+                   ('FCF yield', '4,7%'),
+                   ('Capitalización', '~43.170 M€')],
+     'multiplos_nota': 'Con precio de 42,18 € al 25-sep-2026 (stockanalysis.com). A cierre de 2023, 2024 y 2025 el PER era 26,3x, 11,7x y 14,5x, el '
+                       'EV/EBITDA 10,5x, 6,9x y 8,2x y el precio / valor contable 2,7x, 2,4x y 3,3x. La acción subió un 59% en 52 semanas.',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Ingresos', '10.995', '+1,1%'),
+               ('EBITDA', '3.240', '+19,5%'),
+               ('EBITDA redes (distribución)', '1.200', '+24%'),
+               ('EBITDA generación (redondeado)', '~1.200', ''),
+               ('EBITDA clientes (redondeado)', '~800', '+26%'),
+               ('EBIT', '2.094', '+31,4%'),
+               ('Beneficio neto', '1.470', '+41,2%'),
+               ('Beneficio ordinario neto', '1.480', '+42,2%'),
+               ('BPA', '1,44 €', '+46%')],
+     'kpi': 'Margen EBITDA 29,5% (24,9% en 1S 2025; calculado). Producción 32.708 GWh (+8,5%); ventas de electricidad 35.474 GWh (-2,3%) y de gas 25.591 '
+            'GWh (-17,6%); energía distribuida 72.555 GWh (+4,2%). Cash flow operativo 2.272 M€ (-3,6%); inversión bruta 1.062 M€ (+13,6%; redes 600 M€, '
+            '+38%). Deuda financiera neta 10.305 M€ (10.110 M€ en diciembre), 1,6x EBITDA. Coste medio de la deuda 3,2%.',
+     'guia': 'Guía 2026 al alza: beneficio ordinario neto de más de 2.400 M€ (antes 2.300-2.400 M€); el semestre ya suma el 62% (calculado). Objetivo de '
+             'EBITDA de 5.800-6.100 M€ fijado en febrero. Política de dividendo 2026-2028: al menos el 70% del beneficio ordinario neto, lo que supone '
+             'más de 1.680 M€ para 2026 (calculado). Recompra de 2.000 M€ ejecutada en más del 50%. Nuevo plan estratégico a principios de 2027.',
+     'positivos': ['Las redes crecen un 24% y la inversión en ellas, un 38%.',
+                   'El beneficio superó al consenso y la guía anual sube.',
+                   'La deuda apenas se mueve pese a la recompra y el apalancamiento baja a 1,6x.'],
+     'riesgos': ['Unos 200 M€ del EBITDA del semestre no se repetirán.',
+                 'Las ventas de electricidad y gas caen, y la empresa prevé un margen libre de 44-55 €/MWh para el año, por debajo de los 56 del '
+                 'semestre.',
+                 'El PER y el EV/EBITDA están por encima de los de 2024 y 2025.'],
+     'videos': [('hinLi7xl-R8', 'Endesa resultados 1S 2026: beneficio +41%, 6,8% sobre el consenso | Guía 2026 al alza'),
+                ('tcyjnI02z7Q', 'Endesa 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-10-28',
+     'proximo_estimado': True,
+     'fuentes': 'Endesa, nota de prensa de resultados del primer semestre 2026 (CNMV y endesa.com, 29-jul-2026); Bankinter Análisis (consenso, '
+                '29-jul-2026); Investing.com (presentación y conferencia de resultados, 29-jul-2026); Endesa (resultados 1T26, 6-may-2026); El Español y '
+                'Bolsamania (plan y política de dividendo, 24-feb-2026); stockanalysis.com (precio y múltiplos, 25-sep-2026).',
+     'fuentes_corto': 'Bankinter Análisis, Investing.com, El Español, Bolsamania y stockanalysis.com',
+     'elaborado': '15-oct-2026, 13:30'},
 ]
