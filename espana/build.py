@@ -11,6 +11,7 @@ import json
 import shutil
 from pathlib import Path
 
+from comparadores import COMPARADORES
 from fichas import FICHAS
 
 AQUI = Path(__file__).resolve().parent
@@ -52,7 +53,7 @@ def fecha_dia(iso):
 YT_SVG = ('<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 '
           '31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>')
 
-NAV = [("empresas/index.html", "Empresas"), ("calendario/index.html", "Calendario"),
+NAV = [("empresas/index.html", "Empresas"), ("comparadores/index.html", "Comparadores"), ("calendario/index.html", "Calendario"),
        ("metodologia/index.html", "Metodología"), ("contacto/index.html", "Contacto")]
 
 
@@ -172,7 +173,7 @@ def ficha(f):
   <p class="small"><b>Tres riesgos</b></p><ul class="checks risks">{"".join(f"<li>{e(x)}</li>" for x in f['riesgos'])}</ul></div>
   <div class="aside-box"><h2 class="h-sec">Vídeos</h2><div class="vids">{videos_html(f)}</div></div>
 </section>
-<section><h2 class="h-sec">Fuentes</h2><p class="small">{e(f['fuentes'])} Las cifras marcadas como calculadas son cálculos propios.</p></section>
+{enlace_comparador(f)}<section><h2 class="h-sec">Fuentes</h2><p class="small">{e(f['fuentes'])} Las cifras marcadas como calculadas son cálculos propios.</p></section>
 {aviso_ficha(f)}"""
     desc = f"{f['nombre']} ({f['ticker']}): resultados del {f['periodo_largo']}, guía, valoración y vídeo. {f['titular'][:110]}"
     return pagina(f"empresas/{f['id']}", f"{f['nombre']} ({f['ticker']}) resultados {f['periodo']}", desc, cuerpo, "Empresas")
@@ -229,6 +230,7 @@ def portada(cal):
 <section><h2 class="h-sec">Últimos análisis</h2><div class="stock-grid">{cards}</div></section>
 <section><h2 class="h-sec">Secciones</h2><div class="sec-grid">
 <a class="sec-link" href="empresas/index.html"><span class="sec-t">Empresas</span><span class="sec-d">Una ficha por empresa con las cifras del último informe, la guía, los múltiplos y el vídeo.</span></a>
+<a class="sec-link" href="comparadores/index.html"><span class="sec-t">Comparadores</span><span class="sec-d">Empresas del mismo sector frente a frente con sus principales indicadores financieros.</span></a>
 <a class="sec-link" href="calendario/index.html"><span class="sec-t">Calendario</span><span class="sec-d">Fechas de resultados del {e(cal['trimestre'])} de las empresas del IBEX 35, confirmadas y estimadas.</span></a>
 <a class="sec-link" href="metodologia/index.html"><span class="sec-t">Metodología</span><span class="sec-d">De dónde salen las cifras, cómo calculamos los múltiplos y qué no hacemos.</span></a>
 </div></section>"""
@@ -241,6 +243,75 @@ def empresas():
 <p class="lede">Cada ficha resume nuestro último vídeo de resultados de la empresa. Iremos sumando empresas del IBEX 35 a medida que publiquen sus cuentas del tercer trimestre.</p></section>
 <section><div class="stock-grid">{cards}</div></section>"""
     return pagina("empresas", "Empresas", "Fichas de resultados de las empresas del IBEX 35 analizadas por AIAcciones España.", cuerpo, "Empresas")
+
+
+def enlace_comparador(f):
+    comps = [c for c in COMPARADORES if f["id"] in c["empresas"]]
+    return "".join(f'<section><p class="kpi-line">Compara {e(f["nombre"])} con otros {e(c["titulo"][0].lower() + c["titulo"][1:])}: '
+                   f'<a href="../../comparadores/{c["id"]}/index.html">ver el comparador</a>.</p></section>\n' for c in comps)
+
+
+def comparadores_indice():
+    links = "".join(f'<a class="sec-link" href="{c["id"]}/index.html"><span class="sec-t">{e(c["titulo"])}</span>'
+                    f'<span class="sec-d">{e(c["eyebrow"])}. {len(c["empresas"])} empresas comparadas con sus principales indicadores financieros.</span></a>'
+                    for c in COMPARADORES)
+    cuerpo = f"""<section class="page-head"><p class="eyebrow">Comparadores</p><h1>Empresas frente a frente</h1>
+<p class="lede">Las mismas métricas, lado a lado, para las empresas de un mismo sector, con las cifras de su último informe de resultados. Iremos sumando sectores.</p></section>
+<section><div class="sec-grid">{links}</div></section>"""
+    return pagina("comparadores", "Comparadores", "Comparadores de empresas del IBEX 35 por sector con sus principales indicadores financieros.", cuerpo, "Comparadores")
+
+
+def barras(ind, fichas_por_id):
+    nombre, unidad, explica, sentido, vals = ind
+    orden = sorted(vals, key=lambda i: vals[i][0], reverse=(sentido != "bajo"))
+    tope = max(abs(v[0]) for v in vals.values()) or 1
+    filas = []
+    for i in orden:
+        v, txt, nota = vals[i]
+        f = fichas_por_id[i]
+        ancho = max(abs(v) / tope * 100, 1.5)
+        cls = "cmp-bar neg" if v < 0 else "cmp-bar"
+        nota_html = f'<span class="cmp-nota">{e(nota)}</span>' if nota else ""
+        filas.append(f'<div class="cmp-row"><a class="cmp-nm" href="../../empresas/{f["id"]}/index.html">{e(f["nombre"])}</a>'
+                     f'<span class="cmp-track"><span class="{cls}" style="width:{ancho:.1f}%"></span></span>'
+                     f'<span class="cmp-val">{e(txt)}{"" if unidad in ("%", "x", "pb") else " " + e(unidad)}</span>{nota_html}</div>')
+    pista = {"alto": "Ordenado de mayor a menor.", "bajo": "Ordenado de menor a mayor (menos es mejor)."}.get(sentido, "Ordenado de mayor a menor; sin valoración.")
+    return (f'<figure class="cmp"><figcaption><b>{e(nombre)}</b><span>{e(explica)} {e(pista)}</span></figcaption>'
+            f'{"".join(filas)}</figure>')
+
+
+def comparador(c):
+    fp = {f["id"]: f for f in FICHAS}
+    ids = c["empresas"]
+    cab = "".join(f'<th scope="col"><a href="../../empresas/{i}/index.html">{e(fp[i]["ticker"])}</a></th>' for i in ids)
+    filas = []
+    for grupo, inds in c["grupos"]:
+        filas.append(f'<tr class="wk"><th colspan="{len(ids) + 1}">{e(grupo)}</th></tr>')
+        for nombre, unidad, _, _, vals in inds:
+            celdas = "".join(f'<td class="{"neg" if vals[i][0] < 0 else ""}">{e(vals[i][1])}</td>' for i in ids)
+            u = "" if unidad in ("%", "x") else f" ({e(unidad)})"
+            filas.append(f'<tr><th scope="row" class="txt">{e(nombre)}{u}</th>{celdas}</tr>')
+    tabla = (f'<div class="table-scroll"><table class="data cmp-t"><caption>{e(c["eyebrow"])} · cifras del último informe de cada banco</caption>'
+             f'<thead><tr><th scope="col" class="txt">Indicador</th>{cab}</tr></thead><tbody>{"".join(filas)}</tbody></table></div>')
+    secciones = []
+    for grupo, inds in c["grupos"]:
+        figs = "".join(barras(ind, fp) for ind in inds)
+        extra = f'<p class="small">{e(c["nota_mercado"])}</p>' if grupo == "Datos de mercado" else ""
+        secciones.append(f'<section><h2 class="h-sec">{e(grupo)}</h2><div class="cmp-grid">{figs}</div>{extra}</section>')
+    leyenda = "".join(f'<li><a href="../../empresas/{i}/index.html">{e(fp[i]["nombre"])}</a> ({e(fp[i]["ticker"])}): {e(fp[i]["periodo"])}, precio {e(fp[i]["precio"])} del {e(fp[i]["precio_fecha"])}</li>' for i in ids)
+    cuerpo = f"""<nav class="crumbs"><a href="../index.html">Comparadores</a> / {e(c['titulo'])}</nav>
+<section class="page-head"><p class="eyebrow">{e(c['eyebrow'])}</p><h1>Comparador: {e(c['titulo'])}</h1>
+<p class="lede">{e(c['lede'])}</p></section>
+<section><h2 class="h-sec">Tabla resumen</h2>{tabla}</section>
+{"".join(secciones)}
+<section><h2 class="h-sec">Cómo leer este comparador</h2><p class="small">{e(c['nota'])} Las cifras marcadas con «≈» o como calculadas son aproximaciones o cálculos propios.</p>
+<ul class="small">{leyenda}</ul></section>
+<section class="aviso-es"><ul>
+<li>Contenido informativo y educativo: no es una recomendación de compra o venta ni asesoramiento personalizado, y no emitimos precio objetivo.</li>
+<li>Un banco con mejor ratio en un indicador no es por eso una mejor inversión: el precio ya recoge lo que el mercado espera de cada uno.</li>
+<li>AIAcciones España y sus autores no tienen posiciones en las empresas comparadas.</li></ul></section>"""
+    desc = f"Comparador de {c['titulo']}: beneficio, ROTE, eficiencia, morosidad, CET1 y múltiplos del {c['eyebrow'].split(' · ')[-1]}, lado a lado."
+    return pagina(f"comparadores/{c['id']}", f"Comparador: {c['titulo']}", desc, cuerpo, "Comparadores")
 
 
 def calendario(cal):
@@ -366,6 +437,20 @@ EXTRA_CSS = """
 .contact .chk input { margin-top: 4px; }
 .mail-btn { padding: 4px 10px; font-size: 14px; vertical-align: baseline; }
 .consent[hidden] { display: none; }
+.cmp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.cmp { margin: 0; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; display: grid; gap: 8px; }
+.cmp figcaption { display: grid; gap: 4px; margin-bottom: 4px; }
+.cmp figcaption span { font-size: 13px; color: var(--muted); }
+.cmp-row { display: grid; grid-template-columns: 124px 1fr auto; gap: 4px 10px; align-items: center; font-size: 14px; }
+.cmp-nm { color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cmp-nm:hover { text-decoration: underline; }
+.cmp-track { height: 10px; background: var(--bar); border-radius: 2px; overflow: hidden; }
+.cmp-bar { display: block; height: 100%; background: var(--copper); }
+.cmp-bar.neg { background: var(--down); }
+.cmp-val { font-family: var(--f-mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.cmp-nota { grid-column: 2 / -1; font-size: 12px; color: var(--muted); margin-top: -2px; }
+.cmp-t td, .cmp-t th { white-space: nowrap; }
+.cmp-t thead a { color: inherit; }
 """
 
 
@@ -383,6 +468,9 @@ def main():
     escribir("empresas/index.html", empresas())
     for f in FICHAS:
         escribir(f"empresas/{f['id']}/index.html", ficha(f))
+    escribir("comparadores/index.html", comparadores_indice())
+    for c in COMPARADORES:
+        escribir(f"comparadores/{c['id']}/index.html", comparador(c))
     escribir("calendario/index.html", calendario(cal))
     escribir("metodologia/index.html", metodologia())
     escribir("aviso-legal/index.html", aviso_legal())
@@ -391,7 +479,7 @@ def main():
     for nombre, destino in (("enviar.php", "enviar.php"), ("app.js", "assets/app.js")):
         shutil.copyfile(AQUI / "extra" / nombre, WEB / destino)
     if DOMINIO:
-        rutas = ["", "empresas/", "calendario/", "metodologia/", "aviso-legal/", "privacidad/", "contacto/"] + [f"empresas/{f['id']}/" for f in FICHAS]
+        rutas = ["", "empresas/", "comparadores/"] + [f"comparadores/{c['id']}/" for c in COMPARADORES] + ["calendario/", "metodologia/", "aviso-legal/", "privacidad/", "contacto/"] + [f"empresas/{f['id']}/" for f in FICHAS]
         urls = "".join(f"<url><loc>{DOMINIO}/{r}</loc><lastmod>{HOY.isoformat()}</lastmod></url>" for r in rutas)
         escribir("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
         escribir("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {DOMINIO}/sitemap.xml\n")

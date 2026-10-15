@@ -394,3 +394,17 @@ table.sortable th[aria-sort="descending"]::after { content: " ▼"; color: var(-
 .contact .chk input { margin-top: 4px; }
 .mail-btn { padding: 4px 10px; font-size: 14px; vertical-align: baseline; }
 .consent[hidden] { display: none; }
+.cmp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.cmp { margin: 0; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; display: grid; gap: 8px; }
+.cmp figcaption { display: grid; gap: 4px; margin-bottom: 4px; }
+.cmp figcaption span { font-size: 13px; color: var(--muted); }
+.cmp-row { display: grid; grid-template-columns: 124px 1fr auto; gap: 4px 10px; align-items: center; font-size: 14px; }
+.cmp-nm { color: var(--ink); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cmp-nm:hover { text-decoration: underline; }
+.cmp-track { height: 10px; background: var(--bar); border-radius: 2px; overflow: hidden; }
+.cmp-bar { display: block; height: 100%; background: var(--copper); }
+.cmp-bar.neg { background: var(--down); }
+.cmp-val { font-family: var(--f-mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.cmp-nota { grid-column: 2 / -1; font-size: 12px; color: var(--muted); margin-top: -2px; }
+.cmp-t td, .cmp-t th { white-space: nowrap; }
+.cmp-t thead a { color: inherit; }
