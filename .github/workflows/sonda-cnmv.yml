@@ -1,0 +1,18 @@
+name: Sonda CNMV (temporal)
+on:
+  push:
+    branches: [hechos-es]
+    paths: ['.github/workflows/sonda-cnmv.yml']
+jobs:
+  sonda:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          mkdir out
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"
+          curl -sSL -A "$UA" -o out/oir.html https://www.cnmv.es/portal/Otra-Informacion-Relevante/AlDia-OIR.aspx -w '%{http_code}\n'
+          curl -sSL -A "$UA" -o out/ip.html https://www.cnmv.es/portal/Informacion-Privilegiada/AlDia-IP.aspx -w '%{http_code}\n'
+          curl -sSL -A "$UA" -o out/rss.html "https://www.cnmv.es/portal/gpage.aspx?id=RSS" -w '%{http_code}\n'
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with: {name: sonda, path: out}
