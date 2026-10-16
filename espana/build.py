@@ -17,7 +17,8 @@ from fichas import FICHAS
 AQUI = Path(__file__).resolve().parent
 WEB = AQUI / "web"
 CHILE_CSS = AQUI.parent / "web" / "assets" / "styles.css"
-# Google Analytics 4 (Daniel, 13-oct-2026). Solo se carga si el visitante acepta en el aviso de cookies (RGPD/LSSI).
+# Google Analytics 4 (Daniel, 13-oct-2026) con el modo de consentimiento de Google (16-oct-2026): la etiqueta está en todas las
+# páginas para que Google la detecte, pero sin cookies (analytics_storage denegado) hasta que el visitante pulsa «Aceptar».
 GA_ID = "G-YBK7SY7FN2"
 
 # Rellenar cuando estén: dominio (sin barra final) y datos del titular que exige la LSSI (art. 10).
@@ -63,6 +64,15 @@ NAV = [("empresas/index.html", "Empresas"), ("hechos/index.html", "Hechos releva
        ("metodologia/index.html", "Metodología"), ("quienes-somos/index.html", "Quiénes somos"), ("contacto/index.html", "Contacto")]
 
 
+GA_HEAD = (
+    "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
+    "gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});"
+    "try{var c=JSON.parse(localStorage.getItem('aiacc-es-cookies'));if(c&&c.c==='si'&&Date.now()-c.t<31536e6)"
+    "gtag('consent','update',{analytics_storage:'granted'});}catch(e){}"
+    f"gtag('js',new Date());gtag('config','{GA_ID}');</script>\n"
+    f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>\n')
+
+
 def pagina(ruta, titulo, descripcion, cuerpo, actual=None):
     """ruta: carpeta relativa a web/ ('' = portada)."""
     nivel = len([p for p in ruta.split("/") if p])
@@ -90,7 +100,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, actual=None):
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="{e(titulo_full)}">
 <meta property="og:description" content="{e(descripcion)}">
-{canon}</head>
+{GA_HEAD}{canon}</head>
 <body>
 <header class="site-head">
   <div class="bar">
@@ -469,6 +479,7 @@ def privacidad():
 <tr><td class="txt">_ga_{GA_ID[2:]}</td><td class="txt">Google Analytics (Google Ireland Ltd.)</td><td class="txt">Mantener el estado de la sesión</td><td class="txt">2 años</td></tr>
 </tbody></table></div>
 <p>Con Google Analytics 4 medimos de forma agregada qué páginas se visitan, desde qué país y tipo de dispositivo, y cómo llegaste al sitio. Google Analytics 4 no registra ni guarda tu dirección IP. Base legal: tu consentimiento (art. 6.1.a del RGPD y art. 22.2 de la LSSI). Google puede tratar datos en Estados Unidos, amparado en el Marco de Privacidad de Datos UE-EE. UU. Más información en la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad de Google</a>.</p>
+<p>Usamos el modo de consentimiento de Google: mientras no aceptes, la etiqueta de Google Analytics no guarda ni lee cookies en tu dispositivo y solo envía avisos técnicos sin identificadores (por ejemplo, que se ha visto una página), que Google usa de forma agregada. Si aceptas, se activan las cookies de la tabla.</p>
 <p>Tu elección se guarda en tu navegador (almacenamiento local, no es una cookie) y te la volvemos a pedir pasados 12 meses. Puedes cambiarla cuando quieras con el botón «Configurar cookies» del pie de página; si retiras el consentimiento, borramos las cookies de Google Analytics de este sitio.</p>
 <p>Los vídeos se enlazan a YouTube sin incrustarlos: solo al abrir un vídeo pasas a YouTube, que aplica su propia política de privacidad.</p>
 </section>"""
