@@ -3,6 +3,8 @@ on:
   push:
     branches: [hechos-es]
     paths: ['.github/workflows/sonda-cnmv.yml']
+permissions:
+  contents: write
 jobs:
   sonda:
     runs-on: ubuntu-latest
@@ -14,5 +16,9 @@ jobs:
           curl -sSL -A "$UA" -o out/ip.html https://www.cnmv.es/portal/Informacion-Privilegiada/AlDia-IP.aspx -w '%{http_code}\n'
           curl -sSL -A "$UA" -o out/rss.html "https://www.cnmv.es/portal/gpage.aspx?id=RSS" -w '%{http_code}\n'
           ls -la out
-      - uses: actions/upload-artifact@v4
-        with: {name: sonda, path: out}
+      - uses: actions/checkout@v4
+        with: {path: repo}
+      - run: |
+          mkdir -p repo/sonda && cp out/* repo/sonda/ && cd repo
+          git config user.name aiacciones-bot && git config user.email aiacciones-bot@users.noreply.github.com
+          git add sonda && git commit -m "sonda: HTML de la CNMV" && git push
