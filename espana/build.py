@@ -413,7 +413,7 @@ def educacion_indice():
 </div></section>
 <section><h2 class="h-sec">Guías por sector</h2><div class="sec-grid">{guias}</div></section>
 {AVISO_EDU}"""
-    return pagina("educacion", "Educación", "Qué mide cada indicador financiero (PER, PER forward, EV/EBITDA…) y en qué fijarse en bancos, eléctricas, petroleras, telecos e infraestructuras.", cuerpo, "Educación")
+    return pagina("educacion", "Educación", "Qué mide cada indicador financiero (PER, PER forward, EV/EBITDA…) y en qué fijarse en cada sector del IBEX 35: bancos, eléctricas, renovables, seguros, consumo, salud, inmobiliarias, tecnología y más.", cuerpo, "Educación")
 
 
 def educacion_valoracion():
@@ -439,7 +439,8 @@ def educacion_sector(x):
     ejemplos = "".join(tarjeta(fp[i], "../../") for i in x["empresas"] if i in fp)
     cuerpo = f"""<nav class="crumbs"><a href="../index.html">Educación</a> / {e(x['titulo'])}</nav>
 <section class="page-head"><p class="eyebrow">Guía por sector</p><h1>Cómo leer los resultados: {e(x['titulo'].lower())}</h1>
-<p class="lede">{e(x['negocio'])}</p></section>
+<p class="lede">{e(x['negocio'])}</p>
+<p class="kpi-line">Empresas del IBEX 35 en este sector: {e(x['ibex'])}.</p></section>
 <section class="prose edu"><h2>En qué fijarse</h2>{claves}
 <h2>Cómo se valora</h2><p>{e(x['valoracion'])} Los indicadores generales están explicados en <a href="../valoracion/index.html">Indicadores de valoración</a>.</p>
 <h2>Errores habituales</h2><ul class="checks risks">{errores}</ul></section>
