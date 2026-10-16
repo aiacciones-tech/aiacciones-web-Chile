@@ -48,15 +48,9 @@
     try { var v = JSON.parse(localStorage.getItem(KEY)); return v && Date.now() - v.t < YEAR ? v.c : null; } catch (e) { return null; }
   };
   var guardar = function (c) { try { localStorage.setItem(KEY, JSON.stringify({ c: c, t: Date.now() })); } catch (e) {} };
-  var cargarGA = function () {
-    if (!GA || window.gtag) return;
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { dataLayer.push(arguments); };
-    gtag("js", new Date());
-    gtag("config", GA);
-    var s = document.createElement("script");
-    s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA;
-    document.head.appendChild(s);
+  // La etiqueta de Google (con consentimiento denegado por defecto) está en el <head> de cada página; aquí solo se cambia el permiso.
+  var consentir = function (si) {
+    if (window.gtag) gtag("consent", "update", { analytics_storage: si ? "granted" : "denied" });
   };
   var borrarGA = function () {
     var dom = location.hostname.replace(/^www\./, "");
@@ -69,8 +63,7 @@
     });
   };
   var elegido = leer();
-  if (elegido === "si") cargarGA();
-  else if (elegido === null) bar.hidden = false;
+  if (elegido === null) bar.hidden = false;
   document.addEventListener("click", function (ev) {
     var b = ev.target.closest("[data-cookies]");
     if (!b) return;
@@ -78,7 +71,7 @@
     if (c === "config") { bar.hidden = false; return; }
     var antes = leer();
     guardar(c); bar.hidden = true;
-    if (c === "si") cargarGA();
-    else { borrarGA(); if (antes === "si") location.reload(); }
+    consentir(c === "si");
+    if (c !== "si") { borrarGA(); if (antes === "si") location.reload(); }
   });
 })();
