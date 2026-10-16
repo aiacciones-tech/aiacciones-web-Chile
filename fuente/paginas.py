@@ -13,9 +13,13 @@ _, foot = rest.split("</main>", 1)
 
 PAGES = {
 "nosotros": ("Quiénes somos", "Nosotros",
- "Qué es AI Acciones Chile, qué publicamos y cómo hacemos cada análisis.",
- """<h2>Qué es AI Acciones Chile</h2>
-<p>AI Acciones Chile es un proyecto independiente que explica en simple los resultados trimestrales de las empresas que cotizan en la Bolsa de Santiago. Cada vez que una empresa publica sus estados financieros hacemos un video de análisis, que publicamos en <a href="https://www.youtube.com/channel/UCDGmimmfYaYYP1jYBo6bA3g" target="_blank" rel="noopener">YouTube</a> y en <a href="https://x.com/aiacciones" target="_blank" rel="noopener">X (@aiacciones)</a>, y este sitio reúne todas esas cifras en un solo lugar.</p>
+ "Un proyecto de inteligencia artificial para analizar las empresas de la Bolsa de Santiago.",
+ """<h2>Sobre AI Acciones Chile</h2>
+<p>AI Acciones Chile es un proyecto de inteligencia artificial (AI) creado para ayudar a analizar las empresas que cotizan en la Bolsa de Santiago. Nuestro objetivo es entregar información confiable y de calidad en el menor tiempo posible, para que cualquier persona pueda entender cómo le fue a una empresa sin tener que leer cientos de páginas de estados financieros.</p>
+<p>Cada vez que una compañía publica sus resultados, usamos herramientas de AI para leer los reportes que entrega a la CMF, ordenar las cifras, hacer los cálculos y preparar los gráficos y la locución de un video de análisis. Así podemos cubrir muchas empresas y publicar poco después de cada entrega, algo muy difícil de lograr a mano.</p>
+<p>La rapidez no reemplaza el cuidado. Las cifras siempre salen de fuentes públicas que citamos (estados financieros, análisis razonados, comunicados y presentaciones a inversionistas), cada análisis sigue la misma estructura para que puedas comparar una empresa con otra, y marcamos con <b>(c)</b> los datos que calculamos nosotros. Si detectamos un error, lo corregimos y actualizamos la ficha.</p>
+<p>Este sitio reúne en un solo lugar las fichas por empresa, los comparadores por sector, el calendario de resultados y los videos que publicamos en <a href="https://www.youtube.com/channel/UCDGmimmfYaYYP1jYBo6bA3g" target="_blank" rel="noopener">YouTube</a> y en <a href="https://x.com/aiacciones" target="_blank" rel="noopener">X</a>. No somos asesores de inversión y nada de lo que publicamos es una recomendación de compra o venta.</p>
+<p>AI Acciones Chile está en constante construcción. Si tienes sugerencias para mejorarlo, escríbenos desde la página de <a href="../contacto/index.html">Contacto</a>: serán muy bienvenidas.</p>
 <h2>Qué encontrarás en el sitio</h2>
 <ul>
 <li><a href="../acciones/index.html">Fichas por empresa</a>: resultados del trimestre frente al año anterior, múltiplos de valoración, deuda, qué mirar y el video del análisis.</li>
@@ -38,8 +42,6 @@ PAGES = {
 </ol>
 <h2>De dónde salen las cifras</h2>
 <p>Usamos fuentes públicas: los estados financieros y análisis razonados que las empresas entregan a la <a href="https://www.cmfchile.cl" target="_blank" rel="noopener">CMF</a>, sus comunicados y presentaciones a inversionistas y, en el caso de las AFP, los estados financieros que publica la <a href="https://www.spensiones.cl" target="_blank" rel="noopener">Superintendencia de Pensiones</a>. El consenso de analistas y los múltiplos históricos vienen de servicios como Investing.com y MarketScreener, y los precios diarios de TradingView. Cuando una cifra la calculamos nosotros (por ejemplo, un trimestre como la diferencia entre el semestre y el primer trimestre) la marcamos con <b>(c)</b>. Cada video cita sus fuentes.</p>
-<h2>Por qué “AI”</h2>
-<p>Usamos herramientas de inteligencia artificial para leer reportes extensos, hacer los cálculos, preparar los gráficos y producir la locución de los videos. Eso nos permite cubrir más empresas y publicar poco después de cada entrega de resultados. Las cifras siempre salen de las fuentes públicas que citamos, para que puedas verificarlas.</p>
 <h2>Correcciones</h2>
 <p>Si encuentras un error, escríbenos desde la página de <a href="../contacto/index.html">Contacto</a> eligiendo “Corrección de datos”. Revisamos cada aviso y corregimos la ficha o el comparador afectado.</p>
 <h2>Lo que no somos</h2>
