@@ -1,0 +1,44 @@
+# Hechos relevantes del IBEX 35 para aiacciones.es (como «Actualizar precios» en Chile, pero con la CNMV).
+# Dos veces cada día hábil: descarga «Información privilegiada» y «Otra información relevante» del día de la CNMV,
+# guarda los avisos de las 35 empresas en espana/datos/hechos.json, rearma la web y la publica (deploy-espana.yml).
+name: Hechos relevantes España
+on:
+  schedule:
+    - cron: "30 12 * * 1-5"   # 14:30 Madrid (13:30 en invierno): lo de la mañana
+    - cron: "30 21 * * 1-5"   # 23:30 Madrid (22:30 en invierno): lo de la tarde y tras el cierre
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency: hechos-espana
+jobs:
+  hechos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar hechos relevantes de la CNMV
+        run: python3 espana/hechos.py
+      - name: Rearmar la web
+        run: python3 espana/build.py
+      - name: Guardar cambios
+        id: git
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          guardar() { git add espana/datos/hechos.json espana/web && ! git diff --cached --quiet && git commit -qm "Hechos relevantes España $(date -u +%F' '%H:%M)"; }
+          if ! guardar; then echo "cambios=no" >> "$GITHUB_OUTPUT"; exit 0; fi
+          for i in 1 2 3; do
+            if git push; then echo "cambios=si" >> "$GITHUB_OUTPUT"; exit 0; fi
+            # main cambió mientras tanto: rearmar sobre la versión nueva conservando los hechos descargados
+            cp espana/datos/hechos.json "$RUNNER_TEMP/hechos.json"
+            git fetch -q origin main && git reset -q --hard origin/main
+            cp "$RUNNER_TEMP/hechos.json" espana/datos/hechos.json
+            python3 espana/build.py
+            guardar || { echo "cambios=no" >> "$GITHUB_OUTPUT"; exit 0; }
+          done
+          exit 1
+      - name: Publicar en aiacciones.es
+        if: steps.git.outputs.cambios == 'si'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy-espana.yml --ref main
