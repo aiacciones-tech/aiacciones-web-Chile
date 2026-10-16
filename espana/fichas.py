@@ -603,4 +603,114 @@ FICHAS = [
                 'Benzinga e Hispanidad (detalle, 22-jul-2026); stockanalysis.com (precio y múltiplos, 2 y 14-oct-2026).',
      'fuentes_corto': 'Capitalbolsa, Investing.com, Estrategias de Inversión, Benzinga y stockanalysis.com',
      'elaborado': '16-oct-2026, 14:00'},
+    {'id': 'ferrovial',
+     'nombre': 'Ferrovial',
+     'ticker': 'FER',
+     'sector': 'Infraestructuras · autopistas, construcción y aeropuertos',
+     'lede': 'Promotor y gestor de infraestructuras de transporte con sede en Países Bajos y cotización en Madrid y en el Nasdaq. Su valor se '
+             'concentra en autopistas de peaje (407 ETR en Canadá y Managed Lanes en Estados Unidos); también construye (Budimex, Webber) y '
+             'participa en la nueva Terminal Uno del JFK.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'EBITDA ajustado de 746 M€ (+13,9%; +21,6% comparable), empujado por las tarifas de las autopistas de Norteamérica. El '
+                'beneficio neto atribuible, 258 M€ (-52%), compara con un 1S 2025 que incluía 275 M€ de desinversiones (AGS y servicios '
+                'mineros en Chile).',
+     'precio': '44,21 €',
+     'precio_fecha': '16-oct-2026',
+     'multiplos': [('PER 12 meses', '52,4x'),
+                   ('PER forward', '40,9x'),
+                   ('EV/EBITDA', '20,4x'),
+                   ('Precio / valor contable', '4,21x'),
+                   ('Rentab. dividendo', '2,52%'),
+                   ('FCF yield', '6,0%'),
+                   ('Capitalización', '~31.880 M€')],
+     'multiplos_nota': 'Con precio de 44,21 € al 16-oct-2026 (stockanalysis.com). A cierre de 2023, 2024 y 2025 el PER era 71,7x, 9,2x '
+                       '(plusvalías de Heathrow e IRB) y 44,8x, el EV/EBITDA 34,2x, 29,8x y 33,7x, el precio / valor contable 4,10x, 3,68x y '
+                       '5,19x, y la rentabilidad por dividendo 2,23%, 1,97% y 2,01%.',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Ingresos', '4.701', '+5,2%'),
+               ('EBITDA ajustado', '746', '+13,9%'),
+               ('EBIT ajustado', '491', '+13,9%'),
+               ('Beneficio neto atribuible', '258', '-52,2%'),
+               ('Beneficio neto 2T', '189', '+8,6%'),
+               ('Dividendos de proyectos', '378', '+17,0%'),
+               ('BPA (calculado)', '~0,36 €', '')],
+     'kpi': 'Margen EBITDA 15,9% (14,7% en 1S 2025; calculado). Autopistas: ingreso medio por viaje en la 407 ETR +17,7% con tráfico +1,8%; '
+            'ingreso por transacción +18,9% en NTE, +11,7% en LBJ y +17,3% en NTE 35W. Construcción: margen EBIT ajustado 3,5% (3,4%), flujo '
+            'operativo 329 M€ y cartera récord de 18.046 M€. Caja neta sin proyectos de infraestructura 1.307 M€ (1.341 M€ en diciembre); '
+            'liquidez 4.747 M€; deuda neta consolidada 6.283 M€.',
+     'guia': 'Sin guía anual de beneficios: el plan Horizon 24 termina en 2026 y la empresa prepara uno nuevo, sin fecha. La 407 ETR aprobó un '
+             'dividendo de 550 M CAD para el 3T (250 M en el 3T25). Objetivo de margen EBIT ajustado de Construcción del 3,5%. Dividendo '
+             'flexible de 400 M€ y recompra de hasta 800 M€, ampliada hasta el 3-mar-2027 (357,9 M€ ejecutados a 11-sep-2026). JFK Terminal '
+             'Uno: la ocupación de la primera fase pasa a marzo de 2027.',
+     'positivos': ['El EBITDA comparable creció un 21,6% gracias a las tarifas de las autopistas de Norteamérica.',
+                   'Los dividendos de proyectos subieron a 378 M€ y la 407 ETR aprobó otro de 550 M CAD.',
+                   'Construcción mejora el margen, genera caja y tiene una cartera récord.'],
+     'riesgos': ['La nueva Terminal Uno del JFK no alcanzó la ocupación prevista en junio; el objetivo pasa a marzo de 2027.',
+                 'Tráfico débil en la I-77, la NTE y la 407 ETR en el 2T: el crecimiento depende de las tarifas.',
+                 'No hay guía anual y la caja neta bajó ligeramente, por debajo de lo que esperaba Renta 4.'],
+     'videos': [('_enk_ZzJWhE', 'Ferrovial resultados 1S 2026: EBITDA comparable +21,6%, beneficio -52% por las plusvalías de 2025'),
+                ('jgro0LsOOGs', 'Ferrovial 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-10-27',
+     'proximo_estimado': True,
+     'fuentes': 'Ferrovial, resultados del primer semestre 2026 (6-K y CNMV, 28-jul-2026); Capitalbolsa (análisis de Renta 4, 29-jul-2026); '
+                'Estrategias de Inversión, El Español y Bolsamanía/Europa Press (28 y 29-jul-2026); MarketBeat e Investing.com (conferencia, '
+                '29-jul-2026); Europa Press/Forbes (recompra, 14-sep-2026); stockanalysis.com (precio y múltiplos, 16-oct-2026).',
+     'fuentes_corto': 'Capitalbolsa, Estrategias de Inversión, El Español, MarketBeat y stockanalysis.com',
+     'elaborado': '16-oct-2026, 16:45'},
+    {'id': 'aena',
+     'nombre': 'Aena',
+     'ticker': 'AENA',
+     'sector': 'Aeropuertos · tarifas reguladas y negocio comercial',
+     'lede': 'Gestiona 46 aeropuertos y dos helipuertos en España, además de Londres-Luton, Leeds Bradford (vía Augusta) y 17 aeropuertos en '
+             'Brasil. Sus tarifas aeroportuarias en España las fija el DORA; el negocio comercial (tiendas, restauración, aparcamientos, salas '
+             'VIP) y el inmobiliario completan los ingresos.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Beneficio neto de 1.002 M€ (+12,1%), por primera vez por encima de 1.000 M€ en un semestre, aunque algo por debajo del '
+                'consenso de Bloomberg que recoge XTB (1.019,8 M€; diferencia -1,7%, calculada). La deuda financiera neta sube a 6.724 M€ tras '
+                'el dividendo y la compra de Augusta.',
+     'precio': '25,22 €',
+     'precio_fecha': '14-oct-2026',
+     'multiplos': [('PER 12 meses', '17,0x'),
+                   ('PER forward', '15,8x'),
+                   ('EV/EBITDA', '11,6x'),
+                   ('Precio / valor contable', '4,28x'),
+                   ('Rentab. dividendo', '4,32%'),
+                   ('FCF yield', '5,75%'),
+                   ('Capitalización', '~37.830 M€')],
+     'multiplos_nota': 'Con precio de 25,22 € al cierre del 14-oct-2026 (stockanalysis.com; 1.500 M de acciones tras el desdoblamiento 10x1 de '
+                       '2025). A cierre de 2023, 2024 y 2025 el PER era 15,1x, 15,3x y 16,7x, el EV/EBITDA 11,2x, 10,4x y 11,2x, el precio / '
+                       'valor contable 3,26x, 3,49x y 3,90x, y la rentabilidad por dividendo 5,19%, 5,31% y 4,74%.',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Ingresos', '3.299,6', '+10,1%'),
+               ('Ingresos aeronáuticos', '1.702,1', '+8,1% (calculado)'),
+               ('Ingresos comerciales', '991,0', '+6,7% (calculado)'),
+               ('EBITDA', '1.798,9', '+6,3%'),
+               ('Beneficio neto', '1.002,0', '+12,1%'),
+               ('Beneficio neto 2T (calculado)', '672,6', '+13,5%'),
+               ('BPA (calculado)', '~0,67 €', '+12,1%')],
+     'kpi': 'Margen EBITDA 54,5% (56,5% en 1S 2025). Pasajeros: 156,2 M en España (+3,7%), 8,8 M en Luton (+5,1%) y ~22,9 M en Brasil '
+            '(calculado); 190 M en el grupo (+3,9%). Ingreso comercial por pasajero en España ~6,34 € (+2,8%, calculado); salas VIP +31,7%, '
+            'aparcamientos +9%. Flujo de explotación 1.598,5 M€ (+8,0%, calculado). Deuda financiera neta 6.724 M€ (+1.215 M€ vs diciembre), '
+            '1,73x EBITDA, tras 1.646,4 M€ de dividendos pagados y 340 M€ por Augusta.',
+     'guia': 'Tráfico en España 2026: alrededor de +3% (desde ~1,3% a inicio de año, según XTB), con poca visibilidad en el segundo semestre. '
+             'Política de dividendo del 80% del beneficio; 1,09 € por acción con cargo a 2025. 2026 es el último año del DORA II (tarifa de '
+             '11,02 € por pasajero, +6,44%). El DORA III, aprobado el 15-sep-2026, fija subidas medias del 0,33% anual en 2027-2031 (Aena '
+             'pedía 3,82%) con unas inversiones cercanas a 13.000 M€.',
+     'positivos': ['El beneficio supera por primera vez los 1.000 M€ en un semestre y la previsión de tráfico sube a ~3%.',
+                   'El negocio comercial sigue creciendo: salas VIP +31,7% y aparcamientos +9%.',
+                   'Crecimiento exterior con Augusta (Leeds Bradford y Newcastle) y la concesión de Río de Janeiro-Galeão.'],
+     'riesgos': ['El DORA III deja las tarifas casi congeladas hasta 2031 con un gran plan de inversión.',
+                 'Los costes (+13,5%) crecen más que los ingresos y los resultados quedaron algo por debajo del consenso.',
+                 'La deuda neta sube 1.215 M€ y la visibilidad del tráfico en el segundo semestre es baja.'],
+     'videos': [('QCBLXtjeo3o', 'Aena resultados 1S 2026: beneficio 1.002 M€ (+12,1%), algo por debajo del consenso | Deuda 6.724 M€'),
+                ('SuVwEzW7h9I', 'Aena 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-10-28',
+     'proximo_estimado': True,
+     'fuentes': 'Aena, nota de prensa de resultados del primer semestre 2026 (CNMV y aena.es, 29-jul-2026), notas del 1T26, 1S25 y 1T25; XTB '
+                '(consenso Bloomberg, 29-jul-2026); Investing.com (detalle por negocio, 29-jul-2026); EFE (tarifa 2026, 20-nov-2025); '
+                'Hosteltur (DORA III, 15-sep-2026); stockanalysis.com (precio y múltiplos, 14-oct-2026).',
+     'fuentes_corto': 'XTB, Investing.com, Hosteltur, EFE y stockanalysis.com',
+     'elaborado': '16-oct-2026, 16:55'},
 ]
