@@ -54,7 +54,7 @@ YT_SVG = ('<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><p
           '31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>')
 
 NAV = [("empresas/index.html", "Empresas"), ("comparadores/index.html", "Comparadores"), ("calendario/index.html", "Calendario"),
-       ("metodologia/index.html", "Metodología"), ("contacto/index.html", "Contacto")]
+       ("metodologia/index.html", "Metodología"), ("quienes-somos/index.html", "Quiénes somos"), ("contacto/index.html", "Contacto")]
 
 
 def pagina(ruta, titulo, descripcion, cuerpo, actual=None):
@@ -104,7 +104,7 @@ def pagina(ruta, titulo, descripcion, cuerpo, actual=None):
     </div>
     <div class="disclaimer">
       <p><b>Aviso.</b> Contenido informativo y educativo. No es una recomendación de inversión ni asesoramiento personalizado, y no emitimos precio objetivo ni opinión sobre si una acción está cara o barata. AIAcciones España no tiene posiciones en las empresas analizadas. Invertir en bolsa implica riesgo de pérdida, incluso de todo el capital. Verifica siempre las cifras en la <a href="https://www.cnmv.es" target="_blank" rel="noopener">CNMV</a>.</p>
-      <p><a href="{r}aviso-legal/index.html">Aviso legal</a> · <a href="{r}privacidad/index.html">Privacidad y cookies</a> · <a href="{r}metodologia/index.html">Metodología</a> · <a href="{r}contacto/index.html">Contacto</a> · <button class="linkish" type="button" data-cookies="config">Configurar cookies</button></p>
+      <p><a href="{r}aviso-legal/index.html">Aviso legal</a> · <a href="{r}privacidad/index.html">Privacidad y cookies</a> · <a href="{r}metodologia/index.html">Metodología</a> · <a href="{r}quienes-somos/index.html">Quiénes somos</a> · <a href="{r}contacto/index.html">Contacto</a> · <button class="linkish" type="button" data-cookies="config">Configurar cookies</button></p>
     </div>
   </div>
 </footer>
@@ -340,6 +340,19 @@ def metodologia():
     return pagina("metodologia", "Metodología", "De dónde salen las cifras de AIAcciones España, qué calculamos y cómo presentamos la valoración.", cuerpo, "Metodología")
 
 
+def quienes_somos():
+    cuerpo = """<section class="page-head"><p class="eyebrow">Sobre nosotros</p><h1>Quiénes somos</h1>
+<p class="lede">AIAcciones España es un proyecto de inteligencia artificial dedicado a las empresas del IBEX 35.</p></section>
+<section class="prose">
+<p>Nuestro objetivo es sencillo: entregar información confiable y de calidad, en el menor tiempo posible, para que cualquier persona pueda analizar las empresas del IBEX 35 con datos y no con rumores.</p>
+<p>Cuando una cotizada publica sus resultados, la información llega repartida en notas de prensa, presentaciones e informes de decenas de páginas. Leerlo todo lleva horas. Nosotros usamos herramientas de inteligencia artificial para hacer ese trabajo con rapidez y rigor: localizamos las cifras clave, las ordenamos y las explicamos en un vídeo de pocos minutos, en una ficha por empresa y en comparadores que ponen a las empresas de un mismo sector frente a frente.</p>
+<p>La rapidez nunca va por delante de la exactitud. Cada cifra sale de fuentes públicas, como la CNMV y la web de accionistas de cada empresa, y siempre citamos de dónde viene. Cuando un dato es un cálculo propio, lo indicamos. Contamos lo que mejoró y lo que empeoró, sin adornos.</p>
+<p>Lo que no hacemos también es importante: no damos recomendaciones de compra o venta, no fijamos precios objetivo y no decimos si una acción está cara o barata. Queremos que tengas mejores datos para tomar tus propias decisiones.</p>
+<p>Somos un proyecto en crecimiento y aprendemos de quienes nos leen y nos ven. Si tienes sugerencias, ideas de empresas que analizar o has encontrado algún error, escríbenos desde la <a href="../contacto/index.html">página de contacto</a>. Todas las sugerencias serán bienvenidas.</p>
+</section>"""
+    return pagina("quienes-somos", "Quiénes somos", "AIAcciones España es un proyecto de inteligencia artificial que entrega información confiable y rápida para analizar las empresas del IBEX 35.", cuerpo, "Quiénes somos")
+
+
 def correo_oculto():
     """Botón que arma el correo en el navegador al pulsarlo: el correo no aparece en el HTML (anti-spam)."""
     if not TITULAR["email"]:
@@ -473,13 +486,14 @@ def main():
         escribir(f"comparadores/{c['id']}/index.html", comparador(c))
     escribir("calendario/index.html", calendario(cal))
     escribir("metodologia/index.html", metodologia())
+    escribir("quienes-somos/index.html", quienes_somos())
     escribir("aviso-legal/index.html", aviso_legal())
     escribir("privacidad/index.html", privacidad())
     escribir("contacto/index.html", contacto())
     for nombre, destino in (("enviar.php", "enviar.php"), ("app.js", "assets/app.js")):
         shutil.copyfile(AQUI / "extra" / nombre, WEB / destino)
     if DOMINIO:
-        rutas = ["", "empresas/", "comparadores/"] + [f"comparadores/{c['id']}/" for c in COMPARADORES] + ["calendario/", "metodologia/", "aviso-legal/", "privacidad/", "contacto/"] + [f"empresas/{f['id']}/" for f in FICHAS]
+        rutas = ["", "empresas/", "comparadores/"] + [f"comparadores/{c['id']}/" for c in COMPARADORES] + ["calendario/", "metodologia/", "quienes-somos/", "aviso-legal/", "privacidad/", "contacto/"] + [f"empresas/{f['id']}/" for f in FICHAS]
         urls = "".join(f"<url><loc>{DOMINIO}/{r}</loc><lastmod>{HOY.isoformat()}</lastmod></url>" for r in rutas)
         escribir("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
         escribir("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {DOMINIO}/sitemap.xml\n")
