@@ -1,0 +1,27 @@
+{
+ "actualizado": "2026-10-16T08:58Z",
+ "items": [
+  {
+   "id": "130583b7-ae1a-47a7-ae14-af6a7e092d76",
+   "tipo": "OIR",
+   "fecha": "2026-10-16 09:03",
+   "entidad": "CAIXABANK, S.A.",
+   "nif": "A08663619",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información relativa a la ejecución de su Programa de recompra de acciones propias.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b130583b7-ae1a-47a7-ae14-af6a7e092d76%7d",
+   "ticker": "CABK"
+  },
+  {
+   "id": "c651ca71-6c5d-4f5a-ba3d-241d4049a4a5",
+   "tipo": "OIR",
+   "fecha": "2026-10-15 20:52",
+   "entidad": "FERROVIAL N.V.",
+   "nif": "N0119863I",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "El consorcio del que forma parte Ferrovial ha sido seleccionado para desarrollar los carriles exprés de la I-285 East en Georgia (EE.UU.)",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bc651ca71-6c5d-4f5a-ba3d-241d4049a4a5%7d",
+   "ticker": "FER"
+  }
+ ]
+}

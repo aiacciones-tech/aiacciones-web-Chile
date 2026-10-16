@@ -394,6 +394,13 @@ table.sortable th[aria-sort="descending"]::after { content: " ▼"; color: var(-
 .contact .chk input { margin-top: 4px; }
 .mail-btn { padding: 4px 10px; font-size: 14px; vertical-align: baseline; }
 .consent[hidden] { display: none; }
+.hechos-l { list-style: none; margin: 0 0 8px; padding: 0; }
+.hechos-l li { padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.5; }
+.hechos-l .hf { display: inline-block; min-width: 128px; font: 500 13px/1 var(--f-mono); color: var(--muted); }
+.hechos-l .tkr { font: 600 13px/1 var(--f-mono); margin-right: 2px; }
+.hechos-l .hc { font-size: 13px; color: var(--muted); }
+.hechos-l .st { font-size: 12px; }
+.hechos-dia { margin: 22px 0 4px; font-size: 16px; }
 .cmp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
 .cmp { margin: 0; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; display: grid; gap: 8px; }
 .cmp figcaption { display: grid; gap: 4px; margin-bottom: 4px; }

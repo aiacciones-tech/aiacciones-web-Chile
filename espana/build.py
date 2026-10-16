@@ -38,6 +38,12 @@ DIAS = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "doming
 
 e = html.escape
 FICHA_POR_TICKER = {f["ticker"]: f for f in FICHAS}
+# Hechos relevantes de la CNMV (los descarga espana/hechos.py, rutina .github/workflows/hechos-espana.yml)
+_HP = AQUI / "datos" / "hechos.json"
+HECHOS = json.loads(_HP.read_text(encoding="utf-8")) if _HP.exists() else {"actualizado": "", "items": []}
+NOMBRES = {}  # ticker -> nombre corto (del calendario), se carga en main()
+HECHOS_DESDE = "16-oct-2026"  # desde cuándo los seguimos
+TIPO_HECHO = {"IP": ("Información privilegiada", "st-c"), "OIR": ("Otra información relevante", "st-p")}
 
 
 def fecha_corta(iso):
@@ -53,7 +59,7 @@ def fecha_dia(iso):
 YT_SVG = ('<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 '
           '31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>')
 
-NAV = [("empresas/index.html", "Empresas"), ("comparadores/index.html", "Comparadores"), ("calendario/index.html", "Calendario"),
+NAV = [("empresas/index.html", "Empresas"), ("hechos/index.html", "Hechos relevantes"), ("comparadores/index.html", "Comparadores"), ("calendario/index.html", "Calendario"),
        ("metodologia/index.html", "Metodología"), ("quienes-somos/index.html", "Quiénes somos"), ("contacto/index.html", "Contacto")]
 
 
@@ -173,7 +179,7 @@ def ficha(f):
   <p class="small"><b>Tres riesgos</b></p><ul class="checks risks">{"".join(f"<li>{e(x)}</li>" for x in f['riesgos'])}</ul></div>
   <div class="aside-box"><h2 class="h-sec">Vídeos</h2><div class="vids">{videos_html(f)}</div></div>
 </section>
-{enlace_comparador(f)}<section><h2 class="h-sec">Fuentes</h2><p class="small">{e(f['fuentes'])} Las cifras marcadas como calculadas son cálculos propios.</p></section>
+{hechos_ficha(f, NOMBRES)}{enlace_comparador(f)}<section><h2 class="h-sec">Fuentes</h2><p class="small">{e(f['fuentes'])} Las cifras marcadas como calculadas son cálculos propios.</p></section>
 {aviso_ficha(f)}"""
     desc = f"{f['nombre']} ({f['ticker']}): resultados del {f['periodo_largo']}, guía, valoración y vídeo. {f['titular'][:110]}"
     return pagina(f"empresas/{f['id']}", f"{f['nombre']} ({f['ticker']}) resultados {f['periodo']}", desc, cuerpo, "Empresas")
@@ -227,9 +233,13 @@ def portada(cal):
 <section><h2 class="h-sec">Próximos resultados · {e(cal['trimestre'])}</h2>
 {calendario_tabla(cal, "", solo_proximos=8)}
 <p class="small">Las empresas suelen publicar antes de la apertura (07:00-08:00, hora de Madrid). <a href="calendario/index.html">Ver el calendario completo</a>.</p></section>
+<section><h2 class="h-sec">Últimos hechos relevantes · IBEX 35</h2>
+{hechos_bloque(HECHOS["items"][:6], "", nombres_ibex(cal), True, f"Aún no hay hechos relevantes de las empresas del IBEX 35 desde el {HECHOS_DESDE}.")}
+<p class="small">Comunicaciones a la CNMV. <a href="hechos/index.html">Ver todos los hechos relevantes</a>.</p></section>
 <section><h2 class="h-sec">Últimos análisis</h2><div class="stock-grid">{cards}</div></section>
 <section><h2 class="h-sec">Secciones</h2><div class="sec-grid">
 <a class="sec-link" href="empresas/index.html"><span class="sec-t">Empresas</span><span class="sec-d">Una ficha por empresa con las cifras del último informe, la guía, los múltiplos y el vídeo.</span></a>
+<a class="sec-link" href="hechos/index.html"><span class="sec-t">Hechos relevantes</span><span class="sec-d">Lo que las empresas del IBEX 35 comunican a la CNMV, actualizado cada día hábil.</span></a>
 <a class="sec-link" href="comparadores/index.html"><span class="sec-t">Comparadores</span><span class="sec-d">Empresas del mismo sector frente a frente con sus principales indicadores financieros.</span></a>
 <a class="sec-link" href="calendario/index.html"><span class="sec-t">Calendario</span><span class="sec-d">Fechas de resultados del {e(cal['trimestre'])} de las empresas del IBEX 35, confirmadas y estimadas.</span></a>
 <a class="sec-link" href="metodologia/index.html"><span class="sec-t">Metodología</span><span class="sec-d">De dónde salen las cifras, cómo calculamos los múltiplos y qué no hacemos.</span></a>
@@ -312,6 +322,60 @@ def comparador(c):
 <li>AIAcciones España y sus autores no tienen posiciones en las empresas comparadas.</li></ul></section>"""
     desc = f"Comparador de {c['titulo']}: beneficio, ROTE, eficiencia, morosidad, CET1 y múltiplos del {c['eyebrow'].split(' · ')[-1]}, lado a lado."
     return pagina(f"comparadores/{c['id']}", f"Comparador: {c['titulo']}", desc, cuerpo, "Comparadores")
+
+
+def li_hecho(i, r, nombres, con_empresa=True):
+    tipo, cls = TIPO_HECHO.get(i["tipo"], (i["tipo"], "st-p"))
+    f = FICHA_POR_TICKER.get(i["ticker"])
+    nombre = nombres.get(i["ticker"], i["entidad"])
+    emp = ""
+    if con_empresa:
+        nm = f'<a href="{r}empresas/{f["id"]}/index.html">{e(nombre)}</a>' if f else e(nombre)
+        emp = f'<span class="tkr">{e(i["ticker"])}</span> {nm} · '
+    fecha = fecha_corta(i["fecha"][:10]) + " " + i["fecha"][11:16] if i["fecha"] else ""
+    return (f'<li><span class="hf">{e(fecha)}</span> {emp}<span class="st {cls}">{e(tipo)}</span> '
+            f'<span class="hc">{e(i["categoria"])}</span><br><a href="{e(i["url"])}" target="_blank" rel="noopener">{e(i["titulo"])}</a></li>')
+
+
+def nombres_ibex(cal):
+    return {c["ticker"]: c["empresa"] for c in cal["empresas"]}
+
+
+def hechos_bloque(items, r, nombres, con_empresa=True, vacio=""):
+    if not items:
+        return f'<p class="small">{e(vacio)}</p>'
+    return '<ul class="hechos-l">' + "".join(li_hecho(i, r, nombres, con_empresa) for i in items) + "</ul>"
+
+
+def hechos_ficha(f, nombres):
+    its = [i for i in HECHOS["items"] if i["ticker"] == f["ticker"]][:10]
+    cuerpo = hechos_bloque(its, "../../", nombres, False, f"No hay hechos relevantes nuevos de {f['nombre']} desde el {HECHOS_DESDE}, cuando empezamos a seguirlos.")
+    return (f'<section id="hechos"><h2 class="h-sec">Hechos relevantes recientes</h2>{cuerpo}'
+            f'<p class="small">Comunicaciones a la CNMV. <a href="../../hechos/index.html">Ver los de todo el IBEX 35</a>.</p></section>\n')
+
+
+def hechos_pagina(cal):
+    nombres = nombres_ibex(cal)
+    corte = (HOY - dt.timedelta(days=60)).isoformat()
+    its = [i for i in HECHOS["items"] if i["fecha"][:10] >= corte]
+    grupos, dia = [], None
+    for i in its:
+        if i["fecha"][:10] != dia:
+            if dia:
+                grupos.append("</ul>")
+            dia = i["fecha"][:10]
+            grupos.append(f'<h3 class="hechos-dia">{e(fecha_dia(dia).capitalize())} de {dia[:4]}</h3><ul class="hechos-l">')
+        grupos.append(li_hecho(i, "../", nombres))
+    if dia:
+        grupos.append("</ul>")
+    lista = "".join(grupos) or f'<p class="small">Aún no hay hechos relevantes de las empresas del IBEX 35 desde el {HECHOS_DESDE}.</p>'
+    act = HECHOS.get("actualizado", "")
+    act_txt = f"Actualizado el {fecha_corta(act[:10])} a las {act[11:16]} UTC. " if act else ""
+    cuerpo = f"""<section class="page-head"><p class="eyebrow">IBEX 35 · CNMV</p><h1>Hechos relevantes</h1>
+<p class="lede">Lo que las 35 empresas del IBEX 35 comunican a la CNMV: <span class="st st-c">Información privilegiada</span> (lo que puede mover la cotización, como resultados, operaciones corporativas o cambios de guía) y <span class="st st-p">Otra información relevante</span> (juntas, dividendos, recompras, nombramientos y otros avisos). Cada enlace abre el documento original en la CNMV.</p></section>
+<section>{lista}
+<p class="note">{e(act_txt)}Se actualiza dos veces cada día hábil. Horas de Madrid. Mostramos los últimos 60 días; los seguimos desde el {e(HECHOS_DESDE)}. Fuente: <a href="https://www.cnmv.es" target="_blank" rel="noopener">CNMV</a>, que publica estas comunicaciones sin responder de su contenido. Resumen informativo, no es una recomendación de inversión.</p></section>"""
+    return pagina("hechos", "Hechos relevantes del IBEX 35", "Información privilegiada y otra información relevante que las empresas del IBEX 35 comunican a la CNMV, actualizada cada día hábil.", cuerpo, "Hechos relevantes")
 
 
 def calendario(cal):
@@ -450,6 +514,13 @@ EXTRA_CSS = """
 .contact .chk input { margin-top: 4px; }
 .mail-btn { padding: 4px 10px; font-size: 14px; vertical-align: baseline; }
 .consent[hidden] { display: none; }
+.hechos-l { list-style: none; margin: 0 0 8px; padding: 0; }
+.hechos-l li { padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.5; }
+.hechos-l .hf { display: inline-block; min-width: 128px; font: 500 13px/1 var(--f-mono); color: var(--muted); }
+.hechos-l .tkr { font: 600 13px/1 var(--f-mono); margin-right: 2px; }
+.hechos-l .hc { font-size: 13px; color: var(--muted); }
+.hechos-l .st { font-size: 12px; }
+.hechos-dia { margin: 22px 0 4px; font-size: 16px; }
 .cmp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
 .cmp { margin: 0; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; display: grid; gap: 8px; }
 .cmp figcaption { display: grid; gap: 4px; margin-bottom: 4px; }
@@ -474,7 +545,9 @@ def escribir(ruta, contenido):
 
 
 def main():
+    global NOMBRES
     cal = json.loads((AQUI / "datos" / "calendario-3T26.json").read_text(encoding="utf-8"))
+    NOMBRES = nombres_ibex(cal)
     css = CHILE_CSS.read_text(encoding="utf-8")
     escribir("assets/styles.css", css + EXTRA_CSS)
     escribir("index.html", portada(cal))
@@ -484,6 +557,7 @@ def main():
     escribir("comparadores/index.html", comparadores_indice())
     for c in COMPARADORES:
         escribir(f"comparadores/{c['id']}/index.html", comparador(c))
+    escribir("hechos/index.html", hechos_pagina(cal))
     escribir("calendario/index.html", calendario(cal))
     escribir("metodologia/index.html", metodologia())
     escribir("quienes-somos/index.html", quienes_somos())
@@ -493,7 +567,7 @@ def main():
     for nombre, destino in (("enviar.php", "enviar.php"), ("app.js", "assets/app.js")):
         shutil.copyfile(AQUI / "extra" / nombre, WEB / destino)
     if DOMINIO:
-        rutas = ["", "empresas/", "comparadores/"] + [f"comparadores/{c['id']}/" for c in COMPARADORES] + ["calendario/", "metodologia/", "quienes-somos/", "aviso-legal/", "privacidad/", "contacto/"] + [f"empresas/{f['id']}/" for f in FICHAS]
+        rutas = ["", "empresas/", "hechos/", "comparadores/"] + [f"comparadores/{c['id']}/" for c in COMPARADORES] + ["calendario/", "metodologia/", "quienes-somos/", "aviso-legal/", "privacidad/", "contacto/"] + [f"empresas/{f['id']}/" for f in FICHAS]
         urls = "".join(f"<url><loc>{DOMINIO}/{r}</loc><lastmod>{HOY.isoformat()}</lastmod></url>" for r in rutas)
         escribir("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
         escribir("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {DOMINIO}/sitemap.xml\n")
