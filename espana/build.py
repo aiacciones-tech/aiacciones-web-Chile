@@ -12,6 +12,7 @@ import shutil
 from pathlib import Path
 
 from comparadores import COMPARADORES
+from educacion import GENERALES, SECTORES
 from fichas import FICHAS
 
 AQUI = Path(__file__).resolve().parent
@@ -60,7 +61,7 @@ def fecha_dia(iso):
 YT_SVG = ('<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 '
           '31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>')
 
-NAV = [("empresas/index.html", "Empresas"), ("hechos/index.html", "Hechos relevantes"), ("comparadores/index.html", "Comparadores"), ("calendario/index.html", "Calendario"),
+NAV = [("empresas/index.html", "Empresas"), ("hechos/index.html", "Hechos relevantes"), ("comparadores/index.html", "Comparadores"), ("calendario/index.html", "Calendario"), ("educacion/index.html", "Educación"),
        ("metodologia/index.html", "Metodología"), ("quienes-somos/index.html", "Quiénes somos"), ("contacto/index.html", "Contacto")]
 
 
@@ -189,7 +190,7 @@ def ficha(f):
   <p class="small"><b>Tres riesgos</b></p><ul class="checks risks">{"".join(f"<li>{e(x)}</li>" for x in f['riesgos'])}</ul></div>
   <div class="aside-box"><h2 class="h-sec">Vídeos</h2><div class="vids">{videos_html(f)}</div></div>
 </section>
-{hechos_ficha(f, NOMBRES)}{enlace_comparador(f)}<section><h2 class="h-sec">Fuentes</h2><p class="small">{e(f['fuentes'])} Las cifras marcadas como calculadas son cálculos propios.</p></section>
+{hechos_ficha(f, NOMBRES)}{enlace_comparador(f)}{enlace_educacion(f)}<section><h2 class="h-sec">Fuentes</h2><p class="small">{e(f['fuentes'])} Las cifras marcadas como calculadas son cálculos propios.</p></section>
 {aviso_ficha(f)}"""
     desc = f"{f['nombre']} ({f['ticker']}): resultados del {f['periodo_largo']}, guía, valoración y vídeo. {f['titular'][:110]}"
     return pagina(f"empresas/{f['id']}", f"{f['nombre']} ({f['ticker']}) resultados {f['periodo']}", desc, cuerpo, "Empresas")
@@ -250,6 +251,7 @@ def portada(cal):
 <section><h2 class="h-sec">Secciones</h2><div class="sec-grid">
 <a class="sec-link" href="empresas/index.html"><span class="sec-t">Empresas</span><span class="sec-d">Una ficha por empresa con las cifras del último informe, la guía, los múltiplos y el vídeo.</span></a>
 <a class="sec-link" href="hechos/index.html"><span class="sec-t">Hechos relevantes</span><span class="sec-d">Lo que las empresas del IBEX 35 comunican a la CNMV, actualizado cada día hábil.</span></a>
+<a class="sec-link" href="educacion/index.html"><span class="sec-t">Educación</span><span class="sec-d">Qué mide el PER, el PER forward y otros indicadores, y en qué fijarse en cada sector.</span></a>
 <a class="sec-link" href="comparadores/index.html"><span class="sec-t">Comparadores</span><span class="sec-d">Empresas del mismo sector frente a frente con sus principales indicadores financieros.</span></a>
 <a class="sec-link" href="calendario/index.html"><span class="sec-t">Calendario</span><span class="sec-d">Fechas de resultados del {e(cal['trimestre'])} de las empresas del IBEX 35, confirmadas y estimadas.</span></a>
 <a class="sec-link" href="metodologia/index.html"><span class="sec-t">Metodología</span><span class="sec-d">De dónde salen las cifras, cómo calculamos los múltiplos y qué no hacemos.</span></a>
@@ -386,6 +388,64 @@ def hechos_pagina(cal):
 <section>{lista}
 <p class="note">{e(act_txt)}Se actualiza dos veces cada día hábil. Horas de Madrid. Mostramos los últimos 60 días; los seguimos desde el {e(HECHOS_DESDE)}. Fuente: <a href="https://www.cnmv.es" target="_blank" rel="noopener">CNMV</a>, que publica estas comunicaciones sin responder de su contenido. Resumen informativo, no es una recomendación de inversión.</p></section>"""
     return pagina("hechos", "Hechos relevantes del IBEX 35", "Información privilegiada y otra información relevante que las empresas del IBEX 35 comunican a la CNMV, actualizada cada día hábil.", cuerpo, "Hechos relevantes")
+
+
+def enlace_educacion(f):
+    sec = next((x for x in SECTORES if f["id"] in x["empresas"]), None)
+    if not sec:
+        return ""
+    return (f'<section><p class="kpi-line">¿Qué cifras mirar en {e(sec["titulo"].lower())}? '
+            f'<a href="../../educacion/{sec["id"]}/index.html">Lee la guía del sector</a>.</p></section>\n')
+
+
+AVISO_EDU = ('<section class="aviso-es"><ul><li>Contenido educativo y general: explica conceptos y no valora ninguna empresa concreta. '
+             'No es una recomendación de inversión ni asesoramiento personalizado.</li>'
+             '<li>Ningún indicador por sí solo dice si una acción es una buena inversión; compáralos siempre con el mismo criterio y con la historia de la propia empresa.</li></ul></section>')
+
+
+def educacion_indice():
+    guias = "".join(f'<a class="sec-link" href="{x["id"]}/index.html"><span class="sec-t">{e(x["titulo"])}</span>'
+                    f'<span class="sec-d">{e(x["resumen"])}</span></a>' for x in SECTORES)
+    cuerpo = f"""<section class="page-head"><p class="eyebrow">Aprende</p><h1>Educación</h1>
+<p class="lede">Las cifras que aparecen en nuestros vídeos y fichas, explicadas: qué mide cada indicador, cómo se calcula y en qué fijarse según el sector. Un banco no se analiza igual que una eléctrica.</p></section>
+<section><h2 class="h-sec">Para todas las empresas</h2><div class="sec-grid">
+<a class="sec-link" href="valoracion/index.html"><span class="sec-t">{e(GENERALES["titulo"])}</span><span class="sec-d">PER, PER forward, BPA, precio / valor en libros, EV/EBITDA, dividendo, flujo de caja libre y deuda.</span></a>
+</div></section>
+<section><h2 class="h-sec">Guías por sector</h2><div class="sec-grid">{guias}</div></section>
+{AVISO_EDU}"""
+    return pagina("educacion", "Educación", "Qué mide cada indicador financiero (PER, PER forward, EV/EBITDA…) y en qué fijarse en bancos, eléctricas, petroleras, telecos e infraestructuras.", cuerpo, "Educación")
+
+
+def educacion_valoracion():
+    bloques = "".join(
+        f'<article class="edu-ind" id="i{n}"><h2>{e(nom)}</h2><p>{e(que)}</p>'
+        f'<p><b>Cómo se calcula.</b> {e(calc)}</p><p><b>Cómo se lee.</b> {e(lee)}</p><p class="edu-ojo"><b>Cuidado con.</b> {e(ojo)}</p></article>'
+        for n, (nom, que, calc, lee, ojo) in enumerate(GENERALES["indicadores"], 1))
+    indice = "".join(f'<li><a href="#i{n}">{e(x[0])}</a></li>' for n, x in enumerate(GENERALES["indicadores"], 1))
+    cuerpo = f"""<nav class="crumbs"><a href="../index.html">Educación</a> / {e(GENERALES['titulo'])}</nav>
+<section class="page-head"><p class="eyebrow">Educación</p><h1>{e(GENERALES['titulo'])}</h1>
+<p class="lede">{e(GENERALES['lede'])}</p></section>
+<section><ul class="edu-toc">{indice}</ul></section>
+<section class="prose edu">{bloques}</section>
+<section><p class="kpi-line">Cada sector tiene sus propias cifras clave: <a href="../index.html">ver las guías por sector</a>.</p></section>
+{AVISO_EDU}"""
+    return pagina("educacion/valoracion", GENERALES["titulo"], "Qué son el PER, el PER forward, el BPA, el P/VC, el EV/EBITDA, la rentabilidad por dividendo y por flujo de caja libre, y la deuda neta / EBITDA.", cuerpo, "Educación")
+
+
+def educacion_sector(x):
+    fp = {f["id"]: f for f in FICHAS}
+    claves = "".join(f'<article class="edu-ind"><h3>{e(a)}</h3><p>{e(b)}</p></article>' for a, b in x["claves"])
+    errores = "".join(f"<li>{e(t)}</li>" for t in x["errores"])
+    ejemplos = "".join(tarjeta(fp[i], "../../") for i in x["empresas"] if i in fp)
+    cuerpo = f"""<nav class="crumbs"><a href="../index.html">Educación</a> / {e(x['titulo'])}</nav>
+<section class="page-head"><p class="eyebrow">Guía por sector</p><h1>Cómo leer los resultados: {e(x['titulo'].lower())}</h1>
+<p class="lede">{e(x['negocio'])}</p></section>
+<section class="prose edu"><h2>En qué fijarse</h2>{claves}
+<h2>Cómo se valora</h2><p>{e(x['valoracion'])} Los indicadores generales están explicados en <a href="../valoracion/index.html">Indicadores de valoración</a>.</p>
+<h2>Errores habituales</h2><ul class="checks risks">{errores}</ul></section>
+{f'<section><h2 class="h-sec">Empresas de este sector en AIAcciones España</h2><div class="stock-grid">{ejemplos}</div></section>' if ejemplos else ''}
+{AVISO_EDU}"""
+    return pagina(f"educacion/{x['id']}", f"Cómo leer los resultados: {x['titulo'].lower()}", f"En qué fijarse en los resultados de {x['titulo'].lower()}: " + ", ".join(a for a, _ in x["claves"][:4]) + ".", cuerpo, "Educación")
 
 
 def calendario(cal):
@@ -532,6 +592,12 @@ EXTRA_CSS = """
 .hechos-l .hc { font-size: 13px; color: var(--muted); }
 .hechos-l .st { font-size: 12px; }
 .hechos-dia { margin: 22px 0 4px; font-size: 16px; }
+.edu-toc { columns: 2; padding-left: 18px; margin: 0; }
+.edu .edu-ind { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.edu .edu-ind h2 { margin-top: 0; }
+.edu .edu-ind h3 { font-size: 17px; margin: 0 0 6px; }
+.edu .edu-ojo { color: var(--muted); }
+@media (max-width: 640px) { .edu-toc { columns: 1; } }
 .cmp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
 .cmp { margin: 0; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; display: grid; gap: 8px; }
 .cmp figcaption { display: grid; gap: 4px; margin-bottom: 4px; }
@@ -569,6 +635,10 @@ def main():
     for c in COMPARADORES:
         escribir(f"comparadores/{c['id']}/index.html", comparador(c))
     escribir("hechos/index.html", hechos_pagina(cal))
+    escribir("educacion/index.html", educacion_indice())
+    escribir("educacion/valoracion/index.html", educacion_valoracion())
+    for x in SECTORES:
+        escribir(f"educacion/{x['id']}/index.html", educacion_sector(x))
     escribir("calendario/index.html", calendario(cal))
     escribir("metodologia/index.html", metodologia())
     escribir("quienes-somos/index.html", quienes_somos())
@@ -578,7 +648,7 @@ def main():
     for nombre, destino in (("enviar.php", "enviar.php"), ("app.js", "assets/app.js")):
         shutil.copyfile(AQUI / "extra" / nombre, WEB / destino)
     if DOMINIO:
-        rutas = ["", "empresas/", "hechos/", "comparadores/"] + [f"comparadores/{c['id']}/" for c in COMPARADORES] + ["calendario/", "metodologia/", "quienes-somos/", "aviso-legal/", "privacidad/", "contacto/"] + [f"empresas/{f['id']}/" for f in FICHAS]
+        rutas = ["", "empresas/", "hechos/", "comparadores/", "educacion/", "educacion/valoracion/"] + [f"educacion/{x['id']}/" for x in SECTORES] + [f"comparadores/{c['id']}/" for c in COMPARADORES] + ["calendario/", "metodologia/", "quienes-somos/", "aviso-legal/", "privacidad/", "contacto/"] + [f"empresas/{f['id']}/" for f in FICHAS]
         urls = "".join(f"<url><loc>{DOMINIO}/{r}</loc><lastmod>{HOY.isoformat()}</lastmod></url>" for r in rutas)
         escribir("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
         escribir("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {DOMINIO}/sitemap.xml\n")
