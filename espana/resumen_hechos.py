@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Resumen diario por correo de los hechos relevantes del IBEX 35 sobre resultados, dividendos y ampliaciones de capital.
 
-Lo pidió Daniel el 17-oct-2026: cada día en danweifis@gmail.com. Lo usa la tarea programada de Claude, que envía el
-resultado por Gmail. Lee espana/datos/hechos.json (lo rellena espana/hechos.py) y el calendario de resultados.
+Lo pidió Daniel el 17-oct-2026: cada día en danweifis@gmail.com, con los últimos 7 días y en una tabla como el correo
+de hechos esenciales de la CMF chilena (Fecha/Hora, Entidad, Asunto/Categoría, documento). Lo usa la tarea programada
+de Claude, que lo envía por Gmail. Lee espana/datos/hechos.json (lo rellena espana/hechos.py) y el calendario de resultados.
 
-Uso:  python3 espana/resumen_hechos.py [--horas 24]   -> imprime JSON {"asunto", "texto", "html", "n"}
+Uso:  python3 espana/resumen_hechos.py [--dias 7]   -> imprime JSON {"asunto", "texto", "html", "n"}
 """
 import datetime as dt
 import html as H
@@ -18,8 +19,10 @@ from hechos import temas
 AQUI = Path(__file__).resolve().parent
 MADRID = ZoneInfo("Europe/Madrid")
 MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
-TITULOS = [("resultados", "Resultados"), ("dividendos", "Dividendos"), ("capital", "Ampliaciones de capital")]
+NOMBRE_TEMA = {"resultados": "Resultados", "dividendos": "Dividendos", "capital": "Ampliación de capital"}
 TIPO = {"IP": "Información privilegiada", "OIR": "Otra información relevante"}
+TD = 'style="border:1px solid #999;padding:6px;vertical-align:top"'
+TH = 'style="border:1px solid #999;padding:6px;background:#eee;text-align:left"'
 
 
 def fecha_corta(d):
@@ -27,60 +30,57 @@ def fecha_corta(d):
 
 
 def main():
-    horas = int(sys.argv[sys.argv.index("--horas") + 1]) if "--horas" in sys.argv else 24
+    dias = int(sys.argv[sys.argv.index("--dias") + 1]) if "--dias" in sys.argv else 7
     ahora = dt.datetime.now(MADRID)
-    desde = (ahora - dt.timedelta(hours=horas)).strftime("%Y-%m-%d %H:%M")
+    desde = (ahora - dt.timedelta(days=dias)).strftime("%Y-%m-%d %H:%M")
     hechos = json.loads((AQUI / "datos" / "hechos.json").read_text(encoding="utf-8"))
     cal = json.loads((AQUI / "datos" / "calendario-3T26.json").read_text(encoding="utf-8"))
     nombres = {c["ticker"]: c["empresa"] for c in cal["empresas"]}
     for i in hechos["items"]:
         i["temas"] = temas(i)  # recalculado aquí: los avisos antiguos pueden no traerlo guardado
-    nuevos = [i for i in hechos["items"] if i["fecha"] >= desde and i["temas"]]
+    its = sorted((i for i in hechos["items"] if i["fecha"] >= desde and i["temas"]), key=lambda i: i["fecha"], reverse=True)
     hoy = ahora.date()
     proximos = [c for c in cal["empresas"] if c.get("fecha") and hoy.isoformat() <= c["fecha"] <= (hoy + dt.timedelta(days=7)).isoformat()]
+    desde_txt = f"{desde[8:10]}/{desde[5:7]}/{desde[:4]} {desde[11:16]}"
 
-    texto, html = [], []
-    for tema, titulo in TITULOS:
-        its = sorted((i for i in nuevos if tema in i["temas"]), key=lambda i: i["fecha"])
-        texto.append(f"{titulo.upper()} ({len(its)})")
-        html.append(f'<h3 style="margin:18px 0 6px">{H.escape(titulo)} ({len(its)})</h3>')
-        if not its:
-            texto.append("  Sin comunicaciones nuevas.")
-            html.append('<p style="color:#666;margin:0">Sin comunicaciones nuevas.</p>')
-        else:
-            html.append('<ul style="margin:0;padding-left:18px">')
-        for i in its:
-            emp = nombres.get(i["ticker"], i["entidad"])
-            cab = f'{i["fecha"][8:10]}/{i["fecha"][5:7]} {i["fecha"][11:16]} · {i["ticker"]} {emp} · {TIPO.get(i["tipo"], i["tipo"])}'
-            texto.append(f"  - {cab}\n    {i['titulo']}\n    {i['url']}")
-            html.append(f'<li style="margin-bottom:8px"><span style="color:#666;font-size:13px">{H.escape(cab)}</span><br>'
-                        f'<a href="{H.escape(i["url"])}">{H.escape(i["titulo"])}</a></li>')
-        if its:
-            html.append("</ul>")
-
-    texto.append("\nPRÓXIMOS RESULTADOS (7 días)")
-    html.append('<h3 style="margin:18px 0 6px">Próximos resultados (7 días)</h3>')
-    if proximos:
-        html.append('<ul style="margin:0;padding-left:18px">')
-        for c in proximos:
-            lin = f'{fecha_corta(dt.date.fromisoformat(c["fecha"]))} · {c["empresa"]} ({c["ticker"]}) · {c.get("estado", "")}'
-            texto.append(f"  - {lin}")
-            html.append(f"<li>{H.escape(lin)}</li>")
-        html.append("</ul>")
+    intro = (f"Se encontraron {len(its)} hechos relevantes del IBEX 35 sobre resultados, dividendos o ampliaciones de capital "
+             f"en los últimos {dias} días (desde el {desde_txt}, hora de Madrid), ordenados del más reciente al más antiguo.")
+    filas_t, filas_h = [], []
+    for i in its:
+        fh = f'{i["fecha"][8:10]}/{i["fecha"][5:7]}/{i["fecha"][:4]} {i["fecha"][11:16]}'
+        ent = f'{nombres.get(i["ticker"], i["entidad"])} ({i["ticker"]})'
+        tema = ", ".join(NOMBRE_TEMA[t] for t in i["temas"])
+        asunto = f'{i["titulo"]} — {i["categoria"]} · {TIPO.get(i["tipo"], i["tipo"])}'
+        filas_t.append(f"{fh} | {ent} | {tema} | {asunto} | {i['url']}")
+        filas_h.append(f'<tr><td {TD}>{H.escape(fh)}</td><td {TD}>{H.escape(ent)}</td><td {TD}>{H.escape(tema)}</td>'
+                       f'<td {TD}>{H.escape(i["titulo"])}<br><span style="color:#666">{H.escape(i["categoria"])} · {H.escape(TIPO.get(i["tipo"], i["tipo"]))}</span></td>'
+                       f'<td {TD}><a href="{H.escape(i["url"])}">Ver en la CNMV</a></td></tr>')
+    cab = ["Fecha/Hora", "Entidad", "Tema", "Asunto/Categoría", "Documento"]
+    if its:
+        tabla_t = " | ".join(cab) + "\n" + "\n".join(filas_t)
+        tabla_h = ('<table cellpadding="6" cellspacing="0" style="border-collapse:collapse;font-family:Arial,sans-serif;font-size:13px">'
+                   "<tr>" + "".join(f'<th {TH}>{c}</th>' for c in cab)
+                   + "</tr>" + "".join(filas_h) + "</table>")
     else:
-        texto.append("  Ninguno en el calendario.")
-        html.append('<p style="color:#666;margin:0">Ninguno en el calendario.</p>')
+        tabla_t = "Sin comunicaciones de estos temas en el periodo."
+        tabla_h = "<p><em>Sin comunicaciones de estos temas en el periodo.</em></p>"
 
-    pie = (f"Comunicaciones de las empresas del IBEX 35 a la CNMV desde el {desde} (hora de Madrid), filtradas por resultados, "
-           "dividendos y ampliaciones de capital. Fuente: CNMV. Todos los hechos: https://aiacciones.es/hechos/ · "
-           "Calendario: https://aiacciones.es/calendario/. Resumen informativo, no es una recomendación de inversión.")
-    texto.append("\n" + pie)
-    html.append(f'<p style="color:#666;font-size:12px;margin-top:20px">{H.escape(pie)}</p>')
-    asunto = f"IBEX 35 · Resultados, dividendos y capital · {fecha_corta(hoy)} ({len(nuevos)} {'aviso' if len(nuevos) == 1 else 'avisos'})"
-    cuerpo_html = ('<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.45;color:#111;max-width:680px">'
-                   f'<h2 style="margin:0 0 4px">Hechos relevantes del IBEX 35</h2><p style="color:#666;margin:0">{H.escape(fecha_corta(hoy))} · '
-                   f'últimas {horas} horas</p>{"".join(html)}</div>')
-    print(json.dumps({"asunto": asunto, "texto": "\n".join(texto), "html": cuerpo_html, "n": len(nuevos)}, ensure_ascii=False))
+    prox_t = "\n".join(f'{fecha_corta(dt.date.fromisoformat(c["fecha"]))} | {c["empresa"]} ({c["ticker"]}) | {c.get("estado", "")}' for c in proximos) or "Ninguno en el calendario."
+    prox_h = ('<table cellpadding="6" cellspacing="0" style="border-collapse:collapse;font-family:Arial,sans-serif;font-size:13px">'
+              f'<tr><th {TH}>Fecha</th><th {TH}>Empresa</th><th {TH}>Estado</th></tr>' 
+              + "".join(f'<tr><td {TD}>{fecha_corta(dt.date.fromisoformat(c["fecha"]))}</td><td {TD}>{H.escape(c["empresa"])} ({c["ticker"]})</td>'
+                        f'<td {TD}>{H.escape(c.get("estado", ""))}</td></tr>' for c in proximos)
+              + "</table>") if proximos else "<p><em>Ninguno en el calendario.</em></p>"
+
+    pie = ("Fuente: CNMV (Información privilegiada y Otra información relevante), seguida por AIAcciones España desde el 16-oct-2026. "
+           "Todos los hechos: https://aiacciones.es/hechos/ · Calendario: https://aiacciones.es/calendario/. "
+           "Resumen informativo, no es una recomendación de inversión.")
+    texto = f"{intro}\n\n{tabla_t}\n\nPróximos resultados (7 días):\n{prox_t}\n\n{pie}"
+    html = (f'<div style="font-family:Arial,sans-serif;font-size:14px;color:#111"><p>{H.escape(intro)}</p>{tabla_h}'
+            f'<p style="margin-top:18px"><strong>Próximos resultados (7 días)</strong></p>{prox_h}'
+            f'<p style="color:#666;font-size:12px;margin-top:18px">{H.escape(pie)}</p></div>')
+    asunto = f"Hechos relevantes IBEX 35 — {len(its)} en {dias} días (resultados, dividendos, capital) — {fecha_corta(hoy)}"
+    print(json.dumps({"asunto": asunto, "texto": texto, "html": html, "n": len(its)}, ensure_ascii=False))
 
 
 if __name__ == "__main__":
