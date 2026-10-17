@@ -12,6 +12,7 @@ DESC = {
  "rankings/index.html": "Ranking y filtro de acciones chilenas por P/E, crecimiento de utilidades, dividend yield y caída de precio.",
  "comparadores/index.html": "Comparadores de acciones chilenas por sector: bancos, retail, energía, centros comerciales, AFP y más, con gráficos y resultados trimestrales.",
  "educacion/index.html": "Conceptos para analizar acciones explicados en simple: P/E, EBITDA, flujo de caja libre, dividend yield, deuda y más.",
+ "educacion/indicadores-por-industria/index.html": "Indicadores clave por industria: qué mirar en bancos, eléctricas, sanitarias, retail, malls, AFP, minería, aerolíneas, consumo, telecom, holdings y constructoras.",
  "contacto/index.html": "Escríbenos para sugerir empresas, reportar un error o proponer una colaboración con AI Acciones Chile.",
  "privacidad/index.html": "Política de privacidad de AI Acciones Chile: uso de cookies, Google Analytics y Google AdSense.",
  "nosotros/index.html": "Quiénes somos: AI Acciones Chile explica en simple los resultados trimestrales de las empresas de la Bolsa de Santiago. Qué publicamos, de dónde salen las cifras y cómo hacemos cada análisis.",
