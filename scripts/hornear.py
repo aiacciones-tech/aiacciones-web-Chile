@@ -229,6 +229,15 @@ def hechos_home(s):
     return s[:i + 15] + "\n" + box + s[i + 15:] if i >= 0 else s
 
 
+ES = '<a href="https://aiacciones.es/" hreflang="es-ES">AIAcciones España</a> · '
+
+
+def espana(s):
+    if "https://aiacciones.es/" in s:
+        return s
+    return s.replace('<button type="button" class="linkish" data-consent-open>', ES + '<button type="button" class="linkish" data-consent-open>', 1)
+
+
 CSS = """/*mercado*/
 .hechos-l { list-style: none; margin: 0 0 8px; padding: 0; }
 .hechos-l li { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
@@ -255,6 +264,7 @@ for p in glob.glob(os.path.join(DIR, "**", "*.html"), recursive=True):
     rel = os.path.relpath(p, DIR).replace(os.sep, "/")
     s0 = s = open(p, encoding="utf-8").read()
     s = tape(s)
+    s = espana(s)
     m = re.match(r"acciones/([\w-]+)/index\.html$", rel)
     if m:
         s = ficha(s, m.group(1))
