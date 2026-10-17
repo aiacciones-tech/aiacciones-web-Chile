@@ -822,4 +822,56 @@ FICHAS = [
                 'y 2-oct-2026).',
      'fuentes_corto': 'Europa Press, Estrategias de Inversión, Investing.com, Renta 4, Merca2 y stockanalysis.com',
      'elaborado': '17-oct-2026, 08:30'},
+    {'id': 'naturgy',
+     'nombre': 'Naturgy',
+     'ticker': 'NTGY',
+     'sector': 'Eléctricas y gas · redes, generación y comercialización',
+     'lede': 'Grupo integrado de gas y electricidad con redes de distribución en España y Latinoamérica (México, Brasil, Chile, Argentina y Panamá), '
+             'ciclos combinados, nuclear y renovables, gestión del aprovisionamiento de gas (con el contrato de Sonatrach y Medgaz) y comercialización.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Beneficio neto de 1.215 M€ (+5,9%) y EBITDA de 2.975 M€ (+4,5%), por encima del consenso que recoge Capitalbolsa (1.166 y 2.888 M€; '
+                '+4,2% y +3,0%, calculado). Las redes de distribución tiran del grupo (+13,2%) y Naturgy eleva su guía de 2026.',
+     'precio': '30,64 €',
+     'precio_fecha': '16-oct-2026',
+     'multiplos': [('PER 12 meses', '13,5x'),
+                   ('PER forward', '14,3x'),
+                   ('EV/EBITDA', '8,0x'),
+                   ('Precio / valor contable', '2,42x'),
+                   ('Rentab. dividendo', '5,78%'),
+                   ('FCF yield', '7,6%'),
+                   ('Capitalización', '~28.395 M€')],
+     'multiplos_nota': 'Con precio de 30,64 € al 16-oct-2026 (stockanalysis.com). A cierre de 2023, 2024 y 2025 el PER era 13,1x, 11,8x y 12,3x, el '
+                       'EV/EBITDA 7,9x, 7,6x y 8,1x, el precio / valor contable 2,17x, 1,93x y 2,19x, y la rentabilidad por flujo libre 9,4%, 8,0% y '
+                       '9,5%.',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Ventas', '10.097', '+1,4%'),
+               ('EBITDA', '2.975', '+4,5%'),
+               ('EBITDA de redes', '1.514', '+13,2%'),
+               ('Beneficio neto', '1.215', '+5,9%'),
+               ('Beneficio neto 2T (calculado)', '685', '+6,9%'),
+               ('Inversiones', '844', '-5,9%'),
+               ('BPA (calculado)', '~1,31 €', '')],
+     'kpi': 'Margen EBITDA 29,5% (28,6% en 1S 2025; calculado). Redes: España 855 M€ y Latinoamérica 665 M€ de EBITDA (calculado); electricidad España '
+            'incluye 74 M€ de ajustes retroactivos no recurrentes. FFO 2.316 M€ (+7,8%) y flujo de caja libre tras minoritarios 1.259 M€ (-1,6%). Deuda '
+            'neta 11.745 M€, 572 M€ menos que en diciembre; deuda neta / EBITDA 2,2x. Coste medio de la deuda 4,0%; liquidez 10.210 M€. Capacidad '
+            'renovable 8.433 MW (+9,2%), con ~1,3 GW en construcción.',
+     'guia': 'Guía 2026 elevada: EBITDA de más de 5.500 M€ (antes, más de 5.300) y beneficio neto de más de 2.100 M€ (antes, más de 1.900); el semestre '
+             'ya suma el 54% y el 58% (calculado). Deuda neta de ~13.000 M€ a cierre, con un pago puntual de ~400 M€ a Sonatrach. Dividendo a cuenta de '
+             '0,60 € (pagado el 29-jul) y mínimo de 1,80 € por acción con cargo a 2026. En el semestre salieron GIP (11,4%) y CVC (13,8%); el capital '
+             'flotante supera el 46%.',
+     'positivos': ['Los resultados superaron al consenso y la empresa eleva su guía de 2026.',
+                   'Las redes crecen un 13,2% y ya son la mitad del EBITDA.',
+                   'La deuda neta bajó 572 M€ y el capital flotante es el mayor de su historia tras la salida de GIP y CVC.'],
+     'riesgos': ['La comercialización cae un 17,4% y las renovables un 2,8%.',
+                 'Parte del crecimiento de las redes en España son 74 M€ de ajustes que no se repetirán.',
+                 'La deuda subirá en el segundo semestre (~13.000 M€) y la empresa anticipa un invierno complejo por el precio del gas.'],
+     'videos': [('5YX26YWgemU', 'Naturgy resultados 1S 2026: beneficio +5,9%, por encima del consenso | Redes +13,2% y guía al alza'),
+                ('WBGXyA-ix64', 'Naturgy 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-10-29',
+     'fuentes': 'Naturgy, informe de resultados del primer semestre 2026 (CNMV y naturgy.com, 22-jul-2026), nota de prensa del 22-jul-2026, informe 1T26 '
+                '(29-abr-2026) y calendario financiero; Capitalbolsa (consenso, 22-jul-2026); XTB e Investing.com (guía anterior y dividendo, '
+                '22-jul-2026); Bolsamanía/Europa Press (22-jul-2026); stockanalysis.com (precio y múltiplos, 16-oct-2026).',
+     'fuentes_corto': 'Capitalbolsa, XTB, Investing.com, Bolsamanía y stockanalysis.com',
+     'elaborado': '17-oct-2026, 08:15'},
 ]
