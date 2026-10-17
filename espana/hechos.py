@@ -5,14 +5,16 @@ Uso:  python3 espana/hechos.py            (descarga y acumula en espana/datos/he
       python3 espana/hechos.py --html DIR (prueba con oir.html / ip.html guardados en DIR)
 Corre en GitHub Actions (.github/workflows/hechos-espana.yml), que tiene acceso a cnmv.es.
 Fuentes: «Información privilegiada del día» y «Otra información relevante del día» de la CNMV. Cada página
-muestra el día en curso y lo recibido desde el cierre de la sesión anterior; por eso la rutina corre dos veces
-al día y acumula los avisos (clave: el identificador del documento en la CNMV).
+muestra solo lo recibido desde el cierre de la sesión anterior (se vacía tras cada cierre); por eso la rutina corre
+cada 20 minutos en horario de mercado y acumula los avisos (clave: el identificador del documento en la CNMV).
+Cada aviso lleva "temas" (resultados, dividendos, capital) para el resumen diario por correo (espana/resumen_hechos.py).
 """
 import datetime as dt
 import html as H
 import json
 import re
 import sys
+import time
 import unicodedata
 import urllib.request
 from urllib.parse import unquote
@@ -58,6 +60,27 @@ def nucleo(nombre):
 POR_NUCLEO = {v: k for k, v in EMISORES.items()}
 
 
+# Temas que pidió Daniel (17-oct-2026) para el resumen diario: se buscan en la categoría y el título de la CNMV.
+TEMAS = {
+    "resultados": re.compile(r"RESULTADO|INFORME FINANCIERO|INFORMACION FINANCIERA|INFORMACION PUBLICA PERIODICA|CUENTAS ANUALES|"
+                             r"ESTADOS FINANCIEROS|PRIMER TRIMESTRE|SEGUNDO TRIMESTRE|TERCER TRIMESTRE|CUARTO TRIMESTRE|"
+                             r"PRIMER SEMESTRE|SEGUNDO SEMESTRE|NUEVE MESES|BENEFICIO|EARNINGS|RESULTS"),
+    "dividendos": re.compile(r"DIVIDEND|RETRIBUCION AL ACCIONISTA|REMUNERACION AL ACCIONISTA|RETRIBUCION FLEXIBLE|SCRIP|"
+                             r"PAGO A CUENTA|DISTRIBUCION DE LA PRIMA|DERECHOS DE ASIGNACION"),
+    "capital": re.compile(r"AMPLIACION(ES)? DE CAPITAL|AUMENTO(S)? DE CAPITAL|CAPITAL INCREASE|EMISION DE (NUEVAS )?ACCIONES|"
+                          r"NUEVAS ACCIONES|DERECHOS DE SUSCRIPCION|DERECHOS DE ASIGNACION|SCRIP|COLOCACION ACELERADA|ACCELERATED BOOKBUILD"),
+}
+NO_RESULTADOS = re.compile(r"JUNTA|VOTACION|OFERTA|SUSCRIPCION|COLOCACION|RECOMPRA|AUTOCARTERA|CALIFICACION|RATING")
+
+
+def temas(a):
+    t = norm(f"{a.get('categoria', '')} {a.get('titulo', '')}")
+    out = [k for k, rx in TEMAS.items() if rx.search(t)]
+    if "resultados" in out and NO_RESULTADOS.search(t) and not re.search(r"RESULTADOS (DEL|DE LOS|DEL PRIMER|DEL SEGUNDO|DEL TERCER|DEL CUARTO|SEMESTRAL|TRIMESTRAL|ANUAL)", t):
+        out.remove("resultados")
+    return out
+
+
 def limpio(x):
     return " ".join(H.unescape(re.sub(r"<[^>]+>", " ", x)).split())
 
@@ -89,7 +112,13 @@ def parsear(html, tipo):
 
 def descargar(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "es-ES,es;q=0.9"})
-    return urllib.request.urlopen(req, timeout=60).read().decode("utf-8", "replace")
+    for intento in range(3):  # la CNMV a veces tarda o corta la conexión
+        try:
+            return urllib.request.urlopen(req, timeout=45).read().decode("utf-8", "replace")
+        except Exception:
+            if intento == 2:
+                raise
+            time.sleep(10 * (intento + 1))
 
 
 def main():
@@ -113,6 +142,8 @@ def main():
             a["ticker"] = tk
             items[a["id"]] = {**items.get(a["id"], {}), **a}
             vistos += 1
+    for i in items.values():
+        i["temas"] = temas(i)
     corte = (dt.date.today() - dt.timedelta(days=DIAS_GUARDADOS)).isoformat()
     lista = sorted((i for i in items.values() if i["fecha"] >= corte), key=lambda i: (i["fecha"], i["id"]), reverse=True)
     nuevo = {"actualizado": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"), "items": lista}

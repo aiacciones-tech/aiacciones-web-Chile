@@ -1,11 +1,11 @@
 # Hechos relevantes del IBEX 35 para aiacciones.es (como «Actualizar precios» en Chile, pero con la CNMV).
-# Dos veces cada día hábil: descarga «Información privilegiada» y «Otra información relevante» del día de la CNMV,
+# Cada 20 minutos en horario de mercado (la página «del día» de la CNMV se vacía tras cada cierre): descarga «Información privilegiada» y «Otra información relevante» del día de la CNMV,
 # guarda los avisos de las 35 empresas en espana/datos/hechos.json, rearma la web y la publica (deploy-espana.yml).
 name: Hechos relevantes España
 on:
   schedule:
-    - cron: "30 12 * * 1-5"   # 14:30 Madrid (13:30 en invierno): lo de la mañana
-    - cron: "30 21 * * 1-5"   # 23:30 Madrid (22:30 en invierno): lo de la tarde y tras el cierre
+    - cron: "*/20 5-21 * * 1-5"   # de 7:00 a 23:40 Madrid (una hora antes en invierno), días hábiles
+    - cron: "0 9,18 * * 0,6"      # fines de semana: dos pasadas por si hay avisos
   workflow_dispatch:
 permissions:
   contents: write
