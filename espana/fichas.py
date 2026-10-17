@@ -713,4 +713,113 @@ FICHAS = [
                 'Hosteltur (DORA III, 15-sep-2026); stockanalysis.com (precio y múltiplos, 14-oct-2026).',
      'fuentes_corto': 'XTB, Investing.com, Hosteltur, EFE y stockanalysis.com',
      'elaborado': '16-oct-2026, 16:55'},
+    {'id': 'puig',
+     'nombre': 'Puig',
+     'ticker': 'PUIG',
+     'sector': 'Consumo · belleza premium (perfumes, maquillaje y cuidado de la piel)',
+     'lede': 'Grupo barcelonés de belleza premium que cotiza en la Bolsa de Madrid desde mayo de 2024. Tres de cada cuatro euros vienen de perfumes y '
+             'moda (Rabanne, Carolina Herrera, Jean Paul Gaultier); el resto, de maquillaje (Charlotte Tilbury) y cuidado de la piel (Uriage, y ISDIN al '
+             '50%).',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Ventas de 2.354 M€ (+2,4%; +4,4% comparable), con Asia Pacífico +20,9% y Maquillaje +9,1%. Beneficio neto ajustado de 260 M€ (+5,2%); '
+                'el atribuible, 263 M€ (-4,4%), por costes extraordinarios de transacciones. La deuda neta sube a 1.589 M€ (716 M€ en diciembre).',
+     'precio': '19,57 €',
+     'precio_fecha': '16-oct-2026',
+     'multiplos': [('PER 12 meses', '18,7x'),
+                   ('PER forward', '16,8x'),
+                   ('EV/EBITDA', '11,3x'),
+                   ('Precio / valor contable', '2,69x'),
+                   ('Rentab. dividendo', '2,15%'),
+                   ('FCF yield', '5,4%'),
+                   ('Capitalización', '~11.024 M€')],
+     'multiplos_nota': 'Con precio de 19,57 € al 16-oct-2026 (stockanalysis.com). Puig cotiza desde mayo de 2024, así que solo hay dos cierres de año '
+                       'para comparar: a cierre de 2024 y 2025 el PER era 18,9x y 14,1x, el EV/EBITDA 13,5x y 10,3x, el precio / valor contable 2,84x y '
+                       '2,14x, y la rentabilidad por dividendo 2,11% y 2,83%.',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Ventas netas', '2.353,7', '+2,4%'),
+               ('Ventas 2T', '1.138,4', '+4,1%'),
+               ('EBITDA ajustado', '459,6', '+3,2%'),
+               ('Resultado operativo', '340,1', '+2,3%'),
+               ('Beneficio neto ajustado', '260,3', '+5,2%'),
+               ('Beneficio neto atribuible', '262,8', '-4,4%'),
+               ('BPA ajustado', '0,46 €', '')],
+     'kpi': 'Margen bruto 75,5% (75,8%); margen EBITDA ajustado 19,5% (19,4%). Ventas comparables: Fragancias y Moda +3,8%, Maquillaje +9,1%, Cuidado de '
+            'la piel +2,3%; Asia Pacífico +20,9%, EMEA +2,6%, América +2,6%. Margen operativo: Fragancias y Moda 19,2% (17,8%), Maquillaje 1,8% (3,6%), '
+            'Cuidado de la piel 1,5% (7,6%). Flujo de caja libre de las operaciones -196 M€ (-116 M€) por el inventario; deuda neta 1.589 M€, 1,5x el '
+            'EBITDA ajustado.',
+     'guia': 'Guía 2026 reiterada: crecer por encima del mercado de belleza premium en términos comparables y mantener estable el margen EBITDA ajustado '
+             '(20,7% en 2025); conversión en caja libre de ~50% del EBITDA ajustado, inversiones del 4-5% de las ventas y deuda neta / EBITDA ajustado '
+             'de 2,0x como máximo. Dividendo de 0,42 € por acción pagado el 17-jun-2026. En septiembre acordó comprar el 50% restante de ISDIN por 1.200 '
+             'M€ (cierre previsto en el 1T27).',
+     'positivos': ['Las ventas se aceleraron al 4,1% en el 2T (+0,8% en el 1T) y Asia Pacífico creció un 20,9% comparable.',
+                   'Gana cuota de mercado (11,1% en perfumería selectiva) y el margen de Fragancias y Moda sube 1,4 puntos.',
+                   'El beneficio ajustado crece un 5,2% y la empresa mantiene su guía anual.'],
+     'riesgos': ['Flujo libre de -196 M€ y deuda neta multiplicada por 2,2 desde diciembre; ISDIN sumará 900 M€ al cierre.',
+                 'El margen operativo de Maquillaje (1,8%) y de Cuidado de la piel (1,5%) cae con fuerza.',
+                 'Dólar, Oriente Medio y aranceles; tras romper con Estée Lauder, el mercado espera la nueva estrategia (28-oct).'],
+     'videos': [('AwK5Blg88WA', 'Puig resultados 1S 2026: ventas +4,4% comparable y beneficio ajustado +5,2% | Deuda neta 1.589 M€'),
+                ('hq9OYbh6hSc', 'Puig 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-10-21',
+     'fuentes': 'Puig, nota de prensa de resultados del primer semestre 2026 (CNMV y puig.com, 30-jul-2026) y resultados 2025 (18-feb-2026); Estrategias '
+                'de Inversión y Bolsamanía/Europa Press (30-jul-2026); FashionUnited (31-jul y 8-jun-2026); Investing.com (conferencia, 30-jul-2026); '
+                'Modaes (ISDIN, 14-sep-2026); Business Wire (Estée Lauder, 21-may-2026); stockanalysis.com (precio y múltiplos, 16-oct-2026).',
+     'fuentes_corto': 'Estrategias de Inversión, Bolsamanía, FashionUnited, Investing.com, Modaes y stockanalysis.com',
+     'elaborado': '17-oct-2026, 08:15'},
+    {'id': 'fluidra',
+     'nombre': 'Fluidra',
+     'ticker': 'FDR',
+     'sector': 'Industrial · equipos para piscina y wellness',
+     'lede': 'Fabricante y distribuidor de equipos para piscinas residenciales y comerciales y para bienestar (bombas, filtros, robots limpiafondos, '
+             'tratamiento del agua y automatización). Norteamérica es su mayor mercado (41% de las ventas del 1S 2026) y el negocio es estacional: el '
+             'primer semestre, y sobre todo el segundo trimestre, es la temporada alta.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Ventas de 1.258 M€ (+2,6%; +5% a tipo de cambio constante) y EBITDA ajustado de 321 M€ (+2,4%; +6% a tipo constante), con un margen '
+                'estable del 25,5%. El beneficio neto contable bajó un 7,1%, a 126 M€, por 35 M€ de reestructuración y otros gastos; el ajustado subió '
+                'un 2,0%, a 175 M€.',
+     'precio': '17,50 €',
+     'precio_fecha': '2-oct-2026',
+     'multiplos': [('PER 12 meses', '20,0x'),
+                   ('PER forward', '12,4x'),
+                   ('EV/EBITDA', '11,3x'),
+                   ('Precio / valor contable', '2,10x'),
+                   ('Rentab. dividendo', '3,71%'),
+                   ('FCF yield', '10,1%'),
+                   ('Capitalización', '~3.320 M€')],
+     'multiplos_nota': 'Con precio de 17,50 € al 2-oct-2026 (stockanalysis.com; EV/EBITDA, P/VC y FCF yield al 11-sep-2026). A cierre de 2023, 2024 y '
+                       '2025 el PER era 31,4x, 32,3x y 25,0x, el EV/EBITDA 14,7x, 15,8x y 13,7x, el precio / valor contable 2,27x, 2,69x y 2,75x, y la '
+                       'rentabilidad por dividendo 3,09%, 2,64% y 2,84%.',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Ventas', '1.258', '+2,6%'),
+               ('EBITDA ajustado', '321', '+2,4%'),
+               ('Beneficio neto ajustado', '175', '+2,0%'),
+               ('Beneficio neto', '126', '-7,1%'),
+               ('EBITDA ajustado 2T (calculado)', '197', '+7,7%'),
+               ('Flujo de caja libre', '16', '-74 en 1S25'),
+               ('BPA ajustado', '0,91 €', '')],
+     'kpi': 'Margen EBITDA ajustado 25,5% (25,6% en 1S 2025); 28,4% en el 2T (27,6%; calculado). Margen bruto estable, 56,5%. Ventas por región: '
+            'Norteamérica 518 M€ (-1,6% en euros; +4% a tipo constante), Sur de Europa 395 M€ (+8,1%), Resto de Europa 179 M€ (+3,1%), Resto del mundo '
+            '167 M€ (+3,4%). Flujo de caja libre +16 M€ (-74 M€ en 1S 2025); circulante / ventas 22,5% (-2,3 pp). Deuda neta 1.101 M€ (-1,4%), 2,2x el '
+            'EBITDA ajustado (2,3x).',
+     'guia': 'Objetivos 2026 mantenidos, a tipo de cambio constante: ventas +3% a +7% (confía en el punto medio), margen EBITDA ajustado 23,3%-24,3% '
+             '(ahora en la parte baja o media) y BPA ajustado +4% a +13%. Reestructuración de 50-55 M€ en el año. Dividendo de 0,65 € con cargo a 2025 '
+             '(0,32 € en julio y 0,33 € en diciembre) y recompra de 40 M€ lanzada el 30-jul-2026. Compras de Hydrapro (Francia) y Riaan Pool Group '
+             '(Sudáfrica) pendientes de cierre.',
+     'positivos': ['Las ventas crecen en todas las regiones a tipo constante, con volumen y precio, y el EBITDA superó al consenso (Citi).',
+                   'Flujo de caja libre positivo en el semestre, menos circulante y menos deuda.',
+                   'Guía 2026 mantenida, plan de ahorro de costes en marcha y recompra de 40 M€.'],
+     'riesgos': ['La caída del dólar resta crecimiento: las ventas de Norteamérica bajaron un 1,6% en euros.',
+                 'Los costes de reestructuración (50-55 M€ en 2026) pesan sobre el beneficio neto contable.',
+                 'Obra nueva de piscinas débil, piscina comercial -10% en el 2T y margen anual en la parte baja o media del rango.'],
+     'videos': [('g6FVIzh99x4', 'Fluidra resultados 1S 2026: ventas +5% a tipo constante, EBITDA 321 M€ | Beneficio neto -7%'),
+                ('zlALNKgx1Kg', 'Fluidra 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-10-29',
+     'proximo_estimado': True,
+     'fuentes': 'Fluidra, nota de prensa de resultados del primer semestre 2026 (CNMV y fluidra.com, 30-jul-2026); Fluidra, resultados 1S 2025, 1T 2025, '
+                '1T 2026 y 2025 con guía 2026; Europa Press/Bolsamanía y Estrategias de Inversión (detalle, 30-jul-2026); Investing.com (presentación y '
+                'conferencia, 30-jul-2026); Renta 4 (30-jul-2026) y Merca2 (Citi, 31-jul-2026) (consenso); stockanalysis.com (precio y múltiplos, 11-sep '
+                'y 2-oct-2026).',
+     'fuentes_corto': 'Europa Press, Estrategias de Inversión, Investing.com, Renta 4, Merca2 y stockanalysis.com',
+     'elaborado': '17-oct-2026, 08:30'},
 ]

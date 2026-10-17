@@ -1,6 +1,6 @@
 {
  "trimestre": "3T 2026",
- "actualizado": "2026-10-15",
+ "actualizado": "2026-10-17",
  "empresas": [
   {
    "fecha": "2026-10-20",
@@ -19,6 +19,15 @@
    "estado": "Confirmada",
    "nota": "Antes de apertura.",
    "fuente": "DailyForex, oct-2026"
+  },
+  {
+   "fecha": "2026-10-21",
+   "empresa": "Puig",
+   "ticker": "PUIG",
+   "sector": "Consumo (belleza)",
+   "estado": "Confirmada",
+   "nota": "Publica solo ventas en el 3T; tras el cierre.",
+   "fuente": "Puig, calendario financiero (oct-2026)"
   },
   {
    "fecha": "2026-10-22",
@@ -67,21 +76,21 @@
   },
   {
    "fecha": "2026-10-28",
-   "empresa": "Naturgy",
-   "ticker": "NTGY",
-   "sector": "Eléctricas y gas",
-   "estado": "Estimada",
-   "nota": "3T25: 29-oct-2025.",
-   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
-  },
-  {
-   "fecha": "2026-10-28",
    "empresa": "Redeia",
    "ticker": "RED",
    "sector": "Eléctricas (red)",
    "estado": "Estimada",
    "nota": "3T25: 29-oct-2025.",
    "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+  },
+  {
+   "fecha": "2026-10-29",
+   "empresa": "Naturgy",
+   "ticker": "NTGY",
+   "sector": "Eléctricas y gas",
+   "estado": "Confirmada",
+   "nota": "3T25: 29-oct-2025.",
+   "fuente": "Naturgy, calendario financiero (oct-2026)"
   },
   {
    "fecha": "2026-10-29",
@@ -99,15 +108,6 @@
    "sector": "Industrial",
    "estado": "Estimada",
    "nota": "3T25: 30-oct-2025.",
-   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
-  },
-  {
-   "fecha": "2026-10-29",
-   "empresa": "Puig",
-   "ticker": "PUIG",
-   "sector": "Consumo (belleza)",
-   "estado": "Estimada",
-   "nota": "3T25: 30-oct-2025. Publica solo ventas en el 3T.",
    "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
   },
   {
