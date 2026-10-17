@@ -378,4 +378,5 @@ table.sortable th[aria-sort="ascending"]::after { content: " ▲"; color: var(--
 table.sortable th[aria-sort="descending"]::after { content: " ▼"; color: var(--copper); }
 .vals { min-width: 960px; }
 .vals td.txt { min-width: 200px; font-size: 14px; }
-/*/mercado*/
+/*/mercado*/.ind-list { margin: 12px 0 0; padding-left: 18px; }
+.ind-list li { margin: 6px 0; }
