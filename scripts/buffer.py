@@ -1,11 +1,14 @@
-"""Manda a Buffer los posts para X y LinkedIn que la rutina nocturna deja en cola/ de la rama youtube-cola
+"""Manda a Buffer los posts para X, LinkedIn y TikTok que la rutina nocturna deja en cola/ de la rama youtube-cola
 (lo usa .github/workflows/buffer.yml).
 
 Cada post es un archivo cola/<slug>/post-x.txt (X) o cola/<slug>/post-linkedin.txt (LinkedIn).
+TikTok: cola/<slug>-short/post-tiktok.txt, junto al video.mp4 del Short; el video se manda a Buffer por su
+enlace público en GitHub (raw.githubusercontent.com, fijado al commit), así que el repo debe seguir público.
 Si el texto trae {youtube}, se reemplaza por el enlace del video de cola/<slug>/resultado.json; mientras
 el video no esté subido, el post espera. Si el video quedó privado, el post va a Borradores en vez de publicarse.
 Al mandarlo escribe cola/<slug>/buffer.json (X) o buffer-linkedin.json con el ID del post en Buffer, y no
-vuelve a mandarlo. Si LinkedIn todavía no está conectado en Buffer, sus posts esperan sin dar error.
+vuelve a mandarlo (buffer-tiktok.json para TikTok). Si LinkedIn o TikTok todavía no están conectados en
+Buffer, sus posts esperan sin dar error.
 
   python3 scripts/buffer.py verificar      # solo prueba la clave y muestra los canales
   python3 scripts/buffer.py programar cola # manda lo pendiente
@@ -16,15 +19,17 @@ Variables del repo (opcionales, Settings > Secrets and variables > Actions > Var
                 de la cola de Buffer) o borrador (queda en Borradores y Daniel lo aprueba)
   BUFFER_CANAL           ID del canal de X, si la cuenta tiene más de uno
   BUFFER_CANAL_LINKEDIN  ID del canal de LinkedIn, si hay más de uno (perfil y página)
+  BUFFER_CANAL_TIKTOK    ID del canal de TikTok, si hay más de uno
   BUFFER_CANAL_LINKEDIN_ES  ID de la página de LinkedIn de AIAcciones España (para cola-es/)
 Secreto opcional BUFFER_API_KEY_ES: clave de una segunda cuenta de Buffer solo para España (el plan gratis
-admite 3 canales por cuenta). Si existe, cola-es/ usa esa cuenta; si no, la de Chile.
+admite 3 canales por cuenta). Si existe, cola-es/ usa esa cuenta; si no, la de Chile. Un canal de esa cuenta
+cuyo nombre diga "chile" (p. ej. el TikTok aiaccioneschile) es de Chile y lo usa cola/.
 España: `programar cola-es` manda los posts de cola-es/ solo a canales cuyo nombre diga "espana"/"españa"
 (hoy, la página de LinkedIn); si no hay canal de España para esa red, el post espera. Con dos páginas
 de LinkedIn conectadas, Chile usa la que se llama "chile".
 Solo usa la biblioteca estándar de Python.
 """
-import json, os, re, sys, unicodedata, urllib.request
+import json, os, re, subprocess, sys, unicodedata, urllib.request
 from datetime import datetime, timezone
 
 API = "https://api.buffer.com"
@@ -81,6 +86,9 @@ REDES = {
     "linkedin": {"nombre": "LinkedIn", "archivo": "post-linkedin.txt", "registro": "buffer-linkedin.json",
                  "servicios": ("linkedin",), "variable": "BUFFER_CANAL_LINKEDIN", "limite": 3000,
                  "largo": len, "obligatoria": False},
+    "tiktok": {"nombre": "TikTok", "archivo": "post-tiktok.txt", "registro": "buffer-tiktok.json",
+               "servicios": ("tiktok",), "variable": "BUFFER_CANAL_TIKTOK", "limite": 2200,
+               "largo": len, "obligatoria": False, "video": True},
 }
 
 
@@ -89,10 +97,25 @@ def sin_tildes(t):
 
 
 def es_de(c, pais):
-    # todo canal de la cuenta de Buffer de España es de España, aunque su nombre no lo diga (p. ej. @AIAccionesES)
+    nombre = sin_tildes(f"{c['name']} {c.get('displayName') or ''}")
+    # un canal que dice "chile" es de Chile aunque esté en la cuenta de España (p. ej. el TikTok aiaccioneschile)
+    if "chile" in nombre:
+        return pais == "chile"
+    # el resto de la cuenta de Buffer de España es de España, aunque su nombre no lo diga (p. ej. @AIAccionesES)
     if c.get("clave") == "BUFFER_API_KEY_ES":
         return pais == "espana"
-    return pais in sin_tildes(f"{c['name']} {c.get('displayName') or ''}")
+    return pais in nombre
+
+
+def canales_chile():
+    """Canales de la cuenta de Chile, más los de la cuenta de España cuyo nombre dice "chile"."""
+    usar_clave("chile")
+    lista = canales()
+    if os.environ.get("BUFFER_API_KEY_ES"):
+        usar_clave("espana")
+        lista += [c for c in canales() if es_de(c, "chile")]
+        usar_clave("chile")
+    return lista
 
 
 def elegir_canal(red, lista, pais="chile"):
@@ -124,8 +147,7 @@ def usar_clave(pais):
 
 
 def verificar():
-    usar_clave("chile")
-    lista = canales()
+    lista = canales_chile()
     for c in lista:
         pausa = " (cola en pausa)" if c.get("isQueuePaused") else ""
         print(f"- {c['service']}: {c.get('displayName') or c['name']} [{c['id']}] en {c['org']}{pausa}")
@@ -135,13 +157,16 @@ def verificar():
     li = elegir_canal("linkedin", lista)
     print(f"OK: LinkedIn como {li.get('displayName') or li['name']}." if li
           else "LinkedIn todavía no está conectado en Buffer.")
+    tt = elegir_canal("tiktok", lista)
+    print(f"OK: TikTok como {tt.get('displayName') or tt['name']}." if tt
+          else "TikTok todavía no está conectado en Buffer.")
     usar_clave("espana")
     if CLAVE != "BUFFER_API_KEY":
         print("España usa su propia cuenta de Buffer (BUFFER_API_KEY_ES):")
-        propios = canales()
+        propios = [c for c in canales() if es_de(c, "espana")]
         for c in propios:
             print(f"- {c['service']}: {c.get('displayName') or c['name']} [{c['id']}] en {c['org']}")
-        servicios = {c["service"].lower() for c in propios if es_de(c, "espana")}
+        servicios = {c["service"].lower() for c in propios}
         lista = propios + [c for c in lista if c["service"].lower() not in servicios]
     for red in REDES:
         es = elegir_canal(red, lista, "espana")
@@ -162,6 +187,19 @@ def texto_final(carpeta, archivo="post-x.txt"):
     return texto, privado
 
 
+def enlace_video(carpeta):
+    """Enlace público y directo al video.mp4 de la carpeta, fijado al commit que lo trae (no expira)."""
+    ruta = os.path.join(carpeta, "video.mp4")
+    if not os.path.isfile(ruta):
+        return None
+    commit = subprocess.run(["git", "log", "-1", "--format=%H", "--", ruta],
+                            capture_output=True, text=True).stdout.strip()
+    if not commit:
+        return None
+    repo = os.environ.get("GITHUB_REPOSITORY", "aiacciones-tech/aiacciones-web-Chile")
+    return f"https://raw.githubusercontent.com/{repo}/{commit}/{os.path.relpath(ruta).replace(os.sep, '/')}"
+
+
 def programar(base):
     global CLAVE
     pais = "espana" if os.path.basename(os.path.normpath(base)) == "cola-es" else "chile"
@@ -175,12 +213,11 @@ def programar(base):
         print("No hay posts pendientes.")
         return
     # España: canales de su propia cuenta de Buffer (si hay clave) y, como respaldo, los de la cuenta de Chile
-    usar_clave("chile")
-    lista = canales()
+    lista = canales_chile()
     usar_clave(pais)
     if CLAVE != "BUFFER_API_KEY":
-        propios = canales()
-        servicios = {c["service"].lower() for c in propios if es_de(c, "espana")}
+        propios = [c for c in canales() if es_de(c, "espana")]
+        servicios = {c["service"].lower() for c in propios}
         lista = propios + [c for c in lista if c["service"].lower() not in servicios]
     fallas = []
     for slug, red in pendientes:
@@ -202,6 +239,12 @@ def programar(base):
         CLAVE = canal["clave"]
         modo_post = "borrador" if privado else modo
         extra = ", saveToDraft: true" if modo_post == "borrador" else ""
+        if r.get("video"):
+            url = enlace_video(carpeta)
+            if not url:
+                fallas.append(f"{slug} ({r['nombre']}): falta video.mp4 en el commit de la carpeta")
+                continue
+            extra += ", assets: [{video: {url: %s, metadata: {thumbnailOffset: 1000}}}]" % json.dumps(url)
         resp = gql("mutation { createPost(input: {text: %s, channelId: %s, schedulingType: automatic, "
                    "mode: %s%s}) { ... on PostActionSuccess { post { id dueAt } } "
                    "... on MutationError { message } } }"
