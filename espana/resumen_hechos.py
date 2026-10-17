@@ -13,6 +13,8 @@ import sys
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from hechos import temas
+
 AQUI = Path(__file__).resolve().parent
 MADRID = ZoneInfo("Europe/Madrid")
 MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
@@ -31,7 +33,9 @@ def main():
     hechos = json.loads((AQUI / "datos" / "hechos.json").read_text(encoding="utf-8"))
     cal = json.loads((AQUI / "datos" / "calendario-3T26.json").read_text(encoding="utf-8"))
     nombres = {c["ticker"]: c["empresa"] for c in cal["empresas"]}
-    nuevos = [i for i in hechos["items"] if i["fecha"] >= desde and i.get("temas")]
+    for i in hechos["items"]:
+        i["temas"] = temas(i)  # recalculado aquí: los avisos antiguos pueden no traerlo guardado
+    nuevos = [i for i in hechos["items"] if i["fecha"] >= desde and i["temas"]]
     hoy = ahora.date()
     proximos = [c for c in cal["empresas"] if c.get("fecha") and hoy.isoformat() <= c["fecha"] <= (hoy + dt.timedelta(days=7)).isoformat()]
 
