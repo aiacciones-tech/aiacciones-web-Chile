@@ -1,13 +1,16 @@
-"""Manda a Buffer los posts para X, LinkedIn y TikTok que la rutina nocturna deja en cola/ de la rama youtube-cola
+"""Manda a Buffer los posts para X, LinkedIn, TikTok e Instagram que la rutina nocturna deja en cola/ de la rama youtube-cola
 (lo usa .github/workflows/buffer.yml).
 
 Cada post es un archivo cola/<slug>/post-x.txt (X) o cola/<slug>/post-linkedin.txt (LinkedIn).
 TikTok: cola/<slug>-short/post-tiktok.txt, junto al video.mp4 del Short; el video se manda a Buffer por su
 enlace público en GitHub (raw.githubusercontent.com, fijado al commit), así que el repo debe seguir público.
+Instagram: cola/<slug>/post-instagram.txt con imagen.png (post en el feed) o video.mp4 (Reel). Un Short con
+post-tiktok.txt y sin post-instagram.txt también sale como Reel con el mismo texto, salvo que su TikTok se haya
+mandado hace más de 3 días (así, al conectar Instagram no se publican de golpe los Shorts antiguos).
 Si el texto trae {youtube}, se reemplaza por el enlace del video de cola/<slug>/resultado.json; mientras
 el video no esté subido, el post espera. Si el video quedó privado, el post va a Borradores en vez de publicarse.
 Al mandarlo escribe cola/<slug>/buffer.json (X) o buffer-linkedin.json con el ID del post en Buffer, y no
-vuelve a mandarlo (buffer-tiktok.json para TikTok). Si LinkedIn o TikTok todavía no están conectados en
+vuelve a mandarlo (buffer-tiktok.json para TikTok, buffer-instagram.json para Instagram). Si LinkedIn, TikTok o Instagram todavía no están conectados en
 Buffer, sus posts esperan sin dar error.
 
   python3 scripts/buffer.py verificar      # solo prueba la clave y muestra los canales
@@ -20,6 +23,7 @@ Variables del repo (opcionales, Settings > Secrets and variables > Actions > Var
   BUFFER_CANAL           ID del canal de X, si la cuenta tiene más de uno
   BUFFER_CANAL_LINKEDIN  ID del canal de LinkedIn, si hay más de uno (perfil y página)
   BUFFER_CANAL_TIKTOK    ID del canal de TikTok, si hay más de uno
+  BUFFER_CANAL_INSTAGRAM ID del canal de Instagram, si hay más de uno
   BUFFER_CANAL_LINKEDIN_ES  ID de la página de LinkedIn de AIAcciones España (para cola-es/)
 Secreto opcional BUFFER_API_KEY_ES: clave de una segunda cuenta de Buffer solo para España (el plan gratis
 admite 3 canales por cuenta). Si existe, cola-es/ usa esa cuenta; si no, la de Chile. Un canal de esa cuenta
@@ -30,7 +34,7 @@ de LinkedIn conectadas, Chile usa la que se llama "chile".
 Solo usa la biblioteca estándar de Python.
 """
 import json, os, re, subprocess, sys, unicodedata, urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 API = "https://api.buffer.com"
 MODOS = {"ahora": "shareNow", "cola": "addToQueue", "borrador": "addToQueue"}
@@ -89,6 +93,9 @@ REDES = {
     "tiktok": {"nombre": "TikTok", "archivo": "post-tiktok.txt", "registro": "buffer-tiktok.json",
                "servicios": ("tiktok",), "variable": "BUFFER_CANAL_TIKTOK", "limite": 2200,
                "largo": len, "obligatoria": False, "video": True},
+    "instagram": {"nombre": "Instagram", "archivo": "post-instagram.txt", "registro": "buffer-instagram.json",
+                  "servicios": ("instagram",), "variable": "BUFFER_CANAL_INSTAGRAM", "limite": 2200,
+                  "largo": len, "obligatoria": False, "imagen": True, "respaldo": "post-tiktok.txt"},
 }
 
 
@@ -160,6 +167,9 @@ def verificar():
     tt = elegir_canal("tiktok", lista)
     print(f"OK: TikTok como {tt.get('displayName') or tt['name']}." if tt
           else "TikTok todavía no está conectado en Buffer.")
+    ig = elegir_canal("instagram", lista)
+    print(f"OK: Instagram como {ig.get('displayName') or ig['name']}." if ig
+          else "Instagram todavía no está conectado en Buffer.")
     usar_clave("espana")
     if CLAVE != "BUFFER_API_KEY":
         print("España usa su propia cuenta de Buffer (BUFFER_API_KEY_ES):")
@@ -187,9 +197,24 @@ def texto_final(carpeta, archivo="post-x.txt"):
     return texto, privado
 
 
-def enlace_video(carpeta):
-    """Enlace público y directo al video.mp4 de la carpeta, fijado al commit que lo trae (no expira)."""
-    ruta = os.path.join(carpeta, "video.mp4")
+def archivo_post(carpeta, r):
+    """El archivo de texto del post de esa red en la carpeta, o None si no hay (o el de respaldo es antiguo)."""
+    if os.path.isfile(os.path.join(carpeta, r["archivo"])):
+        return r["archivo"]
+    respaldo = r.get("respaldo")
+    if not respaldo or not os.path.isfile(os.path.join(carpeta, respaldo)):
+        return None
+    registro = os.path.join(carpeta, "buffer-tiktok.json")
+    if os.path.exists(registro):
+        fecha = datetime.fromisoformat(json.load(open(registro, encoding="utf-8"))["fecha"])
+        if datetime.now(timezone.utc) - fecha > timedelta(days=3):
+            return None
+    return respaldo
+
+
+def enlace_video(carpeta, nombre="video.mp4"):
+    """Enlace público y directo al archivo de la carpeta, fijado al commit que lo trae (no expira)."""
+    ruta = os.path.join(carpeta, nombre)
     if not os.path.isfile(ruta):
         return None
     commit = subprocess.run(["git", "log", "-1", "--format=%H", "--", ruta],
@@ -207,7 +232,7 @@ def programar(base):
     if modo not in MODOS:
         sys.exit(f"BUFFER_MODO debe ser ahora, cola o borrador, no {modo!r}.")
     pendientes = sorted((d, red) for d in os.listdir(base) for red, r in REDES.items()
-                        if os.path.isfile(os.path.join(base, d, r["archivo"]))
+                        if os.path.isdir(os.path.join(base, d)) and archivo_post(os.path.join(base, d), r)
                         and not os.path.exists(os.path.join(base, d, r["registro"])))
     if not pendientes:
         print("No hay posts pendientes.")
@@ -227,7 +252,7 @@ def programar(base):
         if canal is None:
             print(f"{slug}: {r['nombre']} no está conectado en Buffer; queda pendiente.")
             continue
-        texto, privado = texto_final(carpeta, r["archivo"])
+        texto, privado = texto_final(carpeta, archivo_post(carpeta, r))
         if texto is None:
             print(f"{slug} ({r['nombre']}): {privado}; queda pendiente.")
             continue
@@ -245,6 +270,18 @@ def programar(base):
                 fallas.append(f"{slug} ({r['nombre']}): falta video.mp4 en el commit de la carpeta")
                 continue
             extra += ", assets: [{video: {url: %s, metadata: {thumbnailOffset: 1000}}}]" % json.dumps(url)
+        elif r.get("imagen"):
+            # Instagram no admite posts solo de texto: imagen.png va al feed; si no hay, video.mp4 va como Reel
+            img, vid = enlace_video(carpeta, "imagen.png"), enlace_video(carpeta)
+            if img:
+                extra += (", assets: [{image: {url: %s}}], metadata: {instagram: {type: post, shouldShareToFeed: true}}"
+                          % json.dumps(img))
+            elif vid:
+                extra += (", assets: [{video: {url: %s, metadata: {thumbnailOffset: 1000}}}], "
+                          "metadata: {instagram: {type: reel, shouldShareToFeed: true}}" % json.dumps(vid))
+            else:
+                fallas.append(f"{slug} ({r['nombre']}): falta imagen.png o video.mp4 en el commit de la carpeta")
+                continue
         resp = gql("mutation { createPost(input: {text: %s, channelId: %s, schedulingType: automatic, "
                    "mode: %s%s}) { ... on PostActionSuccess { post { id dueAt } } "
                    "... on MutationError { message } } }"

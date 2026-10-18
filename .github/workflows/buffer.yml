@@ -1,4 +1,6 @@
-# Manda a Buffer los posts que la rutina nocturna deja en cola/<slug>/post-x.txt (X) y post-linkedin.txt (LinkedIn)
+# Manda a Buffer los posts que la rutina nocturna deja en cola/<slug>/post-x.txt (X) y post-linkedin.txt (LinkedIn),
+# y el Short de cola/<slug>-short/ con su post-tiktok.txt (TikTok; también va como Reel a Instagram),
+# y post-instagram.txt con imagen.png o video.mp4 (Instagram)
 # de la rama youtube-cola, y los de España en cola-es/ (solo a canales de España, p. ej. la página de LinkedIn).
 # Clave: Settings > Secrets and variables > Actions > Secrets (BUFFER_API_KEY).
 # Modo: variable BUFFER_MODO = ahora (por defecto, publica en X al tiro), cola (próximo horario de Buffer) o borrador.
@@ -9,7 +11,7 @@ concurrency: youtube-cola
 on:
   push:
     branches: [youtube-cola]
-    paths: ['cola/**/post-x.txt', 'cola/**/post-linkedin.txt', 'cola-es/**/post-x.txt', 'cola-es/**/post-linkedin.txt']
+    paths: ['cola/**/post-x.txt', 'cola/**/post-linkedin.txt', 'cola/**/post-tiktok.txt', 'cola/**/post-instagram.txt', 'cola-es/**/post-x.txt', 'cola-es/**/post-linkedin.txt']
   workflow_run:
     workflows: ["Subir videos a YouTube", "Subir videos a YouTube (España)"]
     types: [completed]
@@ -29,6 +31,8 @@ jobs:
       BUFFER_MODO: ${{ vars.BUFFER_MODO }}
       BUFFER_CANAL: ${{ vars.BUFFER_CANAL }}
       BUFFER_CANAL_LINKEDIN: ${{ vars.BUFFER_CANAL_LINKEDIN }}
+      BUFFER_CANAL_TIKTOK: ${{ vars.BUFFER_CANAL_TIKTOK }}
+      BUFFER_CANAL_INSTAGRAM: ${{ vars.BUFFER_CANAL_INSTAGRAM }}
       BUFFER_CANAL_LINKEDIN_ES: ${{ vars.BUFFER_CANAL_LINKEDIN_ES }}
     steps:
       - uses: actions/checkout@v4
