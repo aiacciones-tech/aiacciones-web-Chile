@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-19T08:05Z",
+ "actualizado": "2026-10-19T10:15Z",
  "items": [
+  {
+   "id": "e3ff3d84-99d2-4184-9772-3c56226b9f94",
+   "tipo": "OIR",
+   "fecha": "2026-10-19 11:03",
+   "entidad": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+   "nif": "A48265169",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad comunica información relativa a la ejecución del programa de recompra de acciones.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7be3ff3d84-99d2-4184-9772-3c56226b9f94%7d",
+   "ticker": "BBVA",
+   "temas": []
+  },
   {
    "id": "9f03f501-af9a-40fe-ba80-d392a8b511e9",
    "tipo": "OIR",
