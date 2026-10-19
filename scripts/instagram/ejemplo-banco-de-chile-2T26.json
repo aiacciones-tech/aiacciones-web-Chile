@@ -1,0 +1,13 @@
+{
+ "empresa": "Banco de Chile",
+ "trimestre": "2T 2026",
+ "titular": "Utilidad récord: 24% sobre el consenso",
+ "comparaciones": [
+  {"nombre": "Utilidad neta", "antes": 304.9, "ahora": 390.6, "etiqueta_antes": "2T 2025", "etiqueta_ahora": "2T 2026", "decimales": 1},
+  {"nombre": "Ingresos operacionales", "antes": 763, "ahora": 922, "etiqueta_antes": "2T 2025", "etiqueta_ahora": "2T 2026", "decimales": 0}
+ ],
+ "unidad": "CLP miles de millones",
+ "tiles": [["27,9%", "ROAE"], ["31,3%", "Eficiencia"], ["1,6%", "Morosidad"]],
+ "linea": "BPA US$0,84 por ADS vs. US$0,68 esperado",
+ "fuente": "estados financieros CMF y 6-K (SEC)"
+}
