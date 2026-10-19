@@ -1,6 +1,20 @@
 {
- "actualizado": "2026-10-19T10:15Z",
+ "actualizado": "2026-10-19T11:27Z",
  "items": [
+  {
+   "id": "64c13f6b-f14e-4b91-a559-73169fbeabc4",
+   "tipo": "OIR",
+   "fecha": "2026-10-19 13:20",
+   "entidad": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+   "nif": "A48265169",
+   "categoria": "Otra información relevante",
+   "titulo": "La Sociedad comunica la fecha de presentación de sus resultados correspondientes al tercer trimestre de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b64c13f6b-f14e-4b91-a559-73169fbeabc4%7d",
+   "ticker": "BBVA",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "e3ff3d84-99d2-4184-9772-3c56226b9f94",
    "tipo": "OIR",
