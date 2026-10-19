@@ -1,4 +1,4 @@
-"""Manda a Buffer los posts para X, LinkedIn y TikTok que la rutina nocturna deja en cola/ de la rama youtube-cola
+"""Manda a Buffer los posts para X, LinkedIn, TikTok e Instagram que la rutina nocturna deja en cola/ de la rama youtube-cola
 (lo usa .github/workflows/buffer.yml).
 
 Cada post es un archivo cola/<slug>/post-x.txt (X) o cola/<slug>/post-linkedin.txt (LinkedIn).
@@ -24,6 +24,8 @@ Variables del repo (opcionales, Settings > Secrets and variables > Actions > Var
 Secreto opcional BUFFER_API_KEY_ES: clave de una segunda cuenta de Buffer solo para España (el plan gratis
 admite 3 canales por cuenta). Si existe, cola-es/ usa esa cuenta; si no, la de Chile. Un canal de esa cuenta
 cuyo nombre diga "chile" (p. ej. el TikTok aiaccioneschile) es de Chile y lo usa cola/.
+Secreto opcional BUFFER_API_KEY_ES2: tercera cuenta de Buffer, también solo de España (Instagram aiacciones.espana).
+Instagram: cola-es/<slug>-short/post-instagram.txt, junto al video.mp4 del Short; se publica como Reel.
 España: `programar cola-es` manda los posts de cola-es/ solo a canales cuyo nombre diga "espana"/"españa"
 (hoy, la página de LinkedIn); si no hay canal de España para esa red, el post espera. Con dos páginas
 de LinkedIn conectadas, Chile usa la que se llama "chile".
@@ -89,7 +91,12 @@ REDES = {
     "tiktok": {"nombre": "TikTok", "archivo": "post-tiktok.txt", "registro": "buffer-tiktok.json",
                "servicios": ("tiktok",), "variable": "BUFFER_CANAL_TIKTOK", "limite": 2200,
                "largo": len, "obligatoria": False, "video": True},
+    "instagram": {"nombre": "Instagram", "archivo": "post-instagram.txt", "registro": "buffer-instagram.json",
+                  "servicios": ("instagram",), "variable": "BUFFER_CANAL_INSTAGRAM", "limite": 2200,
+                  "largo": len, "obligatoria": False, "video": True,
+                  "metadata": "{instagram: {type: reel, shouldShareToFeed: true}}"},
 }
+CLAVES_ES = ("BUFFER_API_KEY_ES", "BUFFER_API_KEY_ES2")  # cuentas de Buffer solo de España
 
 
 def sin_tildes(t):
@@ -102,7 +109,7 @@ def es_de(c, pais):
     if "chile" in nombre:
         return pais == "chile"
     # el resto de la cuenta de Buffer de España es de España, aunque su nombre no lo diga (p. ej. @AIAccionesES)
-    if c.get("clave") == "BUFFER_API_KEY_ES":
+    if c.get("clave") in CLAVES_ES:
         return pais == "espana"
     return pais in nombre
 
@@ -141,6 +148,17 @@ def elegir_canal(red, lista, pais="chile"):
     return elegido[0]
 
 
+def canales_espana():
+    """Canales de España de sus propias cuentas de Buffer (BUFFER_API_KEY_ES y BUFFER_API_KEY_ES2)."""
+    global CLAVE
+    propios = []
+    for clave in CLAVES_ES:
+        if os.environ.get(clave):
+            CLAVE = clave
+            propios += [c for c in canales() if es_de(c, "espana")]
+    return propios
+
+
 def usar_clave(pais):
     global CLAVE
     CLAVE = "BUFFER_API_KEY_ES" if pais == "espana" and os.environ.get("BUFFER_API_KEY_ES") else "BUFFER_API_KEY"
@@ -163,7 +181,7 @@ def verificar():
     usar_clave("espana")
     if CLAVE != "BUFFER_API_KEY":
         print("España usa su propia cuenta de Buffer (BUFFER_API_KEY_ES):")
-        propios = [c for c in canales() if es_de(c, "espana")]
+        propios = canales_espana()
         for c in propios:
             print(f"- {c['service']}: {c.get('displayName') or c['name']} [{c['id']}] en {c['org']}")
         servicios = {c["service"].lower() for c in propios}
@@ -216,7 +234,7 @@ def programar(base):
     lista = canales_chile()
     usar_clave(pais)
     if CLAVE != "BUFFER_API_KEY":
-        propios = [c for c in canales() if es_de(c, "espana")]
+        propios = canales_espana()
         servicios = {c["service"].lower() for c in propios}
         lista = propios + [c for c in lista if c["service"].lower() not in servicios]
     fallas = []
@@ -245,6 +263,8 @@ def programar(base):
                 fallas.append(f"{slug} ({r['nombre']}): falta video.mp4 en el commit de la carpeta")
                 continue
             extra += ", assets: [{video: {url: %s, metadata: {thumbnailOffset: 1000}}}]" % json.dumps(url)
+        if r.get("metadata"):
+            extra += ", metadata: " + r["metadata"]
         resp = gql("mutation { createPost(input: {text: %s, channelId: %s, schedulingType: automatic, "
                    "mode: %s%s}) { ... on PostActionSuccess { post { id dueAt } } "
                    "... on MutationError { message } } }"
