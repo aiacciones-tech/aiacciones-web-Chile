@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-16T08:58Z",
+ "actualizado": "2026-10-19T08:05Z",
  "items": [
+  {
+   "id": "9f03f501-af9a-40fe-ba80-d392a8b511e9",
+   "tipo": "OIR",
+   "fecha": "2026-10-19 09:30",
+   "entidad": "ARCELORMITTAL, S.A.",
+   "nif": "N0181056C",
+   "categoria": "Otra información relevante",
+   "titulo": "Relación de operaciones con acciones propias efectuadas entre el 12 y el 16 de octubre de 2026, en el marco del programa de recompra de acciones anunciado el 30 de junio de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b9f03f501-af9a-40fe-ba80-d392a8b511e9%7d",
+   "ticker": "MTS",
+   "temas": []
+  },
   {
    "id": "130583b7-ae1a-47a7-ae14-af6a7e092d76",
    "tipo": "OIR",
@@ -10,7 +22,8 @@
    "categoria": "Programas de recompra de acciones, estabilización y autocartera",
    "titulo": "La Sociedad remite información relativa a la ejecución de su Programa de recompra de acciones propias.",
    "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b130583b7-ae1a-47a7-ae14-af6a7e092d76%7d",
-   "ticker": "CABK"
+   "ticker": "CABK",
+   "temas": []
   },
   {
    "id": "c651ca71-6c5d-4f5a-ba3d-241d4049a4a5",
@@ -21,7 +34,8 @@
    "categoria": "Sobre negocio y situación financiera",
    "titulo": "El consorcio del que forma parte Ferrovial ha sido seleccionado para desarrollar los carriles exprés de la I-285 East en Georgia (EE.UU.)",
    "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bc651ca71-6c5d-4f5a-ba3d-241d4049a4a5%7d",
-   "ticker": "FER"
+   "ticker": "FER",
+   "temas": []
   }
  ]
 }
