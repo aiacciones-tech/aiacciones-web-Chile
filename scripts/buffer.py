@@ -25,7 +25,8 @@ Secreto opcional BUFFER_API_KEY_ES: clave de una segunda cuenta de Buffer solo p
 admite 3 canales por cuenta). Si existe, cola-es/ usa esa cuenta; si no, la de Chile. Un canal de esa cuenta
 cuyo nombre diga "chile" (p. ej. el TikTok aiaccioneschile) es de Chile y lo usa cola/.
 Secreto opcional BUFFER_API_KEY_ES2: tercera cuenta de Buffer, también solo de España (Instagram aiacciones.espana).
-Instagram: cola-es/<slug>-short/post-instagram.txt, junto al video.mp4 del Short; se publica como Reel.
+Instagram: <cola>/<slug>/post-instagram.txt junto a video.mp4 (se publica como Reel) o a imagen.png (post en
+el feed, 1080x1350). Vale para cola/ (Chile) y cola-es/ (España).
 España: `programar cola-es` manda los posts de cola-es/ solo a canales cuyo nombre diga "espana"/"españa"
 (hoy, la página de LinkedIn); si no hay canal de España para esa red, el post espera. Con dos páginas
 de LinkedIn conectadas, Chile usa la que se llama "chile".
@@ -93,7 +94,7 @@ REDES = {
                "largo": len, "obligatoria": False, "video": True},
     "instagram": {"nombre": "Instagram", "archivo": "post-instagram.txt", "registro": "buffer-instagram.json",
                   "servicios": ("instagram",), "variable": "BUFFER_CANAL_INSTAGRAM", "limite": 2200,
-                  "largo": len, "obligatoria": False, "video": True,
+                  "largo": len, "obligatoria": False, "video": True, "imagen": True,
                   "metadata": "{instagram: {type: reel, shouldShareToFeed: true}}"},
 }
 CLAVES_ES = ("BUFFER_API_KEY_ES", "BUFFER_API_KEY_ES2")  # cuentas de Buffer solo de España
@@ -115,13 +116,15 @@ def es_de(c, pais):
 
 
 def canales_chile():
-    """Canales de la cuenta de Chile, más los de la cuenta de España cuyo nombre dice "chile"."""
+    """Canales de la cuenta de Chile, más los de las cuentas de España cuyo nombre dice "chile"."""
+    global CLAVE
     usar_clave("chile")
     lista = canales()
-    if os.environ.get("BUFFER_API_KEY_ES"):
-        usar_clave("espana")
-        lista += [c for c in canales() if es_de(c, "chile")]
-        usar_clave("chile")
+    for clave in CLAVES_ES:
+        if os.environ.get(clave):
+            CLAVE = clave
+            lista += [c for c in canales() if es_de(c, "chile")]
+    usar_clave("chile")
     return lista
 
 
@@ -178,6 +181,9 @@ def verificar():
     tt = elegir_canal("tiktok", lista)
     print(f"OK: TikTok como {tt.get('displayName') or tt['name']}." if tt
           else "TikTok todavía no está conectado en Buffer.")
+    ig = elegir_canal("instagram", lista)
+    print(f"OK: Instagram como {ig.get('displayName') or ig['name']}." if ig
+          else "Instagram de Chile todavía no está conectado en Buffer.")
     usar_clave("espana")
     if CLAVE != "BUFFER_API_KEY":
         print("España usa su propia cuenta de Buffer (BUFFER_API_KEY_ES):")
@@ -205,9 +211,9 @@ def texto_final(carpeta, archivo="post-x.txt"):
     return texto, privado
 
 
-def enlace_video(carpeta):
-    """Enlace público y directo al video.mp4 de la carpeta, fijado al commit que lo trae (no expira)."""
-    ruta = os.path.join(carpeta, "video.mp4")
+def enlace_video(carpeta, nombre="video.mp4"):
+    """Enlace público y directo al archivo de la carpeta, fijado al commit que lo trae (no expira)."""
+    ruta = os.path.join(carpeta, nombre)
     if not os.path.isfile(ruta):
         return None
     commit = subprocess.run(["git", "log", "-1", "--format=%H", "--", ruta],
@@ -257,13 +263,18 @@ def programar(base):
         CLAVE = canal["clave"]
         modo_post = "borrador" if privado else modo
         extra = ", saveToDraft: true" if modo_post == "borrador" else ""
-        if r.get("video"):
+        imagen = r.get("imagen") and enlace_video(carpeta, "imagen.png")
+        if imagen:
+            # Instagram con imagen.png: post en el feed en vez de Reel
+            extra += (", assets: [{image: {url: %s}}], metadata: {instagram: {type: post, shouldShareToFeed: true}}"
+                      % json.dumps(imagen))
+        elif r.get("video"):
             url = enlace_video(carpeta)
             if not url:
                 fallas.append(f"{slug} ({r['nombre']}): falta video.mp4 en el commit de la carpeta")
                 continue
             extra += ", assets: [{video: {url: %s, metadata: {thumbnailOffset: 1000}}}]" % json.dumps(url)
-        if r.get("metadata"):
+        if r.get("metadata") and not imagen:
             extra += ", metadata: " + r["metadata"]
         resp = gql("mutation { createPost(input: {text: %s, channelId: %s, schedulingType: automatic, "
                    "mode: %s%s}) { ... on PostActionSuccess { post { id dueAt } } "
