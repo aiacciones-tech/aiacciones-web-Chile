@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-20T06:08Z",
+ "actualizado": "2026-10-20T08:32Z",
  "items": [
+  {
+   "id": "8c2e4fb9-b57a-4469-9d28-3de9d0a35777",
+   "tipo": "OIR",
+   "fecha": "2026-10-20 10:05",
+   "entidad": "FLUIDRA, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Operaciones realizadas bajo el programa de recompra el 15 de octubre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b8c2e4fb9-b57a-4469-9d28-3de9d0a35777%7d",
+   "ticker": "FDR",
+   "temas": []
+  },
   {
    "id": "88399a3c-77ff-4459-96cf-611da7b05d54",
    "tipo": "OIR",
