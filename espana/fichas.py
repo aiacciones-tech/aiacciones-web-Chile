@@ -555,54 +555,58 @@ FICHAS = [
      'nombre': 'Enagás',
      'ticker': 'ENG',
      'sector': 'Gas · red de transporte regulada',
-     'lede': 'Gestor técnico del sistema gasista español y dueño de la red troncal de gasoductos, almacenamientos y plantas de regasificación. '
-             'Tiene participaciones internacionales (TAP, Teréga) y promueve la red troncal de hidrógeno y el corredor H2Med.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio recurrente de 118,6 M€ (-8,6%), algo por encima del consenso (117 M€, Capitalbolsa; diferencia +1,4%, calculada). '
-                'El beneficio neto, 126,9 M€ (-27,9%), compara con un 1S 2025 que incluía 46,3 M€ de plusvalías y revalorizaciones.',
-     'precio': '16,80 €',
-     'precio_fecha': '14-oct-2026',
-     'multiplos': [('PER 12 meses', '15,1x'),
-                   ('PER forward', '16,5x'),
-                   ('EV/EBITDA', '11,0x'),
-                   ('Precio / valor contable', '1,87x'),
+     'lede': 'Gestor técnico del sistema gasista español y dueño de la red troncal de gasoductos, almacenamientos y plantas de regasificación. Tiene '
+             'participaciones internacionales (TAP, Teréga) y promueve la red troncal de hidrógeno y el corredor H2Med.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio recurrente de 195,8 M€ hasta septiembre (-5,4%); el del tercer trimestre, 77,2 M€, igual que en el 3T 2025 (calculado). El '
+                'beneficio neto, 204,1 M€ (-22,3%), compara con unos 9M 2025 que incluían 55,8 M€ de plusvalías por ventas de activos.',
+     'precio': '16,81 €',
+     'precio_fecha': '16-oct-2026',
+     'multiplos': [('PER 12 meses', '15,2x'),
+                   ('PER forward', '16,7x'),
+                   ('EV/EBITDA', '11,1x'),
+                   ('Precio / valor contable', '1,89x'),
                    ('Rentab. dividendo', '5,95%'),
                    ('FCF yield', '0,7%'),
-                   ('Capitalización', '~4.370 M€')],
-     'multiplos_nota': 'Con precio de 16,80 € al 14-oct-2026 (stockanalysis.com; EV/EBITDA, P/VC y FCF yield al 2-oct-2026). A cierre de 2023 '
-                       'y 2025 el PER era 11,6x y 10,1x (en 2024 hubo pérdidas por Tallgrass y GSP), el EV/EBITDA 14,1x, 9,8x y 11,5x en 2023, '
-                       '2024 y 2025, y el precio / valor contable 1,33x, 1,29x y 1,48x.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ingresos', '464,4', '+1,0%'),
-               ('EBITDA', '314,0', '-4,7%'),
-               ('EBIT', '162,7', '-6,9%'),
-               ('Beneficio recurrente', '118,6', '-8,6%'),
-               ('Beneficio neto', '126,9', '-27,9%'),
-               ('Beneficio neto 2T (calculado)', '70,0', '-36,8%'),
-               ('BPA (calculado)', '~0,49 €', '')],
-     'kpi': 'Margen EBITDA 67,6% (71,6% en 1S 2025; calculado). Ingresos regulados -30 M€ con el marco vigente; participadas 86,3 M€ de EBITDA '
-            '(+6,2 M€, sobre todo TAP). FFO 290,1 M€ (-1,3%, calculado), con 96,7 M€ de dividendos de participadas. Deuda neta 2.305 M€, 170 '
-            'M€ menos que en diciembre; deuda neta / EBITDA ~3,5x (calculado). Coste medio de la deuda 2%; 80% a tipo fijo; liquidez 2.626 M€.',
-     'guia': 'Objetivos 2026 reafirmados: beneficio recurrente ~235 M€ y EBITDA ~620 M€ (el semestre ya suma el 50% y el 51%, calculado), '
-             'inversión de 225 M€ y deuda neta de ~2.400 M€. Se mantiene la política de dividendo de 1 € por acción. Compra del 31,5% de '
-             'Teréga por 573 M€ (pendiente de autorizaciones) y del 20% de Saggas por 31 M€ (hasta el 92,5%). Solicitada la autorización de '
-             'los cuatro tramos iniciales de la red troncal de hidrógeno.',
-     'positivos': ['Los resultados superaron ligeramente al consenso y los objetivos de 2026 siguen en camino.',
-                   'La deuda neta bajó 170 M€ y su coste medio, al 2%.',
-                   'Crecimiento con Teréga, Saggas y la red troncal de hidrógeno.'],
-     'riesgos': ['Los ingresos regulados siguen bajando y el marco 2027-2032 está pendiente.',
-                 'El dividendo absorbe cerca del 90% del beneficio y el flujo libre es muy bajo.',
-                 'La compra de Teréga supone un desembolso de 573 M€.'],
-     'videos': [('4D2ENp-JfSE', 'Enagás resultados 1S 2026: beneficio recurrente -8,6%, algo mejor que el consenso | Deuda -170 M€'),
+                   ('Capitalización', '~4.380 M€')],
+     'multiplos_nota': 'Con precio de 16,81 € al cierre del 16-oct-2026, último dato de stockanalysis.com al 20-oct-2026 (el PER usa el beneficio de 12 '
+                       'meses hasta junio; con el de 12 meses a septiembre sería ~15,6x, calculado). A cierre de 2023 y 2025 el PER era 11,6x y 10,1x '
+                       '(en 2024 hubo pérdidas por Tallgrass y GSP), el EV/EBITDA 14,1x, 9,8x y 11,5x en 2023, 2024 y 2025, y el precio / valor contable '
+                       '1,33x, 1,29x y 1,48x.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos', '696,7', '-2,0%'),
+               ('EBITDA', '491,5', '-2,9%'),
+               ('EBIT', '263,9', '-4,1%'),
+               ('Beneficio recurrente', '195,8', '-5,4%'),
+               ('Beneficio neto', '204,1', '-22,3%'),
+               ('Beneficio recurrente 3T (calculado)', '77,2', '+0,1%'),
+               ('BPA (calculado)', '~0,78 €', '')],
+     'kpi': 'Margen EBITDA 70,5% (71,1% en 9M 2025; calculado). Ingresos regulados 663 M€ (-4,3%), con -45,1 M€ por el marco 2021-2026; participadas '
+            '145,8 M€ de EBITDA (+28,1 M€, por TAP y Teréga). FFO 439 M€ (-5,2%), con 127,1 M€ de dividendos de filiales. Deuda neta 2.979 M€, 504 M€ '
+            'más que en diciembre, en parte por la compra del 31,5% de Teréga (573 M€); deuda neta / EBITDA ~4,5x (calculado). Coste medio de la deuda '
+            '2,1%; más del 80% a tipo fijo; vida media 3,9 años.',
+     'guia': 'Objetivos 2026 reiterados: beneficio recurrente ~235 M€ y EBITDA ~620 M€ (los nueve meses ya suman el 83% y el 79%, calculado); los '
+             'ingresos regulados de copex se reconocen sobre todo en el cuarto trimestre. Dividendo de 1 € por acción. Acuerdo con Osaka Gas para '
+             'comprar otro 20% de Saggas por 31 M€. Marco 2027-2032: la CNMC aprobó el 18-sep-2026 una tasa de retribución financiera del 6,46% para '
+             'transporte y regasificación.',
+     'positivos': ['El beneficio recurrente del tercer trimestre se mantuvo y los objetivos de 2026 siguen en camino.',
+                   'Las participadas aportan 28,1 M€ más de EBITDA, con TAP y Teréga.',
+                   'El coste medio de la deuda bajó al 2,1%.'],
+     'riesgos': ['Los ingresos regulados siguen bajando y el impacto del marco 2027-2032 no está cuantificado en las fuentes.',
+                 'La deuda neta subió 504 M€, hasta ~4,5 veces el EBITDA (calculado).',
+                 'El dividendo absorbe cerca del 90% del beneficio y el flujo libre es muy bajo.'],
+     'videos': [('vn94fMBvfO8', 'Enagás resultados 3T 2026: beneficio recurrente -5,4%, el del 3T estable | Deuda 2.979 M€ con Teréga'),
+                ('ynVGjV7uLis', 'Enagás 3T 2026 en 60 segundos (Short)'),
+                ('4D2ENp-JfSE', 'Enagás resultados 1S 2026: beneficio recurrente -8,6%, algo mejor que el consenso | Deuda -170 M€'),
                 ('_jFDsjwBsQw', 'Enagás 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-20',
+     'proximo': '2027-02-17',
      'proximo_estimado': True,
-     'fuentes': 'Enagás, nota de prensa de resultados del primer semestre 2026 (CNMV y enagas.es, 22-jul-2026); Enagás, nota CNMV 1T2026 '
-                '(21-abr-2026) y objetivos 2026 (feb-2026); Capitalbolsa e Investing.com (consenso, 22-jul-2026); Estrategias de Inversión, '
-                'Benzinga e Hispanidad (detalle, 22-jul-2026); stockanalysis.com (precio y múltiplos, 2 y 14-oct-2026).',
-     'fuentes_corto': 'Capitalbolsa, Investing.com, Estrategias de Inversión, Benzinga y stockanalysis.com',
-     'elaborado': '16-oct-2026, 14:00'},
+     'fuentes': 'Enagás, resultados del tercer trimestre 2026 (CNMV, 20-oct-2026), recogidos por Bolsamanía, Europa Press (Infobae, El Español), '
+                'Estrategias de Inversión y Smartkarma (20-oct-2026); Enagás, resultados 1S26 (22-jul-2026) y 2025 (feb-2026); CNMC (circulares '
+                '2027-2032, 18-sep-2026); stockanalysis.com (precio y múltiplos, oct-2026).',
+     'fuentes_corto': 'Bolsamanía, Europa Press, Estrategias de Inversión, Smartkarma, CNMC y stockanalysis.com',
+     'elaborado': '20-oct-2026, 10:15'},
     {'id': 'ferrovial',
      'nombre': 'Ferrovial',
      'ticker': 'FER',
