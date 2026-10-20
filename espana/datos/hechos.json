@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-20T14:15Z",
+ "actualizado": "2026-10-20T17:37Z",
  "items": [
+  {
+   "id": "c85a8438-0196-46f7-a141-e23193aecd74",
+   "tipo": "OIR",
+   "fecha": "2026-10-20 18:31",
+   "entidad": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+   "nif": "A48265169",
+   "categoria": "Sobre calificaciones crediticias",
+   "titulo": "La Sociedad comunica subida de rating de Morningstar DBRS (DBRS).",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bc85a8438-0196-46f7-a141-e23193aecd74%7d",
+   "ticker": "BBVA",
+   "temas": []
+  },
   {
    "id": "2777be38-73aa-4762-a1f7-92062965213e",
    "tipo": "OIR",
