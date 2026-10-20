@@ -4,6 +4,7 @@ Cada video es una carpeta cola/<slug>/ con video.mp4, miniatura.png (opcional) y
   {"title": "...", "description": "...", "tags": [...], "privacy": "private"}
 En la descripción, {video:<otro-slug>} se reemplaza por el enlace del video ya subido de cola/<otro-slug>/
 (sirve para que el Short de cola/<slug>-short/ enlace al video largo de cola/<slug>/, que se sube antes).
+Todo video de cola/ lleva enlace a la web: si la descripción no menciona aiacciones.cl, se agrega al final.
 Al subir escribe cola/<slug>/resultado.json con el ID y el enlace, y no vuelve a subir esa carpeta.
 
   python3 scripts/youtube.py verificar   # solo prueba las credenciales y muestra el canal
@@ -60,9 +61,20 @@ def enlazar(texto, base):
     return re.sub(r"\{video:([\w.-]+)\}", url, texto)
 
 
+WEB = "https://aiacciones.cl/"
+
+
+def con_web(texto, base):
+    """Asegura el enlace a la web en los videos de Chile (cola/); cola-es/ tiene su propio sitio."""
+    if os.path.basename(os.path.normpath(base)) != "cola" or "aiacciones.cl" in texto:
+        return texto
+    return texto.rstrip() + f"\n\nFichas y análisis de acciones chilenas: {WEB}"
+
+
 def subir_uno(t, carpeta):
     meta = json.load(open(os.path.join(carpeta, "meta.json"), encoding="utf-8"))
-    meta["description"] = enlazar(meta.get("description", ""), os.path.dirname(carpeta))
+    meta["description"] = con_web(enlazar(meta.get("description", ""), os.path.dirname(carpeta)),
+                                  os.path.dirname(carpeta))
     video = os.path.join(carpeta, "video.mp4")
     cuerpo = json.dumps({
         "snippet": {
