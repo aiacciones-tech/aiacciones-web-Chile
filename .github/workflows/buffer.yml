@@ -3,6 +3,7 @@
 # de la rama youtube-cola, y los de España en cola-es/ (solo a canales de España, p. ej. la página de LinkedIn).
 # Clave: Settings > Secrets and variables > Actions > Secrets (BUFFER_API_KEY).
 # Modo: variable BUFFER_MODO = ahora (por defecto, publica en X al tiro), cola (próximo horario de Buffer) o borrador.
+# Los posts de Chile mandados de noche (21:00 en adelante) salen a las 8:00 de Chile; variable BUFFER_HORA = otra hora o "no".
 # También corre cuando termina "Subir videos a YouTube", para los posts que esperaban el enlace del video.
 # "Run workflow" con modo=verificar solo prueba la clave y muestra los canales.
 name: Mandar posts de X a Buffer
@@ -29,6 +30,7 @@ jobs:
       BUFFER_API_KEY_ES: ${{ secrets.BUFFER_API_KEY_ES }}
       BUFFER_API_KEY_ES2: ${{ secrets.BUFFER_API_KEY_ES2 }}
       BUFFER_MODO: ${{ vars.BUFFER_MODO }}
+      BUFFER_HORA: ${{ vars.BUFFER_HORA }}
       BUFFER_CANAL: ${{ vars.BUFFER_CANAL }}
       BUFFER_CANAL_LINKEDIN: ${{ vars.BUFFER_CANAL_LINKEDIN }}
       BUFFER_CANAL_TIKTOK: ${{ vars.BUFFER_CANAL_TIKTOK }}
