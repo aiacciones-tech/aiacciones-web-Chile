@@ -8,6 +8,7 @@ Al hacer push a main con cambios en espana/web/, .github/workflows/deploy-espana
 import datetime as dt
 import html
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -83,8 +84,15 @@ if CMP_GOOGLE:  # la plataforma de Google decide el consentimiento: no se lee el
     GA_HEAD = GA_HEAD.split("try{")[0] + GA_HEAD.split("catch(e){}")[1]
 
 
-def pagina(ruta, titulo, descripcion, cuerpo, actual=None):
-    """ruta: carpeta relativa a web/ ('' = portada)."""
+LD_PORTADA = {"@context": "https://schema.org", "@graph": [
+    {"@type": "Organization", "@id": f"{DOMINIO}/#org", "name": SITIO, "url": f"{DOMINIO}/",
+     "logo": f"{DOMINIO}/assets/logo-aiacciones-espana.png", "sameAs": [YT_CANAL]},
+    {"@type": "WebSite", "@id": f"{DOMINIO}/#web", "name": SITIO, "url": f"{DOMINIO}/", "inLanguage": "es-ES",
+     "publisher": {"@id": f"{DOMINIO}/#org"}}]}
+
+
+def pagina(ruta, titulo, descripcion, cuerpo, actual=None, imagen=None, ld=None):
+    """ruta: carpeta relativa a web/ ('' = portada). imagen: URL para compartir en redes; ld: datos estructurados (schema.org)."""
     nivel = len([p for p in ruta.split("/") if p])
     r = "../" * nivel
     nav = "".join(f'<a href="{r}{h}"{" aria-current=\"page\"" if t == actual else ""}>{t}</a>' for h, t in NAV)
@@ -92,7 +100,10 @@ def pagina(ruta, titulo, descripcion, cuerpo, actual=None):
     if DOMINIO:
         url = f"{DOMINIO}/{ruta + '/' if ruta else ''}"
         canon = (f'<link rel="canonical" href="{url}">\n<meta property="og:url" content="{url}">\n'
-                 f'<meta property="og:image" content="{DOMINIO}/assets/logo-aiacciones-espana.png">\n')
+                 f'<meta property="og:image" content="{imagen or DOMINIO + "/assets/logo-aiacciones-espana.png"}">\n'
+                 f'<meta name="twitter:card" content="{"summary_large_image" if imagen else "summary"}">\n')
+        if ld:
+            canon += f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n'
     titulo_full = titulo if titulo == SITIO else f"{titulo} · {SITIO}"
     return f"""<!doctype html>
 <html lang="es-ES">
@@ -202,7 +213,8 @@ def ficha(f):
 {hechos_ficha(f, NOMBRES)}{enlace_comparador(f)}{enlace_educacion(f)}<section><h2 class="h-sec">Fuentes</h2><p class="small">{e(f['fuentes'])} Las cifras marcadas como calculadas son cálculos propios.</p></section>
 {aviso_ficha(f)}"""
     desc = f"{f['nombre']} ({f['ticker']}): resultados del {f['periodo_largo']}, guía, valoración y vídeo. {f['titular'][:110]}"
-    return pagina(f"empresas/{f['id']}", f"{f['nombre']} ({f['ticker']}) resultados {f['periodo']}", desc, cuerpo, "Empresas")
+    return pagina(f"empresas/{f['id']}", f"{f['nombre']} ({f['ticker']}) resultados {f['periodo']}", desc, cuerpo, "Empresas",
+                  imagen=f"https://i.ytimg.com/vi/{f['videos'][0][0]}/hqdefault.jpg" if f["videos"] else None)
 
 
 def tarjeta(f, r):
@@ -265,7 +277,7 @@ def portada(cal):
 <a class="sec-link" href="calendario/index.html"><span class="sec-t">Calendario</span><span class="sec-d">Fechas de resultados del {e(cal['trimestre'])} de las empresas del IBEX 35, confirmadas y estimadas.</span></a>
 <a class="sec-link" href="metodologia/index.html"><span class="sec-t">Metodología</span><span class="sec-d">De dónde salen las cifras, cómo calculamos los múltiplos y qué no hacemos.</span></a>
 </div></section>"""
-    return pagina("", SITIO, "Resultados de las empresas del IBEX 35 explicados en vídeo: ingresos, beneficio, márgenes, deuda, guía y múltiplos, con fuentes de la CNMV.", cuerpo)
+    return pagina("", SITIO, "Resultados de las empresas del IBEX 35 explicados en vídeo: ingresos, beneficio, márgenes, deuda, guía y múltiplos, con fuentes de la CNMV.", cuerpo, ld=LD_PORTADA)
 
 
 def empresas():
@@ -632,6 +644,9 @@ EXTRA_CSS = """
 def escribir(ruta, contenido):
     p = WEB / ruta
     p.parent.mkdir(parents=True, exist_ok=True)
+    if ruta.endswith(".html"):  # enlaces internos a la carpeta, igual que la URL canónica
+        contenido = re.sub(r'href="((?:\.\./)*)((?:[\w-]+/)*)index\.html(#[^"]*)?"',
+                           lambda m: f'href="{(m[1] + m[2]) or "./"}{m[3] or ""}"', contenido)
     p.write_text(contenido, encoding="utf-8")
 
 
@@ -664,7 +679,7 @@ def main():
     escribir("ads.txt", f"google.com, {ADSENSE_ID.removeprefix('ca-')}, DIRECT, f08c47fec0942fa0\n")
     if DOMINIO:
         rutas = ["", "empresas/", "hechos/", "comparadores/", "educacion/", "educacion/valoracion/"] + [f"educacion/{x['id']}/" for x in SECTORES] + [f"comparadores/{c['id']}/" for c in COMPARADORES] + ["calendario/", "metodologia/", "quienes-somos/", "aviso-legal/", "privacidad/", "contacto/"] + [f"empresas/{f['id']}/" for f in FICHAS]
-        urls = "".join(f"<url><loc>{DOMINIO}/{r}</loc><lastmod>{HOY.isoformat()}</lastmod></url>" for r in rutas)
+        urls = "".join(f"<url><loc>{DOMINIO}/{r}</loc></url>" for r in rutas)
         escribir("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
         escribir("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {DOMINIO}/sitemap.xml\n")
     else:
