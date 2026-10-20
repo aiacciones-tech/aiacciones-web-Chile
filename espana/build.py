@@ -21,6 +21,12 @@ CHILE_CSS = AQUI.parent / "web" / "assets" / "styles.css"
 # Google Analytics 4 (Daniel, 13-oct-2026) con el modo de consentimiento de Google (16-oct-2026): la etiqueta está en todas las
 # páginas para que Google la detecte, pero sin cookies (analytics_storage denegado) hasta que el visitante pulsa «Aceptar».
 GA_ID = "G-YBK7SY7FN2"
+# Google AdSense (misma cuenta que aiacciones.cl). Se escribe ads.txt y la etiqueta va en todas las páginas para la revisión del sitio.
+ADSENSE_ID = "ca-pub-5018554010876151"
+# En España los anuncios exigen una plataforma de consentimiento certificada por Google (TCF). Cuando el mensaje de
+# «Reglamentos europeos» esté publicado en AdSense (Privacidad y mensajes), poner True: se quita nuestro aviso de cookies,
+# el de Google pide el consentimiento (también el de Analytics, por el modo de consentimiento) y «Configurar cookies» lo reabre.
+CMP_GOOGLE = False
 
 # Rellenar cuando estén: dominio (sin barra final) y datos del titular que exige la LSSI (art. 10).
 DOMINIO = "https://aiacciones.es"
@@ -69,9 +75,12 @@ GA_HEAD = (
     "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
     "gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});"
     "try{var c=JSON.parse(localStorage.getItem('aiacc-es-cookies'));if(c&&c.c==='si'&&Date.now()-c.t<31536e6)"
-    "gtag('consent','update',{analytics_storage:'granted'});}catch(e){}"
+    "gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});}catch(e){}"
     f"gtag('js',new Date());gtag('config','{GA_ID}');</script>\n"
-    f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>\n')
+    f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>\n'
+    f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_ID}" crossorigin="anonymous"></script>\n')
+if CMP_GOOGLE:  # la plataforma de Google decide el consentimiento: no se lee el nuestro
+    GA_HEAD = GA_HEAD.split("try{")[0] + GA_HEAD.split("catch(e){}")[1]
 
 
 def pagina(ruta, titulo, descripcion, cuerpo, actual=None):
@@ -125,11 +134,11 @@ def pagina(ruta, titulo, descripcion, cuerpo, actual=None):
     </div>
   </div>
 </footer>
-<div class="consent" id="cookie-bar" data-ga="{GA_ID}" role="dialog" aria-live="polite" aria-label="Aviso de cookies" hidden>
-  <p>Usamos cookies de Google Analytics para medir las visitas, solo si las aceptas. Más información en <a href="{r}privacidad/index.html#cookies">Privacidad y cookies</a>.</p>
+{"" if CMP_GOOGLE else f'''<div class="consent" id="cookie-bar" data-ga="{GA_ID}" role="dialog" aria-live="polite" aria-label="Aviso de cookies" hidden>
+  <p>Usamos cookies de Google para medir las visitas (Analytics) y para la publicidad (AdSense), solo si las aceptas. Más información en <a href="{r}privacidad/index.html#cookies">Privacidad y cookies</a>.</p>
   <div class="consent-btns"><button class="btn" type="button" data-cookies="no">Rechazar</button><button class="btn" type="button" data-cookies="si">Aceptar</button></div>
 </div>
-<script src="{r}assets/app.js" defer></script>
+'''}<script src="{r}assets/app.js" defer></script>
 </body>
 </html>
 """
@@ -534,14 +543,18 @@ def privacidad():
 <h2>Otros datos</h2>
 <p>Este sitio no tiene registro de usuarios. El servidor de alojamiento puede guardar registros técnicos de acceso (como la dirección IP) por seguridad, durante el tiempo que fije el proveedor.</p>
 <h2 id="cookies">Cookies</h2>
-<p>Este sitio solo usa cookies de analítica, y únicamente si las aceptas en el aviso que aparece en tu primera visita. Si las rechazas o no eliges, no se carga ningún script de Google y la web funciona igual.</p>
+<p>Este sitio usa cookies de analítica (Google Analytics) y de publicidad (Google AdSense), y únicamente si las aceptas en el aviso que aparece en tu primera visita. Si las rechazas o no eliges, la web funciona igual.</p>
 <div class="table-scroll"><table class="data"><thead><tr><th scope="col" class="txt">Cookie</th><th scope="col" class="txt">Proveedor</th><th scope="col" class="txt">Finalidad</th><th scope="col" class="txt">Duración</th></tr></thead><tbody>
 <tr><td class="txt">_ga</td><td class="txt">Google Analytics (Google Ireland Ltd.)</td><td class="txt">Distinguir visitantes de forma anónima para contar visitas</td><td class="txt">2 años</td></tr>
 <tr><td class="txt">_ga_{GA_ID[2:]}</td><td class="txt">Google Analytics (Google Ireland Ltd.)</td><td class="txt">Mantener el estado de la sesión</td><td class="txt">2 años</td></tr>
+<tr><td class="txt">__gads, __gpi, __eoi</td><td class="txt">Google AdSense (Google Ireland Ltd.)</td><td class="txt">Mostrar anuncios, limitar cuántas veces ves el mismo y medir su rendimiento</td><td class="txt">Hasta 13 meses</td></tr>
+<tr><td class="txt">IDE, test_cookie (dominio doubleclick.net)</td><td class="txt">Google AdSense (Google Ireland Ltd.)</td><td class="txt">Mostrar anuncios personalizados según tus visitas a este y otros sitios</td><td class="txt">Hasta 13 meses</td></tr>
 </tbody></table></div>
 <p>Con Google Analytics 4 medimos de forma agregada qué páginas se visitan, desde qué país y tipo de dispositivo, y cómo llegaste al sitio. Google Analytics 4 no registra ni guarda tu dirección IP. Base legal: tu consentimiento (art. 6.1.a del RGPD y art. 22.2 de la LSSI). Google puede tratar datos en Estados Unidos, amparado en el Marco de Privacidad de Datos UE-EE. UU. Más información en la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad de Google</a>.</p>
-<p>Usamos el modo de consentimiento de Google: mientras no aceptes, la etiqueta de Google Analytics no guarda ni lee cookies en tu dispositivo y solo envía avisos técnicos sin identificadores (por ejemplo, que se ha visto una página), que Google usa de forma agregada. Si aceptas, se activan las cookies de la tabla.</p>
-<p>Tu elección se guarda en tu navegador (almacenamiento local, no es una cookie) y te la volvemos a pedir pasados 12 meses. Puedes cambiarla cuando quieras con el botón «Configurar cookies» del pie de página; si retiras el consentimiento, borramos las cookies de Google Analytics de este sitio.</p>
+<h3>Publicidad</h3>
+<p>Mostramos anuncios de Google AdSense. Proveedores externos, incluido Google, usan cookies para mostrar anuncios basados en tus visitas anteriores a este y a otros sitios web. Las cookies de publicidad permiten a Google y a sus socios mostrarte anuncios según esas visitas. Solo se usan si das tu consentimiento; si no, Google puede mostrar anuncios no personalizados, que no usan tu historial de navegación. Puedes desactivar la publicidad personalizada en la <a href="https://adssettings.google.com" target="_blank" rel="noopener">configuración de anuncios de Google</a> y ver <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">cómo usa Google los datos de los sitios que usan sus servicios</a>. Base legal: tu consentimiento (art. 6.1.a del RGPD y art. 22.2 de la LSSI).</p>
+<p>Usamos el modo de consentimiento de Google: mientras no aceptes, las etiquetas de Google no guardan ni leen cookies en tu dispositivo y solo envían avisos técnicos sin identificadores (por ejemplo, que se ha visto una página), que Google usa de forma agregada. Si aceptas, se activan las cookies de la tabla.</p>
+{"<p>El aviso de consentimiento lo gestiona la plataforma de Google, certificada para el marco de transparencia y consentimiento de IAB Europe (TCF). Puedes cambiar tu elección cuando quieras con el botón «Configurar cookies» del pie de página.</p>" if CMP_GOOGLE else "<p>Tu elección se guarda en tu navegador (almacenamiento local, no es una cookie) y te la volvemos a pedir pasados 12 meses. Puedes cambiarla cuando quieras con el botón «Configurar cookies» del pie de página; si retiras el consentimiento, borramos las cookies de Google de este sitio.</p>"}
 <p>Los vídeos se enlazan a YouTube sin incrustarlos: solo al abrir un vídeo pasas a YouTube, que aplica su propia política de privacidad.</p>
 </section>"""
     return pagina("privacidad", "Privacidad y cookies", "Política de privacidad y cookies de AIAcciones España.", cuerpo)
@@ -648,6 +661,7 @@ def main():
     escribir("contacto/index.html", contacto())
     for nombre, destino in (("enviar.php", "enviar.php"), ("app.js", "assets/app.js")):
         shutil.copyfile(AQUI / "extra" / nombre, WEB / destino)
+    escribir("ads.txt", f"google.com, {ADSENSE_ID.removeprefix('ca-')}, DIRECT, f08c47fec0942fa0\n")
     if DOMINIO:
         rutas = ["", "empresas/", "hechos/", "comparadores/", "educacion/", "educacion/valoracion/"] + [f"educacion/{x['id']}/" for x in SECTORES] + [f"comparadores/{c['id']}/" for c in COMPARADORES] + ["calendario/", "metodologia/", "quienes-somos/", "aviso-legal/", "privacidad/", "contacto/"] + [f"empresas/{f['id']}/" for f in FICHAS]
         urls = "".join(f"<url><loc>{DOMINIO}/{r}</loc><lastmod>{HOY.isoformat()}</lastmod></url>" for r in rutas)
