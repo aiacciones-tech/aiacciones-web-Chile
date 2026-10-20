@@ -17,6 +17,9 @@ Secreto del repo: BUFFER_API_KEY (Buffer > Settings > API).
 Variables del repo (opcionales, Settings > Secrets and variables > Actions > Variables):
   BUFFER_MODO   ahora (por defecto: se publica en X al tiro), cola (en el próximo horario
                 de la cola de Buffer) o borrador (queda en Borradores y Daniel lo aprueba)
+  BUFFER_HORA   hora de Chile a la que salen los posts de Chile mandados de noche (por defecto 08:00).
+                Un post mandado entre las 21:00 y esa hora se programa para esa hora; de día sale al tiro.
+                "no" lo desactiva (todo sale al tiro).
   BUFFER_CANAL           ID del canal de X, si la cuenta tiene más de uno
   BUFFER_CANAL_LINKEDIN  ID del canal de LinkedIn, si hay más de uno (perfil y página)
   BUFFER_CANAL_TIKTOK    ID del canal de TikTok, si hay más de uno
@@ -33,7 +36,8 @@ de LinkedIn conectadas, Chile usa la que se llama "chile".
 Solo usa la biblioteca estándar de Python.
 """
 import json, os, re, subprocess, sys, unicodedata, urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, time, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 API = "https://api.buffer.com"
 MODOS = {"ahora": "shareNow", "cola": "addToQueue", "borrador": "addToQueue"}
@@ -175,6 +179,9 @@ def verificar():
     modo = os.environ.get("BUFFER_MODO") or "ahora"
     x = elegir_canal("x", lista)
     print(f"OK: la clave funciona y los posts irán a X como @{x['name']} en modo {modo}.")
+    hora = os.environ.get("BUFFER_HORA") or "08:00"
+    print("Posts de noche: salen al tiro." if hora.strip().lower() == "no"
+          else f"Posts mandados entre las 21:00 y las {hora} (hora de Chile) salen a las {hora}.")
     li = elegir_canal("linkedin", lista)
     print(f"OK: LinkedIn como {li.get('displayName') or li['name']}." if li
           else "LinkedIn todavía no está conectado en Buffer.")
@@ -195,6 +202,27 @@ def verificar():
     for red in REDES:
         es = elegir_canal(red, lista, "espana")
         print(f"España, {REDES[red]['nombre']}: " + (es.get("displayName") or es["name"] if es else "sin canal"))
+
+
+CHILE = ZoneInfo("America/Santiago")
+NOCHE = 21  # desde las 21:00 de Chile casi nadie ve los posts: esperan a la mañana
+
+
+def hora_manana(ahora=None):
+    """dueAt (ISO UTC) de la próxima BUFFER_HORA de Chile si ahora es de noche, o None si el post sale al tiro."""
+    hora = (os.environ.get("BUFFER_HORA") or "08:00").strip().lower()
+    if hora == "no":
+        return None
+    try:
+        h, m = (int(x) for x in hora.split(":"))
+        manana = time(h, m)
+    except ValueError:
+        sys.exit(f"BUFFER_HORA debe ser HH:MM (p. ej. 08:00) o no, no {hora!r}.")
+    ahora = (ahora or datetime.now(timezone.utc)).astimezone(CHILE)
+    if manana <= ahora.time() < time(NOCHE):
+        return None
+    dia = ahora.date() + timedelta(days=ahora.time() >= time(NOCHE))
+    return datetime.combine(dia, manana, CHILE).astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
 
 def texto_final(carpeta, archivo="post-x.txt"):
@@ -279,10 +307,15 @@ def programar(base):
             extra += ", assets: [{video: {url: %s, metadata: {thumbnailOffset: 1000}}}]" % json.dumps(url)
         if r.get("metadata") and not imagen:
             extra += ", metadata: " + r["metadata"]
+        modo_api = MODOS[modo_post]
+        manana = pais == "chile" and modo_post == "ahora" and hora_manana()
+        if manana:
+            # de noche: el post de Chile queda programado para la mañana
+            modo_api, extra = "customScheduled", extra + f", dueAt: {json.dumps(manana)}"
         resp = gql("mutation { createPost(input: {text: %s, channelId: %s, schedulingType: automatic, "
                    "mode: %s%s}) { ... on PostActionSuccess { post { id dueAt } } "
                    "... on MutationError { message } } }"
-                   % (json.dumps(texto, ensure_ascii=False), json.dumps(canal["id"]), MODOS[modo_post],
+                   % (json.dumps(texto, ensure_ascii=False), json.dumps(canal["id"]), modo_api,
                       extra))["createPost"]
         if "post" not in resp:
             fallas.append(f"{slug} ({r['nombre']}): {resp.get('message')}")
@@ -292,7 +325,8 @@ def programar(base):
                    "fecha": datetime.now(timezone.utc).isoformat(timespec="seconds")},
                   open(os.path.join(carpeta, r["registro"]), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         nota = " (video privado: quedó en Borradores)" if privado and modo != "borrador" else ""
-        print(f"OK {slug}: post {resp['post']['id']} en {r['nombre']} ({modo_post}, {largo} caracteres){nota}.")
+        cuando = f", sale {resp['post'].get('dueAt')}" if manana else ""
+        print(f"OK {slug}: post {resp['post']['id']} en {r['nombre']} ({modo_post}{cuando}, {largo} caracteres){nota}.")
     if fallas:
         sys.exit("No se mandaron:\n" + "\n".join(fallas))
 
