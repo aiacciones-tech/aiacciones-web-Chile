@@ -255,6 +255,9 @@ def programar(base):
         if texto is None:
             print(f"{slug} ({r['nombre']}): {privado}; queda pendiente.")
             continue
+        if pais == "chile" and r.get("video") and "aiacciones.cl" not in texto:
+            # todo post de Chile lleva la web (en TikTok/Instagram no es clicable, pero se ve)
+            texto += "\n\nFicha completa en aiacciones.cl"
         largo = r["largo"](texto)
         if largo > r["limite"]:
             fallas.append(f"{slug}: {largo} caracteres para {r['nombre']} (máximo {r['limite']})")
