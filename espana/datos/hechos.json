@@ -1,6 +1,20 @@
 {
- "actualizado": "2026-10-19T16:11Z",
+ "actualizado": "2026-10-20T06:08Z",
  "items": [
+  {
+   "id": "88399a3c-77ff-4459-96cf-611da7b05d54",
+   "tipo": "OIR",
+   "fecha": "2026-10-20 08:02",
+   "entidad": "ENAGAS, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Resultados tercer trimestre 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b88399a3c-77ff-4459-96cf-611da7b05d54%7d",
+   "ticker": "ENG",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "5be5b87a-6507-4e20-95b4-f053a68f6013",
    "tipo": "OIR",
