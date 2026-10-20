@@ -38,11 +38,20 @@
   });
 })();
 
-// Aviso de cookies: Google Analytics solo se carga si el visitante pulsa «Aceptar» (RGPD/LSSI).
+// Aviso de cookies: las cookies de Google (Analytics y AdSense) solo se activan si el visitante pulsa «Aceptar» (RGPD/LSSI).
 // La elección se guarda en localStorage (no es una cookie) y se vuelve a pedir pasados 12 meses.
 (function () {
   var bar = document.getElementById("cookie-bar");
-  if (!bar) return;
+  if (!bar) {
+    // Sin aviso propio (CMP_GOOGLE en build.py): «Configurar cookies» reabre el mensaje de consentimiento de Google.
+    document.addEventListener("click", function (ev) {
+      if (!ev.target.closest('[data-cookies="config"]')) return;
+      window.googlefc = window.googlefc || {};
+      googlefc.callbackQueue = googlefc.callbackQueue || [];
+      googlefc.callbackQueue.push(function () { googlefc.showRevocationMessage(); });
+    });
+    return;
+  }
   var GA = bar.dataset.ga, KEY = "aiacc-es-cookies", YEAR = 365 * 24 * 3600 * 1000;
   var leer = function () {
     try { var v = JSON.parse(localStorage.getItem(KEY)); return v && Date.now() - v.t < YEAR ? v.c : null; } catch (e) { return null; }
@@ -50,13 +59,14 @@
   var guardar = function (c) { try { localStorage.setItem(KEY, JSON.stringify({ c: c, t: Date.now() })); } catch (e) {} };
   // La etiqueta de Google (con consentimiento denegado por defecto) está en el <head> de cada página; aquí solo se cambia el permiso.
   var consentir = function (si) {
-    if (window.gtag) gtag("consent", "update", { analytics_storage: si ? "granted" : "denied" });
+    var v = si ? "granted" : "denied";
+    if (window.gtag) gtag("consent", "update", { ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v });
   };
   var borrarGA = function () {
     var dom = location.hostname.replace(/^www\./, "");
     document.cookie.split(";").forEach(function (c) {
       var n = c.split("=")[0].trim();
-      if (n.indexOf("_ga") !== 0) return;
+      if (n.indexOf("_ga") !== 0 && !/^__(gads|gpi|eoi)$/.test(n)) return;
       [dom, "." + dom, ""].forEach(function (d) {
         document.cookie = n + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/" + (d ? "; domain=" + d : "");
       });
