@@ -1,6 +1,46 @@
 {
- "actualizado": "2026-10-21T15:11Z",
+ "actualizado": "2026-10-21T15:56Z",
  "items": [
+  {
+   "id": "d5c0b1dd-4b13-49b4-980a-bcf61e957c0e",
+   "tipo": "OIR",
+   "fecha": "2026-10-21 17:45",
+   "entidad": "TELEFONICA, S.A.",
+   "nif": "A28015865",
+   "categoria": "Sobre Gobierno corporativo",
+   "titulo": "Telefónica, S.A. informa sobre cambios en la composición de sus Comisiones.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bd5c0b1dd-4b13-49b4-980a-bcf61e957c0e%7d",
+   "ticker": "TEF",
+   "temas": []
+  },
+  {
+   "id": "0eb96e89-3742-454a-969d-c5f59be4155b",
+   "tipo": "OIR",
+   "fecha": "2026-10-21 17:42",
+   "entidad": "PUIG BRANDS, S.A.",
+   "nif": "A66674904",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Presentación sobre información financiera del Q3 2026 – actualización de ventas",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b0eb96e89-3742-454a-969d-c5f59be4155b%7d",
+   "ticker": "PUIG",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "06bc9655-7d60-4153-a993-2025dac7fb9d",
+   "tipo": "OIR",
+   "fecha": "2026-10-21 17:40",
+   "entidad": "PUIG BRANDS, S.A.",
+   "nif": "A66674904",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Nota de prensa sobre información financiera del Q3 2026 – actualización de ventas",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b06bc9655-7d60-4153-a993-2025dac7fb9d%7d",
+   "ticker": "PUIG",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "407e7d41-cfc0-4656-aee8-e83b6ea3aafc",
    "tipo": "OIR",
