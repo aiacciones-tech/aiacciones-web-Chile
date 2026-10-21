@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-21T11:44Z",
+ "actualizado": "2026-10-21T13:08Z",
  "items": [
+  {
+   "id": "9074c2c1-3a13-4c3d-b109-82cdfc56937b",
+   "tipo": "OIR",
+   "fecha": "2026-10-21 14:15",
+   "entidad": "MAPFRE, S.A.",
+   "nif": "A08055741",
+   "categoria": "Otra información relevante",
+   "titulo": "Anuncio webcast seguimiento de la actividad 9M 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b9074c2c1-3a13-4c3d-b109-82cdfc56937b%7d",
+   "ticker": "MAP",
+   "temas": []
+  },
   {
    "id": "c86fb030-75b3-4859-acb9-2211c871f55e",
    "tipo": "OIR",
