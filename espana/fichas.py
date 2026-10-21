@@ -736,52 +736,62 @@ FICHAS = [
      'lede': 'Grupo barcelonés de belleza premium que cotiza en la Bolsa de Madrid desde mayo de 2024. Tres de cada cuatro euros vienen de perfumes y '
              'moda (Rabanne, Carolina Herrera, Jean Paul Gaultier); el resto, de maquillaje (Charlotte Tilbury) y cuidado de la piel (Uriage, y ISDIN al '
              '50%).',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Ventas de 2.354 M€ (+2,4%; +4,4% comparable), con Asia Pacífico +20,9% y Maquillaje +9,1%. Beneficio neto ajustado de 260 M€ (+5,2%); '
-                'el atribuible, 263 M€ (-4,4%), por costes extraordinarios de transacciones. La deuda neta sube a 1.589 M€ (716 M€ en diciembre).',
-     'precio': '19,57 €',
-     'precio_fecha': '16-oct-2026',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026 (actualización de ventas)',
+     'titular': 'Ventas de 1.391 M€ en el tercer trimestre (+7,2%; +5,6% comparable, el mayor ritmo del año), con Maquillaje +16,1% y Cuidado de la piel '
+                '-0,8% comparable. En nueve meses, 3.745 M€ (+4,1%; +4,8% comparable). En el 3T Puig solo publica ventas: beneficio, márgenes y deuda '
+                'son los del 1S 2026.',
+     'precio': '19,59 €',
+     'precio_fecha': '21-oct-2026',
      'multiplos': [('PER 12 meses', '18,7x'),
                    ('PER forward', '16,8x'),
                    ('EV/EBITDA', '11,3x'),
                    ('Precio / valor contable', '2,69x'),
                    ('Rentab. dividendo', '2,15%'),
                    ('FCF yield', '5,4%'),
-                   ('Capitalización', '~11.024 M€')],
-     'multiplos_nota': 'Con precio de 19,57 € al 16-oct-2026 (stockanalysis.com). Puig cotiza desde mayo de 2024, así que solo hay dos cierres de año '
-                       'para comparar: a cierre de 2024 y 2025 el PER era 18,9x y 14,1x, el EV/EBITDA 13,5x y 10,3x, el precio / valor contable 2,84x y '
-                       '2,14x, y la rentabilidad por dividendo 2,11% y 2,83%.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ventas netas', '2.353,7', '+2,4%'),
-               ('Ventas 2T', '1.138,4', '+4,1%'),
-               ('EBITDA ajustado', '459,6', '+3,2%'),
-               ('Resultado operativo', '340,1', '+2,3%'),
-               ('Beneficio neto ajustado', '260,3', '+5,2%'),
-               ('Beneficio neto atribuible', '262,8', '-4,4%'),
-               ('BPA ajustado', '0,46 €', '')],
-     'kpi': 'Margen bruto 75,5% (75,8%); margen EBITDA ajustado 19,5% (19,4%). Ventas comparables: Fragancias y Moda +3,8%, Maquillaje +9,1%, Cuidado de '
-            'la piel +2,3%; Asia Pacífico +20,9%, EMEA +2,6%, América +2,6%. Margen operativo: Fragancias y Moda 19,2% (17,8%), Maquillaje 1,8% (3,6%), '
-            'Cuidado de la piel 1,5% (7,6%). Flujo de caja libre de las operaciones -196 M€ (-116 M€) por el inventario; deuda neta 1.589 M€, 1,5x el '
-            'EBITDA ajustado.',
-     'guia': 'Guía 2026 reiterada: crecer por encima del mercado de belleza premium en términos comparables y mantener estable el margen EBITDA ajustado '
-             '(20,7% en 2025); conversión en caja libre de ~50% del EBITDA ajustado, inversiones del 4-5% de las ventas y deuda neta / EBITDA ajustado '
-             'de 2,0x como máximo. Dividendo de 0,42 € por acción pagado el 17-jun-2026. En septiembre acordó comprar el 50% restante de ISDIN por 1.200 '
-             'M€ (cierre previsto en el 1T27).',
-     'positivos': ['Las ventas se aceleraron al 4,1% en el 2T (+0,8% en el 1T) y Asia Pacífico creció un 20,9% comparable.',
-                   'Gana cuota de mercado (11,1% en perfumería selectiva) y el margen de Fragancias y Moda sube 1,4 puntos.',
-                   'El beneficio ajustado crece un 5,2% y la empresa mantiene su guía anual.'],
-     'riesgos': ['Flujo libre de -196 M€ y deuda neta multiplicada por 2,2 desde diciembre; ISDIN sumará 900 M€ al cierre.',
-                 'El margen operativo de Maquillaje (1,8%) y de Cuidado de la piel (1,5%) cae con fuerza.',
-                 'Dólar, Oriente Medio y aranceles; tras romper con Estée Lauder, el mercado espera la nueva estrategia (28-oct).'],
-     'videos': [('AwK5Blg88WA', 'Puig resultados 1S 2026: ventas +4,4% comparable y beneficio ajustado +5,2% | Deuda neta 1.589 M€'),
+                   ('Capitalización', '~11.035 M€')],
+     'multiplos_nota': 'Precio: cierre del 21-oct-2026 (Bolsamanía), antes de la publicación de las ventas. Múltiplos de stockanalysis.com con 19,57 € '
+                       '(16-oct-2026), que con 19,59 € no cambian (calculado); se basan en el beneficio y el EBITDA de 12 meses hasta junio, porque el '
+                       '3T no trae beneficio. Puig cotiza desde mayo de 2024, así que solo hay dos cierres de año para comparar: a cierre de 2024 y 2025 '
+                       'el PER era 18,9x y 14,1x, el EV/EBITDA 13,5x y 10,3x, el precio / valor contable 2,84x y 2,14x, y la rentabilidad por dividendo '
+                       '2,11% y 2,83%.',
+     'tabla_titulo': 'Millones de euros · ventas 3T y 9M 2026 (variación comparable a/a) y EBITDA ajustado del 1S 2026 (variación a/a)',
+     'tabla': [('Ventas 3T', '1.390,8', '+5,6%'),
+               ('Ventas 9M', '3.744,5', '+4,8%'),
+               ('Fragancias y Moda 9M', '2.702,0', '+3,8%'),
+               ('Maquillaje 9M', '628,5', '+12,0%'),
+               ('Cuidado de la piel 9M', '414,1', '+1,3%'),
+               ('Asia Pacífico 9M', '430,0', '+17,9%'),
+               ('EBITDA ajustado 1S 2026', '459,6', '+3,2%')],
+     'kpi': 'Ventas reportadas: 3T +7,2% (divisas +1,7%); 9M +4,1% (divisas -0,7%, sobre todo el dólar). Comparable por trimestre: 1T +4,7%, 2T +4,1%, '
+            '3T +5,6%. 3T por negocio (comparable): Fragancias y Moda +3,9%, Maquillaje +16,1%, Cuidado de la piel -0,8%; por región: EMEA +3,8%, '
+            'América +6,2%, Asia Pacífico +12,9%. 9M por región: EMEA 1.948,7 M€ (+3,0%), América 1.365,9 M€ (+3,8%), Asia Pacífico 430,0 M€ (+17,9%). '
+            'Último dato de rentabilidad y deuda (1S 2026): margen EBITDA ajustado 19,5% (19,4%); beneficio neto ajustado 260,3 M€ (+5,2%); deuda neta '
+            '1.589 M€ a 30-jun, 1,5x el EBITDA ajustado.',
+     'guia': 'Guía 2026 reiterada el 21-oct-2026: crecer por encima del mercado de belleza premium en términos comparables y mantener estable el margen '
+             'EBITDA ajustado (20,7% en 2025); deuda neta / EBITDA ajustado de 2,0x como máximo y payout de ~40% del beneficio neto reportado. En la '
+             'conferencia: 4T de fragancias similar a los nueve meses, maquillaje frente a un +26,5% del 4T 2025 y cuidado de la piel plano. ISDIN: '
+             'compra del 50% restante por 900 M€ al cierre (previsto a finales del 1T27) y 300 M€ aplazados al 1T29. Capital Markets Day el 28-oct-2026.',
+     'positivos': ['El crecimiento comparable se acelera al 5,6% en el 3T, el mayor del año, por encima del +5,0% que esperaba Jefferies (Reuters).',
+                   'Maquillaje crece un 16,1% comparable en el 3T y todas las regiones suben; América acelera al +6,2%.',
+                   'El dólar suma en el 3T (+1,7%) tras restar en el semestre, y Puig reitera su guía 2026.'],
+     'riesgos': ['Cuidado de la piel cae un 0,8% comparable en el 3T y Puig espera un 4T plano por la debilidad del lujo en Norteamérica.',
+                 'Maquillaje afronta en el 4T una base exigente (+26,5% en el 4T 2025) y Asia Pacífico se modera (+12,9% en el 3T frente a +20,9% en el '
+                 '1S).',
+                 'Sin datos de márgenes ni deuda hasta los resultados anuales; la compra de ISDIN supondrá un pago de 900 M€ al cierre (deuda neta de '
+                 '1.589 M€ en junio).'],
+     'videos': [('9Mf16YKG9Mw', 'Puig ventas 3T 2026: +5,6% comparable, 1.391 M€ | Maquillaje +16,1%, cuidado de la piel -0,8%'),
+                ('2wQMF4z2kTM', 'Puig 3T 2026 en 60 segundos (Short)'),
+                ('AwK5Blg88WA', 'Puig resultados 1S 2026: ventas +4,4% comparable y beneficio ajustado +5,2% | Deuda neta 1.589 M€'),
                 ('hq9OYbh6hSc', 'Puig 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-21',
-     'fuentes': 'Puig, nota de prensa de resultados del primer semestre 2026 (CNMV y puig.com, 30-jul-2026) y resultados 2025 (18-feb-2026); Estrategias '
-                'de Inversión y Bolsamanía/Europa Press (30-jul-2026); FashionUnited (31-jul y 8-jun-2026); Investing.com (conferencia, 30-jul-2026); '
-                'Modaes (ISDIN, 14-sep-2026); Business Wire (Estée Lauder, 21-may-2026); stockanalysis.com (precio y múltiplos, 16-oct-2026).',
-     'fuentes_corto': 'Estrategias de Inversión, Bolsamanía, FashionUnited, Investing.com, Modaes y stockanalysis.com',
-     'elaborado': '17-oct-2026, 08:15'},
+     'proximo': '2027-02-17',
+     'proximo_estimado': True,
+     'fuentes': 'Puig, nota de prensa y presentación de la actualización de ventas del 3T 2026 (CNMV y puig.com, 21-oct-2026) y resultados del primer '
+                'semestre 2026 (30-jul-2026); Reuters vía FashionNetwork (21-oct-2026); Investing.com (conferencia, 21-oct-2026); Estrategias de '
+                'Inversión y Bolsamanía/Europa Press (21-oct-2026); Business Wire (Estée Lauder, 21-may-2026); stockanalysis.com (múltiplos, '
+                '16-oct-2026).',
+     'fuentes_corto': 'Reuters, Investing.com, Estrategias de Inversión, Bolsamanía y stockanalysis.com',
+     'elaborado': '22-oct-2026, 00:18'},
     {'id': 'fluidra',
      'nombre': 'Fluidra',
      'ticker': 'FDR',

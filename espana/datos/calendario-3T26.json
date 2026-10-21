@@ -1,6 +1,6 @@
 {
  "trimestre": "3T 2026",
- "actualizado": "2026-10-21",
+ "actualizado": "2026-10-22",
  "empresas": [
   {
    "fecha": "2026-10-20",
@@ -25,9 +25,9 @@
    "empresa": "Puig",
    "ticker": "PUIG",
    "sector": "Consumo (belleza)",
-   "estado": "Confirmada",
-   "nota": "Publica solo ventas en el 3T; tras el cierre.",
-   "fuente": "Puig, calendario financiero (oct-2026)"
+   "estado": "Publicada",
+   "nota": "Publicó sus ventas del 3T el 21-oct-2026 a las 17:40 (CNMV), tras el cierre.",
+   "fuente": "CNMV, 21-oct-2026"
   },
   {
    "fecha": "2026-10-22",
