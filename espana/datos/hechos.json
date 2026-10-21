@@ -1,6 +1,20 @@
 {
- "actualizado": "2026-10-21T10:54Z",
+ "actualizado": "2026-10-21T11:44Z",
  "items": [
+  {
+   "id": "c86fb030-75b3-4859-acb9-2211c871f55e",
+   "tipo": "OIR",
+   "fecha": "2026-10-21 13:28",
+   "entidad": "SACYR, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Sacyr anuncia la convocatoria de la presentación de resultados del 9M 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bc86fb030-75b3-4859-acb9-2211c871f55e%7d",
+   "ticker": "SCYR",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "094ea398-5d2f-4432-9934-7896983e48a7",
    "tipo": "OIR",
