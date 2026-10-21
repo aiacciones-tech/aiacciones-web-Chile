@@ -1,6 +1,20 @@
 {
- "actualizado": "2026-10-21T07:09Z",
+ "actualizado": "2026-10-21T10:54Z",
  "items": [
+  {
+   "id": "094ea398-5d2f-4432-9934-7896983e48a7",
+   "tipo": "OIR",
+   "fecha": "2026-10-21 12:12",
+   "entidad": "BANCO SANTANDER, S.A.",
+   "nif": "A39000013",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Anuncio de la presentación de resultados correspondientes a los primeros nueve meses de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b094ea398-5d2f-4432-9934-7896983e48a7%7d",
+   "ticker": "SAN",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "de176f4b-2d54-4f6f-a919-df32014f8383",
    "tipo": "OIR",
