@@ -1,6 +1,62 @@
 {
- "actualizado": "2026-10-20T17:37Z",
+ "actualizado": "2026-10-21T07:09Z",
  "items": [
+  {
+   "id": "de176f4b-2d54-4f6f-a919-df32014f8383",
+   "tipo": "OIR",
+   "fecha": "2026-10-21 08:57",
+   "entidad": "AENA, S.M.E., S.A.",
+   "nif": "A86212420",
+   "categoria": "Otra información relevante",
+   "titulo": "Aena S.M.E, S.A. anuncia la celebración de la presentación de resultados correspondiente al periodo de nueve meses finalizado el 30 de septiembre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bde176f4b-2d54-4f6f-a919-df32014f8383%7d",
+   "ticker": "AENA",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "fd187aa5-63b0-47ef-a0a0-ea1b75d0f62e",
+   "tipo": "OIR",
+   "fecha": "2026-10-21 08:29",
+   "entidad": "IBERDROLA, S.A.",
+   "nif": "A",
+   "categoria": "Sobre instrumentos financieros",
+   "titulo": "Términos y condiciones de la segunda edición del sistema de dividendo opcional \"Iberdrola Retribución Flexible\" del ejercicio 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bfd187aa5-63b0-47ef-a0a0-ea1b75d0f62e%7d",
+   "ticker": "IBE",
+   "temas": [
+    "dividendos"
+   ]
+  },
+  {
+   "id": "53d9d9ed-b64b-4cac-a3a4-cda137e03540",
+   "tipo": "OIR",
+   "fecha": "2026-10-21 08:20",
+   "entidad": "IBERDROLA, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Presentación de Resultados correspondiente a los nueve meses del ejercicio 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b53d9d9ed-b64b-4cac-a3a4-cda137e03540%7d",
+   "ticker": "IBE",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "bc593021-c325-41b5-b7dc-f4aeef741d49",
+   "tipo": "OIR",
+   "fecha": "2026-10-21 08:19",
+   "entidad": "IBERDROLA, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Resultados correspondiente a los nueve meses del ejercicio 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bbc593021-c325-41b5-b7dc-f4aeef741d49%7d",
+   "ticker": "IBE",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "c85a8438-0196-46f7-a141-e23193aecd74",
    "tipo": "OIR",
