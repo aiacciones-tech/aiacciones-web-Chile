@@ -3,51 +3,63 @@
 # Nada de cifras de ejemplo: si un dato no está en el vídeo o en sus fuentes, no va.
 
 FICHAS = [
-    {
-        "id": "iberdrola",
-        "nombre": "Iberdrola",
-        "ticker": "IBE",
-        "sector": "Eléctricas · redes y renovables",
-        "lede": "Eléctrica con redes reguladas en España, Reino Unido, Estados Unidos y Brasil, y generación renovable. "
-                "Las redes aportan ya más de la mitad del EBITDA. En el primer semestre de 2026 vendió su negocio en México.",
-        "periodo": "1S 2026",
-        "periodo_largo": "primer semestre de 2026",
-        "titular": "Beneficio neto ajustado de 3.565 M€ (+7,8%), un 5,5% por encima del consenso (3.380 M€, Bankinter Análisis). "
-                   "El beneficio reportado, 4.336 M€ (+21,7%), incluye 953 M€ de plusvalía por la venta de México.",
-        "precio": "21,35 €",
-        "precio_fecha": "9-oct-2026",
-        "multiplos": [("PER 12 meses", "25,9x"), ("PER forward", "19,9x"), ("EV/EBITDA", "13,7x"),
-                      ("Rentab. dividendo", "3,2%"), ("FCF yield", "2,2%"), ("Capitalización", "~138.500 M€")],
-        "multiplos_nota": "Con precio de 21,35 € al 9-oct-2026 (stockanalysis.com). A cierre de 2023, 2024 y 2025 el PER era 16,1x, 15,2x y 20,1x. "
-                          "La acción subió un 30% en 12 meses.",
-        "tabla_titulo": "Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025",
-        "tabla": [
-            ("Ingresos", "22.469", "+1,7%"),
-            ("EBITDA ajustado", "8.050", "+7,4%"),
-            ("EBITDA redes", "4.213", "+13%"),
-            ("EBITDA generación y clientes", "3.790", "+1%"),
-            ("Beneficio neto ajustado", "3.565", "+7,8%"),
-            ("Beneficio neto reportado", "4.336", "+21,7%"),
-            ("BPA ajustado (calculado)", "~0,55 €", ""),
-        ],
-        "kpi": "Margen EBITDA 35,8% (34,8% en 1S 2025 comparable). Ingresos +4,2% comparables sin México; EBITDA +8,8% sin divisas. "
-               "Inversión de 7.010 M€ (+25%; redes +42%). Deuda neta ajustada 54.000 M€ (3,5x EBITDA), con previsión de ~56.000 M€ a cierre de año. "
-               "Coste medio de la deuda 5,1%. Liquidez 21.500 M€.",
-        "guia": "Guía 2026 reafirmada: beneficio neto ajustado +8% o más (más de 6.700 M€). Compra del 80% de Caruna (Finlandia) por ~2.000 M€, "
-                "con cierre previsto en el 1T 2027. Dividendo total del ejercicio 0,685 € (+6,2%). Nuevo plan estratégico en 2027.",
-        "positivos": ["Las redes crecen un 13% y su base de activos regulados, un 11%.",
-                      "El beneficio ajustado superó al consenso y la guía anual se mantiene.",
-                      "La venta de México dejó 953 M€ de plusvalía y el dividendo del ejercicio sube un 6,2%."],
-        "riesgos": ["Las divisas: la debilidad del dólar y la libra resta resultados.",
-                    "La deuda sube con la inversión y su coste ya supera el 5%.",
-                    "Buena parte del beneficio depende de decisiones regulatorias en Reino Unido, Estados Unidos y Brasil."],
-        "videos": [("RGgaT31jOxk", "Iberdrola resultados 1S 2026: beneficio ajustado +7,8%, 5,5% sobre el consenso | Redes +13%")],
-        "proximo": "2026-10-21",
-        "fuentes": "Iberdrola, presentación de resultados del primer semestre 2026 (CNMV, 22-jul-2026); Bankinter Análisis (consenso, 22-jul-2026); "
-                   "stockanalysis.com (precio y múltiplos, 9-oct-2026).",
-        "fuentes_corto": "Bankinter Análisis y stockanalysis.com",
-        "elaborado": "12-oct-2026, 08:00",
-    },
+    {'id': 'iberdrola',
+     'nombre': 'Iberdrola',
+     'ticker': 'IBE',
+     'sector': 'Eléctricas · redes y renovables',
+     'lede': 'Eléctrica con redes reguladas en España, Reino Unido, Estados Unidos y Brasil, y generación renovable. Las redes aportan ya el 54% del '
+             'EBITDA. En 2026 vendió su negocio en México a Cox.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 5.816 M€ hasta septiembre (+9,6%), con 953 M€ de plusvalía por la venta de México; beneficio neto ajustado de 5.141 '
+                'M€ (+8,8%; +12,7% sin divisas). Iberdrola eleva su guía 2026 a un crecimiento del beneficio ajustado de al menos el 10% (antes, más del '
+                '8%).',
+     'precio': '21,23 €',
+     'precio_fecha': '20-oct-2026',
+     'multiplos': [('PER 12 meses', '26,0x'),
+                   ('PER forward', '20,0x'),
+                   ('EV/EBITDA', '13,8x'),
+                   ('Precio / valor contable', '2,21x'),
+                   ('Rentab. dividendo', '3,2%'),
+                   ('FCF yield', '2,2%'),
+                   ('Capitalización', '~137.700 M€')],
+     'multiplos_nota': 'Con precio de 21,23 € al cierre del 20-oct-2026, último dato de stockanalysis.com al 21-oct-2026. Con el beneficio neto de 12 '
+                       'meses a septiembre publicado por la empresa (6.794 M€), el PER sería ~20,3x (calculado). A cierre de 2023, 2024 y 2025 el PER '
+                       'era 16,1x, 15,2x y 20,1x, el EV/EBITDA 10,3x, 10,6x y 12,6x y el precio / valor contable 1,23x, 1,35x y 1,92x. La acción subió '
+                       'un 25% en 52 semanas.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ventas', '34.405', '+6,2%'),
+               ('EBITDA ajustado', '11.891', '+7,5%'),
+               ('EBITDA redes', '6.430', '+14,9%'),
+               ('EBITDA generación y clientes', '5.359', '-1,5%'),
+               ('Beneficio neto ajustado', '5.141', '+8,8%'),
+               ('Beneficio neto reportado', '5.816', '+9,6%'),
+               ('Beneficio ajustado 3T (calculado)', '1.576', '+11,0%'),
+               ('BPA', '0,834 €', '+5,8%')],
+     'kpi': 'Margen EBITDA ajustado 34,6% (34,7% en 9M 2025; calculado). Redes por país (EBITDA, en euros): España +18,3%, Reino Unido +18,0%, EE. UU. '
+            '+14,3%, Brasil +9,7%. Inversión de 10.087 M€ (+13%; redes 6.277 M€, +28%); base de activos regulados 56.000 M€ (+14%). Deuda neta ajustada '
+            '54.561 M€ (+4.379 M€ vs diciembre). Coste medio de la deuda 4,93% (4,71%); resultado financiero ajustado -1.687 M€ (-1.163 M€). Liquidez de '
+            'más de 23.000 M€ (unos 20 meses).',
+     'guia': 'Guía 2026 mejorada: beneficio neto ajustado +10% o más (antes, más del 8%), al menos ~6.854 M€ sobre los 6.231 M€ de 2025; los nueve meses '
+             'ya suman el 75% (calculado). Objetivo de crecimiento medio anual del 10% en los próximos cinco años; Capital Markets Day en marzo de 2027. '
+             'Dividendo a cuenta 0,275 € (+8,7%) con Iberdrola Retribución Flexible (importe máximo 1.835 M€): elección del 12 al 25 de enero y pago en '
+             'efectivo el 1-feb-2027 (fechas previstas).',
+     'positivos': ['Las redes crecen un 14,9%, con alzas en España, Reino Unido, Estados Unidos y Brasil.',
+                   'El beneficio ajustado del tercer trimestre sube un 11% (calculado) y la guía 2026 mejora a +10% o más.',
+                   'El dividendo a cuenta sube un 8,7%, hasta 0,275 € por acción.'],
+     'riesgos': ['Las divisas restaron 186 M€ al beneficio ajustado.',
+                 'La deuda sube con la inversión (+4.379 M€ en 2026) y su coste medio llega al 4,93%.',
+                 'Generación y clientes retrocede un 1,5% (España -4,6%).'],
+     'videos': [('3lbnU5uzBKE', 'Iberdrola resultados 3T 2026: beneficio +9,6% y eleva la guía a +10% o más | Redes +14,9%'),
+                ('LpPRcvMZI-4', 'Iberdrola 3T 2026 en 60 segundos (Short)'),
+                ('RGgaT31jOxk', 'Iberdrola resultados 1S 2026: beneficio ajustado +7,8%, 5,5% sobre el consenso | Redes +13%')],
+     'proximo': '2027-02-24',
+     'proximo_estimado': True,
+     'fuentes': 'Iberdrola, resultados de los nueve meses de 2026 (informe, presentación y nota de prensa) y dividendo a cuenta Iberdrola Retribución '
+                'Flexible (CNMV, 21-oct-2026); Europa Press (Infobae, The Objective), Estrategias de Inversión y Smartkarma (21-oct-2026); Iberdrola, '
+                'resultados 1S26 (22-jul-2026) y 2025 (25-feb-2026); stockanalysis.com (precio y múltiplos, oct-2026).',
+     'fuentes_corto': 'Europa Press, Estrategias de Inversión, Smartkarma y stockanalysis.com',
+     'elaborado': '21-oct-2026, 11:10'},
     {
         "id": "redeia",
         "nombre": "Redeia",

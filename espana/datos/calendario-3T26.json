@@ -1,6 +1,6 @@
 {
  "trimestre": "3T 2026",
- "actualizado": "2026-10-20",
+ "actualizado": "2026-10-21",
  "empresas": [
   {
    "fecha": "2026-10-20",
@@ -16,9 +16,9 @@
    "empresa": "Iberdrola",
    "ticker": "IBE",
    "sector": "Eléctricas",
-   "estado": "Confirmada",
-   "nota": "Antes de apertura.",
-   "fuente": "DailyForex, oct-2026"
+   "estado": "Publicada",
+   "nota": "Publicó el 21-oct-2026 a las 08:19 (CNMV).",
+   "fuente": "CNMV, 21-oct-2026"
   },
   {
    "fecha": "2026-10-21",
