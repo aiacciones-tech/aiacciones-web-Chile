@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-21T13:08Z",
+ "actualizado": "2026-10-21T15:11Z",
  "items": [
+  {
+   "id": "407e7d41-cfc0-4656-aee8-e83b6ea3aafc",
+   "tipo": "OIR",
+   "fecha": "2026-10-21 16:11",
+   "entidad": "REPSOL, S.A.",
+   "nif": "A78374725",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Operaciones realizadas por Repsol, S.A. al amparo de su Programa de Recompra de acciones entre el 14 y el 20 de octubre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b407e7d41-cfc0-4656-aee8-e83b6ea3aafc%7d",
+   "ticker": "REP",
+   "temas": []
+  },
   {
    "id": "9074c2c1-3a13-4c3d-b109-82cdfc56937b",
    "tipo": "OIR",
