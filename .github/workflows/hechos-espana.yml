@@ -1,4 +1,5 @@
 # Hechos relevantes del IBEX 35 para aiacciones.es (como «Actualizar precios» en Chile, pero con la CNMV).
+# Si la CNMV no responde en una pasada, solo avisa (y llega correo de fallo) cuando lleva unas 2 horas sin responder.
 # Cada 20 minutos en horario de mercado (la página «del día» de la CNMV se vacía tras cada cierre): descarga «Información privilegiada» y «Otra información relevante» del día de la CNMV,
 # guarda los avisos de las 35 empresas en espana/datos/hechos.json, rearma la web y la publica (deploy-espana.yml).
 name: Hechos relevantes España
@@ -17,11 +18,29 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Descargar hechos relevantes de la CNMV
+        id: cnmv
+        continue-on-error: true  # la CNMV corta a veces la conexión; la próxima pasada (20 min) lo recupera
         run: python3 espana/hechos.py
+      - name: Avisar solo si la CNMV lleva unas 2 horas sin responder
+        if: steps.cnmv.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Las 6 pasadas anteriores (unas 2 horas): ¿alguna descargó bien? (en esas, este paso quedó "skipped")
+          ok=0
+          for id in $(gh run list --workflow hechos-espana.yml --status completed -L 6 --json databaseId -q '.[].databaseId'); do
+            r=$(gh api "repos/${{ github.repository }}/actions/runs/$id/jobs" -q '[.jobs[].steps[] | select(.name | startswith("Avisar solo si")) | .conclusion] | first // "sin-paso"')
+            c=$(gh run view "$id" --json conclusion -q .conclusion)
+            if [ "$r" = "skipped" ] || { [ "$r" = "sin-paso" ] && [ "$c" = "success" ]; }; then ok=1; break; fi
+          done
+          if [ $ok = 0 ]; then echo "::error::La CNMV no responde desde hace unas 2 horas (7 pasadas seguidas)"; exit 1; fi
+          echo "::warning::La CNMV no respondió en esta pasada; se reintenta en la siguiente"
       - name: Rearmar la web
+        if: steps.cnmv.outcome == 'success'
         run: python3 espana/build.py
       - name: Guardar cambios
         id: git
+        if: steps.cnmv.outcome == 'success'
         run: |
           git config user.name "aiacciones-bot"
           git config user.email "aiacciones-bot@users.noreply.github.com"
