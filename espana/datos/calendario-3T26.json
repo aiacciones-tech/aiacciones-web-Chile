@@ -34,9 +34,9 @@
    "empresa": "Bankinter",
    "ticker": "BKT",
    "sector": "Banca",
-   "estado": "Confirmada",
-   "nota": "",
-   "fuente": "DailyForex, oct-2026"
+   "estado": "Publicada",
+   "nota": "Publicó el 22-oct-2026 antes de la apertura (bankinter.com).",
+   "fuente": "Bankinter, 22-oct-2026"
   },
   {
    "fecha": "2026-10-27",
