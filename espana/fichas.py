@@ -108,52 +108,62 @@ FICHAS = [
         "fuentes_corto": "Renta 4 Banco, Investing.com, Bankinter Análisis, Estrategias de Inversión, elDiario.es, Merca2 y stockanalysis.com",
         "elaborado": "12-oct-2026, 16:00",
     },
-    {
-        "id": "bankinter",
-        "nombre": "Bankinter",
-        "ticker": "BKT",
-        "sector": "Banca",
-        "lede": "Banco español con negocio en España, Portugal e Irlanda, centrado en banca de empresas, banca privada y gestión de patrimonios. "
-                "En un banco, los ingresos son el margen bruto y la calidad del balance se mide con la morosidad y el capital.",
-        "periodo": "1S 2026",
-        "periodo_largo": "primer semestre de 2026",
-        "titular": "Beneficio neto de 605 M€ (+11,7%), su mayor beneficio semestral. El 2T (315 M€) superó al consenso en un 8% según Renta 4; "
-                   "Jefferies señala 23 M€ de comisiones extraordinarias y, sin ellas, un resultado antes de impuestos prácticamente en línea.",
-        "precio": "15,00 €",
-        "precio_fecha": "9-oct-2026",
-        "multiplos": [("PER 12 meses", "12,2x"), ("PER forward", "10,8x"), ("Precio / valor en libros", "~2,0x"),
-                      ("Rentab. dividendo", "4,0%"), ("Capitalización", "~13.480 M€")],
-        "multiplos_nota": "Con precio de 15,00 € al 9-oct-2026 (stockanalysis.com); precio / valor en libros calculado. A cierre de 2022, 2023 y 2024 el PER era 10,3x, 6,2x y 7,2x, "
-                          "y el precio / valor en libros 1,15x, 0,98x y 1,17x. En un banco no se usan EV/EBITDA ni flujo de caja libre.",
-        "tabla_titulo": "Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025",
-        "tabla": [
-            ("Margen de intereses", "1.160", "+5,4%"),
-            ("Comisiones netas", "440,4", "~+16%"),
-            ("Margen bruto", "1.603", "+7,3%"),
-            ("Costes", "550,6", "+2,7%"),
-            ("Margen de explotación", "1.052,4", "+9,8%"),
-            ("Beneficio neto", "605", "+11,7%"),
-            ("BPA (calculado)", "~0,67 €", "+11,7%"),
-        ],
-        "kpi": "Eficiencia 34,3% (35,9% en 1S 2025, calculado); ROE 19,1%; ROTE 20,4%. Morosidad 1,92% (−22 pb), cobertura 69,2%, coste del riesgo 32 pb. "
-               "CET1 12,91% (mínimo BCE 8,58%). Crédito 87.153 M€ (+4,6%); recursos de clientes y gestionados 162.085 M€ (+9,6%); nueva producción hipotecaria −16%. "
-               "Beneficio antes de impuestos: España 716 M€ (+11%), Portugal 114 M€ (+9%); Irlanda, crédito 5.200 M€ (+24%).",
-        "guia": "Guía 2026 (según Renta 4): margen de intereses creciendo en línea con el crédito, diferencial de clientes ~2,7%, comisiones con crecimiento de un dígito alto, "
-                "eficiencia por debajo del 35%, coste del riesgo 33 pb y crédito creciendo a un dígito medio (en el semestre, algo menos del 4%).",
-        "positivos": ["Comisiones netas ~+16% y fondos de terceros casi +24%.",
-                      "Eficiencia del 34,3%: los costes suben un 2,7% y el margen bruto un 7,3%.",
-                      "Menos morosidad (1,92%) y más capital (CET1 12,91%)."],
-        "riesgos": ["Parte de la sorpresa del 2T vino de 23 M€ de comisiones extraordinarias.",
-                    "El crédito crece por debajo de la guía y la nueva producción hipotecaria cae un 16%.",
-                    "Según Jefferies, el margen de intereses tiene menos recorrido de mejora que en otros bancos."],
-        "videos": [("k7qJSVY5__k", "Bankinter resultados 1S 2026: beneficio récord +11,7%; el 2T supera al consenso | Eficiencia 34,3%"),
-                   ("oboYRN0_OH4", "Bankinter 1S 2026 en 60 segundos (Short)")],
-        "proximo": "2026-10-22",
-        "fuentes": "Bankinter, nota de resultados del primer semestre 2026 (23-jul-2026, CNMV y bankinter.com); Renta 4 Banco / Capitalbolsa (consenso y guía, 23-jul-2026); "
-                   "Jefferies / Bolsamania (extraordinarios, 23-jul-2026); stockanalysis.com (precio y múltiplos, 9-oct-2026).",
-        "fuentes_corto": "Renta 4 Banco, Jefferies, Capitalbolsa, Bolsamania y stockanalysis.com",
-        "elaborado": "13-oct-2026, 17:00",
-    },
+    {'id': 'bankinter',
+     'nombre': 'Bankinter',
+     'ticker': 'BKT',
+     'sector': 'Banca',
+     'lede': 'Banco español con negocio en España, Portugal e Irlanda, centrado en banca de empresas, banca privada y gestión de patrimonios; desde '
+             'agosto de 2026 incluye Tulp (hipotecas en Países Bajos). En un banco, los ingresos son el margen bruto y la calidad del balance se mide '
+             'con la morosidad y el capital.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 901 M€ hasta septiembre (+11%), con un margen de intereses en niveles récord (1.762 M€, +5,7%) y comisiones netas '
+                '+12,9%. El beneficio del 3T (~296 M€, +9,5%; calculado) quedó prácticamente en línea con el consenso, pero los ingresos del trimestre, '
+                'un 2% por debajo, y la acción caía un 4,8% a media mañana (Bolsamanía).',
+     'precio': '14,555 €',
+     'precio_fecha': '22-oct-2026, 10:03',
+     'multiplos': [('PER 12 meses', '~11,1x'),
+                   ('PER forward', '~10,6x'),
+                   ('Precio / valor en libros', '~1,95x'),
+                   ('Rentab. dividendo', '~4,2%'),
+                   ('Capitalización', '~13.080 M€')],
+     'multiplos_nota': 'Con precio de 14,555 € el 22-oct-2026 a las 10:03 (Bolsamanía); todos los múltiplos calculados con datos de stockanalysis.com '
+                       '(898,69 M de acciones, valor contable 7,46 € por acción, dividendo 0,61 €, PER forward 10,78x a 14,86 €) y el beneficio neto de '
+                       '12 meses a septiembre (1.179 M€). A cierre de 2022, 2023, 2024 y 2025 el PER era 10,3x, 6,2x, 7,2x y 11,7x, y el precio / valor '
+                       'en libros 1,15x, 0,98x, 1,17x y 1,98x. En un banco no se usan EV/EBITDA ni flujo de caja libre.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Margen de intereses', '1.762', '+5,7%'),
+               ('Comisiones netas', '651', '+12,9%'),
+               ('Margen bruto', '2.397', '+6,5%'),
+               ('Costes operativos', '833,9', '+2,3%'),
+               ('Margen antes de provisiones', '1.563,6', '+8,8%'),
+               ('Beneficio neto', '901', '+11%'),
+               ('Beneficio neto 3T (calculado)', '~296', '+9,5%'),
+               ('BPA (calculado)', '~1,00 €', '+11%')],
+     'kpi': 'Eficiencia 34,8% (36,1% hace un año); ROE 19,2%; ROTE 20,4%. Morosidad 1,84% (−21 pb), cobertura 66,8%, coste del riesgo 33 pb. CET1 13,2% '
+            '(mínimo BCE 8,6%). Crédito 87.134 M€ (+5,6%); recursos de clientes y gestionados 163.008 M€ (+7,9%); fuera de balance +15,2%; nueva '
+            'producción hipotecaria del 3T, más de 1.500 M€ (+8%). Beneficio antes de impuestos: España 1.050 M€ (+10%), Portugal 178 M€ (+13%), Irlanda '
+            '41 M€ (+21%).',
+     'guia': 'Guía 2026 (conferencia del 22-oct-2026): margen de intereses subiendo cada trimestre, comisiones con crecimiento de doble dígito bajo (en '
+             'julio, un dígito alto), eficiencia por debajo del 35%, coste del riesgo de unos 33 pb, crédito creciendo a un dígito medio y CET1 de '
+             'alrededor del 13% a fin de año, tras las compras de Tulp (−16 pb) y de Plenium y Access Capital Partners (unos −25 pb, pendiente). Para '
+             'superar el récord de 2025 (1.090 M€) necesita más de 189 M€ en el 4T (calculado).',
+     'positivos': ['El margen de intereses sube por sexto trimestre seguido (3T: 602 M€, +6% a/a).',
+                   'Comisiones +12,9% y recursos fuera de balance +15,2%; la guía de comisiones mejora.',
+                   'Menos morosidad (1,84%) y más capital (CET1 13,2%).'],
+     'riesgos': ['Los ingresos del 3T quedaron un 2% por debajo del consenso y la acción caía un 4,8%.',
+                 'Sin los 23 M€ extraordinarios del 2T, las comisiones crecen en torno a un 9%.',
+                 'El coste de los depósitos sube (86 pb frente a 82 pb) y las compras consumen capital.'],
+     'videos': [('O141MKpxQEo', 'Bankinter resultados 3T 2026: beneficio +11% con margen récord; ingresos del 3T bajo el consenso'),
+                ('YgVQ-5CaJRA', 'Bankinter 3T 2026 en 60 segundos (Short)'),
+                ('k7qJSVY5__k', 'Bankinter resultados 1S 2026: beneficio récord +11,7%; el 2T supera al consenso | Eficiencia 34,3%')],
+     'proximo': '2027-01-21',
+     'proximo_estimado': True,
+     'fuentes': 'Bankinter, nota de resultados de los nueve meses de 2026 (22-oct-2026, CNMV y bankinter.com); presentación y conferencia de resultados '
+                '9M26 (Investing.com); EFE (Diario de Santiago), Bolsamanía y Demócrata (22-oct-2026); Bankinter, resultados 1S26 (23-jul-2026); '
+                'stockanalysis.com (precio y múltiplos, oct-2026).',
+     'fuentes_corto': 'Investing.com, EFE, Bolsamanía y stockanalysis.com',
+     'elaborado': '22-oct-2026, 11:15'},
     {'id': 'santander',
      'nombre': 'Banco Santander',
      'ticker': 'SAN',
