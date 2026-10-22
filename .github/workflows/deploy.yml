@@ -8,26 +8,57 @@ on:
     branches: [main]
     paths: ['web/**', '.github/workflows/deploy.yml']
   workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
       - name: Instalar lftp
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+        # Sin apt-get update casi siempre alcanza y ahorra ~1 minuto; si falla, se actualiza y reintenta.
+        run: sudo apt-get install -y -qq lftp || (sudo apt-get update -qq && sudo apt-get install -y -qq lftp)
+      - name: Elegir qué subir
+        # Un push sube solo los archivos de web/ que cambiaron desde la última publicación exitosa
+        # (sincronizar.php en el servidor completa lo que falte si algo falla). "Run workflow", o si
+        # esa publicación quedó fuera del historial bajado, sube la carpeta completa.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ANTES=$(gh run list -R "${{ github.repository }}" --workflow deploy.yml --branch main --status success -L 1 --json headSha -q '.[0].headSha' 2>/dev/null || true)
+          echo "Última publicación exitosa: ${ANTES:-ninguna}"
+          if [ "${{ github.event_name }}" = push ] && [ -n "$ANTES" ] && git cat-file -e "$ANTES^{commit}" 2>/dev/null; then
+            git diff --name-only --diff-filter=d "$ANTES" HEAD -- web/ > cambios.txt
+          else
+            echo TODO > cambios.txt
+          fi
+          {
+            echo "set ftp:ssl-force true"
+            echo "set ftp:ssl-protect-data true"
+            echo "set ssl:verify-certificate no"
+            echo "set ftp:passive-mode true"
+            echo "set net:max-retries 3"
+            echo "set net:timeout 30"
+            if [ "$(cat cambios.txt)" = TODO ]; then
+              echo "mirror --reverse --verbose --parallel=4 web/ public_html/"
+            else
+              while IFS= read -r f; do
+                destino="public_html/${f#web/}"
+                echo "mkdir -p -f \"$(dirname "$destino")\""
+                echo "put \"$f\" -o \"$destino\""
+              done < cambios.txt
+            fi
+            echo bye
+          } > subir.lftp
+          grep -v '^set ' subir.lftp
       - name: Subir por FTPS
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
-          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_SERVER" <<'LFTP'
-          set ftp:ssl-force true
-          set ftp:ssl-protect-data true
-          set ssl:verify-certificate no
-          set ftp:passive-mode true
-          set net:max-retries 3
-          set net:timeout 30
-          mirror --reverse --verbose --parallel=4 web/ public_html/
-          bye
-          LFTP
+          grep -q '^put \|^mirror ' subir.lftp || { echo "Nada que subir."; exit 0; }
+          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_SERVER" -f subir.lftp
