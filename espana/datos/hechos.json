@@ -1,6 +1,30 @@
 {
- "actualizado": "2026-10-22T10:14Z",
+ "actualizado": "2026-10-22T17:50Z",
  "items": [
+  {
+   "id": "9074c2c1-3a13-4c3d-b109-82cdfc56937b",
+   "tipo": "OIR",
+   "fecha": "2026-10-22 19:33",
+   "entidad": "MAPFRE, S.A.",
+   "nif": "A08055741",
+   "categoria": "Otra información relevante",
+   "titulo": "Rectifica o complementa a la comunicación nº 43252 del 21/10/2026 (14:15)",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b9074c2c1-3a13-4c3d-b109-82cdfc56937b%7d",
+   "ticker": "MAP",
+   "temas": []
+  },
+  {
+   "id": "0d1741d8-09c3-4970-804f-b164176b1ea9",
+   "tipo": "OIR",
+   "fecha": "2026-10-22 19:33",
+   "entidad": "MAPFRE, S.A.",
+   "nif": "A08055741",
+   "categoria": "Otra información relevante",
+   "titulo": "Anuncio webcast seguimiento de la actividad 9M 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b0d1741d8-09c3-4970-804f-b164176b1ea9%7d",
+   "ticker": "MAP",
+   "temas": []
+  },
   {
    "id": "d6a19714-2ef5-4954-bfbf-71e5dfb6164c",
    "tipo": "OIR",
@@ -75,18 +99,6 @@
    "titulo": "Operaciones realizadas por Repsol, S.A. al amparo de su Programa de Recompra de acciones entre el 14 y el 20 de octubre de 2026",
    "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b407e7d41-cfc0-4656-aee8-e83b6ea3aafc%7d",
    "ticker": "REP",
-   "temas": []
-  },
-  {
-   "id": "9074c2c1-3a13-4c3d-b109-82cdfc56937b",
-   "tipo": "OIR",
-   "fecha": "2026-10-21 14:15",
-   "entidad": "MAPFRE, S.A.",
-   "nif": "A08055741",
-   "categoria": "Otra información relevante",
-   "titulo": "Anuncio webcast seguimiento de la actividad 9M 2026",
-   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b9074c2c1-3a13-4c3d-b109-82cdfc56937b%7d",
-   "ticker": "MAP",
    "temas": []
   },
   {
