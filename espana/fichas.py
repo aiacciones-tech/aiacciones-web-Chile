@@ -3,51 +3,63 @@
 # Nada de cifras de ejemplo: si un dato no está en el vídeo o en sus fuentes, no va.
 
 FICHAS = [
-    {
-        "id": "iberdrola",
-        "nombre": "Iberdrola",
-        "ticker": "IBE",
-        "sector": "Eléctricas · redes y renovables",
-        "lede": "Eléctrica con redes reguladas en España, Reino Unido, Estados Unidos y Brasil, y generación renovable. "
-                "Las redes aportan ya más de la mitad del EBITDA. En el primer semestre de 2026 vendió su negocio en México.",
-        "periodo": "1S 2026",
-        "periodo_largo": "primer semestre de 2026",
-        "titular": "Beneficio neto ajustado de 3.565 M€ (+7,8%), un 5,5% por encima del consenso (3.380 M€, Bankinter Análisis). "
-                   "El beneficio reportado, 4.336 M€ (+21,7%), incluye 953 M€ de plusvalía por la venta de México.",
-        "precio": "21,35 €",
-        "precio_fecha": "9-oct-2026",
-        "multiplos": [("PER 12 meses", "25,9x"), ("PER forward", "19,9x"), ("EV/EBITDA", "13,7x"),
-                      ("Rentab. dividendo", "3,2%"), ("FCF yield", "2,2%"), ("Capitalización", "~138.500 M€")],
-        "multiplos_nota": "Con precio de 21,35 € al 9-oct-2026 (stockanalysis.com). A cierre de 2023, 2024 y 2025 el PER era 16,1x, 15,2x y 20,1x. "
-                          "La acción subió un 30% en 12 meses.",
-        "tabla_titulo": "Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025",
-        "tabla": [
-            ("Ingresos", "22.469", "+1,7%"),
-            ("EBITDA ajustado", "8.050", "+7,4%"),
-            ("EBITDA redes", "4.213", "+13%"),
-            ("EBITDA generación y clientes", "3.790", "+1%"),
-            ("Beneficio neto ajustado", "3.565", "+7,8%"),
-            ("Beneficio neto reportado", "4.336", "+21,7%"),
-            ("BPA ajustado (calculado)", "~0,55 €", ""),
-        ],
-        "kpi": "Margen EBITDA 35,8% (34,8% en 1S 2025 comparable). Ingresos +4,2% comparables sin México; EBITDA +8,8% sin divisas. "
-               "Inversión de 7.010 M€ (+25%; redes +42%). Deuda neta ajustada 54.000 M€ (3,5x EBITDA), con previsión de ~56.000 M€ a cierre de año. "
-               "Coste medio de la deuda 5,1%. Liquidez 21.500 M€.",
-        "guia": "Guía 2026 reafirmada: beneficio neto ajustado +8% o más (más de 6.700 M€). Compra del 80% de Caruna (Finlandia) por ~2.000 M€, "
-                "con cierre previsto en el 1T 2027. Dividendo total del ejercicio 0,685 € (+6,2%). Nuevo plan estratégico en 2027.",
-        "positivos": ["Las redes crecen un 13% y su base de activos regulados, un 11%.",
-                      "El beneficio ajustado superó al consenso y la guía anual se mantiene.",
-                      "La venta de México dejó 953 M€ de plusvalía y el dividendo del ejercicio sube un 6,2%."],
-        "riesgos": ["Las divisas: la debilidad del dólar y la libra resta resultados.",
-                    "La deuda sube con la inversión y su coste ya supera el 5%.",
-                    "Buena parte del beneficio depende de decisiones regulatorias en Reino Unido, Estados Unidos y Brasil."],
-        "videos": [("RGgaT31jOxk", "Iberdrola resultados 1S 2026: beneficio ajustado +7,8%, 5,5% sobre el consenso | Redes +13%")],
-        "proximo": "2026-10-21",
-        "fuentes": "Iberdrola, presentación de resultados del primer semestre 2026 (CNMV, 22-jul-2026); Bankinter Análisis (consenso, 22-jul-2026); "
-                   "stockanalysis.com (precio y múltiplos, 9-oct-2026).",
-        "fuentes_corto": "Bankinter Análisis y stockanalysis.com",
-        "elaborado": "12-oct-2026, 08:00",
-    },
+    {'id': 'iberdrola',
+     'nombre': 'Iberdrola',
+     'ticker': 'IBE',
+     'sector': 'Eléctricas · redes y renovables',
+     'lede': 'Eléctrica con redes reguladas en España, Reino Unido, Estados Unidos y Brasil, y generación renovable. Las redes aportan ya el 54% del '
+             'EBITDA. En 2026 vendió su negocio en México a Cox.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 5.816 M€ hasta septiembre (+9,6%), con 953 M€ de plusvalía por la venta de México; beneficio neto ajustado de 5.141 '
+                'M€ (+8,8%; +12,7% sin divisas). Iberdrola eleva su guía 2026 a un crecimiento del beneficio ajustado de al menos el 10% (antes, más del '
+                '8%).',
+     'precio': '21,23 €',
+     'precio_fecha': '20-oct-2026',
+     'multiplos': [('PER 12 meses', '26,0x'),
+                   ('PER forward', '20,0x'),
+                   ('EV/EBITDA', '13,8x'),
+                   ('Precio / valor contable', '2,21x'),
+                   ('Rentab. dividendo', '3,2%'),
+                   ('FCF yield', '2,2%'),
+                   ('Capitalización', '~137.700 M€')],
+     'multiplos_nota': 'Con precio de 21,23 € al cierre del 20-oct-2026, último dato de stockanalysis.com al 21-oct-2026. Con el beneficio neto de 12 '
+                       'meses a septiembre publicado por la empresa (6.794 M€), el PER sería ~20,3x (calculado). A cierre de 2023, 2024 y 2025 el PER '
+                       'era 16,1x, 15,2x y 20,1x, el EV/EBITDA 10,3x, 10,6x y 12,6x y el precio / valor contable 1,23x, 1,35x y 1,92x. La acción subió '
+                       'un 25% en 52 semanas.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ventas', '34.405', '+6,2%'),
+               ('EBITDA ajustado', '11.891', '+7,5%'),
+               ('EBITDA redes', '6.430', '+14,9%'),
+               ('EBITDA generación y clientes', '5.359', '-1,5%'),
+               ('Beneficio neto ajustado', '5.141', '+8,8%'),
+               ('Beneficio neto reportado', '5.816', '+9,6%'),
+               ('Beneficio ajustado 3T (calculado)', '1.576', '+11,0%'),
+               ('BPA', '0,834 €', '+5,8%')],
+     'kpi': 'Margen EBITDA ajustado 34,6% (34,7% en 9M 2025; calculado). Redes por país (EBITDA, en euros): España +18,3%, Reino Unido +18,0%, EE. UU. '
+            '+14,3%, Brasil +9,7%. Inversión de 10.087 M€ (+13%; redes 6.277 M€, +28%); base de activos regulados 56.000 M€ (+14%). Deuda neta ajustada '
+            '54.561 M€ (+4.379 M€ vs diciembre). Coste medio de la deuda 4,93% (4,71%); resultado financiero ajustado -1.687 M€ (-1.163 M€). Liquidez de '
+            'más de 23.000 M€ (unos 20 meses).',
+     'guia': 'Guía 2026 mejorada: beneficio neto ajustado +10% o más (antes, más del 8%), al menos ~6.854 M€ sobre los 6.231 M€ de 2025; los nueve meses '
+             'ya suman el 75% (calculado). Objetivo de crecimiento medio anual del 10% en los próximos cinco años; Capital Markets Day en marzo de 2027. '
+             'Dividendo a cuenta 0,275 € (+8,7%) con Iberdrola Retribución Flexible (importe máximo 1.835 M€): elección del 12 al 25 de enero y pago en '
+             'efectivo el 1-feb-2027 (fechas previstas).',
+     'positivos': ['Las redes crecen un 14,9%, con alzas en España, Reino Unido, Estados Unidos y Brasil.',
+                   'El beneficio ajustado del tercer trimestre sube un 11% (calculado) y la guía 2026 mejora a +10% o más.',
+                   'El dividendo a cuenta sube un 8,7%, hasta 0,275 € por acción.'],
+     'riesgos': ['Las divisas restaron 186 M€ al beneficio ajustado.',
+                 'La deuda sube con la inversión (+4.379 M€ en 2026) y su coste medio llega al 4,93%.',
+                 'Generación y clientes retrocede un 1,5% (España -4,6%).'],
+     'videos': [('3lbnU5uzBKE', 'Iberdrola resultados 3T 2026: beneficio +9,6% y eleva la guía a +10% o más | Redes +14,9%'),
+                ('LpPRcvMZI-4', 'Iberdrola 3T 2026 en 60 segundos (Short)'),
+                ('RGgaT31jOxk', 'Iberdrola resultados 1S 2026: beneficio ajustado +7,8%, 5,5% sobre el consenso | Redes +13%')],
+     'proximo': '2027-02-24',
+     'proximo_estimado': True,
+     'fuentes': 'Iberdrola, resultados de los nueve meses de 2026 (informe, presentación y nota de prensa) y dividendo a cuenta Iberdrola Retribución '
+                'Flexible (CNMV, 21-oct-2026); Europa Press (Infobae, The Objective), Estrategias de Inversión y Smartkarma (21-oct-2026); Iberdrola, '
+                'resultados 1S26 (22-jul-2026) y 2025 (25-feb-2026); stockanalysis.com (precio y múltiplos, oct-2026).',
+     'fuentes_corto': 'Europa Press, Estrategias de Inversión, Smartkarma y stockanalysis.com',
+     'elaborado': '21-oct-2026, 11:10'},
     {
         "id": "redeia",
         "nombre": "Redeia",
@@ -724,52 +736,62 @@ FICHAS = [
      'lede': 'Grupo barcelonés de belleza premium que cotiza en la Bolsa de Madrid desde mayo de 2024. Tres de cada cuatro euros vienen de perfumes y '
              'moda (Rabanne, Carolina Herrera, Jean Paul Gaultier); el resto, de maquillaje (Charlotte Tilbury) y cuidado de la piel (Uriage, y ISDIN al '
              '50%).',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Ventas de 2.354 M€ (+2,4%; +4,4% comparable), con Asia Pacífico +20,9% y Maquillaje +9,1%. Beneficio neto ajustado de 260 M€ (+5,2%); '
-                'el atribuible, 263 M€ (-4,4%), por costes extraordinarios de transacciones. La deuda neta sube a 1.589 M€ (716 M€ en diciembre).',
-     'precio': '19,57 €',
-     'precio_fecha': '16-oct-2026',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026 (actualización de ventas)',
+     'titular': 'Ventas de 1.391 M€ en el tercer trimestre (+7,2%; +5,6% comparable, el mayor ritmo del año), con Maquillaje +16,1% y Cuidado de la piel '
+                '-0,8% comparable. En nueve meses, 3.745 M€ (+4,1%; +4,8% comparable). En el 3T Puig solo publica ventas: beneficio, márgenes y deuda '
+                'son los del 1S 2026.',
+     'precio': '19,59 €',
+     'precio_fecha': '21-oct-2026',
      'multiplos': [('PER 12 meses', '18,7x'),
                    ('PER forward', '16,8x'),
                    ('EV/EBITDA', '11,3x'),
                    ('Precio / valor contable', '2,69x'),
                    ('Rentab. dividendo', '2,15%'),
                    ('FCF yield', '5,4%'),
-                   ('Capitalización', '~11.024 M€')],
-     'multiplos_nota': 'Con precio de 19,57 € al 16-oct-2026 (stockanalysis.com). Puig cotiza desde mayo de 2024, así que solo hay dos cierres de año '
-                       'para comparar: a cierre de 2024 y 2025 el PER era 18,9x y 14,1x, el EV/EBITDA 13,5x y 10,3x, el precio / valor contable 2,84x y '
-                       '2,14x, y la rentabilidad por dividendo 2,11% y 2,83%.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ventas netas', '2.353,7', '+2,4%'),
-               ('Ventas 2T', '1.138,4', '+4,1%'),
-               ('EBITDA ajustado', '459,6', '+3,2%'),
-               ('Resultado operativo', '340,1', '+2,3%'),
-               ('Beneficio neto ajustado', '260,3', '+5,2%'),
-               ('Beneficio neto atribuible', '262,8', '-4,4%'),
-               ('BPA ajustado', '0,46 €', '')],
-     'kpi': 'Margen bruto 75,5% (75,8%); margen EBITDA ajustado 19,5% (19,4%). Ventas comparables: Fragancias y Moda +3,8%, Maquillaje +9,1%, Cuidado de '
-            'la piel +2,3%; Asia Pacífico +20,9%, EMEA +2,6%, América +2,6%. Margen operativo: Fragancias y Moda 19,2% (17,8%), Maquillaje 1,8% (3,6%), '
-            'Cuidado de la piel 1,5% (7,6%). Flujo de caja libre de las operaciones -196 M€ (-116 M€) por el inventario; deuda neta 1.589 M€, 1,5x el '
-            'EBITDA ajustado.',
-     'guia': 'Guía 2026 reiterada: crecer por encima del mercado de belleza premium en términos comparables y mantener estable el margen EBITDA ajustado '
-             '(20,7% en 2025); conversión en caja libre de ~50% del EBITDA ajustado, inversiones del 4-5% de las ventas y deuda neta / EBITDA ajustado '
-             'de 2,0x como máximo. Dividendo de 0,42 € por acción pagado el 17-jun-2026. En septiembre acordó comprar el 50% restante de ISDIN por 1.200 '
-             'M€ (cierre previsto en el 1T27).',
-     'positivos': ['Las ventas se aceleraron al 4,1% en el 2T (+0,8% en el 1T) y Asia Pacífico creció un 20,9% comparable.',
-                   'Gana cuota de mercado (11,1% en perfumería selectiva) y el margen de Fragancias y Moda sube 1,4 puntos.',
-                   'El beneficio ajustado crece un 5,2% y la empresa mantiene su guía anual.'],
-     'riesgos': ['Flujo libre de -196 M€ y deuda neta multiplicada por 2,2 desde diciembre; ISDIN sumará 900 M€ al cierre.',
-                 'El margen operativo de Maquillaje (1,8%) y de Cuidado de la piel (1,5%) cae con fuerza.',
-                 'Dólar, Oriente Medio y aranceles; tras romper con Estée Lauder, el mercado espera la nueva estrategia (28-oct).'],
-     'videos': [('AwK5Blg88WA', 'Puig resultados 1S 2026: ventas +4,4% comparable y beneficio ajustado +5,2% | Deuda neta 1.589 M€'),
+                   ('Capitalización', '~11.035 M€')],
+     'multiplos_nota': 'Precio: cierre del 21-oct-2026 (Bolsamanía), antes de la publicación de las ventas. Múltiplos de stockanalysis.com con 19,57 € '
+                       '(16-oct-2026), que con 19,59 € no cambian (calculado); se basan en el beneficio y el EBITDA de 12 meses hasta junio, porque el '
+                       '3T no trae beneficio. Puig cotiza desde mayo de 2024, así que solo hay dos cierres de año para comparar: a cierre de 2024 y 2025 '
+                       'el PER era 18,9x y 14,1x, el EV/EBITDA 13,5x y 10,3x, el precio / valor contable 2,84x y 2,14x, y la rentabilidad por dividendo '
+                       '2,11% y 2,83%.',
+     'tabla_titulo': 'Millones de euros · ventas 3T y 9M 2026 (variación comparable a/a) y EBITDA ajustado del 1S 2026 (variación a/a)',
+     'tabla': [('Ventas 3T', '1.390,8', '+5,6%'),
+               ('Ventas 9M', '3.744,5', '+4,8%'),
+               ('Fragancias y Moda 9M', '2.702,0', '+3,8%'),
+               ('Maquillaje 9M', '628,5', '+12,0%'),
+               ('Cuidado de la piel 9M', '414,1', '+1,3%'),
+               ('Asia Pacífico 9M', '430,0', '+17,9%'),
+               ('EBITDA ajustado 1S 2026', '459,6', '+3,2%')],
+     'kpi': 'Ventas reportadas: 3T +7,2% (divisas +1,7%); 9M +4,1% (divisas -0,7%, sobre todo el dólar). Comparable por trimestre: 1T +4,7%, 2T +4,1%, '
+            '3T +5,6%. 3T por negocio (comparable): Fragancias y Moda +3,9%, Maquillaje +16,1%, Cuidado de la piel -0,8%; por región: EMEA +3,8%, '
+            'América +6,2%, Asia Pacífico +12,9%. 9M por región: EMEA 1.948,7 M€ (+3,0%), América 1.365,9 M€ (+3,8%), Asia Pacífico 430,0 M€ (+17,9%). '
+            'Último dato de rentabilidad y deuda (1S 2026): margen EBITDA ajustado 19,5% (19,4%); beneficio neto ajustado 260,3 M€ (+5,2%); deuda neta '
+            '1.589 M€ a 30-jun, 1,5x el EBITDA ajustado.',
+     'guia': 'Guía 2026 reiterada el 21-oct-2026: crecer por encima del mercado de belleza premium en términos comparables y mantener estable el margen '
+             'EBITDA ajustado (20,7% en 2025); deuda neta / EBITDA ajustado de 2,0x como máximo y payout de ~40% del beneficio neto reportado. En la '
+             'conferencia: 4T de fragancias similar a los nueve meses, maquillaje frente a un +26,5% del 4T 2025 y cuidado de la piel plano. ISDIN: '
+             'compra del 50% restante por 900 M€ al cierre (previsto a finales del 1T27) y 300 M€ aplazados al 1T29. Capital Markets Day el 28-oct-2026.',
+     'positivos': ['El crecimiento comparable se acelera al 5,6% en el 3T, el mayor del año, por encima del +5,0% que esperaba Jefferies (Reuters).',
+                   'Maquillaje crece un 16,1% comparable en el 3T y todas las regiones suben; América acelera al +6,2%.',
+                   'El dólar suma en el 3T (+1,7%) tras restar en el semestre, y Puig reitera su guía 2026.'],
+     'riesgos': ['Cuidado de la piel cae un 0,8% comparable en el 3T y Puig espera un 4T plano por la debilidad del lujo en Norteamérica.',
+                 'Maquillaje afronta en el 4T una base exigente (+26,5% en el 4T 2025) y Asia Pacífico se modera (+12,9% en el 3T frente a +20,9% en el '
+                 '1S).',
+                 'Sin datos de márgenes ni deuda hasta los resultados anuales; la compra de ISDIN supondrá un pago de 900 M€ al cierre (deuda neta de '
+                 '1.589 M€ en junio).'],
+     'videos': [('9Mf16YKG9Mw', 'Puig ventas 3T 2026: +5,6% comparable, 1.391 M€ | Maquillaje +16,1%, cuidado de la piel -0,8%'),
+                ('2wQMF4z2kTM', 'Puig 3T 2026 en 60 segundos (Short)'),
+                ('AwK5Blg88WA', 'Puig resultados 1S 2026: ventas +4,4% comparable y beneficio ajustado +5,2% | Deuda neta 1.589 M€'),
                 ('hq9OYbh6hSc', 'Puig 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-21',
-     'fuentes': 'Puig, nota de prensa de resultados del primer semestre 2026 (CNMV y puig.com, 30-jul-2026) y resultados 2025 (18-feb-2026); Estrategias '
-                'de Inversión y Bolsamanía/Europa Press (30-jul-2026); FashionUnited (31-jul y 8-jun-2026); Investing.com (conferencia, 30-jul-2026); '
-                'Modaes (ISDIN, 14-sep-2026); Business Wire (Estée Lauder, 21-may-2026); stockanalysis.com (precio y múltiplos, 16-oct-2026).',
-     'fuentes_corto': 'Estrategias de Inversión, Bolsamanía, FashionUnited, Investing.com, Modaes y stockanalysis.com',
-     'elaborado': '17-oct-2026, 08:15'},
+     'proximo': '2027-02-17',
+     'proximo_estimado': True,
+     'fuentes': 'Puig, nota de prensa y presentación de la actualización de ventas del 3T 2026 (CNMV y puig.com, 21-oct-2026) y resultados del primer '
+                'semestre 2026 (30-jul-2026); Reuters vía FashionNetwork (21-oct-2026); Investing.com (conferencia, 21-oct-2026); Estrategias de '
+                'Inversión y Bolsamanía/Europa Press (21-oct-2026); Business Wire (Estée Lauder, 21-may-2026); stockanalysis.com (múltiplos, '
+                '16-oct-2026).',
+     'fuentes_corto': 'Reuters, Investing.com, Estrategias de Inversión, Bolsamanía y stockanalysis.com',
+     'elaborado': '22-oct-2026, 00:18'},
     {'id': 'fluidra',
      'nombre': 'Fluidra',
      'ticker': 'FDR',
