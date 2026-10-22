@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-22T07:11Z",
+ "actualizado": "2026-10-22T10:14Z",
  "items": [
+  {
+   "id": "d6a19714-2ef5-4954-bfbf-71e5dfb6164c",
+   "tipo": "OIR",
+   "fecha": "2026-10-22 11:58",
+   "entidad": "BANCO SANTANDER, S.A.",
+   "nif": "A39000013",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Banco Santander comunica las operaciones sobre acciones propias que ha realizado entre el 15 y el 21 de octubre bajo el programa de recompra",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bd6a19714-2ef5-4954-bfbf-71e5dfb6164c%7d",
+   "ticker": "SAN",
+   "temas": []
+  },
   {
    "id": "87e8907f-4306-4a84-b4c9-b9cc6b2d9b93",
    "tipo": "OIR",
