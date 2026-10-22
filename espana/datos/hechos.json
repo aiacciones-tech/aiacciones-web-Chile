@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-21T15:56Z",
+ "actualizado": "2026-10-22T07:11Z",
  "items": [
+  {
+   "id": "87e8907f-4306-4a84-b4c9-b9cc6b2d9b93",
+   "tipo": "OIR",
+   "fecha": "2026-10-22 08:28",
+   "entidad": "BANKINTER, S.A.",
+   "nif": "A28157360",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad informa de los requisitos mínimos prudenciales de capital para 2027 determinados por el Banco Central Europeo tras el Proceso de Revisión y Evaluación Supervisora (SREP)",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b87e8907f-4306-4a84-b4c9-b9cc6b2d9b93%7d",
+   "ticker": "BKT",
+   "temas": []
+  },
   {
    "id": "d5c0b1dd-4b13-49b4-980a-bcf61e957c0e",
    "tipo": "OIR",
