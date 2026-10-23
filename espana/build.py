@@ -659,7 +659,7 @@ def main():
     escribir("aviso-legal/index.html", aviso_legal())
     escribir("privacidad/index.html", privacidad())
     escribir("contacto/index.html", contacto())
-    for nombre, destino in (("enviar.php", "enviar.php"), ("app.js", "assets/app.js")):
+    for nombre, destino in (("enviar.php", "enviar.php"), ("actualizar.php", "actualizar.php"), ("app.js", "assets/app.js")):
         shutil.copyfile(AQUI / "extra" / nombre, WEB / destino)
     escribir("ads.txt", f"google.com, {ADSENSE_ID.removeprefix('ca-')}, DIRECT, f08c47fec0942fa0\n")
     if DOMINIO:

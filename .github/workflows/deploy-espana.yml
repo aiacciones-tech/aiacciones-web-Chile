@@ -1,6 +1,9 @@
-# Publica la web de AIAcciones España (carpeta espana/web/) por FTPS cada vez que cambia en main.
+# Publica la web de AIAcciones España (carpeta espana/web/) cada vez que cambia en main.
 # Es independiente de la web chilena: otros secretos y otro hosting.
-# Credenciales: Settings > Secrets and variables > Actions > Secrets: FTP_ES_SERVER, FTP_ES_USERNAME, FTP_ES_PASSWORD.
+# Vía principal (desde 23-oct-2026, cuando el hosting cerró el FTP a IPs de fuera de España): copia espana/web/
+# en la rama web-es-publicada y llama a https://aiacciones.es/actualizar.php, que la descarga de GitHub.
+# Si eso falla, sube por FTPS como antes.
+# Credenciales FTP: Settings > Secrets and variables > Actions > Secrets: FTP_ES_SERVER, FTP_ES_USERNAME, FTP_ES_PASSWORD.
 # Carpeta remota: variable FTP_ES_DIR (por defecto aiacciones.es/, la carpeta del dominio en el hosting). Si el hosting no acepta FTPS, variable FTP_ES_TLS = no.
 name: Publicar web España
 concurrency: publicar-espana
@@ -9,6 +12,8 @@ on:
     branches: [main]
     paths: ['espana/web/**', '.github/workflows/deploy-espana.yml']
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -19,15 +24,38 @@ jobs:
       FTP_DIR: ${{ vars.FTP_ES_DIR || 'aiacciones.es/' }}
       FTP_TLS: ${{ vars.FTP_ES_TLS || 'si' }}
     steps:
+      - uses: actions/checkout@v4
+      - name: Copiar la web a la rama web-es-publicada
+        run: |
+          echo "$GITHUB_SHA" > espana/web/version.txt
+          cd espana/web
+          git init -q -b web-es-publicada
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "Web España de $GITHUB_SHA"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" web-es-publicada
+          rm -rf .git
+      - name: Publicar con actualizar.php
+        id: php
+        continue-on-error: true
+        run: |
+          for i in 1 2 3 4; do
+            sleep 10
+            r=$(curl -s --max-time 120 https://aiacciones.es/actualizar.php || true)
+            echo "intento $i: $r"
+            case "$r" in "OK $GITHUB_SHA "*) echo "Publicada por actualizar.php: $r" >> "$GITHUB_STEP_SUMMARY"; exit 0;; esac
+            sleep 20
+          done
+          echo "actualizar.php no respondió OK con esta versión; se prueba por FTP." >> "$GITHUB_STEP_SUMMARY"
+          exit 1
       - name: Revisar que estén los secretos
         id: sec
+        if: steps.php.outcome == 'failure'
         run: |
           if [ -z "$FTP_SERVER" ] || [ -z "$FTP_USERNAME" ] || [ -z "$FTP_PASSWORD" ]; then
             echo "Faltan los secretos FTP_ES_SERVER / FTP_ES_USERNAME / FTP_ES_PASSWORD: no se publica." >> "$GITHUB_STEP_SUMMARY"
             echo "listo=no" >> "$GITHUB_OUTPUT"
           else echo "listo=si" >> "$GITHUB_OUTPUT"; fi
-      - uses: actions/checkout@v4
-        if: steps.sec.outputs.listo == 'si'
       - name: Instalar lftp
         if: steps.sec.outputs.listo == 'si'
         run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
