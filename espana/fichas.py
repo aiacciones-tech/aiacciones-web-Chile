@@ -1077,4 +1077,65 @@ FICHAS = [
                 '(GuruFocus/Yahoo Finance); Bolsarama (precio, 23-oct-2026); stockanalysis.com (múltiplos históricos).',
      'fuentes_corto': 'Investing.com, XTB, Bolsamanía, Bolsarama y stockanalysis.com',
      'elaborado': '23-oct-2026, 15:50'},
+    {'id': 'grifols',
+     'nombre': 'Grifols',
+     'ticker': 'GRF',
+     'sector': 'Farmacia y salud · hemoderivados (plasma)',
+     'lede': 'Compañía de medicamentos derivados del plasma (Biopharma: inmunoglobulinas, albúmina, alfa-1 y proteínas especiales), con más de 400 '
+             'centros de donación, además de diagnóstico (Diagnostic) y Bio Supplies. En el plasma pesan el coste de obtener la materia prima, la mezcla '
+             'de productos, el dólar y la deuda. El IBEX 35 incluye la clase A (GRF); la clase B (GRF.P) no tiene voto y cobra un dividendo preferente.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Beneficio neto de 227 M€ (+28,7%; +13,6% sin extraordinarios). Ingresos de 3.574 M€ (-2,8% en euros; +2,6% a tipo constante), con las '
+                'inmunoglobulinas +12,8%. Flujo de caja libre antes de M&A de 91 M€ (-12 M€ en el 1S 2025) y apalancamiento de 4,2x según Grifols; guía '
+                '2026 confirmada.',
+     'precio': '10,055 € (clase A)',
+     'precio_fecha': '23-oct-2026, 16:25',
+     'multiplos': [('PER 12 meses', '~15,1x'),
+                   ('EV/EBITDA', '~10,4x'),
+                   ('Precio / valor contable', '~0,74x'),
+                   ('Rentab. dividendo', '~2,31%'),
+                   ('Capitalización', '~5.920 M€')],
+     'multiplos_nota': 'Con precio de la clase A de 10,055 € en el BME el 23-oct-2026 a las 16:25 (Bolsarama); múltiplos calculados con datos de 12 '
+                       'meses a junio: BPA 0,66 € (beneficio de 452 M€ y 680,6 M de acciones), dividendo con cargo a 2025 de 0,2324 € por acción A (0,15 '
+                       '+ 0,0824). Capitalización con 422,4 M de acciones A y 258,2 M de acciones B a 6,48 € (stockanalysis, 1-oct-2026). Valor empresa '
+                       '~17.200 M€ con la deuda neta de balance (8.843 M€) y los minoritarios (2.434 M€); EBITDA de 12 meses de stockanalysis (1.650 '
+                       'M€); con el EBITDA ajustado de Grifols (1.803 M€), ~9,5x. Precio / valor contable sobre el patrimonio neto total (7.980 M€). A '
+                       'cierre de 2023, 2024 y 2025 (stockanalysis.com, datos S&P Global) el PER era 219,8x, 36,2x y 16,3x, el EV/EBITDA 19,1x, 10,8x y '
+                       '10,5x, el precio / valor contable 1,23x, 0,66x y 0,86x, y la rentabilidad por dividendo 0%, 0% y 2,19% (calculada).',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Ingresos', '3.574', '-2,8% (+2,6% a tipo constante)'),
+               ('Biopharma', '3.148', '-0,2% (+5,4% a tipo constante)'),
+               ('Diagnostic', '284', '-14,3% (-9,7% a tipo constante)'),
+               ('Bio Supplies', '50', '-27,0% (-21,7% a tipo constante)'),
+               ('EBITDA ajustado', '854', '-2,5% (+2,4% a tipo constante)'),
+               ('Beneficio neto', '227', '+28,7%'),
+               ('BPA', '0,33 €', '+27% (calculado)'),
+               ('Flujo de caja libre antes de M&A', '91', '-12 en 1S 2025')],
+     'kpi': 'Margen EBITDA ajustado 23,9% (23,8%; calculado); 2T 25,2%. Biopharma por franquicia (tipo constante): inmunoglobulinas +12,8% (intravenosas '
+            '+12,5%, subcutáneas +17,7%), albúmina -14,2% (precios en China), alfa-1 y proteínas especiales -2,6% (+2,0% en el 2T). Margen bruto 37,1% '
+            '(39,1%), con ~40 M€ de costes puntuales por el cierre de 29 centros en EE. UU. Red: ~280 centros en EE. UU. y más de 130 en el resto del '
+            'mundo; Grifols no publica el coste por litro. Deuda neta 7.798 M€ según el contrato de crédito (8.843 M€ en balance), 4,2x EBITDA según '
+            'Grifols; liquidez 2.030 M€. Vencimientos de 2027 refinanciados y 500 M€ del bono 2030 amortizados: sin vencimientos relevantes hasta el 4T '
+            '2028.',
+     'guia': 'Guía 2026 confirmada: EBITDA ajustado +5% a +9% a tipo constante, margen de al menos el 25% y flujo de caja libre antes de M&A y '
+             'dividendos de 500-575 M€ (el 1S lleva 91 M€, el 16-18%; calculado). Objetivo de apalancamiento de 3,5x o menos a finales de 2027. Egipto: '
+             '180 M€ más hasta 2029 para llegar a 3 millones de litros de plasma al año. Dividendo con cargo a 2025: ~0,23 € brutos por acción A (0,15 € '
+             'en agosto de 2025 y 0,082 € el 2 de julio de 2026).',
+     'positivos': ['El beneficio neto sube un 28,7%, hasta 227 M€, y el margen EBITDA ajustado del 2T llega al 25,2%.',
+                   'Las inmunoglobulinas crecen un 12,8% a tipo constante (subcutáneas +17,7%).',
+                   'Flujo de caja libre positivo (91 M€) y vencimientos de 2027 refinanciados.'],
+     'riesgos': ['El apalancamiento sigue en 4,2x, frente al objetivo de 3,5x o menos a finales de 2027.',
+                 'La albúmina cae un 14,2% y el dólar resta crecimiento en euros.',
+                 'Para cumplir la guía de caja necesita más de 400 M€ en el segundo semestre (calculado).'],
+     'videos': [('ZmBOEO1agsY', 'Grifols resultados 1S 2026: beneficio +28,7%, hasta 227 M€ | Inmunoglobulinas +12,8%, deuda en 4,2x'),
+                ('xrWR9VfrbhY', 'Grifols 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-11-03',
+     'proximo_estimado': True,
+     'fuentes': 'Grifols, nota de prensa, presentación y estados financieros intermedios del 1S 2026 (28-jul-2026, CNMV y SEC), resultados 2025 '
+                '(26-feb-2026) y dividendos (CNMV/SEC, jun-2025 y jun-2026); Investing.com (presentación y conferencia, 28-jul-2026); Europa '
+                'Press/Bolsamanía (28-jul-2026); Benzinga España (29-jul-2026); Bolsarama (precio, 23-oct-2026); stockanalysis.com (múltiplos '
+                'históricos).',
+     'fuentes_corto': 'Investing.com, Europa Press, Bolsamanía, Benzinga España, Bolsarama y stockanalysis.com',
+     'elaborado': '23-oct-2026, 17:00'},
 ]
