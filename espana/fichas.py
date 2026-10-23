@@ -1022,4 +1022,59 @@ FICHAS = [
                 'stockanalysis.com (acciones y múltiplos históricos).',
      'fuentes_corto': 'XTB, Renta 4 Banco, Estrategias de Inversión, Bolsamanía y stockanalysis.com',
      'elaborado': '23-oct-2026, 12:35'},
+    {'id': 'acerinox',
+     'nombre': 'Acerinox',
+     'ticker': 'ACX',
+     'sector': 'Siderurgia',
+     'lede': 'Fabricante de acero inoxidable (Acerinox Europa en Algeciras, North American Stainless en EE. UU. y Columbus en Sudáfrica) y de aleaciones '
+             'de alto rendimiento (VDM Metals y Haynes International). En el acero pesan las toneladas, el precio frente al coste de las materias primas '
+             '(níquel, chatarra), la energía y el capital circulante.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Beneficio neto de 77 M€, frente a pérdidas de 18 M€ en el 1S 2025; EBITDA de 271 M€ (+27%). El EBITDA del 2T (176 M€, +85% frente al '
+                '1T) superó en un 16,6% el consenso elaborado por la compañía (calculado). Flujo de caja libre de -105 M€ y deuda neta de 1.361 M€.',
+     'precio': '16,64 €',
+     'precio_fecha': '23-oct-2026, 15:30',
+     'multiplos': [('PER 12 meses', '~75x'),
+                   ('EV/EBITDA', '~13,4x'),
+                   ('Precio / valor contable', '~1,94x'),
+                   ('Rentab. dividendo', '~3,73%'),
+                   ('Capitalización', '~4.150 M€')],
+     'multiplos_nota': 'Con precio de 16,64 € en el BME el 23-oct-2026 a las 15:30 (Bolsarama); múltiplos calculados con 249,3 M de acciones y datos de '
+                       '12 meses a junio de Acerinox (beneficio neto 55 M€, EBITDA 411 M€, deuda neta 1.361 M€, patrimonio neto 2.140 M€, dividendo 0,62 '
+                       '€). El PER es muy alto porque el beneficio de 12 meses incluye las pérdidas del 2S 2025. A cierre de 2023, 2024 y 2025 '
+                       '(stockanalysis.com, datos S&P Global) el PER era 11,6x, 10,5x y - (pérdidas), el EV/EBITDA 4,3x, 7,8x y 12,8x, la rentabilidad '
+                       'por dividendo 6,66%, 7,13% y 5,07%, y el precio / valor contable 1,08x, 0,92x y 1,50x.',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Ventas', '2.966', '-3,0%'),
+               ('EBITDA', '271', '+26,6%'),
+               ('EBITDA 2T', '176', '+57% (calculado)'),
+               ('EBITDA acero inoxidable', '236', '+66% (calculado)'),
+               ('EBITDA aleaciones de alto rendimiento', '35', '-51% (calculado)'),
+               ('Beneficio neto', '77', '-18 en 1S 2025'),
+               ('Flujo de caja libre', '-105', '+91 en 1S 2025')],
+     'kpi': 'Margen EBITDA 9,1% (7,0%; calculado); 2T 11%. Producción de acería 1,03 Mt (+2%); 2T 540.000 t (+8%); laminación en frío del inoxidable '
+            '615.000 t (-1%). Ventas: inoxidable 2.246 M€ (+3,2%), aleaciones 729 M€ (-18,4%). EE. UU. (North American Stainless) es el motor, con su '
+            'ampliación de 244 M$ terminada; en Europa las importaciones caen un 31% y Acerinox Europa logra EBITDA positivo en junio; VDM Metals lastra '
+            'las aleaciones. Flujo operativo 43 M€ tras 146 M€ de circulante; inversiones 148 M€. Deuda neta 1.361 M€ (+172 M€ desde diciembre, '
+            'calculado), 2,5x EBITDA anualizado.',
+     'guia': 'Acerinox espera un EBITDA del 3T "ligeramente superior" al del 2T (176 M€), pese a la estacionalidad y las paradas de mantenimiento, con '
+             'EE. UU. fuerte y Europa mejorando con las nuevas cuotas (-55%) y el arancel del 50% fuera de cuota desde julio. La bajada del níquel '
+             'afectará a los precios; prevé reducir el circulante. Beyond Excellence: 112 M€ acumulados (93% del objetivo de 120 M€). Dividendo con '
+             'cargo a 2025: 0,62 € por acción (0,31 € en enero y 0,31 € el 17 de julio).',
+     'positivos': ['Vuelve a beneficios y el EBITDA del 2T supera en un 16,6% el consenso de la compañía (calculado).',
+                   'El acero inoxidable dispara su EBITDA (+66%), con EE. UU. como motor.',
+                   'Europa mejora con menos importaciones y la empresa espera un 3T algo mejor que el 2T.'],
+     'riesgos': ['El flujo de caja libre es negativo (-105 M€) y la deuda neta sube hasta 1.361 M€.',
+                 'Las aleaciones de alto rendimiento ganan la mitad que hace un año, con VDM por debajo de lo esperado.',
+                 'La bajada del níquel y un consumo de planos en EE. UU. un 8% menor en el semestre.'],
+     'videos': [('IuxWhvplVuQ', 'Acerinox resultados 1S 2026: vuelve a beneficios con 77 M€ | EBITDA 2T 176 M€, +85% trimestral'),
+                ('9rnH1TvvMdw', 'Acerinox 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-10-30',
+     'proximo_estimado': False,
+     'fuentes': 'Acerinox, nota de prensa, informe de gestión intermedio y presentación de resultados 1S 2026 (24-jul-2026), resultados 2025 '
+                '(27-feb-2026) y agenda del inversor; Investing.com (consenso, 24-jul-2026); XTB y Bolsamanía (24-jul-2026); conferencia con analistas '
+                '(GuruFocus/Yahoo Finance); Bolsarama (precio, 23-oct-2026); stockanalysis.com (múltiplos históricos).',
+     'fuentes_corto': 'Investing.com, XTB, Bolsamanía, Bolsarama y stockanalysis.com',
+     'elaborado': '23-oct-2026, 15:50'},
 ]
