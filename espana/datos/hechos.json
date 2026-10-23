@@ -1,6 +1,66 @@
 {
- "actualizado": "2026-10-21T15:56Z",
+ "actualizado": "2026-10-23T07:08Z",
  "items": [
+  {
+   "id": "593bfbe6-0cf5-4a7c-b805-2bcd7d2640de",
+   "tipo": "OIR",
+   "fecha": "2026-10-23 09:06",
+   "entidad": "CAIXABANK, S.A.",
+   "nif": "A08663619",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información relativa a la ejecución de su Programa de recompra de acciones propias.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b593bfbe6-0cf5-4a7c-b805-2bcd7d2640de%7d",
+   "ticker": "CABK",
+   "temas": []
+  },
+  {
+   "id": "9074c2c1-3a13-4c3d-b109-82cdfc56937b",
+   "tipo": "OIR",
+   "fecha": "2026-10-22 19:33",
+   "entidad": "MAPFRE, S.A.",
+   "nif": "A08055741",
+   "categoria": "Otra información relevante",
+   "titulo": "Rectifica o complementa a la comunicación nº 43252 del 21/10/2026 (14:15)",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b9074c2c1-3a13-4c3d-b109-82cdfc56937b%7d",
+   "ticker": "MAP",
+   "temas": []
+  },
+  {
+   "id": "0d1741d8-09c3-4970-804f-b164176b1ea9",
+   "tipo": "OIR",
+   "fecha": "2026-10-22 19:33",
+   "entidad": "MAPFRE, S.A.",
+   "nif": "A08055741",
+   "categoria": "Otra información relevante",
+   "titulo": "Anuncio webcast seguimiento de la actividad 9M 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b0d1741d8-09c3-4970-804f-b164176b1ea9%7d",
+   "ticker": "MAP",
+   "temas": []
+  },
+  {
+   "id": "d6a19714-2ef5-4954-bfbf-71e5dfb6164c",
+   "tipo": "OIR",
+   "fecha": "2026-10-22 11:58",
+   "entidad": "BANCO SANTANDER, S.A.",
+   "nif": "A39000013",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Banco Santander comunica las operaciones sobre acciones propias que ha realizado entre el 15 y el 21 de octubre bajo el programa de recompra",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bd6a19714-2ef5-4954-bfbf-71e5dfb6164c%7d",
+   "ticker": "SAN",
+   "temas": []
+  },
+  {
+   "id": "87e8907f-4306-4a84-b4c9-b9cc6b2d9b93",
+   "tipo": "OIR",
+   "fecha": "2026-10-22 08:28",
+   "entidad": "BANKINTER, S.A.",
+   "nif": "A28157360",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad informa de los requisitos mínimos prudenciales de capital para 2027 determinados por el Banco Central Europeo tras el Proceso de Revisión y Evaluación Supervisora (SREP)",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b87e8907f-4306-4a84-b4c9-b9cc6b2d9b93%7d",
+   "ticker": "BKT",
+   "temas": []
+  },
   {
    "id": "d5c0b1dd-4b13-49b4-980a-bcf61e957c0e",
    "tipo": "OIR",
@@ -51,18 +111,6 @@
    "titulo": "Operaciones realizadas por Repsol, S.A. al amparo de su Programa de Recompra de acciones entre el 14 y el 20 de octubre de 2026",
    "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b407e7d41-cfc0-4656-aee8-e83b6ea3aafc%7d",
    "ticker": "REP",
-   "temas": []
-  },
-  {
-   "id": "9074c2c1-3a13-4c3d-b109-82cdfc56937b",
-   "tipo": "OIR",
-   "fecha": "2026-10-21 14:15",
-   "entidad": "MAPFRE, S.A.",
-   "nif": "A08055741",
-   "categoria": "Otra información relevante",
-   "titulo": "Anuncio webcast seguimiento de la actividad 9M 2026",
-   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b9074c2c1-3a13-4c3d-b109-82cdfc56937b%7d",
-   "ticker": "MAP",
    "temas": []
   },
   {

@@ -27,7 +27,7 @@ ADSENSE_ID = "ca-pub-5018554010876151"
 # En España los anuncios exigen una plataforma de consentimiento certificada por Google (TCF). Cuando el mensaje de
 # «Reglamentos europeos» esté publicado en AdSense (Privacidad y mensajes), poner True: se quita nuestro aviso de cookies,
 # el de Google pide el consentimiento (también el de Analytics, por el modo de consentimiento) y «Configurar cookies» lo reabre.
-CMP_GOOGLE = False
+CMP_GOOGLE = True
 
 # Rellenar cuando estén: dominio (sin barra final) y datos del titular que exige la LSSI (art. 10).
 DOMINIO = "https://aiacciones.es"
@@ -674,7 +674,7 @@ def main():
     escribir("aviso-legal/index.html", aviso_legal())
     escribir("privacidad/index.html", privacidad())
     escribir("contacto/index.html", contacto())
-    for nombre, destino in (("enviar.php", "enviar.php"), ("app.js", "assets/app.js")):
+    for nombre, destino in (("enviar.php", "enviar.php"), ("actualizar.php", "actualizar.php"), ("app.js", "assets/app.js")):
         shutil.copyfile(AQUI / "extra" / nombre, WEB / destino)
     escribir("ads.txt", f"google.com, {ADSENSE_ID.removeprefix('ca-')}, DIRECT, f08c47fec0942fa0\n")
     if DOMINIO:

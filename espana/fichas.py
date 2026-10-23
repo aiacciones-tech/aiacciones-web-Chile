@@ -108,52 +108,62 @@ FICHAS = [
         "fuentes_corto": "Renta 4 Banco, Investing.com, Bankinter Análisis, Estrategias de Inversión, elDiario.es, Merca2 y stockanalysis.com",
         "elaborado": "12-oct-2026, 16:00",
     },
-    {
-        "id": "bankinter",
-        "nombre": "Bankinter",
-        "ticker": "BKT",
-        "sector": "Banca",
-        "lede": "Banco español con negocio en España, Portugal e Irlanda, centrado en banca de empresas, banca privada y gestión de patrimonios. "
-                "En un banco, los ingresos son el margen bruto y la calidad del balance se mide con la morosidad y el capital.",
-        "periodo": "1S 2026",
-        "periodo_largo": "primer semestre de 2026",
-        "titular": "Beneficio neto de 605 M€ (+11,7%), su mayor beneficio semestral. El 2T (315 M€) superó al consenso en un 8% según Renta 4; "
-                   "Jefferies señala 23 M€ de comisiones extraordinarias y, sin ellas, un resultado antes de impuestos prácticamente en línea.",
-        "precio": "15,00 €",
-        "precio_fecha": "9-oct-2026",
-        "multiplos": [("PER 12 meses", "12,2x"), ("PER forward", "10,8x"), ("Precio / valor en libros", "~2,0x"),
-                      ("Rentab. dividendo", "4,0%"), ("Capitalización", "~13.480 M€")],
-        "multiplos_nota": "Con precio de 15,00 € al 9-oct-2026 (stockanalysis.com); precio / valor en libros calculado. A cierre de 2022, 2023 y 2024 el PER era 10,3x, 6,2x y 7,2x, "
-                          "y el precio / valor en libros 1,15x, 0,98x y 1,17x. En un banco no se usan EV/EBITDA ni flujo de caja libre.",
-        "tabla_titulo": "Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025",
-        "tabla": [
-            ("Margen de intereses", "1.160", "+5,4%"),
-            ("Comisiones netas", "440,4", "~+16%"),
-            ("Margen bruto", "1.603", "+7,3%"),
-            ("Costes", "550,6", "+2,7%"),
-            ("Margen de explotación", "1.052,4", "+9,8%"),
-            ("Beneficio neto", "605", "+11,7%"),
-            ("BPA (calculado)", "~0,67 €", "+11,7%"),
-        ],
-        "kpi": "Eficiencia 34,3% (35,9% en 1S 2025, calculado); ROE 19,1%; ROTE 20,4%. Morosidad 1,92% (−22 pb), cobertura 69,2%, coste del riesgo 32 pb. "
-               "CET1 12,91% (mínimo BCE 8,58%). Crédito 87.153 M€ (+4,6%); recursos de clientes y gestionados 162.085 M€ (+9,6%); nueva producción hipotecaria −16%. "
-               "Beneficio antes de impuestos: España 716 M€ (+11%), Portugal 114 M€ (+9%); Irlanda, crédito 5.200 M€ (+24%).",
-        "guia": "Guía 2026 (según Renta 4): margen de intereses creciendo en línea con el crédito, diferencial de clientes ~2,7%, comisiones con crecimiento de un dígito alto, "
-                "eficiencia por debajo del 35%, coste del riesgo 33 pb y crédito creciendo a un dígito medio (en el semestre, algo menos del 4%).",
-        "positivos": ["Comisiones netas ~+16% y fondos de terceros casi +24%.",
-                      "Eficiencia del 34,3%: los costes suben un 2,7% y el margen bruto un 7,3%.",
-                      "Menos morosidad (1,92%) y más capital (CET1 12,91%)."],
-        "riesgos": ["Parte de la sorpresa del 2T vino de 23 M€ de comisiones extraordinarias.",
-                    "El crédito crece por debajo de la guía y la nueva producción hipotecaria cae un 16%.",
-                    "Según Jefferies, el margen de intereses tiene menos recorrido de mejora que en otros bancos."],
-        "videos": [("k7qJSVY5__k", "Bankinter resultados 1S 2026: beneficio récord +11,7%; el 2T supera al consenso | Eficiencia 34,3%"),
-                   ("oboYRN0_OH4", "Bankinter 1S 2026 en 60 segundos (Short)")],
-        "proximo": "2026-10-22",
-        "fuentes": "Bankinter, nota de resultados del primer semestre 2026 (23-jul-2026, CNMV y bankinter.com); Renta 4 Banco / Capitalbolsa (consenso y guía, 23-jul-2026); "
-                   "Jefferies / Bolsamania (extraordinarios, 23-jul-2026); stockanalysis.com (precio y múltiplos, 9-oct-2026).",
-        "fuentes_corto": "Renta 4 Banco, Jefferies, Capitalbolsa, Bolsamania y stockanalysis.com",
-        "elaborado": "13-oct-2026, 17:00",
-    },
+    {'id': 'bankinter',
+     'nombre': 'Bankinter',
+     'ticker': 'BKT',
+     'sector': 'Banca',
+     'lede': 'Banco español con negocio en España, Portugal e Irlanda, centrado en banca de empresas, banca privada y gestión de patrimonios; desde '
+             'agosto de 2026 incluye Tulp (hipotecas en Países Bajos). En un banco, los ingresos son el margen bruto y la calidad del balance se mide '
+             'con la morosidad y el capital.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 901 M€ hasta septiembre (+11%), con un margen de intereses en niveles récord (1.762 M€, +5,7%) y comisiones netas '
+                '+12,9%. El beneficio del 3T (~296 M€, +9,5%; calculado) quedó prácticamente en línea con el consenso, pero los ingresos del trimestre, '
+                'un 2% por debajo, y la acción caía un 4,8% a media mañana (Bolsamanía).',
+     'precio': '14,555 €',
+     'precio_fecha': '22-oct-2026, 10:03',
+     'multiplos': [('PER 12 meses', '~11,1x'),
+                   ('PER forward', '~10,6x'),
+                   ('Precio / valor en libros', '~1,95x'),
+                   ('Rentab. dividendo', '~4,2%'),
+                   ('Capitalización', '~13.080 M€')],
+     'multiplos_nota': 'Con precio de 14,555 € el 22-oct-2026 a las 10:03 (Bolsamanía); todos los múltiplos calculados con datos de stockanalysis.com '
+                       '(898,69 M de acciones, valor contable 7,46 € por acción, dividendo 0,61 €, PER forward 10,78x a 14,86 €) y el beneficio neto de '
+                       '12 meses a septiembre (1.179 M€). A cierre de 2022, 2023, 2024 y 2025 el PER era 10,3x, 6,2x, 7,2x y 11,7x, y el precio / valor '
+                       'en libros 1,15x, 0,98x, 1,17x y 1,98x. En un banco no se usan EV/EBITDA ni flujo de caja libre.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Margen de intereses', '1.762', '+5,7%'),
+               ('Comisiones netas', '651', '+12,9%'),
+               ('Margen bruto', '2.397', '+6,5%'),
+               ('Costes operativos', '833,9', '+2,3%'),
+               ('Margen antes de provisiones', '1.563,6', '+8,8%'),
+               ('Beneficio neto', '901', '+11%'),
+               ('Beneficio neto 3T (calculado)', '~296', '+9,5%'),
+               ('BPA (calculado)', '~1,00 €', '+11%')],
+     'kpi': 'Eficiencia 34,8% (36,1% hace un año); ROE 19,2%; ROTE 20,4%. Morosidad 1,84% (−21 pb), cobertura 66,8%, coste del riesgo 33 pb. CET1 13,2% '
+            '(mínimo BCE 8,6%). Crédito 87.134 M€ (+5,6%); recursos de clientes y gestionados 163.008 M€ (+7,9%); fuera de balance +15,2%; nueva '
+            'producción hipotecaria del 3T, más de 1.500 M€ (+8%). Beneficio antes de impuestos: España 1.050 M€ (+10%), Portugal 178 M€ (+13%), Irlanda '
+            '41 M€ (+21%).',
+     'guia': 'Guía 2026 (conferencia del 22-oct-2026): margen de intereses subiendo cada trimestre, comisiones con crecimiento de doble dígito bajo (en '
+             'julio, un dígito alto), eficiencia por debajo del 35%, coste del riesgo de unos 33 pb, crédito creciendo a un dígito medio y CET1 de '
+             'alrededor del 13% a fin de año, tras las compras de Tulp (−16 pb) y de Plenium y Access Capital Partners (unos −25 pb, pendiente). Para '
+             'superar el récord de 2025 (1.090 M€) necesita más de 189 M€ en el 4T (calculado).',
+     'positivos': ['El margen de intereses sube por sexto trimestre seguido (3T: 602 M€, +6% a/a).',
+                   'Comisiones +12,9% y recursos fuera de balance +15,2%; la guía de comisiones mejora.',
+                   'Menos morosidad (1,84%) y más capital (CET1 13,2%).'],
+     'riesgos': ['Los ingresos del 3T quedaron un 2% por debajo del consenso y la acción caía un 4,8%.',
+                 'Sin los 23 M€ extraordinarios del 2T, las comisiones crecen en torno a un 9%.',
+                 'El coste de los depósitos sube (86 pb frente a 82 pb) y las compras consumen capital.'],
+     'videos': [('O141MKpxQEo', 'Bankinter resultados 3T 2026: beneficio +11% con margen récord; ingresos del 3T bajo el consenso'),
+                ('YgVQ-5CaJRA', 'Bankinter 3T 2026 en 60 segundos (Short)'),
+                ('k7qJSVY5__k', 'Bankinter resultados 1S 2026: beneficio récord +11,7%; el 2T supera al consenso | Eficiencia 34,3%')],
+     'proximo': '2027-01-21',
+     'proximo_estimado': True,
+     'fuentes': 'Bankinter, nota de resultados de los nueve meses de 2026 (22-oct-2026, CNMV y bankinter.com); presentación y conferencia de resultados '
+                '9M26 (Investing.com); EFE (Diario de Santiago), Bolsamanía y Demócrata (22-oct-2026); Bankinter, resultados 1S26 (23-jul-2026); '
+                'stockanalysis.com (precio y múltiplos, oct-2026).',
+     'fuentes_corto': 'Investing.com, EFE, Bolsamanía y stockanalysis.com',
+     'elaborado': '22-oct-2026, 11:15'},
     {'id': 'santander',
      'nombre': 'Banco Santander',
      'ticker': 'SAN',
@@ -900,4 +910,232 @@ FICHAS = [
                 '22-jul-2026); Bolsamanía/Europa Press (22-jul-2026); stockanalysis.com (precio y múltiplos, 16-oct-2026).',
      'fuentes_corto': 'Capitalbolsa, XTB, Investing.com, Bolsamanía y stockanalysis.com',
      'elaborado': '17-oct-2026, 08:15'},
+    {'id': 'mapfre',
+     'nombre': 'Mapfre',
+     'ticker': 'MAP',
+     'sector': 'Seguros',
+     'lede': 'Mayor aseguradora española, con negocio en Iberia (España y Portugal), Brasil y el resto de Latinoamérica, Norteamérica, EMEA y el '
+             'reaseguro de MAPFRE RE. En una aseguradora, los ingresos se miden con las primas y la rentabilidad técnica con el ratio combinado No Vida '
+             '(siniestros y gastos sobre primas; por debajo del 100%, el seguro gana dinero); la fortaleza del balance, con el ratio de Solvencia II.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Beneficio neto de 624,2 M€ (+9,4%) con un ratio combinado No Vida del 92,8% (-0,3 pp), pero primas casi planas (16.127 M€, +1,1%). '
+                'Renta 4 lo calificó de "lectura mixta" (beneficio en línea con el consenso y primas No Vida por debajo). Junto a las cuentas, Mapfre '
+                'anunció la compra de Safety Insurance (EE. UU.) por 1.542 M$ y la acción cayó un 4,7% el 24-jul-2026 (Merca2).',
+     'precio': '4,35 €',
+     'precio_fecha': '23-oct-2026, 11:57',
+     'multiplos': [('PER 12 meses', '~11,1x'),
+                   ('PER forward', '~10,4x'),
+                   ('Precio / valor en libros', '~1,2x'),
+                   ('Rentab. dividendo', '4,1%'),
+                   ('Capitalización', '~13.350 M€')],
+     'multiplos_nota': 'Con precio de 4,35 € el 23-oct-2026 a las 11:57 (Bolsarama); múltiplos de stockanalysis.com (PER 11,12x, forward 10,37x y P/VC '
+                       '1,20x a 4,352 €; 3.070 M de acciones; dividendo 0,18 €) ajustados a ese precio (calculado). A cierre de 2022, 2023, 2024 y 2025 '
+                       'el PER era 9,8x, 8,8x, 7,8x y 11,6x, el precio / valor en libros 0,62x, 0,62x, 0,75x y 1,25x, y la rentabilidad por dividendo '
+                       '9,5%, 8,6%, 7,0% y 4,3%. En una aseguradora no se usan EV/EBITDA ni flujo de caja libre.',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Primas', '16.127', '+1,1%'),
+               ('Primas No Vida', '12.314', '+0,3%'),
+               ('Primas Vida', '3.813', '+3,8%'),
+               ('Ingresos totales', '19.008', '+1,5%'),
+               ('Ratio combinado No Vida', '92,8%', '-0,3 pp'),
+               ('Beneficio neto', '624,2', '+9,4%'),
+               ('Beneficio neto 2T (calculado)', '~313', '+6,3%'),
+               ('BPA (calculado)', '~0,20 €', '+9,4%')],
+     'kpi': 'ROE 12,5% (13,4% sin extraordinarios). Fondos propios 9.592 M€ (+7,1% en el año). Solvencia II 208,8% a junio (206,8% en marzo; rango '
+            'objetivo 175%-225%). Beneficio por unidad: Iberia 278,6 M€ (+16,6%; ratio combinado 93,7%), MAPFRE RE 185,6 M€ (+24,6%; 95,2%), Brasil '
+            '136,3 M€ (+4,3%; 73,8%), Otros LATAM 81,3 M€ (-12,2%; 99,1%), Norteamérica 68,8 M€ (+14,1%; 94,6%), EMEA -4,6 M€ (107,4%). Dividendo con '
+            'cargo a 2025: 0,18 € por acción (+12,5%), ~554 M€.',
+     'guia': 'Objetivos 2026 (Junta General, 13-mar-2026): ROE por encima del 13% y ratio combinado del 93%-94%; en el semestre, 12,5% (13,4% sin '
+             'extraordinarios) y 92,8%. Compra de Safety Insurance (Massachusetts, EE. UU.) por 1.542 M$ (~1.352 M€) en efectivo: cierre previsto en el '
+             '1T27, unos -10 pp de Solvencia II, financiación con deuda subordinada, senior y bancaria, y alrededor de un +5% de beneficio una vez '
+             'integrada.',
+     'positivos': ['Beneficio +9,4% con un ratio combinado del 92,8%, mejor que el objetivo del año.',
+                   'Iberia (+16,6%) y MAPFRE RE (+24,6%) crecen a doble dígito.',
+                   'Solvencia II del 208,8% y mejora de la calificación de S&P (24-jul-2026).'],
+     'riesgos': ['Las primas apenas crecen (+1,1%) y las de No Vida quedaron por debajo del consenso (Renta 4).',
+                 'Safety resta unos 10 puntos de solvencia y añade deuda; la acción cayó un 4,7% tras el anuncio.',
+                 'Otros LATAM (México, Colombia) y EMEA empeoran, y el dólar resta en euros.'],
+     'videos': [('gNyZYk8oDnM', 'Mapfre resultados 1S 2026: beneficio 624 M€ (+9,4%) y ratio combinado 92,8% | Primas +1,1%; Safety'),
+                ('AJZm7q7mTpo', 'Mapfre 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-10-28',
+     'proximo_estimado': False,
+     'fuentes': 'Mapfre, nota de prensa y carátula CNMV de resultados del primer semestre 2026 (23-jul-2026, mapfre.com); Mapfre, ratio de solvencia a '
+                'junio (CNMV, 4-sep-2026), Junta General (13-mar-2026) y aviso de teleconferencia 9M 2026 (CNMV, 21-oct-2026); Renta 4 / Bolsamanía '
+                '(23-jul-2026); Inese (24-jul-2026); Bolsamanía (1T26, 29-abr-2026); Merca2, Infobae / Europa Press e Investing.com (reacción, '
+                'jul-2026); Bolsarama (precio, 23-oct-2026); stockanalysis.com (múltiplos, oct-2026).',
+     'fuentes_corto': 'Renta 4 / Bolsamanía, Inese, Merca2, Bolsarama y stockanalysis.com',
+     'elaborado': '23-oct-2026, 12:30'},
+    {'id': 'iag',
+     'nombre': 'IAG',
+     'ticker': 'IAG',
+     'sector': 'Aerolíneas',
+     'lede': 'International Airlines Group es el grupo de British Airways, Iberia, Vueling, Aer Lingus y LEVEL, además de IAG Loyalty (Avios) e IAG '
+             'Cargo. Cotiza en Madrid (IBEX 35) y Londres. En una aerolínea pesan la capacidad (AKO), la ocupación, el ingreso por asiento-kilómetro y '
+             'el combustible.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Beneficio neto de 1.033 M€ (-20,6%) por el encarecimiento del combustible; beneficio operativo antes de excepcionales de 1.757 M€ '
+                '(-6,4%), con un 2T (1.406 M€) un 2,8% por encima del consenso que recoge Renta 4 (calculado). Flujo de caja libre de 2.905 M€ y deuda '
+                'neta de 4.692 M€ (0,6x EBITDA).',
+     'precio': '4,78 €',
+     'precio_fecha': '23-oct-2026, 11:52',
+     'multiplos': [('PER 12 meses', '~7,1x'),
+                   ('EV/EBITDA', '~3,4x'),
+                   ('Rentab. dividendo', '~2,05%'),
+                   ('FCF yield', '~18,8%'),
+                   ('Capitalización', '~21.000 M€')],
+     'multiplos_nota': 'Con precio de 4,78 € en el BME el 23-oct-2026 a las 11:52 (Bolsamanía); múltiplos calculados con ~4.400 M de acciones '
+                       '(stockanalysis.com) y datos de 12 meses de IAG (BPA básico 66,9 céntimos, EBITDA 7.640 M€, deuda neta 4.692 M€, dividendo 2025 '
+                       'de 0,098 €, flujo libre 3.954 M€). A cierre de 2023, 2024 y 2025 (stockanalysis, cotización de Londres) el PER era 3,3x, 6,5x y '
+                       '6,5x, el EV/EBITDA 4,4x, 4,9x y 4,6x, la rentabilidad por dividendo -, 2,54% y 2,08%, y la rentabilidad por flujo libre 15,0%, '
+                       '20,1% y 14,5%. La recompra en curso (1.500 M€) equivale a ~7% de la capitalización.',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Ingresos', '16.064', '+1,0%'),
+               ('Ingresos de pasaje', '14.082', '+2,3%'),
+               ('Beneficio operativo antes de excepcionales', '1.757', '-6,4%'),
+               ('Beneficio operativo 2T antes de excepcionales', '1.406', '-16,3%'),
+               ('Beneficio neto', '1.033', '-20,6%'),
+               ('BPA básico', '22,9 cts', '-16,1%'),
+               ('Flujo de caja libre', '2.905', '+38,5% (calculado)')],
+     'kpi': 'Margen operativo antes de excepcionales 10,9% (11,8%); 2T 15,8% (19,0%). Capacidad (AKO) -0,1%, ocupación 85,0% (+0,9 pp), 57,9 M de '
+            'pasajeros. Ingreso de pasaje por AKO +2,4% (+6,2% a tipo de cambio constante); coste unitario sin combustible -1,3%; combustible y '
+            'emisiones 3.956 M€ (+12,3%). Beneficio operativo por aerolínea: British Airways 1.020 M€ (+44), Iberia 526 M€ (-38), Vueling 46 M€ (-49), '
+            'Aer Lingus -34 M€ (-114), IAG Loyalty 275 M€ (+48). Excepcionales 149 M€ (ERE voluntario de Iberia y reestructuración de BA). Deuda neta '
+            '4.692 M€ (-1.256 M€ vs diciembre), 0,6x EBITDA; liquidez 11.873 M€.',
+     'guia': 'Guía 2026: capacidad plana frente a 2025 (cerca de +3% en febrero); combustible 8.300-8.600 M€ (unos 9.000 M€ en mayo), con la meta de '
+             'recuperar ~60% del sobrecoste; margen operativo dentro del objetivo del 12%-15%; coste unitario sin combustible plano; inversión ~3.400 '
+             'M€. Recompra de 1.500 M€ con ~800 M€ ejecutados, a terminar antes de finales de febrero de 2027; dividendo 2025 de 0,098 € por acción '
+             '(+8,9%); el dividendo a cuenta de 2026 se decidirá con los resultados del 3T.',
+     'positivos': ['Flujo de caja libre de 2.905 M€ y deuda neta de solo 0,6x EBITDA.',
+                   'El ingreso de pasaje por AKO sube un 6,2% a tipo de cambio constante y el beneficio operativo del 2T supera el consenso.',
+                   'British Airways e IAG Loyalty mejoran, y la recompra de 1.500 M€ sigue adelante.'],
+     'riesgos': ['El combustible sube un 12,3% en el semestre y un 22,8% en el 2T.',
+                 'Aer Lingus pasa a pérdidas y Vueling gana la mitad que hace un año.',
+                 'La capacidad de 2026 queda plana por las rutas suspendidas en Oriente Medio y la competencia en el corto radio europeo.'],
+     'videos': [('ShNA56tU4sY', 'IAG resultados 1S 2026: beneficio 1.033 M€ (-20,6%) por el combustible | Deuda neta -1.256 M€'),
+                ('sDSWqb5VGVs', 'IAG 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-11-06',
+     'proximo_estimado': False,
+     'fuentes': 'IAG, informe semestral 1S 2026 (31-jul-2026, CNMV y LSE), resultados 2025 (27-feb-2026) y calendario financiero; XTB (31-jul-2026); '
+                'Renta 4 Banco / Capitalbolsa (consenso, 31-jul-2026); Estrategias de Inversión (1T26, 8-may-2026); Bolsamanía (precio, 23-oct-2026); '
+                'stockanalysis.com (acciones y múltiplos históricos).',
+     'fuentes_corto': 'XTB, Renta 4 Banco, Estrategias de Inversión, Bolsamanía y stockanalysis.com',
+     'elaborado': '23-oct-2026, 12:35'},
+    {'id': 'acerinox',
+     'nombre': 'Acerinox',
+     'ticker': 'ACX',
+     'sector': 'Siderurgia',
+     'lede': 'Fabricante de acero inoxidable (Acerinox Europa en Algeciras, North American Stainless en EE. UU. y Columbus en Sudáfrica) y de aleaciones '
+             'de alto rendimiento (VDM Metals y Haynes International). En el acero pesan las toneladas, el precio frente al coste de las materias primas '
+             '(níquel, chatarra), la energía y el capital circulante.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Beneficio neto de 77 M€, frente a pérdidas de 18 M€ en el 1S 2025; EBITDA de 271 M€ (+27%). El EBITDA del 2T (176 M€, +85% frente al '
+                '1T) superó en un 16,6% el consenso elaborado por la compañía (calculado). Flujo de caja libre de -105 M€ y deuda neta de 1.361 M€.',
+     'precio': '16,64 €',
+     'precio_fecha': '23-oct-2026, 15:30',
+     'multiplos': [('PER 12 meses', '~75x'),
+                   ('EV/EBITDA', '~13,4x'),
+                   ('Precio / valor contable', '~1,94x'),
+                   ('Rentab. dividendo', '~3,73%'),
+                   ('Capitalización', '~4.150 M€')],
+     'multiplos_nota': 'Con precio de 16,64 € en el BME el 23-oct-2026 a las 15:30 (Bolsarama); múltiplos calculados con 249,3 M de acciones y datos de '
+                       '12 meses a junio de Acerinox (beneficio neto 55 M€, EBITDA 411 M€, deuda neta 1.361 M€, patrimonio neto 2.140 M€, dividendo 0,62 '
+                       '€). El PER es muy alto porque el beneficio de 12 meses incluye las pérdidas del 2S 2025. A cierre de 2023, 2024 y 2025 '
+                       '(stockanalysis.com, datos S&P Global) el PER era 11,6x, 10,5x y - (pérdidas), el EV/EBITDA 4,3x, 7,8x y 12,8x, la rentabilidad '
+                       'por dividendo 6,66%, 7,13% y 5,07%, y el precio / valor contable 1,08x, 0,92x y 1,50x.',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Ventas', '2.966', '-3,0%'),
+               ('EBITDA', '271', '+26,6%'),
+               ('EBITDA 2T', '176', '+57% (calculado)'),
+               ('EBITDA acero inoxidable', '236', '+66% (calculado)'),
+               ('EBITDA aleaciones de alto rendimiento', '35', '-51% (calculado)'),
+               ('Beneficio neto', '77', '-18 en 1S 2025'),
+               ('Flujo de caja libre', '-105', '+91 en 1S 2025')],
+     'kpi': 'Margen EBITDA 9,1% (7,0%; calculado); 2T 11%. Producción de acería 1,03 Mt (+2%); 2T 540.000 t (+8%); laminación en frío del inoxidable '
+            '615.000 t (-1%). Ventas: inoxidable 2.246 M€ (+3,2%), aleaciones 729 M€ (-18,4%). EE. UU. (North American Stainless) es el motor, con su '
+            'ampliación de 244 M$ terminada; en Europa las importaciones caen un 31% y Acerinox Europa logra EBITDA positivo en junio; VDM Metals lastra '
+            'las aleaciones. Flujo operativo 43 M€ tras 146 M€ de circulante; inversiones 148 M€. Deuda neta 1.361 M€ (+172 M€ desde diciembre, '
+            'calculado), 2,5x EBITDA anualizado.',
+     'guia': 'Acerinox espera un EBITDA del 3T "ligeramente superior" al del 2T (176 M€), pese a la estacionalidad y las paradas de mantenimiento, con '
+             'EE. UU. fuerte y Europa mejorando con las nuevas cuotas (-55%) y el arancel del 50% fuera de cuota desde julio. La bajada del níquel '
+             'afectará a los precios; prevé reducir el circulante. Beyond Excellence: 112 M€ acumulados (93% del objetivo de 120 M€). Dividendo con '
+             'cargo a 2025: 0,62 € por acción (0,31 € en enero y 0,31 € el 17 de julio).',
+     'positivos': ['Vuelve a beneficios y el EBITDA del 2T supera en un 16,6% el consenso de la compañía (calculado).',
+                   'El acero inoxidable dispara su EBITDA (+66%), con EE. UU. como motor.',
+                   'Europa mejora con menos importaciones y la empresa espera un 3T algo mejor que el 2T.'],
+     'riesgos': ['El flujo de caja libre es negativo (-105 M€) y la deuda neta sube hasta 1.361 M€.',
+                 'Las aleaciones de alto rendimiento ganan la mitad que hace un año, con VDM por debajo de lo esperado.',
+                 'La bajada del níquel y un consumo de planos en EE. UU. un 8% menor en el semestre.'],
+     'videos': [('IuxWhvplVuQ', 'Acerinox resultados 1S 2026: vuelve a beneficios con 77 M€ | EBITDA 2T 176 M€, +85% trimestral'),
+                ('9rnH1TvvMdw', 'Acerinox 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-10-30',
+     'proximo_estimado': False,
+     'fuentes': 'Acerinox, nota de prensa, informe de gestión intermedio y presentación de resultados 1S 2026 (24-jul-2026), resultados 2025 '
+                '(27-feb-2026) y agenda del inversor; Investing.com (consenso, 24-jul-2026); XTB y Bolsamanía (24-jul-2026); conferencia con analistas '
+                '(GuruFocus/Yahoo Finance); Bolsarama (precio, 23-oct-2026); stockanalysis.com (múltiplos históricos).',
+     'fuentes_corto': 'Investing.com, XTB, Bolsamanía, Bolsarama y stockanalysis.com',
+     'elaborado': '23-oct-2026, 15:50'},
+    {'id': 'grifols',
+     'nombre': 'Grifols',
+     'ticker': 'GRF',
+     'sector': 'Farmacia y salud · hemoderivados (plasma)',
+     'lede': 'Compañía de medicamentos derivados del plasma (Biopharma: inmunoglobulinas, albúmina, alfa-1 y proteínas especiales), con más de 400 '
+             'centros de donación, además de diagnóstico (Diagnostic) y Bio Supplies. En el plasma pesan el coste de obtener la materia prima, la mezcla '
+             'de productos, el dólar y la deuda. El IBEX 35 incluye la clase A (GRF); la clase B (GRF.P) no tiene voto y cobra un dividendo preferente.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Beneficio neto de 227 M€ (+28,7%; +13,6% sin extraordinarios). Ingresos de 3.574 M€ (-2,8% en euros; +2,6% a tipo constante), con las '
+                'inmunoglobulinas +12,8%. Flujo de caja libre antes de M&A de 91 M€ (-12 M€ en el 1S 2025) y apalancamiento de 4,2x según Grifols; guía '
+                '2026 confirmada.',
+     'precio': '10,055 € (clase A)',
+     'precio_fecha': '23-oct-2026, 16:25',
+     'multiplos': [('PER 12 meses', '~15,1x'),
+                   ('EV/EBITDA', '~10,4x'),
+                   ('Precio / valor contable', '~0,74x'),
+                   ('Rentab. dividendo', '~2,31%'),
+                   ('Capitalización', '~5.920 M€')],
+     'multiplos_nota': 'Con precio de la clase A de 10,055 € en el BME el 23-oct-2026 a las 16:25 (Bolsarama); múltiplos calculados con datos de 12 '
+                       'meses a junio: BPA 0,66 € (beneficio de 452 M€ y 680,6 M de acciones), dividendo con cargo a 2025 de 0,2324 € por acción A (0,15 '
+                       '+ 0,0824). Capitalización con 422,4 M de acciones A y 258,2 M de acciones B a 6,48 € (stockanalysis, 1-oct-2026). Valor empresa '
+                       '~17.200 M€ con la deuda neta de balance (8.843 M€) y los minoritarios (2.434 M€); EBITDA de 12 meses de stockanalysis (1.650 '
+                       'M€); con el EBITDA ajustado de Grifols (1.803 M€), ~9,5x. Precio / valor contable sobre el patrimonio neto total (7.980 M€). A '
+                       'cierre de 2023, 2024 y 2025 (stockanalysis.com, datos S&P Global) el PER era 219,8x, 36,2x y 16,3x, el EV/EBITDA 19,1x, 10,8x y '
+                       '10,5x, el precio / valor contable 1,23x, 0,66x y 0,86x, y la rentabilidad por dividendo 0%, 0% y 2,19% (calculada).',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Ingresos', '3.574', '-2,8% (+2,6% a tipo constante)'),
+               ('Biopharma', '3.148', '-0,2% (+5,4% a tipo constante)'),
+               ('Diagnostic', '284', '-14,3% (-9,7% a tipo constante)'),
+               ('Bio Supplies', '50', '-27,0% (-21,7% a tipo constante)'),
+               ('EBITDA ajustado', '854', '-2,5% (+2,4% a tipo constante)'),
+               ('Beneficio neto', '227', '+28,7%'),
+               ('BPA', '0,33 €', '+27% (calculado)'),
+               ('Flujo de caja libre antes de M&A', '91', '-12 en 1S 2025')],
+     'kpi': 'Margen EBITDA ajustado 23,9% (23,8%; calculado); 2T 25,2%. Biopharma por franquicia (tipo constante): inmunoglobulinas +12,8% (intravenosas '
+            '+12,5%, subcutáneas +17,7%), albúmina -14,2% (precios en China), alfa-1 y proteínas especiales -2,6% (+2,0% en el 2T). Margen bruto 37,1% '
+            '(39,1%), con ~40 M€ de costes puntuales por el cierre de 29 centros en EE. UU. Red: ~280 centros en EE. UU. y más de 130 en el resto del '
+            'mundo; Grifols no publica el coste por litro. Deuda neta 7.798 M€ según el contrato de crédito (8.843 M€ en balance), 4,2x EBITDA según '
+            'Grifols; liquidez 2.030 M€. Vencimientos de 2027 refinanciados y 500 M€ del bono 2030 amortizados: sin vencimientos relevantes hasta el 4T '
+            '2028.',
+     'guia': 'Guía 2026 confirmada: EBITDA ajustado +5% a +9% a tipo constante, margen de al menos el 25% y flujo de caja libre antes de M&A y '
+             'dividendos de 500-575 M€ (el 1S lleva 91 M€, el 16-18%; calculado). Objetivo de apalancamiento de 3,5x o menos a finales de 2027. Egipto: '
+             '180 M€ más hasta 2029 para llegar a 3 millones de litros de plasma al año. Dividendo con cargo a 2025: ~0,23 € brutos por acción A (0,15 € '
+             'en agosto de 2025 y 0,082 € el 2 de julio de 2026).',
+     'positivos': ['El beneficio neto sube un 28,7%, hasta 227 M€, y el margen EBITDA ajustado del 2T llega al 25,2%.',
+                   'Las inmunoglobulinas crecen un 12,8% a tipo constante (subcutáneas +17,7%).',
+                   'Flujo de caja libre positivo (91 M€) y vencimientos de 2027 refinanciados.'],
+     'riesgos': ['El apalancamiento sigue en 4,2x, frente al objetivo de 3,5x o menos a finales de 2027.',
+                 'La albúmina cae un 14,2% y el dólar resta crecimiento en euros.',
+                 'Para cumplir la guía de caja necesita más de 400 M€ en el segundo semestre (calculado).'],
+     'videos': [('ZmBOEO1agsY', 'Grifols resultados 1S 2026: beneficio +28,7%, hasta 227 M€ | Inmunoglobulinas +12,8%, deuda en 4,2x'),
+                ('xrWR9VfrbhY', 'Grifols 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-11-03',
+     'proximo_estimado': True,
+     'fuentes': 'Grifols, nota de prensa, presentación y estados financieros intermedios del 1S 2026 (28-jul-2026, CNMV y SEC), resultados 2025 '
+                '(26-feb-2026) y dividendos (CNMV/SEC, jun-2025 y jun-2026); Investing.com (presentación y conferencia, 28-jul-2026); Europa '
+                'Press/Bolsamanía (28-jul-2026); Benzinga España (29-jul-2026); Bolsarama (precio, 23-oct-2026); stockanalysis.com (múltiplos '
+                'históricos).',
+     'fuentes_corto': 'Investing.com, Europa Press, Bolsamanía, Benzinga España, Bolsarama y stockanalysis.com',
+     'elaborado': '23-oct-2026, 17:00'},
 ]
