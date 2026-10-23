@@ -910,4 +910,116 @@ FICHAS = [
                 '22-jul-2026); Bolsamanía/Europa Press (22-jul-2026); stockanalysis.com (precio y múltiplos, 16-oct-2026).',
      'fuentes_corto': 'Capitalbolsa, XTB, Investing.com, Bolsamanía y stockanalysis.com',
      'elaborado': '17-oct-2026, 08:15'},
+    {'id': 'mapfre',
+     'nombre': 'Mapfre',
+     'ticker': 'MAP',
+     'sector': 'Seguros',
+     'lede': 'Mayor aseguradora española, con negocio en Iberia (España y Portugal), Brasil y el resto de Latinoamérica, Norteamérica, EMEA y el '
+             'reaseguro de MAPFRE RE. En una aseguradora, los ingresos se miden con las primas y la rentabilidad técnica con el ratio combinado No Vida '
+             '(siniestros y gastos sobre primas; por debajo del 100%, el seguro gana dinero); la fortaleza del balance, con el ratio de Solvencia II.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Beneficio neto de 624,2 M€ (+9,4%) con un ratio combinado No Vida del 92,8% (-0,3 pp), pero primas casi planas (16.127 M€, +1,1%). '
+                'Renta 4 lo calificó de "lectura mixta" (beneficio en línea con el consenso y primas No Vida por debajo). Junto a las cuentas, Mapfre '
+                'anunció la compra de Safety Insurance (EE. UU.) por 1.542 M$ y la acción cayó un 4,7% el 24-jul-2026 (Merca2).',
+     'precio': '4,35 €',
+     'precio_fecha': '23-oct-2026, 11:57',
+     'multiplos': [('PER 12 meses', '~11,1x'),
+                   ('PER forward', '~10,4x'),
+                   ('Precio / valor en libros', '~1,2x'),
+                   ('Rentab. dividendo', '4,1%'),
+                   ('Capitalización', '~13.350 M€')],
+     'multiplos_nota': 'Con precio de 4,35 € el 23-oct-2026 a las 11:57 (Bolsarama); múltiplos de stockanalysis.com (PER 11,12x, forward 10,37x y P/VC '
+                       '1,20x a 4,352 €; 3.070 M de acciones; dividendo 0,18 €) ajustados a ese precio (calculado). A cierre de 2022, 2023, 2024 y 2025 '
+                       'el PER era 9,8x, 8,8x, 7,8x y 11,6x, el precio / valor en libros 0,62x, 0,62x, 0,75x y 1,25x, y la rentabilidad por dividendo '
+                       '9,5%, 8,6%, 7,0% y 4,3%. En una aseguradora no se usan EV/EBITDA ni flujo de caja libre.',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Primas', '16.127', '+1,1%'),
+               ('Primas No Vida', '12.314', '+0,3%'),
+               ('Primas Vida', '3.813', '+3,8%'),
+               ('Ingresos totales', '19.008', '+1,5%'),
+               ('Ratio combinado No Vida', '92,8%', '-0,3 pp'),
+               ('Beneficio neto', '624,2', '+9,4%'),
+               ('Beneficio neto 2T (calculado)', '~313', '+6,3%'),
+               ('BPA (calculado)', '~0,20 €', '+9,4%')],
+     'kpi': 'ROE 12,5% (13,4% sin extraordinarios). Fondos propios 9.592 M€ (+7,1% en el año). Solvencia II 208,8% a junio (206,8% en marzo; rango '
+            'objetivo 175%-225%). Beneficio por unidad: Iberia 278,6 M€ (+16,6%; ratio combinado 93,7%), MAPFRE RE 185,6 M€ (+24,6%; 95,2%), Brasil '
+            '136,3 M€ (+4,3%; 73,8%), Otros LATAM 81,3 M€ (-12,2%; 99,1%), Norteamérica 68,8 M€ (+14,1%; 94,6%), EMEA -4,6 M€ (107,4%). Dividendo con '
+            'cargo a 2025: 0,18 € por acción (+12,5%), ~554 M€.',
+     'guia': 'Objetivos 2026 (Junta General, 13-mar-2026): ROE por encima del 13% y ratio combinado del 93%-94%; en el semestre, 12,5% (13,4% sin '
+             'extraordinarios) y 92,8%. Compra de Safety Insurance (Massachusetts, EE. UU.) por 1.542 M$ (~1.352 M€) en efectivo: cierre previsto en el '
+             '1T27, unos -10 pp de Solvencia II, financiación con deuda subordinada, senior y bancaria, y alrededor de un +5% de beneficio una vez '
+             'integrada.',
+     'positivos': ['Beneficio +9,4% con un ratio combinado del 92,8%, mejor que el objetivo del año.',
+                   'Iberia (+16,6%) y MAPFRE RE (+24,6%) crecen a doble dígito.',
+                   'Solvencia II del 208,8% y mejora de la calificación de S&P (24-jul-2026).'],
+     'riesgos': ['Las primas apenas crecen (+1,1%) y las de No Vida quedaron por debajo del consenso (Renta 4).',
+                 'Safety resta unos 10 puntos de solvencia y añade deuda; la acción cayó un 4,7% tras el anuncio.',
+                 'Otros LATAM (México, Colombia) y EMEA empeoran, y el dólar resta en euros.'],
+     'videos': [('gNyZYk8oDnM', 'Mapfre resultados 1S 2026: beneficio 624 M€ (+9,4%) y ratio combinado 92,8% | Primas +1,1%; Safety'),
+                ('AJZm7q7mTpo', 'Mapfre 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-10-28',
+     'proximo_estimado': False,
+     'fuentes': 'Mapfre, nota de prensa y carátula CNMV de resultados del primer semestre 2026 (23-jul-2026, mapfre.com); Mapfre, ratio de solvencia a '
+                'junio (CNMV, 4-sep-2026), Junta General (13-mar-2026) y aviso de teleconferencia 9M 2026 (CNMV, 21-oct-2026); Renta 4 / Bolsamanía '
+                '(23-jul-2026); Inese (24-jul-2026); Bolsamanía (1T26, 29-abr-2026); Merca2, Infobae / Europa Press e Investing.com (reacción, '
+                'jul-2026); Bolsarama (precio, 23-oct-2026); stockanalysis.com (múltiplos, oct-2026).',
+     'fuentes_corto': 'Renta 4 / Bolsamanía, Inese, Merca2, Bolsarama y stockanalysis.com',
+     'elaborado': '23-oct-2026, 12:30'},
+    {'id': 'iag',
+     'nombre': 'IAG',
+     'ticker': 'IAG',
+     'sector': 'Aerolíneas',
+     'lede': 'International Airlines Group es el grupo de British Airways, Iberia, Vueling, Aer Lingus y LEVEL, además de IAG Loyalty (Avios) e IAG '
+             'Cargo. Cotiza en Madrid (IBEX 35) y Londres. En una aerolínea pesan la capacidad (AKO), la ocupación, el ingreso por asiento-kilómetro y '
+             'el combustible.',
+     'periodo': '1S 2026',
+     'periodo_largo': 'primer semestre de 2026',
+     'titular': 'Beneficio neto de 1.033 M€ (-20,6%) por el encarecimiento del combustible; beneficio operativo antes de excepcionales de 1.757 M€ '
+                '(-6,4%), con un 2T (1.406 M€) un 2,8% por encima del consenso que recoge Renta 4 (calculado). Flujo de caja libre de 2.905 M€ y deuda '
+                'neta de 4.692 M€ (0,6x EBITDA).',
+     'precio': '4,78 €',
+     'precio_fecha': '23-oct-2026, 11:52',
+     'multiplos': [('PER 12 meses', '~7,1x'),
+                   ('EV/EBITDA', '~3,4x'),
+                   ('Rentab. dividendo', '~2,05%'),
+                   ('FCF yield', '~18,8%'),
+                   ('Capitalización', '~21.000 M€')],
+     'multiplos_nota': 'Con precio de 4,78 € en el BME el 23-oct-2026 a las 11:52 (Bolsamanía); múltiplos calculados con ~4.400 M de acciones '
+                       '(stockanalysis.com) y datos de 12 meses de IAG (BPA básico 66,9 céntimos, EBITDA 7.640 M€, deuda neta 4.692 M€, dividendo 2025 '
+                       'de 0,098 €, flujo libre 3.954 M€). A cierre de 2023, 2024 y 2025 (stockanalysis, cotización de Londres) el PER era 3,3x, 6,5x y '
+                       '6,5x, el EV/EBITDA 4,4x, 4,9x y 4,6x, la rentabilidad por dividendo -, 2,54% y 2,08%, y la rentabilidad por flujo libre 15,0%, '
+                       '20,1% y 14,5%. La recompra en curso (1.500 M€) equivale a ~7% de la capitalización.',
+     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
+     'tabla': [('Ingresos', '16.064', '+1,0%'),
+               ('Ingresos de pasaje', '14.082', '+2,3%'),
+               ('Beneficio operativo antes de excepcionales', '1.757', '-6,4%'),
+               ('Beneficio operativo 2T antes de excepcionales', '1.406', '-16,3%'),
+               ('Beneficio neto', '1.033', '-20,6%'),
+               ('BPA básico', '22,9 cts', '-16,1%'),
+               ('Flujo de caja libre', '2.905', '+38,5% (calculado)')],
+     'kpi': 'Margen operativo antes de excepcionales 10,9% (11,8%); 2T 15,8% (19,0%). Capacidad (AKO) -0,1%, ocupación 85,0% (+0,9 pp), 57,9 M de '
+            'pasajeros. Ingreso de pasaje por AKO +2,4% (+6,2% a tipo de cambio constante); coste unitario sin combustible -1,3%; combustible y '
+            'emisiones 3.956 M€ (+12,3%). Beneficio operativo por aerolínea: British Airways 1.020 M€ (+44), Iberia 526 M€ (-38), Vueling 46 M€ (-49), '
+            'Aer Lingus -34 M€ (-114), IAG Loyalty 275 M€ (+48). Excepcionales 149 M€ (ERE voluntario de Iberia y reestructuración de BA). Deuda neta '
+            '4.692 M€ (-1.256 M€ vs diciembre), 0,6x EBITDA; liquidez 11.873 M€.',
+     'guia': 'Guía 2026: capacidad plana frente a 2025 (cerca de +3% en febrero); combustible 8.300-8.600 M€ (unos 9.000 M€ en mayo), con la meta de '
+             'recuperar ~60% del sobrecoste; margen operativo dentro del objetivo del 12%-15%; coste unitario sin combustible plano; inversión ~3.400 '
+             'M€. Recompra de 1.500 M€ con ~800 M€ ejecutados, a terminar antes de finales de febrero de 2027; dividendo 2025 de 0,098 € por acción '
+             '(+8,9%); el dividendo a cuenta de 2026 se decidirá con los resultados del 3T.',
+     'positivos': ['Flujo de caja libre de 2.905 M€ y deuda neta de solo 0,6x EBITDA.',
+                   'El ingreso de pasaje por AKO sube un 6,2% a tipo de cambio constante y el beneficio operativo del 2T supera el consenso.',
+                   'British Airways e IAG Loyalty mejoran, y la recompra de 1.500 M€ sigue adelante.'],
+     'riesgos': ['El combustible sube un 12,3% en el semestre y un 22,8% en el 2T.',
+                 'Aer Lingus pasa a pérdidas y Vueling gana la mitad que hace un año.',
+                 'La capacidad de 2026 queda plana por las rutas suspendidas en Oriente Medio y la competencia en el corto radio europeo.'],
+     'videos': [('ShNA56tU4sY', 'IAG resultados 1S 2026: beneficio 1.033 M€ (-20,6%) por el combustible | Deuda neta -1.256 M€'),
+                ('sDSWqb5VGVs', 'IAG 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2026-11-06',
+     'proximo_estimado': False,
+     'fuentes': 'IAG, informe semestral 1S 2026 (31-jul-2026, CNMV y LSE), resultados 2025 (27-feb-2026) y calendario financiero; XTB (31-jul-2026); '
+                'Renta 4 Banco / Capitalbolsa (consenso, 31-jul-2026); Estrategias de Inversión (1T26, 8-may-2026); Bolsamanía (precio, 23-oct-2026); '
+                'stockanalysis.com (acciones y múltiplos históricos).',
+     'fuentes_corto': 'XTB, Renta 4 Banco, Estrategias de Inversión, Bolsamanía y stockanalysis.com',
+     'elaborado': '23-oct-2026, 12:35'},
 ]
