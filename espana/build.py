@@ -13,6 +13,7 @@ import shutil
 from pathlib import Path
 
 from comparadores import COMPARADORES
+from dividendos import DIVIDENDOS, POR_ANUNCIAR
 from educacion import GENERALES, SECTORES
 from fichas import FICHAS
 
@@ -68,7 +69,7 @@ def fecha_dia(iso):
 YT_SVG = ('<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 '
           '31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>')
 
-NAV = [("empresas/index.html", "Empresas"), ("hechos/index.html", "Hechos relevantes"), ("comparadores/index.html", "Comparadores"), ("calendario/index.html", "Calendario"), ("educacion/index.html", "Educación"),
+NAV = [("empresas/index.html", "Empresas"), ("hechos/index.html", "Hechos relevantes"), ("comparadores/index.html", "Comparadores"), ("calendario/index.html", "Calendario"), ("dividendos/index.html", "Dividendos"), ("educacion/index.html", "Educación"),
        ("metodologia/index.html", "Metodología"), ("quienes-somos/index.html", "Quiénes somos"), ("contacto/index.html", "Contacto")]
 
 
@@ -275,6 +276,7 @@ def portada(cal):
 <a class="sec-link" href="educacion/index.html"><span class="sec-t">Educación</span><span class="sec-d">Qué mide el PER, el PER forward y otros indicadores, y en qué fijarse en cada sector.</span></a>
 <a class="sec-link" href="comparadores/index.html"><span class="sec-t">Comparadores</span><span class="sec-d">Empresas del mismo sector frente a frente con sus principales indicadores financieros.</span></a>
 <a class="sec-link" href="calendario/index.html"><span class="sec-t">Calendario</span><span class="sec-d">Fechas de resultados del {e(cal['trimestre'])} de las empresas del IBEX 35, confirmadas y estimadas.</span></a>
+<a class="sec-link" href="dividendos/index.html"><span class="sec-t">Dividendos</span><span class="sec-d">Próximos dividendos del IBEX 35 con importe, fecha ex-dividendo y fecha de pago.</span></a>
 <a class="sec-link" href="metodologia/index.html"><span class="sec-t">Metodología</span><span class="sec-d">De dónde salen las cifras, cómo calculamos los múltiplos y qué no hacemos.</span></a>
 </div></section>"""
     return pagina("", SITIO, "Resultados de las empresas del IBEX 35 explicados en vídeo: ingresos, beneficio, márgenes, deuda, guía y múltiplos, con fuentes de la CNMV.", cuerpo, ld=LD_PORTADA)
@@ -479,6 +481,54 @@ def calendario(cal):
     return pagina("calendario", f"Calendario de resultados {cal['trimestre']} IBEX 35", f"Fechas de presentación de resultados del {cal['trimestre']} de las empresas del IBEX 35.", cuerpo, "Calendario")
 
 
+def fecha_div(iso):
+    return fecha_dia(iso) + ("" if iso[:4] == str(HOY.year) else f" {iso[:4]}")
+
+
+def fila_div(d, r, nombres):
+    f = FICHA_POR_TICKER.get(d["ticker"])
+    nm = nombres.get(d["ticker"], d["ticker"])
+    nombre = f'<a href="{r}empresas/{f["id"]}/index.html">{e(nm)}</a>' if f else e(nm)
+    ex = fecha_div(d["ex"]) + (" *" if d.get("ex_calc") else "") if d.get("ex") else "Por confirmar"
+    pago = fecha_div(d["pago"]) if d.get("pago") else d.get("pago_txt", "Por confirmar")
+    fuente = f'<a href="{e(d["url"])}" target="_blank" rel="noopener">{e(d["fuente"])}</a>' if d.get("url") else e(d["fuente"])
+    return (f'<tr><td class="txt dt">{e(ex)}</td><td class="txt dt">{e(pago)}</td>'
+            f'<th scope="row" class="txt">{nombre} <span class="tkr">{e(d["ticker"])}</span></th>'
+            f'<td><b>{e(d["importe"])}</b></td><td class="txt nt">{e(d["tipo"])}<br><span class="hc">{fuente}</span></td></tr>')
+
+
+def div_tabla(filas):
+    return ('<div class="table-scroll"><table class="data cal-t"><thead><tr><th scope="col" class="txt">Ex-dividendo</th>'
+            '<th scope="col" class="txt">Pago</th><th scope="col" class="txt">Empresa</th><th scope="col">Bruto por acción</th>'
+            f'<th scope="col" class="txt">Tipo y fuente</th></tr></thead><tbody>{"".join(filas)}</tbody></table></div>')
+
+
+def dividendos(cal):
+    nombres = nombres_ibex(cal)
+    hoy = HOY.isoformat()
+    clave = lambda d: d.get("ex") or d.get("pago") or "9999"
+    hecho = lambda d: (d.get("pago") or d.get("ex") or "9999") < hoy
+    prox = sorted((d for d in DIVIDENDOS if not hecho(d)), key=clave)
+    pagados = sorted((d for d in DIVIDENDOS if hecho(d) and (d.get("pago") or "") >= (HOY - dt.timedelta(days=60)).isoformat()), key=clave, reverse=True)
+    prox_html = div_tabla([fila_div(d, "../", nombres) for d in prox]) if prox else '<p class="small">No hay dividendos anunciados pendientes de pago.</p>'
+    pag_html = (f'<section><h2 class="h-sec">Pagados en los últimos 60 días</h2>{div_tabla([fila_div(d, "../", nombres) for d in pagados])}</section>'
+                if pagados else "")
+    anun = "".join(f'<li><span class="tkr">{e(t)}</span> <b>{e(nombres.get(t, t))}</b>: {e(txt)} <span class="hc">({e(fu)})</span></li>' for t, txt, fu in POR_ANUNCIAR)
+    avisos = [i for i in HECHOS["items"] if "dividendos" in i.get("temas", [])][:10]
+    cuerpo = f"""<section class="page-head"><p class="eyebrow">IBEX 35</p><h1>Calendario de dividendos del IBEX 35</h1>
+<p class="lede">Los próximos dividendos de las empresas del IBEX 35 ya aprobados o anunciados por cada empresa, con su importe bruto por acción, la fecha ex-dividendo y la fecha de pago. Para cobrar un dividendo hay que tener las acciones al cierre del día anterior a la fecha ex-dividendo; ese día la acción cotiza ya sin el dividendo.</p></section>
+<section><h2 class="h-sec">Próximos dividendos</h2>{prox_html}
+<p class="small">* Fecha ex-dividendo calculada por nosotros (dos días hábiles antes del pago) porque la empresa solo publicó la fecha de pago. Importes brutos: en España se retiene el 19% a cuenta del IRPF.</p></section>
+{pag_html}
+<section><h2 class="h-sec">Anunciados, pendientes de importe o fecha</h2><ul class="checks">{anun}</ul></section>
+<section><h2 class="h-sec">Últimos avisos de dividendos a la CNMV</h2>
+{hechos_bloque(avisos, "../", nombres, True, f"No hay avisos de dividendos de las empresas del IBEX 35 desde el {HECHOS_DESDE}.")}
+<p class="small">Se actualiza solo con los <a href="../hechos/index.html">hechos relevantes</a> que mencionan dividendos, retribución al accionista o scrip.</p></section>
+<section class="aviso-es"><ul><li>Solo incluimos dividendos que la empresa ya ha aprobado o anunciado, nunca estimaciones; las fechas pueden cambiar, y la fuente que manda es la comunicación de la empresa a la CNMV.</li>
+<li>Contenido informativo: no es una recomendación de inversión. Comprar una acción solo para cobrar el dividendo no suele dar ganancia, porque el precio baja en esa cantidad el día ex-dividendo.</li></ul></section>"""
+    return pagina("dividendos", "Calendario de dividendos del IBEX 35", "Próximos dividendos de las empresas del IBEX 35: importe bruto por acción, fecha ex-dividendo y fecha de pago, con la fuente de cada empresa.", cuerpo, "Dividendos")
+
+
 def metodologia():
     cuerpo = """<section class="page-head"><p class="eyebrow">Cómo trabajamos</p><h1>Metodología</h1></section>
 <section class="prose">
@@ -669,6 +719,7 @@ def main():
     for x in SECTORES:
         escribir(f"educacion/{x['id']}/index.html", educacion_sector(x))
     escribir("calendario/index.html", calendario(cal))
+    escribir("dividendos/index.html", dividendos(cal))
     escribir("metodologia/index.html", metodologia())
     escribir("quienes-somos/index.html", quienes_somos())
     escribir("aviso-legal/index.html", aviso_legal())
@@ -678,7 +729,7 @@ def main():
         shutil.copyfile(AQUI / "extra" / nombre, WEB / destino)
     escribir("ads.txt", f"google.com, {ADSENSE_ID.removeprefix('ca-')}, DIRECT, f08c47fec0942fa0\n")
     if DOMINIO:
-        rutas = ["", "empresas/", "hechos/", "comparadores/", "educacion/", "educacion/valoracion/"] + [f"educacion/{x['id']}/" for x in SECTORES] + [f"comparadores/{c['id']}/" for c in COMPARADORES] + ["calendario/", "metodologia/", "quienes-somos/", "aviso-legal/", "privacidad/", "contacto/"] + [f"empresas/{f['id']}/" for f in FICHAS]
+        rutas = ["", "empresas/", "hechos/", "comparadores/", "educacion/", "educacion/valoracion/"] + [f"educacion/{x['id']}/" for x in SECTORES] + [f"comparadores/{c['id']}/" for c in COMPARADORES] + ["calendario/", "dividendos/", "metodologia/", "quienes-somos/", "aviso-legal/", "privacidad/", "contacto/"] + [f"empresas/{f['id']}/" for f in FICHAS]
         urls = "".join(f"<url><loc>{DOMINIO}/{r}</loc></url>" for r in rutas)
         escribir("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
         escribir("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {DOMINIO}/sitemap.xml\n")
