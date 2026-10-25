@@ -1,5 +1,5 @@
 import os, re, datetime as dt, json
-S = "/tmp/claude-0/-home-claude/51bbcb85-f720-5650-9a37-2f75843c73b7/scratchpad/site"
+S = os.environ.get("SITE", os.path.join(os.path.dirname(os.path.abspath(__file__)), "site"))
 def rd(p): return open(os.path.join(S, p), encoding="utf-8").read()
 def wr(p, t):
     os.makedirs(os.path.dirname(os.path.join(S, p)), exist_ok=True)
@@ -8,7 +8,7 @@ D = lambda y, m, d: dt.date(y, m, d)
 FICHA = {"ANDINA-B":"andina-a","ANDINA-A":"andina-a","HABITAT":"habitat","BESALCO":"besalco","ENELGXCH":"enelgxch","PROVIDA":"provida","AFPCAPITAL":"afpcapital",
  "PLANVITAL":"planvital","CHILE":"chile","CENCOSUD":"cencosud","CMPC":"cmpc","COPEC":"copec","FALABELLA":"falabella","RIPLEY":"ripley","VAPORES":"vapores","SK":"sk",
  "IAM":"iam","QUINENCO":"quinenco","COLBUN":"colbun","ENELCHILE":"enelchile","ECL":"ecl","BSANTANDER":"bsantander","CAP":"cap","ITAUCL":"itau","SQM-B":"sqm-b",
- "CGE":"cge","PARAUCO":"parauco","MALLPLAZA":"mallplaza","CENCOMALLS":"cencomalls","AES ANDES":"aes-andes","BCI":"bci","SCHWAGER":"schwager","LTM":"ltm","CONCHATORO":"conchatoro","AGUAS-A":"aguas-a","CCU":"ccu","SMU":"smu"}
+ "CGE":"cge","PARAUCO":"parauco","MALLPLAZA":"mallplaza","CENCOMALLS":"cencomalls","AES ANDES":"aes-andes","BCI":"bci","SCHWAGER":"schwager","LTM":"ltm","CONCHATORO":"conchatoro","AGUAS-A":"aguas-a","CCU":"ccu","SMU":"smu","NTGCLGAS":"ntgclgas"}
 CMF = "Fecha informada a la CMF"
 # ---------------------------------------------------------------- datos por trimestre (agregar nuevos trimestres aquí)
 Q = [dict(
@@ -17,6 +17,7 @@ Q = [dict(
  updated="3 de octubre de 2026",
  reports=[
   (D(2026,10,23),"Sonda","SONDA","Tecnología","C",""),
+  (D(2026,10,23),"Naturgy Chile","NTGCLGAS","Energía","C","Dueña de Metrogas y Gas Sur."),
   (D(2026,10,27),"Embotelladora Andina","ANDINA-B","Bebidas","C",""),
   (D(2026,10,27),"AFP Habitat","HABITAT","AFP","C",""),
   (D(2026,10,27),"Colbún","COLBUN","Energía","C",""),
