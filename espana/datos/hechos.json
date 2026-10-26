@@ -1,6 +1,20 @@
 {
- "actualizado": "2026-10-23T07:08Z",
+ "actualizado": "2026-10-26T09:04Z",
  "items": [
+  {
+   "id": "5322f3d2-753d-496c-856c-1e9bb885a4a8",
+   "tipo": "OIR",
+   "fecha": "2026-10-26 10:04",
+   "entidad": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+   "nif": "A",
+   "categoria": "Otra información relevante",
+   "titulo": "La Sociedad remite Convocatoria de Presentación de Resultados correspondiente al 3er trimestre 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b5322f3d2-753d-496c-856c-1e9bb885a4a8%7d",
+   "ticker": "ACS",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "593bfbe6-0cf5-4a7c-b805-2bcd7d2640de",
    "tipo": "OIR",
