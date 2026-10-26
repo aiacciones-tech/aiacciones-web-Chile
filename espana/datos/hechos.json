@@ -1,6 +1,42 @@
 {
- "actualizado": "2026-10-26T10:59Z",
+ "actualizado": "2026-10-26T17:32Z",
  "items": [
+  {
+   "id": "b67f3f59-c808-4900-b053-134f79cea252",
+   "tipo": "OIR",
+   "fecha": "2026-10-26 18:30",
+   "entidad": "CELLNEX TELECOM, S.A.",
+   "nif": "A64907306",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información relativa a la ejecución de su programa de recompra de acciones propias",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bb67f3f59-c808-4900-b053-134f79cea252%7d",
+   "ticker": "CLNX",
+   "temas": []
+  },
+  {
+   "id": "f85cb3ce-e0cb-4cd6-af7d-b4353f170ccd",
+   "tipo": "OIR",
+   "fecha": "2026-10-26 18:09",
+   "entidad": "BANCO DE SABADELL, S.A.",
+   "nif": "A08000143",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Banco Sabadell informa de las operaciones sobre acciones propias que ha realizado entre los días 19 de octubre de 2026 y 23 de octubre de 2026 bajo el programa de recompra.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bf85cb3ce-e0cb-4cd6-af7d-b4353f170ccd%7d",
+   "ticker": "SAB",
+   "temas": []
+  },
+  {
+   "id": "73642170-a25c-4352-92c4-c287d664516b",
+   "tipo": "OIR",
+   "fecha": "2026-10-26 18:09",
+   "entidad": "INTERNATIONAL CONSOLIDATED AIRLINES GROUP, S.A.",
+   "nif": "A85845535",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información sobre las operaciones efectuadas al amparo de su programa de recompra de acciones",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b73642170-a25c-4352-92c4-c287d664516b%7d",
+   "ticker": "IAG",
+   "temas": []
+  },
   {
    "id": "0cf600e5-65c9-4ba1-9836-ca08bd5ec0e7",
    "tipo": "OIR",
