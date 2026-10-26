@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-26T17:32Z",
+ "actualizado": "2026-10-26T19:09Z",
  "items": [
+  {
+   "id": "21f41e23-02fe-47e7-b187-2561a4220d9e",
+   "tipo": "OIR",
+   "fecha": "2026-10-26 19:37",
+   "entidad": "REPSOL, S.A.",
+   "nif": "A78374725",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Finalización del Programa de Recompra de acciones de Repsol, S.A. y ejecución de una reducción de capital mediante la amortización de 17.375.862 acciones propias",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b21f41e23-02fe-47e7-b187-2561a4220d9e%7d",
+   "ticker": "REP",
+   "temas": []
+  },
   {
    "id": "b67f3f59-c808-4900-b053-134f79cea252",
    "tipo": "OIR",
