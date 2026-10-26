@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-26T19:56Z",
+ "actualizado": "2026-10-26T21:52Z",
  "items": [
+  {
+   "id": "2c924ab5-749c-4374-b0ef-aff0aaecf0b9",
+   "tipo": "OIR",
+   "fecha": "2026-10-26 22:43",
+   "entidad": "CAIXABANK, S.A.",
+   "nif": "A08663619",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad informa sobre los requisitos mínimos prudenciales de capital para 2027.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b2c924ab5-749c-4374-b0ef-aff0aaecf0b9%7d",
+   "ticker": "CABK",
+   "temas": []
+  },
   {
    "id": "f37ca786-3927-453b-9508-51624bb4db27",
    "tipo": "OIR",
