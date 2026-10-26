@@ -1,6 +1,30 @@
 {
- "actualizado": "2026-10-26T19:09Z",
+ "actualizado": "2026-10-26T19:56Z",
  "items": [
+  {
+   "id": "f37ca786-3927-453b-9508-51624bb4db27",
+   "tipo": "OIR",
+   "fecha": "2026-10-26 20:55",
+   "entidad": "BANCO DE SABADELL, S.A.",
+   "nif": "A08000143",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Banco Sabadell informa sobre los requerimientos mínimos prudenciales de capital para 2027 exigidos por el Banco Central Europeo.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bf37ca786-3927-453b-9508-51624bb4db27%7d",
+   "ticker": "SAB",
+   "temas": []
+  },
+  {
+   "id": "2332b62e-308d-4440-a54c-68690f564899",
+   "tipo": "OIR",
+   "fecha": "2026-10-26 20:19",
+   "entidad": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+   "nif": "A48265169",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad informa sobre los requerimientos prudenciales de capital para 2027 exigidos por el Banco Central Europeo.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b2332b62e-308d-4440-a54c-68690f564899%7d",
+   "ticker": "BBVA",
+   "temas": []
+  },
   {
    "id": "21f41e23-02fe-47e7-b187-2561a4220d9e",
    "tipo": "OIR",
