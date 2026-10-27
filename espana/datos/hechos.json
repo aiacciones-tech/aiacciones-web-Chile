@@ -1,6 +1,30 @@
 {
- "actualizado": "2026-10-27T05:27Z",
+ "actualizado": "2026-10-27T07:10Z",
  "items": [
+  {
+   "id": "bf095168-1af4-4509-9d3c-5caeabe68fbf",
+   "tipo": "OIR",
+   "fecha": "2026-10-27 07:50",
+   "entidad": "IBERDROLA, S.A.",
+   "nif": "A",
+   "categoria": "Sobre instrumentos financieros",
+   "titulo": "Emisión por \"Iberdrola Finanzas, S.A.\" (Sociedad Unipersonal) de bonos verdes en dólares estadounidenses, con la garantía de \"Iberdrola, S.A.\", por importe de 1.600 millones de dólares estadounidenses",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bbf095168-1af4-4509-9d3c-5caeabe68fbf%7d",
+   "ticker": "IBE",
+   "temas": []
+  },
+  {
+   "id": "198f1095-8f84-4583-84c8-594b3707a12b",
+   "tipo": "OIR",
+   "fecha": "2026-10-27 07:27",
+   "entidad": "UNICAJA BANCO, S.A.",
+   "nif": "A93139053",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad informa sobre los requerimientos mínimos prudenciales de capital para el ejercicio 2027 determinados por el Banco Central Europeo tras el Proceso de Revisión y Evaluación Supervisora (SREP)",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b198f1095-8f84-4583-84c8-594b3707a12b%7d",
+   "ticker": "UNI",
+   "temas": []
+  },
   {
    "id": "6269670f-9899-4f13-9d7e-b451dec1b4e8",
    "tipo": "OIR",
