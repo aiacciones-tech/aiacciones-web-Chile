@@ -633,57 +633,61 @@ FICHAS = [
      'nombre': 'Ferrovial',
      'ticker': 'FER',
      'sector': 'Infraestructuras · autopistas, construcción y aeropuertos',
-     'lede': 'Promotor y gestor de infraestructuras de transporte con sede en Países Bajos y cotización en Madrid y en el Nasdaq. Su valor se '
-             'concentra en autopistas de peaje (407 ETR en Canadá y Managed Lanes en Estados Unidos); también construye (Budimex, Webber) y '
-             'participa en la nueva Terminal Uno del JFK.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'EBITDA ajustado de 746 M€ (+13,9%; +21,6% comparable), empujado por las tarifas de las autopistas de Norteamérica. El '
-                'beneficio neto atribuible, 258 M€ (-52%), compara con un 1S 2025 que incluía 275 M€ de desinversiones (AGS y servicios '
-                'mineros en Chile).',
-     'precio': '44,21 €',
-     'precio_fecha': '16-oct-2026',
-     'multiplos': [('PER 12 meses', '52,4x'),
-                   ('PER forward', '40,9x'),
-                   ('EV/EBITDA', '20,4x'),
-                   ('Precio / valor contable', '4,21x'),
-                   ('Rentab. dividendo', '2,52%'),
-                   ('FCF yield', '6,0%'),
-                   ('Capitalización', '~31.880 M€')],
-     'multiplos_nota': 'Con precio de 44,21 € al 16-oct-2026 (stockanalysis.com). A cierre de 2023, 2024 y 2025 el PER era 71,7x, 9,2x '
-                       '(plusvalías de Heathrow e IRB) y 44,8x, el EV/EBITDA 34,2x, 29,8x y 33,7x, el precio / valor contable 4,10x, 3,68x y '
-                       '5,19x, y la rentabilidad por dividendo 2,23%, 1,97% y 2,01%.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ingresos', '4.701', '+5,2%'),
-               ('EBITDA ajustado', '746', '+13,9%'),
-               ('EBIT ajustado', '491', '+13,9%'),
-               ('Beneficio neto atribuible', '258', '-52,2%'),
-               ('Beneficio neto 2T', '189', '+8,6%'),
-               ('Dividendos de proyectos', '378', '+17,0%'),
-               ('BPA (calculado)', '~0,36 €', '')],
-     'kpi': 'Margen EBITDA 15,9% (14,7% en 1S 2025; calculado). Autopistas: ingreso medio por viaje en la 407 ETR +17,7% con tráfico +1,8%; '
-            'ingreso por transacción +18,9% en NTE, +11,7% en LBJ y +17,3% en NTE 35W. Construcción: margen EBIT ajustado 3,5% (3,4%), flujo '
-            'operativo 329 M€ y cartera récord de 18.046 M€. Caja neta sin proyectos de infraestructura 1.307 M€ (1.341 M€ en diciembre); '
-            'liquidez 4.747 M€; deuda neta consolidada 6.283 M€.',
-     'guia': 'Sin guía anual de beneficios: el plan Horizon 24 termina en 2026 y la empresa prepara uno nuevo, sin fecha. La 407 ETR aprobó un '
-             'dividendo de 550 M CAD para el 3T (250 M en el 3T25). Objetivo de margen EBIT ajustado de Construcción del 3,5%. Dividendo '
-             'flexible de 400 M€ y recompra de hasta 800 M€, ampliada hasta el 3-mar-2027 (357,9 M€ ejecutados a 11-sep-2026). JFK Terminal '
-             'Uno: la ocupación de la primera fase pasa a marzo de 2027.',
-     'positivos': ['El EBITDA comparable creció un 21,6% gracias a las tarifas de las autopistas de Norteamérica.',
-                   'Los dividendos de proyectos subieron a 378 M€ y la 407 ETR aprobó otro de 550 M CAD.',
-                   'Construcción mejora el margen, genera caja y tiene una cartera récord.'],
-     'riesgos': ['La nueva Terminal Uno del JFK no alcanzó la ocupación prevista en junio; el objetivo pasa a marzo de 2027.',
-                 'Tráfico débil en la I-77, la NTE y la 407 ETR en el 2T: el crecimiento depende de las tarifas.',
-                 'No hay guía anual y la caja neta bajó ligeramente, por debajo de lo que esperaba Renta 4.'],
-     'videos': [('_enk_ZzJWhE', 'Ferrovial resultados 1S 2026: EBITDA comparable +21,6%, beneficio -52% por las plusvalías de 2025'),
+     'lede': 'Promotor y gestor de infraestructuras de transporte con sede en Países Bajos y cotización en Madrid y en el Nasdaq. Su valor se concentra '
+             'en autopistas de peaje (407 ETR en Canadá y Managed Lanes en Estados Unidos); también construye (Budimex, Webber) y participa en la nueva '
+             'Terminal Uno del JFK.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'EBITDA ajustado de 1.210 M€ hasta septiembre (+17,4%; +21,8% comparable) y de 464 M€ en el tercer trimestre (+23,4%, calculado), '
+                'empujado por las tarifas de las autopistas de Norteamérica. El informe trimestral no publica beneficio neto: el resultado de '
+                'explotación, 848 M€ (-12,2%, calculado), compara con unos 9M 2025 que incluían 274 M€ de desinversiones y deterioros.',
+     'precio': '48,84 €',
+     'precio_fecha': '27-oct-2026',
+     'multiplos': [('PER 12 meses', '~59,8x'),
+                   ('PER forward', '~46,7x'),
+                   ('EV/EBITDA', '~22,7x'),
+                   ('Precio / valor contable', '~4,82x'),
+                   ('Rentab. dividendo', '~2,27%'),
+                   ('FCF yield', '~5,3%'),
+                   ('Capitalización', '~35.220 M€')],
+     'multiplos_nota': 'Calculados con el cierre de 48,84 € del 27-oct-2026 (Bolsamanía) y los datos de 12 meses de stockanalysis.com (que a 43,50 €, el '
+                       '20-oct-2026, daba PER 53,2x, EV/EBITDA 20,7x, precio / valor contable 4,29x y dividendo 2,56%). A cierre de 2023, 2024 y 2025 el '
+                       'PER era 71,7x, 9,2x (plusvalías de Heathrow e IRB) y 44,8x, el EV/EBITDA 34,2x, 29,8x y 33,7x, el precio / valor contable 4,10x, '
+                       '3,68x y 5,19x, y la rentabilidad por dividendo 2,35%, 2,08% y 2,05%.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos', '7.402', '+7,1%'),
+               ('EBITDA ajustado', '1.210', '+17,4%'),
+               ('EBIT ajustado', '823', '+19,1%'),
+               ('Resultado de explotación', '848', '-12,2%'),
+               ('EBITDA ajustado 3T', '464', '+23,4%'),
+               ('Dividendos de proyectos', '604', '+48,8%'),
+               ('Caja neta sin proyectos (sep-26)', '1.660', '')],
+     'kpi': 'Margen EBITDA 16,3% (14,9% en 9M 2025; calculado). Autopistas: ingreso medio por viaje en la 407 ETR +20,7% con tráfico -1,7% (-7,1% en el '
+            '3T); ingreso por transacción +17,1% en NTE, +12,0% en LBJ, +15,6% en NTE 35W, +10,0% en I-66 y +11,0% en I-77. Construcción: margen EBIT '
+            'ajustado 4,1% (3,7%), flujo operativo 591 M€ y cartera récord de 18.994 M€ (más 8.745 M€ preadjudicados). Dividendos de proyectos 604 M€ '
+            '(315 de la 407 ETR). Caja neta sin proyectos de infraestructura 1.660 M€ (1.341 M€ en diciembre); liquidez 5.071 M€; deuda neta consolidada '
+            '5.929 M€.',
+     'guia': 'Sin guía numérica anual. Segundo dividendo flexible de 600 M€ (importe por acción el 3-nov-2026; ex-dividendo 5-nov; pago desde el '
+             '10-dic). Recompra: 391 M€ ejecutados a 30-sep-2026, de un máximo de 800 M€ hasta el 3-mar-2027. La 407 ETR aprobó un dividendo de 1.050 M '
+             'CAD para el 4T. JFK Terminal Uno: la fase A mantiene el objetivo del 31-mar-2027. Nuevas autopistas en EE. UU.: I-24 (Tennessee) e I-285 '
+             'Este (Georgia).',
+     'positivos': ['El EBITDA comparable creció un 21,8% y el del tercer trimestre un 23,4% (calculado), por las tarifas de las autopistas de '
+                   'Norteamérica.',
+                   'Los dividendos de proyectos subieron a 604 M€ y la 407 ETR aprobó otros 1.050 M CAD.',
+                   'Construcción supera su objetivo de margen (4,1%) y la caja neta sube a 1.660 M€.'],
+     'riesgos': ['El tráfico de la 407 ETR cayó un 7,1% en el tercer trimestre: el crecimiento depende de las tarifas.',
+                 'La fase A de la nueva Terminal Uno del JFK sigue sin abrir y el bloqueo de dividendos del proyecto se alarga.',
+                 'La I-24 prevé 7.700 M USD de pagos nominales a Tennessee en 2027-2033; el informe trimestral no incluye beneficio neto ni guía anual.'],
+     'videos': [('a1PNLKZ-FWE', 'Ferrovial resultados 3T 2026: EBITDA comparable +21,8%, el del 3T +23,4% | Caja neta 1.660 M€'),
+                ('TNX0A9PcJbg', 'Ferrovial 3T 2026 en 60 segundos (Short)'),
+                ('_enk_ZzJWhE', 'Ferrovial resultados 1S 2026: EBITDA comparable +21,6%, beneficio -52% por las plusvalías de 2025'),
                 ('jgro0LsOOGs', 'Ferrovial 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-27',
+     'proximo': '2027-02-25',
      'proximo_estimado': True,
-     'fuentes': 'Ferrovial, resultados del primer semestre 2026 (6-K y CNMV, 28-jul-2026); Capitalbolsa (análisis de Renta 4, 29-jul-2026); '
-                'Estrategias de Inversión, El Español y Bolsamanía/Europa Press (28 y 29-jul-2026); MarketBeat e Investing.com (conferencia, '
-                '29-jul-2026); Europa Press/Forbes (recompra, 14-sep-2026); stockanalysis.com (precio y múltiplos, 16-oct-2026).',
-     'fuentes_corto': 'Capitalbolsa, Estrategias de Inversión, El Español, MarketBeat y stockanalysis.com',
-     'elaborado': '16-oct-2026, 16:45'},
+     'fuentes': 'Ferrovial, resultados de los nueve primeros meses de 2026 (6-K a la SEC y nota de prensa, 27-oct-2026) y 6-K del segundo dividendo '
+                'flexible (27-oct-2026); Bolsamanía y EFE (27-oct-2026); stockanalysis.com (datos de 12 meses y múltiplos históricos, oct-2026).',
+     'fuentes_corto': 'Ferrovial (6-K), Bolsamanía, EFE y stockanalysis.com',
+     'elaborado': '27-oct-2026, 23:20'},
     {'id': 'aena',
      'nombre': 'Aena',
      'ticker': 'AENA',

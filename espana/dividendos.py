@@ -39,4 +39,5 @@ POR_ANUNCIAR = [
     ("CABK", "Dividendo a cuenta en noviembre del 30-40% del beneficio del primer semestre (961-1.281 M€).", "CaixaBank, resultados del 1S 2026"),
     ("IAG", "El dividendo a cuenta de 2026 se decidirá con los resultados del tercer trimestre.", "IAG, resultados del 1S 2026"),
     ("ENG", "Dividendo de 1 € por acción con cargo a 2026; falta el calendario del pago a cuenta.", "Enagás, resultados de 9M 2026"),
+    ("FER", "Nuevo dividendo flexible (scrip) de 600 M€: el importe por acción se conocerá el 3-nov, ex-dividendo el 5-nov y pago desde el 10-dic de 2026.", "Ferrovial, resultados de 9M 2026"),
 ]
