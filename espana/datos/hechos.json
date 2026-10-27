@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-27T11:55Z",
+ "actualizado": "2026-10-27T16:25Z",
  "items": [
+  {
+   "id": "f4044292-e05b-46f2-be5a-44a4a36de48c",
+   "tipo": "OIR",
+   "fecha": "2026-10-27 16:55",
+   "entidad": "ARCELORMITTAL, S.A.",
+   "nif": "N0181056C",
+   "categoria": "Otra información relevante",
+   "titulo": "Relación de operaciones con acciones propias efectuadas entre el 19 y el 23 de octubre de 2026, en el marco del programa de recompra de acciones anunciado el 30 de junio de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bf4044292-e05b-46f2-be5a-44a4a36de48c%7d",
+   "ticker": "MTS",
+   "temas": []
+  },
   {
    "id": "88ee43b3-3f3b-4099-b807-af97096454f3",
    "tipo": "OIR",
