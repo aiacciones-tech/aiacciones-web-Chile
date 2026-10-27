@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-27T20:32Z",
+ "actualizado": "2026-10-27T21:13Z",
  "items": [
+  {
+   "id": "74b58c83-3f48-499c-b965-c4238b1091fb",
+   "tipo": "OIR",
+   "fecha": "2026-10-27 21:53",
+   "entidad": "FERROVIAL N.V.",
+   "nif": "N0119863I",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Ferrovial remite la presentación para inversores sobre la I-285 East Express Lanes",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b74b58c83-3f48-499c-b965-c4238b1091fb%7d",
+   "ticker": "FER",
+   "temas": []
+  },
   {
    "id": "97f4dd23-c65f-43d2-99f4-0d586e4057e3",
    "tipo": "OIR",
