@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-27T07:10Z",
+ "actualizado": "2026-10-27T08:03Z",
  "items": [
+  {
+   "id": "6e2ddbd8-f83e-4363-a2ea-1395b9cbcdbb",
+   "tipo": "OIR",
+   "fecha": "2026-10-27 08:20",
+   "entidad": "FERROVIAL N.V.",
+   "nif": "N0119863I",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Ferrovial remite una presentación con información sobre calendario de pagos del valor concesional bajo el contrato de concesión, y aclaraciones sobre el mecanismo de reparto de ingresos con el Departamento de Transportes de Tennessee.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b6e2ddbd8-f83e-4363-a2ea-1395b9cbcdbb%7d",
+   "ticker": "FER",
+   "temas": []
+  },
   {
    "id": "bf095168-1af4-4509-9d3c-5caeabe68fbf",
    "tipo": "OIR",
