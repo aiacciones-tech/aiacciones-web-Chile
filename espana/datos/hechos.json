@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-26T21:52Z",
+ "actualizado": "2026-10-27T05:27Z",
  "items": [
+  {
+   "id": "6269670f-9899-4f13-9d7e-b451dec1b4e8",
+   "tipo": "OIR",
+   "fecha": "2026-10-26 23:57",
+   "entidad": "ENDESA, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Programa de recompra de acciones Sexto Tramo",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b6269670f-9899-4f13-9d7e-b451dec1b4e8%7d",
+   "ticker": "ELE",
+   "temas": []
+  },
   {
    "id": "2c924ab5-749c-4374-b0ef-aff0aaecf0b9",
    "tipo": "OIR",
