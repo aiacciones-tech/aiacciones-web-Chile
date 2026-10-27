@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-27T08:03Z",
+ "actualizado": "2026-10-27T09:01Z",
  "items": [
+  {
+   "id": "1a3605ab-d4fb-4a31-944d-07eae3d0a2ff",
+   "tipo": "OIR",
+   "fecha": "2026-10-27 09:43",
+   "entidad": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Compras del 20 al 26 de octubre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b1a3605ab-d4fb-4a31-944d-07eae3d0a2ff%7d",
+   "ticker": "ACS",
+   "temas": []
+  },
   {
    "id": "6e2ddbd8-f83e-4363-a2ea-1395b9cbcdbb",
    "tipo": "OIR",
