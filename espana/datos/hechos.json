@@ -1,6 +1,33 @@
 {
- "actualizado": "2026-10-27T17:24Z",
+ "actualizado": "2026-10-27T19:08Z",
  "items": [
+  {
+   "id": "7afdf540-0f51-47b7-87db-0ff689480327",
+   "tipo": "OIR",
+   "fecha": "2026-10-27 19:38",
+   "entidad": "FERROVIAL N.V.",
+   "nif": "N0119863I",
+   "categoria": "Otra información relevante",
+   "titulo": "Ferrovial anuncia un segundo dividendo flexible (scrip dividend) para 2026, pagadero en efectivo o en acciones.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b7afdf540-0f51-47b7-87db-0ff689480327%7d",
+   "ticker": "FER",
+   "temas": [
+    "dividendos",
+    "capital"
+   ]
+  },
+  {
+   "id": "31fe2624-0f91-4825-b9cd-403f318552ba",
+   "tipo": "OIR",
+   "fecha": "2026-10-27 19:29",
+   "entidad": "PUIG BRANDS, S.A.",
+   "nif": "A66674904",
+   "categoria": "Otra información relevante",
+   "titulo": "Convocatoria para el Capital Markets Day 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b31fe2624-0f91-4825-b9cd-403f318552ba%7d",
+   "ticker": "PUIG",
+   "temas": []
+  },
   {
    "id": "49c804d4-61dd-4b07-bdc2-72c85a7aa574",
    "tipo": "OIR",
