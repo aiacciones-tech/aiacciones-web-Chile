@@ -1,6 +1,20 @@
 {
- "actualizado": "2026-10-27T16:25Z",
+ "actualizado": "2026-10-27T17:24Z",
  "items": [
+  {
+   "id": "49c804d4-61dd-4b07-bdc2-72c85a7aa574",
+   "tipo": "OIR",
+   "fecha": "2026-10-27 18:02",
+   "entidad": "BANCO DE SABADELL, S.A.",
+   "nif": "A08000143",
+   "categoria": "Otra información relevante",
+   "titulo": "Banco Sabadell comunica que tiene prevista la celebración de una reunión con analistas e inversores el 29 de octubre de 2026, y una rueda de prensa el mismo día, con objeto de informar sobre los resultados del tercer trimestre de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b49c804d4-61dd-4b07-bdc2-72c85a7aa574%7d",
+   "ticker": "SAB",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "f4044292-e05b-46f2-be5a-44a4a36de48c",
    "tipo": "OIR",
