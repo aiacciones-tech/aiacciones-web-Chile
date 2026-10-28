@@ -17,8 +17,8 @@ Secreto del repo: BUFFER_API_KEY (Buffer > Settings > API).
 Variables del repo (opcionales, Settings > Secrets and variables > Actions > Variables):
   BUFFER_MODO   ahora (por defecto: se publica en X al tiro), cola (en el próximo horario
                 de la cola de Buffer) o borrador (queda en Borradores y Daniel lo aprueba)
-  BUFFER_HORA   hora de Chile a la que salen los posts de Chile mandados de noche (por defecto 08:00).
-                Un post mandado entre las 21:00 y esa hora se programa para esa hora; de día sale al tiro.
+  BUFFER_HORA   no (por defecto: los posts de Chile salen al tiro, también de noche) o una hora de Chile
+                HH:MM: un post mandado entre las 21:00 y esa hora se programa para esa hora.
                 "no" lo desactiva (todo sale al tiro).
   BUFFER_CANAL           ID del canal de X, si la cuenta tiene más de uno
   BUFFER_CANAL_LINKEDIN  ID del canal de LinkedIn, si hay más de uno (perfil y página)
@@ -179,7 +179,7 @@ def verificar():
     modo = os.environ.get("BUFFER_MODO") or "ahora"
     x = elegir_canal("x", lista)
     print(f"OK: la clave funciona y los posts irán a X como @{x['name']} en modo {modo}.")
-    hora = os.environ.get("BUFFER_HORA") or "08:00"
+    hora = os.environ.get("BUFFER_HORA") or "no"
     print("Posts de noche: salen al tiro." if hora.strip().lower() == "no"
           else f"Posts mandados entre las 21:00 y las {hora} (hora de Chile) salen a las {hora}.")
     li = elegir_canal("linkedin", lista)
@@ -210,7 +210,7 @@ NOCHE = 21  # desde las 21:00 de Chile casi nadie ve los posts: esperan a la ma�
 
 def hora_manana(ahora=None):
     """dueAt (ISO UTC) de la próxima BUFFER_HORA de Chile si ahora es de noche, o None si el post sale al tiro."""
-    hora = (os.environ.get("BUFFER_HORA") or "08:00").strip().lower()
+    hora = (os.environ.get("BUFFER_HORA") or "no").strip().lower()
     if hora == "no":
         return None
     try:
