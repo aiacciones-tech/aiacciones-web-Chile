@@ -1,6 +1,20 @@
 {
- "actualizado": "2026-10-28T07:24Z",
+ "actualizado": "2026-10-28T08:25Z",
  "items": [
+  {
+   "id": "f3e60461-251c-402e-b7bc-794451cfb02b",
+   "tipo": "OIR",
+   "fecha": "2026-10-28 08:31",
+   "entidad": "AENA, S.M.E., S.A.",
+   "nif": "A86212420",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La sociedad remite nota de prensa sobre los resultados de los nueve primeros meses de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bf3e60461-251c-402e-b7bc-794451cfb02b%7d",
+   "ticker": "AENA",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "53122673-4707-419d-8328-f40cc7554b26",
    "tipo": "OIR",
