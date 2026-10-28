@@ -1,6 +1,20 @@
 {
- "actualizado": "2026-10-28T08:25Z",
+ "actualizado": "2026-10-28T12:17Z",
  "items": [
+  {
+   "id": "5c8f8f38-f17f-4fe7-af69-c8f9345606e4",
+   "tipo": "OIR",
+   "fecha": "2026-10-28 12:34",
+   "entidad": "AENA, S.M.E., S.A.",
+   "nif": "A86212420",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La sociedad comunica la suspensión de la Presentación de Resultados de los nueve meses de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b5c8f8f38-f17f-4fe7-af69-c8f9345606e4%7d",
+   "ticker": "AENA",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "f3e60461-251c-402e-b7bc-794451cfb02b",
    "tipo": "OIR",
