@@ -60,54 +60,63 @@ FICHAS = [
                 'resultados 1S26 (22-jul-2026) y 2025 (25-feb-2026); stockanalysis.com (precio y múltiplos, oct-2026).',
      'fuentes_corto': 'Europa Press, Estrategias de Inversión, Smartkarma y stockanalysis.com',
      'elaborado': '21-oct-2026, 11:10'},
-    {
-        "id": "redeia",
-        "nombre": "Redeia",
-        "ticker": "RED",
-        "sector": "Eléctricas · red de transporte",
-        "lede": "Matriz de Red Eléctrica, que opera y transporta la electricidad en alta tensión en España. "
-                "También tiene negocio internacional (Latinoamérica) y de fibra óptica y satélites (Reintel, Hispasat).",
-        "periodo": "1S 2026",
-        "periodo_largo": "primer semestre de 2026",
-        "titular": "Beneficio neto de 280,4 M€ (+4,0%), en línea con lo esperado según Renta 4 e Investing.com. "
-                   "El EBITDA (+5,8%) incluye 24 M€ de un cambio contable regulatorio; sin él crece cerca de un 2% (calculado).",
-        "precio": "14,80 €",
-        "precio_fecha": "2-oct-2026",
-        "multiplos": [("PER 12 meses", "16,6x"), ("PER forward", "15,6x"), ("EV/EBITDA", "11,3x"),
-                      ("Rentab. dividendo", "5,4%"), ("FCF yield", "−6,8%"), ("Capitalización", "~8.006 M€")],
-        "multiplos_nota": "Con precio de 14,80 € al 2-oct-2026 (stockanalysis.com). A cierre de 2023, 2024 y 2025 el PER era 11,7x, 25,4x y 16,8x, "
-                          "y el EV/EBITDA 10,4x, 13,9x y 13,3x. Capitalización calculada con 540,9 M de acciones.",
-        "tabla_titulo": "Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025",
-        "tabla": [
-            ("Ingresos", "869,2", "+7,1%"),
-            ("Transporte y operación en España", "779,6", "+9,1%"),
-            ("EBITDA", "672,6", "+5,8%"),
-            ("EBIT", "422,6", "+1,6%"),
-            ("Beneficio neto", "280,4", "+4,0%"),
-            ("BPA (calculado)", "~0,52 €", "+4%"),
-        ],
-        "kpi": "Margen EBITDA 77,4% (calculado). EBITDA por negocio: España 554,5 M€ (+10%), internacional 57,7 M€, fibra óptica 51,1 M€ (57,8 en 1S 2025). "
-               "Inversión de 657 M€ (+9%), 551 M€ en la red de transporte. Deuda neta 5.009 M€, 465 M€ menos que en diciembre; "
-               "deuda neta / EBITDA ~3,9x (calculado). Coste medio de la deuda 2,35%.",
-        "guia": "Guía 2026: beneficio neto ~510 M€ y EBITDA superior a 1.250 M€; el primer semestre ya suma el 55% del beneficio objetivo (calculado). "
-                "Plan 2026-2029: 6.500 M€ de inversión y dividendo +2% anual hasta 0,87 € en 2029. Apagón de abril de 2025: sin provisiones; "
-                "Redeia ha presentado alegaciones al expediente de la CNMC.",
-        "positivos": ["Transporte en España: EBITDA +10% y nueva tasa de retribución del 6,58%.",
-                      "La deuda neta bajó 465 M€ en el semestre.",
-                      "El beneficio lleva el 55% de la guía anual."],
-        "riesgos": ["El expediente de la CNMC por el apagón sigue abierto.",
-                    "La fibra óptica y el negocio internacional pierden peso.",
-                    "La inversión récord deja el flujo de caja libre en negativo y la deuda subirá en los próximos años."],
-        "videos": [("wbzhyA-076o", "Redeia resultados 1S 2026: beneficio +4%, en línea con el consenso | Deuda neta −465 M€"),
-                   ("oFncLSa2iN4", "Redeia 1S 2026 en 60 segundos (Short)")],
-        "proximo": "2026-10-28",
-        "proximo_estimado": True,
-        "fuentes": "Redeia, nota de prensa de resultados del primer semestre 2026 (29-jul-2026, CNMV y redeia.com); Renta 4 Banco / Capitalbolsa e Investing.com "
-                   "(comparación con el consenso, 29-jul-2026); Estrategias de Inversión y elDiario.es (detalle por negocio y deuda, 29-jul-2026); "
-                   "Bankinter Análisis (guía 2026, 29-abr-2026); Merca2 (plan 2026-2029, 27-feb-2026); stockanalysis.com (precio y múltiplos, 2-oct-2026).",
-        "fuentes_corto": "Renta 4 Banco, Investing.com, Bankinter Análisis, Estrategias de Inversión, elDiario.es, Merca2 y stockanalysis.com",
-        "elaborado": "12-oct-2026, 16:00",
-    },
+    {'id': 'redeia',
+     'nombre': 'Redeia',
+     'ticker': 'RED',
+     'sector': 'Eléctricas · red de transporte',
+     'lede': 'Matriz de Red Eléctrica, que opera y transporta la electricidad en alta tensión en España. También tiene negocio internacional '
+             '(Latinoamérica) y de fibra óptica (Reintel).',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 410,3 M€ hasta septiembre (+5,3%) y de 129,9 M€ en el tercer trimestre (+8%). La inversión sube un 17,7%, a 1.138,9 '
+                'M€, y el consejo aprueba un dividendo a cuenta de 0,2040 € por acción (+2%), pagadero el 7 de enero.',
+     'precio': '15,02 €',
+     'precio_fecha': '26-oct-2026',
+     'multiplos': [('PER 12 meses (calculado)', '15,4x'),
+                   ('Precio / valor contable (calculado)', '1,42x'),
+                   ('EV/EBITDA (calculado)', '10,5x'),
+                   ('EV/EBITDA (stockanalysis, 2-oct-2026)', '11,3x'),
+                   ('Rentab. dividendo (calculado)', '5,3%'),
+                   ('Capitalización', '~8.125 M€')],
+     'multiplos_nota': 'Con precio de 15,02 € al cierre del 26-oct-2026 (Bolsamanía), último cierre disponible en las fuentes consultadas. PER con el '
+                       'beneficio de 12 meses a septiembre (526,1 M€), P/VC con valor contable de 10,60 € por acción (stockanalysis), EV/EBITDA con '
+                       'deuda neta de septiembre y EBITDA de 12 meses (~1.309 M€) y rentabilidad con el dividendo de 2025 (0,80 €): todo calculado. A '
+                       'cierre de 2023, 2024 y 2025 (stockanalysis) el PER era 11,7x, 25,4x y 16,8x, el precio / valor contable 1,46x, 1,69x y 1,54x, la '
+                       'rentabilidad por dividendo 7,6%, 5,3% y 5,5%, y el EV/EBITDA 10,4x, 13,9x y 13,3x.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Cifra de negocio', '1.312,9', '+7,8%'),
+               ('Gestión y operación de la red en España', '1.176,8', '+9,7%'),
+               ('EBITDA', '1.001,4', '+5,3%'),
+               ('EBIT', '627,0', '+1,9%'),
+               ('Beneficio neto', '410,3', '+5,3%'),
+               ('Beneficio neto 3T', '129,9', '+8,0%'),
+               ('BPA (calculado)', '~0,76 €', '+5,3%')],
+     'kpi': 'Margen EBITDA 76,3% sobre la cifra de negocio (78,1% en 9M 2025; calculado). Con participadas, ingresos de 1.352,4 M€ (+7,2%); transporte '
+            'internacional 97,9 M€ (-6,1%) y fibra óptica 104,0 M€ (-7,0%) (variaciones calculadas). Inversión de 1.138,9 M€ (+17,7%), 1.092 M€ en Red '
+            'Eléctrica. FFO 823,8 M€ (+15,5%), ~72% de la inversión (calculado). Deuda neta 5.600,8 M€, +2,3% sobre diciembre y +591 M€ en el tercer '
+            'trimestre; deuda neta / EBITDA ~4,3x (calculado). Fitch y S&P rebajaron el rating a BBB+ (desde A-) este año.',
+     'guia': 'Sin guía numérica de beneficio en el informe. Dividendo a cuenta de 2026: 0,2040 € por acción (+2%), pago el 7 de enero; plan 2026-2029 '
+             'con dividendo +2% anual hasta 0,87 € en 2029. Retribución financiera de la red eléctrica: 6,58% en 2026-2031 (CNMC). Golfo de Bizkaia: '
+             'todos los cables submarinos tendidos; interconexión Portugal-Galicia en servicio; 43 posiciones para evacuar renovables antes de fin de '
+             'año.',
+     'positivos': ['El beneficio del tercer trimestre creció un 8%.',
+                   'La red en España factura un 9,7% más.',
+                   'El FFO sube un 15,5% y el dividendo a cuenta crece un 2%, como marca el plan.'],
+     'riesgos': ['La inversión supera a la caja generada: la deuda neta subió 591 M€ en el trimestre y el rating ya es BBB+.',
+                 'El transporte internacional y la fibra óptica siguen bajando (calculado).',
+                 'Los márgenes se estrechan por la amortización y los costes: el EBIT solo sube un 1,9%.'],
+     'videos': [('miVprt1OeNQ', 'Redeia resultados 3T 2026: beneficio +5,3% e inversión +17,7% | Dividendo a cuenta 0,204 €'),
+                ('9Q1ek3XWhBE', 'Redeia 3T 2026 en 60 segundos (Short)'),
+                ('wbzhyA-076o', 'Redeia resultados 1S 2026: beneficio +4%, en línea con el consenso | Deuda neta −465 M€'),
+                ('oFncLSa2iN4', 'Redeia 1S 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-25',
+     'proximo_estimado': True,
+     'fuentes': 'Redeia, resultados 9M26 y dividendo a cuenta (CNMV, 28-oct-2026), recogidos por Europa Press (Infobae, elDiario.es, Forbes), '
+                'Bolsamanía, Vozpópuli, Business People y El Español (28-oct-2026); Redeia, informes de resultados 9M25 (29-oct-2025) y 1S26 '
+                '(29-jul-2026) y resultados 2025 (26-feb-2026); CNMC (18-sep-2026); Bolsamanía (precio) y stockanalysis.com (múltiplos históricos, '
+                'oct-2026).',
+     'fuentes_corto': 'Europa Press, Bolsamanía, Vozpópuli, Business People, El Español, CNMC y stockanalysis.com',
+     'elaborado': '28-oct-2026, 11:25'},
     {'id': 'bankinter',
      'nombre': 'Bankinter',
      'ticker': 'BKT',
@@ -524,55 +533,60 @@ FICHAS = [
      'nombre': 'Endesa',
      'ticker': 'ELE',
      'sector': 'Eléctricas · redes, generación y comercialización',
-     'lede': 'Eléctrica integrada, controlada por Enel, con distribución regulada, generación (renovable, convencional y extrapeninsular) y '
-             'comercialización de electricidad y gas en España y Portugal. Las actividades reguladas aportan cerca de la mitad del EBITDA.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio neto de 1.470 M€ (+41,2%), un 6,8% por encima del consenso (1.376 M€, Bankinter Análisis; diferencia calculada). Beneficio '
-                'ordinario neto 1.480 M€ (+42,2%). Unos 200 M€ del EBITDA fueron no recurrentes.',
-     'precio': '42,18 €',
-     'precio_fecha': '25-sep-2026',
-     'multiplos': [('PER 12 meses', '16,6x'),
-                   ('PER forward', '17,8x'),
-                   ('EV/EBITDA', '9,3x'),
-                   ('Precio / valor contable', '4,7x'),
-                   ('Rentab. dividendo', '3,8%'),
-                   ('FCF yield', '4,7%'),
-                   ('Capitalización', '~43.170 M€')],
-     'multiplos_nota': 'Con precio de 42,18 € al 25-sep-2026 (stockanalysis.com). A cierre de 2023, 2024 y 2025 el PER era 26,3x, 11,7x y 14,5x, el '
-                       'EV/EBITDA 10,5x, 6,9x y 8,2x y el precio / valor contable 2,7x, 2,4x y 3,3x. La acción subió un 59% en 52 semanas.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ingresos', '10.995', '+1,1%'),
-               ('EBITDA', '3.240', '+19,5%'),
-               ('EBITDA redes (distribución)', '1.200', '+24%'),
-               ('EBITDA generación (redondeado)', '~1.200', ''),
-               ('EBITDA clientes (redondeado)', '~800', '+26%'),
-               ('EBIT', '2.094', '+31,4%'),
-               ('Beneficio neto', '1.470', '+41,2%'),
-               ('Beneficio ordinario neto', '1.480', '+42,2%'),
-               ('BPA', '1,44 €', '+46%')],
-     'kpi': 'Margen EBITDA 29,5% (24,9% en 1S 2025; calculado). Producción 32.708 GWh (+8,5%); ventas de electricidad 35.474 GWh (-2,3%) y de gas 25.591 '
-            'GWh (-17,6%); energía distribuida 72.555 GWh (+4,2%). Cash flow operativo 2.272 M€ (-3,6%); inversión bruta 1.062 M€ (+13,6%; redes 600 M€, '
-            '+38%). Deuda financiera neta 10.305 M€ (10.110 M€ en diciembre), 1,6x EBITDA. Coste medio de la deuda 3,2%.',
-     'guia': 'Guía 2026 al alza: beneficio ordinario neto de más de 2.400 M€ (antes 2.300-2.400 M€); el semestre ya suma el 62% (calculado). Objetivo de '
-             'EBITDA de 5.800-6.100 M€ fijado en febrero. Política de dividendo 2026-2028: al menos el 70% del beneficio ordinario neto, lo que supone '
-             'más de 1.680 M€ para 2026 (calculado). Recompra de 2.000 M€ ejecutada en más del 50%. Nuevo plan estratégico a principios de 2027.',
-     'positivos': ['Las redes crecen un 24% y la inversión en ellas, un 38%.',
-                   'El beneficio superó al consenso y la guía anual sube.',
-                   'La deuda apenas se mueve pese a la recompra y el apalancamiento baja a 1,6x.'],
-     'riesgos': ['Unos 200 M€ del EBITDA del semestre no se repetirán.',
-                 'Las ventas de electricidad y gas caen, y la empresa prevé un margen libre de 44-55 €/MWh para el año, por debajo de los 56 del '
-                 'semestre.',
-                 'El PER y el EV/EBITDA están por encima de los de 2024 y 2025.'],
-     'videos': [('hinLi7xl-R8', 'Endesa resultados 1S 2026: beneficio +41%, 6,8% sobre el consenso | Guía 2026 al alza'),
+     'lede': 'Eléctrica integrada, controlada por Enel, con distribución regulada, generación (renovable, nuclear, convencional y extrapeninsular) y '
+             'comercialización de electricidad y gas en España y Portugal. Las redes y la generación extrapeninsular aportan ya cerca de la mitad del '
+             'EBITDA.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio ordinario neto de 2.125 M€ hasta septiembre (+22,5%) y beneficio neto de 1.962 M€ (+14,7%). Las redes suben un 24,8% y Endesa '
+                'confirma su guía 2026 de más de 2.400 M€ de beneficio ordinario, aunque el EBITDA del tercer trimestre bajó un 11,6% (calculado).',
+     'precio': '43,06 €',
+     'precio_fecha': '28-oct-2026',
+     'multiplos': [('PER 12 meses', '18,0x'),
+                   ('PER ordinario 12 meses', '16,1x'),
+                   ('EV/EBITDA', '9,0x'),
+                   ('Precio / valor contable', '4,8x'),
+                   ('Rentab. dividendo', '3,7%'),
+                   ('Capitalización', '~44.070 M€')],
+     'multiplos_nota': 'Calculados con el precio de 43,06 € del 28-oct-2026 a las 10:41 (Bolsamanía), ~1.023,5 M de acciones (stockanalysis.com), '
+                       'beneficio y EBITDA de 12 meses a septiembre, deuda financiera neta de 11.187 M€ y dividendo de 1,584 € con cargo a 2025. A '
+                       'cierre de 2023, 2024 y 2025 el PER era 26,3x, 11,7x y 14,5x, el EV/EBITDA 10,5x, 6,9x y 8,2x y el precio / valor contable 2,7x, '
+                       '2,4x y 3,3x (stockanalysis.com). La acción subió un 43% en 52 semanas (stockanalysis.com, 20-oct-2026).',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos', '17.389', '+9,0%'),
+               ('EBITDA', '4.577', '+8,4%'),
+               ('EBITDA distribución (redes)', '1.747', '+24,8%'),
+               ('EBITDA generación y comercialización', '2.889', '+3%'),
+               ('EBIT', '2.848', '+11,9%'),
+               ('Beneficio neto', '1.962', '+14,7%'),
+               ('Beneficio ordinario neto', '2.125', '+22,5%'),
+               ('EBITDA 3T (calculado)', '1.337', '-11,6%')],
+     'kpi': 'Margen EBITDA 26,3% (26,5% en 9M 2025; calculado). Margen bruto de clientes 1.579 M€ (+16,3%) y de renovables 730 M€ (a la baja). '
+            'Producción 49.296 GWh (+6,3%; renovable +7,5%); ventas de electricidad 55.465 GWh (-2,0%) y de gas 38.553 GWh (-8,2%); energía distribuida '
+            '114.285 GWh (+4,9%). Cash flow operativo 3.467 M€ (+0,9%); inversión bruta 1.622 M€ (+19,4%; redes ~900 M€, +42%). Deuda financiera neta '
+            '11.187 M€ (10.110 M€ en diciembre), 1,8x EBITDA; coste medio 3,2%; liquidez 6.900 M€. Costes fijos 1.481 M€ (-8%) sin una provisión de 202 '
+            'M€ por reestructuración de plantilla.',
+     'guia': 'Guía 2026 confirmada: beneficio ordinario neto de más de 2.400 M€, pese a unas condiciones de mercado más exigentes en el cuarto '
+             'trimestre; los nueve meses ya suman el 88,5% (calculado). Política de dividendo 2026-2028: al menos el 70% del beneficio ordinario neto, '
+             'más de 1.680 M€ para 2026 (calculado); el dividendo a cuenta aún no está anunciado. 2.600 M€ al accionista en 2026, con unos 900 M€ de '
+             'recompra. Almaraz autorizada hasta junio de 2030. Actualización del plan estratégico en febrero de 2027.',
+     'positivos': ['Las redes crecen un 24,8% y la inversión en ellas, un 42%.',
+                   'El beneficio ordinario sube un 22,5% y ya cubre el 88,5% de la guía anual (calculado).',
+                   'Los costes fijos ajustados bajan un 8%.'],
+     'riesgos': ['El tercer trimestre fue más débil: EBITDA -11,6% y beneficio ordinario -7,1% (calculado).',
+                 'La deuda neta sube 1.077 M€ desde diciembre y se queda en 1,8x EBITDA.',
+                 'Caen las ventas de electricidad (-2,0%) y de gas (-8,2%), y la empresa prevé un cuarto trimestre más exigente.'],
+     'videos': [('KHQ8aN7Q7mw', 'Endesa resultados 3T 2026: beneficio ordinario +22,5% y guía confirmada | Redes +24,8%'),
+                ('Vl1lgHPunoc', 'Endesa 3T 2026 en 60 segundos (Short)'),
+                ('hinLi7xl-R8', 'Endesa resultados 1S 2026: beneficio +41%, 6,8% sobre el consenso | Guía 2026 al alza'),
                 ('tcyjnI02z7Q', 'Endesa 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-28',
+     'proximo': '2027-02-24',
      'proximo_estimado': True,
-     'fuentes': 'Endesa, nota de prensa de resultados del primer semestre 2026 (CNMV y endesa.com, 29-jul-2026); Bankinter Análisis (consenso, '
-                '29-jul-2026); Investing.com (presentación y conferencia de resultados, 29-jul-2026); Endesa (resultados 1T26, 6-may-2026); El Español y '
-                'Bolsamania (plan y política de dividendo, 24-feb-2026); stockanalysis.com (precio y múltiplos, 25-sep-2026).',
-     'fuentes_corto': 'Bankinter Análisis, Investing.com, El Español, Bolsamania y stockanalysis.com',
-     'elaborado': '15-oct-2026, 13:30'},
+     'fuentes': 'Endesa, resultados de los nueve meses de 2026 (presentación en la CNMV y nota de prensa en endesa.com, 28-oct-2026) y del primer '
+                'semestre (29-jul-2026); El Español y El Conciso (28-oct-2026); Bolsamanía (precio, 28-oct-2026); stockanalysis.com (acciones y '
+                'múltiplos históricos, oct-2026).',
+     'fuentes_corto': 'El Español, El Conciso, Bolsamanía y stockanalysis.com',
+     'elaborado': '28-oct-2026, 11:15'},
     {'id': 'enagas',
      'nombre': 'Enagás',
      'ticker': 'ENG',
@@ -692,57 +706,62 @@ FICHAS = [
      'nombre': 'Aena',
      'ticker': 'AENA',
      'sector': 'Aeropuertos · tarifas reguladas y negocio comercial',
-     'lede': 'Gestiona 46 aeropuertos y dos helipuertos en España, además de Londres-Luton, Leeds Bradford (vía Augusta) y 17 aeropuertos en '
-             'Brasil. Sus tarifas aeroportuarias en España las fija el DORA; el negocio comercial (tiendas, restauración, aparcamientos, salas '
-             'VIP) y el inmobiliario completan los ingresos.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio neto de 1.002 M€ (+12,1%), por primera vez por encima de 1.000 M€ en un semestre, aunque algo por debajo del '
-                'consenso de Bloomberg que recoge XTB (1.019,8 M€; diferencia -1,7%, calculada). La deuda financiera neta sube a 6.724 M€ tras '
-                'el dividendo y la compra de Augusta.',
-     'precio': '25,22 €',
-     'precio_fecha': '14-oct-2026',
-     'multiplos': [('PER 12 meses', '17,0x'),
-                   ('PER forward', '15,8x'),
-                   ('EV/EBITDA', '11,6x'),
-                   ('Precio / valor contable', '4,28x'),
-                   ('Rentab. dividendo', '4,32%'),
-                   ('FCF yield', '5,75%'),
-                   ('Capitalización', '~37.830 M€')],
-     'multiplos_nota': 'Con precio de 25,22 € al cierre del 14-oct-2026 (stockanalysis.com; 1.500 M de acciones tras el desdoblamiento 10x1 de '
-                       '2025). A cierre de 2023, 2024 y 2025 el PER era 15,1x, 15,3x y 16,7x, el EV/EBITDA 11,2x, 10,4x y 11,2x, el precio / '
-                       'valor contable 3,26x, 3,49x y 3,90x, y la rentabilidad por dividendo 5,19%, 5,31% y 4,74%.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ingresos', '3.299,6', '+10,1%'),
-               ('Ingresos aeronáuticos', '1.702,1', '+8,1% (calculado)'),
-               ('Ingresos comerciales', '991,0', '+6,7% (calculado)'),
-               ('EBITDA', '1.798,9', '+6,3%'),
-               ('Beneficio neto', '1.002,0', '+12,1%'),
-               ('Beneficio neto 2T (calculado)', '672,6', '+13,5%'),
-               ('BPA (calculado)', '~0,67 €', '+12,1%')],
-     'kpi': 'Margen EBITDA 54,5% (56,5% en 1S 2025). Pasajeros: 156,2 M en España (+3,7%), 8,8 M en Luton (+5,1%) y ~22,9 M en Brasil '
-            '(calculado); 190 M en el grupo (+3,9%). Ingreso comercial por pasajero en España ~6,34 € (+2,8%, calculado); salas VIP +31,7%, '
-            'aparcamientos +9%. Flujo de explotación 1.598,5 M€ (+8,0%, calculado). Deuda financiera neta 6.724 M€ (+1.215 M€ vs diciembre), '
-            '1,73x EBITDA, tras 1.646,4 M€ de dividendos pagados y 340 M€ por Augusta.',
-     'guia': 'Tráfico en España 2026: alrededor de +3% (desde ~1,3% a inicio de año, según XTB), con poca visibilidad en el segundo semestre. '
-             'Política de dividendo del 80% del beneficio; 1,09 € por acción con cargo a 2025. 2026 es el último año del DORA II (tarifa de '
-             '11,02 € por pasajero, +6,44%). El DORA III, aprobado el 15-sep-2026, fija subidas medias del 0,33% anual en 2027-2031 (Aena '
-             'pedía 3,82%) con unas inversiones cercanas a 13.000 M€.',
-     'positivos': ['El beneficio supera por primera vez los 1.000 M€ en un semestre y la previsión de tráfico sube a ~3%.',
-                   'El negocio comercial sigue creciendo: salas VIP +31,7% y aparcamientos +9%.',
-                   'Crecimiento exterior con Augusta (Leeds Bradford y Newcastle) y la concesión de Río de Janeiro-Galeão.'],
-     'riesgos': ['El DORA III deja las tarifas casi congeladas hasta 2031 con un gran plan de inversión.',
-                 'Los costes (+13,5%) crecen más que los ingresos y los resultados quedaron algo por debajo del consenso.',
-                 'La deuda neta sube 1.215 M€ y la visibilidad del tráfico en el segundo semestre es baja.'],
-     'videos': [('QCBLXtjeo3o', 'Aena resultados 1S 2026: beneficio 1.002 M€ (+12,1%), algo por debajo del consenso | Deuda 6.724 M€'),
+     'lede': 'Gestiona 46 aeropuertos y dos helipuertos en España, además de Londres-Luton, Leeds Bradford (vía Augusta) y 17 aeropuertos en Brasil, a '
+             'los que suma Río de Janeiro-Galeão desde octubre de 2026. Sus tarifas aeroportuarias en España las fija el DORA; el negocio comercial '
+             '(tiendas, restauración, aparcamientos, salas VIP) y el inmobiliario completan los ingresos.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 1.774,7 M€ hasta septiembre (+12,4%) y de 772,8 M€ en el tercer trimestre (+12,7%, calculado), con 309,9 M de '
+                'pasajeros en el grupo (+4,1%). El margen EBITDA baja al 58,3% (60,2%) porque los gastos operativos crecen un 13,4%; la deuda financiera '
+                'neta, 5.845 M€ (1,47x EBITDA), baja 879 M€ desde junio (calculado).',
+     'precio': '26,50 €',
+     'precio_fecha': '28-oct-2026',
+     'multiplos': [('PER 12 meses', '~17,0x'),
+                   ('PER forward', '16,6x'),
+                   ('EV/EBITDA', '~11,5x'),
+                   ('Precio / valor contable', '4,49x'),
+                   ('Rentab. dividendo', '~4,11%'),
+                   ('Capitalización', '~39.750 M€')],
+     'multiplos_nota': 'Precio de 26,50 € el 28-oct-2026 hacia las 09:45 (Europa Press), tras los resultados; 1.500 M de acciones. PER, EV/EBITDA y '
+                       'rentabilidad por dividendo calculados con el beneficio (2.332,0 M€) y el EBITDA (3.980,2 M€) de los 12 meses a septiembre y la '
+                       'deuda financiera neta de 5.845 M€; PER forward y precio / valor contable, de stockanalysis.com al mismo precio. A cierre de '
+                       '2023, 2024 y 2025 el PER era 15,1x, 15,3x y 16,7x, el EV/EBITDA 11,2x, 10,4x y 11,2x, el precio / valor contable 3,26x, 3,49x y '
+                       '3,90x, y la rentabilidad por dividendo 5,19%, 5,31% y 4,74%.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos', '5.283,9', '+10,4%'),
+               ('Ingresos aeronáuticos', '2.781,3', '+8,8%'),
+               ('Ingresos comerciales', '1.574,1', '+7,4%'),
+               ('EBITDA', '3.077,9', '+6,8%'),
+               ('Beneficio neto', '1.774,7', '+12,4%'),
+               ('Beneficio neto 3T (calculado)', '772,8', '+12,7%'),
+               ('BPA (calculado)', '~1,18 €', '+12,4%')],
+     'kpi': 'Margen EBITDA 58,3% (60,2% en 9M 2025; 60,3% frente a 60,9% sin IFRIC 12 ni el seguro de Luton). Pasajeros: 257,2 M en España (+4,1%), 14,3 '
+            'M en Luton (+6,2%), 3,7 M en Leeds Bradford (+2,9%) y ~34,8 M en Brasil (calculado). Comercial en España: salas VIP 197,8 M€ (+30,4%), '
+            'aparcamientos 181,3 M€ (+9,8%), restauración 300,9 M€ (+7,5%), tiendas libres de impuestos 404,1 M€ (+0,6%); inmobiliario 108,6 M€ '
+            '(+11,6%). Flujo de explotación 2.811,3 M€ (+11,3%); inversión 1.133,5 M€ (343,5 por Augusta); dividendos pagados 1.646,4 M€. Deuda '
+            'financiera neta 5.845 M€ (5.509 en diciembre, 6.724 en junio), 1,47x EBITDA. Fitch: A+ desde el 7-oct-2026.',
+     'guia': 'Sin guía nueva en el informe de 9M; en julio Aena elevó la previsión de tráfico en España para 2026 a ~+3% (hasta septiembre, +4,1%). '
+             'Política de dividendo del 80% del beneficio; 1,09 € por acción con cargo a 2025; sin dividendo nuevo anunciado. Compra del 100% de Río de '
+             'Janeiro-Galeão cerrada el 6-oct-2026 (257,2 M€ pagados; el resto, en el 4T). DORA III (2027-2031), aprobado el 15-sep-2026: tarifas +0,33% '
+             'anual sobre 2026 e inversión de 12.888 M€ (9.991 M€ regulada).',
+     'positivos': ['El beneficio crece un 12,4% hasta septiembre y un 12,7% en el tercer trimestre (calculado).',
+                   'El tráfico en España (+4,1%) supera la previsión de Aena y el negocio comercial sigue creciendo: salas VIP +30,4% y aparcamientos '
+                   '+9,8%.',
+                   'La deuda neta baja 879 M€ desde junio, Fitch sube el rating a A+ y Aena suma Río de Janeiro-Galeão.'],
+     'riesgos': ['El DORA III deja las tarifas casi congeladas (+0,33% anual) hasta 2031 con una inversión de 12.888 M€.',
+                 'Los gastos operativos (+13,4%) crecen más que los ingresos y el margen EBITDA baja al 58,3%.',
+                 'Las tiendas libres de impuestos apenas crecen (+0,6%) y los ingresos quedaron por debajo de la media de los analistas (Reuters).'],
+     'videos': [('f8e-rA03fWM', 'Aena resultados 3T 2026: beneficio 1.774,7 M€ (+12,4%) y 309,9 M de pasajeros | Margen EBITDA 58,3%'),
+                ('0Hfym0TlkbA', 'Aena 3T 2026 en 60 segundos (Short)'),
+                ('QCBLXtjeo3o', 'Aena resultados 1S 2026: beneficio 1.002 M€ (+12,1%), algo por debajo del consenso | Deuda 6.724 M€'),
                 ('SuVwEzW7h9I', 'Aena 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-28',
+     'proximo': '2027-02-24',
      'proximo_estimado': True,
-     'fuentes': 'Aena, nota de prensa de resultados del primer semestre 2026 (CNMV y aena.es, 29-jul-2026), notas del 1T26, 1S25 y 1T25; XTB '
-                '(consenso Bloomberg, 29-jul-2026); Investing.com (detalle por negocio, 29-jul-2026); EFE (tarifa 2026, 20-nov-2025); '
-                'Hosteltur (DORA III, 15-sep-2026); stockanalysis.com (precio y múltiplos, 14-oct-2026).',
-     'fuentes_corto': 'XTB, Investing.com, Hosteltur, EFE y stockanalysis.com',
-     'elaborado': '16-oct-2026, 16:55'},
+     'fuentes': 'Aena, presentación de resultados e informe de gestión de los nueve primeros meses de 2026 y nota de prensa (CNMV y aena.es, '
+                '28-oct-2026); nota de resultados 2025 (25-feb-2026); Europa Press, Reuters e Investing.com (28-oct-2026); Hosteltur (DORA III, '
+                '15-sep-2026); stockanalysis.com (múltiplos, oct-2026).',
+     'fuentes_corto': 'Aena (CNMV), Europa Press, Reuters, Investing.com y stockanalysis.com',
+     'elaborado': '28-oct-2026, 11:21'},
     {'id': 'puig',
      'nombre': 'Puig',
      'ticker': 'PUIG',
@@ -921,55 +940,61 @@ FICHAS = [
      'lede': 'Mayor aseguradora española, con negocio en Iberia (España y Portugal), Brasil y el resto de Latinoamérica, Norteamérica, EMEA y el '
              'reaseguro de MAPFRE RE. En una aseguradora, los ingresos se miden con las primas y la rentabilidad técnica con el ratio combinado No Vida '
              '(siniestros y gastos sobre primas; por debajo del 100%, el seguro gana dinero); la fortaleza del balance, con el ratio de Solvencia II.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio neto de 624,2 M€ (+9,4%) con un ratio combinado No Vida del 92,8% (-0,3 pp), pero primas casi planas (16.127 M€, +1,1%). '
-                'Renta 4 lo calificó de "lectura mixta" (beneficio en línea con el consenso y primas No Vida por debajo). Junto a las cuentas, Mapfre '
-                'anunció la compra de Safety Insurance (EE. UU.) por 1.542 M$ y la acción cayó un 4,7% el 24-jul-2026 (Merca2).',
-     'precio': '4,35 €',
-     'precio_fecha': '23-oct-2026, 11:57',
-     'multiplos': [('PER 12 meses', '~11,1x'),
-                   ('PER forward', '~10,4x'),
-                   ('Precio / valor en libros', '~1,2x'),
-                   ('Rentab. dividendo', '4,1%'),
-                   ('Capitalización', '~13.350 M€')],
-     'multiplos_nota': 'Con precio de 4,35 € el 23-oct-2026 a las 11:57 (Bolsarama); múltiplos de stockanalysis.com (PER 11,12x, forward 10,37x y P/VC '
-                       '1,20x a 4,352 €; 3.070 M de acciones; dividendo 0,18 €) ajustados a ese precio (calculado). A cierre de 2022, 2023, 2024 y 2025 '
-                       'el PER era 9,8x, 8,8x, 7,8x y 11,6x, el precio / valor en libros 0,62x, 0,62x, 0,75x y 1,25x, y la rentabilidad por dividendo '
-                       '9,5%, 8,6%, 7,0% y 4,3%. En una aseguradora no se usan EV/EBITDA ni flujo de caja libre.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Primas', '16.127', '+1,1%'),
-               ('Primas No Vida', '12.314', '+0,3%'),
-               ('Primas Vida', '3.813', '+3,8%'),
-               ('Ingresos totales', '19.008', '+1,5%'),
-               ('Ratio combinado No Vida', '92,8%', '-0,3 pp'),
-               ('Beneficio neto', '624,2', '+9,4%'),
-               ('Beneficio neto 2T (calculado)', '~313', '+6,3%'),
-               ('BPA (calculado)', '~0,20 €', '+9,4%')],
-     'kpi': 'ROE 12,5% (13,4% sin extraordinarios). Fondos propios 9.592 M€ (+7,1% en el año). Solvencia II 208,8% a junio (206,8% en marzo; rango '
-            'objetivo 175%-225%). Beneficio por unidad: Iberia 278,6 M€ (+16,6%; ratio combinado 93,7%), MAPFRE RE 185,6 M€ (+24,6%; 95,2%), Brasil '
-            '136,3 M€ (+4,3%; 73,8%), Otros LATAM 81,3 M€ (-12,2%; 99,1%), Norteamérica 68,8 M€ (+14,1%; 94,6%), EMEA -4,6 M€ (107,4%). Dividendo con '
-            'cargo a 2025: 0,18 € por acción (+12,5%), ~554 M€.',
-     'guia': 'Objetivos 2026 (Junta General, 13-mar-2026): ROE por encima del 13% y ratio combinado del 93%-94%; en el semestre, 12,5% (13,4% sin '
-             'extraordinarios) y 92,8%. Compra de Safety Insurance (Massachusetts, EE. UU.) por 1.542 M$ (~1.352 M€) en efectivo: cierre previsto en el '
-             '1T27, unos -10 pp de Solvencia II, financiación con deuda subordinada, senior y bancaria, y alrededor de un +5% de beneficio una vez '
-             'integrada.',
-     'positivos': ['Beneficio +9,4% con un ratio combinado del 92,8%, mejor que el objetivo del año.',
-                   'Iberia (+16,6%) y MAPFRE RE (+24,6%) crecen a doble dígito.',
-                   'Solvencia II del 208,8% y mejora de la calificación de S&P (24-jul-2026).'],
-     'riesgos': ['Las primas apenas crecen (+1,1%) y las de No Vida quedaron por debajo del consenso (Renta 4).',
-                 'Safety resta unos 10 puntos de solvencia y añade deuda; la acción cayó un 4,7% tras el anuncio.',
-                 'Otros LATAM (México, Colombia) y EMEA empeoran, y el dólar resta en euros.'],
-     'videos': [('gNyZYk8oDnM', 'Mapfre resultados 1S 2026: beneficio 624 M€ (+9,4%) y ratio combinado 92,8% | Primas +1,1%; Safety'),
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 924,3 M€ hasta septiembre (+11,5%) con primas de 22.827 M€ (+2,0%). En el 3T ganó unos 300 M€ (calculado) pese al '
+                'terremoto de Colombia (83 M€ netos), que llevó el ratio combinado No Vida del trimestre al 95,0% y el de los nueve meses al 93,5% (+0,9 '
+                'pp). Dividendo a cuenta de 0,08 € (+14,3%), que se paga el 26-nov-2026. Para Capital Madrid cumplió con el consenso y para '
+                'Investing.com quedó ligeramente por debajo; la acción caía un 3,2% a media mañana del 28-oct-2026 (Bolsarama).',
+     'precio': '4,196 €',
+     'precio_fecha': '28-oct-2026, 10:44',
+     'multiplos': [('PER 12 meses', '~11,0x'),
+                   ('PER forward', '~10,0x'),
+                   ('Precio / valor en libros', '~1,16x'),
+                   ('Rentab. dividendo', '~4,5%'),
+                   ('Capitalización', '~12.880 M€')],
+     'multiplos_nota': 'Con precio de 4,196 € el 28-oct-2026 a las 10:44 (Bolsarama) y 3.070 M de acciones (stockanalysis.com). PER con el beneficio de '
+                       '12 meses a septiembre (1.174 M€: 1.079 de 2025 - 829,0 de 9M25 + 924,3 de 9M26); PER forward y precio / valor en libros de '
+                       'stockanalysis (10,37x y 1,20x a 4,352 €) ajustados al precio; sobre los fondos propios atribuidos de 9.445 M€ el precio / valor '
+                       'en libros sería ~1,36x. Rentabilidad por dividendo con lo pagado en 2026 (0,19 €). Todo calculado. A cierre de 2022, 2023, 2024 '
+                       'y 2025 el PER era 9,8x, 8,8x, 7,8x y 11,6x, el precio / valor en libros 0,62x, 0,62x, 0,75x y 1,25x, y la rentabilidad por '
+                       'dividendo 9,5%, 8,6%, 7,0% y 4,3%. En una aseguradora no se usan EV/EBITDA ni flujo de caja libre.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Primas', '22.827', '+2,0%'),
+               ('Primas No Vida', '17.493', '+1,1%'),
+               ('Primas Vida', '5.333', '+5,0%'),
+               ('Ingresos totales', '27.240', '+3,0%'),
+               ('Ratio combinado No Vida', '93,5%', '+0,9 pp'),
+               ('Beneficio neto', '924,3', '+11,5%'),
+               ('Beneficio neto 3T (calculado)', '~300', '~+16%'),
+               ('BPA (calculado)', '~0,30 €', '+11,5%')],
+     'kpi': 'ROE 12,8% (+0,4 pp). Fondos propios 9.445 M€ (+5,4% en el año). Solvencia II 208,8% (último dato, a 30-jun-2026; rango objetivo 175%-225%). '
+            'Activos gestionados 70.933 M€ (+9,6% en el año). Beneficio por unidad: Iberia 413,2 M€ (+19,0%; ratio combinado 94,2%), MAPFRE RE 286,2 M€ '
+            '(+11,8%; 95,3%), Brasil 203,2 M€ (+2,0%; 75,7%), Norteamérica 111,6 M€ (+12,4%; 94,9%), Otros LATAM 100,2 M€ (-28,8%; 101,0%), EMEA -2,4 M€ '
+            '(107,3%). Dividendo a cuenta de 2026: 0,08 € brutos por acción (+14,3%); ex-dividendo 24-nov-2026, pago 26-nov-2026; pagado en 2026: 0,19 € '
+            '(+15,2%).',
+     'guia': 'Objetivos 2026 (Junta General, 13-mar-2026): ROE por encima del 13% y ratio combinado del 93%-94%; hasta septiembre, 12,8% y 93,5%. Para '
+             'igualar el beneficio de 2025 (1.079 M€) le bastan ~155 M€ en el 4T (calculado). Compra de Safety Insurance (EE. UU.): según lo previsto '
+             '(presentación 9M26), pendiente de la junta de Safety y de los reguladores; cierre estimado en el 1T27 y posibles emisiones de deuda Tier 2 '
+             'y senior en el 4T26 o el 1T27.',
+     'positivos': ['Beneficio +11,5% pese a los 83 M€ del terremoto de Colombia.',
+                   'Iberia (+19,0%) y Norteamérica (+12,4%) ganan más y mejoran su ratio combinado.',
+                   'Dividendo a cuenta +14,3% (0,08 €) y ROE al alza, hasta el 12,8%.'],
+     'riesgos': ['Ratio combinado del 3T al 95,0% (91,4% en el 3T25) y primas solo +2,0% (+0,7% sin divisas).',
+                 'Otros LATAM cae un 28,8% y EMEA sigue en pérdidas (ratio combinado 107,3%).',
+                 'Safety traerá más deuda y menos solvencia; la acción caía un 3,2% el día de los resultados.'],
+     'videos': [('voydWhRZs2o', 'Mapfre resultados 3T 2026: beneficio 924 M€ (+11,5%) y dividendo a cuenta +14,3% | Sismo en Colombia'),
+                ('mz0EHkNGquU', 'Mapfre 3T 2026 en 60 segundos (Short)'),
+                ('gNyZYk8oDnM', 'Mapfre resultados 1S 2026: beneficio 624 M€ (+9,4%) y ratio combinado 92,8% | Primas +1,1%; Safety'),
                 ('AJZm7q7mTpo', 'Mapfre 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-28',
-     'proximo_estimado': False,
-     'fuentes': 'Mapfre, nota de prensa y carátula CNMV de resultados del primer semestre 2026 (23-jul-2026, mapfre.com); Mapfre, ratio de solvencia a '
-                'junio (CNMV, 4-sep-2026), Junta General (13-mar-2026) y aviso de teleconferencia 9M 2026 (CNMV, 21-oct-2026); Renta 4 / Bolsamanía '
-                '(23-jul-2026); Inese (24-jul-2026); Bolsamanía (1T26, 29-abr-2026); Merca2, Infobae / Europa Press e Investing.com (reacción, '
-                'jul-2026); Bolsarama (precio, 23-oct-2026); stockanalysis.com (múltiplos, oct-2026).',
-     'fuentes_corto': 'Renta 4 / Bolsamanía, Inese, Merca2, Bolsarama y stockanalysis.com',
-     'elaborado': '23-oct-2026, 12:30'},
+     'proximo': '2027-02-11',
+     'proximo_estimado': True,
+     'fuentes': 'Mapfre, informe de actividad, presentación a inversores e información sobre el dividendo a cuenta 2026 de los nueve primeros meses '
+                '(CNMV, 28-oct-2026, 07:18-07:23; mapfre.com); Mapfre, resultados 2025 (feb-2026), 9M 2025 (oct-2025) y 1S 2026 (23-jul-2026); Junta '
+                'General (13-mar-2026); El Debate, El Español, Capital Madrid e Investing.com (28-oct-2026); Bolsarama (precio, 28-oct-2026); '
+                'stockanalysis.com (múltiplos, oct-2026).',
+     'fuentes_corto': 'El Debate, El Español, Capital Madrid, Investing.com, Bolsarama y stockanalysis.com',
+     'elaborado': '28-oct-2026, 11:16'},
     {'id': 'iag',
      'nombre': 'IAG',
      'ticker': 'IAG',
