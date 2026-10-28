@@ -1,6 +1,129 @@
 {
- "actualizado": "2026-10-28T06:16Z",
+ "actualizado": "2026-10-28T07:24Z",
  "items": [
+  {
+   "id": "53122673-4707-419d-8328-f40cc7554b26",
+   "tipo": "OIR",
+   "fecha": "2026-10-28 08:11",
+   "entidad": "AENA, S.M.E., S.A.",
+   "nif": "A86212420",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Presentación de Resultados e Informe de Gestión 9M 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b53122673-4707-419d-8328-f40cc7554b26%7d",
+   "ticker": "AENA",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "32918637-a89f-4535-b7c5-c0345bbfc62b",
+   "tipo": "OIR",
+   "fecha": "2026-10-28 07:53",
+   "entidad": "FLUIDRA, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Extensión de Programa de Recompra de Acciones",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b32918637-a89f-4535-b7c5-c0345bbfc62b%7d",
+   "ticker": "FDR",
+   "temas": []
+  },
+  {
+   "id": "15193654-e90e-4ba1-bf77-d832d9711997",
+   "tipo": "OIR",
+   "fecha": "2026-10-28 07:49",
+   "entidad": "ENDESA, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Presentación de Resultados 3T 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b15193654-e90e-4ba1-bf77-d832d9711997%7d",
+   "ticker": "ELE",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "32b3b551-824f-4307-8cf4-928a6b338302",
+   "tipo": "OIR",
+   "fecha": "2026-10-28 07:48",
+   "entidad": "REDEIA CORPORACION, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Comunicación resultados 9M26",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b32b3b551-824f-4307-8cf4-928a6b338302%7d",
+   "ticker": "RED",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "374e098a-2909-4bdf-b0a4-5af30c7df2db",
+   "tipo": "OIR",
+   "fecha": "2026-10-28 07:45",
+   "entidad": "ENDESA, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Informe de Gestión 3T 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b374e098a-2909-4bdf-b0a4-5af30c7df2db%7d",
+   "ticker": "ELE",
+   "temas": []
+  },
+  {
+   "id": "257f9041-bc4d-464f-a465-142e355c07a0",
+   "tipo": "OIR",
+   "fecha": "2026-10-28 07:44",
+   "entidad": "REDEIA CORPORACION, S.A.",
+   "nif": "A",
+   "categoria": "Sobre instrumentos financieros",
+   "titulo": "El Consejo de Administración de Redeia ha acordado distribuir un dividendo a cuenta de los resultados del ejercicio 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b257f9041-bc4d-464f-a465-142e355c07a0%7d",
+   "ticker": "RED",
+   "temas": [
+    "resultados",
+    "dividendos"
+   ]
+  },
+  {
+   "id": "71fa2436-f101-41ca-90c5-e1612a6f0ca9",
+   "tipo": "OIR",
+   "fecha": "2026-10-28 07:23",
+   "entidad": "MAPFRE, S.A.",
+   "nif": "A08055741",
+   "categoria": "Otra información relevante",
+   "titulo": "Información sobre el dividendo a cuenta 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b71fa2436-f101-41ca-90c5-e1612a6f0ca9%7d",
+   "ticker": "MAP",
+   "temas": [
+    "dividendos"
+   ]
+  },
+  {
+   "id": "9b2c771b-8c26-4930-ad6f-19caa2cc84aa",
+   "tipo": "OIR",
+   "fecha": "2026-10-28 07:21",
+   "entidad": "MAPFRE, S.A.",
+   "nif": "A08055741",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Presentación para inversores y analistas sobre la actividad del tercer trimestre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b9b2c771b-8c26-4930-ad6f-19caa2cc84aa%7d",
+   "ticker": "MAP",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "1c202ed8-a564-4b84-85d6-65ccab6e9d58",
+   "tipo": "OIR",
+   "fecha": "2026-10-28 07:18",
+   "entidad": "MAPFRE, S.A.",
+   "nif": "A08055741",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Informe de actividad del tercer trimestre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b1c202ed8-a564-4b84-85d6-65ccab6e9d58%7d",
+   "ticker": "MAP",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "f5512ea1-58a2-4efc-a929-8a1ebb5c3252",
    "tipo": "OIR",
