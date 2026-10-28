@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-28T12:17Z",
+ "actualizado": "2026-10-28T19:17Z",
  "items": [
+  {
+   "id": "7d5a6fc5-a093-4cb6-ab4d-8036fabbd4ea",
+   "tipo": "OIR",
+   "fecha": "2026-10-28 20:03",
+   "entidad": "BANCO SANTANDER, S.A.",
+   "nif": "A39000013",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Finalización del Programa de Recompra y próxima reducción de capital social de aproximadamente un 1,03% como consecuencia del mismo.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b7d5a6fc5-a093-4cb6-ab4d-8036fabbd4ea%7d",
+   "ticker": "SAN",
+   "temas": []
+  },
   {
    "id": "5c8f8f38-f17f-4fe7-af69-c8f9345606e4",
    "tipo": "OIR",
