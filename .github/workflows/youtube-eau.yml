@@ -1,0 +1,44 @@
+# Sube al canal @AIStocksUAE (EAU, en árabe) los videos y Shorts que la rutina de EAU deja en cola-eau/ de la rama youtube-cola.
+# Mismo script que Chile y España (scripts/youtube.py), con otra carpeta y otro token.
+# Credenciales: Settings > Secrets and variables > Actions. YT_EAU_REFRESH_TOKEN es obligatorio;
+# YT_EAU_CLIENT_ID / YT_EAU_CLIENT_SECRET solo si se creó un cliente OAuth aparte (si no, usa los de Chile).
+# "Run workflow" con modo=verificar solo prueba las credenciales y muestra el canal.
+name: Subir videos a YouTube (EAU)
+concurrency: youtube-eau
+on:
+  push:
+    branches: [youtube-cola]
+    paths: ['cola-eau/**/meta.json']
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "verificar (solo credenciales) o subir (desde la rama youtube-cola)"
+        default: verificar
+permissions:
+  contents: write
+jobs:
+  subir:
+    runs-on: ubuntu-latest
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_EAU_CLIENT_ID || secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_EAU_CLIENT_SECRET || secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_EAU_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ (github.event_name == 'push' || inputs.modo == 'subir') && 'youtube-cola' || github.ref }}
+      - name: Revisar que el token de EAU esté cargado
+        run: test -n "$YT_REFRESH_TOKEN" || { echo "Falta el secreto YT_EAU_REFRESH_TOKEN"; exit 1; }
+      - name: Verificar credenciales
+        if: github.event_name == 'workflow_dispatch' && inputs.modo != 'subir'
+        run: python3 scripts/youtube.py verificar
+      - name: Subir videos pendientes
+        if: github.event_name == 'push' || inputs.modo == 'subir'
+        run: python3 scripts/youtube.py subir cola-eau
+      - name: Guardar IDs de YouTube
+        if: github.event_name == 'push' || inputs.modo == 'subir'
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add cola-eau
+          git diff --cached --quiet || { git commit -m "IDs de YouTube EAU $(date -u +%F)" && for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done; exit 1; }

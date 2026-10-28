@@ -14,7 +14,7 @@ on:
     branches: [youtube-cola]
     paths: ['cola/**/post-x.txt', 'cola/**/post-linkedin.txt', 'cola/**/post-tiktok.txt', 'cola/**/post-instagram.txt', 'cola-es/**/post-x.txt', 'cola-es/**/post-linkedin.txt', 'cola-es/**/post-tiktok.txt', 'cola-es/**/post-instagram.txt', 'cola-eau/**/post-x.txt', 'cola-eau/**/post-linkedin.txt', 'cola-eau/**/post-tiktok.txt', 'cola-eau/**/post-instagram.txt']
   workflow_run:
-    workflows: ["Subir videos a YouTube", "Subir videos a YouTube (España)"]
+    workflows: ["Subir videos a YouTube", "Subir videos a YouTube (España)", "Subir videos a YouTube (EAU)"]
     types: [completed]
   workflow_dispatch:
     inputs:
