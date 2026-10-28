@@ -1,6 +1,36 @@
 {
- "actualizado": "2026-10-27T22:13Z",
+ "actualizado": "2026-10-28T22:16Z",
  "items": [
+  {
+   "num": "2026100689366",
+   "id": "enelgxch",
+   "ent": "ENEL GENERACION CHILE S.A.",
+   "fecha": "2026-10-28 17:49",
+   "materias": [
+    "Reparto de utilidades (pago de dividendos)"
+   ],
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=b6cc3ff4f41bbf89cb5c3a38321a5d31VFdwQmVVNXFSWGROUkZrMFQxUk5NazVuUFQwPQ==&secuencia=-1&t=1793225761"
+  },
+  {
+   "num": "2026100689343",
+   "id": "enelgxch",
+   "ent": "ENEL GENERACION CHILE S.A.",
+   "fecha": "2026-10-28 17:47",
+   "materias": [
+    "Reparto de utilidades (pago de dividendos)"
+   ],
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=938aed73dd6b588fdee3e6eb5c98d3b4VFdwQmVVNXFSWGROUkZrMFQxUk5NRTEzUFQwPQ==&secuencia=-1&t=1793225761"
+  },
+  {
+   "num": "2026100689118",
+   "id": "enelchile",
+   "ent": "ENEL CHILE S.A.",
+   "fecha": "2026-10-28 17:03",
+   "materias": [
+    "Reparto de utilidades (pago de dividendos)"
+   ],
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0b47e59e99949bbe07a22e59d1adb410VFdwQmVVNXFSWGROUkZrMFQxUkZlRTlCUFQwPQ==&secuencia=-1&t=1793225761"
+  },
   {
    "num": "2026100685320",
    "id": "besalco",
@@ -9,7 +39,7 @@
    "materias": [
     "Reparto de utilidades (pago de dividendos)"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=b275be69b8f7a0ce238328f94d600f71VFdwQmVVNXFSWGROUkZrMFRsUk5lVTFCUFQwPQ==&secuencia=-1&t=1793139181"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=b275be69b8f7a0ce238328f94d600f71VFdwQmVVNXFSWGROUkZrMFRsUk5lVTFCUFQwPQ==&secuencia=-1&t=1793225761"
   },
   {
    "num": "2026100684300",
@@ -19,7 +49,7 @@
    "materias": [
     "Reparto de utilidades (pago de dividendos)"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=46a1e6cb8b4b839938d5f4a34a373d84VFdwQmVVNXFSWGROUkZrMFRrUk5kMDFCUFQwPQ==&secuencia=-1&t=1793139181"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=46a1e6cb8b4b839938d5f4a34a373d84VFdwQmVVNXFSWGROUkZrMFRrUk5kMDFCUFQwPQ==&secuencia=-1&t=1793225761"
   },
   {
    "num": "2026100683900",
@@ -29,7 +59,7 @@
    "materias": [
     "Reparto de utilidades (pago de dividendos)"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3895b434097367eaeb048ff64c5f246bVFdwQmVVNXFSWGROUkZrMFRYcHJkMDFCUFQwPQ==&secuencia=-1&t=1793139181"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3895b434097367eaeb048ff64c5f246bVFdwQmVVNXFSWGROUkZrMFRYcHJkMDFCUFQwPQ==&secuencia=-1&t=1793225761"
   },
   {
    "num": "2026100682608",
@@ -39,7 +69,7 @@
    "materias": [
     "Otros"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=253cecc5ac9ea993c7bb0d54a32eef3aVFdwQmVVNXFSWGROUkZrMFRXcFpkMDlCUFQwPQ==&secuencia=-1&t=1793139181"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=253cecc5ac9ea993c7bb0d54a32eef3aVFdwQmVVNXFSWGROUkZrMFRXcFpkMDlCUFQwPQ==&secuencia=-1&t=1793225761"
   },
   {
    "num": "2026100678820",
@@ -49,7 +79,7 @@
    "materias": [
     "Colocaciones relacionadas"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d06b6a58858c9d1b4422d2d3a883cb5bVFdwQmVVNXFSWGROUkZrelQwUm5lVTFCUFQwPQ==&secuencia=-1&t=1793139181"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d06b6a58858c9d1b4422d2d3a883cb5bVFdwQmVVNXFSWGROUkZrelQwUm5lVTFCUFQwPQ==&secuencia=-1&t=1793225761"
   },
   {
    "num": "2026100676865",
@@ -59,7 +89,7 @@
    "materias": [
     "Otros"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d465470096a806965c48bee20ceb6291VFdwQmVVNXFSWGROUkZrelRtcG5NazVSUFQwPQ==&secuencia=-1&t=1793139181"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d465470096a806965c48bee20ceb6291VFdwQmVVNXFSWGROUkZrelRtcG5NazVSUFQwPQ==&secuencia=-1&t=1793225761"
   },
   {
    "num": "2026100676862",
@@ -69,7 +99,7 @@
    "materias": [
     "Activos o paquetes accionarios, adquisición o enajenación"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=dc01cda169fdfd57c47c2e8d364ef515VFdwQmVVNXFSWGROUkZrelRtcG5NazFuUFQwPQ==&secuencia=-1&t=1793139181"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=dc01cda169fdfd57c47c2e8d364ef515VFdwQmVVNXFSWGROUkZrelRtcG5NazFuUFQwPQ==&secuencia=-1&t=1793225761"
   },
   {
    "num": "2026100672291",
