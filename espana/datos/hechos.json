@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-27T21:13Z",
+ "actualizado": "2026-10-28T06:16Z",
  "items": [
+  {
+   "id": "f5512ea1-58a2-4efc-a929-8a1ebb5c3252",
+   "tipo": "OIR",
+   "fecha": "2026-10-28 07:00",
+   "entidad": "BANCO SANTANDER, S.A.",
+   "nif": "A39000013",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Banco Santander informa de los requisitos mínimos prudenciales de capital determinados por el Banco Central Europeo tras el Proceso de Revisión y Evaluación Supervisora (SREP)",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bf5512ea1-58a2-4efc-a929-8a1ebb5c3252%7d",
+   "ticker": "SAN",
+   "temas": []
+  },
   {
    "id": "74b58c83-3f48-499c-b965-c4238b1091fb",
    "tipo": "OIR",
