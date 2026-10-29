@@ -1,6 +1,32 @@
 {
- "actualizado": "2026-10-29T07:41Z",
+ "actualizado": "2026-10-29T17:27Z",
  "items": [
+  {
+   "id": "963a4ef5-87c1-4e52-9d35-9265219f4258",
+   "tipo": "OIR",
+   "fecha": "2026-10-29 18:25",
+   "entidad": "ENAGAS, S.A.",
+   "nif": "A",
+   "categoria": "Sobre operaciones corporativas",
+   "titulo": "Enagás completa la adquisición de una participación adicional del 20% en Saggas",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b963a4ef5-87c1-4e52-9d35-9265219f4258%7d",
+   "ticker": "ENG",
+   "temas": []
+  },
+  {
+   "id": "a71e94dc-d673-43ee-b867-fea0dc67b219",
+   "tipo": "OIR",
+   "fecha": "2026-10-29 17:43",
+   "entidad": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+   "nif": "A48265169",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad comunica Estados Financieros Intermedios Resumidos Consolidados e Informe de Gestión Intermedio Consolidado correspondientes al periodo de nueve meses comprendido entre el 1 de enero y el 30 de septiembre de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7ba71e94dc-d673-43ee-b867-fea0dc67b219%7d",
+   "ticker": "BBVA",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "08501b68-c1a3-48a2-8c03-73efbcdb005f",
    "tipo": "OIR",
