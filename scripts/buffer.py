@@ -30,7 +30,7 @@ cuyo nombre diga "chile" (p. ej. el TikTok aiaccioneschile) es de Chile y lo usa
 Secreto opcional BUFFER_API_KEY_ES2: tercera cuenta de Buffer, también solo de España (Instagram aiacciones.espana).
 Instagram: <cola>/<slug>/post-instagram.txt junto a video.mp4 (se publica como Reel) o a imagen.png (post en
 el feed, 1080x1350). Vale para cola/ (Chile) y cola-es/ (España).
-LinkedIn: si junto a post-linkedin.txt hay imagen.png, el post la lleva adjunta (p. ej. un calendario).
+X y LinkedIn: si en la carpeta hay imagen.png, el post la lleva adjunta (p. ej. un calendario).
 España: `programar cola-es` manda los posts de cola-es/ solo a canales cuyo nombre diga "espana"/"españa"
 (hoy, la página de LinkedIn); si no hay canal de España para esa red, el post espera. Con dos páginas
 de LinkedIn conectadas, Chile usa la que se llama "chile".
@@ -94,7 +94,7 @@ def canales():
 
 REDES = {
     "x": {"nombre": "X", "archivo": "post-x.txt", "registro": "buffer.json", "servicios": ("twitter", "x"),
-          "variable": "BUFFER_CANAL", "limite": 280, "largo": largo_x, "obligatoria": True},
+          "variable": "BUFFER_CANAL", "limite": 280, "largo": largo_x, "obligatoria": True, "imagen": True},
     "linkedin": {"nombre": "LinkedIn", "archivo": "post-linkedin.txt", "registro": "buffer-linkedin.json",
                  "servicios": ("linkedin",), "variable": "BUFFER_CANAL_LINKEDIN", "limite": 3000,
                  "largo": len, "obligatoria": False, "imagen": True},
@@ -328,7 +328,7 @@ def programar(base):
         extra = ", saveToDraft: true" if modo_post == "borrador" else ""
         imagen = r.get("imagen") and enlace_video(carpeta, "imagen.png")
         if imagen:
-            # imagen.png: en LinkedIn va adjunta; en Instagram es post en el feed en vez de Reel
+            # imagen.png: en X y LinkedIn va adjunta; en Instagram es post en el feed en vez de Reel
             extra += ", assets: [{image: {url: %s}}]" % json.dumps(imagen)
             if red == "instagram":
                 extra += ", metadata: {instagram: {type: post, shouldShareToFeed: true}}"
