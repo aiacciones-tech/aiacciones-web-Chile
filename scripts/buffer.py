@@ -36,7 +36,7 @@ de LinkedIn conectadas, Chile usa la que se llama "chile".
 EAU (Emiratos, canal @AIStocksUAE, posts en árabe): `programar cola-eau` manda los posts de cola-eau/ con su
 propia cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_EAU, que el workflow pasa como BUFFER_API_KEY_EAU) y, si
 existe, una segunda (BUFFER_ACCESS_TOKEN_EAU2, para pasar del límite de 3 canales del plan gratis); todos
-los canales de esas cuentas son de EAU y nunca usa los de Chile ni España. Si hay más de un canal de una red,
+los canales de esas cuentas son de EAU. Todo post de EAU lleva el enlace al canal de YouTube (se agrega si falta) y nunca usa los de Chile ni España. Si hay más de un canal de una red,
 variable BUFFER_CANAL_EAU, BUFFER_CANAL_LINKEDIN_EAU, BUFFER_CANAL_TIKTOK_EAU o BUFFER_CANAL_INSTAGRAM_EAU.
 Solo usa la biblioteca estándar de Python.
 """
@@ -108,6 +108,7 @@ REDES = {
 }
 CLAVES_ES = ("BUFFER_API_KEY_ES", "BUFFER_API_KEY_ES2")  # cuentas de Buffer solo de España
 CLAVES_EAU = ("BUFFER_API_KEY_EAU", "BUFFER_API_KEY_EAU2")  # cuentas de Buffer solo de EAU (@AIStocksUAE)
+CANAL_EAU = "https://www.youtube.com/@AIStocksUAE"
 SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU"}
 
 
@@ -264,7 +265,8 @@ def texto_final(carpeta, archivo="post-x.txt"):
         if not res:
             return None, "esperando que el video se suba a YouTube"
         texto = texto.replace("{youtube}", f"https://youtu.be/{res['videoId']}")
-    con_video = re.search(r"youtu\.?be", texto)
+    # solo enlaces a un video (no el del canal, p. ej. youtube.com/@AIStocksUAE)
+    con_video = re.search(r"youtu\.be/|youtube\.com/(watch|shorts/)", texto)
     privado = bool(con_video and (not res or res.get("privacy") != "public"))
     return texto, privado
 
@@ -320,6 +322,10 @@ def programar(base):
         if pais == "chile" and r.get("video") and "aiacciones.cl" not in texto:
             # todo post de Chile lleva la web (en TikTok/Instagram no es clicable, pero se ve)
             texto += "\n\nFicha completa en aiacciones.cl"
+        if pais == "eau" and CANAL_EAU.lower() not in texto.lower():
+            # todo post de EAU lleva el enlace al canal de YouTube (Daniel, 29-oct-2026)
+            con_rotulo = texto + f"\n\nقناتنا على يوتيوب: {CANAL_EAU}"
+            texto = con_rotulo if r["largo"](con_rotulo) <= r["limite"] else texto + f"\n{CANAL_EAU}"
         largo = r["largo"](texto)
         if largo > r["limite"]:
             fallas.append(f"{slug}: {largo} caracteres para {r['nombre']} (máximo {r['limite']})")
