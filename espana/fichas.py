@@ -298,54 +298,65 @@ FICHAS = [
      'nombre': 'Banco Sabadell',
      'ticker': 'SAB',
      'sector': 'Banca',
-     'lede': 'Banco español centrado en empresas y particulares, con negocio también en México. En 2026 vendió su filial británica TSB a Banco Santander '
-             '(cerrada el 1-may-2026), tras la OPA de BBVA, que quedó desierta en octubre de 2025. En un banco, los ingresos son el margen bruto y la '
-             'calidad del balance se mide con la morosidad y el capital.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio neto de 971 M€ (−0,5%), con cuatro meses de TSB y 322 M€ de plusvalía neta por su venta; el beneficio recurrente fue de 691 '
-                'M€ (−14,1%). El 2T (624 M€, calculado) quedó un 2% por debajo del consenso según Renta 4, por mayores provisiones, aunque el margen '
-                'bruto lo superó en un 2%.',
-     'precio': '3,583 €',
-     'precio_fecha': '13-oct-2026',
-     'multiplos': [('PER 12 meses', '19,3x'),
-                   ('PER forward', '11,5x'),
-                   ('Precio / valor en libros', '1,42x'),
-                   ('Rentab. dividendo', '7,4%'),
-                   ('Capitalización', '~17.510 M€')],
-     'multiplos_nota': 'Con precio de 3,583 € al 13-oct-2026 (stockanalysis.com). La rentabilidad por dividendo usa el dividendo ordinario (0,26 €) y no '
-                       'incluye el extraordinario de 0,50 € pagado en mayo. A cierre de 2022, 2023, 2024 y 2025 el PER era 6,3x, 5,0x, 5,9x y 10,3x, y '
-                       'el precio / valor en libros 0,38x, 0,44x, 0,68x y 1,19x. Sin TSB el perímetro del grupo cambia. En un banco no se usan EV/EBITDA '
-                       'ni flujo de caja libre.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Margen de intereses', '1.774', '−2,0%'),
-               ('Comisiones netas', '643', '−0,9%'),
-               ('Margen bruto', '2.463', '−2,8%'),
-               ('Costes', '1.227', '+13%'),
-               ('Margen antes de dotaciones', '1.236', '−14,7%'),
-               ('Beneficio neto', '971', '−0,5%'),
-               ('Beneficio recurrente', '691', '−14,1%'),
-               ('BPA (calculado)', '~0,20 €', '')],
-     'kpi': 'ROTE recurrente 13,6% (objetivo 14,5% en 2026). Eficiencia ~46% sin prejubilaciones (~43% en 1S 2025, calculado); costes recurrentes +4,9%. '
-            'Morosidad 2,47% (2,55% en el 1T), cobertura 68,7%, coste del riesgo 40 pb. CET1 13,11% (+20 pb en el trimestre). Crédito vivo 125.184 M€ '
-            '(+5,5%); recursos de clientes 188.110 M€ (+6,4%). En el 2T, margen de intereses 902 M€ (+3,4% t/t) y comisiones 328 M€ (+4% t/t).',
-     'guia': 'Guía 2026 mantenida: margen de intereses creciendo más de un 1%, comisiones a un dígito medio, costes recurrentes por debajo del +3%, '
-             'coste del riesgo ~40 pb y ROTE recurrente del 14,5% (16% en 2027). Nueva recompra de 331 M€, tras un dividendo extraordinario de 0,50 € '
-             'por acción pagado en mayo.',
-     'positivos': ['El margen de intereses (+3,4%) y las comisiones (+4%) vuelven a crecer en el 2T frente al 1T.',
-                   'Crédito vivo +5,5% y morosidad a la baja (2,47%).',
-                   'CET1 del 13,11%, recompra de 331 M€ y dividendo extraordinario por la venta de TSB.'],
-     'riesgos': ['El beneficio recurrente cae un 14,1% y el del 2T quedó algo por debajo del consenso.',
-                 'Los costes recurrentes suben un 4,9%, por encima de la guía anual (<3%).',
-                 'Las comisiones caen un 1% en el semestre, frente a una guía de crecimiento de un dígito medio.'],
-     'videos': [('wkQGwk63kTE', 'Banco Sabadell resultados 1S 2026: beneficio 971 M€ con TSB; recurrente -14,1% | CET1 13,11%'),
+     'lede': 'Banco español centrado en empresas y particulares, con negocio también en México. Vendió su filial británica TSB a Banco Santander '
+             '(cerrada el 1-may-2026), tras la OPA de BBVA, que quedó desierta en octubre de 2025; desde el 6-oct-2026 el grupo francés BPCE tiene '
+             'alrededor del 7% del capital. En un banco, los ingresos son el margen bruto y la calidad del balance se mide con la morosidad y el '
+             'capital.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 1.376 M€ hasta septiembre (−1%), marcado por la venta de TSB: aportó 79 M€ en cuatro meses (242 M€ en 9M25) y dejó '
+                'una plusvalía neta de 322 M€. Sin TSB, el beneficio pasa de 1.148 a 1.297 M€ (+13%); sin TSB ni extraordinarios, el recurrente fue de '
+                '1.096 M€ (−5,3%). El recurrente del 3T subió un 13% frente al 2T, hasta 405 M€, por encima de los 376 M€ del consenso según Bankinter.',
+     'precio': '3,512 €',
+     'precio_fecha': '29-oct-2026 (cierre)',
+     'multiplos': [('PER 12 meses', '~9,5x'),
+                   ('PER forward', '~11,4x'),
+                   ('Precio / valor en libros', '~1,41x'),
+                   ('Rentab. dividendo', '~7,4%'),
+                   ('Capitalización', '~16.750 M€')],
+     'multiplos_nota': 'Con el cierre de 3,512 € del 29-oct-2026 (−0,23%; MarketScreener y Bolsamanía). Todos los múltiplos son cálculos propios: '
+                       '4.768,5 M de acciones tras la amortización de julio, beneficio de 12 meses a septiembre de 1.761 M€ (incluye TSB y su '
+                       'plusvalía), PER forward (11,51x) y P/VC (1,42x) de stockanalysis.com a 3,531 € ajustados al cierre. La rentabilidad por '
+                       'dividendo usa el dividendo ordinario de los últimos 12 meses (0,26 €) y no incluye el extraordinario de 0,50 € pagado en mayo. A '
+                       'cierre de 2022, 2023, 2024 y 2025 el PER era 6,3x, 5,0x, 5,9x y 10,3x, y el precio / valor en libros 0,38x, 0,44x, 0,68x y '
+                       '1,19x. Sin TSB el perímetro del grupo cambia. En un banco no se usan EV/EBITDA ni flujo de caja libre.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025 (ingresos y costes sin TSB)',
+     'tabla': [('Margen de intereses', '2.694', '−0,6%'),
+               ('Comisiones netas', '983', '+2,1%'),
+               ('Margen bruto', '3.777', '+1,0%'),
+               ('Costes totales', '1.797', '+9,1% (+3,8% sin prejubilaciones)'),
+               ('Margen antes de dotaciones', '1.981', '−5,3%'),
+               ('Beneficio recurrente', '1.096', '−5,3%'),
+               ('Beneficio recurrente 3T', '405', '+13% frente al 2T'),
+               ('Beneficio neto', '1.376', '−1,0%'),
+               ('BPA recurrente (calculado)', '~0,23 €', '')],
+     'kpi': 'ROTE recurrente 14,2% (13,6% en junio). Eficiencia ~47,6% con costes totales y ~45,2% sin prejubilaciones (~44% en 9M25), calculada. '
+            'Morosidad 2,40% (2,47% en junio y 2,75% un año antes), cobertura 70,1%, coste del riesgo 40 pb; provisiones −13% en el trimestre. CET1 '
+            'fully loaded 13,12% (13,11% en junio; 13,74% en sep-25). Crédito vivo 124.913 M€ (+4%; consumo +12,7%, hipotecas +3,5%); recursos de '
+            'clientes 189.449 M€ (+5,6%). En el 3T, margen de intereses 920 M€ (+2% t/t), comisiones 340 M€ (+3,7% t/t) y costes recurrentes −0,1% t/t. '
+            'Efecto TSB: aportación 79 M€ (242 M€ en 9M25); extraordinarios netos +201 M€ (plusvalía neta de 322 M€ menos prejubilaciones y otros).',
+     'guia': 'Guía 2026 actualizada: margen de intereses en torno a +1% y comisiones en torno a +4% (algo por debajo de la anterior), costes recurrentes '
+             'en torno a +2% (antes, menos del 3%), coste del riesgo ~40 pb y ROTE recurrente del 14,5% (16% en 2027). Remuneración: dividendo a cuenta '
+             'de 2026 en efectivo de 0,07 € por acción (325 M€), con pago el 29-dic-2026 (fecha ex-dividendo aún no comunicada); quedan 57 M€ de la '
+             'recompra de 331 M€ lanzada en julio. BPCE tiene ~7% del capital (6-oct-2026) y no prevé superar el 9,9%.',
+     'positivos': ['El beneficio recurrente del 3T sube un 13% frente al 2T y supera el consenso (405 frente a 376 M€, según Bankinter).',
+                   'Margen de intereses (+2%) y comisiones (+3,7%) crecen por segundo trimestre seguido, con los costes recurrentes planos.',
+                   'Morosidad a la baja (2,40%), coste del riesgo de 40 pb y ROTE recurrente del 14,2%, cerca del objetivo anual.'],
+     'riesgos': ['En el acumulado, el beneficio recurrente cae un 5,3% y el margen de intereses un 0,6%.',
+                 'La guía de ingresos de 2026 se rebaja ligeramente (margen de intereses ~+1%, comisiones ~+4%).',
+                 'Sin TSB el banco es más pequeño (activo −18,5% en un año) y el CET1 es 62 pb más bajo que hace un año.'],
+     'videos': [('W3Oth22d-uc', 'Banco Sabadell resultados 3T 2026: beneficio 1.376 M€ (-1%) por TSB | recurrente del 3T +13%'),
+                ('MrccAzO5zV4', 'Banco Sabadell 3T 2026 en 60 segundos (Short)'),
+                ('wkQGwk63kTE', 'Banco Sabadell resultados 1S 2026: beneficio 971 M€ con TSB; recurrente -14,1% | CET1 13,11%'),
                 ('7YzKyAdIs68', 'Banco Sabadell 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-29',
-     'fuentes': 'Banco Sabadell, nota de resultados del primer semestre 2026 (24-jul-2026, CNMV y grupbancsabadell.com); Europa Press, Estrategias de '
-                'Inversión y Merca2 (24-jul-2026); Renta 4 Banco (consenso y guía, 24-jul-2026); Capitalbolsa / Bolsamania (24-jul-2026); OCU (OPA, '
-                '17-oct-2025); Ara (venta de TSB, 1-may-2026); stockanalysis.com (precio y múltiplos, 13-oct-2026).',
-     'fuentes_corto': 'Renta 4 Banco, Europa Press, Capitalbolsa, Merca2 y stockanalysis.com',
-     'elaborado': '13-oct-2026, 19:00'},
+     'proximo': '2027-02-05',
+     'proximo_estimado': True,
+     'fuentes': 'Banco Sabadell, nota de resultados de los nueve meses de 2026 (29-oct-2026, grupbancsabadell.com y CNMV) y nota conjunta con BPCE '
+                '(6-oct-2026); Infobae/EFE, Infobae, El Español, Libre Mercado, Bolsamanía (incluidos Bankinter y Renta 4), Merca2 y Crónica Global '
+                '(29-oct-2026); MarketScreener y Bolsamanía (cotización, 29-oct-2026); Europa Press (acciones, 24-jul-2026); Banco Sabadell, resultados '
+                '1S26 (24-jul-2026); stockanalysis.com (múltiplos, oct-2026).',
+     'fuentes_corto': 'Infobae/EFE, Bolsamanía, El Español, MarketScreener y stockanalysis.com',
+     'elaborado': '29-oct-2026, 23:00'},
     {'id': 'unicaja',
      'nombre': 'Unicaja',
      'ticker': 'UNI',
