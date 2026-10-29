@@ -1,6 +1,102 @@
 {
- "actualizado": "2026-10-28T19:17Z",
+ "actualizado": "2026-10-29T07:41Z",
  "items": [
+  {
+   "id": "08501b68-c1a3-48a2-8c03-73efbcdb005f",
+   "tipo": "OIR",
+   "fecha": "2026-10-29 07:44",
+   "entidad": "REPSOL, S.A.",
+   "nif": "A78374725",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad remite presentación sobre los resultados del tercer trimestre de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b08501b68-c1a3-48a2-8c03-73efbcdb005f%7d",
+   "ticker": "REP",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "a67553eb-42f3-44e4-ba24-22127522f343",
+   "tipo": "OIR",
+   "fecha": "2026-10-29 07:43",
+   "entidad": "INDRA SISTEMAS, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Indra Group Conference Call 9M26",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7ba67553eb-42f3-44e4-ba24-22127522f343%7d",
+   "ticker": "IDR",
+   "temas": []
+  },
+  {
+   "id": "3b0b0d3f-2d8f-49ab-9385-017aa9a54a08",
+   "tipo": "OIR",
+   "fecha": "2026-10-29 07:42",
+   "entidad": "REPSOL, S.A.",
+   "nif": "A78374725",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad remite nota de prensa sobre los resultados acumulados a 30 de septiembre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b3b0b0d3f-2d8f-49ab-9385-017aa9a54a08%7d",
+   "ticker": "REP",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "3487d7f5-1280-413d-ae8f-15e956ed88f0",
+   "tipo": "OIR",
+   "fecha": "2026-10-29 07:41",
+   "entidad": "INDRA SISTEMAS, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Indra Group Resultados 9M26",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b3487d7f5-1280-413d-ae8f-15e956ed88f0%7d",
+   "ticker": "IDR",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "b8ee79b5-e31d-46bc-bd6b-a0cb6a56ba04",
+   "tipo": "OIR",
+   "fecha": "2026-10-29 07:39",
+   "entidad": "REPSOL, S.A.",
+   "nif": "A78374725",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad remite información sobre los resultados del tercer trimestre del ejercicio 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bb8ee79b5-e31d-46bc-bd6b-a0cb6a56ba04%7d",
+   "ticker": "REP",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "69d983fd-34a2-400b-8faf-f546eef97171",
+   "tipo": "OIR",
+   "fecha": "2026-10-29 07:37",
+   "entidad": "FLUIDRA, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Nota de Prensa: Resultados 3T 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b69d983fd-34a2-400b-8faf-f546eef97171%7d",
+   "ticker": "FDR",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "8cf87202-f7e2-4beb-933e-8c1372457fb5",
+   "tipo": "OIR",
+   "fecha": "2026-10-29 07:35",
+   "entidad": "FLUIDRA, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Presentación de Resultados 3T 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b8cf87202-f7e2-4beb-933e-8c1372457fb5%7d",
+   "ticker": "FDR",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "7d5a6fc5-a093-4cb6-ab4d-8036fabbd4ea",
    "tipo": "OIR",
