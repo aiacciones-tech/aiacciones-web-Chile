@@ -105,7 +105,19 @@ REDES = {
                   "servicios": ("instagram",), "variable": "BUFFER_CANAL_INSTAGRAM", "limite": 2200,
                   "largo": len, "obligatoria": False, "video": True, "imagen": True,
                   "metadata": "{instagram: {type: reel, shouldShareToFeed: true}}"},
+    # Página de Facebook (hoy solo EAU): post-facebook.txt o, en cola-eau/, el mismo texto de post-linkedin.txt
+    "facebook": {"nombre": "Facebook", "archivo": "post-facebook.txt", "registro": "buffer-facebook.json",
+                 "servicios": ("facebook",), "variable": "BUFFER_CANAL_FACEBOOK", "limite": 63206,
+                 "largo": len, "obligatoria": False, "alterno_eau": "post-linkedin.txt"},
 }
+
+
+def archivo_post(carpeta, r, pais):
+    """El archivo de texto del post de esa red en la carpeta, o None si no hay."""
+    for nombre in (r["archivo"], r.get("alterno_eau") if pais == "eau" else None):
+        if nombre and os.path.isfile(os.path.join(carpeta, nombre)):
+            return nombre
+    return None
 CLAVES_ES = ("BUFFER_API_KEY_ES", "BUFFER_API_KEY_ES2")  # cuentas de Buffer solo de España
 CLAVES_EAU = ("BUFFER_API_KEY_EAU", "BUFFER_API_KEY_EAU2")  # cuentas de Buffer solo de EAU (@AIStocksUAE)
 CANAL_EAU = "https://www.youtube.com/@AIStocksUAE"
@@ -209,6 +221,9 @@ def verificar():
     tt = elegir_canal("tiktok", lista)
     print(f"OK: TikTok como {tt.get('displayName') or tt['name']}." if tt
           else "TikTok todavía no está conectado en Buffer.")
+    fb = elegir_canal("facebook", lista)
+    if fb:
+        print(f"OK: Facebook como {fb.get('displayName') or fb['name']}.")
     ig = elegir_canal("instagram", lista)
     print(f"OK: Instagram como {ig.get('displayName') or ig['name']}." if ig
           else "Instagram de Chile todavía no está conectado en Buffer.")
@@ -291,7 +306,7 @@ def programar(base):
     if modo not in MODOS:
         sys.exit(f"BUFFER_MODO debe ser ahora, cola o borrador, no {modo!r}.")
     pendientes = sorted((d, red) for d in os.listdir(base) for red, r in REDES.items()
-                        if os.path.isfile(os.path.join(base, d, r["archivo"]))
+                        if archivo_post(os.path.join(base, d), r, pais)
                         and not os.path.exists(os.path.join(base, d, r["registro"])))
     if not pendientes:
         print("No hay posts pendientes.")
@@ -315,7 +330,7 @@ def programar(base):
         if canal is None:
             print(f"{slug}: {r['nombre']} no está conectado en Buffer; queda pendiente.")
             continue
-        texto, privado = texto_final(carpeta, r["archivo"])
+        texto, privado = texto_final(carpeta, archivo_post(carpeta, r, pais))
         if texto is None:
             print(f"{slug} ({r['nombre']}): {privado}; queda pendiente.")
             continue
