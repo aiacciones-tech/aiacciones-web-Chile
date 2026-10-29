@@ -1,6 +1,6 @@
 {
  "trimestre": "3T 2026",
- "actualizado": "2026-10-22",
+ "actualizado": "2026-10-29",
  "empresas": [
   {
    "fecha": "2026-10-20",
@@ -246,13 +246,13 @@
    "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
   },
   {
-   "fecha": "2026-11-12",
+   "fecha": "2026-10-29",
    "empresa": "Banco Sabadell",
    "ticker": "SAB",
    "sector": "Banca",
-   "estado": "Estimada",
-   "nota": "3T25: 13-nov-2025, fecha atípica (OPA de BBVA). Puede volver a fines de octubre: revisar.",
-   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+   "estado": "Confirmada",
+   "nota": "Presentará resultados del 3T el 29-oct-2026 (reunión con analistas y rueda de prensa).",
+   "fuente": "Banco Sabadell, CNMV 27-oct-2026"
   },
   {
    "fecha": "2026-11-13",
@@ -291,13 +291,13 @@
    "fuente": "Sin fuente de fecha"
   },
   {
-   "fecha": null,
+   "fecha": "2026-10-29",
    "empresa": "Indra",
    "ticker": "IDR",
    "sector": "Defensa / tecnología",
-   "estado": "Por confirmar",
-   "nota": "Suele publicar a fines de octubre.",
-   "fuente": "Sin fuente de fecha"
+   "estado": "Publicada",
+   "nota": "Publicó el 29-oct-2026 a las 07:41 (CNMV).",
+   "fuente": "CNMV, 29-oct-2026"
   },
   {
    "fecha": null,
