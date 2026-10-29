@@ -31,6 +31,7 @@ jobs:
       BUFFER_API_KEY_ES: ${{ secrets.BUFFER_API_KEY_ES }}
       BUFFER_API_KEY_ES2: ${{ secrets.BUFFER_API_KEY_ES2 }}
       BUFFER_API_KEY_EAU: ${{ secrets.BUFFER_ACCESS_TOKEN_EAU }}
+      BUFFER_API_KEY_EAU2: ${{ secrets.BUFFER_ACCESS_TOKEN_EAU2 }}
       BUFFER_MODO: ${{ vars.BUFFER_MODO }}
       BUFFER_HORA: ${{ vars.BUFFER_HORA }}
       BUFFER_CANAL: ${{ vars.BUFFER_CANAL }}
