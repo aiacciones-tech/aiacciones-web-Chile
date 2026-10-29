@@ -35,8 +35,9 @@ España: `programar cola-es` manda los posts de cola-es/ solo a canales cuyo nom
 (hoy, la página de LinkedIn); si no hay canal de España para esa red, el post espera. Con dos páginas
 de LinkedIn conectadas, Chile usa la que se llama "chile".
 EAU (Emiratos, canal @AIStocksUAE, posts en árabe): `programar cola-eau` manda los posts de cola-eau/ con su
-propia cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_EAU, que el workflow pasa como BUFFER_API_KEY_EAU); todos
-los canales de esa cuenta son de EAU y nunca usa los de Chile ni España. Si hay más de un canal de una red,
+propia cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_EAU, que el workflow pasa como BUFFER_API_KEY_EAU) y, si
+existe, una segunda (BUFFER_ACCESS_TOKEN_EAU2, para pasar del límite de 3 canales del plan gratis); todos
+los canales de esas cuentas son de EAU. Todo post de EAU lleva el enlace al canal de YouTube (se agrega si falta) y nunca usa los de Chile ni España. Si hay más de un canal de una red,
 variable BUFFER_CANAL_EAU, BUFFER_CANAL_LINKEDIN_EAU, BUFFER_CANAL_TIKTOK_EAU o BUFFER_CANAL_INSTAGRAM_EAU.
 Solo usa la biblioteca estándar de Python.
 """
@@ -105,9 +106,22 @@ REDES = {
                   "servicios": ("instagram",), "variable": "BUFFER_CANAL_INSTAGRAM", "limite": 2200,
                   "largo": len, "obligatoria": False, "video": True, "imagen": True,
                   "metadata": "{instagram: {type: reel, shouldShareToFeed: true}}"},
+    # Página de Facebook (hoy solo EAU): post-facebook.txt o, en cola-eau/, el mismo texto de post-linkedin.txt
+    "facebook": {"nombre": "Facebook", "archivo": "post-facebook.txt", "registro": "buffer-facebook.json",
+                 "servicios": ("facebook",), "variable": "BUFFER_CANAL_FACEBOOK", "limite": 63206,
+                 "largo": len, "obligatoria": False, "alterno_eau": "post-linkedin.txt"},
 }
+
+
+def archivo_post(carpeta, r, pais):
+    """El archivo de texto del post de esa red en la carpeta, o None si no hay."""
+    for nombre in (r["archivo"], r.get("alterno_eau") if pais == "eau" else None):
+        if nombre and os.path.isfile(os.path.join(carpeta, nombre)):
+            return nombre
+    return None
 CLAVES_ES = ("BUFFER_API_KEY_ES", "BUFFER_API_KEY_ES2")  # cuentas de Buffer solo de España
-CLAVE_EAU = "BUFFER_API_KEY_EAU"  # cuenta de Buffer solo de EAU (@AIStocksUAE)
+CLAVES_EAU = ("BUFFER_API_KEY_EAU", "BUFFER_API_KEY_EAU2")  # cuentas de Buffer solo de EAU (@AIStocksUAE)
+CANAL_EAU = "https://www.youtube.com/@AIStocksUAE"
 SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU"}
 
 
@@ -150,7 +164,7 @@ def elegir_canal(red, lista, pais="chile"):
         if pais == "espana":
             elegido = [c for c in elegido if es_de(c, "espana")]
         elif pais == "eau":
-            elegido = [c for c in elegido if c.get("clave") == CLAVE_EAU]
+            elegido = [c for c in elegido if c.get("clave") in CLAVES_EAU]
         elif len(elegido) > 1:
             # Chile: si también está conectado el canal de España, ese no cuenta
             elegido = [c for c in elegido if not es_de(c, "espana")] or elegido
@@ -176,12 +190,14 @@ def canales_espana():
 
 
 def canales_eau():
-    """Canales de la cuenta de Buffer de EAU (BUFFER_API_KEY_EAU), o [] si no hay clave."""
+    """Canales de las cuentas de Buffer de EAU (BUFFER_API_KEY_EAU y BUFFER_API_KEY_EAU2), o [] si no hay clave."""
     global CLAVE
-    if not os.environ.get(CLAVE_EAU):
-        return []
-    CLAVE = CLAVE_EAU
-    return canales()
+    lista = []
+    for clave in CLAVES_EAU:
+        if os.environ.get(clave):
+            CLAVE = clave
+            lista += canales()
+    return lista
 
 
 def usar_clave(pais):
@@ -206,6 +222,9 @@ def verificar():
     tt = elegir_canal("tiktok", lista)
     print(f"OK: TikTok como {tt.get('displayName') or tt['name']}." if tt
           else "TikTok todavía no está conectado en Buffer.")
+    fb = elegir_canal("facebook", lista)
+    if fb:
+        print(f"OK: Facebook como {fb.get('displayName') or fb['name']}.")
     ig = elegir_canal("instagram", lista)
     print(f"OK: Instagram como {ig.get('displayName') or ig['name']}." if ig
           else "Instagram de Chile todavía no está conectado en Buffer.")
@@ -220,11 +239,11 @@ def verificar():
     for red in REDES:
         es = elegir_canal(red, lista, "espana")
         print(f"España, {REDES[red]['nombre']}: " + (es.get("displayName") or es["name"] if es else "sin canal"))
-    if os.environ.get(CLAVE_EAU):
-        print("EAU usa su propia cuenta de Buffer (BUFFER_ACCESS_TOKEN_EAU):")
+    if os.environ.get(CLAVES_EAU[0]):
+        print("EAU usa sus propias cuentas de Buffer (BUFFER_ACCESS_TOKEN_EAU y _EAU2):")
         lista = canales_eau()
         for c in lista:
-            print(f"- {c['service']}: {c.get('displayName') or c['name']} [{c['id']}] en {c['org']}")
+            print(f"- {c['service']}: {c.get('displayName') or c['name']} [{c['id']}] en {c['org']} ({c['clave']})")
         for red in REDES:
             ea = elegir_canal(red, lista, "eau")
             print(f"EAU, {REDES[red]['nombre']}: " + (ea.get("displayName") or ea["name"] if ea else "sin canal"))
@@ -262,7 +281,8 @@ def texto_final(carpeta, archivo="post-x.txt"):
         if not res:
             return None, "esperando que el video se suba a YouTube"
         texto = texto.replace("{youtube}", f"https://youtu.be/{res['videoId']}")
-    con_video = re.search(r"youtu\.?be", texto)
+    # solo enlaces a un video (no el del canal, p. ej. youtube.com/@AIStocksUAE)
+    con_video = re.search(r"youtu\.be/|youtube\.com/(watch|shorts/)", texto)
     privado = bool(con_video and (not res or res.get("privacy") != "public"))
     return texto, privado
 
@@ -287,12 +307,12 @@ def programar(base):
     if modo not in MODOS:
         sys.exit(f"BUFFER_MODO debe ser ahora, cola o borrador, no {modo!r}.")
     pendientes = sorted((d, red) for d in os.listdir(base) for red, r in REDES.items()
-                        if os.path.isfile(os.path.join(base, d, r["archivo"]))
+                        if archivo_post(os.path.join(base, d), r, pais)
                         and not os.path.exists(os.path.join(base, d, r["registro"])))
     if not pendientes:
         print("No hay posts pendientes.")
         return
-    if pais == "eau" and not os.environ.get(CLAVE_EAU):
+    if pais == "eau" and not os.environ.get(CLAVES_EAU[0]):
         sys.exit("Falta el secreto BUFFER_ACCESS_TOKEN_EAU para mandar cola-eau/.")
     # España: canales de su propia cuenta de Buffer (si hay clave) y, como respaldo, los de la cuenta de Chile
     # EAU: solo los de su cuenta
@@ -311,13 +331,17 @@ def programar(base):
         if canal is None:
             print(f"{slug}: {r['nombre']} no está conectado en Buffer; queda pendiente.")
             continue
-        texto, privado = texto_final(carpeta, r["archivo"])
+        texto, privado = texto_final(carpeta, archivo_post(carpeta, r, pais))
         if texto is None:
             print(f"{slug} ({r['nombre']}): {privado}; queda pendiente.")
             continue
         if pais == "chile" and r.get("video") and "aiacciones.cl" not in texto:
             # todo post de Chile lleva la web (en TikTok/Instagram no es clicable, pero se ve)
             texto += "\n\nFicha completa en aiacciones.cl"
+        if pais == "eau" and CANAL_EAU.lower() not in texto.lower():
+            # todo post de EAU lleva el enlace al canal de YouTube (Daniel, 29-oct-2026)
+            con_rotulo = texto + f"\n\nقناتنا على يوتيوب: {CANAL_EAU}"
+            texto = con_rotulo if r["largo"](con_rotulo) <= r["limite"] else texto + f"\n{CANAL_EAU}"
         largo = r["largo"](texto)
         if largo > r["limite"]:
             fallas.append(f"{slug}: {largo} caracteres para {r['nombre']} (máximo {r['limite']})")
