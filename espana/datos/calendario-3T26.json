@@ -97,36 +97,36 @@
    "empresa": "Naturgy",
    "ticker": "NTGY",
    "sector": "Eléctricas y gas",
-   "estado": "Confirmada",
-   "nota": "3T25: 29-oct-2025.",
-   "fuente": "Naturgy, calendario financiero (oct-2026)"
+   "estado": "Publicada",
+   "nota": "Publicó el 29-oct-2026 por la mañana.",
+   "fuente": "Naturgy, resultados 9M 2026 (29-oct-2026)"
   },
   {
    "fecha": "2026-10-29",
    "empresa": "BBVA",
    "ticker": "BBVA",
    "sector": "Banca",
-   "estado": "Confirmada",
-   "nota": "",
-   "fuente": "DailyForex, oct-2026"
+   "estado": "Publicada",
+   "nota": "Publicó el 29-oct-2026 por la mañana.",
+   "fuente": "BBVA, resultados 3T 2026 (29-oct-2026)"
   },
   {
    "fecha": "2026-10-29",
    "empresa": "Fluidra",
    "ticker": "FDR",
    "sector": "Industrial",
-   "estado": "Estimada",
-   "nota": "3T25: 30-oct-2025.",
-   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+   "estado": "Publicada",
+   "nota": "Publicó el 29-oct-2026 a las 07:35 (CNMV).",
+   "fuente": "CNMV, 29-oct-2026"
   },
   {
    "fecha": "2026-10-29",
    "empresa": "Repsol",
    "ticker": "REP",
    "sector": "Petróleo y gas",
-   "estado": "Confirmada",
-   "nota": "Antes de apertura; presentación 08:00 CET.",
-   "fuente": "repsol.com, calendario del inversor"
+   "estado": "Publicada",
+   "nota": "Publicó el 29-oct-2026 a las 07:39 (CNMV).",
+   "fuente": "CNMV, 29-oct-2026"
   },
   {
    "fecha": "2026-10-30",
