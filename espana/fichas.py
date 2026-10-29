@@ -238,49 +238,62 @@ FICHAS = [
      'nombre': 'BBVA',
      'ticker': 'BBVA',
      'sector': 'Banca',
-     'lede': 'Banco español con negocio en España, México, Turquía y América del Sur, además de banca mayorista internacional. En un banco, los ingresos '
-             'son el margen bruto y la calidad del balance se mide con la morosidad y el capital.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio atribuido de 6.051 M€ (+11,1%), su mayor beneficio semestral. El 2T (3.062 M€, récord trimestral) superó en un 4,5% al '
-                'consenso que recopila el propio banco y en un 2,6% al de Bloomberg (cálculos propios); Jefferies sitúa la sorpresa en torno al 4%.',
-     'precio': '23,11 €',
-     'precio_fecha': '9-oct-2026',
-     'multiplos': [('PER 12 meses', '12,2x'),
-                   ('PER forward', '10,4x'),
-                   ('Precio / valor en libros', '1,99x'),
-                   ('Rentab. dividendo', '4,0%'),
-                   ('Capitalización', '~127.090 M€')],
-     'multiplos_nota': 'Con precio de 23,11 € al 9-oct-2026 (stockanalysis.com). A cierre de 2022, 2023, 2024 y 2025 el PER era 5,5x, 6,3x, 5,6x y '
-                       '11,3x, y el precio / valor en libros 0,66x, 0,87x, 0,91x y 1,85x. En un banco no se usan EV/EBITDA ni flujo de caja libre.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025 (euros corrientes)',
-     'tabla': [('Margen de intereses', '15.164', '+20,3%'),
-               ('Comisiones netas', '4.572', '+14,0%'),
-               ('Margen bruto', '21.159', '+17,3%'),
-               ('Gastos de explotación', '8.000', '+17,9%'),
-               ('Deterioro de activos financieros', '3.497', '+26,6%'),
-               ('Beneficio atribuido', '6.051', '+11,1%'),
-               ('BPA', '1,04 €', '+14,1%')],
-     'kpi': 'Eficiencia 37,8% (37,6% en 1S 2025); ROE 21,1%; ROTE 22,2%. Morosidad 2,6% (2,9% un año antes), cobertura 85%, coste del riesgo 1,43%. CET1 '
-            '12,90% (requerimiento 8,98%). Préstamos 509.424 M€ (+10,6% frente a diciembre); depósitos 532.981 M€ (+6,1%). Beneficio atribuido por área '
-            '(sin efecto divisa): México 2.979 M€ (+8,2%), España 2.172 M€ (+2,3%), América del Sur 556 M€ (+33,6%), Turquía 532 M€ (+29,1%).',
-     'guia': 'Guía 2026 (conferencia de resultados, según Investing.com y Merca2): ROTE en torno al 21% (antes ~20%); España, margen de intereses '
-             'creciendo a un dígito bajo-medio y eficiencia por debajo del 35%; México, crédito ~+10%; Turquía, coste del riesgo de unos 220 pb. '
-             'Objetivo de 48.000 M€ de beneficio acumulado en 2025-2028. Nueva recompra de 2.000 M€ y dividendo a cuenta 2026 de 0,37 € (+16%).',
-     'positivos': ['2T récord (3.062 M€), un 4,5% sobre el consenso de BBVA (calculado).',
-                   'ROTE del 22,2% y guía del año elevada a en torno al 21%.',
-                   'Menos morosidad (2,6%), nueva recompra de 2.000 M€ y dividendo a cuenta un 16% mayor.'],
-     'riesgos': ['Los deterioros suben un 26,6% y los gastos un 17,9%, más que el margen bruto.',
-                 'España creció poco: beneficio +2,3%.',
-                 'Peso de México, Turquía y América del Sur y riesgo de divisa; en Turquía, coste del riesgo de unos 220 pb.'],
-     'videos': [('pUB4hXT_RaQ', 'BBVA resultados 1S 2026: beneficio récord +11,1%; el 2T supera al consenso | ROTE 22,2%'),
+     'lede': 'Banco español con negocio en España, México, Turquía y América del Sur, además de banca mayorista internacional y banca digital en Italia '
+             'y Alemania. En un banco, los ingresos son el margen bruto y la calidad del balance se mide con la morosidad y el capital.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio atribuido récord de 9.066 M€ hasta septiembre (+13,6%; +11,4% a tipos constantes). El 3T (3.015 M€, +19%) quedó en línea con '
+                'el consenso (~3.010 M€ según Reuters) y el margen de intereses superó lo esperado, pero la acción caía más de un 5% el 29-oct-2026: '
+                'España ganó un 5,5% menos en el trimestre, las dotaciones fueron mayores de lo previsto y el CET1 (12,21%) quedó algo por debajo del '
+                'consenso.',
+     'precio': '21,27 €',
+     'precio_fecha': '29-oct-2026 (~9:30, sesión abierta)',
+     'multiplos': [('PER 12 meses', '~10,0x'),
+                   ('PER forward', '~9,6x'),
+                   ('Precio / valor en libros', '~1,83x'),
+                   ('Rentab. dividendo', '~4,6%'),
+                   ('Capitalización', '~116.200 M€')],
+     'multiplos_nota': 'Con 21,27 € el 29-oct-2026 hacia las 9:30 (Demócrata; Investing.com da 21,26 € a las 9:54). Todos los múltiplos son cálculos '
+                       'propios: 5.462 M de acciones (presentación de BBVA), beneficio de 12 meses a septiembre de 11.599 M€, PER forward (9,99x) y P/VC '
+                       '(1,91x) de stockanalysis.com a 22,23 € ajustados al precio, y dividendos cobrados en los últimos 12 meses (0,60 € en abril + '
+                       '0,37 € en octubre). P/VC tangible ~1,95x (VCT 10,92 €). A cierre de 2022, 2023, 2024 y 2025 el PER era 5,5x, 6,3x, 5,6x y 11,3x, '
+                       'y el precio / valor en libros 0,66x, 0,87x, 0,91x y 1,85x. En un banco no se usan EV/EBITDA ni flujo de caja libre.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025 (euros corrientes)',
+     'tabla': [('Margen de intereses', '23.243', '+20,8%'),
+               ('Comisiones netas', '6.909', '+13,8%'),
+               ('Margen bruto', '32.072', '+18,2%'),
+               ('Gastos de explotación', '12.168', '+17,5% (calculado)'),
+               ('Margen neto', '19.904', '+16,5% a tipos constantes'),
+               ('Deterioro de activos financieros', '5.444', '+25,8%'),
+               ('Beneficio atribuido', '9.066', '+13,6%'),
+               ('Beneficio atribuido 3T', '3.015', '+19,1%'),
+               ('BPA', '—', '+17,5%')],
+     'kpi': 'Eficiencia 37,9% (38,0% en 9M25); ROE 20,8%; ROTE 22%. Morosidad 2,6% (2,8% un año antes), cobertura 84%, coste del riesgo 1,44% (Turquía '
+            '2,55%). CET1 12,21% (12,90% en junio: la recompra restó 49 pb, el beneficio sumó 71 pb, el dividendo a cuenta restó 38 pb y los activos '
+            'ponderados 44 pb); rango objetivo 11,5%-12%, requerimiento 8,97%. Crédito +20,4% en un año a tipos constantes; préstamos a la clientela '
+            '527.455 M€ (+14,6% frente a diciembre). Beneficio atribuido por área: México 4.522 M€ (+8,4% a tipos constantes; +16,9% corrientes), España '
+            '3.106 M€ (−0,2%; 3T −5,5%), América del Sur 821 M€ (+42,1%), Resto de negocios 801 M€ (+58,5%), Turquía 789 M€ (+21,8%).',
+     'guia': 'Guía 2026 dada en julio: ROTE en torno al 21% (hasta septiembre, 22%) y coste del riesgo en Turquía de unos 220 pb (hasta septiembre, 255 '
+             'pb). Objetivos 2025-2028: ~48.000 M€ de beneficio acumulado (llevan 19.600 M€), ROTE medio ~22% y eficiencia ~35% en 2028. Remuneración: '
+             'dividendo a cuenta de 0,37 € brutos (+16%), pagado el 15-oct-2026; recompra extraordinaria de 2.000 M€, con el segundo tramo de 1.000 M€ '
+             'en marcha desde el 14-oct-2026 (terminará como muy tarde el 4-feb-2027).',
+     'positivos': ['Beneficio récord (+13,6%); el 3T, +19% y en línea con el consenso.',
+                   'Margen de intereses por encima de lo esperado y crédito +20,4% en un año.',
+                   'ROTE del 22%, por encima de su guía, y BPA +17,5% con ayuda de las recompras.'],
+     'riesgos': ['España pierde fuerza: beneficio del 3T −5,5% y por debajo de lo esperado.',
+                 'Dotaciones mayores de lo previsto; en Turquía, coste del riesgo de 255 pb frente a una guía de ~220 pb.',
+                 'CET1 del 12,21%, algo por debajo del consenso: menos capital por encima de su rango objetivo para repartir.'],
+     'videos': [('rnaDPgty_Hg', 'BBVA resultados 3T 2026: beneficio récord +13,6%; el 3T, en línea | España y capital pesan en bolsa'),
+                ('FKeWVPYcQDk', 'BBVA 3T 2026 en 60 segundos (Short)'),
+                ('pUB4hXT_RaQ', 'BBVA resultados 1S 2026: beneficio récord +11,1%; el 2T supera al consenso | ROTE 22,2%'),
                 ('9eV_Y5hfj-o', 'BBVA 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-29',
-     'fuentes': 'BBVA, informe de resultados del primer semestre 2026 (30-jul-2026, CNMV y bbva.com); Benzinga (consenso de BBVA y de Bloomberg, 27 y '
-                '30-jul-2026); Merca2 (Jefferies y Renta 4, 31-jul-2026); Investing.com (conferencia de resultados, 30-jul-2026); El Español (dividendo '
-                'a cuenta, 1-oct-2026); stockanalysis.com (precio y múltiplos, 9-oct-2026).',
-     'fuentes_corto': 'Benzinga, Merca2, Jefferies, Renta 4, Investing.com, El Español y stockanalysis.com',
-     'elaborado': '13-oct-2026, 19:00'},
+     'proximo': '2027-02-04',
+     'proximo_estimado': True,
+     'fuentes': 'BBVA, nota y presentación de resultados de los nueve meses de 2026 (29-oct-2026, bbva.com y CNMV); Infobae, Demócrata, Bolsamanía, '
+                'Reuters, Investing.com, El Conciso, BilbaoHiria y Economía de Mallorca (29-oct-2026); PressDigital y Merca2 (recompra, 13-oct-2026); '
+                'BBVA, resultados 1S26 (30-jul-2026); stockanalysis.com (múltiplos, oct-2026).',
+     'fuentes_corto': 'Infobae, Bolsamanía, Reuters, Investing.com y stockanalysis.com',
+     'elaborado': '29-oct-2026, 12:00'},
     {'id': 'sabadell',
      'nombre': 'Banco Sabadell',
      'ticker': 'SAB',
@@ -436,51 +449,60 @@ FICHAS = [
      'lede': 'Compañía energética integrada: exploración y producción de petróleo y gas (Upstream), refino y química (Industrial), estaciones de '
              'servicio, electricidad y gas para clientes (Cliente) y generación renovable. En una petrolera, el resultado ajustado a coste de reposición '
              '(CCS) quita el efecto del precio de los inventarios.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Resultado neto ajustado de 2.711 M€ (+134,7%), impulsado por el refino. El beneficio reportado, 2.201 M€ (603 M€ en 1S 2025), incluye '
-                '+823 M€ de efecto inventario y -1.333 M€ de deterioros. En el 2T, 1.838 M€ ajustados: un 12,5% sobre el consenso publicado por Repsol '
-                '(1.634 M€, según Benzinga; calculado).',
-     'precio': '29,11 €',
-     'precio_fecha': '7-oct-2026',
-     'multiplos': [('PER 12 meses', '9,3x'),
-                   ('PER forward', '5,9x'),
-                   ('EV/EBITDA', '4,9x'),
-                   ('Precio / valor en libros', '1,15x'),
-                   ('Rentab. dividendo', '3,7%'),
-                   ('Capitalización', '~31.290 M€')],
-     'multiplos_nota': 'Con precio de 29,11 € al 7-oct-2026 (stockanalysis.com); EV/EBITDA y precio / valor en libros a 25-sep-2026 (30,75 €). A cierre '
-                       'de 2023, 2024 y 2025 el PER era 5,5x, 8,2x y 9,8x, y el EV/EBITDA 3,3x, 4,6x y 4,7x. La acción subió un 100,9% en 12 meses (a '
-                       '25-sep-2026).',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ventas', '33.697', '+21,5%'),
-               ('EBITDA CCS', '5.006', '+70,6%'),
-               ('Resultado ajustado Industrial', '1.683', '235 en 1S25'),
-               ('Resultado ajustado Upstream', '673', '+6,7%'),
-               ('Resultado ajustado Cliente', '369', '+5,1%'),
-               ('Resultado neto ajustado (CCS)', '2.711', '+134,7%'),
-               ('Resultado neto reportado', '2.201', '+265%'),
-               ('BPA reportado', '1,96 €', '0,50 € en 1S25')],
-     'kpi': 'Margen de refino en España 12,4 $/barril (5,6); 14,0 en el 2T. Producción 548 kbep/d (549); 558 en el 2T. Margen EBITDA CCS 14,9% (10,6%, '
-            'calculado). Flujo de caja de las operaciones 2.977 M€ (+15,1%) tras 2.400 M€ invertidos en inventarios; flujo de caja libre 1.302 M€ (636). '
-            'Deuda neta 3.667 M€ (-1.133 M€ frente a marzo); apalancamiento 11,3%; deuda neta / EBITDA ~0,4x (calculado). Liquidez 10.117 M€.',
-     'guia': 'Producción 2026 prevista de 560.000-570.000 bep/d (más de 580.000 a inicios de julio). Dividendo en efectivo 2026 de 1,051 €/acción (+8%) '
-             'y 0,53 € en enero de 2027. Recompras de hasta 850 M€ en 2026 y una tercera prevista en octubre, para repartir el 30-40% del flujo de caja '
-             'de las operaciones.',
-     'positivos': ['El margen de refino se duplicó y el negocio Industrial multiplicó por siete su resultado.',
-                   'El 2T superó al consenso; el flujo de caja libre se duplicó y la deuda neta bajó.',
-                   'Más retribución: dividendo +8% y recompras de hasta 850 M€.'],
-     'riesgos': ['El beneficio depende mucho del precio del crudo y del margen de refino, hoy altos por las tensiones geopolíticas.',
-                 'Deterioros y provisiones de 1.333 M€, sobre todo en Química y en renovables en Chile.',
-                 'La producción no crece frente a 2025, Upstream quedó por debajo de lo esperado (Bankinter) y hay exposición a Venezuela.'],
-     'videos': [('LDjyCZImFpQ', 'Repsol resultados 1S 2026: beneficio ajustado +134,7% por el refino; el 2T supera al consenso'),
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Resultado neto ajustado de 5.419 M€ hasta septiembre (+184%), impulsado por el refino; solo en el tercer trimestre, 2.708 M€ (752 M€ en '
+                'el 3T 2025). El beneficio neto fue de 5.006 M€ (1.177 M€), con +943 M€ de efecto inventario y -1.356 M€ de resultados específicos. La '
+                'deuda neta baja a 2.038 M€ y Repsol lanza una tercera recompra de hasta 950 M€.',
+     'precio': '29,33 €',
+     'precio_fecha': '29-oct-2026',
+     'multiplos': [('PER 12 meses', '5,5x'),
+                   ('PER ajustado 12 meses', '5,2x'),
+                   ('EV/EBITDA CCS', '3,0x'),
+                   ('Precio / valor contable', '1,0x'),
+                   ('Rentab. dividendo', '3,6%'),
+                   ('Capitalización', '~31.450 M€')],
+     'multiplos_nota': 'Calculados con el precio de 29,33 € del 29-oct-2026 hacia las 11:00 (Investing.com), 1.072,2 M de acciones tras la amortización '
+                       'del 26-oct (Repsol), beneficio y EBITDA CCS de 12 meses a septiembre, deuda neta de 2.038 M€ (sin minoritarios), patrimonio neto '
+                       'total de 30.966 M€ y dividendo en efectivo 2026 de 1,051 €. A cierre de 2023, 2024 y 2025 el PER era 5,5x, 8,1x y 9,6x, el '
+                       'EV/EBITDA 3,7x, 4,3x y 6,8x y el precio / valor contable 0,6x, 0,5x y 0,6x (stockanalysis.com, consultado el 29-oct-2026). La '
+                       'acción subió un 105% en 52 semanas (stockanalysis.com, 16-oct-2026).',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ventas', '53.620', '+31,3% (calculado)'),
+               ('EBITDA CCS', '9.524', '+107,6%'),
+               ('Resultado ajustado Industrial', '3.668', '540 en 9M25'),
+               ('Resultado ajustado Upstream', '1.088', '+28,6%'),
+               ('Resultado ajustado Cliente', '613', '+4,6%'),
+               ('Resultado neto ajustado (CCS)', '5.419', '+184,2%'),
+               ('Resultado neto', '5.006', '1.177 en 9M25'),
+               ('Resultado neto ajustado 3T', '2.708', '+260,1%')],
+     'kpi': 'Margen de refino en España 20,6 $/barril (6,7); 36,2 en el 3T (8,8). Producción 557 kbep/d (549); 574 en el 3T y 590 en octubre. Margen '
+            'EBITDA CCS 17,8% de las ventas (11,2%; calculado). Flujo de caja de las operaciones 6.503 M€ (+68,8%) pese a ~3.700 M€ invertidos en '
+            'existencias; flujo de caja libre 4.195 M€ (1.491). Inversión bruta 2.604 M€ (-21,9%). Deuda neta 2.038 M€ (4.487 M€ en diciembre; caja neta '
+            'de 633 M€ sin arrendamientos); apalancamiento 6,2%; deuda neta / EBITDA CCS 12 meses 0,18x (calculado). Liquidez 11.922 M€. BPA 4,51 € '
+            '(0,99 €).',
+     'guia': 'Producción 2026 prevista de 560.000-570.000 bep/d (sin cambios). Tercer programa de recompra de hasta 950 M€ antes de fin de año: 1.800 M€ '
+             'en 2026 y cerca de 3.000 M€ de retribución total (30-40% del flujo de caja de las operaciones). Dividendo en efectivo 2026 de 1,051 '
+             '€/acción (0,50 € en enero y 0,551 € en julio); el de enero de 2027 sube de 0,53 € a 0,56 € brutos (0,53 € con cargo a reservas libres y '
+             '0,03 € a cuenta de 2026). Compromiso de subir un 3% anual el dividendo en efectivo total en los dos años siguientes. 11.500 M€ en '
+             'proyectos en España hasta 2030.',
+     'positivos': ['El margen de refino del 3T se multiplica por cuatro y el resultado Industrial es casi siete veces el de 9M 2025.',
+                   'El flujo de caja libre casi se triplica y la deuda neta baja a 2.038 M€.',
+                   'Más retribución: tercera recompra de hasta 950 M€ y dividendo de enero de 2027 más alto (0,56 €).'],
+     'riesgos': ['El beneficio depende de un margen de refino y un precio del crudo excepcionalmente altos, ligados a restricciones de oferta.',
+                 'Resultados específicos de -1.356 M€ en 2026 y ~3.700 M€ inmovilizados en existencias.',
+                 'Pikka (Alaska) producía 69.000 barriles brutos/día a finales de septiembre, por debajo de su objetivo de 80.000.'],
+     'videos': [('B7KnXjbA5h8', 'Repsol resultados 3T 2026: resultado ajustado +184% por el refino | Tercera recompra de 950 M€'),
+                ('Bn-mmTXJM-o', 'Repsol 3T 2026 en 60 segundos (Short)'),
+                ('LDjyCZImFpQ', 'Repsol resultados 1S 2026: beneficio ajustado +134,7% por el refino; el 2T supera al consenso'),
                 ('OMP1V-cPw9s', 'Repsol 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-29',
-     'fuentes': 'Repsol, informe de resultados del segundo trimestre 2026 y nota de prensa (CNMV, 23-jul-2026); Benzinga (consenso de Repsol, '
-                '23-jul-2026); Jefferies / Bolsamania y Bankinter Análisis / Capitalbolsa (23-jul-2026); stockanalysis.com (precio y múltiplos, 25-sep y '
-                '7-oct-2026).',
-     'fuentes_corto': 'Benzinga, Jefferies, Bankinter Análisis y stockanalysis.com',
-     'elaborado': '15-oct-2026, 13:30'},
+     'proximo': '2027-02-18',
+     'proximo_estimado': True,
+     'fuentes': 'Repsol, resultados del tercer trimestre de 2026 (nota de prensa, información de resultados y nota para analistas; CNMV y repsol.com, '
+                '29-oct-2026) y del cuarto trimestre de 2025 (19-feb-2026); Bolsamanía, Europa Press y Vozpópuli (29-oct-2026); Investing.com (precio, '
+                '29-oct-2026); stockanalysis.com (múltiplos históricos, oct-2026).',
+     'fuentes_corto': 'Bolsamanía, Europa Press, Vozpópuli, Investing.com y stockanalysis.com',
+     'elaborado': '29-oct-2026, 11:15'},
     {'id': 'telefonica',
      'nombre': 'Telefónica',
      'ticker': 'TEF',
@@ -838,107 +860,119 @@ FICHAS = [
      'lede': 'Fabricante y distribuidor de equipos para piscinas residenciales y comerciales y para bienestar (bombas, filtros, robots limpiafondos, '
              'tratamiento del agua y automatización). Norteamérica es su mayor mercado (41% de las ventas del 1S 2026) y el negocio es estacional: el '
              'primer semestre, y sobre todo el segundo trimestre, es la temporada alta.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Ventas de 1.258 M€ (+2,6%; +5% a tipo de cambio constante) y EBITDA ajustado de 321 M€ (+2,4%; +6% a tipo constante), con un margen '
-                'estable del 25,5%. El beneficio neto contable bajó un 7,1%, a 126 M€, por 35 M€ de reestructuración y otros gastos; el ajustado subió '
-                'un 2,0%, a 175 M€.',
-     'precio': '17,50 €',
-     'precio_fecha': '2-oct-2026',
-     'multiplos': [('PER 12 meses', '20,0x'),
-                   ('PER forward', '12,4x'),
-                   ('EV/EBITDA', '11,3x'),
-                   ('Precio / valor contable', '2,10x'),
-                   ('Rentab. dividendo', '3,71%'),
-                   ('FCF yield', '10,1%'),
-                   ('Capitalización', '~3.320 M€')],
-     'multiplos_nota': 'Con precio de 17,50 € al 2-oct-2026 (stockanalysis.com; EV/EBITDA, P/VC y FCF yield al 11-sep-2026). A cierre de 2023, 2024 y '
-                       '2025 el PER era 31,4x, 32,3x y 25,0x, el EV/EBITDA 14,7x, 15,8x y 13,7x, el precio / valor contable 2,27x, 2,69x y 2,75x, y la '
-                       'rentabilidad por dividendo 3,09%, 2,64% y 2,84%.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ventas', '1.258', '+2,6%'),
-               ('EBITDA ajustado', '321', '+2,4%'),
-               ('Beneficio neto ajustado', '175', '+2,0%'),
-               ('Beneficio neto', '126', '-7,1%'),
-               ('EBITDA ajustado 2T (calculado)', '197', '+7,7%'),
-               ('Flujo de caja libre', '16', '-74 en 1S25'),
-               ('BPA ajustado', '0,91 €', '')],
-     'kpi': 'Margen EBITDA ajustado 25,5% (25,6% en 1S 2025); 28,4% en el 2T (27,6%; calculado). Margen bruto estable, 56,5%. Ventas por región: '
-            'Norteamérica 518 M€ (-1,6% en euros; +4% a tipo constante), Sur de Europa 395 M€ (+8,1%), Resto de Europa 179 M€ (+3,1%), Resto del mundo '
-            '167 M€ (+3,4%). Flujo de caja libre +16 M€ (-74 M€ en 1S 2025); circulante / ventas 22,5% (-2,3 pp). Deuda neta 1.101 M€ (-1,4%), 2,2x el '
-            'EBITDA ajustado (2,3x).',
-     'guia': 'Objetivos 2026 mantenidos, a tipo de cambio constante: ventas +3% a +7% (confía en el punto medio), margen EBITDA ajustado 23,3%-24,3% '
-             '(ahora en la parte baja o media) y BPA ajustado +4% a +13%. Reestructuración de 50-55 M€ en el año. Dividendo de 0,65 € con cargo a 2025 '
-             '(0,32 € en julio y 0,33 € en diciembre) y recompra de 40 M€ lanzada el 30-jul-2026. Compras de Hydrapro (Francia) y Riaan Pool Group '
-             '(Sudáfrica) pendientes de cierre.',
-     'positivos': ['Las ventas crecen en todas las regiones a tipo constante, con volumen y precio, y el EBITDA superó al consenso (Citi).',
-                   'Flujo de caja libre positivo en el semestre, menos circulante y menos deuda.',
-                   'Guía 2026 mantenida, plan de ahorro de costes en marcha y recompra de 40 M€.'],
-     'riesgos': ['La caída del dólar resta crecimiento: las ventas de Norteamérica bajaron un 1,6% en euros.',
-                 'Los costes de reestructuración (50-55 M€ en 2026) pesan sobre el beneficio neto contable.',
-                 'Obra nueva de piscinas débil, piscina comercial -10% en el 2T y margen anual en la parte baja o media del rango.'],
-     'videos': [('g6FVIzh99x4', 'Fluidra resultados 1S 2026: ventas +5% a tipo constante, EBITDA 321 M€ | Beneficio neto -7%'),
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Ventas de 1.780 M€ hasta septiembre (+3,3%; +4% a tipo de cambio constante) y EBITDA ajustado de 428 M€ (+4,1%; +6% a tipo constante), '
+                'con un margen del 24,1% (23,9%). En el tercer trimestre, el EBITDA ajustado subió un 10,3%, a 107 M€ (calculado). El beneficio neto '
+                'contable bajó un 5,9%, a 154 M€, por la reestructuración; el ajustado subió a 221 M€ (+6% a tipo constante). Fluidra acota su guía '
+                '2026.',
+     'precio': '18,62 €',
+     'precio_fecha': '29-oct-2026',
+     'multiplos': [('PER 12 meses', '~21,3x'),
+                   ('PER forward', '~13,2x'),
+                   ('EV/EBITDA', '~11,6x'),
+                   ('Precio / valor contable', '~2,16x'),
+                   ('Rentab. dividendo', '~3,49%'),
+                   ('Capitalización', '~3.539 M€')],
+     'multiplos_nota': 'Calculados con 18,62 € (29-oct-2026, en sesión, fluidra.com), 190,06 M de acciones tras la amortización del 28-oct, el beneficio '
+                       'neto de 12 meses de Fluidra (166 M€) y los datos de stockanalysis.com (PER forward, EV/EBITDA y valor contable, a 17,50 € y '
+                       '18,12 €). A cierre de 2023, 2024 y 2025 el PER era 31,4x, 32,3x y 25,0x, el EV/EBITDA 14,7x, 15,8x y 13,7x, el precio / valor '
+                       'contable 2,27x, 2,69x y 2,75x, y la rentabilidad por dividendo 3,09%, 2,64% y 2,84%.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ventas', '1.780', '+3,3%'),
+               ('EBITDA ajustado', '428', '+4,1%'),
+               ('Beneficio neto ajustado', '221', '+3,8%'),
+               ('Beneficio neto', '154', '-5,9%'),
+               ('EBITDA ajustado 3T (calculado)', '107', '+10,3%'),
+               ('Flujo de caja libre', '12', '6 en 9M25'),
+               ('BPA ajustado', '1,15 €', '+3,6%')],
+     'kpi': 'Margen EBITDA ajustado 24,1% (23,9%); 20,5% en el 3T (19,5%; calculado). Margen bruto 56,0% (56,1%); opex 32,0% de las ventas (32,3%); 23 '
+            'M€ de ahorros del plan de eficiencia. Ventas a tipo constante y perímetro: Europa +4,2%, Norteamérica +3,5%, Resto del mundo +1,5%. Flujo '
+            'de explotación 223 M€ (199), capex 57 M€ (46), flujo de caja libre 12 M€ (6); circulante / ventas 19,1% (20,0%). Deuda neta 1.145 M€ (1.034 '
+            'M€ en sep-25), 2,2x el EBITDA ajustado (2,1x).',
+     'guia': 'Guía 2026 acotada, a tipo de cambio constante: ventas +3,5% a +5,5% (antes +3% a +7%), margen EBITDA ajustado 23,3%-23,5% (antes '
+             '23,3%-24,3%) y BPA ajustado +5% a +9% (antes +4% a +13%). Recompra de 40 M€ completada y 2.071.424 acciones amortizadas (1,1% del '
+             'capital). Sin dividendo nuevo: queda pendiente el pago de 0,33 € brutos el 10-dic-2026 (ex-dividendo 8-dic), del dividendo de 0,65 € con '
+             'cargo a 2025.',
+     'positivos': ['El EBITDA ajustado del tercer trimestre creció un 10,3% y su margen subió un punto, al 20,5% (calculado); según Investing.com, '
+                   'superó al consenso.',
+                   'El margen EBITDA de los nueve meses mejora al 24,1%, con 23 M€ de ahorros del plan de eficiencia.',
+                   'Recompra de 40 M€ completada y 1,1% del capital amortizado.'],
+     'riesgos': ['La guía se acota: el margen anual queda en el 23,3%-23,5%, la parte baja del rango anterior.',
+                 'La construcción de piscinas nuevas y las reformas siguen débiles, y el margen bruto del 3T bajó (Investing.com).',
+                 'La deuda neta sube a 1.145 M€ (+111 M€ a/a) y la reestructuración (45 M€ con pagos en acciones) recorta el beneficio contable un '
+                 '5,9%.'],
+     'videos': [('9l1pAro0ayM', 'Fluidra resultados 3T 2026: EBITDA ajustado +6% a tipo constante, margen 24,1% | Acota la guía'),
+                ('jhD-BfCiy_Y', 'Fluidra 3T 2026 en 60 segundos (Short)'),
+                ('g6FVIzh99x4', 'Fluidra resultados 1S 2026: ventas +5% a tipo constante, EBITDA 321 M€ | Beneficio neto -7%'),
                 ('zlALNKgx1Kg', 'Fluidra 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-29',
+     'proximo': '2027-02-25',
      'proximo_estimado': True,
-     'fuentes': 'Fluidra, nota de prensa de resultados del primer semestre 2026 (CNMV y fluidra.com, 30-jul-2026); Fluidra, resultados 1S 2025, 1T 2025, '
-                '1T 2026 y 2025 con guía 2026; Europa Press/Bolsamanía y Estrategias de Inversión (detalle, 30-jul-2026); Investing.com (presentación y '
-                'conferencia, 30-jul-2026); Renta 4 (30-jul-2026) y Merca2 (Citi, 31-jul-2026) (consenso); stockanalysis.com (precio y múltiplos, 11-sep '
-                'y 2-oct-2026).',
-     'fuentes_corto': 'Europa Press, Estrategias de Inversión, Investing.com, Renta 4, Merca2 y stockanalysis.com',
-     'elaborado': '17-oct-2026, 08:30'},
+     'fuentes': 'Fluidra, nota de prensa y medidas alternativas de rendimiento de los nueve primeros meses de 2026 (CNMV y fluidra.com, 29-oct-2026); '
+                'Fluidra, resultados 1S 2026 (30-jul-2026); Europa Press/Bolsamanía (29-oct y 28-oct-2026) e Investing.com (29-oct-2026, consenso y '
+                'margen bruto del 3T); stockanalysis.com (múltiplos, sep-oct 2026).',
+     'fuentes_corto': 'Fluidra, Europa Press, Bolsamanía, Investing.com y stockanalysis.com',
+     'elaborado': '29-oct-2026, 11:15'},
     {'id': 'naturgy',
      'nombre': 'Naturgy',
      'ticker': 'NTGY',
      'sector': 'Eléctricas y gas · redes, generación y comercialización',
      'lede': 'Grupo integrado de gas y electricidad con redes de distribución en España y Latinoamérica (México, Brasil, Chile, Argentina y Panamá), '
-             'ciclos combinados, nuclear y renovables, gestión del aprovisionamiento de gas (con el contrato de Sonatrach y Medgaz) y comercialización.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio neto de 1.215 M€ (+5,9%) y EBITDA de 2.975 M€ (+4,5%), por encima del consenso que recoge Capitalbolsa (1.166 y 2.888 M€; '
-                '+4,2% y +3,0%, calculado). Las redes de distribución tiran del grupo (+13,2%) y Naturgy eleva su guía de 2026.',
-     'precio': '30,64 €',
-     'precio_fecha': '16-oct-2026',
-     'multiplos': [('PER 12 meses', '13,5x'),
-                   ('PER forward', '14,3x'),
-                   ('EV/EBITDA', '8,0x'),
-                   ('Precio / valor contable', '2,42x'),
-                   ('Rentab. dividendo', '5,78%'),
-                   ('FCF yield', '7,6%'),
-                   ('Capitalización', '~28.395 M€')],
-     'multiplos_nota': 'Con precio de 30,64 € al 16-oct-2026 (stockanalysis.com). A cierre de 2023, 2024 y 2025 el PER era 13,1x, 11,8x y 12,3x, el '
-                       'EV/EBITDA 7,9x, 7,6x y 8,1x, el precio / valor contable 2,17x, 1,93x y 2,19x, y la rentabilidad por flujo libre 9,4%, 8,0% y '
-                       '9,5%.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ventas', '10.097', '+1,4%'),
-               ('EBITDA', '2.975', '+4,5%'),
-               ('EBITDA de redes', '1.514', '+13,2%'),
-               ('Beneficio neto', '1.215', '+5,9%'),
-               ('Beneficio neto 2T (calculado)', '685', '+6,9%'),
-               ('Inversiones', '844', '-5,9%'),
-               ('BPA (calculado)', '~1,31 €', '')],
-     'kpi': 'Margen EBITDA 29,5% (28,6% en 1S 2025; calculado). Redes: España 855 M€ y Latinoamérica 665 M€ de EBITDA (calculado); electricidad España '
-            'incluye 74 M€ de ajustes retroactivos no recurrentes. FFO 2.316 M€ (+7,8%) y flujo de caja libre tras minoritarios 1.259 M€ (-1,6%). Deuda '
-            'neta 11.745 M€, 572 M€ menos que en diciembre; deuda neta / EBITDA 2,2x. Coste medio de la deuda 4,0%; liquidez 10.210 M€. Capacidad '
-            'renovable 8.433 MW (+9,2%), con ~1,3 GW en construcción.',
-     'guia': 'Guía 2026 elevada: EBITDA de más de 5.500 M€ (antes, más de 5.300) y beneficio neto de más de 2.100 M€ (antes, más de 1.900); el semestre '
-             'ya suma el 54% y el 58% (calculado). Deuda neta de ~13.000 M€ a cierre, con un pago puntual de ~400 M€ a Sonatrach. Dividendo a cuenta de '
-             '0,60 € (pagado el 29-jul) y mínimo de 1,80 € por acción con cargo a 2026. En el semestre salieron GIP (11,4%) y CVC (13,8%); el capital '
-             'flotante supera el 46%.',
-     'positivos': ['Los resultados superaron al consenso y la empresa eleva su guía de 2026.',
-                   'Las redes crecen un 13,2% y ya son la mitad del EBITDA.',
-                   'La deuda neta bajó 572 M€ y el capital flotante es el mayor de su historia tras la salida de GIP y CVC.'],
-     'riesgos': ['La comercialización cae un 17,4% y las renovables un 2,8%.',
-                 'Parte del crecimiento de las redes en España son 74 M€ de ajustes que no se repetirán.',
-                 'La deuda subirá en el segundo semestre (~13.000 M€) y la empresa anticipa un invierno complejo por el precio del gas.'],
-     'videos': [('5YX26YWgemU', 'Naturgy resultados 1S 2026: beneficio +5,9%, por encima del consenso | Redes +13,2% y guía al alza'),
+             'ciclos combinados, nuclear y renovables, gestión del aprovisionamiento de gas (con el contrato de Sonatrach y Medgaz) y comercialización. '
+             'Las redes aportan ya más de la mitad del EBITDA.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 1.758 M€ hasta septiembre (+5,4%) y EBITDA de 4.380 M€ (+3,9%). Las redes de distribución suben un 12,8% y la '
+                'comercialización cae un 29,4%. Naturgy eleva por segunda vez su guía de 2026 (EBITDA de más de 5.600 M€ y beneficio de alrededor de '
+                '2.200 M€) y paga un segundo dividendo a cuenta de 0,60 € el 5 de noviembre.',
+     'precio': '30,28 €',
+     'precio_fecha': '29-oct-2026',
+     'multiplos': [('PER 12 meses', '13,3x'),
+                   ('PER con la guía 2026', '12,8x'),
+                   ('EV/EBITDA', '7,7x'),
+                   ('Precio / valor contable', '2,4x'),
+                   ('Rentab. dividendo', '5,9%'),
+                   ('Capitalización', '~28.060 M€')],
+     'multiplos_nota': 'Calculados con el precio de 30,28 € del 29-oct-2026 a las 10:42 (Bolsamanía), 926,73 M de acciones (stockanalysis.com), '
+                       'beneficio y EBITDA de 12 meses a septiembre (2.113 y 5.500 M€), deuda neta de 12.307 M€ más ~2.150 M€ de minoritarios '
+                       '(implícitos en stockanalysis.com) y el dividendo de 1,80 € comprometido para 2026. A cierre de 2023, 2024 y 2025 el PER era '
+                       '13,1x, 11,8x y 12,3x, el EV/EBITDA 7,9x, 7,6x y 8,1x y el precio / valor contable 2,17x, 1,93x y 2,19x (stockanalysis.com). La '
+                       'acción subió un 14,9% en 52 semanas (stockanalysis.com, 27-oct-2026).',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Cifra de negocios', '15.374', '+5,4%'),
+               ('EBITDA', '4.380', '+3,9%'),
+               ('EBITDA de redes', '2.354', '+12,8%'),
+               ('EBITDA de comercialización', '353', '-29,4%'),
+               ('EBIT', '3.092', '+6,2%'),
+               ('Beneficio neto', '1.758', '+5,4%'),
+               ('Beneficio neto 3T (calculado)', '543', '+4,2%'),
+               ('BPA (calculado)', '~1,90 €', '')],
+     'kpi': 'Margen EBITDA 28,5% (28,9% en 9M 2025; calculado). Redes: España 1.285 M€ y Latinoamérica 1.080 M€ de EBITDA (calculado); electricidad '
+            'España incluye 126 M€ de ajustes retroactivos no recurrentes. Gestión de la energía 676 M€ (-5,8%), generación térmica 601 M€ (+14,9%), '
+            'renovable 466 M€ (+3,1%). Fondos generados 3.560 M€ (+7,8%); el circulante absorbió 968 M€, con el pago puntual a Sonatrach; flujo de caja '
+            'libre tras minoritarios 1.077 M€ (-49,9%); inversión 1.280 M€ (-7,8%). Deuda neta 12.307 M€ (12.317 M€ en diciembre y 11.745 M€ en junio), '
+            '2,2x EBITDA; coste medio 4,0%; liquidez 10.378 M€. Capacidad renovable 8.558 MW (+9,4%).',
+     'guia': 'Guía 2026 elevada por segunda vez: EBITDA de más de 5.600 M€ (antes, más de 5.500) y beneficio neto de alrededor de 2.200 M€ (antes, más '
+             'de 2.100); los nueve meses ya suman el 78% y el 80% (calculado). Deuda neta por debajo de 13.000 M€ a cierre. Dividendo 2026 de 1,80 € por '
+             'acción confirmado: 0,60 € pagados el 29-jul y un segundo dividendo a cuenta de 0,60 € que se paga el 5-nov-2026. Según la prensa, '
+             'capacidad de hasta 12.000 M€ para operaciones corporativas sin perder el rating BBB y plan estratégico a 2030 el próximo año.',
+     'positivos': ['Eleva su guía por segunda vez en el año y ya lleva el 80% del beneficio previsto (calculado).',
+                   'Las redes crecen un 12,8% y ya son el 54% del EBITDA (calculado).',
+                   'El tercer trimestre también mejora: beneficio +4,2% y ventas +14,1% (calculado).'],
+     'riesgos': ['La comercialización cae un 29,4% y la gestión de la energía un 5,8%.',
+                 '126 M€ del EBITDA de las redes eléctricas en España son ajustes que no se repetirán.',
+                 'El flujo de caja libre tras minoritarios baja un 49,9% y la deuda neta sube 562 M€ desde junio.'],
+     'videos': [('Jd0pBVYB4XI', 'Naturgy resultados 3T 2026: beneficio +5,4% y guía 2026 elevada otra vez | Redes +12,8%'),
+                ('CF3v-pP5o-k', 'Naturgy 3T 2026 en 60 segundos (Short)'),
+                ('5YX26YWgemU', 'Naturgy resultados 1S 2026: beneficio +5,9%, por encima del consenso | Redes +13,2% y guía al alza'),
                 ('WBGXyA-ix64', 'Naturgy 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-29',
-     'fuentes': 'Naturgy, informe de resultados del primer semestre 2026 (CNMV y naturgy.com, 22-jul-2026), nota de prensa del 22-jul-2026, informe 1T26 '
-                '(29-abr-2026) y calendario financiero; Capitalbolsa (consenso, 22-jul-2026); XTB e Investing.com (guía anterior y dividendo, '
-                '22-jul-2026); Bolsamanía/Europa Press (22-jul-2026); stockanalysis.com (precio y múltiplos, 16-oct-2026).',
-     'fuentes_corto': 'Capitalbolsa, XTB, Investing.com, Bolsamanía y stockanalysis.com',
-     'elaborado': '17-oct-2026, 08:15'},
+     'proximo': '2027-02-18',
+     'proximo_estimado': True,
+     'fuentes': 'Naturgy, informe de resultados de los nueve primeros meses de 2026 (CNMV y naturgy.com, 29-oct-2026) e informe del primer semestre '
+                '(22-jul-2026); El Español, Europa Press y Vozpópuli (29-oct-2026); The Objective (resultados 2025); Bolsamanía (precio, 29-oct-2026); '
+                'stockanalysis.com (acciones y múltiplos históricos, oct-2026).',
+     'fuentes_corto': 'El Español, Europa Press, Vozpópuli, Bolsamanía y stockanalysis.com',
+     'elaborado': '29-oct-2026, 11:30'},
     {'id': 'mapfre',
      'nombre': 'Mapfre',
      'ticker': 'MAP',
