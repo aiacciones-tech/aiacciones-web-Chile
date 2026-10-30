@@ -30,13 +30,14 @@ cuyo nombre diga "chile" (p. ej. el TikTok aiaccioneschile) es de Chile y lo usa
 Secreto opcional BUFFER_API_KEY_ES2: tercera cuenta de Buffer, también solo de España (Instagram aiacciones.espana).
 Instagram: <cola>/<slug>/post-instagram.txt junto a video.mp4 (se publica como Reel) o a imagen.png (post en
 el feed, 1080x1350). Vale para cola/ (Chile) y cola-es/ (España).
+X, LinkedIn y Facebook: si en la carpeta hay imagen.png, el post la lleva adjunta (p. ej. un calendario).
 España: `programar cola-es` manda los posts de cola-es/ solo a canales cuyo nombre diga "espana"/"españa"
 (hoy, la página de LinkedIn); si no hay canal de España para esa red, el post espera. Con dos páginas
 de LinkedIn conectadas, Chile usa la que se llama "chile".
 EAU (Emiratos, canal @AIStocksUAE, posts en árabe): `programar cola-eau` manda los posts de cola-eau/ con su
 propia cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_EAU, que el workflow pasa como BUFFER_API_KEY_EAU) y, si
 existe, una segunda (BUFFER_ACCESS_TOKEN_EAU2, para pasar del límite de 3 canales del plan gratis); todos
-los canales de esas cuentas son de EAU y nunca usa los de Chile ni España. Si hay más de un canal de una red,
+los canales de esas cuentas son de EAU. Todo post de EAU lleva el enlace al canal de YouTube (se agrega si falta) y nunca usa los de Chile ni España. Si hay más de un canal de una red,
 variable BUFFER_CANAL_EAU, BUFFER_CANAL_LINKEDIN_EAU, BUFFER_CANAL_TIKTOK_EAU o BUFFER_CANAL_INSTAGRAM_EAU.
 Solo usa la biblioteca estándar de Python.
 """
@@ -94,10 +95,10 @@ def canales():
 
 REDES = {
     "x": {"nombre": "X", "archivo": "post-x.txt", "registro": "buffer.json", "servicios": ("twitter", "x"),
-          "variable": "BUFFER_CANAL", "limite": 280, "largo": largo_x, "obligatoria": True},
+          "variable": "BUFFER_CANAL", "limite": 280, "largo": largo_x, "obligatoria": True, "imagen": True},
     "linkedin": {"nombre": "LinkedIn", "archivo": "post-linkedin.txt", "registro": "buffer-linkedin.json",
                  "servicios": ("linkedin",), "variable": "BUFFER_CANAL_LINKEDIN", "limite": 3000,
-                 "largo": len, "obligatoria": False},
+                 "largo": len, "obligatoria": False, "imagen": True},
     "tiktok": {"nombre": "TikTok", "archivo": "post-tiktok.txt", "registro": "buffer-tiktok.json",
                "servicios": ("tiktok",), "variable": "BUFFER_CANAL_TIKTOK", "limite": 2200,
                "largo": len, "obligatoria": False, "video": True},
@@ -105,9 +106,22 @@ REDES = {
                   "servicios": ("instagram",), "variable": "BUFFER_CANAL_INSTAGRAM", "limite": 2200,
                   "largo": len, "obligatoria": False, "video": True, "imagen": True,
                   "metadata": "{instagram: {type: reel, shouldShareToFeed: true}}"},
+    # Página de Facebook (hoy solo EAU): post-facebook.txt o, en cola-eau/, el mismo texto de post-linkedin.txt
+    "facebook": {"nombre": "Facebook", "archivo": "post-facebook.txt", "registro": "buffer-facebook.json",
+                 "servicios": ("facebook",), "variable": "BUFFER_CANAL_FACEBOOK", "limite": 63206,
+                 "largo": len, "obligatoria": False, "alterno_eau": "post-linkedin.txt", "imagen": True},
 }
+
+
+def archivo_post(carpeta, r, pais):
+    """El archivo de texto del post de esa red en la carpeta, o None si no hay."""
+    for nombre in (r["archivo"], r.get("alterno_eau") if pais == "eau" else None):
+        if nombre and os.path.isfile(os.path.join(carpeta, nombre)):
+            return nombre
+    return None
 CLAVES_ES = ("BUFFER_API_KEY_ES", "BUFFER_API_KEY_ES2")  # cuentas de Buffer solo de España
 CLAVES_EAU = ("BUFFER_API_KEY_EAU", "BUFFER_API_KEY_EAU2")  # cuentas de Buffer solo de EAU (@AIStocksUAE)
+CANAL_EAU = "https://www.youtube.com/@AIStocksUAE"
 SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU"}
 
 
@@ -208,6 +222,9 @@ def verificar():
     tt = elegir_canal("tiktok", lista)
     print(f"OK: TikTok como {tt.get('displayName') or tt['name']}." if tt
           else "TikTok todavía no está conectado en Buffer.")
+    fb = elegir_canal("facebook", lista)
+    if fb:
+        print(f"OK: Facebook como {fb.get('displayName') or fb['name']}.")
     ig = elegir_canal("instagram", lista)
     print(f"OK: Instagram como {ig.get('displayName') or ig['name']}." if ig
           else "Instagram de Chile todavía no está conectado en Buffer.")
@@ -264,7 +281,8 @@ def texto_final(carpeta, archivo="post-x.txt"):
         if not res:
             return None, "esperando que el video se suba a YouTube"
         texto = texto.replace("{youtube}", f"https://youtu.be/{res['videoId']}")
-    con_video = re.search(r"youtu\.?be", texto)
+    # solo enlaces a un video (no el del canal, p. ej. youtube.com/@AIStocksUAE)
+    con_video = re.search(r"youtu\.be/|youtube\.com/(watch|shorts/)", texto)
     privado = bool(con_video and (not res or res.get("privacy") != "public"))
     return texto, privado
 
@@ -289,7 +307,7 @@ def programar(base):
     if modo not in MODOS:
         sys.exit(f"BUFFER_MODO debe ser ahora, cola o borrador, no {modo!r}.")
     pendientes = sorted((d, red) for d in os.listdir(base) for red, r in REDES.items()
-                        if os.path.isfile(os.path.join(base, d, r["archivo"]))
+                        if archivo_post(os.path.join(base, d), r, pais)
                         and not os.path.exists(os.path.join(base, d, r["registro"])))
     if not pendientes:
         print("No hay posts pendientes.")
@@ -313,13 +331,17 @@ def programar(base):
         if canal is None:
             print(f"{slug}: {r['nombre']} no está conectado en Buffer; queda pendiente.")
             continue
-        texto, privado = texto_final(carpeta, r["archivo"])
+        texto, privado = texto_final(carpeta, archivo_post(carpeta, r, pais))
         if texto is None:
             print(f"{slug} ({r['nombre']}): {privado}; queda pendiente.")
             continue
         if pais == "chile" and r.get("video") and "aiacciones.cl" not in texto:
             # todo post de Chile lleva la web (en TikTok/Instagram no es clicable, pero se ve)
             texto += "\n\nFicha completa en aiacciones.cl"
+        if pais == "eau" and CANAL_EAU.lower() not in texto.lower():
+            # todo post de EAU lleva el enlace al canal de YouTube (Daniel, 29-oct-2026)
+            con_rotulo = texto + f"\n\nقناتنا على يوتيوب: {CANAL_EAU}"
+            texto = con_rotulo if r["largo"](con_rotulo) <= r["limite"] else texto + f"\n{CANAL_EAU}"
         largo = r["largo"](texto)
         if largo > r["limite"]:
             fallas.append(f"{slug}: {largo} caracteres para {r['nombre']} (máximo {r['limite']})")
@@ -330,9 +352,10 @@ def programar(base):
         extra = ", saveToDraft: true" if modo_post == "borrador" else ""
         imagen = r.get("imagen") and enlace_video(carpeta, "imagen.png")
         if imagen:
-            # Instagram con imagen.png: post en el feed en vez de Reel
-            extra += (", assets: [{image: {url: %s}}], metadata: {instagram: {type: post, shouldShareToFeed: true}}"
-                      % json.dumps(imagen))
+            # imagen.png: en X, LinkedIn y Facebook va adjunta; en Instagram es post en el feed en vez de Reel
+            extra += ", assets: [{image: {url: %s}}]" % json.dumps(imagen)
+            if red == "instagram":
+                extra += ", metadata: {instagram: {type: post, shouldShareToFeed: true}}"
         elif r.get("video"):
             url = enlace_video(carpeta)
             if not url:
