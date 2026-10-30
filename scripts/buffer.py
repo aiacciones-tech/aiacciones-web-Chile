@@ -109,7 +109,8 @@ REDES = {
     # Página de Facebook (hoy solo EAU): post-facebook.txt o, en cola-eau/, el mismo texto de post-linkedin.txt
     "facebook": {"nombre": "Facebook", "archivo": "post-facebook.txt", "registro": "buffer-facebook.json",
                  "servicios": ("facebook",), "variable": "BUFFER_CANAL_FACEBOOK", "limite": 63206,
-                 "largo": len, "obligatoria": False, "alterno_eau": "post-linkedin.txt", "imagen": True},
+                 "largo": len, "obligatoria": False, "alterno_eau": "post-linkedin.txt", "imagen": True,
+                 "metadata": "{facebook: {type: post}}"},
 }
 
 
@@ -362,7 +363,7 @@ def programar(base):
                 fallas.append(f"{slug} ({r['nombre']}): falta video.mp4 en el commit de la carpeta")
                 continue
             extra += ", assets: [{video: {url: %s, metadata: {thumbnailOffset: 1000}}}]" % json.dumps(url)
-        if r.get("metadata") and not imagen:
+        if r.get("metadata") and not (imagen and red == "instagram"):
             extra += ", metadata: " + r["metadata"]
         modo_api = MODOS[modo_post]
         manana = pais == "chile" and modo_post == "ahora" and hora_manana()
