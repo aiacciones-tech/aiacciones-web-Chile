@@ -1,6 +1,34 @@
 {
- "actualizado": "2026-10-30T05:38Z",
+ "actualizado": "2026-10-30T06:20Z",
  "items": [
+  {
+   "id": "84320985-e7dd-4abd-a06a-f8d76b5ee450",
+   "tipo": "OIR",
+   "fecha": "2026-10-30 06:52",
+   "entidad": "CAIXABANK, S.A.",
+   "nif": "A08663619",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "CaixaBank remite información sobre el Dividendo de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b84320985-e7dd-4abd-a06a-f8d76b5ee450%7d",
+   "ticker": "CABK",
+   "temas": [
+    "dividendos"
+   ]
+  },
+  {
+   "id": "adb1c3fd-a462-4c69-892e-1a1f9c81a009",
+   "tipo": "OIR",
+   "fecha": "2026-10-30 06:46",
+   "entidad": "CAIXABANK, S.A.",
+   "nif": "A08663619",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "CaixaBank remite presentación del video webcast sobre los Resultados del tercer trimestre de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7badb1c3fd-a462-4c69-892e-1a1f9c81a009%7d",
+   "ticker": "CABK",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "bde57492-3201-4c35-9a40-9abb08a18a34",
    "tipo": "OIR",
