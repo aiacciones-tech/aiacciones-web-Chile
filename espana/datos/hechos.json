@@ -1,6 +1,34 @@
 {
- "actualizado": "2026-10-29T17:27Z",
+ "actualizado": "2026-10-30T05:38Z",
  "items": [
+  {
+   "id": "bde57492-3201-4c35-9a40-9abb08a18a34",
+   "tipo": "OIR",
+   "fecha": "2026-10-30 06:28",
+   "entidad": "CAIXABANK, S.A.",
+   "nif": "A08663619",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "CaixaBank remite Nota de Prensa sobre los Resultados del tercer trimestre de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bbde57492-3201-4c35-9a40-9abb08a18a34%7d",
+   "ticker": "CABK",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "86dd09d5-a83d-412d-8327-668d47d5026a",
+   "tipo": "OIR",
+   "fecha": "2026-10-30 06:23",
+   "entidad": "CAIXABANK, S.A.",
+   "nif": "A08663619",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "CaixaBank remite información sobre los Resultados del tercer trimestre de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b86dd09d5-a83d-412d-8327-668d47d5026a%7d",
+   "ticker": "CABK",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "963a4ef5-87c1-4e52-9d35-9265219f4258",
    "tipo": "OIR",
