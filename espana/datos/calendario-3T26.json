@@ -133,27 +133,27 @@
    "empresa": "Acerinox",
    "ticker": "ACX",
    "sector": "Acero",
-   "estado": "Confirmada",
-   "nota": "Antes de la apertura; presentación a las 11:00. 3T25: 31-oct-2025.",
-   "fuente": "Acerinox, agenda del inversor (oct-2026)"
+   "estado": "Publicada",
+   "nota": "Publicó el 30-oct-2026 a las 08:02 (CNMV).",
+   "fuente": "CNMV, 30-oct-2026"
   },
   {
    "fecha": "2026-10-30",
    "empresa": "CaixaBank",
    "ticker": "CABK",
    "sector": "Banca",
-   "estado": "Confirmada",
-   "nota": "",
-   "fuente": "DailyForex, oct-2026"
+   "estado": "Publicada",
+   "nota": "Publicó el 30-oct-2026 a las 06:23 (CNMV).",
+   "fuente": "CNMV, 30-oct-2026"
   },
   {
    "fecha": "2026-10-30",
    "empresa": "Unicaja",
    "ticker": "UNI",
    "sector": "Banca",
-   "estado": "Estimada",
-   "nota": "3T25: 31-oct-2025.",
-   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+   "estado": "Publicada",
+   "nota": "Publicó el 30-oct-2026 por la mañana.",
+   "fuente": "Unicaja, resultados 9M 2026 (30-oct-2026); Europa Press"
   },
   {
    "fecha": "2026-11-03",

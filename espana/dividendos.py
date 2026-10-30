@@ -26,6 +26,14 @@ DIVIDENDOS = [
      "ex": "2026-12-24", "ex_calc": True, "pago": "2026-12-29",
      "fuente": "Banco Sabadell, nota de resultados 9M 2026 (29-oct-2026)",
      "url": "https://comunicacion.grupbancsabadell.com/sala-de-prensa/banco-sabadell-gana-1376m-hasta-septiembre-confirma-su-solido-dinamismo-comercial-y-anuncia-un-dividendo-a-cuenta-en-efectivo-de-325m/"},
+    {"ticker": "CABK", "importe": "0,1844 €", "tipo": "A cuenta 2026, en efectivo (1.281 M€, 40% del beneficio del 1S)",
+     "ex": "2026-11-04", "ex_calc": True, "pago": "2026-11-06",
+     "fuente": "CaixaBank, información sobre el dividendo de 2026 (CNMV, 30-oct-2026); Europa Press",
+     "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b84320985-e7dd-4abd-a06a-f8d76b5ee450%7d"},
+    {"ticker": "UNI", "importe": "0,0642 €", "tipo": "Segundo a cuenta 2026, en efectivo",
+     "ex": "2026-12-15", "ex_calc": True, "pago": "2026-12-17",
+     "fuente": "Unicaja, resultados 9M 2026 (30-oct-2026); Europa Press",
+     "url": "https://forbes.es/empresas/1059191/unicaja-gana-543-millones-hasta-septiembre-un-81-mas-y-anuncia-un-dividendo-de-642-centimos-por-accion/"},
     {"ticker": "REP", "importe": "0,56 €", "tipo": "En efectivo: 0,53 € de reservas + 0,03 € a cuenta de 2026",
      "ex": None, "pago": None, "pago_txt": "enero de 2027",
      "fuente": "Repsol, nota de prensa de resultados del 3T 2026 (CNMV, 29-oct-2026)",
@@ -53,7 +61,6 @@ DIVIDENDOS = [
 
 # Dividendos que la empresa ha anunciado sin importe o sin fecha todavía (texto de su última comunicación).
 POR_ANUNCIAR = [
-    ("CABK", "Dividendo a cuenta en noviembre del 30-40% del beneficio del primer semestre (961-1.281 M€).", "CaixaBank, resultados del 1S 2026"),
     ("IAG", "El dividendo a cuenta de 2026 se decidirá con los resultados del tercer trimestre.", "IAG, resultados del 1S 2026"),
     ("ENG", "Dividendo de 1 € por acción con cargo a 2026; falta el calendario del pago a cuenta.", "Enagás, resultados de 9M 2026"),
     ("FER", "Nuevo dividendo flexible (scrip) de 600 M€: el importe por acción se conocerá el 3-nov, ex-dividendo el 5-nov y pago desde el 10-dic de 2026.", "Ferrovial, resultados de 9M 2026"),

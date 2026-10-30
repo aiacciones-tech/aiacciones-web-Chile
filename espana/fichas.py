@@ -363,96 +363,117 @@ FICHAS = [
      'sector': 'Banca',
      'lede': 'Banco español minorista, con fuerte presencia en Andalucía, Castilla y León, Castilla-La Mancha, Asturias y Extremadura. En un banco, los '
              'ingresos son el margen bruto y la calidad del balance se mide con la morosidad y el capital.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio neto de 361 M€ (+7,1%). El 2T (201 M€) superó al consenso en un 10% según Investing.com, sobre todo por menores deterioros '
-                '(41 M€ frente a 55 esperados); el margen de intereses quedó en línea y las comisiones, un 2% por debajo. Unicaja mejoró su guía de '
-                'beneficio para 2026.',
-     'precio': '3,242 €',
-     'precio_fecha': '13-oct-2026',
-     'multiplos': [('PER 12 meses', '12,9x'),
-                   ('PER forward', '11,8x'),
-                   ('Precio / valor en libros', '1,23x'),
-                   ('Rentab. dividendo', '5,3%'),
-                   ('Capitalización', '~8.330 M€')],
-     'multiplos_nota': 'Con precio de 3,242 € al 13-oct-2026 (stockanalysis.com). A cierre de 2022, 2023, 2024 y 2025 el PER era 10,1x, 9,1x, 5,7x y '
-                       '11,4x, y el precio / valor en libros 0,42x, 0,36x, 0,48x y 1,01x. En un banco no se usan EV/EBITDA ni flujo de caja libre.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Margen de intereses', '755', '+1,7%'),
-               ('Comisiones netas', '269', '+2,6%'),
-               ('Margen bruto', '1.085', '+2,5%'),
-               ('Costes (calculado)', '494', '~+5%'),
-               ('Margen de explotación', '590', '~+0,5%'),
-               ('Beneficio neto', '361', '+7,1%'),
-               ('BPA (calculado)', '~0,14 €', 'n. d.')],
-     'kpi': 'Eficiencia 45,6% (44,6% en 1S 2025); ROTE 10,0% (12% ajustado por exceso de capital). Morosidad 1,8% (−38 pb), cobertura de dudosos 82,7%, '
-            'coste del riesgo 19 pb. CET1 15,8% (exceso de 2.201 M€ sobre requerimientos). Crédito sano 49.941 M€ (+3,7%); depósitos de clientes 76.264 '
-            'M€ (+4,1%); recursos fuera de balance +12,7%; nueva producción hipotecaria +39,5%. Comisiones no bancarias: 53% del total (+11,8%).',
-     'guia': 'Guía 2026, revisada el 31-jul-2026 (según Investing.com): beneficio creciendo a un dígito medio y margen de intereses a un dígito '
-             'bajo-medio (antes: superar 2025), coste del riesgo de 20-25 pb (antes: menos de 30 pb), comisiones a un dígito bajo y costes a un dígito '
-             'medio. Remuneración del 95% del beneficio en efectivo; dividendo a cuenta de 8,44 céntimos por acción (+28%), pagado el 24-sep-2026.',
-     'positivos': ['El 2T superó al consenso en un 10% y la guía de beneficio sube.',
-                   'Morosidad del 1,8% (−38 pb) y coste del riesgo de 19 pb.',
-                   'Nueva producción hipotecaria +39,5% y dividendo a cuenta +28%.'],
-     'riesgos': ['La sorpresa del 2T vino de menos deterioros; las comisiones quedaron un 2% por debajo de lo esperado.',
-                 'Los costes suben cerca de un 5% y el margen bruto un 2,5%: la eficiencia empeora al 45,6%.',
-                 'El coste de los depósitos sube tras la subida de tipos del BCE y no hay guía para 2027.'],
-     'videos': [('QmTUeCVBUk4', 'Unicaja resultados 1S 2026: beneficio +7,1%; el 2T supera al consenso un 10% | Guía al alza'),
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 543 M€ hasta septiembre (+8,1%). El 3T (182 M€, +10,3%) superó los 171 M€ del sondeo de Reuters; el margen de '
+                'intereses del trimestre subió un 3,5% frente al 2T, pero las comisiones quedaron un 4% por debajo de lo esperado (Investing.com). '
+                'Unicaja anuncia un segundo dividendo a cuenta de 6,42 céntimos por acción (pago el 17-dic-2026).',
+     'precio': '3,170 €',
+     'precio_fecha': '30-oct-2026, 10:45',
+     'multiplos': [('PER 12 meses', '~12,1x'),
+                   ('PER forward', '11,4x'),
+                   ('Precio / valor en libros', '~1,21x'),
+                   ('Rentab. dividendo', '~5,4%'),
+                   ('Capitalización', '~8.150 M€')],
+     'multiplos_nota': 'Con precio de 3,170 € el 30-oct-2026 a las 10:45 (stockanalysis.com, retrasado); múltiplos calculados con datos de '
+                       'stockanalysis.com (2.570 M de acciones, valor contable 2,63 € por acción, dividendo 0,17 €; PER forward 11,4x de stockanalysis) '
+                       'y el beneficio neto de 12 meses a septiembre (672 M€). A cierre de 2022, 2023, 2024 y 2025 el PER era 10,1x, 9,1x, 5,7x y 11,4x, '
+                       'y el precio / valor en libros 0,42x, 0,36x, 0,48x y 1,01x. En un banco no se usan EV/EBITDA ni flujo de caja libre.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Margen de intereses', '1.151', '+3,0%'),
+               ('Comisiones netas', '397', '+1,3%'),
+               ('Margen bruto', '1.629', '+3,5%'),
+               ('Costes (gastos + amortizaciones)', '746', '~+4,9%'),
+               ('Margen antes de provisiones (calculado)', '~883', '~+2,3%'),
+               ('Deterioro de activos financieros', '72', '−21,6%'),
+               ('Beneficio neto', '543', '+8,1%'),
+               ('Beneficio neto 3T', '182', '+10,3%'),
+               ('BPA (calculado)', '~0,21 €', '+8%')],
+     'kpi': 'Eficiencia 45,8%; ROTE 10,3% (+0,5 pp; 12,2% ajustado por exceso de capital). Morosidad 1,8% (−41 pb), cobertura 84,6% (74% hace un año), '
+            'coste del riesgo 19 pb. CET1 fully loaded 15,4% (15,7% en junio; 15,5% phased-in, 6,9 pp sobre lo exigido). Crédito sano 49.371 M€ (+4,9%; '
+            'empresas +11,4%, consumo +11,9%); nueva producción hipotecaria 2.851 M€ (+30,5%); recursos minoristas 97.616 M€ (+4,6%); depósitos de '
+            'clientes 75.395 M€ (+1,1%); fondos de inversión 19.226 M€ (+13,9%). Margen de intereses del 3T: 395 M€ (+3,5% t/t; +5,5% a/a).',
+     'guia': 'Guía 2026 mantenida (Reuters e Investing.com, 30-oct-2026): beneficio creciendo a un dígito medio, margen de intereses a un dígito '
+             'bajo-medio, comisiones a un dígito bajo, costes a un dígito medio y coste del riesgo de 20-25 pb. Reparto del 95% del beneficio de 2026 '
+             '(70% en 2025): segundo dividendo a cuenta de 6,42 céntimos por acción, pago el 17-dic-2026 (último día con derecho, 14-dic); con el de '
+             'septiembre (8,44 céntimos), suman 14,86 céntimos y unos 382 M€. Complementario en abril de 2027, sujeto a la junta.',
+     'positivos': ['El beneficio del 3T (182 M€, +10,3%) supera los 171 M€ del sondeo de Reuters.',
+                   'El margen de intereses del 3T sube un 3,5% frente al 2T, hasta 395 M€.',
+                   'Morosidad del 1,8% (−41 pb), cobertura del 84,6% y nuevo dividendo a cuenta de 6,42 céntimos.'],
+     'riesgos': ['Las comisiones crecen un 1,3% y en el 3T quedaron un 4% por debajo de lo esperado.',
+                 'Los costes suben cerca de un 4,9%, más que el margen bruto (+3,5%).',
+                 'El CET1 fully loaded baja del 15,7% al 15,4% en el trimestre y el coste de los depósitos sube 6 pb.'],
+     'videos': [('1N5EZR1nkwo', 'Unicaja resultados 3T 2026: beneficio +8,1%; el 3T supera al consenso | Dividendo de 6,42 céntimos'),
+                ('eu2etzVT3G0', 'Unicaja 3T 2026 en 60 segundos (Short)'),
+                ('QmTUeCVBUk4', 'Unicaja resultados 1S 2026: beneficio +7,1%; el 2T supera al consenso un 10% | Guía al alza'),
                 ('zoldZTxXavE', 'Unicaja 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-30',
-     'fuentes': 'Unicaja, nota de resultados del primer semestre 2026 (31-jul-2026, CNMV y unicajabanco.com); Investing.com (consenso y guía, '
-                '31-jul-2026); XTB y Bolsamania (desglose trimestral y de costes, 31-jul-2026); stockanalysis.com (precio y múltiplos, 13-oct-2026).',
-     'fuentes_corto': 'Investing.com, XTB, Bolsamania y stockanalysis.com',
-     'elaborado': '13-oct-2026, 19:00'},
+     'proximo': '2027-02-02',
+     'proximo_estimado': True,
+     'fuentes': 'Unicaja, resultados de los nueve meses de 2026 (30-oct-2026, CNMV y unicajabanco.com), según Europa Press (Forbes España, Capital, '
+                '101TV) y El Conciso; Reuters e Investing.com (consenso y guía, 30-oct-2026); Bolsamanía (30-oct-2026); Unicaja, resultados 1S26 '
+                '(31-jul-2026); stockanalysis.com (precio y múltiplos, 30-oct-2026).',
+     'fuentes_corto': 'Europa Press, El Conciso, Reuters, Investing.com y stockanalysis.com',
+     'elaborado': '30-oct-2026, 11:30'},
     {'id': 'caixabank',
      'nombre': 'CaixaBank',
      'ticker': 'CABK',
      'sector': 'Banca',
      'lede': 'Mayor banco por clientes en España, con BPI en Portugal y un negocio relevante de seguros y gestión patrimonial. En un banco, los ingresos '
              'son el margen bruto y la calidad del balance se mide con la morosidad y el capital.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio neto de 3.203 M€ (+8,5%), su mayor beneficio semestral. El 2T (1.631 M€) superó en un 4,6% el consenso que publica el banco '
-                '(XTB; calculado), aunque la acción cayó un 7,1% el día de los resultados con la guía 2026 sin cambios.',
-     'precio': '12,36 €',
-     'precio_fecha': '6-oct-2026',
-     'multiplos': [('PER 12 meses', '14,7x'),
-                   ('PER forward', '12,1x'),
-                   ('Precio / valor en libros', '~2,2x'),
-                   ('Rentab. dividendo', '4,1%'),
-                   ('Capitalización', '~85.040 M€')],
-     'multiplos_nota': 'Con precio de 12,36 € al 6-oct-2026 (stockanalysis.com); precio / valor en libros calculado con un valor contable de 5,56 € por '
-                       'acción (jun-2026). A cierre de 2022, 2023, 2024 y 2025 el PER era 10,1x, 6,1x, 6,8x y 13,0x, y el precio / valor en libros '
-                       '0,86x, 0,77x, 1,02x y 1,90x. En un banco no se usan EV/EBITDA ni flujo de caja libre.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Margen de intereses', '5.390', '+2,0%'),
-               ('Ingresos por servicios', '2.772', '+7,4%'),
-               ('Margen bruto', '8.338', '+3,7%'),
-               ('Gastos', '3.320', '+4,5%'),
-               ('Margen de explotación', '5.018', '+3,2%'),
-               ('Deterioros', '480', '+28,8%'),
-               ('Beneficio neto', '3.203', '+8,5%'),
-               ('BPA 12 meses', '0,88 €', '+6%')],
-     'kpi': 'Eficiencia 39,6% (38,6%); ROE 15,4%; ROTE 18,0%. Morosidad 1,78% (2,07% en dic-2025), cobertura 81%, coste del riesgo 24 pb. CET1 12,54%, '
-            'tras la recompra. Crédito sano 398.835 M€ (+8,2%; empresas +10,6%, consumo +11,5%); recursos de clientes 771.943 M€ (+7,6%). Gestión '
-            'patrimonial 1.091 M€ (+12,1%), seguros de protección 658 M€ (+14,5%), comisiones bancarias 1.023 M€ (−1,1%). BPI aportó 218 M€.',
-     'guia': 'Guía 2026 reiterada (Renta 4 y Capitalbolsa): margen de intereses de más de 11.000 M€ (en el 2S necesita más de 5.610 M€, calculado), '
-             'ingresos por servicios creciendo a un dígito medio, coste del riesgo por debajo de 25 pb y ROTE por encima del 18%. Dividendo a cuenta en '
-             'noviembre del 30-40% del beneficio del semestre (961-1.281 M€) y recompra de 500 M€ en curso.',
-     'positivos': ['Crédito sano +8,2%, con empresas +10,6% y consumo +11,5%.',
-                   'Gestión patrimonial +12,1% y seguros de protección +14,5%.',
-                   'Morosidad en mínimo histórico (1,78%) con cobertura del 81%.'],
-     'riesgos': ['Los gastos suben un 4,5% y el margen bruto un 3,7%: la eficiencia empeora al 39,6%.',
-                 'Las comisiones bancarias caen un 1,1% (las recurrentes, un 2,4%).',
-                 'Los deterioros suben un 28,8% y el margen de intereses debe acelerar en el 2S para cumplir la guía.'],
-     'videos': [('GXbYecKtopE', 'CaixaBank resultados 1S 2026: beneficio récord de 3.203 M€ (+8,5%), sobre el consenso | ROTE 18%'),
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 4.962 M€ hasta septiembre (+12,9%). En el 3T ganó 1.759 M€ (+21,7% a/a y +7,8% frente al 2T), por encima de los 1.630 '
+                'M€ que esperaban los analistas consultados por Reuters. El banco eleva su objetivo de ROTE para 2026 a alrededor del 19% y pagará el 6 '
+                'de noviembre un dividendo a cuenta de 0,1844 € por acción.',
+     'precio': '11,18 €',
+     'precio_fecha': '30-oct-2026, 10:45',
+     'multiplos': [('PER 12 meses', '~12,0x'),
+                   ('PER forward', '~11,2x'),
+                   ('Precio / valor en libros', '~2,0x'),
+                   ('Rentab. dividendo', '~4,5%'),
+                   ('Capitalización', '~77.700 M€')],
+     'multiplos_nota': 'Con un precio de 11,18 € el 30-oct-2026 a las 10:45 (Bolsamanía; cierre del 29-oct: 11,165 €). Todos los múltiplos son cálculos '
+                       'propios: 6.947 M de acciones (1.281 M€ / 0,1844 €), beneficio de 12 meses a septiembre de 6.456 M€ (5.891 - 4.397 + 4.962), PER '
+                       'forward de stockanalysis.com (11,62x a 11,62 €) ajustado al precio, valor en libros de 5,56 € por acción (jun-2026) y dividendo '
+                       'con cargo a 2025 de 0,50 €. A cierre de 2022, 2023, 2024 y 2025 el PER era 10,1x, 6,1x, 6,8x y 13,0x, y el precio / valor en '
+                       'libros 0,86x, 0,77x, 1,02x y 1,90x. En un banco no se usan EV/EBITDA ni flujo de caja libre.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Margen de intereses', '8.186', '+2,9%'),
+               ('Ingresos por servicios', '4.182', '+7,7%'),
+               ('Margen bruto', '12.656', '+4,4%'),
+               ('Gastos', '5.004', '+4,3%'),
+               ('Margen de explotación', '7.653', '+4,6%'),
+               ('Deterioros', '746', '+20,9%'),
+               ('Beneficio neto', '4.962', '+12,9%'),
+               ('Beneficio neto 3T', '1.759', '+21,7% (+7,8% frente al 2T)'),
+               ('BPA 12 meses (calculado)', '~0,93 €', '')],
+     'kpi': 'Eficiencia 39,4% (39,2% un año antes); ROTE 18,8% (18,0% en junio; 17,8% un año antes). Morosidad 1,76% (2,07% en dic-2025), cobertura 82%, '
+            'coste del riesgo 24 pb. CET1 12,5%, tras restar 20 pb por la recompra. Crédito sano 397.469 M€ (+8%; empresas +11,4%, consumo +9,8%, '
+            'vivienda +7%); recursos de clientes 760.353 M€ (+5,6%); activos bajo gestión 216.333 M€ (+10,6%). Gestión patrimonial 1.669 M€ (+12,5%), '
+            'seguros de protección 1.000 M€ (+14,5%), comisiones bancarias 1.513 M€ (−0,9%). BPI aportó 339 M€. En el 3T, margen de intereses 2.796 M€ '
+            '(+2,5% t/t, algo por debajo del consenso) y margen de clientes 2,87% (−2 pb).',
+     'guia': 'Guía 2026: objetivo de ROTE elevado a alrededor del 19% (antes, más del 18%); margen de intereses de más de 11.000 M€ (en el 4T necesita '
+             'más de 2.814 M€, calculado) y coste del riesgo por debajo de 25 pb, reiterados (Reuters). Remuneración: dividendo a cuenta de 2026 de '
+             '0,1844 € brutos por acción (1.281 M€, el 40% del beneficio del 1S), ex-dividendo el 4-nov (según Finect) y pago el 6-nov-2026; payout del '
+             '50-60% con un complementario en abril de 2027; recompra de 500 M€ ampliada hasta el 30-ene-2027.',
+     'positivos': ['El beneficio del 3T sube un 21,7% y supera en un 7,9% lo esperado por los analistas (Reuters; calculado).',
+                   'Gestión patrimonial (+12,5%) y seguros de protección (+14,5%) siguen creciendo a doble dígito.',
+                   'Morosidad en el 1,76% con cobertura del 82%, y objetivo de ROTE elevado a ~19%.'],
+     'riesgos': ['El margen de intereses del 3T queda algo por debajo del consenso y el margen de clientes se estrecha 2 pb.',
+                 'Los deterioros suben un 20,9% en el acumulado y las comisiones bancarias bajan un 0,9%.',
+                 'Parte de la mejora del beneficio viene de menores impuestos y efectos contables (XTB, El Conciso).'],
+     'videos': [('syFa1LFf91g', 'CaixaBank resultados 3T 2026: beneficio 4.962 M€ (+12,9%), sobre el consenso | ROTE objetivo ~19%'),
+                ('_61uM943I_g', 'CaixaBank 3T 2026 en 60 segundos (Short)'),
+                ('GXbYecKtopE', 'CaixaBank resultados 1S 2026: beneficio récord de 3.203 M€ (+8,5%), sobre el consenso | ROTE 18%'),
                 ('2UERn_MLK6k', 'CaixaBank 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-30',
-     'fuentes': 'CaixaBank, nota de prensa y presentación de resultados del primer semestre 2026 (29-jul-2026, CNMV y caixabank.com); XTB (consenso, '
-                '29-jul-2026); Renta 4 (guía, 30-abr-2026) y Capitalbolsa (guía reiterada, 29-jul-2026); stockanalysis.com (precio y múltiplos, '
-                '6-oct-2026).',
-     'fuentes_corto': 'XTB, Renta 4, Capitalbolsa y stockanalysis.com',
-     'elaborado': '13-oct-2026, 19:00'},
+     'proximo': '2027-01-29',
+     'proximo_estimado': True,
+     'fuentes': 'CaixaBank, resultados de los nueve meses de 2026 (comunicado a la CNMV, 30-oct-2026), vía Europa Press, Finanzas.com, El Conciso, '
+                'Bolsamanía y Capital Madrid; Reuters (MarketScreener, Business Recorder), Investing.com, Finimize y XTB (consenso y guía, 30-oct-2026); '
+                'Finect (fechas del dividendo); Bolsamanía (cotización, 30-oct-2026); CaixaBank, resultados 1S26 (29-jul-2026) y 2025 (30-ene-2026); '
+                'stockanalysis.com (múltiplos, oct-2026).',
+     'fuentes_corto': 'Europa Press, Reuters, Finanzas.com, Bolsamanía y stockanalysis.com',
+     'elaborado': '30-oct-2026, 11:30'},
     {'id': 'repsol',
      'nombre': 'Repsol',
      'ticker': 'REP',
@@ -1109,54 +1130,58 @@ FICHAS = [
      'lede': 'Fabricante de acero inoxidable (Acerinox Europa en Algeciras, North American Stainless en EE. UU. y Columbus en Sudáfrica) y de aleaciones '
              'de alto rendimiento (VDM Metals y Haynes International). En el acero pesan las toneladas, el precio frente al coste de las materias primas '
              '(níquel, chatarra), la energía y el capital circulante.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio neto de 77 M€, frente a pérdidas de 18 M€ en el 1S 2025; EBITDA de 271 M€ (+27%). El EBITDA del 2T (176 M€, +85% frente al '
-                '1T) superó en un 16,6% el consenso elaborado por la compañía (calculado). Flujo de caja libre de -105 M€ y deuda neta de 1.361 M€.',
-     'precio': '16,64 €',
-     'precio_fecha': '23-oct-2026, 15:30',
-     'multiplos': [('PER 12 meses', '~75x'),
-                   ('EV/EBITDA', '~13,4x'),
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 162 M€ hasta septiembre, frente a 7 M€ en los nueve meses de 2025 (x23); EBITDA de 470 M€ (+46%). El EBITDA del 3T, '
+                '199 M€ (+13% frente al 2T), superó en un 8% la previsión de los analistas recogida por Investing.com (184 M€). Pero el circulante '
+                'absorbió 152 M€ en el trimestre, la deuda neta subió a 1.535 M€ y Acerinox espera un 4T con menos EBITDA.',
+     'precio': '16,65 €',
+     'precio_fecha': '30-oct-2026, 10:45',
+     'multiplos': [('PER 12 meses', '~36x'),
+                   ('EV/EBITDA', '~11,3x'),
                    ('Precio / valor contable', '~1,94x'),
-                   ('Rentab. dividendo', '~3,73%'),
+                   ('Rentab. dividendo', '~3,72%'),
                    ('Capitalización', '~4.150 M€')],
-     'multiplos_nota': 'Con precio de 16,64 € en el BME el 23-oct-2026 a las 15:30 (Bolsarama); múltiplos calculados con 249,3 M de acciones y datos de '
-                       '12 meses a junio de Acerinox (beneficio neto 55 M€, EBITDA 411 M€, deuda neta 1.361 M€, patrimonio neto 2.140 M€, dividendo 0,62 '
-                       '€). El PER es muy alto porque el beneficio de 12 meses incluye las pérdidas del 2S 2025. A cierre de 2023, 2024 y 2025 '
-                       '(stockanalysis.com, datos S&P Global) el PER era 11,6x, 10,5x y - (pérdidas), el EV/EBITDA 4,3x, 7,8x y 12,8x, la rentabilidad '
-                       'por dividendo 6,66%, 7,13% y 5,07%, y el precio / valor contable 1,08x, 0,92x y 1,50x.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ventas', '2.966', '-3,0%'),
-               ('EBITDA', '271', '+26,6%'),
-               ('EBITDA 2T', '176', '+57% (calculado)'),
-               ('EBITDA acero inoxidable', '236', '+66% (calculado)'),
-               ('EBITDA aleaciones de alto rendimiento', '35', '-51% (calculado)'),
-               ('Beneficio neto', '77', '-18 en 1S 2025'),
-               ('Flujo de caja libre', '-105', '+91 en 1S 2025')],
-     'kpi': 'Margen EBITDA 9,1% (7,0%; calculado); 2T 11%. Producción de acería 1,03 Mt (+2%); 2T 540.000 t (+8%); laminación en frío del inoxidable '
-            '615.000 t (-1%). Ventas: inoxidable 2.246 M€ (+3,2%), aleaciones 729 M€ (-18,4%). EE. UU. (North American Stainless) es el motor, con su '
-            'ampliación de 244 M$ terminada; en Europa las importaciones caen un 31% y Acerinox Europa logra EBITDA positivo en junio; VDM Metals lastra '
-            'las aleaciones. Flujo operativo 43 M€ tras 146 M€ de circulante; inversiones 148 M€. Deuda neta 1.361 M€ (+172 M€ desde diciembre, '
-            'calculado), 2,5x EBITDA anualizado.',
-     'guia': 'Acerinox espera un EBITDA del 3T "ligeramente superior" al del 2T (176 M€), pese a la estacionalidad y las paradas de mantenimiento, con '
-             'EE. UU. fuerte y Europa mejorando con las nuevas cuotas (-55%) y el arancel del 50% fuera de cuota desde julio. La bajada del níquel '
-             'afectará a los precios; prevé reducir el circulante. Beyond Excellence: 112 M€ acumulados (93% del objetivo de 120 M€). Dividendo con '
-             'cargo a 2025: 0,62 € por acción (0,31 € en enero y 0,31 € el 17 de julio).',
-     'positivos': ['Vuelve a beneficios y el EBITDA del 2T supera en un 16,6% el consenso de la compañía (calculado).',
-                   'El acero inoxidable dispara su EBITDA (+66%), con EE. UU. como motor.',
-                   'Europa mejora con menos importaciones y la empresa espera un 3T algo mejor que el 2T.'],
-     'riesgos': ['El flujo de caja libre es negativo (-105 M€) y la deuda neta sube hasta 1.361 M€.',
-                 'Las aleaciones de alto rendimiento ganan la mitad que hace un año, con VDM por debajo de lo esperado.',
-                 'La bajada del níquel y un consumo de planos en EE. UU. un 8% menor en el semestre.'],
-     'videos': [('IuxWhvplVuQ', 'Acerinox resultados 1S 2026: vuelve a beneficios con 77 M€ | EBITDA 2T 176 M€, +85% trimestral'),
+     'multiplos_nota': 'Con precio de 16,65 € en el BME el 30-oct-2026 a las 10:45 (Bolsarama); múltiplos calculados con 249,3 M de acciones y datos de '
+                       '12 meses a septiembre de Acerinox (beneficio neto 115 M€, EBITDA 503 M€, deuda neta 1.535 M€, patrimonio neto de junio 2.140 M€, '
+                       'dividendo 0,62 €). El PER sigue alto porque el beneficio de 12 meses incluye la pérdida del 4T 2025. A cierre de 2023, 2024 y '
+                       '2025 (stockanalysis.com, datos S&P Global) el PER era 11,6x, 10,5x y - (pérdidas), el EV/EBITDA 4,3x, 7,8x y 12,8x, la '
+                       'rentabilidad por dividendo 6,66%, 7,13% y 5,07%, y el precio / valor contable 1,08x, 0,92x y 1,50x.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ventas', '4.556', '+1,9% (calculado)'),
+               ('EBITDA', '470', '+46,4% (calculado)'),
+               ('EBITDA 3T', '199', '+84% a/a; +13% vs 2T (calculado)'),
+               ('EBITDA acero inoxidable', '411', '+88% (calculado)'),
+               ('EBITDA aleaciones de alto rendimiento', '59', '-43% (calculado)'),
+               ('Beneficio neto', '162', '7 en 9M 2025'),
+               ('Deuda financiera neta (sep-26)', '1.535', '+174 vs junio')],
+     'kpi': 'Margen EBITDA 10,3% (7,2%; calculado); 3T 12,5% (7,6%). Resultado de explotación 315 M€ (+79%). Beneficio del 3T 85 M€ (25 M€ en el 3T '
+            '2025); BPA de 9M ~0,65 € (calculado). Producción de acería 1,53 Mt (+4,9%); 3T 501.000 t (+11% a/a, -7% frente al 2T). Ventas: inoxidable '
+            '3.479 M€ (+9,9%), aleaciones 1.096 M€ (-17,1%). Inoxidable con margen EBITDA del 14% en el 3T. EE. UU.: demanda +6% frente al 2T e '
+            'importaciones -18%; Europa: demanda -22% frente al 2T e importaciones -42%. Oriente Medio restó 16 M€ en el 3T (24 M€ en 9M) por energía y '
+            'transporte. Flujo operativo del 3T -16 M€ tras 152 M€ de circulante; inversiones 80 M€ y flujo libre -96 M€ (Investing.com; calculado); '
+            'dividendo pagado en el 3T 77 M€. Deuda neta 1.535 M€ (+346 M€ desde diciembre, calculado), ~3,1x el EBITDA de 12 meses (calculado).',
+     'guia': 'Acerinox espera un EBITDA del 4T inferior al del 3T (199 M€), con menos volumen de inoxidable en EE. UU. por la estacionalidad de fin de '
+             'año. En aleaciones, aeroespacial, turbinas y nuclear estables y señales de recuperación en petróleo, gas y química. Prevé reducir el '
+             'circulante y bajar la deuda neta a final de año. Dividendo: 0,62 € por acción con cargo a 2025 (0,31 € en enero y 0,31 € el 17 de julio de '
+             '2026); no se ha anunciado un dividendo nuevo con los resultados del 3T.',
+     'positivos': ['El beneficio se multiplica por 23 y el EBITDA del 3T supera en un 8% la previsión de los analistas (Investing.com; calculado).',
+                   'El acero inoxidable sigue mejorando: EBITDA +88% en nueve meses y margen del 14% en el 3T, con EE. UU. como motor.',
+                   'En Europa, las importaciones de producto plano caen un 42%.'],
+     'riesgos': ['El flujo de caja libre vuelve a ser negativo y la deuda neta sube hasta 1.535 M€.',
+                 'La empresa espera un 4T con menos EBITDA y la demanda europea sigue débil (-22% frente al 2T).',
+                 'Las aleaciones de alto rendimiento ganan un 43% menos y el conflicto de Oriente Medio encarece la energía y el transporte.'],
+     'videos': [('kIKdmLvcuKM', 'Acerinox resultados 3T 2026: gana 162 M€ (x23) | EBITDA 3T 199 M€, un 8% sobre lo previsto'),
+                ('LqVHIUNhiC8', 'Acerinox 3T 2026 en 60 segundos (Short)'),
+                ('IuxWhvplVuQ', 'Acerinox resultados 1S 2026: vuelve a beneficios con 77 M€ | EBITDA 2T 176 M€, +85% trimestral'),
                 ('9rnH1TvvMdw', 'Acerinox 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-10-30',
-     'proximo_estimado': False,
-     'fuentes': 'Acerinox, nota de prensa, informe de gestión intermedio y presentación de resultados 1S 2026 (24-jul-2026), resultados 2025 '
-                '(27-feb-2026) y agenda del inversor; Investing.com (consenso, 24-jul-2026); XTB y Bolsamanía (24-jul-2026); conferencia con analistas '
-                '(GuruFocus/Yahoo Finance); Bolsarama (precio, 23-oct-2026); stockanalysis.com (múltiplos históricos).',
-     'fuentes_corto': 'Investing.com, XTB, Bolsamanía, Bolsarama y stockanalysis.com',
-     'elaborado': '23-oct-2026, 15:50'},
+     'proximo': '2027-02-26',
+     'proximo_estimado': True,
+     'fuentes': 'Acerinox, presentación de resultados del 3T 2026 (30-oct-2026), informe de gestión intermedio 1S 2026 (24-jul-2026), resultados 2025 '
+                '(27-feb-2026) y nota del 3T 2025; Europa Press (vía Forbes, Demócrata y OKDiario) y El Conciso (30-oct-2026); Investing.com (previsión '
+                'de los analistas, flujo de caja e inversiones, 30-oct-2026); Bolsarama (precio, 30-oct-2026); stockanalysis.com (múltiplos históricos).',
+     'fuentes_corto': 'Europa Press, El Conciso, Investing.com, Bolsarama y stockanalysis.com',
+     'elaborado': '30-oct-2026, 11:30'},
     {'id': 'grifols',
      'nombre': 'Grifols',
      'ticker': 'GRF',
@@ -1218,4 +1243,59 @@ FICHAS = [
                 'históricos).',
      'fuentes_corto': 'Investing.com, Europa Press, Bolsamanía, Benzinga España, Bolsarama y stockanalysis.com',
      'elaborado': '23-oct-2026, 17:00'},
+    {'id': 'indra',
+     'nombre': 'Indra',
+     'ticker': 'IDR',
+     'sector': 'Defensa / tecnología',
+     'lede': 'Grupo español de defensa, espacio, tráfico aéreo, movilidad y tecnologías de la información (Minsait). Desde 2025-2026 ha integrado TESS '
+             'Defence, Hispasat e Hisdesat, y gestiona buena parte de los Programas Especiales de Modernización del Ministerio de Defensa.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 355 M€ hasta septiembre (+22,0%) y de 136 M€ en el tercer trimestre (+77,8%), con ingresos de 4.645 M€ (+28,6%; +16% '
+                'orgánico) y una cartera récord de 22.165 M€ (+133%). La caja neta de 1.192 M€ y el flujo libre de 1.692 M€ se deben a los anticipos de '
+                'los programas de Defensa; sin ellos, flujo libre de 70 M€.',
+     'precio': '64,45 €',
+     'precio_fecha': '30-oct-2026',
+     'multiplos': [('PER 12 meses', '~22,7x'),
+                   ('EV/EBITDA', '~11,7x'),
+                   ('EV/EBITDA sin anticipos PEM', '~13,5x'),
+                   ('Precio / valor contable', '~5,41x'),
+                   ('Rentab. dividendo', '~0,47%'),
+                   ('Capitalización', '~11.295 M€')],
+     'multiplos_nota': 'Calculados con 64,45 € (30-oct-2026 por la mañana, Investing.com; cierre del 29-oct: 65,40 €, Bolsamanía) y datos de 12 meses de '
+                       'Indra (2025 + 9M26 - 9M25: BPA 2,84 €, EBITDA 888 M€); EV con caja neta de 1.192 M€ y 298 M€ de minoritarios. A cierre de 2023, '
+                       '2024 y 2025 (stockanalysis.com) el PER era 12,0x, 10,9x y 19,6x, el EV/EBITDA 7,2x, 6,5x y 15,5x (con el EBITDA de '
+                       'stockanalysis), el precio / valor contable 2,17x, 2,29x y 4,28x, y la rentabilidad por dividendo 1,82%, 1,48% y 0,62%.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos', '4.645', '+28,6%'),
+               ('EBITDA', '657', '+62,1%'),
+               ('EBIT', '454', '+42,4%'),
+               ('Beneficio neto', '355', '+22,0%'),
+               ('Beneficio neto 3T', '136', '+77,8%'),
+               ('Cartera (sep-26)', '22.165', '+133,0%'),
+               ('Caja neta (sep-26)', '1.192', '')],
+     'kpi': 'Margen EBITDA 14,2% (11,2% en 9M 2025) y margen EBIT 9,8% (8,8%). Defensa: ingresos 1.408 M€ (+100,3%), margen EBITDA 19,5% (21,3%); '
+            'Espacio 286 M€ (+372,5%, margen EBITDA 40,0%); Tráfico Aéreo 446 M€ (+22,8%); Movilidad 264 M€ (+2,3%); Minsait 2.240 M€ (+0,6%; -3,5% en '
+            'el 3T por la venta de BPO). Contratación 8.085 M€ (+81,7%; 3T +139%, con 1.926 M€ de IRIS²). BPA básico 2,02 € (1,66 €). Flujo libre 1.692 '
+            'M€ (70 M€ sin anticipos PEM); anticipos PEM en balance 2.118 M€; caja neta 1.192 M€ (deuda neta de 583 M€ en diciembre; 431 M€ sin '
+            'anticipos).',
+     'guia': 'Guía 2026 confirmada: ingresos en moneda local de más de 7.000 M€, EBIT reportado de más de 700 M€ (sin la plusvalía de BPO) y flujo libre '
+             'de más de 375 M€ (sin anticipos PEM, factoring constante). Para cumplirla, el 4T necesita unos 2.355 M€ de ingresos (+28%) y más de 253 M€ '
+             'de EBIT (calculado). Nuevo plan estratégico en noviembre de 2026. Sin nuevo dividendo en el informe; el último, 0,30 € por acción con '
+             'cargo a 2025, se pagó en julio de 2026.',
+     'positivos': ['El beneficio neto se acelera: +2,1% en el 1S, +22,0% en 9M y +77,8% en el tercer trimestre.',
+                   'Cartera récord de 22.165 M€ (+133%), con IRIS² (1.926 M€) y los programas de Defensa.',
+                   'Defensa duplica sus ingresos y el margen EBITDA del grupo sube 3 puntos, al 14,2%.'],
+     'riesgos': ['Minsait apenas crece (+0,6%) y sus ingresos cayeron un 3,5% en el tercer trimestre.',
+                 'La caja neta y el flujo libre dependen de los anticipos de Defensa (2.118 M€): sin ellos, flujo libre de 70 M€ y deuda neta de 431 M€.',
+                 'Para cumplir la guía, el 4T debe crecer en torno a un 28% (calculado); la contratación de Defensa cayó un 32,7% en el 3T.'],
+     'videos': [('ceFqDgJDeNE', 'Indra resultados 3T 2026: beneficio +22%, cartera récord de 22.165 M€ | Defensa duplica ingresos'),
+                ('2JZxYyCrZA4', 'Indra 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-25',
+     'proximo_estimado': True,
+     'fuentes': 'Indra Group, resultados de los nueve primeros meses de 2026 (CNMV e indragroup.com, 29-oct-2026), del primer semestre (23-jul-2026) y '
+                'de 2025 (25-feb-2026); Europa Press, Crónica Global, XTB e Investing.com (29-oct-2026); Bolsamanía (precios); stockanalysis.com '
+                '(múltiplos históricos, oct-2026).',
+     'fuentes_corto': 'Indra Group (CNMV), Europa Press, XTB, Bolsamanía y stockanalysis.com',
+     'elaborado': '30-oct-2026, 11:30'},
 ]
