@@ -1,6 +1,48 @@
 {
- "actualizado": "2026-10-30T06:20Z",
+ "actualizado": "2026-10-30T07:28Z",
  "items": [
+  {
+   "id": "a891c73e-9b9f-4c9c-99ef-46981c62ccb0",
+   "tipo": "OIR",
+   "fecha": "2026-10-30 08:09",
+   "entidad": "ACERINOX, S.A.",
+   "nif": "A",
+   "categoria": "Otra información relevante",
+   "titulo": "Presentación Resultados Tercer Trimestre 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7ba891c73e-9b9f-4c9c-99ef-46981c62ccb0%7d",
+   "ticker": "ACX",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "9a8f6ce1-f3f5-49e7-9fa3-1d5c923b1740",
+   "tipo": "OIR",
+   "fecha": "2026-10-30 08:05",
+   "entidad": "ACERINOX, S.A.",
+   "nif": "A",
+   "categoria": "Otra información relevante",
+   "titulo": "Nota de prensa Resultados Tercer Trimestre 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b9a8f6ce1-f3f5-49e7-9fa3-1d5c923b1740%7d",
+   "ticker": "ACX",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "67e8b0f7-fa9a-453e-bef4-24dc21577446",
+   "tipo": "OIR",
+   "fecha": "2026-10-30 08:02",
+   "entidad": "ACERINOX, S.A.",
+   "nif": "A",
+   "categoria": "Otra información relevante",
+   "titulo": "Resultados Tercer Trimestre 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b67e8b0f7-fa9a-453e-bef4-24dc21577446%7d",
+   "ticker": "ACX",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "84320985-e7dd-4abd-a06a-f8d76b5ee450",
    "tipo": "OIR",
