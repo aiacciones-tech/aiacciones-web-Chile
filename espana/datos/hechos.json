@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-30T07:28Z",
+ "actualizado": "2026-10-30T08:28Z",
  "items": [
+  {
+   "id": "efa83076-ebf1-447f-a9ac-d5bde2ff60ce",
+   "tipo": "OIR",
+   "fecha": "2026-10-30 08:46",
+   "entidad": "CAIXABANK, S.A.",
+   "nif": "A08663619",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información relativa a la ejecución de su Programa de recompra de acciones propias.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7befa83076-ebf1-447f-a9ac-d5bde2ff60ce%7d",
+   "ticker": "CABK",
+   "temas": []
+  },
   {
    "id": "a891c73e-9b9f-4c9c-99ef-46981c62ccb0",
    "tipo": "OIR",
