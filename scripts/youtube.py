@@ -53,6 +53,16 @@ def verificar():
           f"{c['statistics'].get('videoCount', '?')} videos.")
 
 
+CANALES = {"cola-qa": "https://www.youtube.com/@QatarAIStocks"}  # todo video de Qatar enlaza a su canal (Daniel, 31-oct-2026)
+
+
+def con_canal(texto, base):
+    canal = CANALES.get(os.path.basename(os.path.normpath(base)))
+    if not canal or canal.lower() in texto.lower():
+        return texto
+    return texto.rstrip() + f"\n\nاشترك في القناة: {canal}"
+
+
 def enlazar(texto, base):
     """Reemplaza {video:<slug>} por la URL guardada en cola/<slug>/resultado.json (o la borra si no existe)."""
     def url(m):
@@ -93,7 +103,8 @@ def miniaturas(base):
 
 def subir_uno(t, carpeta):
     meta = json.load(open(os.path.join(carpeta, "meta.json"), encoding="utf-8"))
-    meta["description"] = enlazar(meta.get("description", ""), os.path.dirname(carpeta))
+    meta["description"] = con_canal(enlazar(meta.get("description", ""), os.path.dirname(carpeta)),
+                                    os.path.dirname(carpeta))
     video = os.path.join(carpeta, "video.mp4")
     cuerpo = json.dumps({
         "snippet": {
