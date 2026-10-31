@@ -1,0 +1,44 @@
+# Sube al canal @QatarAIStocks (Qatar, en árabe) los videos y Shorts que la rutina de Qatar deja en cola-qa/ de la rama youtube-cola.
+# Mismo script que Chile y España (scripts/youtube.py), con otra carpeta y otro token.
+# Credenciales: Settings > Secrets and variables > Actions. YT_QA_REFRESH_TOKEN es obligatorio;
+# YT_QA_CLIENT_ID / YT_QA_CLIENT_SECRET solo si se creó un cliente OAuth aparte (si no, usa los de Chile).
+# "Run workflow" con modo=verificar solo prueba las credenciales y muestra el canal.
+name: Subir videos a YouTube (Qatar)
+concurrency: youtube-qatar
+on:
+  push:
+    branches: [youtube-cola]
+    paths: ['cola-qa/**/meta.json']
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "verificar (solo credenciales) o subir (desde la rama youtube-cola)"
+        default: verificar
+permissions:
+  contents: write
+jobs:
+  subir:
+    runs-on: ubuntu-latest
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_QA_CLIENT_ID || secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_QA_CLIENT_SECRET || secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_QA_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ (github.event_name == 'push' || inputs.modo == 'subir') && 'youtube-cola' || github.ref }}
+      - name: Revisar que el token de Qatar esté cargado
+        run: test -n "$YT_REFRESH_TOKEN" || { echo "Falta el secreto YT_QA_REFRESH_TOKEN"; exit 1; }
+      - name: Verificar credenciales
+        if: github.event_name == 'workflow_dispatch' && inputs.modo != 'subir'
+        run: python3 scripts/youtube.py verificar
+      - name: Subir videos pendientes
+        if: github.event_name == 'push' || inputs.modo == 'subir'
+        run: python3 scripts/youtube.py subir cola-qa
+      - name: Guardar IDs de YouTube
+        if: github.event_name == 'push' || inputs.modo == 'subir'
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add cola-qa
+          git diff --cached --quiet || { git commit -m "IDs de YouTube Qatar $(date -u +%F)" && for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done; exit 1; }

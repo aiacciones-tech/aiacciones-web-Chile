@@ -39,6 +39,9 @@ propia cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_EAU, que el workflow pasa c
 existe, una segunda (BUFFER_ACCESS_TOKEN_EAU2, para pasar del límite de 3 canales del plan gratis); todos
 los canales de esas cuentas son de EAU. Todo post de EAU lleva el enlace al canal de YouTube (se agrega si falta) y nunca usa los de Chile ni España. Si hay más de un canal de una red,
 variable BUFFER_CANAL_EAU, BUFFER_CANAL_LINKEDIN_EAU, BUFFER_CANAL_TIKTOK_EAU o BUFFER_CANAL_INSTAGRAM_EAU.
+Qatar (canal @QatarAIStocks, posts en árabe): igual que EAU, `programar cola-qa` con su propia cuenta de Buffer
+(secreto BUFFER_ACCESS_TOKEN_QA, que el workflow pasa como BUFFER_API_KEY_QA, y opcional BUFFER_ACCESS_TOKEN_QA2);
+variables con sufijo _QA (BUFFER_CANAL_QA, BUFFER_CANAL_LINKEDIN_QA, ...).
 Solo usa la biblioteca estándar de Python.
 """
 import json, os, re, subprocess, sys, unicodedata, urllib.request
@@ -115,14 +118,19 @@ REDES = {
 
 def archivo_post(carpeta, r, pais):
     """El archivo de texto del post de esa red en la carpeta, o None si no hay."""
-    for nombre in (r["archivo"], r.get("alterno_eau") if pais == "eau" else None):
+    for nombre in (r["archivo"], r.get("alterno_eau") if pais in ("eau", "qatar") else None):
         if nombre and os.path.isfile(os.path.join(carpeta, nombre)):
             return nombre
     return None
 CLAVES_ES = ("BUFFER_API_KEY_ES", "BUFFER_API_KEY_ES2")  # cuentas de Buffer solo de España
 CLAVES_EAU = ("BUFFER_API_KEY_EAU", "BUFFER_API_KEY_EAU2")  # cuentas de Buffer solo de EAU (@AIStocksUAE)
 CANAL_EAU = "https://www.youtube.com/@AIStocksUAE"
-SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU"}
+CLAVES_QA = ("BUFFER_API_KEY_QA", "BUFFER_API_KEY_QA2")  # cuentas de Buffer solo de Qatar (@QatarAIStocks)
+CANAL_QA = "https://www.youtube.com/@QatarAIStocks"
+SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA"}
+# países con cuentas de Buffer propias (todos sus canales son de ese país) y su canal de YouTube
+PROPIOS = {"eau": (CLAVES_EAU, CANAL_EAU, "BUFFER_ACCESS_TOKEN_EAU", "EAU"),
+           "qatar": (CLAVES_QA, CANAL_QA, "BUFFER_ACCESS_TOKEN_QA", "Qatar")}
 
 
 def sin_tildes(t):
@@ -163,8 +171,8 @@ def elegir_canal(red, lista, pais="chile"):
         elegido = [c for c in lista if c["service"].lower() in r["servicios"]]
         if pais == "espana":
             elegido = [c for c in elegido if es_de(c, "espana")]
-        elif pais == "eau":
-            elegido = [c for c in elegido if c.get("clave") in CLAVES_EAU]
+        elif pais in PROPIOS:
+            elegido = [c for c in elegido if c.get("clave") in PROPIOS[pais][0]]
         elif len(elegido) > 1:
             # Chile: si también está conectado el canal de España, ese no cuenta
             elegido = [c for c in elegido if not es_de(c, "espana")] or elegido
@@ -189,11 +197,11 @@ def canales_espana():
     return propios
 
 
-def canales_eau():
-    """Canales de las cuentas de Buffer de EAU (BUFFER_API_KEY_EAU y BUFFER_API_KEY_EAU2), o [] si no hay clave."""
+def canales_eau(pais="eau"):
+    """Canales de las cuentas propias de ese país (EAU: BUFFER_API_KEY_EAU y _EAU2; Qatar: _QA y _QA2), o [] si no hay clave."""
     global CLAVE
     lista = []
-    for clave in CLAVES_EAU:
+    for clave in PROPIOS[pais][0]:
         if os.environ.get(clave):
             CLAVE = clave
             lista += canales()
@@ -239,16 +247,17 @@ def verificar():
     for red in REDES:
         es = elegir_canal(red, lista, "espana")
         print(f"España, {REDES[red]['nombre']}: " + (es.get("displayName") or es["name"] if es else "sin canal"))
-    if os.environ.get(CLAVES_EAU[0]):
-        print("EAU usa sus propias cuentas de Buffer (BUFFER_ACCESS_TOKEN_EAU y _EAU2):")
-        lista = canales_eau()
+    for pais, (claves, _, secreto, rotulo) in PROPIOS.items():
+        if not os.environ.get(claves[0]):
+            print(f"{rotulo}: falta el secreto {secreto}.")
+            continue
+        print(f"{rotulo} usa sus propias cuentas de Buffer ({secreto} y {secreto}2):")
+        lista = canales_eau(pais)
         for c in lista:
             print(f"- {c['service']}: {c.get('displayName') or c['name']} [{c['id']}] en {c['org']} ({c['clave']})")
         for red in REDES:
-            ea = elegir_canal(red, lista, "eau")
-            print(f"EAU, {REDES[red]['nombre']}: " + (ea.get("displayName") or ea["name"] if ea else "sin canal"))
-    else:
-        print("EAU: falta el secreto BUFFER_ACCESS_TOKEN_EAU.")
+            ea = elegir_canal(red, lista, pais)
+            print(f"{rotulo}, {REDES[red]['nombre']}: " + (ea.get("displayName") or ea["name"] if ea else "sin canal"))
 
 
 CHILE = ZoneInfo("America/Santiago")
@@ -302,7 +311,7 @@ def enlace_video(carpeta, nombre="video.mp4"):
 
 def programar(base):
     global CLAVE
-    pais = {"cola-es": "espana", "cola-eau": "eau"}.get(os.path.basename(os.path.normpath(base)), "chile")
+    pais = {"cola-es": "espana", "cola-eau": "eau", "cola-qa": "qatar"}.get(os.path.basename(os.path.normpath(base)), "chile")
     modo = (os.environ.get("BUFFER_MODO") or "ahora").strip().lower()
     if modo not in MODOS:
         sys.exit(f"BUFFER_MODO debe ser ahora, cola o borrador, no {modo!r}.")
@@ -312,12 +321,12 @@ def programar(base):
     if not pendientes:
         print("No hay posts pendientes.")
         return
-    if pais == "eau" and not os.environ.get(CLAVES_EAU[0]):
-        sys.exit("Falta el secreto BUFFER_ACCESS_TOKEN_EAU para mandar cola-eau/.")
+    if pais in PROPIOS and not os.environ.get(PROPIOS[pais][0][0]):
+        sys.exit(f"Falta el secreto {PROPIOS[pais][2]} para mandar {base}.")
     # España: canales de su propia cuenta de Buffer (si hay clave) y, como respaldo, los de la cuenta de Chile
-    # EAU: solo los de su cuenta
-    lista = canales_eau() if pais == "eau" else canales_chile()
-    if pais != "eau":
+    # EAU y Qatar: solo los de su cuenta
+    lista = canales_eau(pais) if pais in PROPIOS else canales_chile()
+    if pais not in PROPIOS:
         usar_clave(pais)
     if pais == "espana" and CLAVE != "BUFFER_API_KEY":
         propios = canales_espana()
@@ -338,10 +347,11 @@ def programar(base):
         if pais == "chile" and r.get("video") and "aiacciones.cl" not in texto:
             # todo post de Chile lleva la web (en TikTok/Instagram no es clicable, pero se ve)
             texto += "\n\nFicha completa en aiacciones.cl"
-        if pais == "eau" and CANAL_EAU.lower() not in texto.lower():
-            # todo post de EAU lleva el enlace al canal de YouTube (Daniel, 29-oct-2026)
-            con_rotulo = texto + f"\n\nقناتنا على يوتيوب: {CANAL_EAU}"
-            texto = con_rotulo if r["largo"](con_rotulo) <= r["limite"] else texto + f"\n{CANAL_EAU}"
+        canal_yt = PROPIOS[pais][1] if pais in PROPIOS else None
+        if canal_yt and canal_yt.lower() not in texto.lower():
+            # todo post de EAU (y Qatar) lleva el enlace al canal de YouTube (Daniel, 29-oct-2026)
+            con_rotulo = texto + f"\n\nقناتنا على يوتيوب: {canal_yt}"
+            texto = con_rotulo if r["largo"](con_rotulo) <= r["limite"] else texto + f"\n{canal_yt}"
         largo = r["largo"](texto)
         if largo > r["limite"]:
             fallas.append(f"{slug}: {largo} caracteres para {r['nombre']} (máximo {r['limite']})")
