@@ -1,7 +1,8 @@
 # Manda a Buffer los posts que la rutina nocturna deja en cola/<slug>/post-x.txt (X) y post-linkedin.txt (LinkedIn),
 # y el Short de cola/<slug>-short/ con su post-tiktok.txt (TikTok) y post-instagram.txt (Instagram: Reel con video.mp4 o post con imagen.png)
 # de la rama youtube-cola, y los de España en cola-es/ (solo a canales de España, p. ej. la página de LinkedIn),
-# y los de EAU (@AIStocksUAE, en árabe) en cola-eau/, con su propia cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_EAU).
+# y los de EAU (@AIStocksUAE, en árabe) en cola-eau/, con su propia cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_EAU),
+# y los de Qatar (@QatarAIStocks, en árabe) en cola-qa/, con su propia cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_QA).
 # Clave: Settings > Secrets and variables > Actions > Secrets (BUFFER_API_KEY).
 # Modo: variable BUFFER_MODO = ahora (por defecto, publica en X al tiro), cola (próximo horario de Buffer) o borrador.
 # Los posts salen al tiro, también de noche (Daniel, 28-oct-2026); variable BUFFER_HORA = HH:MM para guardar los de noche hasta esa hora.
@@ -12,9 +13,9 @@ concurrency: youtube-cola
 on:
   push:
     branches: [youtube-cola]
-    paths: ['cola/**/post-x.txt', 'cola/**/post-linkedin.txt', 'cola/**/post-tiktok.txt', 'cola/**/post-instagram.txt', 'cola-es/**/post-x.txt', 'cola-es/**/post-linkedin.txt', 'cola-es/**/post-tiktok.txt', 'cola-es/**/post-instagram.txt', 'cola-eau/**/post-x.txt', 'cola-eau/**/post-linkedin.txt', 'cola-eau/**/post-tiktok.txt', 'cola-eau/**/post-instagram.txt']
+    paths: ['cola/**/post-x.txt', 'cola/**/post-linkedin.txt', 'cola/**/post-tiktok.txt', 'cola/**/post-instagram.txt', 'cola-es/**/post-x.txt', 'cola-es/**/post-linkedin.txt', 'cola-es/**/post-tiktok.txt', 'cola-es/**/post-instagram.txt', 'cola-eau/**/post-x.txt', 'cola-eau/**/post-linkedin.txt', 'cola-eau/**/post-tiktok.txt', 'cola-eau/**/post-instagram.txt', 'cola-qa/**/post-x.txt', 'cola-qa/**/post-linkedin.txt', 'cola-qa/**/post-tiktok.txt', 'cola-qa/**/post-instagram.txt', 'cola-qa/**/post-facebook.txt']
   workflow_run:
-    workflows: ["Subir videos a YouTube", "Subir videos a YouTube (España)", "Subir videos a YouTube (EAU)"]
+    workflows: ["Subir videos a YouTube", "Subir videos a YouTube (España)", "Subir videos a YouTube (EAU)", "Subir videos a YouTube (Qatar)"]
     types: [completed]
   workflow_dispatch:
     inputs:
@@ -32,6 +33,8 @@ jobs:
       BUFFER_API_KEY_ES2: ${{ secrets.BUFFER_API_KEY_ES2 }}
       BUFFER_API_KEY_EAU: ${{ secrets.BUFFER_ACCESS_TOKEN_EAU }}
       BUFFER_API_KEY_EAU2: ${{ secrets.BUFFER_ACCESS_TOKEN_EAU2 }}
+      BUFFER_API_KEY_QA: ${{ secrets.BUFFER_ACCESS_TOKEN_QA }}
+      BUFFER_API_KEY_QA2: ${{ secrets.BUFFER_ACCESS_TOKEN_QA2 }}
       BUFFER_MODO: ${{ vars.BUFFER_MODO }}
       BUFFER_HORA: ${{ vars.BUFFER_HORA }}
       BUFFER_CANAL: ${{ vars.BUFFER_CANAL }}
@@ -43,6 +46,11 @@ jobs:
       BUFFER_CANAL_LINKEDIN_EAU: ${{ vars.BUFFER_CANAL_LINKEDIN_EAU }}
       BUFFER_CANAL_TIKTOK_EAU: ${{ vars.BUFFER_CANAL_TIKTOK_EAU }}
       BUFFER_CANAL_INSTAGRAM_EAU: ${{ vars.BUFFER_CANAL_INSTAGRAM_EAU }}
+      BUFFER_CANAL_QA: ${{ vars.BUFFER_CANAL_QA }}
+      BUFFER_CANAL_LINKEDIN_QA: ${{ vars.BUFFER_CANAL_LINKEDIN_QA }}
+      BUFFER_CANAL_TIKTOK_QA: ${{ vars.BUFFER_CANAL_TIKTOK_QA }}
+      BUFFER_CANAL_INSTAGRAM_QA: ${{ vars.BUFFER_CANAL_INSTAGRAM_QA }}
+      BUFFER_CANAL_FACEBOOK_QA: ${{ vars.BUFFER_CANAL_FACEBOOK_QA }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -56,12 +64,13 @@ jobs:
           python3 scripts/buffer.py programar cola
           if [ -d cola-es ]; then python3 scripts/buffer.py programar cola-es; fi
           if [ -d cola-eau ]; then python3 scripts/buffer.py programar cola-eau; fi
+          if [ -d cola-qa ]; then python3 scripts/buffer.py programar cola-qa; fi
       - name: Guardar IDs de Buffer
         if: always() && (github.event_name != 'workflow_dispatch' || inputs.modo == 'programar')
         run: |
           git config user.name "aiacciones-bot"
           git config user.email "aiacciones-bot@users.noreply.github.com"
-          git add cola $( [ -d cola-es ] && echo cola-es ) $( [ -d cola-eau ] && echo cola-eau )
+          git add cola $( [ -d cola-es ] && echo cola-es ) $( [ -d cola-eau ] && echo cola-eau ) $( [ -d cola-qa ] && echo cola-qa )
           git diff --cached --quiet && exit 0
           git commit -m "IDs de Buffer $(date -u +%F)"
           for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
