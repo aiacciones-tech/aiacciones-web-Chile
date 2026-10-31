@@ -101,7 +101,7 @@ def subir_uno(t, carpeta):
             "description": meta.get("description", "")[:5000],
             "tags": meta.get("tags", []),
             "categoryId": str(meta.get("categoryId", "27")),
-            "defaultLanguage": "es", "defaultAudioLanguage": "es",
+            "defaultLanguage": meta.get("language", "es"), "defaultAudioLanguage": meta.get("language", "es"),
         },
         "status": {"privacyStatus": meta.get("privacy", "private"),
                    "selfDeclaredMadeForKids": False},
