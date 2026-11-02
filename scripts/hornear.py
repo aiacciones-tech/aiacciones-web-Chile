@@ -213,7 +213,9 @@ def hechos_ficha(s, fid):
 
 
 def con_ficha(i):
-    return os.path.isfile(os.path.join(DIR, "acciones", i["id"], "index.html"))
+    # Las fichas retiradas quedan como redirección con noindex: no cuentan como ficha.
+    p = os.path.join(DIR, "acciones", i["id"], "index.html")
+    return os.path.isfile(p) and 'content="noindex' not in open(p, encoding="utf-8").read(600)
 
 
 def hechos_home(s):
