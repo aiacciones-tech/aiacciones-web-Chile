@@ -1,6 +1,70 @@
 {
- "actualizado": "2026-11-02T15:53Z",
+ "actualizado": "2026-11-02T16:56Z",
  "items": [
+  {
+   "id": "5397dfca-6204-46d2-9bb9-341a0096259f",
+   "tipo": "OIR",
+   "fecha": "2026-11-02 17:54",
+   "entidad": "BANCO DE SABADELL, S.A.",
+   "nif": "A08000143",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Banco Sabadell informa de las operaciones sobre acciones propias que ha realizado entre los días 26 de octubre de 2026 y 30 de octubre de 2026 bajo el programa de recompra.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b5397dfca-6204-46d2-9bb9-341a0096259f%7d",
+   "ticker": "SAB",
+   "temas": []
+  },
+  {
+   "id": "c3ab73a8-ef53-410b-9ca8-3a5bfac532d4",
+   "tipo": "OIR",
+   "fecha": "2026-11-02 17:50",
+   "entidad": "CELLNEX TELECOM, S.A.",
+   "nif": "A64907306",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información relativa a la ejecución de su programa de recompra de acciones propias",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bc3ab73a8-ef53-410b-9ca8-3a5bfac532d4%7d",
+   "ticker": "CLNX",
+   "temas": []
+  },
+  {
+   "id": "6223304c-d44f-4417-927a-0537fccdb834",
+   "tipo": "OIR",
+   "fecha": "2026-11-02 17:47",
+   "entidad": "ENDESA, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Programa de recompra de acciones Sexto Tramo",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b6223304c-d44f-4417-927a-0537fccdb834%7d",
+   "ticker": "ELE",
+   "temas": []
+  },
+  {
+   "id": "ab16ad57-3704-483e-bd79-e6715ce93e61",
+   "tipo": "OIR",
+   "fecha": "2026-11-02 17:46",
+   "entidad": "GRIFOLS, S.A.",
+   "nif": "A58389123",
+   "categoria": "Otra información relevante",
+   "titulo": "Grifols anuncia el pago de un dividendo a cuenta del ejercicio 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bab16ad57-3704-483e-bd79-e6715ce93e61%7d",
+   "ticker": "GRF",
+   "temas": [
+    "dividendos"
+   ]
+  },
+  {
+   "id": "68d04362-73d9-489b-ab33-735ae60945cd",
+   "tipo": "OIR",
+   "fecha": "2026-11-02 17:35",
+   "entidad": "GRIFOLS, S.A.",
+   "nif": "A58389123",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Grifols anuncia la información financiera del tercer trimestre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b68d04362-73d9-489b-ab33-735ae60945cd%7d",
+   "ticker": "GRF",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "50302fe8-ae58-4cc4-8214-3e2c1e3c41e4",
    "tipo": "OIR",
