@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-10-30T08:28Z",
+ "actualizado": "2026-11-02T08:35Z",
  "items": [
+  {
+   "id": "2865347a-b13f-4c36-95b2-8992608c6d9f",
+   "tipo": "OIR",
+   "fecha": "2026-11-02 08:16",
+   "entidad": "MERLIN PROPERTIES, SOCIMI, S.A.",
+   "nif": "A86977790",
+   "categoria": "Otra información relevante",
+   "titulo": "MERLIN - Financiación sostenible corporativa",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b2865347a-b13f-4c36-95b2-8992608c6d9f%7d",
+   "ticker": "MRL",
+   "temas": []
+  },
   {
    "id": "efa83076-ebf1-447f-a9ac-d5bde2ff60ce",
    "tipo": "OIR",
