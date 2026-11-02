@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-11-02T09:38Z",
+ "actualizado": "2026-11-02T15:53Z",
  "items": [
+  {
+   "id": "50302fe8-ae58-4cc4-8214-3e2c1e3c41e4",
+   "tipo": "OIR",
+   "fecha": "2026-11-02 16:26",
+   "entidad": "INTERNATIONAL CONSOLIDATED AIRLINES GROUP, S.A.",
+   "nif": "A85845535",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información sobre las operaciones efectuadas al amparo de su programa de recompra de acciones",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b50302fe8-ae58-4cc4-8214-3e2c1e3c41e4%7d",
+   "ticker": "IAG",
+   "temas": []
+  },
   {
    "id": "eadcd444-42fc-4fe9-994b-90738c6c75c8",
    "tipo": "OIR",
