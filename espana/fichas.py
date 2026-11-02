@@ -1189,60 +1189,66 @@ FICHAS = [
      'lede': 'Compañía de medicamentos derivados del plasma (Biopharma: inmunoglobulinas, albúmina, alfa-1 y proteínas especiales), con más de 400 '
              'centros de donación, además de diagnóstico (Diagnostic) y Bio Supplies. En el plasma pesan el coste de obtener la materia prima, la mezcla '
              'de productos, el dólar y la deuda. El IBEX 35 incluye la clase A (GRF); la clase B (GRF.P) no tiene voto y cobra un dividendo preferente.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio neto de 227 M€ (+28,7%; +13,6% sin extraordinarios). Ingresos de 3.574 M€ (-2,8% en euros; +2,6% a tipo constante), con las '
-                'inmunoglobulinas +12,8%. Flujo de caja libre antes de M&A de 91 M€ (-12 M€ en el 1S 2025) y apalancamiento de 4,2x según Grifols; guía '
-                '2026 confirmada.',
-     'precio': '10,055 € (clase A)',
-     'precio_fecha': '23-oct-2026, 16:25',
-     'multiplos': [('PER 12 meses', '~15,1x'),
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 390 M€ hasta septiembre (+28,4%; +20,2% sin extraordinarios). Ingresos de 5.614 M€ (+4,6% a tipo constante) y un 3T '
+                'que acelera: ventas +8,4% a tipo constante y margen EBITDA ajustado del 26,4%. El apalancamiento baja a 3,98x (4,2x hace un año), la '
+                'guía 2026 se confirma y Grifols pagará el 4 de diciembre un dividendo a cuenta de 0,15 € por acción.',
+     'precio': '11,000 € (clase A)',
+     'precio_fecha': '2-nov-2026, 17:35 (cierre)',
+     'multiplos': [('PER 12 meses', '~15,3x'),
                    ('EV/EBITDA', '~10,4x'),
-                   ('Precio / valor contable', '~0,74x'),
-                   ('Rentab. dividendo', '~2,31%'),
-                   ('Capitalización', '~5.920 M€')],
-     'multiplos_nota': 'Con precio de la clase A de 10,055 € en el BME el 23-oct-2026 a las 16:25 (Bolsarama); múltiplos calculados con datos de 12 '
-                       'meses a junio: BPA 0,66 € (beneficio de 452 M€ y 680,6 M de acciones), dividendo con cargo a 2025 de 0,2324 € por acción A (0,15 '
-                       '+ 0,0824). Capitalización con 422,4 M de acciones A y 258,2 M de acciones B a 6,48 € (stockanalysis, 1-oct-2026). Valor empresa '
-                       '~17.200 M€ con la deuda neta de balance (8.843 M€) y los minoritarios (2.434 M€); EBITDA de 12 meses de stockanalysis (1.650 '
-                       'M€); con el EBITDA ajustado de Grifols (1.803 M€), ~9,5x. Precio / valor contable sobre el patrimonio neto total (7.980 M€). A '
-                       'cierre de 2023, 2024 y 2025 (stockanalysis.com, datos S&P Global) el PER era 219,8x, 36,2x y 16,3x, el EV/EBITDA 19,1x, 10,8x y '
-                       '10,5x, el precio / valor contable 1,23x, 0,66x y 0,86x, y la rentabilidad por dividendo 0%, 0% y 2,19% (calculada).',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ingresos', '3.574', '-2,8% (+2,6% a tipo constante)'),
-               ('Biopharma', '3.148', '-0,2% (+5,4% a tipo constante)'),
-               ('Diagnostic', '284', '-14,3% (-9,7% a tipo constante)'),
-               ('Bio Supplies', '50', '-27,0% (-21,7% a tipo constante)'),
-               ('EBITDA ajustado', '854', '-2,5% (+2,4% a tipo constante)'),
-               ('Beneficio neto', '227', '+28,7%'),
-               ('BPA', '0,33 €', '+27% (calculado)'),
-               ('Flujo de caja libre antes de M&A', '91', '-12 en 1S 2025')],
-     'kpi': 'Margen EBITDA ajustado 23,9% (23,8%; calculado); 2T 25,2%. Biopharma por franquicia (tipo constante): inmunoglobulinas +12,8% (intravenosas '
-            '+12,5%, subcutáneas +17,7%), albúmina -14,2% (precios en China), alfa-1 y proteínas especiales -2,6% (+2,0% en el 2T). Margen bruto 37,1% '
-            '(39,1%), con ~40 M€ de costes puntuales por el cierre de 29 centros en EE. UU. Red: ~280 centros en EE. UU. y más de 130 en el resto del '
-            'mundo; Grifols no publica el coste por litro. Deuda neta 7.798 M€ según el contrato de crédito (8.843 M€ en balance), 4,2x EBITDA según '
-            'Grifols; liquidez 2.030 M€. Vencimientos de 2027 refinanciados y 500 M€ del bono 2030 amortizados: sin vencimientos relevantes hasta el 4T '
-            '2028.',
-     'guia': 'Guía 2026 confirmada: EBITDA ajustado +5% a +9% a tipo constante, margen de al menos el 25% y flujo de caja libre antes de M&A y '
-             'dividendos de 500-575 M€ (el 1S lleva 91 M€, el 16-18%; calculado). Objetivo de apalancamiento de 3,5x o menos a finales de 2027. Egipto: '
-             '180 M€ más hasta 2029 para llegar a 3 millones de litros de plasma al año. Dividendo con cargo a 2025: ~0,23 € brutos por acción A (0,15 € '
-             'en agosto de 2025 y 0,082 € el 2 de julio de 2026).',
-     'positivos': ['El beneficio neto sube un 28,7%, hasta 227 M€, y el margen EBITDA ajustado del 2T llega al 25,2%.',
-                   'Las inmunoglobulinas crecen un 12,8% a tipo constante (subcutáneas +17,7%).',
-                   'Flujo de caja libre positivo (91 M€) y vencimientos de 2027 refinanciados.'],
-     'riesgos': ['El apalancamiento sigue en 4,2x, frente al objetivo de 3,5x o menos a finales de 2027.',
-                 'La albúmina cae un 14,2% y el dólar resta crecimiento en euros.',
-                 'Para cumplir la guía de caja necesita más de 400 M€ en el segundo semestre (calculado).'],
-     'videos': [('ZmBOEO1agsY', 'Grifols resultados 1S 2026: beneficio +28,7%, hasta 227 M€ | Inmunoglobulinas +12,8%, deuda en 4,2x'),
+                   ('Precio / valor contable', '~0,78x'),
+                   ('Rentab. dividendo', '~2,11%'),
+                   ('Capitalización', '~6.410 M€')],
+     'multiplos_nota': 'Con precio de la clase A de 11,000 € al cierre del BME el 2-nov-2026 (Bolsarama); múltiplos calculados con datos de 12 meses a '
+                       'septiembre: BPA 0,72 € (beneficio de 488 M€ y 680,6 M de acciones), dividendos anunciados en 12 meses de 0,2324 € por acción A '
+                       '(0,0824 € el 2-jul-2026 y 0,15 € el 4-dic-2026). Capitalización con 422,4 M de acciones A y 258,2 M de acciones B a 6,83 € '
+                       '(TradingView, sin fecha). Valor empresa ~17.600 M€ con la deuda neta de balance (8.753 M€) y los minoritarios (2.455 M€); EBITDA '
+                       'reportado de 12 meses de Grifols (1.692 M€); con el EBITDA ajustado de 12 meses (1.859 M€), ~9,5x. Precio / valor contable sobre '
+                       'el patrimonio neto total a septiembre (8.243 M€). A cierre de 2023, 2024 y 2025 (stockanalysis.com, datos S&P Global) el PER era '
+                       '219,8x, 36,2x y 16,3x, el EV/EBITDA 19,1x, 10,8x y 10,5x, el precio / valor contable 1,23x, 0,66x y 0,86x, y la rentabilidad por '
+                       'dividendo 0%, 0% y 2,19% (calculada).',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos', '5.614', '+1,3% (+4,6% a tipo constante)'),
+               ('Ingresos 3T', '2.040', '+9,4% (+8,4% a tipo constante)'),
+               ('Biopharma', '4.951', '+3,7% (+7,1% a tipo constante)'),
+               ('Diagnostic', '431', '-10,0% (-7,0% a tipo constante)'),
+               ('EBITDA ajustado', '1.392', '+2,5% (+5,0% a tipo constante)'),
+               ('Beneficio neto', '390', '+28,4%'),
+               ('Beneficio neto 3T', '162', '+27,9%'),
+               ('Flujo de caja libre antes de M&A', '298', '188 en 9M 2025'),
+               ('Deuda financiera neta (contrato de crédito, sep-26)', '7.706', '-92 vs junio (calculado)')],
+     'kpi': 'Margen EBITDA ajustado 24,8% (24,5%); 3T 26,4% (25,8%). Margen bruto 38,0% (39,2%); 3T 39,6% (39,3%). Biopharma por franquicia (tipo '
+            'constante): inmunoglobulinas +11,3% en el 3T y +12,3% en 9M (subcutáneas +40,3% y +25,6%), albúmina -13,2% y -13,9% (China), alfa-1 y '
+            'proteínas especiales +18,2% y +4,6%. EE. UU. y Canadá +17,3% en el 3T. Diagnostic sin el negocio conjunto con QuidelOrtho: +2,3% en 9M. BPA '
+            'de 9M ~0,57 € (calculado). Flujo libre antes de M&A del 3T 208 M€ (203). Deuda neta 7.706 M€ según el contrato de crédito (8.753 M€ en '
+            'balance), 3,98x EBITDA según Grifols; liquidez 2.140 M€; sin vencimientos relevantes hasta el 4T 2028. Egipto: 18 centros (20 en el 1T '
+            '2027) y ~1 millón de litros en 2026; Canadá: recogida reanudándose por fases tras la pausa de agosto. Grifols no publica el coste por '
+            'litro.',
+     'guia': 'Guía 2026 confirmada: EBITDA ajustado +5% a +9% a tipo constante (9M: +5,0%), margen de al menos el 25% (9M: 24,8%) y flujo de caja libre '
+             'antes de M&A y dividendos de 500-575 M€ (9M: 298 M€, el 52-60%; calculado). Grifols prevé un 4T más moderado en Biopharma y que se '
+             'reviertan efectos de calendario favorables en la caja. Objetivo fijado en febrero: apalancamiento de 3,5x o menos a finales de 2027. '
+             'Dividendo a cuenta de 2026: 0,15 € brutos por acción (clase A y clase B), pago el 4 de diciembre de 2026 (el anuncio no indica la fecha '
+             'ex-dividendo).',
+     'positivos': ['El beneficio neto sube un 28,4%, hasta 390 M€, y el 3T acelera: ventas +8,4% a tipo constante y margen EBITDA ajustado del 26,4%.',
+                   'Las inmunoglobulinas crecen un 11,3% en el 3T (subcutáneas +40,3%) y alfa-1 vuelve a crecer (+18,2%).',
+                   'El apalancamiento baja a 3,98x y Grifols anuncia un dividendo a cuenta de 0,15 € por acción.'],
+     'riesgos': ['La albúmina cae un 13,9% en nueve meses por China; Grifols cree que podría estabilizarse en 2027.',
+                 'El margen EBITDA ajustado de 9M (24,8%) está por debajo del objetivo del 25% y la empresa prevé un 4T más moderado.',
+                 'La deuda neta sigue en 7.706 M€ y parte de los efectos que ayudaron a la caja se revertirán en el 4T.'],
+     'videos': [('HHl1NHMI-RU', 'Grifols resultados 3T 2026: gana 390 M€ (+28,4%) | Deuda por debajo de 4x y dividendo de 0,15 €'),
+                ('Ufii2j9Isho', 'Grifols 3T 2026 en 60 segundos (Short)'),
+                ('ZmBOEO1agsY', 'Grifols resultados 1S 2026: beneficio +28,7%, hasta 227 M€ | Inmunoglobulinas +12,8%, deuda en 4,2x'),
                 ('xrWR9VfrbhY', 'Grifols 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-11-03',
+     'proximo': '2027-02-26',
      'proximo_estimado': True,
-     'fuentes': 'Grifols, nota de prensa, presentación y estados financieros intermedios del 1S 2026 (28-jul-2026, CNMV y SEC), resultados 2025 '
-                '(26-feb-2026) y dividendos (CNMV/SEC, jun-2025 y jun-2026); Investing.com (presentación y conferencia, 28-jul-2026); Europa '
-                'Press/Bolsamanía (28-jul-2026); Benzinga España (29-jul-2026); Bolsarama (precio, 23-oct-2026); stockanalysis.com (múltiplos '
-                'históricos).',
-     'fuentes_corto': 'Investing.com, Europa Press, Bolsamanía, Benzinga España, Bolsarama y stockanalysis.com',
-     'elaborado': '23-oct-2026, 17:00'},
+     'fuentes': 'Grifols, nota de prensa y presentación de resultados del 3T 2026 (2-nov-2026, CNMV), dividendo a cuenta (otra información relevante, '
+                'CNMV/SEC, 2-nov-2026), resultados del 1S 2026 (28-jul-2026) y de 2025 (26-feb-2026); Redacción Médica, El Español y Ara (2-nov-2026); '
+                'Investing.com y MarketBeat (presentación y conferencia, 2-nov-2026); Bolsarama (precio, 2-nov-2026); TradingView (precio de la clase '
+                'B); stockanalysis.com (múltiplos históricos).',
+     'fuentes_corto': 'Redacción Médica, El Español, Investing.com, MarketBeat, Bolsarama y stockanalysis.com',
+     'elaborado': '2-nov-2026, 23:30'},
     {'id': 'indra',
      'nombre': 'Indra',
      'ticker': 'IDR',
