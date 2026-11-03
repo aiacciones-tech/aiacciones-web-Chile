@@ -53,7 +53,8 @@ def verificar():
           f"{c['statistics'].get('videoCount', '?')} videos.")
 
 
-CANALES = {"cola-qa": "https://www.youtube.com/@QatarAIStocks"}  # todo video de Qatar enlaza a su canal (Daniel, 31-oct-2026)
+CANALES = {"cola-qa": "https://www.youtube.com/@QatarAIStocks",  # todo video de Qatar enlaza a su canal (Daniel, 31-oct-2026)
+           "cola-sa": "https://www.youtube.com/@SaudiArabiaAIStocks"}  # y los de Arabia Saudita al suyo
 
 
 def con_canal(texto, base):

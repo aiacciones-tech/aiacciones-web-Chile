@@ -132,7 +132,7 @@ CANAL_EAU = "https://www.youtube.com/@AIStocksUAE"
 CLAVES_QA = ("BUFFER_API_KEY_QA", "BUFFER_API_KEY_QA2")  # cuentas de Buffer solo de Qatar (@QatarAIStocks)
 CANAL_QA = "https://www.youtube.com/@QatarAIStocks"
 CLAVES_SA = ("BUFFER_API_KEY_SA", "BUFFER_API_KEY_SA2")  # cuentas de Buffer solo de Arabia Saudita
-CANAL_SA = "https://www.youtube.com/@SaudiArabiaAIStocks"  # handle por confirmar
+CANAL_SA = "https://www.youtube.com/@SaudiArabiaAIStocks"
 SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA", "saudi": "_SA"}
 # países con cuentas de Buffer propias (todos sus canales son de ese país) y su canal de YouTube
 PROPIOS = {"eau": (CLAVES_EAU, CANAL_EAU, "BUFFER_ACCESS_TOKEN_EAU", "EAU"),
