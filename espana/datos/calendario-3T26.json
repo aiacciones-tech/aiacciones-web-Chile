@@ -1,6 +1,6 @@
 {
  "trimestre": "3T 2026",
- "actualizado": "2026-11-02",
+ "actualizado": "2026-11-03",
  "empresas": [
   {
    "fecha": "2026-10-20",
@@ -129,6 +129,24 @@
    "fuente": "CNMV, 29-oct-2026"
   },
   {
+   "fecha": "2026-10-29",
+   "empresa": "Banco Sabadell",
+   "ticker": "SAB",
+   "sector": "Banca",
+   "estado": "Publicada",
+   "nota": "Publicó el 29-oct-2026 por la mañana.",
+   "fuente": "Banco Sabadell, nota de resultados 9M 2026 (29-oct-2026)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "empresa": "Indra",
+   "ticker": "IDR",
+   "sector": "Defensa / tecnología",
+   "estado": "Publicada",
+   "nota": "Publicó el 29-oct-2026 a las 07:41 (CNMV).",
+   "fuente": "CNMV, 29-oct-2026"
+  },
+  {
    "fecha": "2026-10-30",
    "empresa": "Acerinox",
    "ticker": "ACX",
@@ -163,6 +181,15 @@
    "estado": "Publicada",
    "nota": "Publicó el 2-nov-2026 tras el cierre (CNMV 17:35). 3T25: 4-nov-2025.",
    "fuente": "Grifols, información financiera del 3T 2026 (CNMV, 2-nov-2026)"
+  },
+  {
+   "fecha": "2026-11-03",
+   "empresa": "Sacyr",
+   "ticker": "SCYR",
+   "sector": "Construcción / concesiones",
+   "estado": "Publicada",
+   "nota": "Publicó el 3-nov-2026 tras el cierre (CNMV 17:52).",
+   "fuente": "Sacyr, informe de resultados de 9M 2026 (CNMV, 3-nov-2026)"
   },
   {
    "fecha": "2026-11-05",
@@ -246,15 +273,6 @@
    "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
   },
   {
-   "fecha": "2026-10-29",
-   "empresa": "Banco Sabadell",
-   "ticker": "SAB",
-   "sector": "Banca",
-   "estado": "Publicada",
-   "nota": "Publicó el 29-oct-2026 por la mañana.",
-   "fuente": "Banco Sabadell, nota de resultados 9M 2026 (29-oct-2026)"
-  },
-  {
    "fecha": "2026-11-13",
    "empresa": "Merlin Properties",
    "ticker": "MRL",
@@ -288,24 +306,6 @@
    "sector": "Inmobiliario (SOCIMI)",
    "estado": "Por confirmar",
    "nota": "Suele publicar en noviembre.",
-   "fuente": "Sin fuente de fecha"
-  },
-  {
-   "fecha": "2026-10-29",
-   "empresa": "Indra",
-   "ticker": "IDR",
-   "sector": "Defensa / tecnología",
-   "estado": "Publicada",
-   "nota": "Publicó el 29-oct-2026 a las 07:41 (CNMV).",
-   "fuente": "CNMV, 29-oct-2026"
-  },
-  {
-   "fecha": null,
-   "empresa": "Sacyr",
-   "ticker": "SCYR",
-   "sector": "Construcción / concesiones",
-   "estado": "Por confirmar",
-   "nota": "Suele publicar a fines de octubre o inicios de noviembre.",
    "fuente": "Sin fuente de fecha"
   },
   {

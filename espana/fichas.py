@@ -1304,4 +1304,62 @@ FICHAS = [
                 '(múltiplos históricos, oct-2026).',
      'fuentes_corto': 'Indra Group (CNMV), Europa Press, XTB, Bolsamanía y stockanalysis.com',
      'elaborado': '30-oct-2026, 11:30'},
+    {'id': 'sacyr',
+     'nombre': 'Sacyr',
+     'ticker': 'SCYR',
+     'sector': 'Construcción / concesiones',
+     'lede': 'Grupo español de concesiones de infraestructuras (autopistas, hospitales, agua) con negocio de ingeniería y construcción. El 90,5% de su '
+             'EBITDA procede de activos concesionales, sobre todo en Sur de Europa y Latinoamérica, y crece en países de habla inglesa (Canadá, EE. UU., '
+             'Reino Unido, Australia).',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto atribuible de 116 M€ hasta septiembre (+86,9%), con 118 M€ de Concesiones (49 M€ en 9M 2025), cifra de negocios de 3.777 '
+                'M€ (+10,7%) y EBITDA de 1.111 M€ (+9,2%). En el tercer trimestre, el beneficio fue de 38 M€ (+19,8%, calculado). La deuda neta con '
+                'recurso subió a 322 M€ (59 M€ en diciembre) por la inversión en nuevas concesiones.',
+     'precio': '4,11 €',
+     'precio_fecha': '3-nov-2026',
+     'multiplos': [('PER 12 meses', '~23,7x'),
+                   ('EV/EBITDA', '~7,9x'),
+                   ('Precio / patrimonio neto', '~1,43x'),
+                   ('Rentab. dividendo', '~3,65%'),
+                   ('Capitalización', '~3.312 M€')],
+     'multiplos_nota': 'Calculados con el cierre de 4,11 € del 3-nov-2026 (Bolsamanía), antes de los resultados, 805,8 M de acciones y datos de 12 meses '
+                       'de Sacyr (2025 + 9M26 - 9M25: beneficio neto 139,9 M€, EBITDA 1.451 M€); EV con la deuda neta total de 6.972 M€ (incluida la '
+                       'financiación de proyectos) y 1.245 M€ de minoritarios; precio / patrimonio neto total con minoritarios; dividendo de 0,15 € '
+                       'aprobado para 2026. A cierre de 2023, 2024 y 2025 (stockanalysis.com) el PER era 13,2x, 21,7x y 35,7x, el EV/EBITDA 8,0x, 7,5x y '
+                       '8,9x, el precio / patrimonio neto 1,16x, 1,20x y 1,39x, y la rentabilidad por dividendo 4,92%, 5,23% y 2,50%.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Cifra de negocios', '3.777', '+10,7%'),
+               ('EBITDA', '1.111', '+9,2%'),
+               ('EBIT', '837', '+13,5%'),
+               ('Resultado financiero', '-443', '-0,8%'),
+               ('Beneficio neto atribuible', '116', '+86,9%'),
+               ('Beneficio neto 3T (calculado)', '38', '+19,8%'),
+               ('Flujo de caja operativo', '930', '+21% comparable'),
+               ('Deuda neta con recurso (sep-26)', '322', '')],
+     'kpi': 'Margen EBITDA 29,4% (29,8% en 9M 2025). Concesiones: ingresos 1.536 M€ (+21,4%; operativos +11,1%), EBITDA 611 M€ (+8,9%; 3T -0,7%, '
+            'calculado), margen 62,3% sin construcción (63,6%), beneficio 118 M€. Ingeniería e Infraestructuras: 2.419 M€ (+9,7%), EBITDA 434 M€ '
+            '(+6,8%), margen de construcción pura 5,0% (4,8%), cartera 12.801 M€ (+3%). Agua: 323 M€ (+52,6%), EBITDA 55 M€ (+19,7%), cartera 8.089 M€ '
+            '(+16%). Deuda neta total 6.972 M€ (6.359 M€ en diciembre), de la que 6.650 M€ es financiación de proyectos y 322 M€ con recurso; ratio con '
+            'recurso por debajo de 1x. Valor interno de los activos concesionales 4.316 M€. S&P: BBB-, estable.',
+     'guia': 'Sin guía numérica anual en el informe de 9M. Dividendo 2026 aprobado en la junta del 4-jun-2026: 0,15 € brutos por acción en efectivo; '
+             '0,10 € pagados el 1-jul-2026 y 0,05 € a pagar en enero de 2027 (fecha exacta sin publicar a 3-nov-2026). Compromiso de repartir al menos '
+             '225 M€ en efectivo entre 2025 y 2027; nuevo plan estratégico 2027-2030 en diseño. Nuevas concesiones: Museo de Ciencias de Ontario '
+             '(Canadá) y Ruta 57 (Chile, seleccionada, pendiente de adjudicación formal).',
+     'positivos': ['El beneficio neto crece un 86,9% y el de Concesiones se multiplica por 2,4, hasta 118 M€.',
+                   'El flujo de caja operativo sube a 930 M€ (+21% en términos comparables).',
+                   'Nuevas concesiones en Canadá y Chile, cartera de Agua +16% y calificación de grado de inversión (S&P BBB-).'],
+     'riesgos': ['La deuda neta con recurso pasa de 59 M€ en diciembre a 322 M€, y la deuda neta total, a 6.972 M€.',
+                 'El resultado financiero (-443 M€) absorbe el 53% del EBIT (calculado), y los minoritarios se quedan 99 M€.',
+                 'El EBITDA de Concesiones quedó plano en el tercer trimestre (-0,7%, calculado) y el crecimiento del beneficio se modera (+156,7% en el '
+                 '1S; +19,8% en el 3T).'],
+     'videos': [('k77JV0jp6l4', 'Sacyr resultados 3T 2026: beneficio +86,9%, hasta 116 M€ | Concesiones x2,4 y flujo de caja 930 M€'),
+                ('-7TA34Yh_hc', 'Sacyr 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-25',
+     'proximo_estimado': True,
+     'fuentes': 'Sacyr, informe de resultados de los primeros nueve meses de 2026 (CNMV y sacyr.com, 3-nov-2026), informes del primer semestre de 2026 y '
+                'de 2025, y nota de la junta del 4-jun-2026; Empresa Exterior, Capital Madrid, Vozpópuli y El Debate (3-nov-2026); Bolsamanía (precio); '
+                'stockanalysis.com (múltiplos históricos, oct-2026).',
+     'fuentes_corto': 'Sacyr (CNMV), Empresa Exterior, Vozpópuli, Bolsamanía y stockanalysis.com',
+     'elaborado': '3-nov-2026, 23:30'},
 ]
