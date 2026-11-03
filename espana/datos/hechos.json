@@ -1,6 +1,30 @@
 {
- "actualizado": "2026-11-03T08:07Z",
+ "actualizado": "2026-11-03T12:04Z",
  "items": [
+  {
+   "id": "15ae6859-2822-42f5-8803-84e5c64f2b04",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 12:11",
+   "entidad": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Compras de autocartera de 27 de octubre al 2 de noviembre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b15ae6859-2822-42f5-8803-84e5c64f2b04%7d",
+   "ticker": "ACS",
+   "temas": []
+  },
+  {
+   "id": "06fafb5a-17e5-4046-9093-de3c881141b3",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 11:14",
+   "entidad": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+   "nif": "A48265169",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad comunica información relativa a la ejecución del programa de recompra de acciones.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b06fafb5a-17e5-4046-9093-de3c881141b3%7d",
+   "ticker": "BBVA",
+   "temas": []
+  },
   {
    "id": "eda4c92f-f078-4e7b-ad82-835a06928448",
    "tipo": "OIR",
