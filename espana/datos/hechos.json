@@ -1,6 +1,20 @@
 {
- "actualizado": "2026-11-02T16:56Z",
+ "actualizado": "2026-11-03T08:07Z",
  "items": [
+  {
+   "id": "eda4c92f-f078-4e7b-ad82-835a06928448",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 08:17",
+   "entidad": "FERROVIAL N.V.",
+   "nif": "N0119863I",
+   "categoria": "Otra información relevante",
+   "titulo": "Ferrovial anuncia el importe del dividendo en efectivo por acción correspondiente a su dividendo flexible",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7beda4c92f-f078-4e7b-ad82-835a06928448%7d",
+   "ticker": "FER",
+   "temas": [
+    "dividendos"
+   ]
+  },
   {
    "id": "5397dfca-6204-46d2-9bb9-341a0096259f",
    "tipo": "OIR",
