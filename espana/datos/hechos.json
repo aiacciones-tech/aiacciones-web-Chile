@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-11-03T12:04Z",
+ "actualizado": "2026-11-03T16:29Z",
  "items": [
+  {
+   "id": "6c68c027-efed-45b0-bb3f-24da2a2f5bad",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 16:46",
+   "entidad": "FERROVIAL N.V.",
+   "nif": "N0119863I",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Operaciones efectuadas por Ferrovial al amparo de su programa de recompra de acciones propias entre el 26 y el 29 de octubre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b6c68c027-efed-45b0-bb3f-24da2a2f5bad%7d",
+   "ticker": "FER",
+   "temas": []
+  },
   {
    "id": "15ae6859-2822-42f5-8803-84e5c64f2b04",
    "tipo": "OIR",
