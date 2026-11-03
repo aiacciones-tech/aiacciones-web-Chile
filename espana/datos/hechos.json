@@ -1,6 +1,46 @@
 {
- "actualizado": "2026-11-03T16:29Z",
+ "actualizado": "2026-11-03T21:58Z",
  "items": [
+  {
+   "id": "29754509-9e64-40fc-ab88-856e901ae216",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 18:38",
+   "entidad": "INDRA SISTEMAS, S.A.",
+   "nif": "A",
+   "categoria": "Contratos de liquidez y contrapartida",
+   "titulo": "Contratos de liquidez información periódica (1 de agosto 2026 - 31 de octubre 2026)",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b29754509-9e64-40fc-ab88-856e901ae216%7d",
+   "ticker": "IDR",
+   "temas": []
+  },
+  {
+   "id": "d7bdc4cb-8d44-4cc5-8c73-5098ae31b447",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 17:53",
+   "entidad": "SACYR, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad remite Presentación de Resultados correspondiente a los primeros nueve meses de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bd7bdc4cb-8d44-4cc5-8c73-5098ae31b447%7d",
+   "ticker": "SCYR",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "cf484e08-6f7e-4261-a9e8-9b802ba0b06f",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 17:52",
+   "entidad": "SACYR, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad remite Informe de Resultados correspondiente a los primeros nueve meses de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bcf484e08-6f7e-4261-a9e8-9b802ba0b06f%7d",
+   "ticker": "SCYR",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "6c68c027-efed-45b0-bb3f-24da2a2f5bad",
    "tipo": "OIR",
