@@ -1,7 +1,8 @@
 {
  "videoId": "xDi62NSYZfI",
  "url": "https://www.youtube.com/watch?v=xDi62NSYZfI",
- "privacy": "private",
+ "privacy": "public",
  "subido": "2026-11-03T20:21:31+00:00",
- "miniatura": "error 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n        \"domain\": \"you"
+ "miniatura": "error 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n        \"domain\": \"you",
+ "publicado": "2026-11-04T07:04:33+00:00"
 }
