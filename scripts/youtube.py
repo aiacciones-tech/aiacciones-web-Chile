@@ -150,6 +150,36 @@ def subir(base):
         subir_uno(t, c)
 
 
+def publicar(base):
+    """Pone en público los videos ya subidos cuyo meta.json dice "public" pero resultado.json no.
+    Si el post de X/Facebook de esa carpeta quedó en Borradores por ser privado, borra su buffer*.json
+    para que buffer.py lo vuelva a mandar ya público (el borrador viejo queda en Buffer para borrarlo a mano)."""
+    t = None
+    for d in sorted(os.listdir(base)):
+        c = os.path.join(base, d)
+        res_p, meta_p = os.path.join(c, "resultado.json"), os.path.join(c, "meta.json")
+        if not (os.path.exists(res_p) and os.path.exists(meta_p)):
+            continue
+        res, meta = json.load(open(res_p, encoding="utf-8")), json.load(open(meta_p, encoding="utf-8"))
+        if meta.get("privacy") != "public" or res.get("privacy") == "public":
+            continue
+        t = t or token()
+        cuerpo = json.dumps({"id": res["videoId"], "status": {"privacyStatus": "public",
+                                                              "selfDeclaredMadeForKids": False}}).encode()
+        pedir(f"{API}/youtube/v3/videos?part=status", cuerpo,
+              {"Authorization": f"Bearer {t}", "Content-Type": "application/json; charset=UTF-8"}, "PUT")
+        res["privacy"] = "public"
+        res["publicado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        json.dump(res, open(res_p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        for b in ("buffer.json", "buffer-facebook.json", "buffer-linkedin.json"):
+            bp = os.path.join(c, b)
+            if os.path.exists(bp) and json.load(open(bp, encoding="utf-8")).get("video_privado"):
+                os.remove(bp)
+        print(f"{d}: {res['url']} ahora es público")
+    if t is None:
+        print("No hay videos por poner en público.")
+
+
 if __name__ == "__main__":
     modo = sys.argv[1] if len(sys.argv) > 1 else "verificar"
     base = sys.argv[2] if len(sys.argv) > 2 else "cola"
@@ -157,5 +187,7 @@ if __name__ == "__main__":
         verificar()
     elif modo == "miniaturas":
         miniaturas(base)
+    elif modo == "publicar":
+        publicar(base)
     else:
         subir(base)

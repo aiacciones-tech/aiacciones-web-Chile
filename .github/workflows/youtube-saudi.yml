@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       modo:
-        description: "verificar (solo credenciales) o subir (desde la rama youtube-cola)"
+        description: "verificar (solo credenciales), subir o publicar (pone en público lo que meta.json pide, desde la rama youtube-cola)"
         default: verificar
 permissions:
   contents: write
@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ (github.event_name == 'push' || inputs.modo == 'subir') && 'youtube-cola' || github.ref }}
+          ref: ${{ (github.event_name == 'push' || inputs.modo == 'subir' || inputs.modo == 'publicar') && 'youtube-cola' || github.ref }}
       - name: Revisar que el token de Arabia Saudita esté cargado
         run: test -n "$YT_REFRESH_TOKEN" || { echo "Falta el secreto YT_SAUDI_REFRESH_TOKEN"; exit 1; }
       - name: Verificar credenciales
@@ -35,8 +35,11 @@ jobs:
       - name: Subir videos pendientes
         if: github.event_name == 'push' || inputs.modo == 'subir'
         run: python3 scripts/youtube.py subir cola-sa
+      - name: Poner en público los videos que meta.json pide públicos
+        if: github.event_name == 'push' || inputs.modo == 'subir' || inputs.modo == 'publicar'
+        run: python3 scripts/youtube.py publicar cola-sa
       - name: Guardar IDs de YouTube
-        if: github.event_name == 'push' || inputs.modo == 'subir'
+        if: github.event_name == 'push' || inputs.modo == 'subir' || inputs.modo == 'publicar'
         run: |
           git config user.name "aiacciones-bot"
           git config user.email "aiacciones-bot@users.noreply.github.com"
