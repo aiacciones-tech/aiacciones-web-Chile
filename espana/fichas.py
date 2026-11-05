@@ -1422,4 +1422,67 @@ FICHAS = [
                 'históricos y acciones).',
      'fuentes_corto': 'Rovi (CNMV), Bolsamanía, El Español, Investing.com, Europa Press y stockanalysis.com',
      'elaborado': '5-nov-2026, 11:00'},
+    {'id': 'arcelormittal',
+     'nombre': 'ArcelorMittal',
+     'ticker': 'MTS',
+     'sector': 'Acero',
+     'lede': 'Siderúrgica con sede en Luxemburgo y cotización en el IBEX 35 (además de Ámsterdam, París y Nueva York). Produce acero en Europa (con '
+             'plantas en Asturias y el País Vasco), Norteamérica y Brasil, extrae mineral de hierro en Canadá y Liberia y participa en AMNS India con '
+             'Nippon Steel. Publica sus cuentas en dólares.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'tercer trimestre y acumulado a septiembre de 2026',
+     'titular': 'Pérdida neta de 391 M$ en el tercer trimestre (377 M$ de beneficio en el 3T25) por la parada de su planta de Kryvyi Rih (Ucrania), con '
+                '852 M$ de deterioro y 293 M$ de cargos extraordinarios. Sin esos efectos, el beneficio ajustado sube a 868 M$ (+83%), por encima del '
+                'consenso, y el EBITDA a 2.023 M$ (+34%). Hasta septiembre, el beneficio neto es de 867 M$ (-70,9%).',
+     'precio': '54,76 €',
+     'precio_fecha': '5-nov-2026, cierre',
+     'multiplos': [('PER 12 meses', '~44,2x (16,6x ajustado)'),
+                   ('EV/EBITDA', '~7,7x'),
+                   ('Precio / patrimonio neto', '~0,85x'),
+                   ('Rentab. dividendo', '~0,98%'),
+                   ('Capitalización', '~41.200 M€')],
+     'multiplos_nota': 'Calculados con el cierre de 54,76 € del 5-nov-2026 en la bolsa española (Bolsamanía), ya con los resultados publicados, al '
+                       'cambio de 1,1179 $/€ del BCE del 3-nov-2026 (61,22 $), 753 M de acciones (media del 3T26) y datos de 12 meses de ArcelorMittal '
+                       '(4T25 + 9M26: beneficio neto 1.044 M$, ajustado 2.780 M$, EBITDA 7.359 M$); EV con la deuda neta de 10.339 M$; patrimonio '
+                       'atribuido de 54.123 M$ a septiembre; dividendo base de 0,60 $ en 2026. A cierre de 2023, 2024 y 2025 (stockanalysis.com, '
+                       'cotización MT) el PER era 25,9x, 13,6x y 11,1x, el EV/EBITDA 5,2x, 4,4x y 10,6x (con su propio EBITDA; con el EBITDA publicado, '
+                       '3,7x en 2024 y 7,1x en 2025, calculado), el precio / patrimonio 0,42x, 0,36x y 0,62x, y la rentabilidad por dividendo 1,82%, '
+                       '2,42% y 1,32%.',
+     'tabla_titulo': 'Cifras en millones de dólares (M$) · 3T 2026 y 9M 2026 con su variación interanual',
+     'tabla': [('Ventas 9M', '48.684', '+5,0%'),
+               ('EBITDA 9M', '5.766', '+16,5%'),
+               ('Beneficio neto atribuido 9M', '867', '-70,9%'),
+               ('Beneficio neto ajustado 9M', '2.126', '-6,9%'),
+               ('Ventas 3T', '16.466', '+5,2%'),
+               ('EBITDA 3T', '2.023', '+34,2%'),
+               ('Beneficio (pérdida) neto 3T', '-391', '377 en el 3T25'),
+               ('Beneficio neto ajustado 3T', '868', '+83,1%'),
+               ('Flujo de caja libre 9M', '-1.935', '-1.375 en 9M25'),
+               ('Deuda neta (sep-26)', '10.339', '7.931 en dic-25')],
+     'kpi': 'EBITDA por tonelada 155 $ en el 3T (155 $ en el 2T26 y 111 $ en el 3T25); 147 $ en 9M (121 $). Margen EBITDA 3T 12,3% (9,6%; calculado). '
+            'Envíos de acero 13,0 Mt en el 3T (13,6 Mt) y 39,2 Mt en 9M (41,0). EBITDA 3T por región: Norteamérica 487 M$ (+62%), Brasil 506 M$ (+68%), '
+            'Europa 548 M$ (+7% a/a; -21% frente al 2T por la energía y el carbono), Soluciones sostenibles 119 M$ (+18%), Minería 128 M$ (-39%); AMNS '
+            'India, al 100%, 266 M$ (+23%). Consenso de Visible Alpha publicado por la empresa: EBITDA 1.972 M$ y beneficio ajustado 652 M$. Circulante '
+            '-2.473 M$ en 9M; flujo libre subyacente ~500 M$ según la empresa. Deuda neta / EBITDA 12 meses ~1,4x (calculado); liquidez 8.700 M$. '
+            'Remuneración en 9M: 341 M$ en dividendos y 760 M$ en recompras.',
+     'guia': 'Inversiones 2026 de 4.500-5.000 M$ (1.700-1.900 M$ estratégicas), sin cambios. Envíos de planos en el 4T con crecimiento de doble dígito '
+             'a/a y envíos del 2S por encima del 1S. Aportación de los proyectos estratégicos en 2026 rebajada a ~500 M$ de EBITDA (antes ~700 M$) por '
+             'Liberia (~16 Mt de hierro, antes ~18). Hornos eléctricos de Gijón (1,1 Mt) y Sestao (1,6 Mt), en marcha en el 4T26. Dividendo base 2026: '
+             '0,60 $ por acción en cuatro pagos; el cuarto, de 0,15 $, se anunció el 5-nov-2026, con ex-dividendo el 12-nov, registro el 13-nov y pago '
+             'el 2-dic-2026 (importe en euros según el cambio del BCE).',
+     'positivos': ['El EBITDA del tercer trimestre sube un 34%, hasta 2.023 M$, con 155 $ por tonelada (+44 $).',
+                   'Norteamérica (+62%) y Brasil (+68%) impulsan el beneficio ajustado, que supera en un 33% el consenso.',
+                   'Los envíos de planos en Europa suben pese a la estacionalidad con las nuevas cuotas arancelarias de la UE.'],
+     'riesgos': ['La parada de Kryvyi Rih (Ucrania) deja una pérdida neta de 391 M$ en el trimestre.',
+                 'El EBITDA de Europa cae un 21% frente al 2T por la energía y el carbono, y el de la minería un 28%.',
+                 'La deuda neta sube 2.408 M$ desde diciembre, por el circulante, y la empresa rebaja la aportación de sus proyectos en 2026.'],
+     'videos': [('FqkZusiRbGM', 'ArcelorMittal 3T 2026: pérdida de 391 M$ por Ucrania, beneficio ajustado +83% | EBITDA +34%'),
+                ('_SmyWKk54AU', 'ArcelorMittal 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-04',
+     'proximo_estimado': True,
+     'fuentes': 'ArcelorMittal, nota de resultados del tercer trimestre de 2026 (GlobeNewswire y CNMV, 5-nov-2026), resultados de 2025 y calendario de '
+                'dividendos (corporate.arcelormittal.com); consenso de Visible Alpha publicado por la empresa (2-nov-2026); Bolsamanía, Europa Press y '
+                'OKDiario (5-nov-2026); BCE (BOE, 4-nov-2026); stockanalysis.com (múltiplos históricos).',
+     'fuentes_corto': 'ArcelorMittal (CNMV), Visible Alpha, Bolsamanía, Europa Press, BCE y stockanalysis.com',
+     'elaborado': '5-nov-2026, 23:30'},
 ]
