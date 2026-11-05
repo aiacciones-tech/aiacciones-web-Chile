@@ -1,0 +1,52 @@
+# Publica en el canal de Telegram de AI Stocks UAE (en árabe) cada video de cola-eau/ (rama youtube-cola)
+# cuando ya está subido a YouTube: foto (miniatura.png) + post-telegram.txt o, si no hay, post-linkedin.txt
+# (el texto largo, el mismo que va a LinkedIn y Facebook), con el enlace del video y del canal de YouTube.
+# Credenciales: Settings > Secrets and variables > Actions > TELEGRAM_BOT_TOKEN_EAU (token de @BotFather)
+# y TELEGRAM_CHANNEL_EAU (@usuario del canal). El bot tiene que ser administrador del canal.
+# TELEGRAM_DESDE evita publicar de golpe los videos anteriores al canal de Telegram (el primero es Mashreq, 3 nov).
+# "Run workflow" con modo=verificar solo prueba el bot y el canal; modo=publicar manda lo pendiente.
+name: Publicar en Telegram (EAU)
+concurrency: telegram-eau
+on:
+  workflow_run:
+    workflows: ["Subir videos a YouTube (EAU)"]
+    types: [completed]
+  push:
+    branches: [youtube-cola]
+    paths: ['cola-eau/**/post-telegram.txt']
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "verificar (solo el bot y el canal) o publicar (desde la rama youtube-cola)"
+        default: verificar
+permissions:
+  contents: write
+jobs:
+  telegram:
+    runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN_EAU }}
+      TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL_EAU || vars.TELEGRAM_CHANNEL_EAU }}
+      TELEGRAM_TEXTOS: post-telegram.txt,post-linkedin.txt
+      TELEGRAM_CANAL_YOUTUBE: https://www.youtube.com/@AIStocksUAE
+      TELEGRAM_DESDE: "2026-11-03"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar') && 'youtube-cola' || github.ref }}
+      - name: Verificar bot y canal
+        if: github.event_name == 'workflow_dispatch' && inputs.modo != 'publicar'
+        run: python3 scripts/telegram.py verificar
+      - name: Publicar pendientes
+        if: github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar'
+        run: python3 scripts/telegram.py publicar cola-eau
+      - name: Guardar lo publicado
+        if: always() && (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar')
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add cola-eau
+          git diff --cached --quiet && exit 0
+          git commit -m "Telegram EAU $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
+          exit 1
