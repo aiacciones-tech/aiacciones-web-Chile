@@ -1,6 +1,32 @@
 {
- "actualizado": "2026-11-04T20:19Z",
+ "actualizado": "2026-11-05T12:58Z",
  "items": [
+  {
+   "id": "3384b03e-ca78-4ef1-b892-76d6552d9ae7",
+   "tipo": "OIR",
+   "fecha": "2026-11-05 12:23",
+   "entidad": "MERLIN PROPERTIES, SOCIMI, S.A.",
+   "nif": "A86977790",
+   "categoria": "Comunicación de operaciones vinculadas",
+   "titulo": "MERLIN - Operación vinculada",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b3384b03e-ca78-4ef1-b892-76d6552d9ae7%7d",
+   "ticker": "MRL",
+   "temas": []
+  },
+  {
+   "id": "7a9db72e-ba69-4abf-b1c4-8620533ef2e4",
+   "tipo": "OIR",
+   "fecha": "2026-11-05 07:10",
+   "entidad": "ARCELORMITTAL, S.A.",
+   "nif": "N0181056C",
+   "categoria": "Otra información relevante",
+   "titulo": "ArcelorMittal presenta sus resultados correspondientes al tercer trimestre de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b7a9db72e-ba69-4abf-b1c4-8620533ef2e4%7d",
+   "ticker": "MTS",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "0cb8ceb8-398d-426e-a16a-aa786f35b7f5",
    "tipo": "OIR",
