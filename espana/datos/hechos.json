@@ -1,6 +1,44 @@
 {
- "actualizado": "2026-11-05T12:58Z",
+ "actualizado": "2026-11-05T20:34Z",
  "items": [
+  {
+   "id": "5742c804-1b85-4ac9-8f5d-18a15c195873",
+   "tipo": "OIR",
+   "fecha": "2026-11-05 18:12",
+   "entidad": "INTERNATIONAL CONSOLIDATED AIRLINES GROUP, S.A.",
+   "nif": "A85845535",
+   "categoria": "Otra información relevante",
+   "titulo": "La Sociedad anuncia la distribución de un dividendo a cuenta de 0,053 euros brutos por acción",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b5742c804-1b85-4ac9-8f5d-18a15c195873%7d",
+   "ticker": "IAG",
+   "temas": [
+    "dividendos"
+   ]
+  },
+  {
+   "id": "fdd5f1a7-6ff5-45ad-a8c8-2a2734975dba",
+   "tipo": "OIR",
+   "fecha": "2026-11-05 16:59",
+   "entidad": "ENAGAS, S.A.",
+   "nif": "A",
+   "categoria": "Sobre calificaciones crediticias",
+   "titulo": "S&P ratifica el rating de Enagás en BBB+ y mejora su Business Risk Profile, situándolo en Excellent",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bfdd5f1a7-6ff5-45ad-a8c8-2a2734975dba%7d",
+   "ticker": "ENG",
+   "temas": []
+  },
+  {
+   "id": "55edc166-3a5a-443b-a074-8d1c36a040ec",
+   "tipo": "OIR",
+   "fecha": "2026-11-05 15:44",
+   "entidad": "REPSOL, S.A.",
+   "nif": "A78374725",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Operaciones realizadas por Repsol, S.A. al amparo de su Programa de Recompra de acciones entre el 30 de octubre y el 4 de noviembre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b55edc166-3a5a-443b-a074-8d1c36a040ec%7d",
+   "ticker": "REP",
+   "temas": []
+  },
   {
    "id": "3384b03e-ca78-4ef1-b892-76d6552d9ae7",
    "tipo": "OIR",
