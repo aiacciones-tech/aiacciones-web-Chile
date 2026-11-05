@@ -1,0 +1,50 @@
+# Publica en el canal de Telegram de Qatar AI Stocks (en árabe) cada video de cola-qa/ (rama youtube-cola)
+# cuando ya está subido a YouTube: foto (miniatura.png) + post-telegram.txt o post-facebook.txt con el enlace del video.
+# Credenciales: Settings > Secrets and variables > Actions > TELEGRAM_BOT_TOKEN_QA (token de @BotFather)
+# y TELEGRAM_CHAT_ID_QA (@usuario del canal; si falta, @QatarAIStocks).
+# Solo publica carpetas con post-telegram.txt, y siempre con el enlace al canal de YouTube. El bot tiene que ser administrador del canal.
+# "Run workflow" con modo=verificar solo prueba el bot y el canal; modo=publicar manda lo pendiente.
+name: Publicar en Telegram (Qatar)
+concurrency: telegram-qatar
+on:
+  workflow_run:
+    workflows: ["Subir videos a YouTube (Qatar)"]
+    types: [completed]
+  push:
+    branches: [youtube-cola]
+    paths: ['cola-qa/**/post-telegram.txt']
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "verificar (solo el bot y el canal) o publicar (desde la rama youtube-cola)"
+        default: verificar
+permissions:
+  contents: write
+jobs:
+  telegram:
+    runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN_QA }}
+      TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHAT_ID_QA || secrets.TELEGRAM_CHANNEL_QA || vars.TELEGRAM_CHANNEL_QA || '@QatarAIStocks' }}
+      TELEGRAM_SOLO_POST_TELEGRAM: "1"
+      TELEGRAM_CANAL_YOUTUBE: https://www.youtube.com/@QatarAIStocks
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar') && 'youtube-cola' || github.ref }}
+      - name: Verificar bot y canal
+        if: github.event_name == 'workflow_dispatch' && inputs.modo != 'publicar'
+        run: python3 scripts/telegram.py verificar
+      - name: Publicar pendientes
+        if: github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar'
+        run: python3 scripts/telegram.py publicar cola-qa
+      - name: Guardar lo publicado
+        if: always() && (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar')
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add cola-qa
+          git diff --cached --quiet && exit 0
+          git commit -m "Telegram Qatar $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
+          exit 1
