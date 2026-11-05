@@ -19,6 +19,9 @@ Lo publicado queda en <carpeta>/telegram.json, así no se repite.
 Opcional (lo usa Qatar):
   TELEGRAM_SOLO_POST_TELEGRAM=1   publica solo carpetas con post-telegram.txt (no usa post-facebook.txt)
   TELEGRAM_CANAL_YOUTUBE=<url>    si el texto no trae ese enlace, se añade al final
+Opcional (lo usa EAU):
+  TELEGRAM_TEXTOS=a.txt,b.txt     textos a buscar, en orden (por defecto post-telegram.txt,post-facebook.txt)
+  TELEGRAM_DESDE=2026-11-03       ignora los videos subidos antes de esa fecha (para no publicar el atrasado)
 """
 import json
 import os
@@ -94,7 +97,8 @@ def pendiente(carpeta):
     if os.path.exists(os.path.join(carpeta, REGISTRO)):
         return None
     solo = os.environ.get("TELEGRAM_SOLO_POST_TELEGRAM", "").strip() not in ("", "0")
-    textos = TEXTOS[:1] if solo or carpeta.rstrip("/").endswith("-short") else TEXTOS
+    todos = tuple(x.strip() for x in os.environ.get("TELEGRAM_TEXTOS", "").split(",") if x.strip()) or TEXTOS
+    textos = todos[:1] if solo or carpeta.rstrip("/").endswith("-short") else todos
     archivo = next((t for t in textos if os.path.isfile(os.path.join(carpeta, t))), None)
     if not archivo:
         return None
@@ -103,6 +107,9 @@ def pendiente(carpeta):
         print(f"{carpeta}: esperando que el video se suba a YouTube")
         return None
     res = json.load(open(res_path, encoding="utf-8"))
+    desde = os.environ.get("TELEGRAM_DESDE", "").strip()
+    if desde and res.get("subido", "") < desde:
+        return None
     if res.get("privacy") != "public":
         print(f"{carpeta}: el video no es público todavía")
         return None
