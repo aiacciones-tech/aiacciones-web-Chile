@@ -15,6 +15,10 @@ cuyo video ya está subido y público en YouTube (resultado.json). {youtube} se 
 Va como foto (miniatura.png) con el texto de pie; si el texto pasa de 1024 caracteres, foto y luego mensaje.
 Las carpetas *-short solo se publican si traen su propio post-telegram.txt (si no, repetirían el video largo).
 Lo publicado queda en <carpeta>/telegram.json, así no se repite.
+
+Opcional (lo usa Qatar):
+  TELEGRAM_SOLO_POST_TELEGRAM=1   publica solo carpetas con post-telegram.txt (no usa post-facebook.txt)
+  TELEGRAM_CANAL_YOUTUBE=<url>    si el texto no trae ese enlace, se añade al final
 """
 import json
 import os
@@ -89,7 +93,8 @@ def pendiente(carpeta):
     """Devuelve (texto, foto) si hay que publicar la carpeta, o None."""
     if os.path.exists(os.path.join(carpeta, REGISTRO)):
         return None
-    textos = TEXTOS[:1] if carpeta.rstrip("/").endswith("-short") else TEXTOS
+    solo = os.environ.get("TELEGRAM_SOLO_POST_TELEGRAM", "").strip() not in ("", "0")
+    textos = TEXTOS[:1] if solo or carpeta.rstrip("/").endswith("-short") else TEXTOS
     archivo = next((t for t in textos if os.path.isfile(os.path.join(carpeta, t))), None)
     if not archivo:
         return None
@@ -103,6 +108,9 @@ def pendiente(carpeta):
         return None
     texto = open(os.path.join(carpeta, archivo), encoding="utf-8").read().strip()
     texto = texto.replace("{youtube}", f"https://youtu.be/{res['videoId']}")
+    yt = os.environ.get("TELEGRAM_CANAL_YOUTUBE", "").strip()
+    if yt and yt.split("//")[-1].lower() not in texto.lower():
+        texto += f"\n\n🔔 اشترك في القناة: {yt}"
     foto = os.path.join(carpeta, "miniatura.png")
     return texto, (foto if os.path.isfile(foto) else None), res.get("subido", "")
 
