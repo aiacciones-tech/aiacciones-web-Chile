@@ -1362,4 +1362,64 @@ FICHAS = [
                 'stockanalysis.com (múltiplos históricos, oct-2026).',
      'fuentes_corto': 'Sacyr (CNMV), Empresa Exterior, Vozpópuli, Bolsamanía y stockanalysis.com',
      'elaborado': '3-nov-2026, 23:30'},
+    {'id': 'rovi',
+     'nombre': 'Laboratorios Rovi',
+     'ticker': 'ROVI',
+     'sector': 'Farmacia',
+     'lede': 'Farmacéutica española con dos negocios: especialidades farmacéuticas (heparinas de bajo peso molecular, su antipsicótico inyectable Okedi, '
+             'Neparvis y agentes de contraste) y fabricación para terceros (CDMO), con plantas en Madrid, Granada y, desde abril de 2026, Phoenix '
+             '(Arizona, EE. UU.).',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 162,8 M€ hasta septiembre (+67%), con ingresos totales de 633,7 M€ (+19%) y operativos de 610,2 M€ (+16%), impulsados '
+                'por la fabricación para terceros (+45%). El EBITDA de 226,6 M€ (+52%) incluye un badwill provisional de 62,4 M€ por la compra de la '
+                'planta de Phoenix; sin él, 164,3 M€ (+10%). Rovi eleva su previsión de ingresos operativos para 2026.',
+     'precio': '69,10 €',
+     'precio_fecha': '5-nov-2026, 09:47',
+     'multiplos': [('PER 12 meses', '~17,2x (24,7x sin badwill)'),
+                   ('EV/EBITDA', '~12,1x (15,4x sin badwill)'),
+                   ('Precio / patrimonio neto', '~4,9x'),
+                   ('Rentab. dividendo', '~1,39%'),
+                   ('Capitalización', '~3.534 M€')],
+     'multiplos_nota': 'Calculados con 69,10 € (5-nov-2026, hacia las 09:47, Europa Press), ya con los resultados publicados, 51,14 M de acciones '
+                       '(stockanalysis) y datos de 12 meses de Rovi (2025 + 9M26 - 9M25: beneficio neto 205,5 M€, EBITDA 293,3 M€; sin el badwill de '
+                       '62,4 M€, 143,1 y 230,9 M€); EV con la deuda neta de 27,9 M€; patrimonio neto de 717 M€ a junio de 2026 (stockanalysis); '
+                       'dividendo de 0,9594 € pagado en julio. A cierre de 2023, 2024 y 2025 (stockanalysis.com) el PER era 18,9x, 23,5x y 23,1x, el '
+                       'EV/EBITDA 13,5x, 16,7x y 17,1x (stockanalysis usa su propio EBITDA: comparación aproximada), el precio / patrimonio neto 5,91x, '
+                       '5,54x y 4,81x, y la rentabilidad por dividendo 1,91%, 1,53% y 1,53%.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos totales', '633,7', '+19%'),
+               ('Ingresos operativos', '610,2', '+16%'),
+               ('Fabricación a terceros (CDMO)', '263,9', '+45%'),
+               ('Especialidades farmacéuticas', '346,1', '+1%'),
+               ('EBITDA', '226,6', '+52%'),
+               ('EBITDA sin badwill', '164,3', '+10%'),
+               ('Beneficio neto', '162,8', '+67%'),
+               ('Beneficio neto 3T (calculado)', '78,3', '+35%'),
+               ('Flujo de caja libre', '61,9', '-2%')],
+     'kpi': 'Margen bruto 72,7% (67,1%; 68,9% sin otros ingresos, que incluyen una subvención del CDTI). Margen EBITDA 37,1% (28,5%); sin badwill, '
+            '26,9%. EBIT 198,7 M€ (+56%). Okedi 53,0 M€ (+29%; +35% en el 3T, calculado). Heparinas 180,9 M€ (-5%): enoxaparina biosimilar 107,0 M€ '
+            '(-5%) y bemiparina 66,7 M€ (-6%), por los inventarios de los socios. Neparvis 43,3 M€ (+3%); contrastes y otros hospitalarios 47,8 M€ '
+            '(+10%). I+D 58,4 M€ (+136%, fase III de Letrozol SIE); gastos generales 221,2 M€ (+24%). En el 3T (calculado): ingresos operativos 266,0 M€ '
+            '(+26%), CDMO 157,6 M€ (+51%), EBITDA 105,4 M€ (+26%). Capex 50,3 M€ (+31%). Deuda neta 27,9 M€ (21,9 M€ en diciembre; caja neta de 22,5 M€ '
+            'en junio).',
+     'guia': 'Eleva la previsión 2026: ingresos operativos entre la banda media y la alta de la primera decena (0-10%) frente a 2025 (antes, entre la '
+             'baja y la media). Heparinas de bajo peso molecular: caída en la banda media de 0-10%; gastos generales sin ROIS Phoenix: subida entre la '
+             'banda media y la alta. Previsión 2027 con los resultados anuales, en febrero de 2027. Dividendo con cargo a 2025: 0,9594 € brutos por '
+             'acción, pagado el 15-jul-2026 (ex-dividendo 13-jul). Sin dividendos nuevos anunciados en el informe de 9M.',
+     'positivos': ['La fabricación para terceros crece un 45%, hasta 263,9 M€, y un 51% en el tercer trimestre (calculado).',
+                   'Okedi vende 53,0 M€ (+29%) y acelera en el 3T (+35% interanual y +13% frente al 2T).',
+                   'El margen bruto sube 5,7 puntos, hasta el 72,7%, y Rovi eleva su previsión de ingresos operativos para 2026.'],
+     'riesgos': ['Las heparinas, su mayor negocio propio, caen un 5% por los inventarios de los socios, y Rovi prevé que sigan bajando en 2026.',
+                 'Sin el badwill de 62,4 M€ de Phoenix (provisional), el EBITDA crece un 10%, con I+D +136% y gastos generales +24%.',
+                 'El flujo de caja libre baja un 2% por el capex (+31%) y Rovi vuelve a deuda neta (27,9 M€) tras pagar el dividendo.'],
+     'videos': [('U2PKODF57do', 'Rovi resultados 3T 2026: beneficio +67%, hasta 162,8 M€ | CDMO +45% y previsión de ingresos al alza'),
+                ('jQhfxew8KlU', 'Rovi 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-25',
+     'proximo_estimado': True,
+     'fuentes': 'Rovi, nota de prensa y presentación de resultados de los nueve primeros meses de 2026 (CNMV y rovi.es, 5-nov-2026) y nota del primer '
+                'semestre de 2026; Bolsamanía, El Español, Pharmatech, Investing.com y Europa Press (5-nov-2026); stockanalysis.com (múltiplos '
+                'históricos y acciones).',
+     'fuentes_corto': 'Rovi (CNMV), Bolsamanía, El Español, Investing.com, Europa Press y stockanalysis.com',
+     'elaborado': '5-nov-2026, 11:00'},
 ]
