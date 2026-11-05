@@ -1,0 +1,47 @@
+# Publica en el canal de Telegram de Saudi Arabia AI Stocks (en árabe) cada video de cola-sa/ (rama youtube-cola)
+# cuando ya está subido a YouTube: foto (miniatura.png) + post-telegram.txt o post-facebook.txt con el enlace del video.
+# Credenciales: Settings > Secrets and variables > Actions > TELEGRAM_BOT_TOKEN_SAUDI (token de @BotFather)
+# y TELEGRAM_CHANNEL_SAUDI (@usuario del canal). El bot tiene que ser administrador del canal.
+# "Run workflow" con modo=verificar solo prueba el bot y el canal; modo=publicar manda lo pendiente.
+name: Publicar en Telegram (Arabia Saudita)
+concurrency: telegram-saudi
+on:
+  workflow_run:
+    workflows: ["Subir videos a YouTube (Arabia Saudita)"]
+    types: [completed]
+  push:
+    branches: [youtube-cola]
+    paths: ['cola-sa/**/post-telegram.txt']
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "verificar (solo el bot y el canal) o publicar (desde la rama youtube-cola)"
+        default: verificar
+permissions:
+  contents: write
+jobs:
+  telegram:
+    runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN_SAUDI }}
+      TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL_SAUDI || vars.TELEGRAM_CHANNEL_SAUDI }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar') && 'youtube-cola' || github.ref }}
+      - name: Verificar bot y canal
+        if: github.event_name == 'workflow_dispatch' && inputs.modo != 'publicar'
+        run: python3 scripts/telegram.py verificar
+      - name: Publicar pendientes
+        if: github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar'
+        run: python3 scripts/telegram.py publicar cola-sa
+      - name: Guardar lo publicado
+        if: always() && (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar')
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add cola-sa
+          git diff --cached --quiet && exit 0
+          git commit -m "Telegram Arabia Saudita $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
+          exit 1
