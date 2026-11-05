@@ -69,11 +69,13 @@ jobs:
       - name: Mandar posts pendientes
         if: github.event_name != 'workflow_dispatch' || inputs.modo == 'programar'
         run: |
-          python3 scripts/buffer.py programar cola
-          if [ -d cola-es ]; then python3 scripts/buffer.py programar cola-es; fi
-          if [ -d cola-eau ]; then python3 scripts/buffer.py programar cola-eau; fi
-          if [ -d cola-qa ]; then python3 scripts/buffer.py programar cola-qa; fi
-          if [ -d cola-sa ]; then python3 scripts/buffer.py programar cola-sa; fi
+          # Cada canal por separado: si falla uno (p. ej. un post duplicado), los demás se mandan igual y el paso falla al final.
+          rc=0
+          python3 scripts/buffer.py programar cola || rc=1
+          for q in cola-es cola-eau cola-qa cola-sa; do
+            if [ -d "$q" ]; then python3 scripts/buffer.py programar "$q" || rc=1; fi
+          done
+          exit $rc
       - name: Guardar IDs de Buffer
         if: always() && (github.event_name != 'workflow_dispatch' || inputs.modo == 'programar')
         run: |
