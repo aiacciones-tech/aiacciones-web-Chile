@@ -1,6 +1,26 @@
 {
- "actualizado": "2026-11-03T22:22Z",
+ "actualizado": "2026-11-05T01:46Z",
  "items": [
+  {
+   "num": "2026110704791",
+   "id": "aguas-a",
+   "ent": "AGUAS ANDINAS S.A.",
+   "fecha": "2026-11-04 08:13",
+   "materias": [
+    "Otros"
+   ],
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=7e9a82bc644922c1d8b9b48f44c9605bVFdwQmVVNXFSWGhOUkdOM1RrUmpOVTFSUFQwPQ==&secuencia=-1&t=1793843161"
+  },
+  {
+   "num": "2026110703591",
+   "id": "cap",
+   "ent": "CAP S.A.",
+   "fecha": "2026-11-03 20:13",
+   "materias": [
+    "Otros"
+   ],
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=763c6dfd7b542d04e50d2c2c62055bc7VFdwQmVVNXFSWGhOUkdOM1RYcFZOVTFSUFQwPQ==&secuencia=-1&t=1793843161"
+  },
   {
    "num": "2026110701844",
    "id": "chile",
@@ -9,7 +29,7 @@
    "materias": [
     "Otros"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=055b913524db714de793589ba20990dfVFdwQmVVNXFSWGhOUkdOM1RWUm5NRTVCUFQwPQ==&secuencia=-1&t=1793744521"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=055b913524db714de793589ba20990dfVFdwQmVVNXFSWGhOUkdOM1RWUm5NRTVCUFQwPQ==&secuencia=-1&t=1793843161"
   },
   {
    "num": "2026100696130",
@@ -19,7 +39,7 @@
    "materias": [
     "División, fusión o constitución de sociedades"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=471c883d531f8f325bdae1eaaa26a6e1VFdwQmVVNXFSWGROUkZrMVRtcEZlazFCUFQwPQ==&secuencia=-1&t=1793744521"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=471c883d531f8f325bdae1eaaa26a6e1VFdwQmVVNXFSWGROUkZrMVRtcEZlazFCUFQwPQ==&secuencia=-1&t=1793843161"
   },
   {
    "num": "2026100694776",
@@ -29,7 +49,7 @@
    "materias": [
     "Cambios en la administración"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=b6ae3a4755395b5b9288c0d8df005fc8VFdwQmVVNXFSWGROUkZrMVRrUmpNMDVuUFQwPQ==&secuencia=-1&t=1793744521"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=b6ae3a4755395b5b9288c0d8df005fc8VFdwQmVVNXFSWGROUkZrMVRrUmpNMDVuUFQwPQ==&secuencia=-1&t=1793843161"
   },
   {
    "num": "2026100691775",
@@ -39,7 +59,7 @@
    "materias": [
     "Cambio Gerentes / Directorio"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=1eef7d3c399338ef384a6923cd051e7bVFdwQmVVNXFSWGROUkZrMVRWUmpNMDVSUFQwPQ==&secuencia=-1&t=1793744521"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=1eef7d3c399338ef384a6923cd051e7bVFdwQmVVNXFSWGROUkZrMVRWUmpNMDVSUFQwPQ==&secuencia=-1&t=1793843161"
   },
   {
    "num": "2026100689366",
@@ -49,7 +69,7 @@
    "materias": [
     "Reparto de utilidades (pago de dividendos)"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=b6cc3ff4f41bbf89cb5c3a38321a5d31VFdwQmVVNXFSWGROUkZrMFQxUk5NazVuUFQwPQ==&secuencia=-1&t=1793744521"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=b6cc3ff4f41bbf89cb5c3a38321a5d31VFdwQmVVNXFSWGROUkZrMFQxUk5NazVuUFQwPQ==&secuencia=-1&t=1793843161"
   },
   {
    "num": "2026100689343",
@@ -59,7 +79,7 @@
    "materias": [
     "Reparto de utilidades (pago de dividendos)"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=938aed73dd6b588fdee3e6eb5c98d3b4VFdwQmVVNXFSWGROUkZrMFQxUk5NRTEzUFQwPQ==&secuencia=-1&t=1793744521"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=938aed73dd6b588fdee3e6eb5c98d3b4VFdwQmVVNXFSWGROUkZrMFQxUk5NRTEzUFQwPQ==&secuencia=-1&t=1793843161"
   },
   {
    "num": "2026100689118",
@@ -69,7 +89,7 @@
    "materias": [
     "Reparto de utilidades (pago de dividendos)"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0b47e59e99949bbe07a22e59d1adb410VFdwQmVVNXFSWGROUkZrMFQxUkZlRTlCUFQwPQ==&secuencia=-1&t=1793744521"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0b47e59e99949bbe07a22e59d1adb410VFdwQmVVNXFSWGROUkZrMFQxUkZlRTlCUFQwPQ==&secuencia=-1&t=1793843161"
   },
   {
    "num": "2026100685320",
