@@ -1,0 +1,4 @@
+{
+ "id": null,
+ "nota": "Buffer rechazó el reenvío por duplicado (already scheduled or posted), así que el post ya existe en Buffer. Archivo creado a mano el 2026-11-06 para que no se reintente en cada ejecución."
+}
