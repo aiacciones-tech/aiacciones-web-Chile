@@ -5,7 +5,9 @@
 # Credenciales: Settings > Secrets and variables > Actions > TELEGRAM_BOT_TOKEN_ES (token de @BotFather)
 # y TELEGRAM_CHANNEL_ES (@usuario del canal, p. ej. @AIAccionesEspana). El bot tiene que ser administrador del canal.
 # Mientras falten los secretos, el workflow no hace nada (sale en verde con un aviso).
-# TELEGRAM_DESDE evita publicar de golpe los videos anteriores al canal (se creó el 6-nov-2026).
+# TELEGRAM_DESDE evita publicar de golpe los videos antiguos: el canal arrancó (6-nov-2026) con los 3 últimos
+# (Sacyr, Rovi y ArcelorMittal, subidos desde el 3-nov). Cada post lleva el enlace al canal de YouTube.
+# El script se toma siempre de main (la rama youtube-cola puede tener una copia vieja).
 # Corre al terminar cada subida a YouTube de España y una vez al día de repaso.
 # "Run workflow" con modo=verificar solo prueba el bot y el canal; modo=publicar manda lo pendiente.
 name: Publicar en Telegram (España)
@@ -30,7 +32,9 @@ jobs:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN_ES }}
       TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL_ES || vars.TELEGRAM_CHANNEL_ES }}
       TELEGRAM_TEXTOS: post-telegram.txt,post-linkedin.txt
-      TELEGRAM_DESDE: "2026-11-06"
+      TELEGRAM_CANAL_YOUTUBE: https://www.youtube.com/@AIAccionesEspa%C3%B1a
+      TELEGRAM_TEXTO_YOUTUBE: "Suscríbete al canal de YouTube:"
+      TELEGRAM_DESDE: "2026-11-03"
       PUBLICAR: ${{ github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar' }}
     steps:
       - name: Revisar que los secretos de España estén cargados
@@ -56,10 +60,10 @@ jobs:
           sparse-checkout-cone-mode: false
       - name: Verificar bot y canal
         if: steps.secretos.outputs.listo == 'si' && env.PUBLICAR != 'true'
-        run: python3 scripts/telegram.py verificar
+        run: git fetch -q --depth=1 origin main && git show origin/main:scripts/telegram.py > "$RUNNER_TEMP/telegram.py" && python3 "$RUNNER_TEMP/telegram.py" verificar
       - name: Publicar pendientes
         if: steps.secretos.outputs.listo == 'si' && env.PUBLICAR == 'true'
-        run: python3 scripts/telegram.py publicar cola-es
+        run: git fetch -q --depth=1 origin main && git show origin/main:scripts/telegram.py > "$RUNNER_TEMP/telegram.py" && python3 "$RUNNER_TEMP/telegram.py" publicar cola-es
       - name: Guardar lo publicado
         if: always() && steps.secretos.outputs.listo == 'si' && env.PUBLICAR == 'true'
         run: |
