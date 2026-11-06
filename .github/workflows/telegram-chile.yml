@@ -19,6 +19,9 @@ on:
       modo:
         description: "verificar (solo el bot y el canal) o publicar (desde la rama youtube-cola)"
         default: verificar
+      ultimos:
+        description: "con modo=publicar: publicar solo los N videos más recientes aún no publicados (aunque sean anteriores a TELEGRAM_DESDE)"
+        default: ""
 permissions:
   contents: write
 jobs:
@@ -32,6 +35,7 @@ jobs:
       TELEGRAM_TEXTO_YOUTUBE: "Suscríbete al canal:"
       TELEGRAM_WEB: https://aiacciones.cl
       TELEGRAM_DESDE: ${{ vars.TELEGRAM_DESDE_CL || '2026-11-06' }}
+      TELEGRAM_ULTIMOS: ${{ github.event_name == 'workflow_dispatch' && inputs.ultimos || '' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -41,7 +45,7 @@ jobs:
         run: python3 scripts/telegram.py verificar
       - name: Publicar pendientes
         if: (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar') && env.TELEGRAM_BOT_TOKEN != ''
-        run: python3 scripts/telegram.py publicar cola
+        run: git fetch -q --depth=1 origin main && git show origin/main:scripts/telegram.py > "$RUNNER_TEMP/telegram.py" && python3 "$RUNNER_TEMP/telegram.py" publicar cola
       - name: Guardar lo publicado
         if: always() && (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar')
         run: |
