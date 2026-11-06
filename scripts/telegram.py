@@ -22,6 +22,10 @@ Opcional (lo usa Qatar):
 Opcional (lo usa EAU):
   TELEGRAM_TEXTOS=a.txt,b.txt     textos a buscar, en orden (por defecto post-telegram.txt,post-facebook.txt)
   TELEGRAM_DESDE=2026-11-03       ignora los videos subidos antes de esa fecha (para no publicar el atrasado)
+Opcional (lo usa Chile):
+  TELEGRAM_ULTIMOS=3              publica solo los 3 videos más recientes aún no publicados (ignora TELEGRAM_DESDE)
+  TELEGRAM_TEXTO_YOUTUBE=...      frase antes del enlace al canal de YouTube (por defecto en árabe)
+  TELEGRAM_WEB=https://aiacciones.cl   si el texto no trae ese sitio, se añade "🌐 <web>" al final
 """
 import json
 import os
@@ -40,7 +44,7 @@ REGISTRO = "telegram.json"
 def llamar(metodo, campos=None, archivo=None):
     token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
     if not token:
-        sys.exit("Falta el secreto del bot de Telegram (TELEGRAM_BOT_TOKEN_SAUDI).")
+        sys.exit("Falta el secreto del bot de Telegram (TELEGRAM_BOT_TOKEN_<PAÍS>).")
     url = API.format(token=token, metodo=metodo)
     campos = {k: v for k, v in (campos or {}).items() if v is not None}
     if archivo:
@@ -73,7 +77,7 @@ def llamar(metodo, campos=None, archivo=None):
 def canal():
     c = os.environ.get("TELEGRAM_CHANNEL", "").strip()
     if not c:
-        sys.exit("Falta el secreto del canal de Telegram (TELEGRAM_CHANNEL_SAUDI), p. ej. @SaudiArabiaAIStocks.")
+        sys.exit("Falta el secreto del canal de Telegram (TELEGRAM_CHANNEL_<PAÍS>), p. ej. @aiaccioneschile.")
     if c.startswith("https://t.me/") or c.startswith("t.me/"):
         c = "@" + c.rstrip("/").rsplit("/", 1)[1]
     elif not c.startswith("@") and not c.lstrip("-").isdigit():
@@ -108,7 +112,8 @@ def pendiente(carpeta):
         return None
     res = json.load(open(res_path, encoding="utf-8"))
     desde = os.environ.get("TELEGRAM_DESDE", "").strip()
-    if desde and res.get("subido", "") < desde:
+    ultimos = os.environ.get("TELEGRAM_ULTIMOS", "").strip()
+    if desde and not ultimos and res.get("subido", "") < desde:
         return None
     if res.get("privacy") != "public":
         print(f"{carpeta}: el video no es público todavía")
@@ -117,7 +122,11 @@ def pendiente(carpeta):
     texto = texto.replace("{youtube}", f"https://youtu.be/{res['videoId']}")
     yt = os.environ.get("TELEGRAM_CANAL_YOUTUBE", "").strip()
     if yt and yt.split("//")[-1].lower() not in texto.lower():
-        texto += f"\n\n🔔 اشترك في القناة: {yt}"
+        frase = os.environ.get("TELEGRAM_TEXTO_YOUTUBE", "").strip() or "اشترك في القناة:"
+        texto += f"\n\n🔔 {frase} {yt}"
+    web = os.environ.get("TELEGRAM_WEB", "").strip()
+    if web and web.split("//")[-1].rstrip("/").lower() not in texto.lower():
+        texto += f"\n🌐 {web}"
     foto = os.path.join(carpeta, "miniatura.png")
     return texto, (foto if os.path.isfile(foto) else None), res.get("subido", "")
 
@@ -132,7 +141,11 @@ def publicar(base):
     if not lista:
         print("No hay posts pendientes para Telegram.")
         return
-    for _, d, texto, foto in sorted(lista):
+    lista.sort()
+    ultimos = os.environ.get("TELEGRAM_ULTIMOS", "").strip()
+    if ultimos.isdigit() and int(ultimos) > 0:
+        lista = lista[-int(ultimos):]
+    for _, d, texto, foto in lista:
         ids = []
         if foto and len(texto) <= LIMITE_PIE:
             ids.append(llamar("sendPhoto", {"chat_id": destino, "caption": texto}, ("photo", foto))["message_id"])

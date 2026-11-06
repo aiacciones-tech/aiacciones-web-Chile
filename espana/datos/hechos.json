@@ -1,6 +1,86 @@
 {
- "actualizado": "2026-11-05T20:34Z",
+ "actualizado": "2026-11-06T12:45Z",
  "items": [
+  {
+   "id": "96ba1bd4-cea0-4265-ae86-d10473e9dbb0",
+   "tipo": "OIR",
+   "fecha": "2026-11-06 08:59",
+   "entidad": "CAIXABANK, S.A.",
+   "nif": "A08663619",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información relativa a la ejecución de su Programa de recompra de acciones propias.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b96ba1bd4-cea0-4265-ae86-d10473e9dbb0%7d",
+   "ticker": "CABK",
+   "temas": []
+  },
+  {
+   "id": "23050916-4ee9-4db7-b1b1-3854214c5dc8",
+   "tipo": "OIR",
+   "fecha": "2026-11-06 08:00",
+   "entidad": "INTERNATIONAL CONSOLIDATED AIRLINES GROUP, S.A.",
+   "nif": "A85845535",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad remite la presentación de resultados correspondiente al tercer trimestre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b23050916-4ee9-4db7-b1b1-3854214c5dc8%7d",
+   "ticker": "IAG",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "85e9316a-dd0c-44c2-be09-c541da458b5c",
+   "tipo": "OIR",
+   "fecha": "2026-11-06 07:58",
+   "entidad": "INTERNATIONAL CONSOLIDATED AIRLINES GROUP, S.A.",
+   "nif": "A85845535",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad remite el informe de gestión intermedio para el periodo finalizado el 30 de septiembre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b85e9316a-dd0c-44c2-be09-c541da458b5c%7d",
+   "ticker": "IAG",
+   "temas": []
+  },
+  {
+   "id": "9b116066-e25d-498d-ad4a-60aaaf171c0f",
+   "tipo": "OIR",
+   "fecha": "2026-11-06 07:39",
+   "entidad": "AMADEUS IT GROUP, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La sociedad remite la información financiera del tercer trimestre de 2026 - Presentación (en inglés).",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b9b116066-e25d-498d-ad4a-60aaaf171c0f%7d",
+   "ticker": "AMS",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "bc778f8b-d203-4336-bc84-37e721c2d4d4",
+   "tipo": "OIR",
+   "fecha": "2026-11-06 07:38",
+   "entidad": "AMADEUS IT GROUP, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La sociedad remite la información financiera del tercer trimestre de 2026 - Nota de prensa.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bbc778f8b-d203-4336-bc84-37e721c2d4d4%7d",
+   "ticker": "AMS",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "ad601650-03b9-4b85-a9f6-f900bd17ad53",
+   "tipo": "OIR",
+   "fecha": "2026-11-06 07:37",
+   "entidad": "AMADEUS IT GROUP, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La sociedad remite la información financiera del tercer trimestre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bad601650-03b9-4b85-a9f6-f900bd17ad53%7d",
+   "ticker": "AMS",
+   "temas": [
+    "resultados"
+   ]
+  },
   {
    "id": "5742c804-1b85-4ac9-8f5d-18a15c195873",
    "tipo": "OIR",
