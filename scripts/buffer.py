@@ -125,6 +125,7 @@ def archivo_post(carpeta, r, pais):
         if nombre and os.path.isfile(os.path.join(carpeta, nombre)):
             return nombre
     return None
+CANAL_CL = "youtube.com/@aiaccioneschile"  # canal de YouTube de Chile
 CLAVES_ES = ("BUFFER_API_KEY_ES", "BUFFER_API_KEY_ES2")  # cuentas de Buffer solo de España
 CLAVES_EAU = ("BUFFER_API_KEY_EAU", "BUFFER_API_KEY_EAU2")  # cuentas de Buffer solo de EAU (@AIStocksUAE)
 CANAL_EAU = "https://www.youtube.com/@AIStocksUAE"
@@ -353,6 +354,9 @@ def programar(base):
         if pais == "chile" and r.get("video") and "aiacciones.cl" not in texto:
             # todo post de Chile lleva la web (en TikTok/Instagram no es clicable, pero se ve)
             texto += "\n\nFicha completa en aiacciones.cl"
+        if pais == "chile" and red == "tiktok" and CANAL_CL.lower() not in texto.lower():
+            # todo video de Chile en TikTok lleva el enlace al canal de YouTube (Daniel, 6-nov-2026)
+            texto += f"\n▶️ Video completo en YouTube: {CANAL_CL}"
         canal_yt = PROPIOS[pais][1] if pais in PROPIOS else None
         if canal_yt and canal_yt.lower() not in texto.lower():
             # todo post de EAU (y Qatar) lleva el enlace al canal de YouTube (Daniel, 29-oct-2026)
