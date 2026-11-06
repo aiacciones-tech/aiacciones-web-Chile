@@ -46,6 +46,10 @@ DIVIDENDOS = [
      "ex": "2026-11-12", "pago": "2026-12-02",
      "fuente": "ArcelorMittal, página de dividendos (anuncio del 5-nov-2026)",
      "url": "https://corporate.arcelormittal.com/investors/equity-investors/dividends"},
+    {"ticker": "IAG", "importe": "0,053 €", "tipo": "Dividendo a cuenta de 2026, en efectivo (+10% frente a 0,048 €)",
+     "ex": "2026-12-03", "pago": "2026-12-07",
+     "fuente": "IAG, otra información relevante en la CNMV (5-nov-2026)",
+     "url": None},
     {"ticker": "REP", "importe": "0,56 €", "tipo": "En efectivo: 0,53 € de reservas + 0,03 € a cuenta de 2026",
      "ex": None, "pago": None, "pago_txt": "enero de 2027",
      "fuente": "Repsol, nota de prensa de resultados del 3T 2026 (CNMV, 29-oct-2026)",
@@ -73,7 +77,6 @@ DIVIDENDOS = [
 
 # Dividendos que la empresa ha anunciado sin importe o sin fecha todavía (texto de su última comunicación).
 POR_ANUNCIAR = [
-    ("IAG", "El dividendo a cuenta de 2026 se decidirá con los resultados del tercer trimestre.", "IAG, resultados del 1S 2026"),
     ("ENG", "Dividendo de 1 € por acción con cargo a 2026; falta el calendario del pago a cuenta.", "Enagás, resultados de 9M 2026"),
     ("FER", "Nuevo dividendo flexible (scrip) de 600 M€: el importe por acción se conocerá el 3-nov, ex-dividendo el 5-nov y pago desde el 10-dic de 2026.", "Ferrovial, resultados de 9M 2026"),
 ]
