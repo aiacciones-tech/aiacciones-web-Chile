@@ -1074,55 +1074,64 @@ FICHAS = [
      'lede': 'International Airlines Group es el grupo de British Airways, Iberia, Vueling, Aer Lingus y LEVEL, además de IAG Loyalty (Avios) e IAG '
              'Cargo. Cotiza en Madrid (IBEX 35) y Londres. En una aerolínea pesan la capacidad (AKO), la ocupación, el ingreso por asiento-kilómetro y '
              'el combustible.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio neto de 1.033 M€ (-20,6%) por el encarecimiento del combustible; beneficio operativo antes de excepcionales de 1.757 M€ '
-                '(-6,4%), con un 2T (1.406 M€) un 2,8% por encima del consenso que recoge Renta 4 (calculado). Flujo de caja libre de 2.905 M€ y deuda '
-                'neta de 4.692 M€ (0,6x EBITDA).',
-     'precio': '4,78 €',
-     'precio_fecha': '23-oct-2026, 11:52',
-     'multiplos': [('PER 12 meses', '~7,1x'),
-                   ('EV/EBITDA', '~3,4x'),
-                   ('Rentab. dividendo', '~2,05%'),
-                   ('FCF yield', '~18,8%'),
-                   ('Capitalización', '~21.000 M€')],
-     'multiplos_nota': 'Con precio de 4,78 € en el BME el 23-oct-2026 a las 11:52 (Bolsamanía); múltiplos calculados con ~4.400 M de acciones '
-                       '(stockanalysis.com) y datos de 12 meses de IAG (BPA básico 66,9 céntimos, EBITDA 7.640 M€, deuda neta 4.692 M€, dividendo 2025 '
-                       'de 0,098 €, flujo libre 3.954 M€). A cierre de 2023, 2024 y 2025 (stockanalysis, cotización de Londres) el PER era 3,3x, 6,5x y '
-                       '6,5x, el EV/EBITDA 4,4x, 4,9x y 4,6x, la rentabilidad por dividendo -, 2,54% y 2,08%, y la rentabilidad por flujo libre 15,0%, '
-                       '20,1% y 14,5%. La recompra en curso (1.500 M€) equivale a ~7% de la capitalización.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ingresos', '16.064', '+1,0%'),
-               ('Ingresos de pasaje', '14.082', '+2,3%'),
-               ('Beneficio operativo antes de excepcionales', '1.757', '-6,4%'),
-               ('Beneficio operativo 2T antes de excepcionales', '1.406', '-16,3%'),
-               ('Beneficio neto', '1.033', '-20,6%'),
-               ('BPA básico', '22,9 cts', '-16,1%'),
-               ('Flujo de caja libre', '2.905', '+38,5% (calculado)')],
-     'kpi': 'Margen operativo antes de excepcionales 10,9% (11,8%); 2T 15,8% (19,0%). Capacidad (AKO) -0,1%, ocupación 85,0% (+0,9 pp), 57,9 M de '
-            'pasajeros. Ingreso de pasaje por AKO +2,4% (+6,2% a tipo de cambio constante); coste unitario sin combustible -1,3%; combustible y '
-            'emisiones 3.956 M€ (+12,3%). Beneficio operativo por aerolínea: British Airways 1.020 M€ (+44), Iberia 526 M€ (-38), Vueling 46 M€ (-49), '
-            'Aer Lingus -34 M€ (-114), IAG Loyalty 275 M€ (+48). Excepcionales 149 M€ (ERE voluntario de Iberia y reestructuración de BA). Deuda neta '
-            '4.692 M€ (-1.256 M€ vs diciembre), 0,6x EBITDA; liquidez 11.873 M€.',
-     'guia': 'Guía 2026: capacidad plana frente a 2025 (cerca de +3% en febrero); combustible 8.300-8.600 M€ (unos 9.000 M€ en mayo), con la meta de '
-             'recuperar ~60% del sobrecoste; margen operativo dentro del objetivo del 12%-15%; coste unitario sin combustible plano; inversión ~3.400 '
-             'M€. Recompra de 1.500 M€ con ~800 M€ ejecutados, a terminar antes de finales de febrero de 2027; dividendo 2025 de 0,098 € por acción '
-             '(+8,9%); el dividendo a cuenta de 2026 se decidirá con los resultados del 3T.',
-     'positivos': ['Flujo de caja libre de 2.905 M€ y deuda neta de solo 0,6x EBITDA.',
-                   'El ingreso de pasaje por AKO sube un 6,2% a tipo de cambio constante y el beneficio operativo del 2T supera el consenso.',
-                   'British Airways e IAG Loyalty mejoran, y la recompra de 1.500 M€ sigue adelante.'],
-     'riesgos': ['El combustible sube un 12,3% en el semestre y un 22,8% en el 2T.',
-                 'Aer Lingus pasa a pérdidas y Vueling gana la mitad que hace un año.',
-                 'La capacidad de 2026 queda plana por las rutas suspendidas en Oriente Medio y la competencia en el corto radio europeo.'],
-     'videos': [('ShNA56tU4sY', 'IAG resultados 1S 2026: beneficio 1.033 M€ (-20,6%) por el combustible | Deuda neta -1.256 M€'),
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve meses de 2026 (enero-septiembre)',
+     'titular': 'Beneficio neto de 2.264 M€ hasta septiembre (-16,2%) por el encarecimiento del combustible (+30,4% en el 3T). Ingresos récord en el 3T '
+                '(9.744 M€, +4,5%), aunque el beneficio operativo del trimestre (1.726 M€, -15,9%) quedó por debajo del consenso. La deuda neta baja a '
+                '4.220 M€ (0,6x EBITDA) y IAG pagará el 7 de diciembre un dividendo a cuenta de 0,053 € brutos por acción (+10%).',
+     'precio': '5,192 €',
+     'precio_fecha': '6-nov-2026, 17:35 (cierre)',
+     'multiplos': [('PER 12 meses', '~8,0x'),
+                   ('EV/EBITDA', '~3,5x'),
+                   ('Rentab. dividendo', '~1,98%'),
+                   ('Recompra / capitalización', '~6,6%'),
+                   ('Capitalización', '~22.800 M€')],
+     'multiplos_nota': 'Con precio de 5,192 € al cierre del BME el 6-nov-2026 (Bolsamanía); múltiplos calculados con ~4.400 M de acciones '
+                       '(stockanalysis.com) y datos de 12 meses de IAG: BPA básico 64,7 céntimos (71,3 de 2025 + 50,6 de 9M26 - 57,2 de 9M25), valor '
+                       'empresa ~27.100 M€ con la deuda neta de septiembre (4.220 M€) y el EBITDA antes de excepcionales de 12 meses a junio (7.640 M€, '
+                       'último publicado), y dividendos anunciados en 12 meses de 0,103 € (0,05 € complementario de 2025 y 0,053 € a cuenta de 2026). A '
+                       'cierre de 2023, 2024 y 2025 (stockanalysis, cotización de Londres) el PER era 3,3x, 6,5x y 6,5x, el EV/EBITDA 4,4x, 4,9x y 4,6x, '
+                       'y la rentabilidad por dividendo -, 2,54% y 2,08%. La recompra en curso (1.500 M€) equivale a ~6,6% de la capitalización.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos', '25.808', '+2,3%'),
+               ('Ingresos 3T', '9.744', '+4,5%'),
+               ('Ingresos de pasaje', '22.662', '+2,9%'),
+               ('Beneficio operativo antes de excepcionales', '3.483', '-11,4%'),
+               ('Beneficio operativo 3T antes de excepcionales', '1.726', '-15,9%'),
+               ('Beneficio neto', '2.264', '-16,2%'),
+               ('Beneficio neto 3T', '1.231', '-12,2%'),
+               ('BPA básico', '50,6 cts', '-11,5% (calculado)'),
+               ('Deuda neta (30-sep-2026)', '4.220', '-472 vs junio (calculado)')],
+     'kpi': 'Margen operativo antes de excepcionales 13,5% (15,6%); 3T 17,7% (22,0%). Capacidad (AKO) -0,2%, ocupación 86,1% (+0,3 pp), 92,6 M de '
+            'pasajeros (+0,2%). Ingreso de pasaje por AKO 3T +4,1% (Atlántico Norte +11%); 9M +3,0%. Combustible y emisiones 3T 2.444 M€ (+30,4%), 9M '
+            '6.400 M€ (+18,6%); coste unitario sin combustible 3T +3,4% (interrupciones del control aéreo), 9M +0,3%. Beneficio operativo de 9M por '
+            'aerolínea: British Airways 1.493 M£ (-144), Iberia 978 M€ (-96), Vueling 303 M€ (-64), Aer Lingus 108 M€ (-142), IAG Loyalty 391 M£ (+59). '
+            'Excepcionales del 1S de 149 M€ (sin excepcionales en el 3T). Deuda neta 4.220 M€ (-1.728 M€ vs diciembre, calculado), 0,6x EBITDA; liquidez '
+            '12.490 M€. El 3T quedó por debajo del consenso recopilado por IAG (~1.810 M€; -4,6%, calculado).',
+     'guia': 'Guía 2026: margen operativo antes de excepcionales de al menos el 12% (se mantiene); capacidad algo menor que en 2025 (plana en julio; '
+             '~+3% en febrero); combustible ~8.900 M€ (8.300-8.600 M€ en julio); coste unitario sin combustible ~+1% (plano en julio); inversión 3.100 '
+             'M€ (3.400 M€) con 12 entregas de aviones (16); 85% de las reservas del 4T aseguradas y 45% del combustible de 2027 cubierto. Dividendo a '
+             'cuenta de 2026: 0,053 € brutos por acción (+10%; 0,048 € en 2025), fecha ex-dividendo 3-dic-2026, registro 4-dic y pago desde el '
+             '7-dic-2026. Recompra de 1.500 M€: arranca el último tramo, de 500 M€, que terminará en febrero de 2027.',
+     'positivos': ['Ingresos récord en el 3T (9.744 M€, +4,5%), con el ingreso de pasaje por AKO un 4,1% arriba y el Atlántico Norte un 11%.',
+                   'La deuda neta sigue bajando, hasta 4.220 M€ (0,6x EBITDA), con una liquidez de 12.490 M€.',
+                   'El dividendo a cuenta sube un 10% y empieza el último tramo de la recompra de 1.500 M€.'],
+     'riesgos': ['El combustible sube un 30,4% en el 3T y la factura prevista para 2026 pasa a ~8.900 M€.',
+                 'El coste unitario sin combustible sube un 3,4% en el 3T por las interrupciones del control aéreo, y el beneficio operativo del '
+                 'trimestre quedó por debajo del consenso.',
+                 'Europa se complica por la competencia: Vueling y Aer Lingus ganan menos y la capacidad de 2026 será algo menor que la de 2025.'],
+     'videos': [('yYKwjQjEcJs', 'IAG resultados 3T 2026: beneficio 2.264 M€ (-16,2%) por el combustible | Dividendo a cuenta +10%'),
+                ('OMG3liN3o6M', 'IAG 3T 2026 en 60 segundos (Short)'),
+                ('ShNA56tU4sY', 'IAG resultados 1S 2026: beneficio 1.033 M€ (-20,6%) por el combustible | Deuda neta -1.256 M€'),
                 ('sDSWqb5VGVs', 'IAG 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-11-06',
-     'proximo_estimado': False,
-     'fuentes': 'IAG, informe semestral 1S 2026 (31-jul-2026, CNMV y LSE), resultados 2025 (27-feb-2026) y calendario financiero; XTB (31-jul-2026); '
-                'Renta 4 Banco / Capitalbolsa (consenso, 31-jul-2026); Estrategias de Inversión (1T26, 8-may-2026); Bolsamanía (precio, 23-oct-2026); '
-                'stockanalysis.com (acciones y múltiplos históricos).',
-     'fuentes_corto': 'XTB, Renta 4 Banco, Estrategias de Inversión, Bolsamanía y stockanalysis.com',
-     'elaborado': '23-oct-2026, 12:35'},
+     'proximo': '2027-02-26',
+     'proximo_estimado': True,
+     'fuentes': 'IAG, informe de gestión intermedio de 9M 2026 y presentación (6-nov-2026, CNMV) y dividendo a cuenta (CNMV, 5-nov-2026), según Europa '
+                'Press, Aviacionline, Hosteltur, Fly News, The Officer, El Español, Actualidad Aeroespacial y Alliance News/MarketScreener (6-nov-2026); '
+                'fechas del dividendo: RNS (Investegate), Finect y Bolsamanía; IAG, informe 1S 2026 y resultados 2025; XTB (consenso); Bolsamanía '
+                '(precio, 6-nov-2026); stockanalysis.com (acciones y múltiplos históricos).',
+     'fuentes_corto': 'Europa Press, Aviacionline, Hosteltur, Fly News, Alliance News, XTB, Bolsamanía y stockanalysis.com',
+     'elaborado': '6-nov-2026, 23:45'},
     {'id': 'acerinox',
      'nombre': 'Acerinox',
      'ticker': 'ACX',
@@ -1485,4 +1494,66 @@ FICHAS = [
                 'OKDiario (5-nov-2026); BCE (BOE, 4-nov-2026); stockanalysis.com (múltiplos históricos).',
      'fuentes_corto': 'ArcelorMittal (CNMV), Visible Alpha, Bolsamanía, Europa Press, BCE y stockanalysis.com',
      'elaborado': '5-nov-2026, 23:30'},
+    {'id': 'amadeus',
+     'nombre': 'Amadeus',
+     'ticker': 'AMS',
+     'sector': 'Tecnología para viajes',
+     'lede': 'Grupo español de tecnología para la industria de viajes: sistema de reservas que usan las agencias para vender vuelos (distribución '
+             'aérea), software para aerolíneas y aeropuertos (gestión de pasajeros, embarque) y soluciones para hoteles y de pagos.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve meses de 2026 (enero-septiembre)',
+     'titular': 'Beneficio neto de 1.081,6 M€ hasta septiembre (-0,6%) y de 381,4 M€ en el tercer trimestre (+5,7%), con ingresos de 5.075,7 M€ (+3,7%; '
+                '+5,2% a tipo de cambio constante). Las reservas aéreas bajan un 2,8% por Oriente Próximo, mientras los negocios de IT para aerolíneas y '
+                'hoteles crecen; Amadeus mantiene la guía 2026, aunque espera quedar en la parte baja.',
+     'precio': '60,52 €',
+     'precio_fecha': '6-nov-2026 (cierre)',
+     'multiplos': [('PER 12 meses', '~19,5x (17,7x ajustado)'),
+                   ('EV/EBITDA', '~10,7x'),
+                   ('Precio / patrimonio neto', '~5,10x'),
+                   ('Rentab. dividendo', '~2,54%'),
+                   ('Rentab. flujo libre', '~5,4%'),
+                   ('Capitalización', '~25.418 M€')],
+     'multiplos_nota': 'Calculados con 60,52 € (cierre del 6-nov-2026, Bolsamanía), día de los resultados, 419,99 M de acciones en circulación (emitidas '
+                       'menos autocartera a 30-sep) y datos de 12 meses de Amadeus (2025 + 9M26 - 9M25: BPA diluido 3,11 €, ajustado 3,41 €, EBITDA '
+                       '2.606 M€, flujo libre 1.383 M€); EV con la deuda financiera neta de 2.536,7 M€; patrimonio neto de 4.985,7 M€; dividendo de 1,54 '
+                       '€ con cargo a 2025. A cierre de 2023, 2024 y 2025 (stockanalysis.com) el PER era 25,8x, 23,7x y 20,5x, el EV/EBITDA 15,4x, 14,2x '
+                       'y 12,1x, el precio / valor contable 6,43x, 5,87x y 5,63x, y la rentabilidad por dividendo 1,90%, 2,04% y 2,43% (stockanalysis '
+                       'usa sus propios datos: comparación aproximada).',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos', '5.075,7', '+3,7%'),
+               ('Distribución aérea', '2.391,5', '+0,6%'),
+               ('IT para aerolíneas', '1.852,0', '+6,3%'),
+               ('Hoteles y otras soluciones', '832,1', '+7,2%'),
+               ('EBITDA', '2.028,3', '+5,2%'),
+               ('EBIT ajustado', '1.546,6', '+5,2%'),
+               ('Beneficio neto', '1.081,6', '-0,6%'),
+               ('Beneficio neto 3T', '381,4', '+5,7%'),
+               ('Flujo de caja libre', '1.036,3', '+8,5%')],
+     'kpi': 'A tipo de cambio constante: ingresos +5,2%, distribución +2,1%, IT para aerolíneas +7,7%, hoteles y otras +9,2%. Margen EBITDA 40,0% '
+            '(39,4%, calculado) y margen EBIT ajustado 30,5% (30,0%). Beneficio ajustado 1.147,7 M€ (+3,5%); BPA diluido 2,54 € (+4,2%) y ajustado '
+            'diluido 2,69 € (+8,5%). Tercer trimestre: ingresos 1.740,7 M€ (+6,4%), EBITDA 694,1 M€ (+6,3%; consenso LSEG 691,5 M€), BPA ajustado '
+            'diluido 0,94 € (+12,8%), flujo libre 564,2 M€ (+15,9%). Reservas aéreas 359,2 M (-2,8%; 3T -0,8%; Oriente Medio y África -7,5%); pasajeros '
+            'embarcados 1.708,8 M (+1,3%). Inversión 503,8 M€ (-16,9%). Deuda financiera neta 2.536,7 M€ (1,0x EBITDA; 2.141,4 M€ en diciembre), tras '
+            '653 M€ de dividendo y 500 M€ de recompra en 2026.',
+     'guia': 'Guía 2026 mantenida (la revisada en julio), aunque Amadeus espera quedar en la parte baja de los rangos por Oriente Próximo: ingresos con '
+             'crecimiento de un dígito medio-alto, margen EBIT ajustado estable, BPA ajustado diluido con crecimiento de un dígito alto a doble dígito '
+             'bajo y flujo de caja libre de 1.350-1.450 M€ (el mínimo exige unos 314 M€ en el 4T, un 10% menos que en el 4T25; calculado). Sin nuevo '
+             'dividendo en el informe; el de 2025, 1,54 € brutos por acción, se pagó en dos partes: 0,53 € el 16-ene-2026 y 1,01 € el 3-jul-2026. El '
+             'dividendo a cuenta de 2026 aún no tiene importe ni fecha.',
+     'positivos': ['El tercer trimestre acelera: ingresos +6,4% (+2,3% en el 1S) y beneficio neto +5,7% (-3,7% en el 1S).',
+                   'El BPA ajustado diluido del 3T sube un 12,8%, con ayuda de las recompras, y el flujo libre del 3T, un 15,9%.',
+                   'IT para aerolíneas (+5,7%) y hoteles y otras soluciones (+9,3%) crecen en el 3T a tipo constante, y el margen EBITDA sube al 40,0%.'],
+     'riesgos': ['Las reservas aéreas caen un 2,8% en nueve meses (Oriente Medio y África -7,5%), y en octubre el incidente del aeropuerto de Riad frenó '
+                 'algo los volúmenes.',
+                 'La guía se cumpliría en la parte baja, y el beneficio neto contable de nueve meses aún baja un 0,6%.',
+                 'La deuda neta sube 395 M€ desde diciembre, hasta 2.536,7 M€, por el dividendo y las recompras (1,0x EBITDA).'],
+     'videos': [('6FaJP-L6oB0', 'Amadeus resultados 3T 2026: beneficio del 3T +5,7%, reservas -2,8% | Guía 2026, en la parte baja'),
+                ('iKIslJepgJM', 'Amadeus 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-26',
+     'proximo_estimado': True,
+     'fuentes': 'Amadeus, nota de prensa, informe de gestión y presentación de resultados de enero a septiembre de 2026 (CNMV y amadeus.com, '
+                '6-nov-2026), resultados del primer semestre de 2026 y de 2025; Europa Press, Rankia, Reuters (consenso LSEG), Investing.com y '
+                'Bolsamanía (6-nov-2026); stockanalysis.com (múltiplos históricos).',
+     'fuentes_corto': 'Amadeus (CNMV), Europa Press, Rankia, Reuters, Bolsamanía y stockanalysis.com',
+     'elaborado': '6-nov-2026, 23:30'},
 ]
