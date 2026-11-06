@@ -23,6 +23,7 @@ Opcional (lo usa EAU):
   TELEGRAM_TEXTOS=a.txt,b.txt     textos a buscar, en orden (por defecto post-telegram.txt,post-facebook.txt)
   TELEGRAM_DESDE=2026-11-03       ignora los videos subidos antes de esa fecha (para no publicar el atrasado)
 Opcional (lo usa Chile):
+  TELEGRAM_ULTIMOS=3              publica solo los 3 videos más recientes aún no publicados (ignora TELEGRAM_DESDE)
   TELEGRAM_TEXTO_YOUTUBE=...      frase antes del enlace al canal de YouTube (por defecto en árabe)
   TELEGRAM_WEB=https://aiacciones.cl   si el texto no trae ese sitio, se añade "🌐 <web>" al final
 """
@@ -111,7 +112,8 @@ def pendiente(carpeta):
         return None
     res = json.load(open(res_path, encoding="utf-8"))
     desde = os.environ.get("TELEGRAM_DESDE", "").strip()
-    if desde and res.get("subido", "") < desde:
+    ultimos = os.environ.get("TELEGRAM_ULTIMOS", "").strip()
+    if desde and not ultimos and res.get("subido", "") < desde:
         return None
     if res.get("privacy") != "public":
         print(f"{carpeta}: el video no es público todavía")
@@ -139,7 +141,11 @@ def publicar(base):
     if not lista:
         print("No hay posts pendientes para Telegram.")
         return
-    for _, d, texto, foto in sorted(lista):
+    lista.sort()
+    ultimos = os.environ.get("TELEGRAM_ULTIMOS", "").strip()
+    if ultimos.isdigit() and int(ultimos) > 0:
+        lista = lista[-int(ultimos):]
+    for _, d, texto, foto in lista:
         ids = []
         if foto and len(texto) <= LIMITE_PIE:
             ids.append(llamar("sendPhoto", {"chat_id": destino, "caption": texto}, ("photo", foto))["message_id"])
