@@ -30,7 +30,8 @@ cuyo nombre diga "chile" (p. ej. el TikTok aiaccioneschile) es de Chile y lo usa
 Secreto opcional BUFFER_API_KEY_ES2: tercera cuenta de Buffer, también solo de España (Instagram aiacciones.espana).
 Instagram: <cola>/<slug>/post-instagram.txt junto a video.mp4 (se publica como Reel) o a imagen.png (post en
 el feed, 1080x1350). Vale para cola/ (Chile) y cola-es/ (España).
-X, LinkedIn y Facebook: si en la carpeta hay imagen.png, el post la lleva adjunta (p. ej. un calendario).
+Threads: <cola>/<slug>/post-threads.txt (texto, máx. 500 caracteres; el enlace al video sale como tarjeta).
+X, LinkedIn, Facebook y Threads: si en la carpeta hay imagen.png, el post la lleva adjunta (p. ej. un calendario).
 España: `programar cola-es` manda los posts de cola-es/ solo a canales cuyo nombre diga "espana"/"españa"
 (hoy, la página de LinkedIn); si no hay canal de España para esa red, el post espera. Con dos páginas
 de LinkedIn conectadas, Chile usa la que se llama "chile".
@@ -112,6 +113,10 @@ REDES = {
                   "servicios": ("instagram",), "variable": "BUFFER_CANAL_INSTAGRAM", "limite": 2200,
                   "largo": len, "obligatoria": False, "video": True, "imagen": True,
                   "metadata": "{instagram: {type: reel, shouldShareToFeed: true}}"},
+    # Threads (hoy solo Arabia Saudita, en Buffer 2): post de texto con el enlace al video, máx. 500 caracteres
+    "threads": {"nombre": "Threads", "archivo": "post-threads.txt", "registro": "buffer-threads.json",
+                "servicios": ("threads",), "variable": "BUFFER_CANAL_THREADS", "limite": 500,
+                "largo": len, "obligatoria": False, "imagen": True},
     # Página de Facebook (hoy solo EAU): post-facebook.txt o, en cola-eau/, el mismo texto de post-linkedin.txt
     "facebook": {"nombre": "Facebook", "archivo": "post-facebook.txt", "registro": "buffer-facebook.json",
                  "servicios": ("facebook",), "variable": "BUFFER_CANAL_FACEBOOK", "limite": 63206,
@@ -369,7 +374,7 @@ def programar(base):
         extra = ", saveToDraft: true" if modo_post == "borrador" else ""
         imagen = r.get("imagen") and enlace_video(carpeta, "imagen.png")
         if imagen:
-            # imagen.png: en X, LinkedIn y Facebook va adjunta; en Instagram es post en el feed en vez de Reel
+            # imagen.png: en X, LinkedIn, Facebook y Threads va adjunta; en Instagram es post en el feed en vez de Reel
             extra += ", assets: [{image: {url: %s}}]" % json.dumps(imagen)
             if red == "instagram":
                 extra += ", metadata: {instagram: {type: post, shouldShareToFeed: true}}"
