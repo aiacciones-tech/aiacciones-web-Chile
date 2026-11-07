@@ -1,0 +1,37 @@
+# Datos de ADX y DFM para el vídeo diario en árabe de @AIStocksUAE (eau/diario/).
+# El contenedor de Claude no llega a Yahoo ni a TradingView; GitHub Actions sí.
+# Los días de sesión de ADX y DFM (lunes a viernes, salvo festivos de EAU) a las 11:40 UTC (15:40 en EAU), tras el cierre de ADX y DFM a las 15:00.
+# Guarda datos/mercado-<fecha>.json en la rama datos-diario-eau (no en main, para no disparar despliegues).
+name: Datos del video diario (EAU)
+on:
+  schedule:
+    - cron: "40 11 * * 1-5"
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths: ["eau/diario/datos_mercado.py", ".github/workflows/datos-diario-eau.yml"]
+permissions:
+  contents: write
+concurrency: datos-diario-eau
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar datos
+        # En la ejecución programada no se guarda nada si ADX y DFM no abrieron hoy (festivos de EAU).
+        env:
+          SOLO_DIA_DE_SESION: ${{ github.event_name == 'schedule' && '1' || '0' }}
+        run: pip install -q websocket-client && python3 eau/diario/datos_mercado.py
+      - name: Guardar en la rama datos-diario-eau
+        run: |
+          ls eau/diario/datos/mercado-*.json >/dev/null 2>&1 || exit 0
+          mkdir -p /tmp/out && cp eau/diario/datos/mercado-*.json /tmp/out/
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          if git fetch -q origin datos-diario-eau; then git checkout -q -B datos-diario-eau origin/datos-diario-eau; else git checkout -q --orphan datos-diario-eau && git rm -rfq . ; fi
+          mkdir -p datos && cp /tmp/out/*.json datos/
+          git add datos
+          git diff --cached --quiet && exit 0
+          git commit -qm "Datos del video diario EAU $(date -u +%F)"
+          for i in 1 2 3; do git push -q origin datos-diario-eau && break; sleep 5; git pull -q --rebase origin datos-diario-eau; done
