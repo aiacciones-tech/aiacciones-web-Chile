@@ -1,0 +1,25 @@
+# Descarga los datos de la sesión del IBEX 35 para el vídeo diario de la bolsa española
+# (el contenedor de Claude no llega a Yahoo ni a TradingView; GitHub Actions sí).
+name: Datos del vídeo diario (España)
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/project-thread-o8vwew]
+    paths: [espana/diario/datos_mercado.py, .github/workflows/datos-diario-espana.yml]
+permissions:
+  contents: write
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar datos
+        run: python3 espana/diario/datos_mercado.py
+      - name: Guardar
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add espana/diario/datos
+          git diff --cached --quiet && exit 0
+          git commit -m "Datos del vídeo diario $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
