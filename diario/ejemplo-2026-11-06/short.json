@@ -1,0 +1,102 @@
+{
+ "empresa": "IPSA",
+ "trimestre": "6 nov 2026",
+ "out": "short-bolsa-chile-2026-11-06.mp4",
+ "fuente": "Fuentes: TradingView, Diario Financiero, INE\n(6-nov-2026). RSI y estocástico: calculados.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "IPSA · Sesión del",
+   "titulo": "6 nov 2026",
+   "sub": "Viernes · la Bolsa de Santiago hoy",
+   "big": "+0,68%",
+   "big_fs": 165,
+   "big_label": "Cierre: 10.536,5 puntos",
+   "color": "acc",
+   "pregunta": "+2,75% en la semana",
+   "voz": "El IPSA sube cero coma sesenta y ocho por ciento el viernes y suma dos coma setenta y cinco en la semana. Tres claves."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Nasdaq 100 (EE. UU.)",
+   "big": "+1,35%",
+   "delta": "rebote tras el jueves",
+   "color": "acc",
+   "barras": [
+    [
+     "S&P 500",
+     0.31
+    ],
+    [
+     "IPSA",
+     0.68
+    ],
+    [
+     "Nasdaq 100",
+     1.35
+    ]
+   ],
+   "fmt": "+{:.2f}%",
+   "nota": "Asia cayó cerca de 6%\n(Japón y Corea).",
+   "voz": "Uno. Wall Street: el Nasdaq rebotó uno coma tres por ciento, aunque Asia cayó cerca de seis."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Cencosud",
+   "big": "+3,09%",
+   "delta": "ingresos 3T +9,2%",
+   "color": "acc",
+   "barras": [
+    [
+     "Ripley",
+     2.77
+    ],
+    [
+     "Parque Arauco",
+     3.06
+    ],
+    [
+     "Cencosud",
+     3.09
+    ]
+   ],
+   "fmt": "+{:.2f}%",
+   "nota": "Ventas sobre el consenso (DF).\nAndina-B, la que más cae: -2,18%.",
+   "voz": "Dos. El retail: Cencosud lideró tras ventas sobre lo esperado."
+  },
+  {
+   "tipo": "kpis",
+   "label": "Análisis técnico",
+   "items": [
+    [
+     "42",
+     "RSI (neutral)",
+     "acc2"
+    ],
+    [
+     "37",
+     "Estocástico",
+     "acc"
+    ],
+    [
+     "10.741",
+     "Máx. jueves",
+     "fg"
+    ]
+   ],
+   "nota": "Media de 50: 11.055. Media de 200: 10.927.\nSon datos, no señales de compra o venta.",
+   "voz": "Tres. El gráfico: el IPSA sigue bajo sus medias, con el RSI en zona neutral."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "IPSA · 6 nov",
+   "titular": "Sube con el retail;\n+2,75% en la semana.",
+   "cta": "Video completo en el canal",
+   "web": "aiacciones.cl/calendario",
+   "voz": "El análisis completo, en nuestro canal. Contenido informativo, no es una recomendación de inversión."
+  }
+ ],
+ "length_scale": 0.95
+}
