@@ -21,7 +21,8 @@ las acciones de ADX y DFM (escáner `uae` de TradingView) y contexto (Brent, Wal
 El volumen de DFM no viene en la vela del índice: se calcula sumando las acciones del mercado frente a su media de 10 sesiones.
 
 ## Pasos de cada día
-1. Datos de la rama `datos-diario-eau`. Si la fecha no es la de hoy, no hubo sesión (festivo): no se hace video.
+1. Datos de la rama `datos-diario-eau`. Solo hay video los días en que abren ADX y DFM (lunes a viernes; fin de semana de EAU: sábado y domingo).
+   En festivos (Eid, Día Nacional, Año Nuevo...) no se guarda `mercado-<hoy>.json` porque la última vela no es de hoy: ese día no se hace video.
 2. Noticias y motivos: Reuters (Business Recorder, Zawya), Gulf News, The National, Khaleej Times, WAM, AGBI, Argaam, Finimize, comunicados en ADX/DFM.
 3. Copia `ejemplo-2026-11-06/` a la carpeta del día y cambia `video.json` (textos de pantalla y locución, números en palabras), `info.json` (título, descripción, posts, miniatura) y `short.json` (menos de 59 s; fecha en la primera escena).
 4. `AUD=<scratch> python3 make_video.py <dir> preview` (revisa los PNG), luego sin `preview` (máx. 180 s; la voz árabe es lenta: unas 230 palabras en total).

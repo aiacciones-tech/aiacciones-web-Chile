@@ -115,6 +115,11 @@ def main():
         fecha = datetime.datetime.utcfromtimestamp(res["adx_diario"]["velas"][-1]["t"] + 4 * 3600).date().isoformat()  # vela diaria: fecha de la sesión (hora de EAU)
     except Exception:
         pass
+    # Solo hay video los días en que abren ADX y DFM: si la última vela no es de hoy (hora de EAU), fue festivo y no se guarda nada.
+    hoy = (datetime.datetime.utcnow() + datetime.timedelta(hours=4)).date().isoformat()
+    res["sesion"] = fecha
+    if os.environ.get("SOLO_DIA_DE_SESION") == "1" and fecha != hoy:
+        print(f"Sin sesión hoy ({hoy}): la última vela es del {fecha}. ADX/DFM cerrados (festivo); no hay video."); return
     os.makedirs(os.path.join(ROOT, "datos"), exist_ok=True)
     p = os.path.join(ROOT, "datos", f"mercado-{fecha}.json")
     json.dump(res, open(p, "w"), ensure_ascii=False)

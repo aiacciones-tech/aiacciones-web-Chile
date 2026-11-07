@@ -1,6 +1,6 @@
 # Datos de ADX y DFM para el vídeo diario en árabe de @AIStocksUAE (eau/diario/).
 # El contenedor de Claude no llega a Yahoo ni a TradingView; GitHub Actions sí.
-# Cada día hábil (lunes a viernes) a las 11:40 UTC (15:40 en EAU), tras el cierre de ADX y DFM a las 15:00.
+# Los días de sesión de ADX y DFM (lunes a viernes, salvo festivos de EAU) a las 11:40 UTC (15:40 en EAU), tras el cierre de ADX y DFM a las 15:00.
 # Guarda datos/mercado-<fecha>.json en la rama datos-diario-eau (no en main, para no disparar despliegues).
 name: Datos del video diario (EAU)
 on:
@@ -19,9 +19,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Descargar datos
+        # En la ejecución programada no se guarda nada si ADX y DFM no abrieron hoy (festivos de EAU).
+        env:
+          SOLO_DIA_DE_SESION: ${{ github.event_name == 'schedule' && '1' || '0' }}
         run: pip install -q websocket-client && python3 eau/diario/datos_mercado.py
       - name: Guardar en la rama datos-diario-eau
         run: |
+          ls eau/diario/datos/mercado-*.json >/dev/null 2>&1 || exit 0
           mkdir -p /tmp/out && cp eau/diario/datos/mercado-*.json /tmp/out/
           git config user.name "aiacciones-bot"
           git config user.email "aiacciones-bot@users.noreply.github.com"
