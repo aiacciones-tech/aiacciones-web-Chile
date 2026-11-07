@@ -1,12 +1,12 @@
 # Bahrain Bourse data (Bahrain All Share Index, BAHRAIN:BAX) for the daily Arabic video of @BahrainAIStocks (bahrain/daily-bahrain/).
 # Bahrain Bourse trades Sunday to Thursday, 09:30-13:00 Manama time (UTC+3). Saves data/market-<date>-bahrain.json
 # on branch daily-data-bahrain (not main, so it does not trigger deploys).
-# NOT SCHEDULED YET: the cron is enabled only after Daniel approves the sample (sample-2026-11-05-bahrain/).
-# When approved, uncomment the schedule: 10:40 UTC (13:40 Manama), after the 13:00 close.
+# Scheduled since 7-nov-2026, after Daniel approved the sample (sample-2026-11-05-bahrain/) and automatic publishing:
+# 10:40 UTC (13:40 Manama), after the 13:00 close.
 name: Daily video data (Bahrain)
 on:
-  # schedule:
-  #   - cron: "40 10 * * 0-4"
+  schedule:
+    - cron: "40 10 * * 0-4"
   workflow_dispatch:
   push:
     branches: ["claude/**"]
