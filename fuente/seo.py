@@ -64,7 +64,7 @@ for p in sorted(glob.glob(W + "/**/*.html", recursive=True)):
     if len(crumbs) > 1:
         graph.append({"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(crumbs)]})
     if rel == "index.html":
-        graph += [{"@type": "Organization", "@id": BASE + "#org", "name": "AI Acciones Chile", "url": BASE, "logo": LOGO,
+        graph += [{"@type": "Organization", "@id": BASE + "#org", "name": "AI Acciones Chile", "url": BASE, "logo": LOGO, "email": "aiacciones@gmail.com",
                    "sameAs": ["https://www.youtube.com/channel/UCDGmimmfYaYYP1jYBo6bA3g", "https://x.com/aiacciones"]},
                   {"@type": "WebSite", "@id": BASE + "#website", "url": BASE, "name": "AI Acciones Chile", "inLanguage": "es-CL", "publisher": {"@id": BASE + "#org"}}]
     vid = re.search(r"youtube(?:-nocookie)?\.com/embed/([\w-]{11})", s)
