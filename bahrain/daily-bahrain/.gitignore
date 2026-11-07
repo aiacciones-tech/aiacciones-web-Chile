@@ -1,0 +1,7 @@
+sample-*/*-bahrain.mp4
+sample-*/*-bahrain.png
+sample-*/*-bahrain.txt
+sample-*/meta-*-bahrain.json
+sample-*/times-bahrain.json
+data/
+__pycache__/
