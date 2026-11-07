@@ -20,7 +20,7 @@ NOMBRES = {"ALBH": "ألمنيوم البحرين (ألبا)", "NBB": "بنك ا
            "CPARK": "البحرين لمواقف السيارات", "SICO": "سيكو", "ARIG": "المجموعة العربية للتأمين", "KFH": "بيت التمويل الكويتي", "AUB": "البنك الأهلي المتحد",
            "BBKSC": "بنك البحرين والكويت", "UGB": "بنك الخليج المتحد", "NIH": "الوطنية للتأمين", "BMBOR": "البحرين لمطاحن الدقيق", "ALSALAM": "مصرف السلام",
            "IIB": "بنك إثمار", "GIC": "الخليجية للاستثمار", "BBPB": "البحرين للتسهيلات التجارية", "MHHP": "مركز مطار البحرين"}
-MIN_VALOR = 5000  # only stocks with more than 5,000 Bahraini dinars traded in the session (avoids jumps in illiquid stocks)
+MIN_VALOR = 1000  # only stocks with more than 1,000 Bahraini dinars traded in the session (avoids odd-lot jumps; Bahrain Bourse is thin)
 
 
 def fecha_ar(d, dia=True):
@@ -87,18 +87,35 @@ def calc_indice(D, k):
         dict(dates=dates, o=o, hi=hi, lo=lo, c=c, S50=S50, S200=S200, RSI=RSI, K=K, D=Dl)
 
 
+USD_COTIZA = {"GFH", "ABC", "ITHMR", "BARKA", "KHCB", "INOVEST", "ARIG", "KFH", "UGIC", "BASREC"}  # quoted in US dollars when TradingView does not say
+NO_INDICE = {"KFH", "BBK.BND", "GDEV23.BND", "GDEV31.BND", "GDEV33.BND", "EBRIT", "HOPE", "SICO-C"}  # not in the All Share Index (foreign, bonds, REIT, closed)
+
+
 def valor_bhd(v):
     """Traded value in Bahraini dinars (stocks quoted in US dollars are converted at the peg)."""
-    x = v.get("Value.Traded") or 0
+    x = v.get("valor") or 0
     return x * BHD_USD if v.get("currency") == "USD" else x
 
 
 def acciones(D, k="bax", fecha=None):
-    """Common stocks of the Bahrain All Share Index (TradingView field indexes). With fecha, only those that traded that day."""
-    en_idx = lambda v: any(i.get("proname") == "BAHRAIN:BHBX" for i in (v.get("indexes") or []))
-    comun = lambda v: v.get("typespecs") in (None, [], ["common"]) or "common" in (v.get("typespecs") or [])
-    hoy = lambda v: fecha is None or (v.get("time") and dt.datetime.fromtimestamp(v["time"], TZ).date() == fecha)
-    return [dict(v, ticker=t.split(":")[1]) for t, v in D.get("acciones", {}).items() if comun(v) and en_idx(v) and hoy(v)]
+    """Stocks of the Bahrain All Share Index with their last trade. TradingView's scanner and Mubasher are merged: for each ticker
+    the record with the most recent trade wins (each source misses some stocks or lags). With fecha, only those that traded that day."""
+    rows = {}
+    for t, v in D.get("acciones", {}).items():
+        tk = t.split(":")[1]
+        if v.get("indexes") is not None and not any(i.get("proname") == "BAHRAIN:BHBX" for i in v["indexes"]): continue
+        if not v.get("time"): continue
+        rows[tk] = {"ticker": tk, "description": v.get("description"), "change": v.get("change"), "valor": v.get("Value.Traded"), "volume": v.get("volume"),
+                    "currency": v.get("currency"), "dia": dt.datetime.fromtimestamp(v["time"], TZ).date(), "fuente": "TradingView"}
+    for v in (D.get("mubasher") or {}).get("acciones", []):
+        tk = v["code"]
+        if tk in NO_INDICE or not v.get("updatedAt") or not v.get("close"): continue
+        dia = (dt.datetime.fromisoformat(v["updatedAt"]).replace(tzinfo=dt.timezone.utc)).astimezone(TZ).date()  # updatedAt is in UTC
+        if tk in rows and rows[tk]["dia"] >= dia: continue
+        cur = rows.get(tk, {}).get("currency") or ("USD" if tk in USD_COTIZA else "BHD")
+        rows[tk] = {"ticker": tk, "description": v.get("name"), "change": v.get("change"), "valor": v.get("turnover"), "volume": v.get("volume"),
+                    "currency": cur, "dia": dia, "fuente": "Mubasher"}
+    return [r for r in rows.values() if r["ticker"] not in NO_INDICE and (fecha is None or r["dia"] == fecha)]
 
 
 def movers(D, fecha, extra=None):
