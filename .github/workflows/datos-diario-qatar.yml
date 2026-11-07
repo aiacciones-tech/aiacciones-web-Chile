@@ -1,12 +1,12 @@
 # Datos de la Bolsa de Qatar (QSE, índice QE General) para el vídeo diario en árabe de @QatarAIStocks (qatar/diario/).
 # El contenedor de Claude no llega a Yahoo ni a TradingView; GitHub Actions sí.
 # Guarda datos/mercado-<fecha>.json en la rama datos-diario-qa (no en main, para no disparar despliegues).
-# Programación (pendiente de que Daniel apruebe la muestra): días de sesión de la QSE (domingo a jueves) a las 10:45 UTC
-# (13:45 en Doha), tras el cierre de las 13:15. Para activarla, descomenta el bloque schedule.
+# Días de sesión de la QSE (domingo a jueves) a las 10:45 UTC (13:45 en Doha), tras el cierre de las 13:15.
+# Activado el 7-nov-2026 (Daniel aprobó la muestra del 5-nov).
 name: Datos del video diario (Qatar)
 on:
-  # schedule:
-  #   - cron: "45 10 * * 0-4"
+  schedule:
+    - cron: "45 10 * * 0-4"
   workflow_dispatch:
   push:
     branches: ["claude/**"]

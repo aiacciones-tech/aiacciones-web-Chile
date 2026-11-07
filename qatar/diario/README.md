@@ -3,7 +3,7 @@
 Cada día de sesión de la QSE (domingo a jueves), después del cierre (13:15 en Doha, 10:15 UTC): un video de máximo 3 minutos y su Short
 para @QatarAIStocks, todo en árabe (voz, textos en pantalla, título, descripción y posts), con posts en X y Facebook (Buffer 1), LinkedIn,
 TikTok e Instagram (Buffer 2) y Telegram. Adaptado del video diario de España (`espana/diario/`) a partir de su versión árabe de EAU (`eau/diario/`).
-Muestra: sesión del jueves 5-nov-2026 (`ejemplo-2026-11-05/`). **Pendiente de aprobación de Daniel: no hay nada programado todavía.**
+Muestra: sesión del jueves 5-nov-2026 (`ejemplo-2026-11-05/`). Formato aprobado por Daniel el 7-nov-2026: datos a las 13:45 de Doha y rutina diaria a las 14:15 (domingo a jueves), publicación automática.
 
 ## Guion (7 escenas, `make_video.py`)
 1. **Apertura** (`s_title`): fecha de la sesión EN GRANDE, cierre del QE, variación en % y en puntos, variación semanal y curva intradía (5 min, hora de Doha).
@@ -20,7 +20,7 @@ velas diarias e intradía de `QSE:GNRI` (websocket de TradingView), cambio, volu
 (escáner `qatar`) y contexto (Brent, GNL JKM y TTF, Henry Hub, Golfo, Wall Street, Asia, bonos, oro, dólar).
 La vela del índice no trae volumen: se calcula sumando las acciones frente a su media de 10 sesiones.
 `python3 tecnico.py <mercado.json>` imprime cierre, variación diaria y semanal (semana de domingo a jueves), medias, RSI, estocástico, niveles, volumen y los 5 que más suben/bajan.
-Programación prevista (comentada hasta que Daniel apruebe): `cron: "45 10 * * 0-4"` (13:45 en Doha). Hoy solo corre a mano (workflow_dispatch) o al tocar el script en ramas claude/**.
+Programación: `cron: "45 10 * * 0-4"` (13:45 en Doha); también a mano (workflow_dispatch).
 
 ## Pasos de cada día
 1. Datos de la rama `datos-diario-qa`. Solo hay video si la última vela es de hoy (en festivos no se guarda nada).
