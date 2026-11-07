@@ -6,12 +6,12 @@ of every Bahrain Bourse stock; context: Gulf, Asia, Wall Street, Europe, Brent, 
 import json, os, datetime, urllib.request, urllib.parse
 ROOT = os.path.dirname(os.path.abspath(__file__))
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"
-INDICES = {"bax": ["BAHRAIN:BAX", "BAHRAIN:BHSEASI"]}   # candles: the first one that answers
-YAHOO = {"bax": ["^BHSEASI"]}
-CTX = ["BAHRAIN:BAX", "TADAWUL:TASI", "ADX:FADGI", "DFM:DFMGI", "QSE:GNRI", "BAHRAIN:BHBX", "TVC:UKOIL", "ICEEUR:BRN1!", "SP:SPX", "NASDAQ:NDX",
+INDICES = {"bax": ["BAHRAIN:BHBX", "BHB:BHBX", "BAHRAIN:BAX"]}   # candles: the first one that answers
+YAHOO = {"bax": ["^BAX", "BHSEASI.BH"]}
+CTX = ["BAHRAIN:BHBX", "BAHRAIN:BIX", "TADAWUL:TASI", "ADX:FADGI", "DFM:DFMGI", "QSE:GNRI", "BAHRAIN:BHBX", "TVC:UKOIL", "ICEEUR:BRN1!", "SP:SPX", "NASDAQ:NDX",
        "DJ:DJI", "TVC:NI225", "TVC:HSI", "SSE:000001", "TVC:KOSPI", "EGX:EGX30", "TVC:SX5E", "TVC:UKX", "TVC:GOLD", "TVC:US10Y", "TVC:US02Y", "TVC:DXY"]
 CTX_VELAS = ["TADAWUL:TASI", "ADX:FADGI", "DFM:DFMGI", "QSE:GNRI", "ICEEUR:BRN1!", "SP:SPX", "NASDAQ:NDX", "TVC:NI225", "TVC:HSI",
-             "TVC:KOSPI", "SSE:000001", "TVC:SX5E", "TVC:GOLD", "TVC:US10Y", "BAHRAIN:BHBX"]
+             "TVC:KOSPI", "SSE:000001", "TVC:SX5E", "TVC:GOLD", "TVC:US10Y", "KSE:BKP", "MSM:MSX30"]
 COLS = ["name", "description", "close", "change", "change_abs", "volume", "Value.Traded", "average_volume_10d_calc",
         "market_cap_basic", "time", "Perf.W", "Perf.1M", "Perf.YTD", "type", "exchange", "sector", "currency"]
 
@@ -42,8 +42,7 @@ def tv(tickers):
 def tv_acciones():
     """Every Bahrain Bourse stock (for the 5 biggest gainers and losers)."""
     cols = COLS + ["typespecs", "subtype", "indexes"]
-    body = {"columns": cols, "range": [0, 300], "filter": [{"left": "type", "operation": "equal", "right": "stock"},
-            {"left": "exchange", "operation": "equal", "right": "BAHRAIN"}], "sort": {"sortBy": "market_cap_basic", "sortOrder": "desc"}}
+    body = {"columns": cols, "range": [0, 300], "filter": [{"left": "exchange", "operation": "equal", "right": "BAHRAIN"}], "sort": {"sortBy": "market_cap_basic", "sortOrder": "desc"}}
     err = None
     for mk in ("bahrain", "global"):
         try:
@@ -86,7 +85,8 @@ def tv_velas(simbolo, resol="1D", n=500):
             break
     ws.close()
     if "symbol_error" in buf or "series_error" in buf:
-        raise RuntimeError("invalid TradingView symbol: " + simbolo)
+        import re as _re
+        raise RuntimeError("invalid TradingView symbol: " + simbolo + " " + " | ".join(_re.findall(r'"m":"(?:symbol_error|series_error)","p":\[[^\]]*\]', buf))[:300])
     for m in re.finditer(r'"s":\[(\{"i":.*?)\],"ns"', buf):
         arr = json.loads("[" + m.group(1) + "]")
         velas = [{"t": int(x["v"][0]), "o": x["v"][1], "h": x["v"][2], "l": x["v"][3], "c": x["v"][4], "v": (x["v"][5] if len(x["v"]) > 5 else None)} for x in arr]
@@ -98,7 +98,7 @@ def tv_velas(simbolo, resol="1D", n=500):
 def main():
     now = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
     res = {"generado": now.isoformat() + "Z", "errores": []}
-    res["busqueda"] = {"bax": tv_buscar("BAX", "BAHRAIN")}
+    res["busqueda"] = {"bax": tv_buscar("BHBX", "BAHRAIN"), "all_share": tv_buscar("Bahrain All Share", "")}
     for k in INDICES:
         for sym in INDICES[k]:
             try:
