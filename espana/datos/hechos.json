@@ -1,6 +1,328 @@
 {
- "actualizado": "2026-11-02T09:38Z",
+ "actualizado": "2026-11-06T12:45Z",
  "items": [
+  {
+   "id": "96ba1bd4-cea0-4265-ae86-d10473e9dbb0",
+   "tipo": "OIR",
+   "fecha": "2026-11-06 08:59",
+   "entidad": "CAIXABANK, S.A.",
+   "nif": "A08663619",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información relativa a la ejecución de su Programa de recompra de acciones propias.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b96ba1bd4-cea0-4265-ae86-d10473e9dbb0%7d",
+   "ticker": "CABK",
+   "temas": []
+  },
+  {
+   "id": "23050916-4ee9-4db7-b1b1-3854214c5dc8",
+   "tipo": "OIR",
+   "fecha": "2026-11-06 08:00",
+   "entidad": "INTERNATIONAL CONSOLIDATED AIRLINES GROUP, S.A.",
+   "nif": "A85845535",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad remite la presentación de resultados correspondiente al tercer trimestre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b23050916-4ee9-4db7-b1b1-3854214c5dc8%7d",
+   "ticker": "IAG",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "85e9316a-dd0c-44c2-be09-c541da458b5c",
+   "tipo": "OIR",
+   "fecha": "2026-11-06 07:58",
+   "entidad": "INTERNATIONAL CONSOLIDATED AIRLINES GROUP, S.A.",
+   "nif": "A85845535",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad remite el informe de gestión intermedio para el periodo finalizado el 30 de septiembre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b85e9316a-dd0c-44c2-be09-c541da458b5c%7d",
+   "ticker": "IAG",
+   "temas": []
+  },
+  {
+   "id": "9b116066-e25d-498d-ad4a-60aaaf171c0f",
+   "tipo": "OIR",
+   "fecha": "2026-11-06 07:39",
+   "entidad": "AMADEUS IT GROUP, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La sociedad remite la información financiera del tercer trimestre de 2026 - Presentación (en inglés).",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b9b116066-e25d-498d-ad4a-60aaaf171c0f%7d",
+   "ticker": "AMS",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "bc778f8b-d203-4336-bc84-37e721c2d4d4",
+   "tipo": "OIR",
+   "fecha": "2026-11-06 07:38",
+   "entidad": "AMADEUS IT GROUP, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La sociedad remite la información financiera del tercer trimestre de 2026 - Nota de prensa.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bbc778f8b-d203-4336-bc84-37e721c2d4d4%7d",
+   "ticker": "AMS",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "ad601650-03b9-4b85-a9f6-f900bd17ad53",
+   "tipo": "OIR",
+   "fecha": "2026-11-06 07:37",
+   "entidad": "AMADEUS IT GROUP, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La sociedad remite la información financiera del tercer trimestre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bad601650-03b9-4b85-a9f6-f900bd17ad53%7d",
+   "ticker": "AMS",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "5742c804-1b85-4ac9-8f5d-18a15c195873",
+   "tipo": "OIR",
+   "fecha": "2026-11-05 18:12",
+   "entidad": "INTERNATIONAL CONSOLIDATED AIRLINES GROUP, S.A.",
+   "nif": "A85845535",
+   "categoria": "Otra información relevante",
+   "titulo": "La Sociedad anuncia la distribución de un dividendo a cuenta de 0,053 euros brutos por acción",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b5742c804-1b85-4ac9-8f5d-18a15c195873%7d",
+   "ticker": "IAG",
+   "temas": [
+    "dividendos"
+   ]
+  },
+  {
+   "id": "fdd5f1a7-6ff5-45ad-a8c8-2a2734975dba",
+   "tipo": "OIR",
+   "fecha": "2026-11-05 16:59",
+   "entidad": "ENAGAS, S.A.",
+   "nif": "A",
+   "categoria": "Sobre calificaciones crediticias",
+   "titulo": "S&P ratifica el rating de Enagás en BBB+ y mejora su Business Risk Profile, situándolo en Excellent",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bfdd5f1a7-6ff5-45ad-a8c8-2a2734975dba%7d",
+   "ticker": "ENG",
+   "temas": []
+  },
+  {
+   "id": "55edc166-3a5a-443b-a074-8d1c36a040ec",
+   "tipo": "OIR",
+   "fecha": "2026-11-05 15:44",
+   "entidad": "REPSOL, S.A.",
+   "nif": "A78374725",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Operaciones realizadas por Repsol, S.A. al amparo de su Programa de Recompra de acciones entre el 30 de octubre y el 4 de noviembre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b55edc166-3a5a-443b-a074-8d1c36a040ec%7d",
+   "ticker": "REP",
+   "temas": []
+  },
+  {
+   "id": "3384b03e-ca78-4ef1-b892-76d6552d9ae7",
+   "tipo": "OIR",
+   "fecha": "2026-11-05 12:23",
+   "entidad": "MERLIN PROPERTIES, SOCIMI, S.A.",
+   "nif": "A86977790",
+   "categoria": "Comunicación de operaciones vinculadas",
+   "titulo": "MERLIN - Operación vinculada",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b3384b03e-ca78-4ef1-b892-76d6552d9ae7%7d",
+   "ticker": "MRL",
+   "temas": []
+  },
+  {
+   "id": "7a9db72e-ba69-4abf-b1c4-8620533ef2e4",
+   "tipo": "OIR",
+   "fecha": "2026-11-05 07:10",
+   "entidad": "ARCELORMITTAL, S.A.",
+   "nif": "N0181056C",
+   "categoria": "Otra información relevante",
+   "titulo": "ArcelorMittal presenta sus resultados correspondientes al tercer trimestre de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b7a9db72e-ba69-4abf-b1c4-8620533ef2e4%7d",
+   "ticker": "MTS",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "0cb8ceb8-398d-426e-a16a-aa786f35b7f5",
+   "tipo": "OIR",
+   "fecha": "2026-11-04 19:02",
+   "entidad": "MAPFRE, S.A.",
+   "nif": "A08055741",
+   "categoria": "Sobre instrumentos financieros",
+   "titulo": "Fijación de términos y condiciones de dos emisiones (una de obligaciones senior y otra de obligaciones subordinadas) que se realizarán al amparo del programa EMTN de Mapfre",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b0cb8ceb8-398d-426e-a16a-aa786f35b7f5%7d",
+   "ticker": "MAP",
+   "temas": []
+  },
+  {
+   "id": "29754509-9e64-40fc-ab88-856e901ae216",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 18:38",
+   "entidad": "INDRA SISTEMAS, S.A.",
+   "nif": "A",
+   "categoria": "Contratos de liquidez y contrapartida",
+   "titulo": "Contratos de liquidez información periódica (1 de agosto 2026 - 31 de octubre 2026)",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b29754509-9e64-40fc-ab88-856e901ae216%7d",
+   "ticker": "IDR",
+   "temas": []
+  },
+  {
+   "id": "d7bdc4cb-8d44-4cc5-8c73-5098ae31b447",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 17:53",
+   "entidad": "SACYR, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad remite Presentación de Resultados correspondiente a los primeros nueve meses de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bd7bdc4cb-8d44-4cc5-8c73-5098ae31b447%7d",
+   "ticker": "SCYR",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "cf484e08-6f7e-4261-a9e8-9b802ba0b06f",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 17:52",
+   "entidad": "SACYR, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "La Sociedad remite Informe de Resultados correspondiente a los primeros nueve meses de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bcf484e08-6f7e-4261-a9e8-9b802ba0b06f%7d",
+   "ticker": "SCYR",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "6c68c027-efed-45b0-bb3f-24da2a2f5bad",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 16:46",
+   "entidad": "FERROVIAL N.V.",
+   "nif": "N0119863I",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Operaciones efectuadas por Ferrovial al amparo de su programa de recompra de acciones propias entre el 26 y el 29 de octubre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b6c68c027-efed-45b0-bb3f-24da2a2f5bad%7d",
+   "ticker": "FER",
+   "temas": []
+  },
+  {
+   "id": "15ae6859-2822-42f5-8803-84e5c64f2b04",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 12:11",
+   "entidad": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Compras de autocartera de 27 de octubre al 2 de noviembre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b15ae6859-2822-42f5-8803-84e5c64f2b04%7d",
+   "ticker": "ACS",
+   "temas": []
+  },
+  {
+   "id": "06fafb5a-17e5-4046-9093-de3c881141b3",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 11:14",
+   "entidad": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+   "nif": "A48265169",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad comunica información relativa a la ejecución del programa de recompra de acciones.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b06fafb5a-17e5-4046-9093-de3c881141b3%7d",
+   "ticker": "BBVA",
+   "temas": []
+  },
+  {
+   "id": "eda4c92f-f078-4e7b-ad82-835a06928448",
+   "tipo": "OIR",
+   "fecha": "2026-11-03 08:17",
+   "entidad": "FERROVIAL N.V.",
+   "nif": "N0119863I",
+   "categoria": "Otra información relevante",
+   "titulo": "Ferrovial anuncia el importe del dividendo en efectivo por acción correspondiente a su dividendo flexible",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7beda4c92f-f078-4e7b-ad82-835a06928448%7d",
+   "ticker": "FER",
+   "temas": [
+    "dividendos"
+   ]
+  },
+  {
+   "id": "5397dfca-6204-46d2-9bb9-341a0096259f",
+   "tipo": "OIR",
+   "fecha": "2026-11-02 17:54",
+   "entidad": "BANCO DE SABADELL, S.A.",
+   "nif": "A08000143",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Banco Sabadell informa de las operaciones sobre acciones propias que ha realizado entre los días 26 de octubre de 2026 y 30 de octubre de 2026 bajo el programa de recompra.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b5397dfca-6204-46d2-9bb9-341a0096259f%7d",
+   "ticker": "SAB",
+   "temas": []
+  },
+  {
+   "id": "c3ab73a8-ef53-410b-9ca8-3a5bfac532d4",
+   "tipo": "OIR",
+   "fecha": "2026-11-02 17:50",
+   "entidad": "CELLNEX TELECOM, S.A.",
+   "nif": "A64907306",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información relativa a la ejecución de su programa de recompra de acciones propias",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bc3ab73a8-ef53-410b-9ca8-3a5bfac532d4%7d",
+   "ticker": "CLNX",
+   "temas": []
+  },
+  {
+   "id": "6223304c-d44f-4417-927a-0537fccdb834",
+   "tipo": "OIR",
+   "fecha": "2026-11-02 17:47",
+   "entidad": "ENDESA, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Programa de recompra de acciones Sexto Tramo",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b6223304c-d44f-4417-927a-0537fccdb834%7d",
+   "ticker": "ELE",
+   "temas": []
+  },
+  {
+   "id": "ab16ad57-3704-483e-bd79-e6715ce93e61",
+   "tipo": "OIR",
+   "fecha": "2026-11-02 17:46",
+   "entidad": "GRIFOLS, S.A.",
+   "nif": "A58389123",
+   "categoria": "Otra información relevante",
+   "titulo": "Grifols anuncia el pago de un dividendo a cuenta del ejercicio 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bab16ad57-3704-483e-bd79-e6715ce93e61%7d",
+   "ticker": "GRF",
+   "temas": [
+    "dividendos"
+   ]
+  },
+  {
+   "id": "68d04362-73d9-489b-ab33-735ae60945cd",
+   "tipo": "OIR",
+   "fecha": "2026-11-02 17:35",
+   "entidad": "GRIFOLS, S.A.",
+   "nif": "A58389123",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Grifols anuncia la información financiera del tercer trimestre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b68d04362-73d9-489b-ab33-735ae60945cd%7d",
+   "ticker": "GRF",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "50302fe8-ae58-4cc4-8214-3e2c1e3c41e4",
+   "tipo": "OIR",
+   "fecha": "2026-11-02 16:26",
+   "entidad": "INTERNATIONAL CONSOLIDATED AIRLINES GROUP, S.A.",
+   "nif": "A85845535",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información sobre las operaciones efectuadas al amparo de su programa de recompra de acciones",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b50302fe8-ae58-4cc4-8214-3e2c1e3c41e4%7d",
+   "ticker": "IAG",
+   "temas": []
+  },
   {
    "id": "eadcd444-42fc-4fe9-994b-90738c6c75c8",
    "tipo": "OIR",

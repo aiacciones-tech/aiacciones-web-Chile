@@ -1074,55 +1074,64 @@ FICHAS = [
      'lede': 'International Airlines Group es el grupo de British Airways, Iberia, Vueling, Aer Lingus y LEVEL, además de IAG Loyalty (Avios) e IAG '
              'Cargo. Cotiza en Madrid (IBEX 35) y Londres. En una aerolínea pesan la capacidad (AKO), la ocupación, el ingreso por asiento-kilómetro y '
              'el combustible.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio neto de 1.033 M€ (-20,6%) por el encarecimiento del combustible; beneficio operativo antes de excepcionales de 1.757 M€ '
-                '(-6,4%), con un 2T (1.406 M€) un 2,8% por encima del consenso que recoge Renta 4 (calculado). Flujo de caja libre de 2.905 M€ y deuda '
-                'neta de 4.692 M€ (0,6x EBITDA).',
-     'precio': '4,78 €',
-     'precio_fecha': '23-oct-2026, 11:52',
-     'multiplos': [('PER 12 meses', '~7,1x'),
-                   ('EV/EBITDA', '~3,4x'),
-                   ('Rentab. dividendo', '~2,05%'),
-                   ('FCF yield', '~18,8%'),
-                   ('Capitalización', '~21.000 M€')],
-     'multiplos_nota': 'Con precio de 4,78 € en el BME el 23-oct-2026 a las 11:52 (Bolsamanía); múltiplos calculados con ~4.400 M de acciones '
-                       '(stockanalysis.com) y datos de 12 meses de IAG (BPA básico 66,9 céntimos, EBITDA 7.640 M€, deuda neta 4.692 M€, dividendo 2025 '
-                       'de 0,098 €, flujo libre 3.954 M€). A cierre de 2023, 2024 y 2025 (stockanalysis, cotización de Londres) el PER era 3,3x, 6,5x y '
-                       '6,5x, el EV/EBITDA 4,4x, 4,9x y 4,6x, la rentabilidad por dividendo -, 2,54% y 2,08%, y la rentabilidad por flujo libre 15,0%, '
-                       '20,1% y 14,5%. La recompra en curso (1.500 M€) equivale a ~7% de la capitalización.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ingresos', '16.064', '+1,0%'),
-               ('Ingresos de pasaje', '14.082', '+2,3%'),
-               ('Beneficio operativo antes de excepcionales', '1.757', '-6,4%'),
-               ('Beneficio operativo 2T antes de excepcionales', '1.406', '-16,3%'),
-               ('Beneficio neto', '1.033', '-20,6%'),
-               ('BPA básico', '22,9 cts', '-16,1%'),
-               ('Flujo de caja libre', '2.905', '+38,5% (calculado)')],
-     'kpi': 'Margen operativo antes de excepcionales 10,9% (11,8%); 2T 15,8% (19,0%). Capacidad (AKO) -0,1%, ocupación 85,0% (+0,9 pp), 57,9 M de '
-            'pasajeros. Ingreso de pasaje por AKO +2,4% (+6,2% a tipo de cambio constante); coste unitario sin combustible -1,3%; combustible y '
-            'emisiones 3.956 M€ (+12,3%). Beneficio operativo por aerolínea: British Airways 1.020 M€ (+44), Iberia 526 M€ (-38), Vueling 46 M€ (-49), '
-            'Aer Lingus -34 M€ (-114), IAG Loyalty 275 M€ (+48). Excepcionales 149 M€ (ERE voluntario de Iberia y reestructuración de BA). Deuda neta '
-            '4.692 M€ (-1.256 M€ vs diciembre), 0,6x EBITDA; liquidez 11.873 M€.',
-     'guia': 'Guía 2026: capacidad plana frente a 2025 (cerca de +3% en febrero); combustible 8.300-8.600 M€ (unos 9.000 M€ en mayo), con la meta de '
-             'recuperar ~60% del sobrecoste; margen operativo dentro del objetivo del 12%-15%; coste unitario sin combustible plano; inversión ~3.400 '
-             'M€. Recompra de 1.500 M€ con ~800 M€ ejecutados, a terminar antes de finales de febrero de 2027; dividendo 2025 de 0,098 € por acción '
-             '(+8,9%); el dividendo a cuenta de 2026 se decidirá con los resultados del 3T.',
-     'positivos': ['Flujo de caja libre de 2.905 M€ y deuda neta de solo 0,6x EBITDA.',
-                   'El ingreso de pasaje por AKO sube un 6,2% a tipo de cambio constante y el beneficio operativo del 2T supera el consenso.',
-                   'British Airways e IAG Loyalty mejoran, y la recompra de 1.500 M€ sigue adelante.'],
-     'riesgos': ['El combustible sube un 12,3% en el semestre y un 22,8% en el 2T.',
-                 'Aer Lingus pasa a pérdidas y Vueling gana la mitad que hace un año.',
-                 'La capacidad de 2026 queda plana por las rutas suspendidas en Oriente Medio y la competencia en el corto radio europeo.'],
-     'videos': [('ShNA56tU4sY', 'IAG resultados 1S 2026: beneficio 1.033 M€ (-20,6%) por el combustible | Deuda neta -1.256 M€'),
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve meses de 2026 (enero-septiembre)',
+     'titular': 'Beneficio neto de 2.264 M€ hasta septiembre (-16,2%) por el encarecimiento del combustible (+30,4% en el 3T). Ingresos récord en el 3T '
+                '(9.744 M€, +4,5%), aunque el beneficio operativo del trimestre (1.726 M€, -15,9%) quedó por debajo del consenso. La deuda neta baja a '
+                '4.220 M€ (0,6x EBITDA) y IAG pagará el 7 de diciembre un dividendo a cuenta de 0,053 € brutos por acción (+10%).',
+     'precio': '5,192 €',
+     'precio_fecha': '6-nov-2026, 17:35 (cierre)',
+     'multiplos': [('PER 12 meses', '~8,0x'),
+                   ('EV/EBITDA', '~3,5x'),
+                   ('Rentab. dividendo', '~1,98%'),
+                   ('Recompra / capitalización', '~6,6%'),
+                   ('Capitalización', '~22.800 M€')],
+     'multiplos_nota': 'Con precio de 5,192 € al cierre del BME el 6-nov-2026 (Bolsamanía); múltiplos calculados con ~4.400 M de acciones '
+                       '(stockanalysis.com) y datos de 12 meses de IAG: BPA básico 64,7 céntimos (71,3 de 2025 + 50,6 de 9M26 - 57,2 de 9M25), valor '
+                       'empresa ~27.100 M€ con la deuda neta de septiembre (4.220 M€) y el EBITDA antes de excepcionales de 12 meses a junio (7.640 M€, '
+                       'último publicado), y dividendos anunciados en 12 meses de 0,103 € (0,05 € complementario de 2025 y 0,053 € a cuenta de 2026). A '
+                       'cierre de 2023, 2024 y 2025 (stockanalysis, cotización de Londres) el PER era 3,3x, 6,5x y 6,5x, el EV/EBITDA 4,4x, 4,9x y 4,6x, '
+                       'y la rentabilidad por dividendo -, 2,54% y 2,08%. La recompra en curso (1.500 M€) equivale a ~6,6% de la capitalización.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos', '25.808', '+2,3%'),
+               ('Ingresos 3T', '9.744', '+4,5%'),
+               ('Ingresos de pasaje', '22.662', '+2,9%'),
+               ('Beneficio operativo antes de excepcionales', '3.483', '-11,4%'),
+               ('Beneficio operativo 3T antes de excepcionales', '1.726', '-15,9%'),
+               ('Beneficio neto', '2.264', '-16,2%'),
+               ('Beneficio neto 3T', '1.231', '-12,2%'),
+               ('BPA básico', '50,6 cts', '-11,5% (calculado)'),
+               ('Deuda neta (30-sep-2026)', '4.220', '-472 vs junio (calculado)')],
+     'kpi': 'Margen operativo antes de excepcionales 13,5% (15,6%); 3T 17,7% (22,0%). Capacidad (AKO) -0,2%, ocupación 86,1% (+0,3 pp), 92,6 M de '
+            'pasajeros (+0,2%). Ingreso de pasaje por AKO 3T +4,1% (Atlántico Norte +11%); 9M +3,0%. Combustible y emisiones 3T 2.444 M€ (+30,4%), 9M '
+            '6.400 M€ (+18,6%); coste unitario sin combustible 3T +3,4% (interrupciones del control aéreo), 9M +0,3%. Beneficio operativo de 9M por '
+            'aerolínea: British Airways 1.493 M£ (-144), Iberia 978 M€ (-96), Vueling 303 M€ (-64), Aer Lingus 108 M€ (-142), IAG Loyalty 391 M£ (+59). '
+            'Excepcionales del 1S de 149 M€ (sin excepcionales en el 3T). Deuda neta 4.220 M€ (-1.728 M€ vs diciembre, calculado), 0,6x EBITDA; liquidez '
+            '12.490 M€. El 3T quedó por debajo del consenso recopilado por IAG (~1.810 M€; -4,6%, calculado).',
+     'guia': 'Guía 2026: margen operativo antes de excepcionales de al menos el 12% (se mantiene); capacidad algo menor que en 2025 (plana en julio; '
+             '~+3% en febrero); combustible ~8.900 M€ (8.300-8.600 M€ en julio); coste unitario sin combustible ~+1% (plano en julio); inversión 3.100 '
+             'M€ (3.400 M€) con 12 entregas de aviones (16); 85% de las reservas del 4T aseguradas y 45% del combustible de 2027 cubierto. Dividendo a '
+             'cuenta de 2026: 0,053 € brutos por acción (+10%; 0,048 € en 2025), fecha ex-dividendo 3-dic-2026, registro 4-dic y pago desde el '
+             '7-dic-2026. Recompra de 1.500 M€: arranca el último tramo, de 500 M€, que terminará en febrero de 2027.',
+     'positivos': ['Ingresos récord en el 3T (9.744 M€, +4,5%), con el ingreso de pasaje por AKO un 4,1% arriba y el Atlántico Norte un 11%.',
+                   'La deuda neta sigue bajando, hasta 4.220 M€ (0,6x EBITDA), con una liquidez de 12.490 M€.',
+                   'El dividendo a cuenta sube un 10% y empieza el último tramo de la recompra de 1.500 M€.'],
+     'riesgos': ['El combustible sube un 30,4% en el 3T y la factura prevista para 2026 pasa a ~8.900 M€.',
+                 'El coste unitario sin combustible sube un 3,4% en el 3T por las interrupciones del control aéreo, y el beneficio operativo del '
+                 'trimestre quedó por debajo del consenso.',
+                 'Europa se complica por la competencia: Vueling y Aer Lingus ganan menos y la capacidad de 2026 será algo menor que la de 2025.'],
+     'videos': [('yYKwjQjEcJs', 'IAG resultados 3T 2026: beneficio 2.264 M€ (-16,2%) por el combustible | Dividendo a cuenta +10%'),
+                ('OMG3liN3o6M', 'IAG 3T 2026 en 60 segundos (Short)'),
+                ('ShNA56tU4sY', 'IAG resultados 1S 2026: beneficio 1.033 M€ (-20,6%) por el combustible | Deuda neta -1.256 M€'),
                 ('sDSWqb5VGVs', 'IAG 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-11-06',
-     'proximo_estimado': False,
-     'fuentes': 'IAG, informe semestral 1S 2026 (31-jul-2026, CNMV y LSE), resultados 2025 (27-feb-2026) y calendario financiero; XTB (31-jul-2026); '
-                'Renta 4 Banco / Capitalbolsa (consenso, 31-jul-2026); Estrategias de Inversión (1T26, 8-may-2026); Bolsamanía (precio, 23-oct-2026); '
-                'stockanalysis.com (acciones y múltiplos históricos).',
-     'fuentes_corto': 'XTB, Renta 4 Banco, Estrategias de Inversión, Bolsamanía y stockanalysis.com',
-     'elaborado': '23-oct-2026, 12:35'},
+     'proximo': '2027-02-26',
+     'proximo_estimado': True,
+     'fuentes': 'IAG, informe de gestión intermedio de 9M 2026 y presentación (6-nov-2026, CNMV) y dividendo a cuenta (CNMV, 5-nov-2026), según Europa '
+                'Press, Aviacionline, Hosteltur, Fly News, The Officer, El Español, Actualidad Aeroespacial y Alliance News/MarketScreener (6-nov-2026); '
+                'fechas del dividendo: RNS (Investegate), Finect y Bolsamanía; IAG, informe 1S 2026 y resultados 2025; XTB (consenso); Bolsamanía '
+                '(precio, 6-nov-2026); stockanalysis.com (acciones y múltiplos históricos).',
+     'fuentes_corto': 'Europa Press, Aviacionline, Hosteltur, Fly News, Alliance News, XTB, Bolsamanía y stockanalysis.com',
+     'elaborado': '6-nov-2026, 23:45'},
     {'id': 'acerinox',
      'nombre': 'Acerinox',
      'ticker': 'ACX',
@@ -1189,60 +1198,66 @@ FICHAS = [
      'lede': 'Compañía de medicamentos derivados del plasma (Biopharma: inmunoglobulinas, albúmina, alfa-1 y proteínas especiales), con más de 400 '
              'centros de donación, además de diagnóstico (Diagnostic) y Bio Supplies. En el plasma pesan el coste de obtener la materia prima, la mezcla '
              'de productos, el dólar y la deuda. El IBEX 35 incluye la clase A (GRF); la clase B (GRF.P) no tiene voto y cobra un dividendo preferente.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'Beneficio neto de 227 M€ (+28,7%; +13,6% sin extraordinarios). Ingresos de 3.574 M€ (-2,8% en euros; +2,6% a tipo constante), con las '
-                'inmunoglobulinas +12,8%. Flujo de caja libre antes de M&A de 91 M€ (-12 M€ en el 1S 2025) y apalancamiento de 4,2x según Grifols; guía '
-                '2026 confirmada.',
-     'precio': '10,055 € (clase A)',
-     'precio_fecha': '23-oct-2026, 16:25',
-     'multiplos': [('PER 12 meses', '~15,1x'),
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 390 M€ hasta septiembre (+28,4%; +20,2% sin extraordinarios). Ingresos de 5.614 M€ (+4,6% a tipo constante) y un 3T '
+                'que acelera: ventas +8,4% a tipo constante y margen EBITDA ajustado del 26,4%. El apalancamiento baja a 3,98x (4,2x hace un año), la '
+                'guía 2026 se confirma y Grifols pagará el 4 de diciembre un dividendo a cuenta de 0,15 € por acción.',
+     'precio': '11,000 € (clase A)',
+     'precio_fecha': '2-nov-2026, 17:35 (cierre)',
+     'multiplos': [('PER 12 meses', '~15,3x'),
                    ('EV/EBITDA', '~10,4x'),
-                   ('Precio / valor contable', '~0,74x'),
-                   ('Rentab. dividendo', '~2,31%'),
-                   ('Capitalización', '~5.920 M€')],
-     'multiplos_nota': 'Con precio de la clase A de 10,055 € en el BME el 23-oct-2026 a las 16:25 (Bolsarama); múltiplos calculados con datos de 12 '
-                       'meses a junio: BPA 0,66 € (beneficio de 452 M€ y 680,6 M de acciones), dividendo con cargo a 2025 de 0,2324 € por acción A (0,15 '
-                       '+ 0,0824). Capitalización con 422,4 M de acciones A y 258,2 M de acciones B a 6,48 € (stockanalysis, 1-oct-2026). Valor empresa '
-                       '~17.200 M€ con la deuda neta de balance (8.843 M€) y los minoritarios (2.434 M€); EBITDA de 12 meses de stockanalysis (1.650 '
-                       'M€); con el EBITDA ajustado de Grifols (1.803 M€), ~9,5x. Precio / valor contable sobre el patrimonio neto total (7.980 M€). A '
-                       'cierre de 2023, 2024 y 2025 (stockanalysis.com, datos S&P Global) el PER era 219,8x, 36,2x y 16,3x, el EV/EBITDA 19,1x, 10,8x y '
-                       '10,5x, el precio / valor contable 1,23x, 0,66x y 0,86x, y la rentabilidad por dividendo 0%, 0% y 2,19% (calculada).',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025',
-     'tabla': [('Ingresos', '3.574', '-2,8% (+2,6% a tipo constante)'),
-               ('Biopharma', '3.148', '-0,2% (+5,4% a tipo constante)'),
-               ('Diagnostic', '284', '-14,3% (-9,7% a tipo constante)'),
-               ('Bio Supplies', '50', '-27,0% (-21,7% a tipo constante)'),
-               ('EBITDA ajustado', '854', '-2,5% (+2,4% a tipo constante)'),
-               ('Beneficio neto', '227', '+28,7%'),
-               ('BPA', '0,33 €', '+27% (calculado)'),
-               ('Flujo de caja libre antes de M&A', '91', '-12 en 1S 2025')],
-     'kpi': 'Margen EBITDA ajustado 23,9% (23,8%; calculado); 2T 25,2%. Biopharma por franquicia (tipo constante): inmunoglobulinas +12,8% (intravenosas '
-            '+12,5%, subcutáneas +17,7%), albúmina -14,2% (precios en China), alfa-1 y proteínas especiales -2,6% (+2,0% en el 2T). Margen bruto 37,1% '
-            '(39,1%), con ~40 M€ de costes puntuales por el cierre de 29 centros en EE. UU. Red: ~280 centros en EE. UU. y más de 130 en el resto del '
-            'mundo; Grifols no publica el coste por litro. Deuda neta 7.798 M€ según el contrato de crédito (8.843 M€ en balance), 4,2x EBITDA según '
-            'Grifols; liquidez 2.030 M€. Vencimientos de 2027 refinanciados y 500 M€ del bono 2030 amortizados: sin vencimientos relevantes hasta el 4T '
-            '2028.',
-     'guia': 'Guía 2026 confirmada: EBITDA ajustado +5% a +9% a tipo constante, margen de al menos el 25% y flujo de caja libre antes de M&A y '
-             'dividendos de 500-575 M€ (el 1S lleva 91 M€, el 16-18%; calculado). Objetivo de apalancamiento de 3,5x o menos a finales de 2027. Egipto: '
-             '180 M€ más hasta 2029 para llegar a 3 millones de litros de plasma al año. Dividendo con cargo a 2025: ~0,23 € brutos por acción A (0,15 € '
-             'en agosto de 2025 y 0,082 € el 2 de julio de 2026).',
-     'positivos': ['El beneficio neto sube un 28,7%, hasta 227 M€, y el margen EBITDA ajustado del 2T llega al 25,2%.',
-                   'Las inmunoglobulinas crecen un 12,8% a tipo constante (subcutáneas +17,7%).',
-                   'Flujo de caja libre positivo (91 M€) y vencimientos de 2027 refinanciados.'],
-     'riesgos': ['El apalancamiento sigue en 4,2x, frente al objetivo de 3,5x o menos a finales de 2027.',
-                 'La albúmina cae un 14,2% y el dólar resta crecimiento en euros.',
-                 'Para cumplir la guía de caja necesita más de 400 M€ en el segundo semestre (calculado).'],
-     'videos': [('ZmBOEO1agsY', 'Grifols resultados 1S 2026: beneficio +28,7%, hasta 227 M€ | Inmunoglobulinas +12,8%, deuda en 4,2x'),
+                   ('Precio / valor contable', '~0,78x'),
+                   ('Rentab. dividendo', '~2,11%'),
+                   ('Capitalización', '~6.410 M€')],
+     'multiplos_nota': 'Con precio de la clase A de 11,000 € al cierre del BME el 2-nov-2026 (Bolsarama); múltiplos calculados con datos de 12 meses a '
+                       'septiembre: BPA 0,72 € (beneficio de 488 M€ y 680,6 M de acciones), dividendos anunciados en 12 meses de 0,2324 € por acción A '
+                       '(0,0824 € el 2-jul-2026 y 0,15 € el 4-dic-2026). Capitalización con 422,4 M de acciones A y 258,2 M de acciones B a 6,83 € '
+                       '(TradingView, sin fecha). Valor empresa ~17.600 M€ con la deuda neta de balance (8.753 M€) y los minoritarios (2.455 M€); EBITDA '
+                       'reportado de 12 meses de Grifols (1.692 M€); con el EBITDA ajustado de 12 meses (1.859 M€), ~9,5x. Precio / valor contable sobre '
+                       'el patrimonio neto total a septiembre (8.243 M€). A cierre de 2023, 2024 y 2025 (stockanalysis.com, datos S&P Global) el PER era '
+                       '219,8x, 36,2x y 16,3x, el EV/EBITDA 19,1x, 10,8x y 10,5x, el precio / valor contable 1,23x, 0,66x y 0,86x, y la rentabilidad por '
+                       'dividendo 0%, 0% y 2,19% (calculada).',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos', '5.614', '+1,3% (+4,6% a tipo constante)'),
+               ('Ingresos 3T', '2.040', '+9,4% (+8,4% a tipo constante)'),
+               ('Biopharma', '4.951', '+3,7% (+7,1% a tipo constante)'),
+               ('Diagnostic', '431', '-10,0% (-7,0% a tipo constante)'),
+               ('EBITDA ajustado', '1.392', '+2,5% (+5,0% a tipo constante)'),
+               ('Beneficio neto', '390', '+28,4%'),
+               ('Beneficio neto 3T', '162', '+27,9%'),
+               ('Flujo de caja libre antes de M&A', '298', '188 en 9M 2025'),
+               ('Deuda financiera neta (contrato de crédito, sep-26)', '7.706', '-92 vs junio (calculado)')],
+     'kpi': 'Margen EBITDA ajustado 24,8% (24,5%); 3T 26,4% (25,8%). Margen bruto 38,0% (39,2%); 3T 39,6% (39,3%). Biopharma por franquicia (tipo '
+            'constante): inmunoglobulinas +11,3% en el 3T y +12,3% en 9M (subcutáneas +40,3% y +25,6%), albúmina -13,2% y -13,9% (China), alfa-1 y '
+            'proteínas especiales +18,2% y +4,6%. EE. UU. y Canadá +17,3% en el 3T. Diagnostic sin el negocio conjunto con QuidelOrtho: +2,3% en 9M. BPA '
+            'de 9M ~0,57 € (calculado). Flujo libre antes de M&A del 3T 208 M€ (203). Deuda neta 7.706 M€ según el contrato de crédito (8.753 M€ en '
+            'balance), 3,98x EBITDA según Grifols; liquidez 2.140 M€; sin vencimientos relevantes hasta el 4T 2028. Egipto: 18 centros (20 en el 1T '
+            '2027) y ~1 millón de litros en 2026; Canadá: recogida reanudándose por fases tras la pausa de agosto. Grifols no publica el coste por '
+            'litro.',
+     'guia': 'Guía 2026 confirmada: EBITDA ajustado +5% a +9% a tipo constante (9M: +5,0%), margen de al menos el 25% (9M: 24,8%) y flujo de caja libre '
+             'antes de M&A y dividendos de 500-575 M€ (9M: 298 M€, el 52-60%; calculado). Grifols prevé un 4T más moderado en Biopharma y que se '
+             'reviertan efectos de calendario favorables en la caja. Objetivo fijado en febrero: apalancamiento de 3,5x o menos a finales de 2027. '
+             'Dividendo a cuenta de 2026: 0,15 € brutos por acción (clase A y clase B), pago el 4 de diciembre de 2026 (el anuncio no indica la fecha '
+             'ex-dividendo).',
+     'positivos': ['El beneficio neto sube un 28,4%, hasta 390 M€, y el 3T acelera: ventas +8,4% a tipo constante y margen EBITDA ajustado del 26,4%.',
+                   'Las inmunoglobulinas crecen un 11,3% en el 3T (subcutáneas +40,3%) y alfa-1 vuelve a crecer (+18,2%).',
+                   'El apalancamiento baja a 3,98x y Grifols anuncia un dividendo a cuenta de 0,15 € por acción.'],
+     'riesgos': ['La albúmina cae un 13,9% en nueve meses por China; Grifols cree que podría estabilizarse en 2027.',
+                 'El margen EBITDA ajustado de 9M (24,8%) está por debajo del objetivo del 25% y la empresa prevé un 4T más moderado.',
+                 'La deuda neta sigue en 7.706 M€ y parte de los efectos que ayudaron a la caja se revertirán en el 4T.'],
+     'videos': [('HHl1NHMI-RU', 'Grifols resultados 3T 2026: gana 390 M€ (+28,4%) | Deuda por debajo de 4x y dividendo de 0,15 €'),
+                ('Ufii2j9Isho', 'Grifols 3T 2026 en 60 segundos (Short)'),
+                ('ZmBOEO1agsY', 'Grifols resultados 1S 2026: beneficio +28,7%, hasta 227 M€ | Inmunoglobulinas +12,8%, deuda en 4,2x'),
                 ('xrWR9VfrbhY', 'Grifols 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-11-03',
+     'proximo': '2027-02-26',
      'proximo_estimado': True,
-     'fuentes': 'Grifols, nota de prensa, presentación y estados financieros intermedios del 1S 2026 (28-jul-2026, CNMV y SEC), resultados 2025 '
-                '(26-feb-2026) y dividendos (CNMV/SEC, jun-2025 y jun-2026); Investing.com (presentación y conferencia, 28-jul-2026); Europa '
-                'Press/Bolsamanía (28-jul-2026); Benzinga España (29-jul-2026); Bolsarama (precio, 23-oct-2026); stockanalysis.com (múltiplos '
-                'históricos).',
-     'fuentes_corto': 'Investing.com, Europa Press, Bolsamanía, Benzinga España, Bolsarama y stockanalysis.com',
-     'elaborado': '23-oct-2026, 17:00'},
+     'fuentes': 'Grifols, nota de prensa y presentación de resultados del 3T 2026 (2-nov-2026, CNMV), dividendo a cuenta (otra información relevante, '
+                'CNMV/SEC, 2-nov-2026), resultados del 1S 2026 (28-jul-2026) y de 2025 (26-feb-2026); Redacción Médica, El Español y Ara (2-nov-2026); '
+                'Investing.com y MarketBeat (presentación y conferencia, 2-nov-2026); Bolsarama (precio, 2-nov-2026); TradingView (precio de la clase '
+                'B); stockanalysis.com (múltiplos históricos).',
+     'fuentes_corto': 'Redacción Médica, El Español, Investing.com, MarketBeat, Bolsarama y stockanalysis.com',
+     'elaborado': '2-nov-2026, 23:30'},
     {'id': 'indra',
      'nombre': 'Indra',
      'ticker': 'IDR',
@@ -1298,4 +1313,247 @@ FICHAS = [
                 '(múltiplos históricos, oct-2026).',
      'fuentes_corto': 'Indra Group (CNMV), Europa Press, XTB, Bolsamanía y stockanalysis.com',
      'elaborado': '30-oct-2026, 11:30'},
+    {'id': 'sacyr',
+     'nombre': 'Sacyr',
+     'ticker': 'SCYR',
+     'sector': 'Construcción / concesiones',
+     'lede': 'Grupo español de concesiones de infraestructuras (autopistas, hospitales, agua) con negocio de ingeniería y construcción. El 90,5% de su '
+             'EBITDA procede de activos concesionales, sobre todo en Sur de Europa y Latinoamérica, y crece en países de habla inglesa (Canadá, EE. UU., '
+             'Reino Unido, Australia).',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto atribuible de 116 M€ hasta septiembre (+86,9%), con 118 M€ de Concesiones (49 M€ en 9M 2025), cifra de negocios de 3.777 '
+                'M€ (+10,7%) y EBITDA de 1.111 M€ (+9,2%). En el tercer trimestre, el beneficio fue de 38 M€ (+19,8%, calculado). La deuda neta con '
+                'recurso subió a 322 M€ (59 M€ en diciembre) por la inversión en nuevas concesiones.',
+     'precio': '4,11 €',
+     'precio_fecha': '3-nov-2026',
+     'multiplos': [('PER 12 meses', '~23,7x'),
+                   ('EV/EBITDA', '~7,9x'),
+                   ('Precio / patrimonio neto', '~1,43x'),
+                   ('Rentab. dividendo', '~3,65%'),
+                   ('Capitalización', '~3.312 M€')],
+     'multiplos_nota': 'Calculados con el cierre de 4,11 € del 3-nov-2026 (Bolsamanía), antes de los resultados, 805,8 M de acciones y datos de 12 meses '
+                       'de Sacyr (2025 + 9M26 - 9M25: beneficio neto 139,9 M€, EBITDA 1.451 M€); EV con la deuda neta total de 6.972 M€ (incluida la '
+                       'financiación de proyectos) y 1.245 M€ de minoritarios; precio / patrimonio neto total con minoritarios; dividendo de 0,15 € '
+                       'aprobado para 2026. A cierre de 2023, 2024 y 2025 (stockanalysis.com) el PER era 13,2x, 21,7x y 35,7x, el EV/EBITDA 8,0x, 7,5x y '
+                       '8,9x, el precio / patrimonio neto 1,16x, 1,20x y 1,39x, y la rentabilidad por dividendo 4,92%, 5,23% y 2,50%.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Cifra de negocios', '3.777', '+10,7%'),
+               ('EBITDA', '1.111', '+9,2%'),
+               ('EBIT', '837', '+13,5%'),
+               ('Resultado financiero', '-443', '-0,8%'),
+               ('Beneficio neto atribuible', '116', '+86,9%'),
+               ('Beneficio neto 3T (calculado)', '38', '+19,8%'),
+               ('Flujo de caja operativo', '930', '+21% comparable'),
+               ('Deuda neta con recurso (sep-26)', '322', '')],
+     'kpi': 'Margen EBITDA 29,4% (29,8% en 9M 2025). Concesiones: ingresos 1.536 M€ (+21,4%; operativos +11,1%), EBITDA 611 M€ (+8,9%; 3T -0,7%, '
+            'calculado), margen 62,3% sin construcción (63,6%), beneficio 118 M€. Ingeniería e Infraestructuras: 2.419 M€ (+9,7%), EBITDA 434 M€ '
+            '(+6,8%), margen de construcción pura 5,0% (4,8%), cartera 12.801 M€ (+3%). Agua: 323 M€ (+52,6%), EBITDA 55 M€ (+19,7%), cartera 8.089 M€ '
+            '(+16%). Deuda neta total 6.972 M€ (6.359 M€ en diciembre), de la que 6.650 M€ es financiación de proyectos y 322 M€ con recurso; ratio con '
+            'recurso por debajo de 1x. Valor interno de los activos concesionales 4.316 M€. S&P: BBB-, estable.',
+     'guia': 'Sin guía numérica anual en el informe de 9M. Dividendo 2026 aprobado en la junta del 4-jun-2026: 0,15 € brutos por acción en efectivo; '
+             '0,10 € pagados el 1-jul-2026 y 0,05 € a pagar en enero de 2027 (fecha exacta sin publicar a 3-nov-2026). Compromiso de repartir al menos '
+             '225 M€ en efectivo entre 2025 y 2027; nuevo plan estratégico 2027-2030 en diseño. Nuevas concesiones: Museo de Ciencias de Ontario '
+             '(Canadá) y Ruta 57 (Chile, seleccionada, pendiente de adjudicación formal).',
+     'positivos': ['El beneficio neto crece un 86,9% y el de Concesiones se multiplica por 2,4, hasta 118 M€.',
+                   'El flujo de caja operativo sube a 930 M€ (+21% en términos comparables).',
+                   'Nuevas concesiones en Canadá y Chile, cartera de Agua +16% y calificación de grado de inversión (S&P BBB-).'],
+     'riesgos': ['La deuda neta con recurso pasa de 59 M€ en diciembre a 322 M€, y la deuda neta total, a 6.972 M€.',
+                 'El resultado financiero (-443 M€) absorbe el 53% del EBIT (calculado), y los minoritarios se quedan 99 M€.',
+                 'El EBITDA de Concesiones quedó plano en el tercer trimestre (-0,7%, calculado) y el crecimiento del beneficio se modera (+156,7% en el '
+                 '1S; +19,8% en el 3T).'],
+     'videos': [('k77JV0jp6l4', 'Sacyr resultados 3T 2026: beneficio +86,9%, hasta 116 M€ | Concesiones x2,4 y flujo de caja 930 M€'),
+                ('-7TA34Yh_hc', 'Sacyr 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-25',
+     'proximo_estimado': True,
+     'fuentes': 'Sacyr, informe de resultados de los primeros nueve meses de 2026 (CNMV y sacyr.com, 3-nov-2026), informes del primer semestre de 2026 y '
+                'de 2025, y nota de la junta del 4-jun-2026; Empresa Exterior, Capital Madrid, Vozpópuli y El Debate (3-nov-2026); Bolsamanía (precio); '
+                'stockanalysis.com (múltiplos históricos, oct-2026).',
+     'fuentes_corto': 'Sacyr (CNMV), Empresa Exterior, Vozpópuli, Bolsamanía y stockanalysis.com',
+     'elaborado': '3-nov-2026, 23:30'},
+    {'id': 'rovi',
+     'nombre': 'Laboratorios Rovi',
+     'ticker': 'ROVI',
+     'sector': 'Farmacia',
+     'lede': 'Farmacéutica española con dos negocios: especialidades farmacéuticas (heparinas de bajo peso molecular, su antipsicótico inyectable Okedi, '
+             'Neparvis y agentes de contraste) y fabricación para terceros (CDMO), con plantas en Madrid, Granada y, desde abril de 2026, Phoenix '
+             '(Arizona, EE. UU.).',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve primeros meses de 2026',
+     'titular': 'Beneficio neto de 162,8 M€ hasta septiembre (+67%), con ingresos totales de 633,7 M€ (+19%) y operativos de 610,2 M€ (+16%), impulsados '
+                'por la fabricación para terceros (+45%). El EBITDA de 226,6 M€ (+52%) incluye un badwill provisional de 62,4 M€ por la compra de la '
+                'planta de Phoenix; sin él, 164,3 M€ (+10%). Rovi eleva su previsión de ingresos operativos para 2026.',
+     'precio': '69,10 €',
+     'precio_fecha': '5-nov-2026, 09:47',
+     'multiplos': [('PER 12 meses', '~17,2x (24,7x sin badwill)'),
+                   ('EV/EBITDA', '~12,1x (15,4x sin badwill)'),
+                   ('Precio / patrimonio neto', '~4,9x'),
+                   ('Rentab. dividendo', '~1,39%'),
+                   ('Capitalización', '~3.534 M€')],
+     'multiplos_nota': 'Calculados con 69,10 € (5-nov-2026, hacia las 09:47, Europa Press), ya con los resultados publicados, 51,14 M de acciones '
+                       '(stockanalysis) y datos de 12 meses de Rovi (2025 + 9M26 - 9M25: beneficio neto 205,5 M€, EBITDA 293,3 M€; sin el badwill de '
+                       '62,4 M€, 143,1 y 230,9 M€); EV con la deuda neta de 27,9 M€; patrimonio neto de 717 M€ a junio de 2026 (stockanalysis); '
+                       'dividendo de 0,9594 € pagado en julio. A cierre de 2023, 2024 y 2025 (stockanalysis.com) el PER era 18,9x, 23,5x y 23,1x, el '
+                       'EV/EBITDA 13,5x, 16,7x y 17,1x (stockanalysis usa su propio EBITDA: comparación aproximada), el precio / patrimonio neto 5,91x, '
+                       '5,54x y 4,81x, y la rentabilidad por dividendo 1,91%, 1,53% y 1,53%.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos totales', '633,7', '+19%'),
+               ('Ingresos operativos', '610,2', '+16%'),
+               ('Fabricación a terceros (CDMO)', '263,9', '+45%'),
+               ('Especialidades farmacéuticas', '346,1', '+1%'),
+               ('EBITDA', '226,6', '+52%'),
+               ('EBITDA sin badwill', '164,3', '+10%'),
+               ('Beneficio neto', '162,8', '+67%'),
+               ('Beneficio neto 3T (calculado)', '78,3', '+35%'),
+               ('Flujo de caja libre', '61,9', '-2%')],
+     'kpi': 'Margen bruto 72,7% (67,1%; 68,9% sin otros ingresos, que incluyen una subvención del CDTI). Margen EBITDA 37,1% (28,5%); sin badwill, '
+            '26,9%. EBIT 198,7 M€ (+56%). Okedi 53,0 M€ (+29%; +35% en el 3T, calculado). Heparinas 180,9 M€ (-5%): enoxaparina biosimilar 107,0 M€ '
+            '(-5%) y bemiparina 66,7 M€ (-6%), por los inventarios de los socios. Neparvis 43,3 M€ (+3%); contrastes y otros hospitalarios 47,8 M€ '
+            '(+10%). I+D 58,4 M€ (+136%, fase III de Letrozol SIE); gastos generales 221,2 M€ (+24%). En el 3T (calculado): ingresos operativos 266,0 M€ '
+            '(+26%), CDMO 157,6 M€ (+51%), EBITDA 105,4 M€ (+26%). Capex 50,3 M€ (+31%). Deuda neta 27,9 M€ (21,9 M€ en diciembre; caja neta de 22,5 M€ '
+            'en junio).',
+     'guia': 'Eleva la previsión 2026: ingresos operativos entre la banda media y la alta de la primera decena (0-10%) frente a 2025 (antes, entre la '
+             'baja y la media). Heparinas de bajo peso molecular: caída en la banda media de 0-10%; gastos generales sin ROIS Phoenix: subida entre la '
+             'banda media y la alta. Previsión 2027 con los resultados anuales, en febrero de 2027. Dividendo con cargo a 2025: 0,9594 € brutos por '
+             'acción, pagado el 15-jul-2026 (ex-dividendo 13-jul). Sin dividendos nuevos anunciados en el informe de 9M.',
+     'positivos': ['La fabricación para terceros crece un 45%, hasta 263,9 M€, y un 51% en el tercer trimestre (calculado).',
+                   'Okedi vende 53,0 M€ (+29%) y acelera en el 3T (+35% interanual y +13% frente al 2T).',
+                   'El margen bruto sube 5,7 puntos, hasta el 72,7%, y Rovi eleva su previsión de ingresos operativos para 2026.'],
+     'riesgos': ['Las heparinas, su mayor negocio propio, caen un 5% por los inventarios de los socios, y Rovi prevé que sigan bajando en 2026.',
+                 'Sin el badwill de 62,4 M€ de Phoenix (provisional), el EBITDA crece un 10%, con I+D +136% y gastos generales +24%.',
+                 'El flujo de caja libre baja un 2% por el capex (+31%) y Rovi vuelve a deuda neta (27,9 M€) tras pagar el dividendo.'],
+     'videos': [('U2PKODF57do', 'Rovi resultados 3T 2026: beneficio +67%, hasta 162,8 M€ | CDMO +45% y previsión de ingresos al alza'),
+                ('jQhfxew8KlU', 'Rovi 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-25',
+     'proximo_estimado': True,
+     'fuentes': 'Rovi, nota de prensa y presentación de resultados de los nueve primeros meses de 2026 (CNMV y rovi.es, 5-nov-2026) y nota del primer '
+                'semestre de 2026; Bolsamanía, El Español, Pharmatech, Investing.com y Europa Press (5-nov-2026); stockanalysis.com (múltiplos '
+                'históricos y acciones).',
+     'fuentes_corto': 'Rovi (CNMV), Bolsamanía, El Español, Investing.com, Europa Press y stockanalysis.com',
+     'elaborado': '5-nov-2026, 11:00'},
+    {'id': 'arcelormittal',
+     'nombre': 'ArcelorMittal',
+     'ticker': 'MTS',
+     'sector': 'Acero',
+     'lede': 'Siderúrgica con sede en Luxemburgo y cotización en el IBEX 35 (además de Ámsterdam, París y Nueva York). Produce acero en Europa (con '
+             'plantas en Asturias y el País Vasco), Norteamérica y Brasil, extrae mineral de hierro en Canadá y Liberia y participa en AMNS India con '
+             'Nippon Steel. Publica sus cuentas en dólares.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'tercer trimestre y acumulado a septiembre de 2026',
+     'titular': 'Pérdida neta de 391 M$ en el tercer trimestre (377 M$ de beneficio en el 3T25) por la parada de su planta de Kryvyi Rih (Ucrania), con '
+                '852 M$ de deterioro y 293 M$ de cargos extraordinarios. Sin esos efectos, el beneficio ajustado sube a 868 M$ (+83%), por encima del '
+                'consenso, y el EBITDA a 2.023 M$ (+34%). Hasta septiembre, el beneficio neto es de 867 M$ (-70,9%).',
+     'precio': '54,76 €',
+     'precio_fecha': '5-nov-2026, cierre',
+     'multiplos': [('PER 12 meses', '~44,2x (16,6x ajustado)'),
+                   ('EV/EBITDA', '~7,7x'),
+                   ('Precio / patrimonio neto', '~0,85x'),
+                   ('Rentab. dividendo', '~0,98%'),
+                   ('Capitalización', '~41.200 M€')],
+     'multiplos_nota': 'Calculados con el cierre de 54,76 € del 5-nov-2026 en la bolsa española (Bolsamanía), ya con los resultados publicados, al '
+                       'cambio de 1,1179 $/€ del BCE del 3-nov-2026 (61,22 $), 753 M de acciones (media del 3T26) y datos de 12 meses de ArcelorMittal '
+                       '(4T25 + 9M26: beneficio neto 1.044 M$, ajustado 2.780 M$, EBITDA 7.359 M$); EV con la deuda neta de 10.339 M$; patrimonio '
+                       'atribuido de 54.123 M$ a septiembre; dividendo base de 0,60 $ en 2026. A cierre de 2023, 2024 y 2025 (stockanalysis.com, '
+                       'cotización MT) el PER era 25,9x, 13,6x y 11,1x, el EV/EBITDA 5,2x, 4,4x y 10,6x (con su propio EBITDA; con el EBITDA publicado, '
+                       '3,7x en 2024 y 7,1x en 2025, calculado), el precio / patrimonio 0,42x, 0,36x y 0,62x, y la rentabilidad por dividendo 1,82%, '
+                       '2,42% y 1,32%.',
+     'tabla_titulo': 'Cifras en millones de dólares (M$) · 3T 2026 y 9M 2026 con su variación interanual',
+     'tabla': [('Ventas 9M', '48.684', '+5,0%'),
+               ('EBITDA 9M', '5.766', '+16,5%'),
+               ('Beneficio neto atribuido 9M', '867', '-70,9%'),
+               ('Beneficio neto ajustado 9M', '2.126', '-6,9%'),
+               ('Ventas 3T', '16.466', '+5,2%'),
+               ('EBITDA 3T', '2.023', '+34,2%'),
+               ('Beneficio (pérdida) neto 3T', '-391', '377 en el 3T25'),
+               ('Beneficio neto ajustado 3T', '868', '+83,1%'),
+               ('Flujo de caja libre 9M', '-1.935', '-1.375 en 9M25'),
+               ('Deuda neta (sep-26)', '10.339', '7.931 en dic-25')],
+     'kpi': 'EBITDA por tonelada 155 $ en el 3T (155 $ en el 2T26 y 111 $ en el 3T25); 147 $ en 9M (121 $). Margen EBITDA 3T 12,3% (9,6%; calculado). '
+            'Envíos de acero 13,0 Mt en el 3T (13,6 Mt) y 39,2 Mt en 9M (41,0). EBITDA 3T por región: Norteamérica 487 M$ (+62%), Brasil 506 M$ (+68%), '
+            'Europa 548 M$ (+7% a/a; -21% frente al 2T por la energía y el carbono), Soluciones sostenibles 119 M$ (+18%), Minería 128 M$ (-39%); AMNS '
+            'India, al 100%, 266 M$ (+23%). Consenso de Visible Alpha publicado por la empresa: EBITDA 1.972 M$ y beneficio ajustado 652 M$. Circulante '
+            '-2.473 M$ en 9M; flujo libre subyacente ~500 M$ según la empresa. Deuda neta / EBITDA 12 meses ~1,4x (calculado); liquidez 8.700 M$. '
+            'Remuneración en 9M: 341 M$ en dividendos y 760 M$ en recompras.',
+     'guia': 'Inversiones 2026 de 4.500-5.000 M$ (1.700-1.900 M$ estratégicas), sin cambios. Envíos de planos en el 4T con crecimiento de doble dígito '
+             'a/a y envíos del 2S por encima del 1S. Aportación de los proyectos estratégicos en 2026 rebajada a ~500 M$ de EBITDA (antes ~700 M$) por '
+             'Liberia (~16 Mt de hierro, antes ~18). Hornos eléctricos de Gijón (1,1 Mt) y Sestao (1,6 Mt), en marcha en el 4T26. Dividendo base 2026: '
+             '0,60 $ por acción en cuatro pagos; el cuarto, de 0,15 $, se anunció el 5-nov-2026, con ex-dividendo el 12-nov, registro el 13-nov y pago '
+             'el 2-dic-2026 (importe en euros según el cambio del BCE).',
+     'positivos': ['El EBITDA del tercer trimestre sube un 34%, hasta 2.023 M$, con 155 $ por tonelada (+44 $).',
+                   'Norteamérica (+62%) y Brasil (+68%) impulsan el beneficio ajustado, que supera en un 33% el consenso.',
+                   'Los envíos de planos en Europa suben pese a la estacionalidad con las nuevas cuotas arancelarias de la UE.'],
+     'riesgos': ['La parada de Kryvyi Rih (Ucrania) deja una pérdida neta de 391 M$ en el trimestre.',
+                 'El EBITDA de Europa cae un 21% frente al 2T por la energía y el carbono, y el de la minería un 28%.',
+                 'La deuda neta sube 2.408 M$ desde diciembre, por el circulante, y la empresa rebaja la aportación de sus proyectos en 2026.'],
+     'videos': [('FqkZusiRbGM', 'ArcelorMittal 3T 2026: pérdida de 391 M$ por Ucrania, beneficio ajustado +83% | EBITDA +34%'),
+                ('_SmyWKk54AU', 'ArcelorMittal 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-04',
+     'proximo_estimado': True,
+     'fuentes': 'ArcelorMittal, nota de resultados del tercer trimestre de 2026 (GlobeNewswire y CNMV, 5-nov-2026), resultados de 2025 y calendario de '
+                'dividendos (corporate.arcelormittal.com); consenso de Visible Alpha publicado por la empresa (2-nov-2026); Bolsamanía, Europa Press y '
+                'OKDiario (5-nov-2026); BCE (BOE, 4-nov-2026); stockanalysis.com (múltiplos históricos).',
+     'fuentes_corto': 'ArcelorMittal (CNMV), Visible Alpha, Bolsamanía, Europa Press, BCE y stockanalysis.com',
+     'elaborado': '5-nov-2026, 23:30'},
+    {'id': 'amadeus',
+     'nombre': 'Amadeus',
+     'ticker': 'AMS',
+     'sector': 'Tecnología para viajes',
+     'lede': 'Grupo español de tecnología para la industria de viajes: sistema de reservas que usan las agencias para vender vuelos (distribución '
+             'aérea), software para aerolíneas y aeropuertos (gestión de pasajeros, embarque) y soluciones para hoteles y de pagos.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve meses de 2026 (enero-septiembre)',
+     'titular': 'Beneficio neto de 1.081,6 M€ hasta septiembre (-0,6%) y de 381,4 M€ en el tercer trimestre (+5,7%), con ingresos de 5.075,7 M€ (+3,7%; '
+                '+5,2% a tipo de cambio constante). Las reservas aéreas bajan un 2,8% por Oriente Próximo, mientras los negocios de IT para aerolíneas y '
+                'hoteles crecen; Amadeus mantiene la guía 2026, aunque espera quedar en la parte baja.',
+     'precio': '60,52 €',
+     'precio_fecha': '6-nov-2026 (cierre)',
+     'multiplos': [('PER 12 meses', '~19,5x (17,7x ajustado)'),
+                   ('EV/EBITDA', '~10,7x'),
+                   ('Precio / patrimonio neto', '~5,10x'),
+                   ('Rentab. dividendo', '~2,54%'),
+                   ('Rentab. flujo libre', '~5,4%'),
+                   ('Capitalización', '~25.418 M€')],
+     'multiplos_nota': 'Calculados con 60,52 € (cierre del 6-nov-2026, Bolsamanía), día de los resultados, 419,99 M de acciones en circulación (emitidas '
+                       'menos autocartera a 30-sep) y datos de 12 meses de Amadeus (2025 + 9M26 - 9M25: BPA diluido 3,11 €, ajustado 3,41 €, EBITDA '
+                       '2.606 M€, flujo libre 1.383 M€); EV con la deuda financiera neta de 2.536,7 M€; patrimonio neto de 4.985,7 M€; dividendo de 1,54 '
+                       '€ con cargo a 2025. A cierre de 2023, 2024 y 2025 (stockanalysis.com) el PER era 25,8x, 23,7x y 20,5x, el EV/EBITDA 15,4x, 14,2x '
+                       'y 12,1x, el precio / valor contable 6,43x, 5,87x y 5,63x, y la rentabilidad por dividendo 1,90%, 2,04% y 2,43% (stockanalysis '
+                       'usa sus propios datos: comparación aproximada).',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos', '5.075,7', '+3,7%'),
+               ('Distribución aérea', '2.391,5', '+0,6%'),
+               ('IT para aerolíneas', '1.852,0', '+6,3%'),
+               ('Hoteles y otras soluciones', '832,1', '+7,2%'),
+               ('EBITDA', '2.028,3', '+5,2%'),
+               ('EBIT ajustado', '1.546,6', '+5,2%'),
+               ('Beneficio neto', '1.081,6', '-0,6%'),
+               ('Beneficio neto 3T', '381,4', '+5,7%'),
+               ('Flujo de caja libre', '1.036,3', '+8,5%')],
+     'kpi': 'A tipo de cambio constante: ingresos +5,2%, distribución +2,1%, IT para aerolíneas +7,7%, hoteles y otras +9,2%. Margen EBITDA 40,0% '
+            '(39,4%, calculado) y margen EBIT ajustado 30,5% (30,0%). Beneficio ajustado 1.147,7 M€ (+3,5%); BPA diluido 2,54 € (+4,2%) y ajustado '
+            'diluido 2,69 € (+8,5%). Tercer trimestre: ingresos 1.740,7 M€ (+6,4%), EBITDA 694,1 M€ (+6,3%; consenso LSEG 691,5 M€), BPA ajustado '
+            'diluido 0,94 € (+12,8%), flujo libre 564,2 M€ (+15,9%). Reservas aéreas 359,2 M (-2,8%; 3T -0,8%; Oriente Medio y África -7,5%); pasajeros '
+            'embarcados 1.708,8 M (+1,3%). Inversión 503,8 M€ (-16,9%). Deuda financiera neta 2.536,7 M€ (1,0x EBITDA; 2.141,4 M€ en diciembre), tras '
+            '653 M€ de dividendo y 500 M€ de recompra en 2026.',
+     'guia': 'Guía 2026 mantenida (la revisada en julio), aunque Amadeus espera quedar en la parte baja de los rangos por Oriente Próximo: ingresos con '
+             'crecimiento de un dígito medio-alto, margen EBIT ajustado estable, BPA ajustado diluido con crecimiento de un dígito alto a doble dígito '
+             'bajo y flujo de caja libre de 1.350-1.450 M€ (el mínimo exige unos 314 M€ en el 4T, un 10% menos que en el 4T25; calculado). Sin nuevo '
+             'dividendo en el informe; el de 2025, 1,54 € brutos por acción, se pagó en dos partes: 0,53 € el 16-ene-2026 y 1,01 € el 3-jul-2026. El '
+             'dividendo a cuenta de 2026 aún no tiene importe ni fecha.',
+     'positivos': ['El tercer trimestre acelera: ingresos +6,4% (+2,3% en el 1S) y beneficio neto +5,7% (-3,7% en el 1S).',
+                   'El BPA ajustado diluido del 3T sube un 12,8%, con ayuda de las recompras, y el flujo libre del 3T, un 15,9%.',
+                   'IT para aerolíneas (+5,7%) y hoteles y otras soluciones (+9,3%) crecen en el 3T a tipo constante, y el margen EBITDA sube al 40,0%.'],
+     'riesgos': ['Las reservas aéreas caen un 2,8% en nueve meses (Oriente Medio y África -7,5%), y en octubre el incidente del aeropuerto de Riad frenó '
+                 'algo los volúmenes.',
+                 'La guía se cumpliría en la parte baja, y el beneficio neto contable de nueve meses aún baja un 0,6%.',
+                 'La deuda neta sube 395 M€ desde diciembre, hasta 2.536,7 M€, por el dividendo y las recompras (1,0x EBITDA).'],
+     'videos': [('6FaJP-L6oB0', 'Amadeus resultados 3T 2026: beneficio del 3T +5,7%, reservas -2,8% | Guía 2026, en la parte baja'),
+                ('iKIslJepgJM', 'Amadeus 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-26',
+     'proximo_estimado': True,
+     'fuentes': 'Amadeus, nota de prensa, informe de gestión y presentación de resultados de enero a septiembre de 2026 (CNMV y amadeus.com, '
+                '6-nov-2026), resultados del primer semestre de 2026 y de 2025; Europa Press, Rankia, Reuters (consenso LSEG), Investing.com y '
+                'Bolsamanía (6-nov-2026); stockanalysis.com (múltiplos históricos).',
+     'fuentes_corto': 'Amadeus (CNMV), Europa Press, Rankia, Reuters, Bolsamanía y stockanalysis.com',
+     'elaborado': '6-nov-2026, 23:30'},
 ]

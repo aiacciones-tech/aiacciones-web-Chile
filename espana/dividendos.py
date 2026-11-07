@@ -34,6 +34,22 @@ DIVIDENDOS = [
      "ex": "2026-12-15", "ex_calc": True, "pago": "2026-12-17",
      "fuente": "Unicaja, resultados 9M 2026 (30-oct-2026); Europa Press",
      "url": "https://forbes.es/empresas/1059191/unicaja-gana-543-millones-hasta-septiembre-un-81-mas-y-anuncia-un-dividendo-de-642-centimos-por-accion/"},
+    {"ticker": "GRF", "importe": "0,15 €", "tipo": "A cuenta 2026, en efectivo (acciones clase A y B)",
+     "ex": "2026-12-02", "ex_calc": True, "pago": "2026-12-04",
+     "fuente": "Grifols, otra información relevante del 2-nov-2026 (CNMV; 6-K en la SEC); El Español",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001438569/000110465926121157/tm2628724d2_6k.htm"},
+    {"ticker": "SCYR", "importe": "0,05 €", "tipo": "Segundo pago del dividendo aprobado en la junta de 2026, en efectivo",
+     "ex": None, "pago": None, "pago_txt": "enero de 2027",
+     "fuente": "Sacyr, junta de accionistas del 4-jun-2026 e informe de resultados del 1S 2026",
+     "url": "https://sacyr.com/en/-/jga-sacyr-2026-aprueba-dos-dividendos"},
+    {"ticker": "MTS", "importe": "0,15 $", "tipo": "Cuarto pago del dividendo base de 2026 (0,60 $ en cuatro pagos), en efectivo; el importe en euros se fija con el cambio del BCE",
+     "ex": "2026-11-12", "pago": "2026-12-02",
+     "fuente": "ArcelorMittal, página de dividendos (anuncio del 5-nov-2026)",
+     "url": "https://corporate.arcelormittal.com/investors/equity-investors/dividends"},
+    {"ticker": "IAG", "importe": "0,053 €", "tipo": "Dividendo a cuenta de 2026, en efectivo (+10% frente a 0,048 €)",
+     "ex": "2026-12-03", "pago": "2026-12-07",
+     "fuente": "IAG, otra información relevante en la CNMV (5-nov-2026)",
+     "url": None},
     {"ticker": "REP", "importe": "0,56 €", "tipo": "En efectivo: 0,53 € de reservas + 0,03 € a cuenta de 2026",
      "ex": None, "pago": None, "pago_txt": "enero de 2027",
      "fuente": "Repsol, nota de prensa de resultados del 3T 2026 (CNMV, 29-oct-2026)",
@@ -61,7 +77,6 @@ DIVIDENDOS = [
 
 # Dividendos que la empresa ha anunciado sin importe o sin fecha todavía (texto de su última comunicación).
 POR_ANUNCIAR = [
-    ("IAG", "El dividendo a cuenta de 2026 se decidirá con los resultados del tercer trimestre.", "IAG, resultados del 1S 2026"),
     ("ENG", "Dividendo de 1 € por acción con cargo a 2026; falta el calendario del pago a cuenta.", "Enagás, resultados de 9M 2026"),
     ("FER", "Nuevo dividendo flexible (scrip) de 600 M€: el importe por acción se conocerá el 3-nov, ex-dividendo el 5-nov y pago desde el 10-dic de 2026.", "Ferrovial, resultados de 9M 2026"),
 ]

@@ -42,6 +42,9 @@ variable BUFFER_CANAL_EAU, BUFFER_CANAL_LINKEDIN_EAU, BUFFER_CANAL_TIKTOK_EAU o 
 Qatar (canal @QatarAIStocks, posts en árabe): igual que EAU, `programar cola-qa` con su propia cuenta de Buffer
 (secreto BUFFER_ACCESS_TOKEN_QA, que el workflow pasa como BUFFER_API_KEY_QA, y opcional BUFFER_ACCESS_TOKEN_QA2);
 variables con sufijo _QA (BUFFER_CANAL_QA, BUFFER_CANAL_LINKEDIN_QA, ...).
+Arabia Saudita (canal Saudi Arabia AI Stocks, posts en árabe): igual que Qatar, `programar cola-sa` con su propia
+cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_SAUDI, que el workflow pasa como BUFFER_API_KEY_SA, y opcional
+BUFFER_ACCESS_TOKEN_SAUDI2); variables con sufijo _SA (BUFFER_CANAL_SA, BUFFER_CANAL_LINKEDIN_SA, ...).
 Solo usa la biblioteca estándar de Python.
 """
 import json, os, re, subprocess, sys, unicodedata, urllib.request
@@ -118,19 +121,23 @@ REDES = {
 
 def archivo_post(carpeta, r, pais):
     """El archivo de texto del post de esa red en la carpeta, o None si no hay."""
-    for nombre in (r["archivo"], r.get("alterno_eau") if pais in ("eau", "qatar") else None):
+    for nombre in (r["archivo"], r.get("alterno_eau") if pais in ("eau", "qatar", "saudi") else None):
         if nombre and os.path.isfile(os.path.join(carpeta, nombre)):
             return nombre
     return None
+CANAL_CL = "youtube.com/@aiaccioneschile"  # canal de YouTube de Chile
 CLAVES_ES = ("BUFFER_API_KEY_ES", "BUFFER_API_KEY_ES2")  # cuentas de Buffer solo de España
 CLAVES_EAU = ("BUFFER_API_KEY_EAU", "BUFFER_API_KEY_EAU2")  # cuentas de Buffer solo de EAU (@AIStocksUAE)
 CANAL_EAU = "https://www.youtube.com/@AIStocksUAE"
 CLAVES_QA = ("BUFFER_API_KEY_QA", "BUFFER_API_KEY_QA2")  # cuentas de Buffer solo de Qatar (@QatarAIStocks)
 CANAL_QA = "https://www.youtube.com/@QatarAIStocks"
-SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA"}
+CLAVES_SA = ("BUFFER_API_KEY_SA", "BUFFER_API_KEY_SA2")  # cuentas de Buffer solo de Arabia Saudita
+CANAL_SA = "https://www.youtube.com/@SaudiArabiaAIStocks"  # handle por confirmar
+SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA", "saudi": "_SA"}
 # países con cuentas de Buffer propias (todos sus canales son de ese país) y su canal de YouTube
 PROPIOS = {"eau": (CLAVES_EAU, CANAL_EAU, "BUFFER_ACCESS_TOKEN_EAU", "EAU"),
-           "qatar": (CLAVES_QA, CANAL_QA, "BUFFER_ACCESS_TOKEN_QA", "Qatar")}
+           "qatar": (CLAVES_QA, CANAL_QA, "BUFFER_ACCESS_TOKEN_QA", "Qatar"),
+           "saudi": (CLAVES_SA, CANAL_SA, "BUFFER_ACCESS_TOKEN_SAUDI", "Arabia Saudita")}
 
 
 def sin_tildes(t):
@@ -311,7 +318,7 @@ def enlace_video(carpeta, nombre="video.mp4"):
 
 def programar(base):
     global CLAVE
-    pais = {"cola-es": "espana", "cola-eau": "eau", "cola-qa": "qatar"}.get(os.path.basename(os.path.normpath(base)), "chile")
+    pais = {"cola-es": "espana", "cola-eau": "eau", "cola-qa": "qatar", "cola-sa": "saudi"}.get(os.path.basename(os.path.normpath(base)), "chile")
     modo = (os.environ.get("BUFFER_MODO") or "ahora").strip().lower()
     if modo not in MODOS:
         sys.exit(f"BUFFER_MODO debe ser ahora, cola o borrador, no {modo!r}.")
@@ -347,6 +354,9 @@ def programar(base):
         if pais == "chile" and r.get("video") and "aiacciones.cl" not in texto:
             # todo post de Chile lleva la web (en TikTok/Instagram no es clicable, pero se ve)
             texto += "\n\nFicha completa en aiacciones.cl"
+        if pais == "chile" and red == "tiktok" and CANAL_CL.lower() not in texto.lower():
+            # todo video de Chile en TikTok lleva el enlace al canal de YouTube (Daniel, 6-nov-2026)
+            texto += f"\n▶️ Video completo en YouTube: {CANAL_CL}"
         canal_yt = PROPIOS[pais][1] if pais in PROPIOS else None
         if canal_yt and canal_yt.lower() not in texto.lower():
             # todo post de EAU (y Qatar) lleva el enlace al canal de YouTube (Daniel, 29-oct-2026)

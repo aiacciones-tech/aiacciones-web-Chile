@@ -2,7 +2,8 @@
 # y el Short de cola/<slug>-short/ con su post-tiktok.txt (TikTok) y post-instagram.txt (Instagram: Reel con video.mp4 o post con imagen.png)
 # de la rama youtube-cola, y los de España en cola-es/ (solo a canales de España, p. ej. la página de LinkedIn),
 # y los de EAU (@AIStocksUAE, en árabe) en cola-eau/, con su propia cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_EAU),
-# y los de Qatar (@QatarAIStocks, en árabe) en cola-qa/, con su propia cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_QA).
+# y los de Qatar (@QatarAIStocks, en árabe) en cola-qa/, con su propia cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_QA),
+# y los de Arabia Saudita (Saudi Arabia AI Stocks, en árabe) en cola-sa/, con su propia cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_SAUDI).
 # Clave: Settings > Secrets and variables > Actions > Secrets (BUFFER_API_KEY).
 # Modo: variable BUFFER_MODO = ahora (por defecto, publica en X al tiro), cola (próximo horario de Buffer) o borrador.
 # Los posts salen al tiro, también de noche (Daniel, 28-oct-2026); variable BUFFER_HORA = HH:MM para guardar los de noche hasta esa hora.
@@ -13,9 +14,9 @@ concurrency: youtube-cola
 on:
   push:
     branches: [youtube-cola]
-    paths: ['cola/**/post-x.txt', 'cola/**/post-linkedin.txt', 'cola/**/post-tiktok.txt', 'cola/**/post-instagram.txt', 'cola-es/**/post-x.txt', 'cola-es/**/post-linkedin.txt', 'cola-es/**/post-tiktok.txt', 'cola-es/**/post-instagram.txt', 'cola-eau/**/post-x.txt', 'cola-eau/**/post-linkedin.txt', 'cola-eau/**/post-tiktok.txt', 'cola-eau/**/post-instagram.txt', 'cola-qa/**/post-x.txt', 'cola-qa/**/post-linkedin.txt', 'cola-qa/**/post-tiktok.txt', 'cola-qa/**/post-instagram.txt', 'cola-qa/**/post-facebook.txt']
+    paths: ['cola/**/post-x.txt', 'cola/**/post-linkedin.txt', 'cola/**/post-tiktok.txt', 'cola/**/post-instagram.txt', 'cola-es/**/post-x.txt', 'cola-es/**/post-linkedin.txt', 'cola-es/**/post-tiktok.txt', 'cola-es/**/post-instagram.txt', 'cola-eau/**/post-x.txt', 'cola-eau/**/post-linkedin.txt', 'cola-eau/**/post-tiktok.txt', 'cola-eau/**/post-instagram.txt', 'cola-qa/**/post-x.txt', 'cola-qa/**/post-linkedin.txt', 'cola-qa/**/post-tiktok.txt', 'cola-qa/**/post-instagram.txt', 'cola-qa/**/post-facebook.txt', 'cola-sa/**/post-x.txt', 'cola-sa/**/post-linkedin.txt', 'cola-sa/**/post-tiktok.txt', 'cola-sa/**/post-instagram.txt', 'cola-sa/**/post-facebook.txt']
   workflow_run:
-    workflows: ["Subir videos a YouTube", "Subir videos a YouTube (España)", "Subir videos a YouTube (EAU)", "Subir videos a YouTube (Qatar)"]
+    workflows: ["Subir videos a YouTube", "Subir videos a YouTube (España)", "Subir videos a YouTube (EAU)", "Subir videos a YouTube (Qatar)", "Subir videos a YouTube (Arabia Saudita)"]
     types: [completed]
   workflow_dispatch:
     inputs:
@@ -35,6 +36,8 @@ jobs:
       BUFFER_API_KEY_EAU2: ${{ secrets.BUFFER_ACCESS_TOKEN_EAU2 }}
       BUFFER_API_KEY_QA: ${{ secrets.BUFFER_ACCESS_TOKEN_QA }}
       BUFFER_API_KEY_QA2: ${{ secrets.BUFFER_ACCESS_TOKEN_QA2 }}
+      BUFFER_API_KEY_SA: ${{ secrets.BUFFER_ACCESS_TOKEN_SAUDI }}
+      BUFFER_API_KEY_SA2: ${{ secrets.BUFFER_ACCESS_TOKEN_SAUDI2 }}
       BUFFER_MODO: ${{ vars.BUFFER_MODO }}
       BUFFER_HORA: ${{ vars.BUFFER_HORA }}
       BUFFER_CANAL: ${{ vars.BUFFER_CANAL }}
@@ -51,6 +54,11 @@ jobs:
       BUFFER_CANAL_TIKTOK_QA: ${{ vars.BUFFER_CANAL_TIKTOK_QA }}
       BUFFER_CANAL_INSTAGRAM_QA: ${{ vars.BUFFER_CANAL_INSTAGRAM_QA }}
       BUFFER_CANAL_FACEBOOK_QA: ${{ vars.BUFFER_CANAL_FACEBOOK_QA }}
+      BUFFER_CANAL_SA: ${{ vars.BUFFER_CANAL_SA }}
+      BUFFER_CANAL_LINKEDIN_SA: ${{ vars.BUFFER_CANAL_LINKEDIN_SA }}
+      BUFFER_CANAL_TIKTOK_SA: ${{ vars.BUFFER_CANAL_TIKTOK_SA }}
+      BUFFER_CANAL_INSTAGRAM_SA: ${{ vars.BUFFER_CANAL_INSTAGRAM_SA }}
+      BUFFER_CANAL_FACEBOOK_SA: ${{ vars.BUFFER_CANAL_FACEBOOK_SA }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -61,16 +69,19 @@ jobs:
       - name: Mandar posts pendientes
         if: github.event_name != 'workflow_dispatch' || inputs.modo == 'programar'
         run: |
-          python3 scripts/buffer.py programar cola
-          if [ -d cola-es ]; then python3 scripts/buffer.py programar cola-es; fi
-          if [ -d cola-eau ]; then python3 scripts/buffer.py programar cola-eau; fi
-          if [ -d cola-qa ]; then python3 scripts/buffer.py programar cola-qa; fi
+          # Cada canal por separado: si falla uno (p. ej. un post duplicado), los demás se mandan igual y el paso falla al final.
+          rc=0
+          python3 scripts/buffer.py programar cola || rc=1
+          for q in cola-es cola-eau cola-qa cola-sa; do
+            if [ -d "$q" ]; then python3 scripts/buffer.py programar "$q" || rc=1; fi
+          done
+          exit $rc
       - name: Guardar IDs de Buffer
         if: always() && (github.event_name != 'workflow_dispatch' || inputs.modo == 'programar')
         run: |
           git config user.name "aiacciones-bot"
           git config user.email "aiacciones-bot@users.noreply.github.com"
-          git add cola $( [ -d cola-es ] && echo cola-es ) $( [ -d cola-eau ] && echo cola-eau ) $( [ -d cola-qa ] && echo cola-qa )
+          git add cola $( [ -d cola-es ] && echo cola-es ) $( [ -d cola-eau ] && echo cola-eau ) $( [ -d cola-qa ] && echo cola-qa ) $( [ -d cola-sa ] && echo cola-sa )
           git diff --cached --quiet && exit 0
           git commit -m "IDs de Buffer $(date -u +%F)"
           for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
