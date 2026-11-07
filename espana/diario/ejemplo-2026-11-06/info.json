@@ -1,0 +1,74 @@
+{
+ "fecha": "2026-11-06",
+ "fecha_txt": "viernes 6 de noviembre de 2026",
+ "fecha_corta": "6-nov-2026",
+ "elaborado": "7-nov-2026, 09:15",
+ "titulo": "IBEX 35 hoy (6-nov-2026): -0,60% por las tecnológicas | Análisis técnico y fundamental",
+ "titulo_short": "IBEX 35 (6-nov): -0,60% por las tecnológicas; mejor semana desde abril #Shorts",
+ "resumen": "El IBEX 35 cerró el viernes 6 de noviembre en 19.369,5 puntos (-0,60%; -116,5 puntos), arrastrado por la caída de las tecnológicas de EE. UU. del jueves, pero sumó un 3,84% en la semana, la mejor desde abril.",
+ "claves": [
+  "Noticias: IAG gana 2.264 M€ hasta septiembre (-16,2%) y sube su dividendo a cuenta un 10%; Amadeus gana 1.082 M€ (-0,6%) y reitera previsiones; Logista gana 282 M€ en su ejercicio fiscal (+0,3%); España formaliza la candidatura de Pablo Hernández de Cos para presidir el BCE.",
+  "Por qué se movió: el Nasdaq cayó más de un 5% el jueves por las dudas sobre la inversión en IA; el viernes, Nikkei -5,96%, DAX -1,92% y Euro Stoxx 50 -0,98%. EE. UU. creó 165.000 empleos en octubre (unos 65.000 esperados) y el mercado ve un ~80% de opciones de subida de tipos de la Fed en diciembre (CME FedWatch). Euro: 1,114 $; bono español a 10 años: 3,84%.",
+  "Valores: 24 bajan y 11 suben. Más suben: Solaria +3,56%, Acciona Energía +3,36%, Merlin +2,84%, ACS +2,41%, Ferrovial +2,29%. Más bajan: Acerinox -3,55%, Fluidra -2,28%, Mapfre -1,85%, Telefónica -1,83%, Inditex -1,70%.",
+  "Análisis técnico (calculado): cierre justo por debajo de la media de 50 sesiones (19.399) y un 3,5% por encima de la de 200 (18.719). Resistencias: 19.711 (máximo del jueves) y 20.356 (máximo anual, 13-ago). Soportes: 19.127 (mínimo del viernes) y 18.644 (29-oct). RSI 14: 54. Estocástico (14,3,3): %K 78, %D 64. Volumen: un 6% por debajo de su media de 10 sesiones.",
+  "Agenda: jueves 12-nov, resultados de Telefónica (confirmada) y de Acciona y Acciona Energía (estimada) y ex dividendo de ArcelorMittal (0,15 $); viernes 13-nov, Merlin Properties (estimada)."
+ ],
+ "fuentes": "CNMV; IAG, Amadeus y Logista; EFE (Infobae, The Objective); Bolsamanía; Yahoo Finance; TradingView; CME FedWatch (vía Bolsamanía)",
+ "capitulos": [
+  [
+   "s_title",
+   "IBEX 35 hoy"
+  ],
+  [
+   "s_news",
+   "Noticias del día"
+  ],
+  [
+   "s_fact",
+   "Por qué se movió"
+  ],
+  [
+   "s_movers",
+   "Valores que más suben y bajan"
+  ],
+  [
+   "s_tech1",
+   "Análisis técnico: medias, soportes y resistencias"
+  ],
+  [
+   "s_tech2",
+   "RSI y estocástico"
+  ],
+  [
+   "s_agenda",
+   "Agenda"
+  ],
+  [
+   "s_fin",
+   "Resumen"
+  ]
+ ],
+ "x": "IBEX 35 (6-nov): -0,60%, hasta 19.369,5, por la caída de las tecnológicas de EE. UU. Pero +3,84% en la semana, la mejor desde abril. Solaria +3,56%; Acerinox -3,55%. RSI 54, estocástico 78.",
+ "tiktok": "IBEX 35 hoy: -0,60% por las tecnológicas, pero su mejor semana desde abril (+3,84%). Tres claves del viernes 6 de noviembre: el Nasdaq, el empleo de EE. UU. y el gráfico (RSI y estocástico). Vídeo completo en YouTube @AIAccionesEspaña. Contenido informativo, no es recomendación de inversión.\n#IBEX35 #Bolsa #BolsaEspañola #Inversión #AnálisisTécnico",
+ "hashtags": "#IBEX35 #Bolsa #BolsaEspañola #AnálisisTécnico #Mercados #AccionesEspañolas",
+ "tags": [
+  "IBEX 35",
+  "bolsa española",
+  "IBEX 35 hoy",
+  "análisis técnico",
+  "análisis fundamental",
+  "bolsa hoy",
+  "mercados",
+  "acciones españolas",
+  "AIAcciones España"
+ ],
+ "miniatura": {
+  "kicker": "IBEX 35 HOY · 6 NOV 2026",
+  "big": "-0,60%",
+  "sub": "19.369,5 puntos\n+3,84% en la semana",
+  "der": "Noticias,\nfundamental\ny técnico",
+  "der2": "RSI 54 · Estocástico 78",
+  "pie": "Tecnológicas  |  Empleo EE. UU.  |  Solaria +3,6%  |  Acerinox -3,6%",
+  "fecha": "VIERNES 6 NOV 2026"
+ }
+}

@@ -1,0 +1,170 @@
+{
+ "fecha_txt": "viernes 6 nov 2026",
+ "titular": "Pero +3,84% en la semana: la mejor desde abril",
+ "title_fuente": "Datos: Yahoo Finance y TradingView (cierre 6-nov-2026). Semana: calculado frente al cierre del 30-oct (18.652,9).",
+ "voz": {
+  "s_title": "Bolsa española, viernes seis de noviembre. El IBEX treinta y cinco cerró en diecinueve mil trescientos sesenta y nueve puntos, un cero coma seis por ciento menos. Aun así, ganó un tres coma ocho por ciento en la semana, la mejor desde abril. Veamos por qué.",
+  "s_news": "Las noticias del día. IAG ganó dos mil doscientos sesenta y cuatro millones de euros hasta septiembre, un dieciséis por ciento menos, mantuvo sus previsiones y sube su dividendo a cuenta un diez por ciento. Amadeus ganó mil ochenta y dos millones, casi lo mismo que hace un año, y reiteró sus previsiones. Logista cerró su ejercicio fiscal con un beneficio de doscientos ochenta y dos millones. Y España formalizó la candidatura de Pablo Hernández de Cos para suceder a Christine Lagarde al frente del Banco Central Europeo.",
+  "s_fact": "¿Por qué bajó? Primero, por las tecnológicas. El jueves, el Nasdaq se hundió más de un cinco por ciento por las dudas sobre la inversión en inteligencia artificial tras la victoria demócrata en las legislativas. El viernes, Japón y Corea cayeron casi un seis por ciento y Fráncfort, casi un dos. Segundo, el empleo en Estados Unidos: ciento sesenta y cinco mil puestos en octubre, frente a unos sesenta y cinco mil esperados. Eso refuerza la idea de una subida de tipos de la Reserva Federal. El euro bajó a uno coma once dólares.",
+  "s_movers": "Veinticuatro valores bajaron y once subieron. Arriba, Solaria y Acciona Energía, más de un tres por ciento, por un efecto contagio del resultado electoral en Estados Unidos, según XTB. Merlin, ACS y Ferrovial subieron más de un dos, y Amadeus e IAG, más de un uno tras sus resultados. Abajo, Acerinox, un tres y medio por ciento, sin una noticia concreta en la prensa, y Fluidra, Mapfre, Telefónica e Inditex, en torno a un dos. Inditex, tras marcar máximos históricos el jueves.",
+  "s_tech1": "Análisis técnico. El IBEX cerró justo por debajo de su media de cincuenta sesiones, en diecinueve mil cuatrocientos puntos, y un tres coma cinco por ciento por encima de la de doscientas. Las resistencias más cercanas son el máximo del jueves, diecinueve mil setecientos diez, y el máximo anual de agosto, veinte mil trescientos cincuenta y seis. Los soportes, el mínimo del viernes, diecinueve mil ciento veintisiete, y el de finales de octubre, dieciocho mil seiscientos cuarenta y cuatro.",
+  "s_tech2": "El RSI de catorce sesiones está en cincuenta y cuatro, zona neutral. El estocástico está en setenta y ocho, con la línea K por encima de la D, cerca de la zona de sobrecompra, que empieza en ochenta. El volumen fue un seis por ciento inferior a su media. Son datos, no señales de compra o venta.",
+  "s_agenda": "La próxima semana. El jueves publican resultados Telefónica y, en fecha estimada, Acciona y Acciona Energía, y el viernes, Merlin. El jueves es también la fecha ex dividendo de ArcelorMittal.",
+  "s_fin": "En resumen: el IBEX cae arrastrado por las tecnológicas, pero cierra su mejor semana desde abril. Contenido informativo, no es una recomendación de inversión. Aviso completo en la descripción."
+ },
+ "noticias": {
+  "titulo": "Resultados de IAG y Amadeus; De Cos, al BCE",
+  "fuente": "Fuentes: IAG y Amadeus (CNMV, 6-nov-2026); Logista y Bolsamanía (6-nov-2026, 10:07); Bolsamanía, crónica de cierre (6-nov-2026, 17:58).",
+  "items": [
+   [
+    "IAG",
+    "Beneficio 9M: 2.264 M€ (-16,2%). Mantiene previsiones; dividendo a cuenta +10%, 0,053 €"
+   ],
+   [
+    "Amadeus",
+    "Beneficio 9M: 1.082 M€ (-0,6%); 3T: 381,4 M€ (+4,7%). Reitera previsiones"
+   ],
+   [
+    "Logista",
+    "Ejercicio fiscal 2026: beneficio 282 M€ (+0,3%); dividendo total 288 M€ (+3,8%)"
+   ],
+   [
+    "BCE",
+    "España formaliza la candidatura de Pablo Hernández de Cos para suceder a Lagarde"
+   ]
+  ]
+ },
+ "factores": {
+  "titulo": "Caen las tecnológicas; el empleo de EE. UU. sorprende",
+  "fuente": "Variación del 6-nov: TradingView; Kospi: EFE. Nasdaq del jueves (más de -5%), causa y empleo: EFE y Bolsamanía (6-nov-2026). Expectativa de la Fed: CME FedWatch, vía Bolsamanía.",
+  "bolsas_titulo": "Bolsas el viernes 6-nov",
+  "bolsas": [
+   [
+    "Kospi (Corea)",
+    -6.02
+   ],
+   [
+    "Nikkei (Japón)",
+    "TVC:NI225"
+   ],
+   [
+    "DAX (Alemania)",
+    "XETR:DAX"
+   ],
+   [
+    "FTSE 100",
+    "TVC:UKX"
+   ],
+   [
+    "Euro Stoxx 50",
+    "TVC:SX5E"
+   ],
+   [
+    "CAC 40",
+    "TVC:CAC40"
+   ],
+   [
+    "IBEX 35",
+    "BME:IBC"
+   ],
+   [
+    "S&P 500",
+    "SP:SPX"
+   ],
+   [
+    "Nasdaq 100",
+    "NASDAQ:NDX"
+   ]
+  ],
+  "items": [
+   [
+    "Jueves 5-nov: Nasdaq, más de -5%",
+    "dudas sobre la inversión en IA",
+    "neg"
+   ],
+   [
+    "Empleo EE. UU. (oct.): 165.000",
+    "frente a ~65.000 esperados; paro 4,1%",
+    "acc2"
+   ],
+   [
+    "Fed: ~80% de opciones de subida",
+    "de 0,25 puntos en diciembre (CME FedWatch)",
+    "acc2"
+   ],
+   [
+    "Euro: 1,114 $ (-0,73%)",
+    "Bono español 10 años: 3,84%; prima ~59 pb",
+    "fg"
+   ]
+  ]
+ },
+ "valores": {
+  "fuente": "Variación del 6-nov-2026: TradingView. Motivos: EFE (Solaria y Acciona Energía, cita de XTB; Inditex), CNMV (resultados de IAG y Amadeus). Sin motivo: la prensa consultada no da uno.",
+  "motivos": {
+   "SLR": "contagio electoral EE. UU. (XTB)",
+   "ANE": "contagio electoral EE. UU. (XTB)",
+   "ITX": "tras máximos históricos el jueves",
+   "ACX": "sin noticia concreta en prensa"
+  },
+  "extra": "Tras sus resultados: Amadeus +1,48% · IAG +1,13%"
+ },
+ "tecnico": {
+  "titulo1": "Justo bajo la media de 50; +3,5% sobre la de 200",
+  "titulo2": "RSI neutral; estocástico cerca de sobrecompra",
+  "niveles": [
+   [
+    20356.5,
+    "Máx. anual (13-ago) 20.356",
+    "max"
+   ],
+   [
+    19710.8,
+    "Máx. jueves 19.711",
+    "res"
+   ],
+   [
+    19127.1,
+    "Mín. viernes 19.127",
+    "sop"
+   ],
+   [
+    18643.7,
+    "Mín. 29-oct 18.644",
+    "sop"
+   ]
+  ],
+  "rsi_txt": "RSI: zona neutral\n(sobrecompra > 70)",
+  "estoc_txt": "Estocástico: %K sobre %D;\nsobrecompra > 80"
+ },
+ "agenda": {
+  "titulo": "La próxima semana",
+  "fuente": "Calendario de resultados y de dividendos de aiacciones.es (fuentes: Telefónica; PcBolsa para fechas estimadas; ArcelorMittal, anuncio del 5-nov-2026).",
+  "filas": [
+   [
+    "Jue 12-nov",
+    "Resultados 9M de Telefónica",
+    "confirmada"
+   ],
+   [
+    "Jue 12-nov",
+    "Acciona y Acciona Energía",
+    "estimada"
+   ],
+   [
+    "Jue 12-nov",
+    "ArcelorMittal: ex dividendo, 0,15 $",
+    "anunciado"
+   ],
+   [
+    "Vie 13-nov",
+    "Merlin Properties",
+    "estimada"
+   ]
+  ]
+ },
+ "fin": {
+  "titular": "-0,60% por las tecnológicas, pero la mejor semana desde abril (+3,84%).",
+  "fuentes": "CNMV; IAG, Amadeus y Logista; EFE (Infobae, The Objective); Bolsamanía; Yahoo Finance; TradingView"
+ }
+}
