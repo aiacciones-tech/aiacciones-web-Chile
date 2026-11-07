@@ -30,7 +30,7 @@ jobs:
           mkdir -p /tmp/out && cp qatar/diario/datos/mercado-*.json /tmp/out/
           git config user.name "aiacciones-bot"
           git config user.email "aiacciones-bot@users.noreply.github.com"
-          if git fetch -q origin datos-diario-qa; then git checkout -q -B datos-diario-qa origin/datos-diario-eau; else git checkout -q --orphan datos-diario-qa && git rm -rfq . ; fi
+          if git fetch -q origin datos-diario-qa; then git checkout -q -B datos-diario-qa origin/datos-diario-qa; else git checkout -q --orphan datos-diario-qa && git rm -rfq . ; fi
           mkdir -p datos && cp /tmp/out/*.json datos/
           git add datos
           git diff --cached --quiet && exit 0
