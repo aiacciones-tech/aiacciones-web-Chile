@@ -1,5 +1,4 @@
 # URL retirada (relativa a web/)    destino (relativo a esa URL)
-acciones/cap          ../../acciones/
 acciones/schwager     ../../acciones/
 comparadores/bancos           ../../comparadores/
 comparadores/cap-cmpc         ../../comparadores/

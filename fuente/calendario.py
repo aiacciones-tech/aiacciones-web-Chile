@@ -40,7 +40,7 @@ Q = [dict(
   (D(2026,11,4),"Cencosud","CENCOSUD","Retail","E","El 3T 2025 publicó el 4 de noviembre."),
   (D(2026,11,5),"CMPC","CMPC","Forestal","C",""),
   (D(2026,11,5),"Empresas Copec","COPEC","Holding","E","El 3T 2025 publicó cerca del 6 de noviembre."),
-  (D(2026,11,6),"CAP","CAP","Minería y acero","C",""),
+  (D(2026,11,6),"CAP S.A.","CAP","Minería y acero","C",""),
   (D(2026,11,6),"SM SAAM","SMSAAM","Transporte","C",""),
   (D(2026,11,6),"Banco Itaú Chile","ITAUCL","Banca","E","El 3T 2025 tuvo su conferencia el 10 de noviembre."),
   (D(2026,11,9),"SMU","SMU","Supermercados","C",""),

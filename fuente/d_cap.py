@@ -1,0 +1,13 @@
+C = dict(id="cap", t="CAP", n="CAP S.A.", s="Minería de hierro, acero e infraestructura", px="$4.074,9", chg=-35, next="4T 2026",
+  pe=None, fpe=None, pbv=0.39, ev=None, dy=0.0, roe=-8.5, epsg=None, vid="8bpfqBYPJnw", q="CAP",
+  lede="Grupo chileno de minería de hierro (Compañía Minera del Pacífico, CMP, en las regiones de Atacama y Coquimbo), procesamiento de acero (Cintac) e infraestructura (agua desalada, transmisión eléctrica y puerto). Su siderúrgica Huachipato está en reorganización. Reporta en dólares.",
+  vtitle="CAP S.A.: pérdida de US$71 MM, peor de lo esperado (3T 2026)",
+  cap="Cifras en US$ millones salvo UPA · 3T 2026 vs. 3T 2025 · estados financieros consolidados al 30-sep-2026 (CMF)",
+  rows=[("Ingresos", 502.6, 363.8, 1), ("Ganancia bruta", 59.3, -41.6, 1), ("Resultado operacional", 17.0, -82.4, 1),
+        ("Resultado antes de impuestos", -10.7, -105.0, 1), ("Resultado atribuible a la controladora", -15.7, -71.0, 1),
+        ("UPA (US$ por acción)", -0.105, -0.475, 3)],
+  derived=("Margen bruto", "11,8%", "−11,4%"),
+  kpi="",
+  tiles=[("P/E", "n/a"), ("Forward P/E", "n/a"), ("P/BV", "0,39x"), ("Flujo libre 9M", "US$126 MM"), ("Dividend Yield", "0%"), ("ROE", "−8,5%")],
+  small="",
+  mirar=[])
