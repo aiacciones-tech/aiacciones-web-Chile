@@ -1,0 +1,38 @@
+# Datos de Tadawul (TASI y Nomu) para el vídeo diario en árabe de @SaudiArabiaAIStocks (saudi/diario/).
+# Los días de sesión de Tadawul (domingo a jueves, salvo festivos saudíes como el Eid o el Día Nacional) a las 12:40 UTC
+# (15:40 en Riad), tras el cierre de las 15:00 y la subasta de cierre.
+# Guarda datos/mercado-<fecha>.json en la rama datos-diario-saudi (no en main, para no disparar despliegues).
+# Programado desde el 7-nov-2026, tras aprobar Daniel la muestra (ejemplo-2026-11-05/).
+name: Datos del video diario (Arabia Saudita)
+on:
+  schedule:
+    - cron: "40 12 * * 0-4"
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths: ["saudi/diario/datos_mercado.py", ".github/workflows/datos-diario-saudi.yml"]
+permissions:
+  contents: write
+concurrency: datos-diario-saudi
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar datos
+        # En la ejecución programada no se guarda nada si Tadawul no abrió hoy (fin de semana o festivo).
+        env:
+          SOLO_DIA_DE_SESION: ${{ github.event_name == 'schedule' && '1' || '0' }}
+        run: pip install -q websocket-client && python3 saudi/diario/datos_mercado.py
+      - name: Guardar en la rama datos-diario-saudi
+        run: |
+          ls saudi/diario/datos/mercado-*.json >/dev/null 2>&1 || exit 0
+          mkdir -p /tmp/out && cp saudi/diario/datos/mercado-*.json /tmp/out/
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          if git fetch -q origin datos-diario-saudi; then git checkout -q -B datos-diario-saudi origin/datos-diario-saudi; else git checkout -q --orphan datos-diario-saudi && git rm -rfq . ; fi
+          mkdir -p datos && cp /tmp/out/*.json datos/
+          git add datos
+          git diff --cached --quiet && exit 0
+          git commit -qm "Datos del video diario Arabia Saudita $(date -u +%F)"
+          for i in 1 2 3; do git push -q origin datos-diario-saudi && break; sleep 5; git pull -q --rebase origin datos-diario-saudi; done
