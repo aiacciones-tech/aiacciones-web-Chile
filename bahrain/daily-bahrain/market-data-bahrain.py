@@ -1,13 +1,18 @@
 """Session data from Bahrain Bourse for the daily Arabic video of @BahrainAIStocks (bahrain/daily-bahrain/).
-Runs in GitHub Actions (daily-data-bahrain.yml); TradingView is blocked from Claude's container.
+Runs in GitHub Actions (daily-data-bahrain.yml); these hosts are blocked from Claude's container.
 usage: python3 bahrain/daily-bahrain/market-data-bahrain.py  -> bahrain/daily-bahrain/data/market-<date>-bahrain.json
-Sources: TradingView (daily and 5-minute candles of the Bahrain All Share Index, BAHRAIN:BAX; change, volume and traded value
-of every Bahrain Bourse stock; context: Gulf, Asia, Wall Street, Europe, Brent, gold, bonds). Yahoo Finance as fallback."""
+Sources: Mubasher (daily candles of the Bahrain All Share Index BHBX since 2006, 1-minute intraday of the session, and price, change,
+volume and turnover of every Bahrain Bourse stock); CNBC (.BAX daily candles) as fallback; TradingView scanner (BHBX close,
+currency of each stock, and context: Gulf, Asia, Wall Street, Europe, Brent, gold, bonds). TradingView charts of Bahrain
+need a paid data package ("permission denied, group bahrain_dly"), so the index candles do not come from there."""
 import json, os, datetime, urllib.request, urllib.parse
 ROOT = os.path.dirname(os.path.abspath(__file__))
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"
-INDICES = {"bax": ["BAHRAIN:BHBX", "BHB:BHBX", "BAHRAIN:BAX"]}   # candles: the first one that answers
-YAHOO = {"bax": ["^BAX", "BHSEASI.BH"]}
+MUB = "https://static.mubasher.info/File.MubasherCharts/File.{}_Charts_Dir/33182be0c5cdcd5072bb1864cdee4d3d6e.csv"  # BHBX on Mubasher
+MUB_HIST, MUB_INTRA = MUB.format("Historical_Index"), MUB.format("Delay_Index_Intraday")
+MUB_PRICES = "https://english.mubasher.info/api/1/stocks/prices/all?country=bh"
+CNBC = "https://ts-api.cnbc.com/harmony/app/charts/1Y.json?symbol=.BAX"
+TZH = 3 * 3600  # Manama, UTC+3
 CTX = ["BAHRAIN:BHBX", "BAHRAIN:BIX", "TADAWUL:TASI", "ADX:FADGI", "DFM:DFMGI", "QSE:GNRI", "BAHRAIN:BHBX", "TVC:UKOIL", "ICEEUR:BRN1!", "SP:SPX", "NASDAQ:NDX",
        "DJ:DJI", "TVC:NI225", "TVC:HSI", "SSE:000001", "TVC:KOSPI", "EGX:EGX30", "TVC:SX5E", "TVC:UKX", "TVC:GOLD", "TVC:US10Y", "TVC:US02Y", "TVC:DXY"]
 CTX_VELAS = ["TADAWUL:TASI", "ADX:FADGI", "DFM:DFMGI", "QSE:GNRI", "ICEEUR:BRN1!", "SP:SPX", "NASDAQ:NDX", "TVC:NI225", "TVC:HSI",
@@ -22,13 +27,35 @@ def get(url, data=None, extra=None):
     return json.loads(urllib.request.urlopen(urllib.request.Request(url, data=data, headers=h), timeout=40).read().decode())
 
 
-def yahoo(sym, rng, interval):
-    u = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?range={rng}&interval={interval}"
-    r = get(u)["chart"]["result"][0]
-    q = r["indicators"]["quote"][0]
-    out = [{"t": ts, "o": q["open"][i], "h": q["high"][i], "l": q["low"][i], "c": q["close"][i], "v": q["volume"][i]}
-           for i, ts in enumerate(r.get("timestamp") or []) if q["close"][i] is not None]
-    return {"simbolo": sym, "fuente": "Yahoo Finance", "velas": out}
+def txt(url):
+    return urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=40).read().decode("utf-8", "replace")
+
+
+def mub_csv(url, fuente):
+    """Mubasher chart CSV: 'YYYY-MM-DD/HH:MM:SS,open,high,low,close,volume' in Manama time -> candles with t in UTC epoch."""
+    out = []
+    for l in txt(url).splitlines():
+        p = l.strip().split(",")
+        if len(p) < 6: continue
+        d = datetime.datetime.strptime(p[0], "%Y-%m-%d/%H:%M:%S").replace(tzinfo=datetime.timezone.utc)
+        out.append({"t": int(d.timestamp()) - TZH, "o": float(p[1]), "h": float(p[2]), "l": float(p[3]), "c": float(p[4]), "v": float(p[5])})
+    if not out: raise RuntimeError("empty CSV " + url)
+    return {"simbolo": "BHBX", "fuente": fuente, "velas": out}
+
+
+def cnbc():
+    bars = get(CNBC)["barData"]["priceBars"]
+    out = [{"t": int(b["tradeTimeinMills"]) // 1000, "o": float(b["open"]), "h": float(b["high"]), "l": float(b["low"]), "c": float(b["close"]), "v": b.get("volume")} for b in bars]
+    return {"simbolo": ".BAX", "fuente": "CNBC", "velas": out}
+
+
+def mub_acciones():
+    """Every Bahrain Bourse stock on Mubasher: last price, change, turnover, volume and the time of the last trade (updatedAt, Manama)."""
+    r = get(MUB_PRICES)
+    num = lambda x: None if x in (None, "", "-") else float(str(x).replace(",", "").replace("%", ""))
+    return {"lastUpdate": r.get("lastUpdate"), "acciones": [{"code": x["code"], "name": x["name"], "close": num(x["value"]), "change_abs": num(x["change"]),
+            "change": num(x["changePercentage"]), "turnover": num(x["turnover"]), "volume": num(x["volume"]), "open": num(x["open"]),
+            "high": num(x["high"]), "low": num(x["low"]), "updatedAt": x.get("updatedAt")} for x in r.get("prices", [])]}
 
 
 TVH = {"Origin": "https://www.tradingview.com", "Referer": "https://www.tradingview.com/", "Content-Type": "application/json"}
@@ -98,21 +125,16 @@ def tv_velas(simbolo, resol="1D", n=500):
 def main():
     now = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
     res = {"generado": now.isoformat() + "Z", "errores": []}
-    res["busqueda"] = {"bax": tv_buscar("BHBX", "BAHRAIN"), "all_share": tv_buscar("Bahrain All Share", "")}
-    for k in INDICES:
-        for sym in INDICES[k]:
-            try:
-                res[f"{k}_diario"] = tv_velas(sym, "1D", 520)
-                res[f"{k}_intradia"] = tv_velas(sym, "5", 600)
-                break
-            except Exception as e:
-                res["errores"].append(f"tv velas {sym}: {e}")
-        if f"{k}_diario" not in res:
-            for sym in YAHOO[k]:
-                try:
-                    res[f"{k}_diario"] = yahoo(sym, "2y", "1d"); res[f"{k}_intradia"] = yahoo(sym, "5d", "5m"); break
-                except Exception as e:
-                    res["errores"].append(f"yahoo {sym}: {e}")
+    for k, fn in (("bax_diario", lambda: mub_csv(MUB_HIST, "Mubasher")), ("bax_diario", cnbc), ("bax_intradia", lambda: mub_csv(MUB_INTRA, "Mubasher"))):
+        if k in res: continue
+        try:
+            res[k] = fn()
+        except Exception as e:
+            res["errores"].append(f"{k}: {e}")
+    try:
+        res["mubasher"] = mub_acciones()
+    except Exception as e:
+        res["errores"].append(f"mubasher acciones: {e}")
     try:
         res["tv"] = tv(CTX)
     except Exception as e:
@@ -132,7 +154,7 @@ def main():
     hoy = (now + datetime.timedelta(hours=3)).date().isoformat()  # Manama time (UTC+3, no DST)
     fecha = hoy
     try:
-        fecha = datetime.datetime.utcfromtimestamp(res["bax_diario"]["velas"][-1]["t"] + 3 * 3600).date().isoformat()
+        fecha = datetime.datetime.utcfromtimestamp(res["bax_diario"]["velas"][-1]["t"] + TZH).date().isoformat()
     except Exception:
         pass
     res["sesion"] = fecha
@@ -142,8 +164,8 @@ def main():
     os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)
     p = os.path.join(ROOT, "data", f"market-{fecha}-bahrain.json")
     json.dump(res, open(p, "w"), ensure_ascii=False)
-    print("written", p, "errors:", res["errores"], "stocks:", len(res.get("acciones", {})), "search:", res["busqueda"],
-          {k: (res.get(f"{k}_diario", {}).get("simbolo"), len(res.get(f"{k}_diario", {}).get("velas", [])), len(res.get(f"{k}_intradia", {}).get("velas", []))) for k in INDICES})
+    print("written", p, "errors:", res["errores"], "stocks (TradingView, Mubasher):", len(res.get("acciones", {})), len(res.get("mubasher", {}).get("acciones", [])),
+          {k: (res.get(k, {}).get("fuente"), len(res.get(k, {}).get("velas", []))) for k in ("bax_diario", "bax_intradia")})
 
 
 if __name__ == "__main__":
