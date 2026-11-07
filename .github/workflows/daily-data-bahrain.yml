@@ -1,0 +1,38 @@
+# Bahrain Bourse data (Bahrain All Share Index, BAHRAIN:BAX) for the daily Arabic video of @BahrainAIStocks (bahrain/daily-bahrain/).
+# Bahrain Bourse trades Sunday to Thursday, 09:30-13:00 Manama time (UTC+3). Saves data/market-<date>-bahrain.json
+# on branch daily-data-bahrain (not main, so it does not trigger deploys).
+# NOT SCHEDULED YET: the cron is enabled only after Daniel approves the sample (sample-2026-11-05-bahrain/).
+# When approved, uncomment the schedule: 10:40 UTC (13:40 Manama), after the 13:00 close.
+name: Daily video data (Bahrain)
+on:
+  # schedule:
+  #   - cron: "40 10 * * 0-4"
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths: ["bahrain/daily-bahrain/market-data-bahrain.py", ".github/workflows/daily-data-bahrain.yml"]
+permissions:
+  contents: write
+concurrency: daily-data-bahrain
+jobs:
+  data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download data
+        # On scheduled runs nothing is saved if Bahrain Bourse did not open today (weekend or holiday).
+        env:
+          SOLO_DIA_DE_SESION: ${{ github.event_name == 'schedule' && '1' || '0' }}
+        run: pip install -q websocket-client && python3 bahrain/daily-bahrain/market-data-bahrain.py
+      - name: Save to branch daily-data-bahrain
+        run: |
+          ls bahrain/daily-bahrain/data/market-*.json >/dev/null 2>&1 || exit 0
+          mkdir -p /tmp/out && cp bahrain/daily-bahrain/data/market-*.json /tmp/out/
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          if git fetch -q origin daily-data-bahrain; then git checkout -q -B daily-data-bahrain origin/daily-data-bahrain; else git checkout -q --orphan daily-data-bahrain && git rm -rfq . ; fi
+          mkdir -p data && cp /tmp/out/*.json data/
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -qm "Bahrain daily video data $(date -u +%F)"
+          for i in 1 2 3; do git push -q origin daily-data-bahrain && break; sleep 5; git pull -q --rebase origin daily-data-bahrain; done
