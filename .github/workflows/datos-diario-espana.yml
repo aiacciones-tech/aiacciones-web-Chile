@@ -1,0 +1,30 @@
+# Datos de la sesión del IBEX 35 para el vídeo diario de la bolsa española (espana/diario/).
+# El contenedor de Claude no llega a Yahoo ni a TradingView; GitHub Actions sí.
+# Cada día hábil a las 16:45 UTC (17:45 en Madrid en invierno, 18:45 en verano), tras el cierre de las 17:35.
+# Guarda datos/mercado-<fecha>.json en la rama datos-diario-es (no en main, para no disparar despliegues).
+name: Datos del vídeo diario (España)
+on:
+  schedule:
+    - cron: "45 16 * * 1-5"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: datos-diario-es
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar datos
+        run: python3 espana/diario/datos_mercado.py
+      - name: Guardar en la rama datos-diario-es
+        run: |
+          mkdir -p /tmp/out && cp espana/diario/datos/mercado-*.json /tmp/out/
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          if git fetch -q origin datos-diario-es; then git checkout -q -B datos-diario-es origin/datos-diario-es; else git checkout -q --orphan datos-diario-es && git rm -rfq . ; fi
+          mkdir -p datos && cp /tmp/out/*.json datos/
+          git add datos
+          git diff --cached --quiet && exit 0
+          git commit -qm "Datos del vídeo diario $(date -u +%F)"
+          for i in 1 2 3; do git push -q origin datos-diario-es && break; sleep 5; git pull -q --rebase origin datos-diario-es; done
