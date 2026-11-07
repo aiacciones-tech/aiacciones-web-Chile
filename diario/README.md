@@ -2,7 +2,7 @@
 
 Cada día hábil, después del cierre (16:00 en Santiago): un video de máximo 3 minutos y su Short para @aiaccioneschile,
 con posts en X, LinkedIn, TikTok y Telegram. Adaptado del video diario de España (`espana/diario/`).
-Estado: MUESTRA (sesión del 6-nov-2026), pendiente de aprobación de Daniel. Sin horario automático todavía.
+Formato aprobado por Daniel el 7-nov-2026 (muestra: sesión del 6-nov-2026). Datos a las 20:15 UTC; la rutina diaria hace el video y lo encola.
 
 ## Guion (8 escenas, `make_video.py`)
 1. **Apertura** (`s_title`): fecha de la sesión EN GRANDE, cierre, variación en % y puntos, curva intradía (5 min).

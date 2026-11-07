@@ -1,13 +1,13 @@
 # Datos de la sesión del IPSA para el vídeo diario de la Bolsa de Santiago (diario/).
 # El contenedor de Claude no llega a Yahoo ni a TradingView; GitHub Actions sí.
 # Guarda datos/mercado-<fecha>.json en la rama datos-diario-cl (no en main, para no disparar despliegues).
-# Sin horario automático hasta que Daniel apruebe el formato: por ahora solo a mano (workflow_dispatch) o al empujar la rama de prueba.
+# Cada día hábil a las 20:15 UTC (17:15 en Santiago en horario de verano, 16:15 en invierno), tras el cierre de las 16:00.
+# Formato aprobado por Daniel el 7-nov-2026.
 name: Datos del video diario (Chile)
 on:
+  schedule:
+    - cron: "15 20 * * 1-5"
   workflow_dispatch:
-  push:
-    branches: [claude/project-thread-mo5jmd]
-    paths: [diario/datos_mercado.py, .github/workflows/datos-diario-chile.yml]
 permissions:
   contents: write
 concurrency: datos-diario-cl
