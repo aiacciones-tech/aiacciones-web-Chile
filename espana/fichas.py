@@ -1556,4 +1556,68 @@ FICHAS = [
                 'Bolsamanía (6-nov-2026); stockanalysis.com (múltiplos históricos).',
      'fuentes_corto': 'Amadeus (CNMV), Europa Press, Rankia, Reuters, Bolsamanía y stockanalysis.com',
      'elaborado': '6-nov-2026, 23:30'},
+    {'id': 'cellnex',
+     'nombre': 'Cellnex',
+     'ticker': 'CLNX',
+     'sector': 'Infraestructuras de telecomunicaciones',
+     'lede': 'Operador europeo de infraestructuras de telecomunicaciones con sede en Barcelona: alquila espacio en sus torres a las operadoras de '
+             'telefonía móvil (su negocio principal), y gestiona sistemas de antenas distribuidas y celdas pequeñas, fibra y conectividad, y la difusión '
+             'de radio y televisión.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'nueve meses de 2026 (enero-septiembre)',
+     'titular': 'Flujo de caja libre de 474 M€ hasta septiembre, frente a 186 M€ un año antes, con un 22% menos de inversión; ingresos de 3.008 M€ '
+                '(+2,4%; +4,9% orgánico) y pérdidas de 219 M€, un 16,7% menos. La deuda financiera neta sube a 21.044 M€ (6,13x EBITDA ajustado) y '
+                'Cellnex mantiene la guía de 2026 y 2027.',
+     'precio': '26,68 €',
+     'precio_fecha': '6-nov-2026 (cierre)',
+     'multiplos': [('EV/EBITDA ajustado', '~11,3x'),
+                   ('Capitalización / RLFCF', '~8,8x'),
+                   ('Rentab. RLFCF', '~11,3%'),
+                   ('Rentab. dividendo', '~2,80%'),
+                   ('Rentab. flujo libre', '~3,6%'),
+                   ('Capitalización', '~17.718 M€')],
+     'multiplos_nota': 'Calculados con 26,68 € (cierre del 6-nov-2026, Bolsamanía), día siguiente a los resultados, y la capitalización de 17.718 M€ de '
+                       'Bolsamanía (~664 M de acciones), con datos de 12 meses de Cellnex (2025 + 9M26 - 9M25: EBITDA ajustado 3.430 M€, RLFCF 2.003 M€, '
+                       'flujo libre 638 M€); EV con la deuda financiera neta de 21.044 M€; dividendo de 0,748 € pagado en 2026. Sin PER: Cellnex tiene '
+                       'pérdidas. Con la capitalización de cierre de stockanalysis.com, la capitalización / RLFCF era 16,3x en 2023, 12,0x en 2024 y '
+                       '9,4x en 2025, y el EV/EBITDA ajustado, 11,7x en 2025 (calculado); la rentabilidad por dividendo era 0,17% en 2023 y 0,21% en '
+                       '2024 (stockanalysis).',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos (sin pass-through)', '3.008', '+2,4%'),
+               ('Torres', '2.456', '+5,1% orgánico'),
+               ('EBITDA ajustado', '2.549', '+4,6%'),
+               ('Flujo recurrente apalancado (RLFCF)', '1.390', '+6,9%'),
+               ('Flujo de caja libre', '474', 'x2,5'),
+               ('Inversión', '860', '-22,8%'),
+               ('Resultado operativo', '410', '+16,1%'),
+               ('Resultado neto', '-219', '-16,7% de pérdidas'),
+               ('Deuda financiera neta', '21.044', '+226 desde dic.')],
+     'kpi': 'Crecimientos orgánicos comparables: ingresos +4,9%, EBITDA ajustado +6,5%, EBITDAaL +8,9%, RLFCF +11,2%. Margen EBITDA ajustado 84,8% '
+            '(83,1%) y margen EBITDAaL 62,9% (60,7%). RLFCF por acción 2,09 € (+18,3%). Por negocio (orgánico): torres +5,1%, DAS, small cells y RANaaS '
+            '+5,2%, fibra, conectividad y housing +8,0%, difusión +0,9%. 187.693 puntos de presencia (+4,1%) y 1,65 clientes por torre (1,62x); costes '
+            'operativos comparables -4,4% y coste por torre -3,5%. Tercer trimestre aislado (calculado con el 1S26): ingresos 1.014 M€, RLFCF 482 M€, '
+            'flujo libre 173 M€ y pérdida de ~122 M€ (97 M€ en todo el 1S). Deuda financiera neta 21.044 M€ (20.818 M€ en diciembre): 6,13x EBITDA '
+            'ajustado (6,28x); liquidez de ~5.000 M€; Fitch BBB- estable. Retribución 2026: 924 M€ de 1.000 M€ entregados a 30-sep (500 M€ en dividendos '
+            'y 424 M€ en recompras).',
+     'guia': 'Guía mantenida. 2026: ingresos de 4.075-4.175 M€, EBITDA ajustado de 3.425-3.525 M€, RLFCF de 1.900-2.000 M€ y flujo de caja libre de '
+             '600-700 M€ (para el mínimo basta con ~126 M€ en el 4T; calculado). 2027: ingresos de 4.255-4.455 M€, EBITDA ajustado de 3.605-3.805 M€, '
+             'RLFCF de 1.945-2.145 M€ y flujo libre comparable de 975-1.175 M€, sin contar ~300 M€ de inversión en Polonia (acuerdo con Polkomtel, 500 '
+             'M€ adicionales en 2026-2030); deuda de 5-6x EBITDA en 2027. Sin nuevo dividendo en el informe; el de 2026 (500 M€) ya está pagado: '
+             '0,37100958 € brutos por acción (ex-dividendo 13-ene, pago 15-ene-2026) y 0,37687 € (ex-dividendo 13-jul, pago 15-jul-2026). Quedan 76 M€ '
+             'de recompras del programa de hasta 200 M€ que termina el 31-dic-2026.',
+     'positivos': ['El flujo de caja libre se multiplica por 2,5 (474 M€) porque la inversión baja un 22,8%.',
+                   'El RLFCF por acción sube un 18,3%, hasta 2,09 €, con ayuda de las recompras.',
+                   'Más eficiencia: costes operativos comparables -4,4% y margen EBITDA ajustado del 84,8% (83,1%).'],
+     'riesgos': ['Sigue en pérdidas (-219 M€), y el tercer trimestre aislado pierde unos 122 M€, más que todo el primer semestre (97 M€).',
+                 'El proyecto de Polonia exige 500 M€ de inversión adicional hasta 2030 y resta unos 300 M€ al flujo libre de 2027.',
+                 'La deuda financiera neta sube a 21.044 M€, 6,13 veces el EBITDA ajustado, por encima del rango de 5-6x que busca para 2027.'],
+     'videos': [('8GrLRFxPXqI', 'Cellnex resultados 3T 2026: flujo de caja libre x2,5 y pérdidas -16,7% | Mantiene la guía'),
+                ('ceDZRPFw-HE', 'Cellnex 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-26',
+     'proximo_estimado': True,
+     'fuentes': 'Cellnex, resultados de enero a septiembre de 2026 (cellnex.com, 5-nov-2026), resultados del primer semestre de 2026, de 9M25 y de 2024, '
+                'y comunicados de dividendos; Europa Press, Reuters, RTTNews, Business People, Zona Movilidad, Redes&Telecom, El Español, Merca2 y '
+                'Estrategias de Inversión; Bolsamanía (cotización); stockanalysis.com (históricos).',
+     'fuentes_corto': 'Cellnex, Europa Press, Reuters, Business People, Zona Movilidad, Bolsamanía y stockanalysis.com',
+     'elaborado': '7-nov-2026, 23:15'},
 ]
