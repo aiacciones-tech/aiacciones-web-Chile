@@ -213,7 +213,9 @@ def hechos_ficha(s, fid):
 
 
 def con_ficha(i):
-    return os.path.isfile(os.path.join(DIR, "acciones", i["id"], "index.html"))
+    # Las fichas retiradas quedan como redirección con noindex: no cuentan como ficha.
+    p = os.path.join(DIR, "acciones", i["id"], "index.html")
+    return os.path.isfile(p) and 'content="noindex' not in open(p, encoding="utf-8").read(600)
 
 
 def hechos_home(s):
@@ -230,6 +232,19 @@ def hechos_home(s):
 
 
 ES = '<a href="https://aiacciones.es/" hreflang="es-ES">AIAcciones España</a> · '
+
+
+def autor(s, pre):
+    # Línea de autoría bajo la bajada de fichas y lecciones (señal de confianza para Google y AdSense).
+    if 'content="noindex' in s[:600]:
+        return s
+    m = re.search(r'"dateModified": "(\d{4})-(\d{2})-(\d{2})"', s)
+    f = f' · Actualizado el {int(m.group(3))}-{MESES[int(m.group(2)) - 1]}-{m.group(1)}' if m else ""
+    box = (f'<!--autor--><p class="byline">Por <a href="{pre}nosotros/index.html#equipo">Equipo AI Acciones Chile</a>{f}</p><!--/autor-->')
+    if "<!--autor-->" in s:
+        return re.sub(r"<!--autor-->.*?<!--/autor-->", lambda _: box, s, flags=re.S)
+    m = re.search(r'<p class="lede">.*?</p>', s, re.S)
+    return s[:m.end()] + "\n" + box + s[m.end():] if m else s
 
 
 def espana(s):
@@ -258,6 +273,8 @@ table.sortable th[aria-sort="ascending"]::after { content: " ▲"; color: var(--
 table.sortable th[aria-sort="descending"]::after { content: " ▼"; color: var(--copper); }
 .vals { min-width: 960px; }
 .vals td.txt { min-width: 200px; font-size: 14px; }
+.byline { font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+.byline a { color: inherit; text-decoration: underline; }
 /*/mercado*/"""
 
 for p in glob.glob(os.path.join(DIR, "**", "*.html"), recursive=True):
@@ -269,6 +286,9 @@ for p in glob.glob(os.path.join(DIR, "**", "*.html"), recursive=True):
     if m:
         s = ficha(s, m.group(1))
         s = hechos_ficha(s, m.group(1))
+        s = autor(s, "../../")
+    if re.match(r"analisis-tecnico/[\w-]+/index\.html$", rel):
+        s = autor(s, "../../")
     if rel == "acciones/index.html":
         s = listado(s)
     if rel == "valoraciones/index.html":

@@ -380,4 +380,6 @@ table.sortable th[aria-sort="ascending"]::after { content: " ▲"; color: var(--
 table.sortable th[aria-sort="descending"]::after { content: " ▼"; color: var(--copper); }
 .vals { min-width: 960px; }
 .vals td.txt { min-width: 200px; font-size: 14px; }
+.byline { font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+.byline a { color: inherit; text-decoration: underline; }
 /*/mercado*/
