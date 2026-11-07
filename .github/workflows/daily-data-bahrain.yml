@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
   push:
     branches: ["claude/**"]
-    paths: ["bahrain/daily-bahrain/market-data-bahrain.py", ".github/workflows/daily-data-bahrain.yml"]
+    paths: ["bahrain/daily-bahrain/market-data-bahrain.py", "bahrain/daily-bahrain/probe-sources-bahrain.py", ".github/workflows/daily-data-bahrain.yml"]
 permissions:
   contents: write
 concurrency: daily-data-bahrain
@@ -23,11 +23,11 @@ jobs:
         # On scheduled runs nothing is saved if Bahrain Bourse did not open today (weekend or holiday).
         env:
           SOLO_DIA_DE_SESION: ${{ github.event_name == 'schedule' && '1' || '0' }}
-        run: pip install -q websocket-client && python3 bahrain/daily-bahrain/market-data-bahrain.py
+        run: pip install -q websocket-client && python3 bahrain/daily-bahrain/market-data-bahrain.py && (python3 bahrain/daily-bahrain/probe-sources-bahrain.py || true)
       - name: Save to branch daily-data-bahrain
         run: |
-          ls bahrain/daily-bahrain/data/market-*.json >/dev/null 2>&1 || exit 0
-          mkdir -p /tmp/out && cp bahrain/daily-bahrain/data/market-*.json /tmp/out/
+          ls bahrain/daily-bahrain/data/*.json >/dev/null 2>&1 || exit 0
+          mkdir -p /tmp/out && cp bahrain/daily-bahrain/data/*.json /tmp/out/
           git config user.name "aiacciones-bot"
           git config user.email "aiacciones-bot@users.noreply.github.com"
           if git fetch -q origin daily-data-bahrain; then git checkout -q -B daily-data-bahrain origin/daily-data-bahrain; else git checkout -q --orphan daily-data-bahrain && git rm -rfq . ; fi
