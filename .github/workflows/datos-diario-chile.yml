@@ -1,0 +1,31 @@
+# Datos de la sesión del IPSA para el vídeo diario de la Bolsa de Santiago (diario/).
+# El contenedor de Claude no llega a Yahoo ni a TradingView; GitHub Actions sí.
+# Guarda datos/mercado-<fecha>.json en la rama datos-diario-cl (no en main, para no disparar despliegues).
+# Sin horario automático hasta que Daniel apruebe el formato: por ahora solo a mano (workflow_dispatch) o al empujar la rama de prueba.
+name: Datos del video diario (Chile)
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/project-thread-mo5jmd]
+    paths: [diario/datos_mercado.py, .github/workflows/datos-diario-chile.yml]
+permissions:
+  contents: write
+concurrency: datos-diario-cl
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar datos
+        run: python3 diario/datos_mercado.py
+      - name: Guardar en la rama datos-diario-cl
+        run: |
+          mkdir -p /tmp/out && cp diario/datos/mercado-*.json /tmp/out/
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          if git fetch -q origin datos-diario-cl; then git checkout -q -B datos-diario-cl origin/datos-diario-cl; else git checkout -q --orphan datos-diario-cl && git rm -rfq . ; fi
+          mkdir -p datos && cp /tmp/out/*.json datos/
+          git add datos
+          git diff --cached --quiet && exit 0
+          git commit -qm "Datos del video diario $(date -u +%F)"
+          for i in 1 2 3; do git push -q origin datos-diario-cl && break; sleep 5; git pull -q --rebase origin datos-diario-cl; done
