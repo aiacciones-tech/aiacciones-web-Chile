@@ -6,12 +6,16 @@ chilenas, volumen y monto transado, índices MSCI IPSA/IGPA, contexto internacio
 import json, os, datetime, urllib.request, urllib.parse
 ROOT = os.path.dirname(os.path.abspath(__file__))
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"
-TV_IPSA = ["BCS:MXIPSA", "BCS:IPSA", "BCS:SP_IPSA", "BCS:MXIPSAGC"]   # velas: el primero que responda
+TV_IPSA = ["BCS:MXIPSAGC", "BCS:IPSA"]   # velas: el primero que responda
 YAHOO_IPSA = ["^IPSA"]                    # respaldo (Yahoo dejó de publicarlo en 2026: 404)
 TV_INDICES = ["BCS:SP_IPSA", "BCS:IPSA", "BCS:MXIPSA", "BCS:MXIPSAPR", "BCS:MXIPSAN", "BCS:MXIPSAGC", "BCS:MXIGPAGC", "BCS:IGPA", "BCS:SP_IGPA"]
 CTX = ["SP:SPX", "NASDAQ:NDX", "DJ:DJI", "TVC:NI225", "TVC:HSI", "SSE:000001", "TVC:KOSPI", "BMFBOVESPA:IBOV", "BMV:ME",
        "TVC:SX5E", "XETR:DAX", "FX_IDC:USDCLP", "FX:USDCLP", "COMEX:HG1!", "TVC:UKOIL", "TVC:USOIL", "TVC:GOLD",
        "TVC:US10Y", "TVC:CL10Y", "TVC:DXY", "CAPITALCOM:COPPER", "TVC:COPPER"]
+# Las 31 acciones del MSCI IPSA (vigente desde el 1-sep-2026; Chócale y CNN Chile, 20-ago-2026). Revisar en cada rebalanceo trimestral.
+IPSA = ["AGUAS-A", "CHILE", "BCI", "ITAUCL", "BSANTANDER", "CAP", "CENCOSUD", "CENCOMALLS", "CCU", "VAPORES", "COLBUN",
+        "CONCHATORO", "ANDINA-B", "CMPC", "COPEC", "ENELAM", "ENELCHILE", "ECL", "ENTEL", "FALABELLA", "IAM", "ILC", "LTM",
+        "PAMPA", "PARAUCO", "MALLPLAZA", "QUINENCO", "RIPLEY", "SALFACORP", "SMU", "SQM-B"]
 COLS = ["name", "description", "close", "change", "change_abs", "volume", "Value.Traded", "average_volume_10d_calc",
         "market_cap_basic", "time", "Perf.W", "Perf.1M", "Perf.YTD", "type", "country"]
 
@@ -40,7 +44,7 @@ def tv(tickers):
 
 
 def tv_chile():
-    body = {"columns": COLS, "range": [0, 300], "filter": [{"left": "type", "operation": "in_range", "right": ["stock", "dr", "fund"]}],
+    body = {"columns": COLS, "range": [0, 200], "filter": [{"left": "type", "operation": "equal", "right": "stock"}, {"left": "country", "operation": "equal", "right": "Chile"}],
             "sort": {"sortBy": "market_cap_basic", "sortOrder": "desc"}}
     r = get("https://scanner.tradingview.com/chile/scan", json.dumps(body).encode(), TVH)
     return {x["s"]: dict(zip(COLS, x["d"])) for x in r.get("data", [])}
@@ -104,7 +108,9 @@ def main():
             except Exception as e:
                 res["errores"].append(f"yahoo {sym}: {e}")
     try:
-        res["tv"] = tv(TV_INDICES + CTX)
+        cand = [f"BCS:{t.replace('-', x)}" for t in IPSA for x in ("_", "", "-")]
+        res["tv"] = tv(TV_INDICES + CTX + sorted(set(cand)))
+        res["ipsa_tickers"] = {t: next((c for c in (f"BCS:{t.replace('-', x)}" for x in ("_", "", "-")) if c in res["tv"]), None) for t in IPSA}
     except Exception as e:
         res["errores"].append(f"tradingview: {e}")
     try:
@@ -119,7 +125,7 @@ def main():
     os.makedirs(os.path.join(ROOT, "datos"), exist_ok=True)
     p = os.path.join(ROOT, "datos", f"mercado-{fecha}.json")
     json.dump(res, open(p, "w"), ensure_ascii=False)
-    print("escrito", p, "errores:", res["errores"], "chile:", len(res.get("chile", {})), "tv:", sorted(res.get("tv", {})), "busqueda:", res["busqueda"][:15],
+    print("escrito", p, "errores:", res["errores"], "chile:", len(res.get("chile", {})), "faltan:", [k for k, v in res.get("ipsa_tickers", {}).items() if not v], "busqueda:", res["busqueda"][:15],
           "velas:", res.get("ipsa_diario", {}).get("simbolo"), len(res.get("ipsa_diario", {}).get("velas", [])), len(res.get("ipsa_intradia", {}).get("velas", [])))
 
 
