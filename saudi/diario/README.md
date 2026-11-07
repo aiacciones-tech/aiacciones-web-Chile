@@ -15,7 +15,7 @@ Muestra: sesión del jueves 5-nov-2026 (`ejemplo-2026-11-05/`).
 7. **Cierre** (`s_fin`): resumen y aviso legal completo en árabe (también en la descripción).
 
 ## Datos
-`datos_mercado.py` corre en GitHub Actions (`datos-diario-saudi.yml`, 12:40 UTC de domingo a jueves cuando se active el cron) y deja `datos/mercado-<fecha>.json`
+`datos_mercado.py` corre en GitHub Actions (`datos-diario-saudi.yml`, 12:40 UTC de domingo a jueves) y deja `datos/mercado-<fecha>.json`
 en la rama `datos-diario-saudi`: velas diarias e intradía de `TADAWUL:TASI` y `TADAWUL:NOMUC` (websocket de TradingView), cambio, volumen y valor negociado
 de todas las acciones de Tadawul (escáner `ksa`; las de TASI se distinguen por su campo `indexes`), velas recientes del contexto (Golfo, Asia, Wall Street,
 Europa, Brent, oro, bono de EE. UU. a 10 años, Aramco) y el último dato del escáner. También funciona desde el contenedor de Claude si llega a TradingView.

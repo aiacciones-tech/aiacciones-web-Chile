@@ -2,11 +2,11 @@
 # Los días de sesión de Tadawul (domingo a jueves, salvo festivos saudíes como el Eid o el Día Nacional) a las 12:40 UTC
 # (15:40 en Riad), tras el cierre de las 15:00 y la subasta de cierre.
 # Guarda datos/mercado-<fecha>.json en la rama datos-diario-saudi (no en main, para no disparar despliegues).
-# La tarea programada (schedule) se activa cuando Daniel apruebe la muestra (ejemplo-2026-11-05/).
+# Programado desde el 7-nov-2026, tras aprobar Daniel la muestra (ejemplo-2026-11-05/).
 name: Datos del video diario (Arabia Saudita)
 on:
-  # schedule:
-  #   - cron: "40 12 * * 0-4"
+  schedule:
+    - cron: "40 12 * * 0-4"
   workflow_dispatch:
   push:
     branches: ["claude/**"]
