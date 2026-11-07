@@ -1,0 +1,99 @@
+{
+ "cnbc_1y": {
+  "status": 200,
+  "len": 70443,
+  "head": "{\"barData\":{\"priceBars\":[{\"open\":\"2030.6580\",\"high\":\"2032.9200\",\"low\":\"2027.0240\",\"close\":\"2027.0240\",\"volume\":278181,\"tradeTime\":\"20241110000000\",\"tradeTimeinMills\":1731214800000},{\"open\":\"2027.1040\",\"high\":\"2028.5880\",\"low\":\"2025.8610\",\"close\":\"2027.2800\",\"volume\":1548572,\"tradeTime\":\"20241111000000\",\"tradeTimeinMills\":1731301200000},{\"open\":\"2029.6190\",\"high\":\"2029.6190\",\"low\":\"2024.2890\",\"close\":\"2028.5340\",\"volume\":1794110,\"tradeTime\":\"20241112000000\",\"tradeTimeinMills\":1731387600000},{\"open\":\"2045.7470\",\"high\":\"2053.1080\",\"low\":\"2045.7470\",\"close\":\"2052.3980\",\"volume\":1608337,\"tradeTime\":\"20241114000000\",\"tradeTimeinMills\":1731560400000},{\"open\":\"2052.3980\",\"high\":\"2054.9020\",\"low\":\"2052.3290\",\"close\":\"2053.0430\",\"volume\":304154,\"tradeTime\":\"20241117000000\",\"tradeTimeinMills\":1731819600000},{\"open\":\"2049.3780\",\"high\":\"2049.3780\",\"low\":\"2045.0940\",\"close\":\"2046.0920\",\"volume\":930256,\"tradeTime\":\"20241118000000\",\"tradeTimeinMills\":1731906000000},{\"open\":\"2046.0920\",\"high\":\"2052.5770\",\"low\":\"2045.3030\",\"close\":\"2050.2830\",\"volume\":1088146,\"tradeTime\":\"20241119000000\",\"tradeTimeinMills\":1731992400000},{\"open\":\"2050.2830\",\"high\":\"2050.2830\",\"low\":\"2042.3020\",\"close\":\"2042.7620\",\"volume\":1284399,\"tradeTime\":\"20241120000000\",\"tradeTimeinMills\":1732078800000},{\"open\":\"2040.8970\",\"high\":\"2040.8970\",\"low\":\"2034.3070\",\"close\":\"2034.3070\",\"volume\":1149991,\"tradeTime\":\"20241121000000\",\"tradeTimeinMills\":1732165200000},{\"open\":\"2034.3070\",\"high\":\"2035.5800\",\"low\":\"2033.4490\",\"close\":",
+  "apis": []
+ },
+ "cnbc_1d": {
+  "status": 200,
+  "len": 353,
+  "head": "{\"barData\":{\"priceBars\":[],\"symbol\":\".BAX\",\"companyName\":\"BB ALL SHARE IDX\",\"exchange\":{\"id\":444,\"name\":\"Exchange\",\"country\":\"EU\",\"display\":\"RCT\",\"timeZone\":\"EST\",\"offset\":-5,\"exchangeCloseTime\":\"00:00:00\",\"exchangeOpenTime\":\"00:00:00\"}},\"requestDetails\":{\"symbol\":\".BAX\",\"startTime\":\"20261105093400\",\"endTime\":\"20261107093430\",\"adjusted\":\"UNADJUSTED\"}}",
+  "apis": []
+ },
+ "cnbc_q": {
+  "status": 200,
+  "len": 920,
+  "head": "{\"FormattedQuoteResult\":{\"FormattedQuote\":[{\"symbol\":\".BAX\",\"symbolType\":\"symbol\",\"code\":0,\"name\":\"BB ALL SHARE IDX\",\"shortName\":\".BAX\",\"onAirName\":\"Bahrain Allshare\",\"altName\":\"BB ALL SHARE IDX\",\"last\":\"1,815.752\",\"last_timedate\":\"11/05/26 EST\",\"last_time\":\"2026-11-05\",\"changetype\":\"DOWN\",\"type\":\"INDEX\",\"subType\":\"Index\",\"exchange\":\"Exchange\",\"source\":\"Exchange\",\"open\":\"1,817.20\",\"high\":\"1,820.991\",\"low\":\"1,806.036\",\"change\":\"-1.448\",\"change_pct\":\"-0.08%\",\"currencyCode\":\"BHD\",\"volume\":\"2,595,831\",\"volume_alt\":\"2.6M\",\"provider\":\"CNBC Quote Cache\",\"previous_day_closing\":\"1,817.20\",\"altSymbol\":\".BAX\",\"realTime\":\"false\",\"curmktstatus\":\"REG_MKT\",\"yrhiprice\":\"2,083.61\",\"yrhidate\":\"11/05/25\",\"yrloprice\":\"1,806.04\",\"yrlodate\":\"11/05/26\",\"streamable\":\"1\",\"issue_id\":\"587530\",\"countryCode\":\"EU\",\"timeZone\":\"EST\",\"feedSymbol\":\"/.BAX\",\"portfolioindicator\":\"N\",\"EventData\":{\"yrhiind\":\"N\",\"yrloind\":\"Y\",\"is_halted\":\"N\"}}]}}",
+  "apis": []
+ },
+ "cnbc_1y_bhseasi": {
+  "status": 200,
+  "len": 243,
+  "head": "{\"requestDetails\":{\"symbol\":\".BHSEASI\",\"startTime\":\"20241108093430\",\"endTime\":\"20261107093430\",\"adjusted\":\"ADJUSTED\"},\"status\":\"ERROR\",\"statusMessage\":\"Error in getting bars for symbol: .BHSEASI and barType: ONE_DAY Security Master not found\"}",
+  "apis": []
+ },
+ "inv_search": {
+  "error": "HTTP Error 403: Forbidden"
+ },
+ "inv_search2": {
+  "error": "HTTP Error 403: Forbidden"
+ },
+ "mubasher_page": {
+  "status": 200,
+  "len": 294308,
+  "head": "<!doctype html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:fb=\"http://www.facebook.com/2008/fbml\" xmlns:og=\"http://opengraphprotocol.org/schema/\" lang=\"en\">\n<head>\n  <title>Bahrain All Share Index (BHBX) - Mubasher Info KSA</title>\n  <!-- Remove country name from home page title for SEO purposes -->\n  \n  <meta charset=\"utf-8\" />\n  <meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\" />\n  <meta name=\"description\" content=\"Muabsher Info is a website that covers financial and stock markets &amp; provides latest prices &amp; values for local and global exchanges in addition to Company IPO news\" />\n  <meta content=\"width=device-width, initial-scale=1, user-scalable=no\" name=\"viewport\" />\n  <meta content=\"upgrade-insecure-requests\" http-equiv=\"Content-Security-Policy\" />\n  <meta content=\"Go9_ScOtvxAH75gE9uqjVxFul_Q\" name=\"alexaVerifyID\" />\n  <meta content=\"328196127322541\" property=\"fb:app_id\" />\n  <meta content=\"@mubasher_info\" name=\"twitter:site\" />\n  <meta content=\"494539772\" name=\"twitter:app:id:iphone\" />\n  \n  <meta content=\"AAIB, Banking, Visa, Visa Signature, Online Shopping, Cashback, Credit Card, Credit Card Offers, Banking Offers, Online Purchase, Buy Online, بنوك, عائد, استثمار, بنك, ادخار, حساب, رمز, فلوس, نقود , مال , تجارة , فتح , ربح , اتمان , مكسب, جنية, دولار, إسترليني ,ذهب, وديعة, كارت, كروت, قرض, قروض, شركة, شركات, شغل, شهادات, شهاده, فوائد, فائده, نسبه, مئوية, حساب, ارصدة, ماكينة, صراف , صرف, الي, رصيد, مرتب, بيع, شراء, تكنولوجيا مالية, صناديق سيادية, اقتص",
+  "apis": [
+   "https://api-community.mubasher.info/api/v1",
+   "https://api.tadawuly.gfm.support/api/v1",
+   "https://fonts.googleapis.com/css?family=Nunito",
+   "https://fonts.googleapis.com/css?family=Roboto:400,700,300,100",
+   "https://static.mubasher.info/File.MubasherCharts/File.Delay_Index_Intraday_Charts_Dir/33182be0c5cdcd5072bb1864cdee4d3d6e.csv",
+   "https://static.mubasher.info/File.MubasherCharts/File.Historical_Index_Charts_Dir/33182be0c5cdcd5072bb1864cdee4d3d6e.csv"
+  ]
+ },
+ "bb_home": {
+  "status": 200,
+  "len": 194905,
+  "head": "\r\n<!DOCTYPE html >\n<html lang=\"en\" dir=\"ltr\">\r\n    <head><meta http-equiv=\"X-UA-Compatible\" content=\"IE=10\" /><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><link rel=\"stylesheet\" href=\"/Style%20Library/Chatbot%20css/custom.css\" /><link rel=\"stylesheet\" href=\"/Style%20Library/Chatbot%20css/font-awesome.min.css\" /><meta charset=\"utf-8\" /><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\" /><meta name=\"GENERATOR\" content=\"Microsoft SharePoint\" /><meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" /><meta http-equiv=\"Expires\" content=\"0\" /><link rel=\"shortcut icon\" href=\"/PublishingImages/favicon.ico\" /><title>\r\n\t\r\n            Home\r\n            \r\n            \r\n            Bahrain Bourse\r\n            \r\n        \r\n</title>\r\n        <link id=\"CssLink-47fd64980cee4b29bcf3a450791ca134\" rel=\"stylesheet\" type=\"text/css\" href=\"/_layouts/15/1033/styles/Themable/corev15.css?rev=UP2nlZLed9gOy%2BMP38oz0A%3D%3DTAG0\"/>\n<link id=\"CssLink-dd917abb5ea240bf8415144d89f7d89c\" rel=\"stylesheet\" type=\"text/css\" href=\"/Style%20Library/css/bootstrap.min.css\"/>\n<link id=\"CssLink-35f5f50d85bf4a8e9dbb81db2f4cd738\" rel=\"stylesheet\" type=\"text/css\" href=\"/Style%20Library/css/app.css?v=27\"/>\n<style id=\"SPThemeHideForms\" type=\"text/css\">body {opacity:0 !important}</style>\r\n        <script type=\"text/javascript\">// <![CDATA[ \n\r\nvar g_SPOffSwitches={};\r\n// ]]>\r\n</script>\r\n<script type=\"text/javascript\" src=\"/_layouts/15/1033/initstrings.js?rev=WTJsdUAyV3J6",
+  "apis": [
+   "https://bahrainbourse.com/en/Investors/InvestorAwareness/Pages/capital-market.aspx",
+   "https://balancer.netdania.com/js/nfsc/pro-patterns/v2.6.1/Chart.bundle.min.js",
+   "https://balancer.netdania.com/js/nfsc/pro-patterns/v2.6.1/css/Chart.css",
+   "https://webapi.bahrainbourse.com"
+  ]
+ },
+ "bb_indices": {
+  "error": "HTTP Error 404: Not Found"
+ },
+ "mw": {
+  "error": "HTTP Error 401: HTTP Forbidden"
+ },
+ "asharq": {
+  "status": 200,
+  "len": 478557,
+  "head": "<!DOCTYPE html><html lang=\"ar\" class=\"light\"><head prefix=\"og: http://ogp.me/ns# article: http://ogp.me/ns/article#\"><meta charSet=\"utf-8\"/><meta name=\"google\" content=\"notranslate\"/><meta name=\"format-detection\" content=\"telephone=no, date=no, email=no, address=no\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no\"/><style type=\"text/css\">\n                @font-face {\n                  font-family: &quot;VideoJS&quot;;\n                  src: unset !important;\n                }\n              </style><style type=\"text/css\">\n              html{ scroll-behavior: smooth; }\n              </style><link rel=\"preload\" as=\"image\" href=\"/_next/static/media/asharqBusiness-logo.044b433f.svg\" fetchpriority=\"high\"/><title>بيانات المؤشر العام لبورصة البحرين | الشرق بلومبرغ</title><meta name=\"description\" content=\"تابع بيانات المؤشر العام لبورصة البحرين واطلع على التحديثات ونطاق التغير اليومي وحجم التداول وإحصائيات السوق عبر موقع الشرق بلومبرغ\"/><meta property=\"og:title\" content=\"بيانات المؤشر العام لبورصة البحرين | الشرق بلومبرغ\"/><meta property=\"og:locale\" content=\"ar\"/><meta property=\"og:description\" content=\"تابع بيانات المؤشر العام لبورصة البحرين واطلع على التحديثات ونطاق التغير اليومي وحجم التداول وإحصائيات السوق عبر موقع الشرق بلومبرغ\"/><meta property=\"og:type\" content=\"website\"/><meta name=\"twitter:creator\" content=\"Asharq\"/><meta name=\"twitter:title\" content=\"بيانات المؤشر العام لبورصة البحرين | الشرق بلومبرغ\"/><meta name=\"twitter",
+  "apis": [
+   "https://api-business.asharqbusiness.com",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/ABC:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/ABRAAJ:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/ALBH:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/APMTB:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/ARIG:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/BASREC:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/BBK:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/BCFC:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/BEYON:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/BFM:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/BISB:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/GFH:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/ITHMR:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/KHALEEJI:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/NBB:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/SALAM:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/SEEF:BI.svg",
+   "https://www.bloomberg.com/markets/api/charts/sparkline/UGH:BI.svg"
+  ]
+ },
+ "yahoo_search": {
+  "status": 200,
+  "len": 1063,
+  "head": "{\"explains\":[],\"count\":2,\"quotes\":[],\"news\":[],\"nav\":[{\"navName\":\"All Videos\",\"navUrl\":\"https://finance.yahoo.com/videos\"}],\"lists\":[{\"slug\":\"crypto-top-volume-24hr\",\"name\":\"Top Cryptos by Volume (all currencies, 24hr)\",\"index\":\"crypto-top-volume-24hr\",\"score\":5.255299,\"type\":\"ALGO_WATCHLIST\",\"brandSlug\":\"yahoo-finance\",\"pfId\":\"crypto_top_volume_24hr\",\"symbolCount\":30,\"dailyPercentGain\":1.7152199701442086,\"followerCount\":11643,\"iconUrl\":\"https://edgecast-img.yahoo.net/mysterio/api/6f69a03efb171836aa2206498710c817605e8c9a9aba39b4e81b01d81f1ce8ed/finance/resizefill_w96_h96/https://s.yimg.com/cv/ae/finance/portfolio/top-cryptos-by-volume.png\",\"userId\":\"5SSSFLJVWAMDKUGZM5HLSSBNAY\"}],\"researchReports\":[],\"screenerFieldResults\":[],\"totalTime\":35,\"timeTakenForQuotes\":410,\"timeTakenForNews\":600,\"timeTakenForAlgowatchlist\":400,\"timeTakenForPredefinedScreener\":400,\"timeTakenForCrunchbase\":0,\"timeTakenForNav\":400,\"timeTakenForResearchReports\":0,\"timeTakenForQuestions\":0,\"timeTakenForScreenerField\":0,\"timeTakenForCulturalAssets\":0,\"timeTakenForSearchLists\":0}",
+  "apis": [
+   "https://edgecast-img.yahoo.net/mysterio/api/6f69a03efb171836aa2206498710c817605e8c9a9aba39b4e81b01d81f1ce8ed/finance/resizefill_w96_h96/https://s.yimg.com/cv/ae/finance/portfolio/top-cryptos-by-volume.png"
+  ]
+ },
+ "stooq": {
+  "error": "<urlopen error timed out>"
+ }
+}
