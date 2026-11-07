@@ -46,4 +46,4 @@ Dependencias: `pip install piper-tts "matplotlib>=3.11" imageio-ffmpeg pillow nu
 
 ## Reglas
 Nada de comprar/vender, precio objetivo ni «barata/cara». El análisis técnico se presenta como datos. Cada cifra con fuente; cálculos propios marcados «محسوب».
-Todos los posts y descripciones llevan el enlace https://www.youtube.com/@BahrainAIStocks. No se programa el cron de datos ni se publica nada sin el visto bueno de Daniel.
+Todos los posts y descripciones llevan el enlace https://www.youtube.com/@BahrainAIStocks. Daniel aprobó la muestra y la publicación automática el 7-nov-2026: datos a las 13:40 de Manama y rutina diaria que hace y publica el vídeo y el Short (domingo a jueves).
