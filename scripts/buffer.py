@@ -127,7 +127,7 @@ REDES = {
 
 def archivo_post(carpeta, r, pais):
     """El archivo de texto del post de esa red en la carpeta, o None si no hay."""
-    for nombre in (r["archivo"], r.get("alterno_eau") if pais in ("eau", "qatar", "saudi") else None):
+    for nombre in (r["archivo"], r.get("alterno_eau") if pais in ("eau", "qatar", "saudi", "bahrain") else None):
         if nombre and os.path.isfile(os.path.join(carpeta, nombre)):
             return nombre
     return None
@@ -138,11 +138,14 @@ CLAVES_QA = ("BUFFER_API_KEY_QA", "BUFFER_API_KEY_QA2")  # cuentas de Buffer sol
 CANAL_QA = "https://www.youtube.com/@QatarAIStocks"
 CLAVES_SA = ("BUFFER_API_KEY_SA", "BUFFER_API_KEY_SA2")  # cuentas de Buffer solo de Arabia Saudita
 CANAL_SA = "https://www.youtube.com/@SaudiArabiaAIStocks"
-SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA", "saudi": "_SA"}
+CLAVES_BH = ("BUFFER_API_KEY_BAHRAIN", "BUFFER_API_KEY_BAHRAIN2", "BUFFER_API_KEY_BAHRAIN3")  # cuentas solo de Baréin
+CANAL_BH = "https://www.youtube.com/@BahrainAIStocks"
+SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA", "saudi": "_SA", "bahrain": "_BAHRAIN"}
 # países con cuentas de Buffer propias (todos sus canales son de ese país) y su canal de YouTube
 PROPIOS = {"eau": (CLAVES_EAU, CANAL_EAU, "BUFFER_ACCESS_TOKEN_EAU", "EAU"),
            "qatar": (CLAVES_QA, CANAL_QA, "BUFFER_ACCESS_TOKEN_QA", "Qatar"),
-           "saudi": (CLAVES_SA, CANAL_SA, "BUFFER_ACCESS_TOKEN_SAUDI", "Arabia Saudita")}
+           "saudi": (CLAVES_SA, CANAL_SA, "BUFFER_ACCESS_TOKEN_SAUDI", "Arabia Saudita"),
+           "bahrain": (CLAVES_BH, CANAL_BH, "BUFFER_ACCESS_TOKEN_BAHRAIN", "Baréin")}
 
 
 def sin_tildes(t):
@@ -323,7 +326,7 @@ def enlace_video(carpeta, nombre="video.mp4"):
 
 def programar(base):
     global CLAVE
-    pais = {"cola-es": "espana", "cola-eau": "eau", "cola-qa": "qatar", "cola-sa": "saudi"}.get(os.path.basename(os.path.normpath(base)), "chile")
+    pais = {"cola-es": "espana", "cola-eau": "eau", "cola-qa": "qatar", "cola-sa": "saudi", "cola-bahrain": "bahrain"}.get(os.path.basename(os.path.normpath(base)), "chile")
     modo = (os.environ.get("BUFFER_MODO") or "ahora").strip().lower()
     if modo not in MODOS:
         sys.exit(f"BUFFER_MODO debe ser ahora, cola o borrador, no {modo!r}.")

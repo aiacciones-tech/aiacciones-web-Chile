@@ -14,9 +14,9 @@ concurrency: youtube-cola
 on:
   push:
     branches: [youtube-cola]
-    paths: ['cola/**/post-x.txt', 'cola/**/post-linkedin.txt', 'cola/**/post-tiktok.txt', 'cola/**/post-instagram.txt', 'cola-es/**/post-x.txt', 'cola-es/**/post-linkedin.txt', 'cola-es/**/post-tiktok.txt', 'cola-es/**/post-instagram.txt', 'cola-eau/**/post-x.txt', 'cola-eau/**/post-linkedin.txt', 'cola-eau/**/post-tiktok.txt', 'cola-eau/**/post-instagram.txt', 'cola-qa/**/post-x.txt', 'cola-qa/**/post-linkedin.txt', 'cola-qa/**/post-tiktok.txt', 'cola-qa/**/post-instagram.txt', 'cola-qa/**/post-facebook.txt', 'cola-sa/**/post-x.txt', 'cola-sa/**/post-linkedin.txt', 'cola-sa/**/post-tiktok.txt', 'cola-sa/**/post-instagram.txt', 'cola-sa/**/post-facebook.txt']
+    paths: ['cola/**/post-x.txt', 'cola/**/post-linkedin.txt', 'cola/**/post-tiktok.txt', 'cola/**/post-instagram.txt', 'cola-es/**/post-x.txt', 'cola-es/**/post-linkedin.txt', 'cola-es/**/post-tiktok.txt', 'cola-es/**/post-instagram.txt', 'cola-eau/**/post-x.txt', 'cola-eau/**/post-linkedin.txt', 'cola-eau/**/post-tiktok.txt', 'cola-eau/**/post-instagram.txt', 'cola-qa/**/post-x.txt', 'cola-qa/**/post-linkedin.txt', 'cola-qa/**/post-tiktok.txt', 'cola-qa/**/post-instagram.txt', 'cola-qa/**/post-facebook.txt', 'cola-sa/**/post-x.txt', 'cola-sa/**/post-linkedin.txt', 'cola-sa/**/post-tiktok.txt', 'cola-sa/**/post-instagram.txt', 'cola-sa/**/post-facebook.txt', 'cola-bahrain/**/post-x.txt', 'cola-bahrain/**/post-tiktok.txt', 'cola-bahrain/**/post-instagram.txt', 'cola-bahrain/**/post-facebook.txt', 'cola-bahrain/**/post-threads.txt']
   workflow_run:
-    workflows: ["Subir videos a YouTube", "Subir videos a YouTube (España)", "Subir videos a YouTube (EAU)", "Subir videos a YouTube (Qatar)", "Subir videos a YouTube (Arabia Saudita)"]
+    workflows: ["Subir videos a YouTube", "Subir videos a YouTube (España)", "Subir videos a YouTube (EAU)", "Subir videos a YouTube (Qatar)", "Subir videos a YouTube (Arabia Saudita)", "Subir videos a YouTube (Baréin)"]
     types: [completed]
   workflow_dispatch:
     inputs:
@@ -38,6 +38,9 @@ jobs:
       BUFFER_API_KEY_QA2: ${{ secrets.BUFFER_ACCESS_TOKEN_QA2 }}
       BUFFER_API_KEY_SA: ${{ secrets.BUFFER_ACCESS_TOKEN_SAUDI }}
       BUFFER_API_KEY_SA2: ${{ secrets.BUFFER_ACCESS_TOKEN_SAUDI2 }}
+      BUFFER_API_KEY_BAHRAIN: ${{ secrets.BUFFER_ACCESS_TOKEN_BAHRAIN }}
+      BUFFER_API_KEY_BAHRAIN2: ${{ secrets.BUFFER_ACCESS_TOKEN_BAHRAIN2 }}
+      BUFFER_API_KEY_BAHRAIN3: ${{ secrets.BUFFER_ACCESS_TOKEN_BAHRAIN3 }}
       BUFFER_MODO: ${{ vars.BUFFER_MODO }}
       BUFFER_HORA: ${{ vars.BUFFER_HORA }}
       BUFFER_CANAL: ${{ vars.BUFFER_CANAL }}
@@ -59,6 +62,11 @@ jobs:
       BUFFER_CANAL_TIKTOK_SA: ${{ vars.BUFFER_CANAL_TIKTOK_SA }}
       BUFFER_CANAL_INSTAGRAM_SA: ${{ vars.BUFFER_CANAL_INSTAGRAM_SA }}
       BUFFER_CANAL_FACEBOOK_SA: ${{ vars.BUFFER_CANAL_FACEBOOK_SA }}
+      BUFFER_CANAL_BAHRAIN: ${{ vars.BUFFER_CANAL_BAHRAIN }}
+      BUFFER_CANAL_TIKTOK_BAHRAIN: ${{ vars.BUFFER_CANAL_TIKTOK_BAHRAIN }}
+      BUFFER_CANAL_INSTAGRAM_BAHRAIN: ${{ vars.BUFFER_CANAL_INSTAGRAM_BAHRAIN }}
+      BUFFER_CANAL_FACEBOOK_BAHRAIN: ${{ vars.BUFFER_CANAL_FACEBOOK_BAHRAIN }}
+      BUFFER_CANAL_THREADS_BAHRAIN: ${{ vars.BUFFER_CANAL_THREADS_BAHRAIN }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -72,7 +80,7 @@ jobs:
           # Cada canal por separado: si falla uno (p. ej. un post duplicado), los demás se mandan igual y el paso falla al final.
           rc=0
           python3 scripts/buffer.py programar cola || rc=1
-          for q in cola-es cola-eau cola-qa cola-sa; do
+          for q in cola-es cola-eau cola-qa cola-sa cola-bahrain; do
             if [ -d "$q" ]; then python3 scripts/buffer.py programar "$q" || rc=1; fi
           done
           exit $rc
@@ -81,7 +89,7 @@ jobs:
         run: |
           git config user.name "aiacciones-bot"
           git config user.email "aiacciones-bot@users.noreply.github.com"
-          git add cola $( [ -d cola-es ] && echo cola-es ) $( [ -d cola-eau ] && echo cola-eau ) $( [ -d cola-qa ] && echo cola-qa ) $( [ -d cola-sa ] && echo cola-sa )
+          git add cola $( [ -d cola-es ] && echo cola-es ) $( [ -d cola-eau ] && echo cola-eau ) $( [ -d cola-qa ] && echo cola-qa ) $( [ -d cola-sa ] && echo cola-sa ) $( [ -d cola-bahrain ] && echo cola-bahrain )
           git diff --cached --quiet && exit 0
           git commit -m "IDs de Buffer $(date -u +%F)"
           for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
