@@ -6,8 +6,9 @@ chilenas, volumen y monto transado, índices MSCI IPSA/IGPA, contexto internacio
 import json, os, datetime, urllib.request, urllib.parse
 ROOT = os.path.dirname(os.path.abspath(__file__))
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"
-YAHOO_IPSA = ["^IPSA", "^SPIPSA"]          # se usa el primero que responda
-TV_INDICES = ["BCS:SP_IPSA", "BCS:IPSA", "BCS:MXIPSA", "BCS:MXIPSAGC", "BCS:MXIGPAGC", "BCS:IGPA", "BCS:SP_IGPA"]
+TV_IPSA = ["BCS:MXIPSA", "BCS:IPSA", "BCS:SP_IPSA", "BCS:MXIPSAGC"]   # velas: el primero que responda
+YAHOO_IPSA = ["^IPSA"]                    # respaldo (Yahoo dejó de publicarlo en 2026: 404)
+TV_INDICES = ["BCS:SP_IPSA", "BCS:IPSA", "BCS:MXIPSA", "BCS:MXIPSAPR", "BCS:MXIPSAN", "BCS:MXIPSAGC", "BCS:MXIGPAGC", "BCS:IGPA", "BCS:SP_IGPA"]
 CTX = ["SP:SPX", "NASDAQ:NDX", "DJ:DJI", "TVC:NI225", "TVC:HSI", "SSE:000001", "TVC:KOSPI", "BMFBOVESPA:IBOV", "BMV:ME",
        "TVC:SX5E", "XETR:DAX", "FX_IDC:USDCLP", "FX:USDCLP", "COMEX:HG1!", "TVC:UKOIL", "TVC:USOIL", "TVC:GOLD",
        "TVC:US10Y", "TVC:CL10Y", "TVC:DXY", "CAPITALCOM:COPPER", "TVC:COPPER"]
@@ -45,15 +46,63 @@ def tv_chile():
     return {x["s"]: dict(zip(COLS, x["d"])) for x in r.get("data", [])}
 
 
+def tv_buscar(texto):
+    u = "https://symbol-search.tradingview.com/symbol_search/v3/?" + urllib.parse.urlencode({"text": texto, "exchange": "BCS", "hl": "0", "lang": "es", "domain": "production"})
+    try:
+        r = get(u, extra={"Origin": "https://www.tradingview.com", "Referer": "https://www.tradingview.com/"})
+        return [{k: x.get(k) for k in ("symbol", "description", "type", "exchange")} for x in r.get("symbols", [])]
+    except Exception as e:
+        return [{"error": str(e)}]
+
+
+def tv_velas(simbolo, resol="1D", n=500):
+    """Velas históricas de TradingView por su websocket público (sin cuenta, datos con el retraso habitual)."""
+    import random, string, re, websocket
+    ws = websocket.create_connection("wss://data.tradingview.com/socket.io/websocket?type=chart",
+                                     header=["Origin: https://www.tradingview.com", "User-Agent: " + UA], timeout=30)
+    def send(m, p):
+        msg = json.dumps({"m": m, "p": p}, separators=(",", ":"))
+        ws.send(f"~m~{len(msg)}~m~{msg}")
+    cs = "cs_" + "".join(random.choice(string.ascii_lowercase) for _ in range(12))
+    send("set_auth_token", ["unauthorized_user_token"])
+    send("chart_create_session", [cs, ""])
+    send("resolve_symbol", [cs, "s1", "=" + json.dumps({"symbol": simbolo, "adjustment": "splits"})])
+    send("create_series", [cs, "sds_1", "s1", "s1", resol, n, ""])
+    buf, velas = "", None
+    for _ in range(200):
+        r = ws.recv(); buf += r
+        for hb in re.findall(r"~m~\d+~m~(~h~\d+)", r):
+            ws.send(f"~m~{len(hb)}~m~{hb}")
+        if "series_completed" in r or "symbol_error" in r or "series_error" in r:
+            break
+    ws.close()
+    if "symbol_error" in buf or "series_error" in buf:
+        raise RuntimeError("símbolo no válido en TradingView: " + simbolo)
+    for m in re.finditer(r'"s":\[(\{"i":.*?)\],"ns"', buf):
+        arr = json.loads("[" + m.group(1) + "]")
+        velas = [{"t": int(x["v"][0]), "o": x["v"][1], "h": x["v"][2], "l": x["v"][3], "c": x["v"][4], "v": (x["v"][5] if len(x["v"]) > 5 else None)} for x in arr]
+    if not velas:
+        raise RuntimeError("sin velas para " + simbolo)
+    return {"simbolo": simbolo, "fuente": "TradingView", "velas": velas}
+
+
 def main():
     res = {"generado": datetime.datetime.utcnow().isoformat() + "Z", "errores": []}
-    for sym in YAHOO_IPSA:
+    res["busqueda"] = tv_buscar("IPSA")
+    # Índice de precios MSCI IPSA (el que citan la prensa y la Bolsa). Se usa el primero que responda.
+    for sym in TV_IPSA:
         try:
-            res["ipsa_diario"] = yahoo(sym, "2y", "1d")
-            res["ipsa_intradia"] = yahoo(sym, "5d", "5m")
+            res["ipsa_diario"] = tv_velas(sym, "1D", 520)
+            res["ipsa_intradia"] = tv_velas(sym, "5", 600)
             break
         except Exception as e:
-            res["errores"].append(f"yahoo {sym}: {e}")
+            res["errores"].append(f"tv velas {sym}: {e}")
+    if "ipsa_diario" not in res:
+        for sym in YAHOO_IPSA:
+            try:
+                res["ipsa_diario"] = yahoo(sym, "2y", "1d"); res["ipsa_intradia"] = yahoo(sym, "5d", "5m"); break
+            except Exception as e:
+                res["errores"].append(f"yahoo {sym}: {e}")
     try:
         res["tv"] = tv(TV_INDICES + CTX)
     except Exception as e:
@@ -64,13 +113,14 @@ def main():
         res["errores"].append(f"tradingview chile: {e}")
     fecha = (datetime.datetime.utcnow() - datetime.timedelta(hours=3)).date().isoformat()
     try:
-        fecha = (datetime.datetime.utcfromtimestamp(res["ipsa_diario"]["velas"][-1]["t"]) - datetime.timedelta(hours=3)).date().isoformat()
+        fecha = datetime.datetime.utcfromtimestamp(res["ipsa_diario"]["velas"][-1]["t"]).date().isoformat()  # vela diaria: fecha de la sesión
     except Exception:
         pass
     os.makedirs(os.path.join(ROOT, "datos"), exist_ok=True)
     p = os.path.join(ROOT, "datos", f"mercado-{fecha}.json")
     json.dump(res, open(p, "w"), ensure_ascii=False)
-    print("escrito", p, "errores:", res["errores"], "chile:", len(res.get("chile", {})), "tv:", sorted(res.get("tv", {})))
+    print("escrito", p, "errores:", res["errores"], "chile:", len(res.get("chile", {})), "tv:", sorted(res.get("tv", {})), "busqueda:", res["busqueda"][:15],
+          "velas:", res.get("ipsa_diario", {}).get("simbolo"), len(res.get("ipsa_diario", {}).get("velas", [])), len(res.get("ipsa_intradia", {}).get("velas", [])))
 
 
 if __name__ == "__main__":

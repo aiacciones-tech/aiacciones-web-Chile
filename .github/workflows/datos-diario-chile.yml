@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Descargar datos
-        run: python3 diario/datos_mercado.py
+        run: pip install -q websocket-client && python3 diario/datos_mercado.py
       - name: Guardar en la rama datos-diario-cl
         run: |
           mkdir -p /tmp/out && cp diario/datos/mercado-*.json /tmp/out/
