@@ -8,7 +8,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"
 INDICES = {"adx": ["ADX:FADGI", "ADX:FTFADGI"], "dfm": ["DFM:DFMGI"]}   # velas: el primero que responda
 YAHOO = {"adx": ["^FTFADGI", "FADGI.FGI"], "dfm": ["^DFMGI", "DFMGI.AE"]}  # respaldo
-CTX = ["ADX:FADGI", "DFM:DFMGI", "TVC:UKOIL", "TVC:USOIL", "SP:SPX", "NASDAQ:NDX", "DJ:DJI", "TVC:NI225", "TVC:HSI", "SSE:000001",
+CTX = ["ADX:FADGI", "DFM:DFMGI", "TVC:UKOIL", "TVC:USOIL", "ICEEUR:BRN1!", "NYMEX:CL1!", "FX:UKOIL", "OANDA:BCOUSD", "SP:SPX", "NASDAQ:NDX", "DJ:DJI", "TVC:NI225", "TVC:HSI", "SSE:000001",
        "TVC:KOSPI", "TADAWUL:TASI", "QSE:GNRI", "TVC:SX5E", "TVC:UKX", "TVC:GOLD", "TVC:US10Y", "TVC:US02Y", "TVC:DXY", "FX_IDC:USDAED"]
 COLS = ["name", "description", "close", "change", "change_abs", "volume", "Value.Traded", "average_volume_10d_calc",
         "market_cap_basic", "time", "Perf.W", "Perf.1M", "Perf.YTD", "type", "exchange", "sector"]
