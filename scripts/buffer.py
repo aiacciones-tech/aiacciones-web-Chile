@@ -45,6 +45,10 @@ variables con sufijo _QA (BUFFER_CANAL_QA, BUFFER_CANAL_LINKEDIN_QA, ...).
 Arabia Saudita (canal Saudi Arabia AI Stocks, posts en árabe): igual que Qatar, `programar cola-sa` con su propia
 cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_SAUDI, que el workflow pasa como BUFFER_API_KEY_SA, y opcional
 BUFFER_ACCESS_TOKEN_SAUDI2); variables con sufijo _SA (BUFFER_CANAL_SA, BUFFER_CANAL_LINKEDIN_SA, ...).
+Baréin (canal Bahrain AI Stocks, posts en árabe): igual que Arabia Saudita, `programar cola-bahrain` con su propia
+cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_BAHRAIN, que el workflow pasa como BUFFER_API_KEY_BAHRAIN, y opcional
+BUFFER_ACCESS_TOKEN_BAHRAIN2 / _BAHRAIN3 por el límite de 3 canales del plan gratis); variables con sufijo _BAHRAIN.
+Threads: <cola>/<slug>/post-threads.txt (máximo 500 caracteres), con imagen.png o miniatura.png adjunta si hay.
 Solo usa la biblioteca estándar de Python.
 """
 import json, os, re, subprocess, sys, unicodedata, urllib.request
@@ -116,12 +120,16 @@ REDES = {
     "facebook": {"nombre": "Facebook", "archivo": "post-facebook.txt", "registro": "buffer-facebook.json",
                  "servicios": ("facebook",), "variable": "BUFFER_CANAL_FACEBOOK", "limite": 63206,
                  "largo": len, "obligatoria": False, "alterno_eau": "post-linkedin.txt", "imagen": True},
+    # Threads (hoy solo Baréin): post-threads.txt, máximo 500 caracteres
+    "threads": {"nombre": "Threads", "archivo": "post-threads.txt", "registro": "buffer-threads.json",
+                "servicios": ("threads",), "variable": "BUFFER_CANAL_THREADS", "limite": 500,
+                "largo": len, "obligatoria": False, "imagen": True},
 }
 
 
 def archivo_post(carpeta, r, pais):
     """El archivo de texto del post de esa red en la carpeta, o None si no hay."""
-    for nombre in (r["archivo"], r.get("alterno_eau") if pais in ("eau", "qatar", "saudi") else None):
+    for nombre in (r["archivo"], r.get("alterno_eau") if pais in ("eau", "qatar", "saudi", "bahrain") else None):
         if nombre and os.path.isfile(os.path.join(carpeta, nombre)):
             return nombre
     return None
@@ -133,11 +141,14 @@ CLAVES_QA = ("BUFFER_API_KEY_QA", "BUFFER_API_KEY_QA2")  # cuentas de Buffer sol
 CANAL_QA = "https://www.youtube.com/@QatarAIStocks"
 CLAVES_SA = ("BUFFER_API_KEY_SA", "BUFFER_API_KEY_SA2")  # cuentas de Buffer solo de Arabia Saudita
 CANAL_SA = "https://www.youtube.com/@SaudiArabiaAIStocks"  # handle por confirmar
-SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA", "saudi": "_SA"}
+CLAVES_BH = ("BUFFER_API_KEY_BAHRAIN", "BUFFER_API_KEY_BAHRAIN2", "BUFFER_API_KEY_BAHRAIN3")  # cuentas solo de Baréin
+CANAL_BH = "https://www.youtube.com/@BahrainAIStocks"  # handle por confirmar cuando Daniel cree el canal
+SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA", "saudi": "_SA", "bahrain": "_BAHRAIN"}
 # países con cuentas de Buffer propias (todos sus canales son de ese país) y su canal de YouTube
 PROPIOS = {"eau": (CLAVES_EAU, CANAL_EAU, "BUFFER_ACCESS_TOKEN_EAU", "EAU"),
            "qatar": (CLAVES_QA, CANAL_QA, "BUFFER_ACCESS_TOKEN_QA", "Qatar"),
-           "saudi": (CLAVES_SA, CANAL_SA, "BUFFER_ACCESS_TOKEN_SAUDI", "Arabia Saudita")}
+           "saudi": (CLAVES_SA, CANAL_SA, "BUFFER_ACCESS_TOKEN_SAUDI", "Arabia Saudita"),
+           "bahrain": (CLAVES_BH, CANAL_BH, "BUFFER_ACCESS_TOKEN_BAHRAIN", "Baréin")}
 
 
 def sin_tildes(t):
@@ -318,7 +329,7 @@ def enlace_video(carpeta, nombre="video.mp4"):
 
 def programar(base):
     global CLAVE
-    pais = {"cola-es": "espana", "cola-eau": "eau", "cola-qa": "qatar", "cola-sa": "saudi"}.get(os.path.basename(os.path.normpath(base)), "chile")
+    pais = {"cola-es": "espana", "cola-eau": "eau", "cola-qa": "qatar", "cola-sa": "saudi", "cola-bahrain": "bahrain"}.get(os.path.basename(os.path.normpath(base)), "chile")
     modo = (os.environ.get("BUFFER_MODO") or "ahora").strip().lower()
     if modo not in MODOS:
         sys.exit(f"BUFFER_MODO debe ser ahora, cola o borrador, no {modo!r}.")
@@ -370,7 +381,8 @@ def programar(base):
         CLAVE = canal["clave"]
         modo_post = "borrador" if privado else modo
         extra = ", saveToDraft: true" if modo_post == "borrador" else ""
-        imagen = r.get("imagen") and enlace_video(carpeta, "imagen.png")
+        imagen = r.get("imagen") and (enlace_video(carpeta, "imagen.png")
+                                      or (red == "threads" and enlace_video(carpeta, "miniatura.png")))
         if imagen:
             # imagen.png: en X, LinkedIn y Facebook va adjunta; en Instagram es post en el feed en vez de Reel
             extra += ", assets: [{image: {url: %s}}]" % json.dumps(imagen)

@@ -1,0 +1,49 @@
+# Publica en el canal de Telegram de Bahrain AI Stocks (en árabe) cada video de cola-bahrain/ (rama youtube-cola)
+# cuando ya está subido a YouTube: foto (miniatura.png) + post-telegram.txt o post-facebook.txt con el enlace del video.
+# Todo post lleva el enlace al canal de YouTube (se agrega si falta).
+# Credenciales: Settings > Secrets and variables > Actions > TELEGRAM_BOT_TOKEN_BAHRAIN (token de @BotFather)
+# y TELEGRAM_CHANNEL_BAHRAIN (@usuario del canal). El bot tiene que ser administrador del canal.
+# "Run workflow" con modo=verificar solo prueba el bot y el canal; modo=publicar manda lo pendiente.
+name: Publicar en Telegram (Baréin)
+concurrency: telegram-bahrain
+on:
+  workflow_run:
+    workflows: ["Subir videos a YouTube (Baréin)"]
+    types: [completed]
+  push:
+    branches: [youtube-cola]
+    paths: ['cola-bahrain/**/post-telegram.txt']
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "verificar (solo el bot y el canal) o publicar (desde la rama youtube-cola)"
+        default: verificar
+permissions:
+  contents: write
+jobs:
+  telegram:
+    runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN_BAHRAIN }}
+      TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL_BAHRAIN || vars.TELEGRAM_CHANNEL_BAHRAIN }}
+      TELEGRAM_CANAL_YOUTUBE: ${{ vars.YOUTUBE_CANAL_BAHRAIN || 'https://www.youtube.com/@BahrainAIStocks' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar') && 'youtube-cola' || github.ref }}
+      - name: Verificar bot y canal
+        if: github.event_name == 'workflow_dispatch' && inputs.modo != 'publicar'
+        run: python3 scripts/telegram.py verificar
+      - name: Publicar pendientes
+        if: github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar'
+        run: python3 scripts/telegram.py publicar cola-bahrain
+      - name: Guardar lo publicado
+        if: always() && (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar')
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add cola-bahrain
+          git diff --cached --quiet && exit 0
+          git commit -m "Telegram Baréin $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
+          exit 1
