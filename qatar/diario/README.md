@@ -14,6 +14,12 @@ Muestra: sesión del jueves 5-nov-2026 (`ejemplo-2026-11-05/`). Formato aprobado
 6. **Agenda** (`s_agenda`): resultados, dividendos y datos de los próximos días.
 7. **Cierre** (`s_fin`): resumen y aviso legal completo en árabe (también en la descripción).
 
+## Campaña de comentarios y suscripción (8 al 22 de noviembre de 2026)
+Pedida por Daniel el 8-nov-2026. Mientras dure (fecha de Doha, `comun.cta_activa()`), el cierre del video y del Short pide en pantalla y en la voz
+un comentario para mejorar el canal y la suscripción (`CTA_PANTALLA`, `CTA_SHORT`, `CTA_VOZ` en `comun.py`), y `gen_meta.py` pone `CTA_DESC` al comienzo
+de las descripciones de YouTube. No hay que tocar `video.json` ni `short.json`. Se apaga sola el 23-nov; `CTA=0` / `CTA=1` la fuerzan.
+Suma unos 8 s al video y unos 5 s al Short: si el Short pasa de 59 s, acorta su locución.
+
 ## Datos
 `datos_mercado.py` corre en GitHub Actions (`datos-diario-qatar.yml`) y deja `datos/mercado-<fecha>.json` en la rama `datos-diario-qa`:
 velas diarias e intradía de `QSE:GNRI` (websocket de TradingView), cambio, volumen y valor negociado de todas las acciones de la QSE

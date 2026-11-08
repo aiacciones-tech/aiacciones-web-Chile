@@ -180,13 +180,18 @@ def s_fin(t):
     T(f, 0.94, 0.715, "\n".join(textwrap.wrap(Fn["titular"], 52)), GOLD, 32, "bold", alpha=a, linespacing=1.35, va="top")
     T(f, 0.94, 0.56, "ملخص يومي بعد إغلاق كل جلسة في بورصة قطر (من الأحد إلى الخميس)", BLUE, 27, alpha=a)
     f.text(0.94, 0.505, CANAL.replace("https://www.", ""), color=BLUE, fontsize=27, ha="right", weight="bold", alpha=a)
+    cta = cta_activa()
+    if cta:  # campaña de comentarios y suscripción (comun.py); el aviso se achica un poco para dejarle sitio
+        b = ease((t - 0.3) / 0.5)
+        T(f, 0.94, 0.445, CTA_PANTALLA[0], FG, 27, "bold", alpha=b)
+        T(f, 0.94, 0.395, CTA_PANTALLA[1], GOLD, 27, "bold", alpha=b)
     aviso = ("إخلاء مسؤولية: هذا المحتوى تعليمي وإعلامي فقط، ولا يُعد توصية استثمارية أو دعوة لشراء أو بيع أي ورقة مالية أو استشارة مالية شخصية، "
              "ولا يراعي وضعك أو أهدافك أو مدى تحملك للمخاطر. استشر جهة مرخصة من هيئة قطر للأسواق المالية قبل أي قرار استثماري. "
              "الأرقام من مصادر عامة مذكورة (" + Fn["fuentes"] + ")، والحسابات الخاصة موضحة بعبارة «محسوب». "
              "التحليل الفني يصف حركة الأسعار في الماضي وليس إشارات شراء أو بيع ولا يتنبأ بالمستقبل. "
              "لا نملك مراكز في الأسهم المذكورة ولا نتلقى أي مقابل من الشركات. الاستثمار في الأسهم ينطوي على مخاطر قد تصل إلى خسارة رأس المال، والأداء السابق لا يضمن النتائج المستقبلية. "
              "النص والرسوم والصوت (صوت اصطناعي) من إعداد أدوات الذكاء الاصطناعي ومراجعة مع المصادر.")
-    T(f, 0.94, 0.07, "\n".join(textwrap.wrap(aviso, 125)), MUTED, 17, linespacing=1.55, alpha=a)
+    T(f, 0.94, 0.06 if cta else 0.07, "\n".join(textwrap.wrap(aviso, 140 if cta else 125)), MUTED, 15 if cta else 17, linespacing=1.5 if cta else 1.55, alpha=a)
     return with_logo(to_arr(f), LGB, x=110, y=90)
 
 
@@ -200,6 +205,7 @@ if __name__ == "__main__":
     if PREVIEW:
         for fn in SEQ: Image.fromarray(frame(fn, 1.0)).save(os.path.join(AUD, "prev_" + fn.__name__ + ".png"))
         sys.exit()
+    if cta_activa(): VJ["voz"]["s_fin"] = CTA_VOZ["video"] + " " + VJ["voz"]["s_fin"]
     clips = [voz(VJ["voz"][fn.__name__], os.path.join(AUD, fn.__name__ + ".wav")) for fn in SEQ]; sr = clips[0][1]
     LEAD, TAIL = 0.12, 0.45
     durs = [LEAD + len(a) / sr + TAIL for a, _ in clips]; durs[0] += 0.4; durs[-1] += 1.5
