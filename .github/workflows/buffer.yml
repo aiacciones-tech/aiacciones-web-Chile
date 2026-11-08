@@ -14,7 +14,7 @@ concurrency: youtube-cola
 on:
   push:
     branches: [youtube-cola]
-    paths: ['cola/**/post-x.txt', 'cola/**/post-linkedin.txt', 'cola/**/post-tiktok.txt', 'cola/**/post-instagram.txt', 'cola-es/**/post-x.txt', 'cola-es/**/post-linkedin.txt', 'cola-es/**/post-tiktok.txt', 'cola-es/**/post-instagram.txt', 'cola-eau/**/post-x.txt', 'cola-eau/**/post-linkedin.txt', 'cola-eau/**/post-tiktok.txt', 'cola-eau/**/post-instagram.txt', 'cola-qa/**/post-x.txt', 'cola-qa/**/post-linkedin.txt', 'cola-qa/**/post-tiktok.txt', 'cola-qa/**/post-instagram.txt', 'cola-qa/**/post-facebook.txt', 'cola-sa/**/post-x.txt', 'cola-sa/**/post-linkedin.txt', 'cola-sa/**/post-tiktok.txt', 'cola-sa/**/post-instagram.txt', 'cola-sa/**/post-facebook.txt', 'cola-bahrain/**/post-x.txt', 'cola-bahrain/**/post-tiktok.txt', 'cola-bahrain/**/post-instagram.txt', 'cola-bahrain/**/post-facebook.txt', 'cola-bahrain/**/post-threads.txt']
+    paths: ['cola/**/post-x.txt', 'cola/**/post-linkedin.txt', 'cola/**/post-tiktok.txt', 'cola/**/post-instagram.txt', 'cola-es/**/post-x.txt', 'cola-es/**/post-linkedin.txt', 'cola-es/**/post-tiktok.txt', 'cola-es/**/post-instagram.txt', 'cola-eau/**/post-x.txt', 'cola-eau/**/post-linkedin.txt', 'cola-eau/**/post-tiktok.txt', 'cola-eau/**/post-instagram.txt', 'cola-qa/**/post-x.txt', 'cola-qa/**/post-linkedin.txt', 'cola-qa/**/post-tiktok.txt', 'cola-qa/**/post-instagram.txt', 'cola-qa/**/post-facebook.txt', 'cola-sa/**/post-x.txt', 'cola-sa/**/post-linkedin.txt', 'cola-sa/**/post-tiktok.txt', 'cola-sa/**/post-instagram.txt', 'cola-sa/**/post-facebook.txt', 'cola-bahrain/**/post-x.txt', 'cola-bahrain/**/post-tiktok.txt', 'cola-bahrain/**/post-instagram.txt', 'cola-bahrain/**/post-facebook.txt', 'cola-bahrain/**/post-threads.txt', 'cola-bahrain/**/post-linkedin.txt']
   workflow_run:
     workflows: ["Subir videos a YouTube", "Subir videos a YouTube (España)", "Subir videos a YouTube (EAU)", "Subir videos a YouTube (Qatar)", "Subir videos a YouTube (Arabia Saudita)", "Subir videos a YouTube (Baréin)"]
     types: [completed]
@@ -67,6 +67,7 @@ jobs:
       BUFFER_CANAL_INSTAGRAM_BAHRAIN: ${{ vars.BUFFER_CANAL_INSTAGRAM_BAHRAIN }}
       BUFFER_CANAL_FACEBOOK_BAHRAIN: ${{ vars.BUFFER_CANAL_FACEBOOK_BAHRAIN }}
       BUFFER_CANAL_THREADS_BAHRAIN: ${{ vars.BUFFER_CANAL_THREADS_BAHRAIN }}
+      BUFFER_CANAL_LINKEDIN_BAHRAIN: ${{ vars.BUFFER_CANAL_LINKEDIN_BAHRAIN }}
     steps:
       - uses: actions/checkout@v4
         with:
