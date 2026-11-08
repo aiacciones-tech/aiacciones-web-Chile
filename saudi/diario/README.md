@@ -12,6 +12,9 @@ Muestra: sesión del jueves 5-nov-2026 (`ejemplo-2026-11-05/`).
 4. **Valores** (`s_movers`): 5 que más suben y 5 que más bajan del mercado principal (automático; solo acciones ordinarias de TASI con más de 1 millón de riyales negociados), con su motivo. Sin motivo publicado: «لا يوجد خبر محدد في الصحافة»; nunca se inventa.
 5. **Técnico TASI** (`s_tech`): velas de 6 meses, medias de 50 y 200 sesiones, soportes y resistencias, RSI 14, estocástico (14,3,3) y volumen frente a su media de 10 sesiones. «هذه بيانات وليست إشارات شراء أو بيع».
 6. **Agenda** (`s_agenda`): resultados, dividendos, salidas a bolsa y datos de los próximos días.
+   **Campaña de comentarios y suscripción** (`s_cta`, del 8 al 22-nov-2026): tarjeta «رأيك يهمنا» con su locución antes del cierre, una línea más en la escena final del Short
+   y el texto en la descripción y en todos los posts. Todo sale de `campana.py` y se apaga solo después de `campana.HASTA` (hora de Riad); para alargarla, cambia esa fecha.
+   La tarjeta suma unos 10 s: con ella, el resto de la locución tiene que caber en unos 170 s.
 7. **Cierre** (`s_fin`): resumen y aviso legal completo en árabe (también en la descripción).
 
 ## Datos
