@@ -381,7 +381,8 @@ def programar(base):
             extra += ", assets: [{image: {url: %s}}]" % json.dumps(imagen)
             if red == "instagram":
                 extra += ", metadata: {instagram: {type: post, shouldShareToFeed: true}}"
-        elif r.get("video"):
+        elif r.get("video") or (red == "linkedin" and slug.endswith("-short")):
+            # LinkedIn en la carpeta de un Short (cola/<slug>-short/post-linkedin.txt): sube el Short como video (Daniel, 8-nov-2026)
             url = enlace_video(carpeta)
             if not url:
                 fallas.append(f"{slug} ({r['nombre']}): falta video.mp4 en el commit de la carpeta")
