@@ -6,6 +6,7 @@ import os, sys, json, numpy as np, datetime as dt
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from comun import *
 from tecnico import calc, INDICE, MESES, TZ, fecha_ar
+import campana
 DIR = os.path.abspath(sys.argv[1]); PREVIEW = len(sys.argv) > 2 and sys.argv[2] == "preview"
 W, H, FPS = 1920, 1080, 30
 AUD = os.environ.get("AUD", "aud")
@@ -191,7 +192,18 @@ def s_fin(t):
     return with_logo(to_arr(f), LGB, x=110, y=90)
 
 
-SEQ = [s_title, s_news, s_fact, s_movers, s_tech, s_agenda, s_fin]; BIG = {s_title, s_fin}
+def s_cta(t):
+    """Tarjeta final de la campaña de comentarios y suscripción (campana.py; se apaga sola después de campana.HASTA)."""
+    f = fig(W, H); a = ease(t / 0.5); b = ease((t - 0.2) / 0.5); c = ease((t - 0.4) / 0.5)
+    T(f, 0.94, 0.62, campana.TITULO, GOLD, 72, "bold", alpha=a)
+    f.patches.append(plt.Rectangle((0.94 - 0.20, 0.585), 0.20, 0.007, transform=f.transFigure, color=GOLD, alpha=a, figure=f))
+    T(f, 0.94, 0.46, campana.LINEA1, FG, 40, "bold", alpha=b)
+    T(f, 0.94, 0.33, campana.LINEA2, TEAL, 40, "bold", alpha=c)
+    f.text(0.94, 0.24, CANAL.replace("https://www.", ""), color=BLUE, fontsize=32, ha="right", weight="bold", alpha=c)
+    return with_logo(to_arr(f), LGB, x=110, y=90)
+
+
+SEQ = [s_title, s_news, s_fact, s_movers, s_tech, s_agenda] + ([s_cta] if campana.activa() else []) + [s_fin]; BIG = {s_title, s_cta, s_fin}
 def frame(fn, t):
     arr = fn(t); return arr if fn in BIG else with_logo(arr, LGS, x=60, y=48)
 
@@ -201,11 +213,13 @@ if __name__ == "__main__":
     if PREVIEW:
         for fn in SEQ: Image.fromarray(frame(fn, 1.0)).save(os.path.join(AUD, "prev_" + fn.__name__ + ".png"))
         sys.exit()
-    clips = [voz(VJ["voz"][fn.__name__], os.path.join(AUD, fn.__name__ + ".wav")) for fn in SEQ]; sr = clips[0][1]
+    texto = lambda fn: campana.VOZ if fn is s_cta else VJ["voz"][fn.__name__]
+    clips = [voz(texto(fn), os.path.join(AUD, fn.__name__ + ".wav")) for fn in SEQ]; sr = clips[0][1]
     LEAD, TAIL = 0.12, 0.45
     durs = [LEAD + len(a) / sr + TAIL for a, _ in clips]; durs[0] += 0.4; durs[-1] += 1.5
     print("duración prevista", round(sum(durs), 1), [round(d, 1) for d in durs])
-    if sum(durs) > 180: sys.exit(f"Video demasiado largo: {sum(durs):.1f} s (máx. 180). Acorta la locución.")
+    if sum(durs) > 180: sys.exit(f"Video demasiado largo: {sum(durs):.1f} s (máx. 180). Acorta la locución"
+                                 + (" (la tarjeta de comentarios y suscripción de campana.py suma unos 10 s)." if s_cta in SEQ else "."))
     leads = [LEAD + (0.4 if j == 0 else 0) for j in range(len(SEQ))]
     times, t0 = render([lambda t, fn=fn: frame(fn, t) for fn in SEQ], durs, ([a for a, _ in clips], leads), sr, W, H, FPS, OUT,
                        os.path.join(AUD, "video-silent.mp4"), os.path.join(AUD, "full.wav"))
