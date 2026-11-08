@@ -6,6 +6,9 @@ from PIL import Image
 plt.rcParams['text.parse_math']=False
 D=sys.argv[1]; I=json.load(open(f"{D}/info.json")); T=dict(json.load(open(sys.argv[2] if len(sys.argv)>2 else f"{D}/times.json")))
 slug=f"bolsa-{I['fecha']}"
+# Llamada a comentar y suscribirse (Daniel, 8-nov-2026), hasta el 22-nov-2026 incluido
+CTA=I["fecha"]<="2026-11-22"
+CTA_TXT="💬 ¿Qué te ha parecido el resumen de hoy y qué te gustaría ver? Déjanos tu comentario: nos ayuda a mejorar el canal.\n🔔 Suscríbete a @AIAccionesEspaña para no perderte el resumen de cada día de bolsa.\n\n" if CTA else ""
 mmss=lambda s:f"{int(s)//60}:{int(s)%60:02d}"
 AVISO=f"""AVISO IMPORTANTE
 • Elaborado por AIAcciones España el {I['elaborado']} (hora de Madrid), con datos de la sesión del {I['fecha_txt']}. Se publica cada día de bolsa.
@@ -16,11 +19,11 @@ AVISO=f"""AVISO IMPORTANTE
 • Riesgos: invertir en bolsa implica riesgo de pérdida, incluso de todo el capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Los datos pueden contener errores; verifícalos en las fuentes originales.
 • Producción: guion, gráficos y locución (voz sintética) generados con herramientas de inteligencia artificial y revisados con las fuentes citadas."""
 cap="\n".join(f"{mmss(T[k]) if i else '0:00'} {t}" for i,(k,t) in enumerate(I["capitulos"]))
-desc=(f"{I['resumen']}\n📊 Hechos relevantes del IBEX 35: https://aiacciones.es/hechos/\n\n"+"\n\n".join("• "+c for c in I["claves"])+
+desc=(f"{I['resumen']}\n📊 Hechos relevantes del IBEX 35: https://aiacciones.es/hechos/\n\n"+CTA_TXT+"\n\n".join("• "+c for c in I["claves"])+
       f"\n\nCapítulos\n{cap}\n\nFuentes: {I['fuentes']}. AIAcciones España no tiene posiciones en los valores citados.\n\n{AVISO}\n\n{I['hashtags']}")
 assert len(I["titulo"])<=100 and "<" not in desc and ">" not in desc and len(desc.encode())<5000, (len(I["titulo"]),len(desc.encode()))
 json.dump({"title":I["titulo"],"description":desc,"tags":I["tags"],"privacy":"public"},open(f"{D}/meta-youtube.json","w"),ensure_ascii=False,indent=1)
-sd=(f"{I['resumen']}\nVídeo completo (noticias, análisis fundamental y técnico): {{video:{slug}}}\n📊 https://aiacciones.es/hechos/\n"
+sd=(f"{I['resumen']}\n"+("💬 Déjanos tu comentario y 🔔 suscríbete al canal.\n" if CTA else "")+f"Vídeo completo (noticias, análisis fundamental y técnico): {{video:{slug}}}\n📊 https://aiacciones.es/hechos/\n"
     f"Fuentes: {I['fuentes']}. Elaborado por AIAcciones España el {I['elaborado']} (hora de Madrid). Contenido informativo: no es una recomendación de inversión ni asesoramiento personalizado. Análisis técnico: datos, no señales. AIAcciones España no tiene posiciones en los valores citados. Invertir conlleva riesgo de pérdida.\n#Shorts #IBEX35 #Bolsa")
 assert len(I["titulo_short"])<=100
 json.dump({"title":I["titulo_short"],"description":sd,"tags":I["tags"][:6]+["Shorts"],"privacy":"public"},open(f"{D}/meta-short.json","w"),ensure_ascii=False,indent=1)
@@ -28,11 +31,11 @@ x=f"{I['x']}\n\n▶️ {{youtube}}\n\nInformativo, no es recomendación. Sin pos
 assert len(x.replace("{youtube}","x"*23))<=280, len(x)
 open(f"{D}/post-x.txt","w").write(x)
 li=(f"IBEX 35 | La bolsa española hoy ({I['fecha_txt']})\n\n{I['resumen']}\n\n"+"\n\n".join("• "+c for c in I["claves"])+
-    "\n\n▶️ Vídeo completo (3 min): {youtube}\n📊 Hechos relevantes del IBEX 35: https://aiacciones.es/hechos/\n\n"
+    ("\n\n💬 Déjanos tu comentario en el vídeo y 🔔 suscríbete al canal." if CTA else "")+"\n\n▶️ Vídeo completo (3 min): {youtube}\n📊 Hechos relevantes del IBEX 35: https://aiacciones.es/hechos/\n\n"
     "Contenido informativo, no es una recomendación de inversión. El análisis técnico describe datos, no son señales de compra o venta. AIAcciones España no tiene posiciones en los valores citados.\n\n"+I["hashtags"])
 assert len(li.replace("{youtube}","https://youtu.be/XXXXXXXXXXX"))<=2950, len(li)
 open(f"{D}/post-linkedin.txt","w").write(li)
-open(f"{D}/post-tiktok.txt","w").write(I["tiktok"])
+open(f"{D}/post-tiktok.txt","w").write(I["tiktok"]+("\n💬 Cuéntanos en los comentarios qué te gustaría ver y síguenos." if CTA else ""))
 # miniatura 1280x720
 BG="#0B1E3A"; FG="#FFFFFF"; MUTED="#9FB3CC"; ACC="#2FB7A3"; ACC2="#4C8DF0"; NEG="#F2A541"
 th=I["miniatura"]

@@ -27,6 +27,9 @@ con posts en X, LinkedIn, TikTok, Instagram y Telegram. Formato aprobado por Dan
 
 Dependencias: `pip install piper-tts matplotlib imageio-ffmpeg pillow numpy`; voz Piper `es_ES-davefx-medium` (variable `VOICE`), logo (`LOGO`).
 
+## Llamada a comentar y suscribirse (hasta el 22-nov-2026)
+Daniel (8-nov-2026): hasta el 22-nov-2026 incluido, cada vídeo pide dejar un comentario y suscribirse. `make_video.py` lo añade a la locución y a la pantalla final, y `gen_meta.py` a la descripción, el Short y los posts; se apaga solo después de esa fecha (`CTA_HASTA`). En `short.json`, termina la voz de la escena `fin` con «Déjanos tu comentario y suscríbete». Deja unos 8 s de margen en la locución para no pasar de 3 minutos.
+
 ## Reglas
 Nada de comprar/vender, precio objetivo ni "cara/barata". El análisis técnico se presenta como datos. Cada cifra con fuente; cálculos propios marcados "calculado".
 Aviso completo en la descripción. Español de España.
