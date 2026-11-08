@@ -188,6 +188,7 @@ def s_fin(t):
     T(f, 0.94, 0.715, "\n".join(textwrap.wrap(Fn["titular"], 52)), GOLD, 32, "bold", alpha=a, linespacing=1.35, va="top")
     T(f, 0.94, 0.56, "ملخص يومي بعد إغلاق كل جلسة في بورصة البحرين", BLUE, 27, alpha=a)
     f.text(0.94, 0.505, CANAL.replace("https://www.", ""), color=BLUE, fontsize=27, ha="right", weight="bold", alpha=a)
+    if cta_activa(FECHA): T(f, 0.94, 0.42, "◀ " + CTA_TXT, FG, 30, "bold", alpha=ease((t - 0.3) / 0.5))
     aviso = ("إخلاء مسؤولية: هذا المحتوى تعليمي وإعلامي فقط، ولا يُعد توصية استثمارية أو دعوة لشراء أو بيع أي ورقة مالية أو استشارة مالية شخصية، "
              "ولا يراعي وضعك أو أهدافك أو مدى تحملك للمخاطر. استشر جهة مرخصة من مصرف البحرين المركزي قبل أي قرار استثماري. "
              "الأرقام من مصادر عامة مذكورة (" + Fn["fuentes"] + ")، والحسابات الخاصة موضحة بعبارة «محسوب». "
@@ -208,6 +209,7 @@ if __name__ == "__main__":
     if PREVIEW:
         for fn in SEQ: Image.fromarray(frame(fn, 1.0)).save(os.path.join(AUD, "prev_" + fn.__name__ + ".png"))
         sys.exit()
+    if cta_activa(FECHA): VJ["voz"]["s_fin"] = VJ["voz"]["s_fin"].rstrip() + " " + CTA_VOZ
     clips = [voz(VJ["voz"][fn.__name__], os.path.join(AUD, fn.__name__ + ".wav")) for fn in SEQ]; sr = clips[0][1]
     LEAD, TAIL = 0.12, 0.45
     durs = [LEAD + len(a) / sr + TAIL for a, _ in clips]; durs[0] += 0.4; durs[-1] += 1.5
