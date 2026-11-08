@@ -19,6 +19,11 @@ VOICE=os.environ.get("VOICE","/mnt/project-files/espana/voz/vits-piper-es_ES-dav
 AUD=os.environ.get("AUD","aud"); SILENT=os.path.join(AUD,"video-silent.mp4")
 M=json.load(open(f"{DIR}/mercado.json")); VJ=json.load(open(f"{DIR}/video.json"))
 R,A=calc(M); TV=M["tv"]
+# Llamada a comentar y suscribirse (Daniel, 8-nov-2026): en todos los vídeos nuevos hasta el 22-nov-2026 incluido.
+CTA_HASTA="2026-11-22"
+CTA=R["fecha"]<=CTA_HASTA
+CTA_VOZ=" Déjanos en los comentarios qué te ha parecido y qué te gustaría ver, y suscríbete al canal para no perderte el resumen de cada día."
+if CTA and "comentarios" not in VJ["voz"]["s_fin"]: VJ["voz"]["s_fin"]+=CTA_VOZ
 OUT=f"{DIR}/youtube-bolsa-espana-{R['fecha']}.mp4"
 FECHA_TXT=VJ["fecha_txt"].upper()
 SECS=["Noticias","Por qué se movió","Valores","Técnico","Agenda"]; NS=len(SECS)
@@ -173,6 +178,7 @@ def s_fin(t):
     f.text(0.06,0.56,f"IBEX 35 · {VJ['fecha_txt']}",color=FG,fontsize=56,weight="bold",alpha=a)
     f.text(0.06,0.47,Fn["titular"],color=ACC,fontsize=32,alpha=a)
     f.text(0.06,0.39,"Cada día de bolsa, este resumen · YouTube: @AIAccionesEspaña · aiacciones.es",color=MUTED,fontsize=28,alpha=a)
+    if CTA: f.text(0.06,0.29,"Déjanos tu comentario  ·  Suscríbete al canal",color=ACC2,fontsize=34,weight="bold",alpha=ease((t-0.3)/0.5))
     f.text(0.06,0.07,"Fuentes: "+Fn["fuentes"]+". Indicadores técnicos: calculados.\nContenido informativo: no es una recomendación de inversión ni asesoramiento personalizado. AIAcciones España no tiene posiciones en los valores citados.\nInvertir en bolsa conlleva riesgo de pérdida; las rentabilidades pasadas no garantizan las futuras. Aviso completo en la descripción.",color=MUTED,fontsize=17,linespacing=1.5)
     return with_logo(to_arr(f),LGB,x=110,y=110)
 
