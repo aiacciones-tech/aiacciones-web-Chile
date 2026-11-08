@@ -15,6 +15,25 @@ plt.rcParams.update({"font.family": ["Noto Naskh Arabic", "DejaVu Sans"], "text.
 LOGO = os.environ.get("LOGO", "/mnt/project-files/qatar-ai-stocks/branding/foto-perfil-800x800.png")
 VOICE = os.environ.get("VOICE", "/mnt/project-files/qatar-ai-stocks/pipeline/voz/ar_JO-kareem-medium.onnx")
 CANAL = "https://www.youtube.com/@QatarAIStocks"
+
+# Campaña de comentarios y suscripción (pedida por Daniel el 8-nov-2026): del 8 al 22 de noviembre de 2026 (fecha de Doha), el cierre del
+# video y del Short pide en pantalla y en la voz un comentario para mejorar el canal y la suscripción, y gen_meta.py lo pone al comienzo de
+# las descripciones de YouTube. Se apaga sola el 23-nov. CTA=1 / CTA=0 la fuerzan (para pruebas).
+CTA_DESDE, CTA_HASTA = "2026-11-08", "2026-11-22"
+CTA_PANTALLA = ("رأيك يهمنا: اكتب في التعليقات ما الذي تريد أن نحسّنه في القناة", "واشترك في القناة ليصلك ملخص كل جلسة")
+CTA_SHORT = ("رأيك يهمنا: اكتب في التعليقات", "ما الذي تريد أن نحسّنه في القناة؟", "اشترك ليصلك ملخص كل جلسة")
+CTA_VOZ = {"video": "رأيك يهمنا. اكتب لنا في التعليقات ما الذي تريد أن نحسنه في القناة، ولا تنس الاشتراك في القناة ليصلك ملخص كل جلسة.",
+           "short": "اكتب لنا في التعليقات كيف نحسن القناة، واشترك ليصلك كل جديد."}
+CTA_DESC = ("💬 رأيك يهمنا: اكتب في التعليقات ما الذي تريد أن نحسّنه في القناة أو الأسهم التي تريد أن نحللها، وسنقرأ كل تعليق.\n"
+            f"🔔 اشترك في القناة وفعّل الجرس ليصلك ملخص كل جلسة: {CANAL}")
+
+
+def cta_activa():
+    import datetime as _dt
+    if os.environ.get("CTA") in ("0", "1"):
+        return os.environ["CTA"] == "1"
+    hoy = (_dt.datetime.now(_dt.timezone.utc) + _dt.timedelta(hours=3)).date().isoformat()  # Doha = UTC+3, sin horario de verano
+    return CTA_DESDE <= hoy <= CTA_HASTA
 # Marca Qatar AI Stocks: granate de Qatar (#8A1538) muy oscuro de fondo, oro, verde azulado
 BG = "#1C0710"; FG = "#F5EFE6"; MUTED = "#C2AD94"; GOLD = "#E8C46A"; TEAL = "#3CC4A0"; NEG = "#FF7A7A"; DIM = "#5C2A3C"; BLUE = "#86B6F2"
 COLS = {"gold": GOLD, "teal": TEAL, "neg": NEG, "fg": FG, "muted": MUTED, "blue": BLUE, "acc": TEAL, "acc2": BLUE}

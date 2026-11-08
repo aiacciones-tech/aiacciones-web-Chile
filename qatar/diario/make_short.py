@@ -69,7 +69,13 @@ def s_fin(e, t):
     f = fig(W, H); a = ease(t / 0.5)
     T(f, XR, 0.70, e["nombre"], FG, 56, "bold", alpha=a)
     T(f, XR, 0.655, e["titular"], GOLD, 40, "bold", alpha=a, linespacing=1.05, va="top")
-    T(f, XR, 0.43, "◀ " + e["cta"], FG, 42, "bold", alpha=ease((t - 0.2) / 0.5))
+    if cta_activa():  # campaña de comentarios y suscripción (comun.py): sustituye la línea "◀ cta"
+        b = ease((t - 0.2) / 0.5)
+        T(f, XR, 0.52, CTA_SHORT[0], FG, 36, "bold", alpha=b)
+        T(f, XR, 0.477, CTA_SHORT[1], FG, 36, "bold", alpha=b)
+        T(f, XR, 0.43, "◀ " + CTA_SHORT[2], GOLD, 40, "bold", alpha=b)
+    else:
+        T(f, XR, 0.43, "◀ " + e["cta"], FG, 42, "bold", alpha=ease((t - 0.2) / 0.5))
     f.text(XR, 0.385, "youtube.com/@QatarAIStocks", color=BLUE, fontsize=40, weight="bold", ha="right", alpha=ease((t - 0.2) / 0.5))
     T(f, XR, 0.355, S["fuente"] + "\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية.\nلا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\nالتحليل الفني بيانات وليس إشارات شراء أو بيع.", MUTED, 24, linespacing=1.5, alpha=a, va="top")
     return with_logo(to_arr(f), LGB, x=(W - 260) // 2, y=150)
@@ -84,6 +90,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 2 and sys.argv[2] == "preview":
         for i, e in enumerate(E): Image.fromarray(frame(e, 1.0)).save(os.path.join(AUD, f"short_prev_{i}.png"))
         sys.exit()
+    if cta_activa(): E[-1]["voz"] = CTA_VOZ["short"] + " " + E[-1]["voz"]
     clips = [voz(e["voz"], os.path.join(AUD, f"short_{i}.wav")) for i, e in enumerate(E)]; sr = clips[0][1]
     LEAD, TAIL = 0.10, 0.35
     durs = [LEAD + len(a) / sr + TAIL for a, _ in clips]; durs[-1] += 1.0
