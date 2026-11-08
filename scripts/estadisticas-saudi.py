@@ -348,9 +348,10 @@ def informe(yt, bf, tg, antes):
         cuentas = ", ".join(sorted(set(r["cuentas"])))
         L.append(f"**{red}** ({cuentas}){' — DESCONECTADO en Buffer' if r['desconectado'] else ''}: "
                  f"{len(r['posts'])} posts enviados en la semana.")
-        if r["posts"] and r["sin_metricas"] == len(r["posts"]):
+        if r["posts"] and (r["sin_metricas"] == len(r["posts"])
+                           or not any(r["totales"].get(k) for k, _ in METRICAS)):
             L.append("Buffer no devuelve métricas de estos posts (puede que el plan gratis no las incluya, "
-                     "o que todavía no las haya recogido).")
+                     "o que todavía no las haya recogido) o están todas en 0.")
         elif r["posts"]:
             cols = [(k, e) for k, e in METRICAS if r["totales"].get(k)]
             L += ["", "| Post | Fecha | " + " | ".join(e for _, e in cols) + " |",
