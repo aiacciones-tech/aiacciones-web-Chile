@@ -43,6 +43,12 @@ Daniel (8-nov-2026): durante dos semanas cada video y Short pide un comentario p
 Va solo (constantes `CTA_*` de `comun.py`): se añade a la voz del cierre del video y del Short, a la pantalla final y al principio de la descripción
 de YouTube. Se apaga sola para las sesiones posteriores al 22-nov-2026 (`CTA_HASTA`). Con ella la voz suma unos 5 s: deja el resto en unas 220 palabras.
 
+## LinkedIn (regla permanente de Daniel, 8-nov-2026)
+En LinkedIn va el Short subido como video (no como enlace): `encolar.sh` pone `post-linkedin.txt` en `cola-eau/bolsa-<fecha>-short/`.
+El texto (`info.json` → `linkedin`: `datos` con 3 o 4 cifras clave y qué cambió, y `conclusion`) es un resumen con valor, sin relleno,
+dice «فيديو من إعداد قناة AI Stocks UAE» y termina con el enlace al canal https://www.youtube.com/@AIStocksUAE.
+Facebook sigue con el texto largo y el enlace al video (`post-facebook.txt` en la carpeta del video largo).
+
 ## Reglas
 Nada de comprar/vender, precio objetivo ni «barata/cara». El análisis técnico se presenta como datos. Cada cifra con fuente; cálculos propios marcados «محسوب».
 Todos los posts y descripciones llevan el enlace al canal https://www.youtube.com/@AIStocksUAE (regla de Daniel, 29-oct-2026).

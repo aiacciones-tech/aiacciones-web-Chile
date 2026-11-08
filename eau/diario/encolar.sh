@@ -23,7 +23,11 @@ cp $B/short-bolsa-$F-UAE.mp4 $CS/video.mp4; cp $B/meta-short-$F-UAE.json $CS/met
 git add cola-eau; git commit -qm "Cola EAU: video diario de la bolsa $F (video y Short)"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done
 # Los posts van en un segundo push, cuando el video ya está en la rama (Buffer toma el video del Short desde GitHub).
-cp $B/post-x-$F-UAE.txt $C/post-x.txt; cp $B/post-linkedin-$F-UAE.txt $C/post-linkedin.txt; cp $B/post-telegram-$F-UAE.txt $C/post-telegram.txt
+cp $B/post-x-$F-UAE.txt $C/post-x.txt; cp $B/post-facebook-$F-UAE.txt $C/post-facebook.txt; cp $B/post-telegram-$F-UAE.txt $C/post-telegram.txt
+# LinkedIn (Daniel, 8-nov-2026): el Short como video nativo -> post-linkedin.txt en la carpeta -short (buffer.py lo sube con el video.mp4).
+# En cola-eau, Facebook usaría post-linkedin.txt como texto alterno; en la carpeta -short se marca como hecho para que no se duplique.
+cp $B/post-linkedin-$F-UAE.txt $CS/post-linkedin.txt
+echo '{"omitido": "Facebook va en la carpeta del video largo (post-facebook.txt)"}' > $CS/buffer-facebook.json
 cp $B/post-tiktok-$F-UAE.txt $CS/post-tiktok.txt; cp $B/post-instagram-$F-UAE.txt $CS/post-instagram.txt
 git add cola-eau; git diff --cached --quiet || git commit -qm "Cola EAU: posts del video diario $F"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done
