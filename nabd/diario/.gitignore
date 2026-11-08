@@ -1,0 +1,6 @@
+*.mp4
+*.png
+times.json
+datos/
+meta-*.json
+post-*.txt
