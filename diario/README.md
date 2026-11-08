@@ -32,6 +32,9 @@ cambio y volumen de las 31 acciones del IPSA (lista `IPSA`, revisar en cada reba
 Voz: Piper `es_MX-claude-high` (github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-es_MX-claude-high.tar.bz2), ajustes de voz fluida.
 Logo: `/mnt/project-files/marca/logo-aiacciones-chile.png`. Dependencias: `pip install piper-tts matplotlib imageio-ffmpeg pillow numpy`.
 
+## Campaña de comentarios (hasta el 22-nov-2026)
+`campana.py`: pedido de Daniel del 8-nov-2026. Mientras la fecha de la sesión sea ≤ `HASTA`, el cierre del video y del Short pide un comentario para mejorar el canal e invita a suscribirse (voz y pantalla), y la descripción lo repite con el enlace de suscripción. Después se apaga sola; para extenderla, cambia `HASTA`.
+
 ## Reglas
 Nada de comprar/vender, precio objetivo ni "cara/barata" (NCG 502). El análisis técnico se presenta como datos. Cada cifra con fuente; cálculos propios marcados "calculado".
 Enlace a aiacciones.cl en video, Short y posts; TikTok con youtube.com/@aiaccioneschile.

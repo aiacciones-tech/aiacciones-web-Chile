@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import imageio_ffmpeg
 from PIL import Image
 plt.rcParams['text.parse_math']=False
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__))); import campana
 
 W,H,FPS=1080,1920,30
 BG="#0B1E3A"; FG="#FFFFFF"; MUTED="#9FB3CC"; ACC="#2FB7A3"; ACC2="#4C8DF0"; NEG="#F2A541"; DIM="#3A5378"
@@ -86,6 +87,7 @@ def s_kpis(e,t):
 
 def s_fin(e,t):
     f=fig(); a=ease(t/0.5)
+    if campana.activa(S["out"]): f.text(0.07,0.735,campana.PANTALLA_SHORT,color=ACC2,fontsize=36,weight="bold",alpha=a,linespacing=1.25)
     f.text(0.07,0.66,e.get("nombre",f"{S['empresa']} · {S['trimestre']}"),color=FG,fontsize=60,weight="bold",alpha=a)
     f.text(0.07,0.565,e["titular"],color=ACC,fontsize=46,weight="bold",alpha=a,linespacing=1.3)
     f.text(0.07,0.49,"▶ "+e["cta"],color=FG,fontsize=44,weight="bold",alpha=ease((t-0.2)/0.5))
@@ -107,7 +109,7 @@ if __name__=="__main__":
     clips=[]
     for i,e in enumerate(E):
         p=os.path.join(AUD,f"short_{i}.wav")
-        subprocess.run(["python3","-m","piper","-m",VOICE,"-f",p]+TTS,input=(e["voz"]+"\n").encode(),check=True,stderr=subprocess.DEVNULL)
+        subprocess.run(["python3","-m","piper","-m",VOICE,"-f",p]+TTS,input=(e["voz"]+(" "+campana.VOZ_SHORT if e["tipo"]=="fin" and campana.activa(S["out"]) else "")+"\n").encode(),check=True,stderr=subprocess.DEVNULL)
         w=wave.open(p); sr=w.getframerate(); a=np.frombuffer(w.readframes(w.getnframes()),dtype=np.int16).astype(np.float32)
         nz=np.where(np.abs(a)>300)[0]; a=a[max(nz[0]-int(0.03*sr),0):nz[-1]+int(0.08*sr)]
         fi,fo=int(0.015*sr),int(0.06*sr); a[:fi]*=np.linspace(0,1,fi); a[-fo:]*=np.linspace(1,0,fo); clips.append(a)

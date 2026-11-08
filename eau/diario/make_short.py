@@ -3,7 +3,7 @@
 # Escenas: titulo (fecha de la sesión EN GRANDE y los dos índices), cifra, kpis, fin. "out" relativo a la carpeta del JSON.
 # Zonas seguras de Shorts: arriba ~8 % (búsqueda), abajo ~22 % (título, canal) y franja derecha (botones): el texto va entre y=0.25 y 0.90
 # y alineado a la derecha en x=0.86 para no quedar bajo los botones.
-import os, sys, json, numpy as np
+import os, sys, re, json, numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from comun import *
 W, H, FPS = 1080, 1920, 30
@@ -69,6 +69,7 @@ def s_fin(e, t):
     f = fig(W, H); a = ease(t / 0.5)
     T(f, XR, 0.70, e["nombre"], FG, 56, "bold", alpha=a)
     T(f, XR, 0.655, e["titular"], GOLD, 40, "bold", alpha=a, linespacing=1.05, va="top")
+    if S.get("cta"): T(f, XR, 0.53, CTA_TXT.replace(" · ", "\n"), BLUE, 32, "bold", alpha=ease((t - 0.3) / 0.5), linespacing=1.05, va="top")
     T(f, XR, 0.43, "◀ " + e["cta"], FG, 42, "bold", alpha=ease((t - 0.2) / 0.5))
     f.text(XR, 0.385, "youtube.com/@AIStocksUAE", color=BLUE, fontsize=40, weight="bold", ha="right", alpha=ease((t - 0.2) / 0.5))
     T(f, XR, 0.355, S["fuente"] + "\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية.\nلا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\nالتحليل الفني بيانات وليس إشارات شراء أو بيع.", MUTED, 24, linespacing=1.5, alpha=a, va="top")
@@ -80,7 +81,10 @@ def frame(e, t): return RX[e["tipo"]](e, t)
 
 
 if __name__ == "__main__":
-    S = json.load(open(sys.argv[1])); E = S["escenas"]; S["out"] = os.path.join(os.path.dirname(os.path.abspath(sys.argv[1])), S["out"]); os.makedirs(AUD, exist_ok=True)
+    S = json.load(open(sys.argv[1])); E = S["escenas"]
+    m = re.search(r"\d{4}-\d{2}-\d{2}", S["out"]); S["cta"] = cta_activa(m.group(0) if m else __import__("datetime").date.today().isoformat())
+    if S["cta"]: E[-1]["voz"] = E[-1]["voz"].rstrip() + " " + CTA_VOZ
+    S["out"] = os.path.join(os.path.dirname(os.path.abspath(sys.argv[1])), S["out"]); os.makedirs(AUD, exist_ok=True)
     if len(sys.argv) > 2 and sys.argv[2] == "preview":
         for i, e in enumerate(E): Image.fromarray(frame(e, 1.0)).save(os.path.join(AUD, f"short_prev_{i}.png"))
         sys.exit()

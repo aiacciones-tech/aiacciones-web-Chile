@@ -1,0 +1,38 @@
+# Datos de la Bolsa de Qatar (QSE, índice QE General) para el vídeo diario en árabe de @QatarAIStocks (qatar/diario/).
+# El contenedor de Claude no llega a Yahoo ni a TradingView; GitHub Actions sí.
+# Guarda datos/mercado-<fecha>.json en la rama datos-diario-qa (no en main, para no disparar despliegues).
+# Días de sesión de la QSE (domingo a jueves) a las 10:45 UTC (13:45 en Doha), tras el cierre de las 13:15.
+# Activado el 7-nov-2026 (Daniel aprobó la muestra del 5-nov).
+name: Datos del video diario (Qatar)
+on:
+  schedule:
+    - cron: "45 10 * * 0-4"
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths: ["qatar/diario/datos_mercado.py", ".github/workflows/datos-diario-qatar.yml"]
+permissions:
+  contents: write
+concurrency: datos-diario-qa
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar datos
+        # En la ejecución programada no se guarda nada si la QSE no abrió hoy (festivos de Qatar).
+        env:
+          SOLO_DIA_DE_SESION: ${{ github.event_name == 'schedule' && '1' || '0' }}
+        run: pip install -q websocket-client && python3 qatar/diario/datos_mercado.py
+      - name: Guardar en la rama datos-diario-qa
+        run: |
+          ls qatar/diario/datos/mercado-*.json >/dev/null 2>&1 || exit 0
+          mkdir -p /tmp/out && cp qatar/diario/datos/mercado-*.json /tmp/out/
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          if git fetch -q origin datos-diario-qa; then git checkout -q -B datos-diario-qa origin/datos-diario-qa; else git checkout -q --orphan datos-diario-qa && git rm -rfq . ; fi
+          mkdir -p datos && cp /tmp/out/*.json datos/
+          git add datos
+          git diff --cached --quiet && exit 0
+          git commit -qm "Datos del video diario Qatar $(date -u +%F)"
+          for i in 1 2 3; do git push -q origin datos-diario-qa && break; sleep 5; git pull -q --rebase origin datos-diario-qa; done

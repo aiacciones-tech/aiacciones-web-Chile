@@ -10,6 +10,7 @@ from PIL import Image
 plt.rcParams['text.parse_math']=False
 HERE=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,HERE)
 from tecnico import calc, MESES
+import campana
 DIR=os.path.abspath(sys.argv[1]); PREVIEW=len(sys.argv)>2 and sys.argv[2]=="preview"
 W,H,FPS=1920,1080,30
 BG="#0B1E3A"; FG="#FFFFFF"; MUTED="#9FB3CC"; ACC="#2FB7A3"; ACC2="#4C8DF0"; NEG="#F2A541"; DIM="#3A5378"; PUR="#C38BF2"
@@ -173,6 +174,7 @@ def s_fin(t):
     f.text(0.06,0.56,f"IPSA · {VJ['fecha_txt']}",color=FG,fontsize=56,weight="bold",alpha=a)
     f.text(0.06,0.47,Fn["titular"],color=ACC,fontsize=32,alpha=a)
     f.text(0.06,0.39,"Cada día de bolsa, este resumen · YouTube: @aiaccioneschile · aiacciones.cl",color=MUTED,fontsize=28,alpha=a)
+    if campana.activa(R["fecha"]): f.text(0.06,0.30,campana.PANTALLA_VIDEO,color=ACC2,fontsize=30,weight="bold",alpha=ease((t-0.2)/0.5))
     f.text(0.06,0.07,"Fuentes: "+Fn["fuentes"]+". Indicadores técnicos: calculados.\nContenido informativo: no es una recomendación de inversión ni asesoría personalizada. AIAcciones Chile no tiene posiciones en las acciones citadas.\nInvertir en bolsa conlleva riesgo de pérdida; las rentabilidades pasadas no garantizan las futuras. Aviso completo en la descripción.",color=MUTED,fontsize=17,linespacing=1.5)
     return with_logo(to_arr(f),LGB,x=110,y=110)
 
@@ -189,7 +191,7 @@ if __name__=="__main__":
     LEAD,TAIL=0.12,0.45
     for fn in SEQ:
         p=os.path.join(AUD,fn.__name__+".wav")
-        subprocess.run(["python3","-m","piper","-m",VOICE,"-f",p]+TTS,input=(VJ["voz"][fn.__name__]+"\n").encode(),check=True,capture_output=True)
+        subprocess.run(["python3","-m","piper","-m",VOICE,"-f",p]+TTS,input=(VJ["voz"][fn.__name__]+(" "+campana.VOZ_VIDEO if fn is s_fin and campana.activa(R["fecha"]) else "")+"\n").encode(),check=True,capture_output=True)
     clips=[]
     for fn in SEQ:
         w=wave.open(os.path.join(AUD,fn.__name__+".wav")); sr=w.getframerate()

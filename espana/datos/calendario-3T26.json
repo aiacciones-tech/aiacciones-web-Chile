@@ -1,6 +1,6 @@
 {
  "trimestre": "3T 2026",
- "actualizado": "2026-11-06",
+ "actualizado": "2026-11-07",
  "empresas": [
   {
    "fecha": "2026-10-20",
@@ -219,6 +219,15 @@
    "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
   },
   {
+   "fecha": "2026-11-05",
+   "empresa": "Cellnex",
+   "ticker": "CLNX",
+   "sector": "Telecom (torres)",
+   "estado": "Publicada",
+   "nota": "Publicados el 5-nov-2026 tras el cierre: ingresos 9M 3.008 M€ (+2,4%), flujo de caja libre 474 M€ (x2,5), pérdidas de 219 M€ (-16,7%).",
+   "fuente": "Cellnex, resultados enero-septiembre 2026 (5-nov-2026)"
+  },
+  {
    "fecha": "2026-11-06",
    "empresa": "Amadeus",
    "ticker": "AMS",
@@ -226,15 +235,6 @@
    "estado": "Publicada",
    "nota": "Publicados el 6-nov-2026: ingresos 9M 5.075,7 M€ (+3,7%), beneficio neto 1.081,6 M€ (-0,6%); en el 3T, +5,7%.",
    "fuente": "Amadeus, información financiera 3T 2026 (CNMV, 6-nov-2026)"
-  },
-  {
-   "fecha": "2026-11-06",
-   "empresa": "Cellnex",
-   "ticker": "CLNX",
-   "sector": "Telecom (torres)",
-   "estado": "Estimada",
-   "nota": "3T25: 7-nov-2025.",
-   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
   },
   {
    "fecha": "2026-11-06",
