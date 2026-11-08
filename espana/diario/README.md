@@ -30,6 +30,9 @@ Dependencias: `pip install piper-tts matplotlib imageio-ffmpeg pillow numpy`; vo
 ## Llamada a comentar y suscribirse (hasta el 22-nov-2026)
 Daniel (8-nov-2026): hasta el 22-nov-2026 incluido, cada vídeo pide dejar un comentario y suscribirse. `make_video.py` lo añade a la locución y a la pantalla final, y `gen_meta.py` a la descripción, el Short y los posts; se apaga solo después de esa fecha (`CTA_HASTA`). En `short.json`, termina la voz de la escena `fin` con «Déjanos tu comentario y suscríbete». Deja unos 8 s de margen en la locución para no pasar de 3 minutos.
 
+## LinkedIn (regla permanente, Daniel 8-nov-2026)
+En LinkedIn se publica el Short subido como vídeo, no como enlace (`encolar.sh` pone `post-linkedin.txt` en la carpeta `-short`). Texto: 3 o 4 datos clave (cifras y qué cambió) y una conclusión, sin relleno (`info.json` → `linkedin.datos` y `linkedin.conclusion`), «Vídeo elaborado por AIAcciones España (@AIAccionesEspaña)» y al final el enlace al canal. Telegram usa `post-telegram.txt` (texto largo con el enlace al vídeo completo).
+
 ## Reglas
 Nada de comprar/vender, precio objetivo ni "cara/barata". El análisis técnico se presenta como datos. Cada cifra con fuente; cálculos propios marcados "calculado".
 Aviso completo en la descripción. Español de España.
