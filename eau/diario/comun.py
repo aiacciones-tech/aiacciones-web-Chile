@@ -15,6 +15,13 @@ plt.rcParams.update({"font.family": ["Noto Naskh Arabic", "DejaVu Sans"], "text.
 LOGO = os.environ.get("LOGO", "/mnt/project-files/aistocksuae/logo-800x800.png")
 VOICE = os.environ.get("VOICE", "/mnt/project-files/aistocksuae/pipeline/voz/ar_JO-kareem-medium.onnx")
 CANAL = "https://www.youtube.com/@AIStocksUAE"
+# Campaña de Daniel (8-nov-2026): durante dos semanas, hasta el 22-nov-2026 incluido (fecha de la sesión), cada video y Short
+# pide un comentario para mejorar el canal e invita a suscribirse (voz, pantalla final y descripción). Después se apaga sola.
+CTA_HASTA = "2026-11-22"
+CTA_VOZ = "اترك لنا تعليقًا يساعدنا على تحسين القناة، واشترك ليصلك ملخص كل جلسة."
+CTA_TXT = "اترك تعليقًا يساعدنا على تحسين القناة · واشترك في القناة"  # sin emojis: la fuente no los tiene
+CTA_DESC = "💬 اترك لنا تعليقًا: ما الذي تريد أن نضيفه أو نحسّنه؟ ملاحظاتك تساعدنا على تحسين القناة.\n🔔 اشترك في القناة ليصلك ملخص كل جلسة: " + CANAL
+cta_activa = lambda fecha: str(fecha) <= CTA_HASTA
 # Marca AI Stocks UAE: azul noche, oro, verde azulado
 BG = "#071725"; FG = "#F0F4F8"; MUTED = "#96AAB9"; GOLD = "#F1CF7A"; TEAL = "#2BB3A3"; NEG = "#EF6F6C"; DIM = "#2A4A63"; BLUE = "#6FA8F5"
 COLS = {"gold": GOLD, "teal": TEAL, "neg": NEG, "fg": FG, "muted": MUTED, "blue": BLUE, "acc": TEAL, "acc2": BLUE}
