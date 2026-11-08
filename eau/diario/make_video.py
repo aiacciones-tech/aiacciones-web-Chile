@@ -12,6 +12,8 @@ AUD = os.environ.get("AUD", "aud")
 M = json.load(open(f"{DIR}/mercado.json")); VJ = json.load(open(f"{DIR}/video.json"))
 R, A = calc(M, VJ.get("nombres")); FECHA = dt.date.fromisoformat(R["fecha"]); FECHA_TXT = fecha_ar(FECHA)
 OUT = f"{DIR}/video-bolsa-{R['fecha']}-UAE.mp4"
+CTA = cta_activa(R["fecha"])
+if CTA: VJ["voz"]["s_fin"] = VJ["voz"]["s_fin"].rstrip() + " " + CTA_VOZ
 SECS = ["الأخبار", "التحليل الأساسي", "الأسهم", "التحليل الفني", "الأجندة"]; NS = len(SECS)
 LG = load_logo(130); LGS = load_logo(95); LGB = load_logo(230)
 NB = 126  # unas 6 meses de sesiones
@@ -175,16 +177,17 @@ def s_agenda(t):
 def s_fin(t):
     Fn = VJ["fin"]; f = fig(W, H); a = ease(t / 0.5)
     T(f, 0.94, 0.80, "أسهم الإمارات · " + FECHA_TXT, FG, 50, "bold", alpha=a)
-    T(f, 0.94, 0.715, "\n".join(textwrap.wrap(Fn["titular"], 52)), GOLD, 32, "bold", alpha=a, linespacing=1.35, va="top")
-    T(f, 0.94, 0.56, "ملخص يومي بعد إغلاق كل جلسة في سوقي أبوظبي ودبي", BLUE, 27, alpha=a)
-    f.text(0.94, 0.505, CANAL.replace("https://www.", ""), color=BLUE, fontsize=27, ha="right", weight="bold", alpha=a)
+    T(f, 0.94, 0.715, "\n".join(textwrap.wrap(Fn["titular"], 52)), GOLD, 32, "bold", alpha=a, linespacing=1.05, va="top")
+    T(f, 0.94, 0.535, "ملخص يومي بعد إغلاق كل جلسة في سوقي أبوظبي ودبي", BLUE, 27, alpha=a)
+    if CTA: T(f, 0.94, 0.405, CTA_TXT, FG, 28, "bold", alpha=ease((t - 0.3) / 0.5))
+    f.text(0.94, 0.475, CANAL.replace("https://www.", ""), color=BLUE, fontsize=27, ha="right", weight="bold", alpha=a)
     aviso = ("إخلاء مسؤولية: هذا المحتوى تعليمي وإعلامي فقط، ولا يُعد توصية استثمارية أو دعوة لشراء أو بيع أي ورقة مالية أو استشارة مالية شخصية، "
              "ولا يراعي وضعك أو أهدافك أو مدى تحملك للمخاطر. استشر جهة مرخصة من هيئة الأوراق المالية والسلع قبل أي قرار استثماري. "
              "الأرقام من مصادر عامة مذكورة (" + Fn["fuentes"] + ")، والحسابات الخاصة موضحة بعبارة «محسوب». "
              "التحليل الفني يصف حركة الأسعار في الماضي وليس إشارات شراء أو بيع ولا يتنبأ بالمستقبل. "
              "لا نملك مراكز في الأسهم المذكورة ولا نتلقى أي مقابل من الشركات. الاستثمار في الأسهم ينطوي على مخاطر قد تصل إلى خسارة رأس المال، والأداء السابق لا يضمن النتائج المستقبلية. "
              "النص والرسوم والصوت (صوت اصطناعي) من إعداد أدوات الذكاء الاصطناعي ومراجعة مع المصادر.")
-    T(f, 0.94, 0.07, "\n".join(textwrap.wrap(aviso, 125)), MUTED, 17, linespacing=1.55, alpha=a)
+    T(f, 0.94, 0.07, "\n".join(textwrap.wrap(aviso, 125)), MUTED, 17, linespacing=1.3, alpha=a)
     return with_logo(to_arr(f), LGB, x=110, y=90)
 
 

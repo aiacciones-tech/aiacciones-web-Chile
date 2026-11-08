@@ -6,6 +6,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from comun import *
 D = sys.argv[1]; I = json.load(open(f"{D}/info.json")); T = dict(json.load(open(f"{D}/times.json")))
 slug = f"bolsa-{I['fecha']}"; F = I["fecha"]
+CTA = (CTA_DESC + "\n\n") if cta_activa(F) else ""
 mmss = lambda s: f"{int(s) // 60}:{int(s) % 60:02d}"
 AVISO = f"""إخلاء مسؤولية مهم
 • أعدّته قناة AI Stocks UAE في {I['elaborado']} (بتوقيت الإمارات) ببيانات جلسة {I['fecha_txt']}، ويُنشر بعد إغلاق كل يوم تداول.
@@ -16,11 +17,11 @@ AVISO = f"""إخلاء مسؤولية مهم
 • المخاطر: الاستثمار في الأسهم ينطوي على مخاطر قد تصل إلى خسارة رأس المال كاملًا، والأداء السابق لا يضمن النتائج المستقبلية. قد تحتوي البيانات على أخطاء، فتحقق منها في مصادرها الأصلية.
 • الإنتاج: النص والرسوم والصوت (صوت اصطناعي) من إعداد أدوات الذكاء الاصطناعي، ومراجعة مع المصادر المذكورة."""
 cap = "\n".join(f"{mmss(T[k]) if i else '0:00'} {t}" for i, (k, t) in enumerate(I["capitulos"]))
-desc = (f"{I['resumen']}\n\n" + "\n\n".join("• " + c for c in I["claves"]) +
+desc = (f"{I['resumen']}\n\n{CTA}" + "\n\n".join("• " + c for c in I["claves"]) +
         f"\n\nالفصول\n{cap}\n\nالمصادر: {I['fuentes']}. لا نملك مراكز في الأسهم المذكورة.\n\n{AVISO}\n\n{I['hashtags']}\n\nاشترك في القناة: {CANAL}")
 assert len(I["titulo"]) <= 100 and "<" not in desc and ">" not in desc and len(desc) < 5000, (len(I["titulo"]), len(desc))
 json.dump({"title": I["titulo"], "description": desc, "tags": I["tags"], "privacy": "public"}, open(f"{D}/meta-youtube-{F}-UAE.json", "w"), ensure_ascii=False, indent=1)
-sd = (f"{I['resumen']}\nالفيديو الكامل (الأخبار والتحليل الأساسي والفني): {{video:{slug}}}\n"
+sd = (f"{I['resumen']}\n{CTA}الفيديو الكامل (الأخبار والتحليل الأساسي والفني): {{video:{slug}}}\n"
       f"المصادر: {I['fuentes']}. أعدّته AI Stocks UAE في {I['elaborado']} (بتوقيت الإمارات). محتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. "
       f"التحليل الفني بيانات وليس إشارات شراء أو بيع. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\nاشترك في القناة: {CANAL}\n#Shorts #أسهم_الإمارات #سوق_دبي_المالي #سوق_أبوظبي")
 assert len(I["titulo_short"]) <= 100 and len(sd) < 5000

@@ -38,6 +38,11 @@ El volumen de DFM no viene en la vela del índice: se calcula sumando las accion
 
 Dependencias: `pip install piper-tts "matplotlib>=3.11" imageio-ffmpeg pillow numpy arabic-reshaper python-bidi`.
 
+## Campaña de comentarios y suscripción (hasta el 22-nov-2026)
+Daniel (8-nov-2026): durante dos semanas cada video y Short pide un comentario para mejorar el canal e invita a suscribirse.
+Va solo (constantes `CTA_*` de `comun.py`): se añade a la voz del cierre del video y del Short, a la pantalla final y al principio de la descripción
+de YouTube. Se apaga sola para las sesiones posteriores al 22-nov-2026 (`CTA_HASTA`). Con ella la voz suma unos 5 s: deja el resto en unas 220 palabras.
+
 ## Reglas
 Nada de comprar/vender, precio objetivo ni «barata/cara». El análisis técnico se presenta como datos. Cada cifra con fuente; cálculos propios marcados «محسوب».
 Todos los posts y descripciones llevan el enlace al canal https://www.youtube.com/@AIStocksUAE (regla de Daniel, 29-oct-2026).
