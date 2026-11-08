@@ -38,3 +38,4 @@ Logo: `/mnt/project-files/marca/logo-aiacciones-chile.png`. Dependencias: `pip i
 ## Reglas
 Nada de comprar/vender, precio objetivo ni "cara/barata" (NCG 502). El análisis técnico se presenta como datos. Cada cifra con fuente; cálculos propios marcados "calculado".
 Enlace a aiacciones.cl en video, Short y posts; TikTok con youtube.com/@aiaccioneschile.
+LinkedIn (Daniel, 8-nov-2026): se publica el Short como video (cola/bolsa-<fecha>-short/post-linkedin.txt), con resumen que aporte valor, aviso de que el video es de AIAcciones Chile y el enlace al canal de YouTube.

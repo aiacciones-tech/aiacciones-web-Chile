@@ -30,6 +30,7 @@ cuyo nombre diga "chile" (p. ej. el TikTok aiaccioneschile) es de Chile y lo usa
 Secreto opcional BUFFER_API_KEY_ES2: tercera cuenta de Buffer, también solo de España (Instagram aiacciones.espana).
 Instagram: <cola>/<slug>/post-instagram.txt junto a video.mp4 (se publica como Reel) o a imagen.png (post en
 el feed, 1080x1350). Vale para cola/ (Chile) y cola-es/ (España).
+LinkedIn con video: cola/<slug>-short/post-linkedin.txt publica el Short (video.mp4) como video nativo (video diario del IPSA).
 X, LinkedIn y Facebook: si en la carpeta hay imagen.png, el post la lleva adjunta (p. ej. un calendario).
 España: `programar cola-es` manda los posts de cola-es/ solo a canales cuyo nombre diga "espana"/"españa"
 (hoy, la página de LinkedIn); si no hay canal de España para esa red, el post espera. Con dos páginas
@@ -388,7 +389,8 @@ def programar(base):
             extra += ", assets: [{image: {url: %s}}]" % json.dumps(imagen)
             if red == "instagram":
                 extra += ", metadata: {instagram: {type: post, shouldShareToFeed: true}}"
-        elif r.get("video"):
+        elif r.get("video") or (red == "linkedin" and slug.endswith("-short")):
+            # LinkedIn en la carpeta de un Short (cola/<slug>-short/post-linkedin.txt): sube el Short como video (Daniel, 8-nov-2026)
             url = enlace_video(carpeta)
             if not url:
                 fallas.append(f"{slug} ({r['nombre']}): falta video.mp4 en el commit de la carpeta")
