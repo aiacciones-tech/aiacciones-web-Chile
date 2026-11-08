@@ -25,6 +25,8 @@ jobs:
           SOLO_DIA_DE_SESION: ${{ github.event_name == 'schedule' && '1' || '0' }}
         run: pip install -q websocket-client && python3 saudi/diario/datos_mercado.py
       - name: Guardar en la rama datos-diario-saudi
+        # Un push (prueba del código) puede correr en plena sesión: no guarda datos intradía.
+        if: github.event_name != 'push'
         run: |
           ls saudi/diario/datos/mercado-*.json >/dev/null 2>&1 || exit 0
           mkdir -p /tmp/out && cp saudi/diario/datos/mercado-*.json /tmp/out/
