@@ -152,6 +152,18 @@ def main():
     except Exception as e:
         res["errores"].append(f"tradingview acciones: {e}")
     hoy = (now + datetime.timedelta(hours=3)).date().isoformat()  # Manama time (UTC+3, no DST)
+    dia = lambda v: datetime.datetime.utcfromtimestamp(v["t"] + TZH).date().isoformat()
+    # Mubasher adds the day's daily candle hours after the close; the 1-minute intraday has it right away. If the intraday
+    # has a later session than the daily candles, build that day's candle from the intraday (open, high, low, close, volume).
+    try:
+        d_ult = dia(res["bax_diario"]["velas"][-1])
+        intra = [v for v in res["bax_intradia"]["velas"] if dia(v) == dia(res["bax_intradia"]["velas"][-1])]
+        if intra and dia(intra[-1]) > d_ult:
+            t0 = int(datetime.datetime.fromisoformat(dia(intra[-1])).replace(tzinfo=datetime.timezone.utc).timestamp()) - TZH
+            res["bax_diario"]["velas"].append({"t": t0, "o": intra[0]["o"], "h": max(v["h"] for v in intra), "l": min(v["l"] for v in intra),
+                                               "c": intra[-1]["c"], "v": sum(v["v"] or 0 for v in intra), "de_intradia": True})
+    except Exception as e:
+        res["errores"].append(f"daily candle from intraday: {e}")
     fecha = hoy
     try:
         fecha = datetime.datetime.utcfromtimestamp(res["bax_diario"]["velas"][-1]["t"] + TZH).date().isoformat()
