@@ -16,6 +16,20 @@ LOGO = os.environ.get("LOGO", "/mnt/project-files/bahrain-pipeline/kits/avatar-b
 VOICE = os.environ.get("VOICE", "/mnt/project-files/bahrain-pipeline/voice/ar_JO-kareem-medium.onnx")
 CANAL = "https://www.youtube.com/@BahrainAIStocks"
 CANAL_CORTO = "youtube.com/@BahrainAIStocks"
+# Daniel (8-nov-2026): for two weeks, every video and Short asks viewers to comment and to subscribe (voice, end screen and
+# description). From 23-nov the normal ending comes back by itself.
+CTA_HASTA = "2026-11-22"
+CTA_VOZ = "شاركنا رأيك في التعليقات لنطوّر القناة، ولا تنسَ الاشتراك."
+CTA_VOZ_CORTO = "اكتب لنا تعليقًا، واشترك في القناة."
+CTA_TXT = "شاركنا رأيك في التعليقات لنطوّر القناة · اشترك"
+CTA_DESC = "💬 شاركنا رأيك في التعليقات: ما الذي تريد أن نضيفه أو نحسّنه في الملخص اليومي؟ تعليقك يساعدنا على تطوير القناة.\n🔔 اشترك في القناة لتصلك الملخصات بعد إغلاق كل جلسة: "
+
+
+def cta_activa(fecha=None):
+    """True until CTA_HASTA. fecha: 'YYYY-MM-DD' or date (session date); by default, today in Manama (UTC+3)."""
+    import datetime as _dt
+    if fecha is None: fecha = (_dt.datetime.now(_dt.timezone.utc) + _dt.timedelta(hours=3)).date()
+    return str(fecha) <= CTA_HASTA
 # Bahrain AI Stocks brand: Bahrain red #C2152F and white. BAND = red band (white text on it, e.g. the session date);
 # GOLD = pale rose for kickers and accents; gains in green, losses in coral so they are not confused with the brand red.
 BG = "#160A0D"; FG = "#F7F2F3"; MUTED = "#C3A9AE"; GOLD = "#F6B9C3"; BAND = "#C2152F"; TEAL = "#2FBF71"; NEG = "#FF7A6B"; DIM = "#4A2830"; BLUE = "#7DB8F2"
