@@ -2,6 +2,7 @@
 (lo usa .github/workflows/buffer.yml).
 
 Cada post es un archivo cola/<slug>/post-x.txt (X) o cola/<slug>/post-linkedin.txt (LinkedIn).
+LinkedIn con video: cola/<slug>-short/post-linkedin.txt va con el video.mp4 del Short adjunto (Daniel, 8-nov-2026).
 TikTok: cola/<slug>-short/post-tiktok.txt, junto al video.mp4 del Short; el video se manda a Buffer por su
 enlace público en GitHub (raw.githubusercontent.com, fijado al commit), así que el repo debe seguir público.
 Si el texto trae {youtube}, se reemplaza por el enlace del video de cola/<slug>/resultado.json; mientras
@@ -108,7 +109,7 @@ REDES = {
           "variable": "BUFFER_CANAL", "limite": 280, "largo": largo_x, "obligatoria": True, "imagen": True},
     "linkedin": {"nombre": "LinkedIn", "archivo": "post-linkedin.txt", "registro": "buffer-linkedin.json",
                  "servicios": ("linkedin",), "variable": "BUFFER_CANAL_LINKEDIN", "limite": 3000,
-                 "largo": len, "obligatoria": False, "imagen": True},
+                 "largo": len, "obligatoria": False, "imagen": True, "video_short": True},
     "tiktok": {"nombre": "TikTok", "archivo": "post-tiktok.txt", "registro": "buffer-tiktok.json",
                "servicios": ("tiktok",), "variable": "BUFFER_CANAL_TIKTOK", "limite": 2200,
                "largo": len, "obligatoria": False, "video": True},
@@ -365,7 +366,8 @@ def programar(base):
         if pais == "chile" and r.get("video") and "aiacciones.cl" not in texto:
             # todo post de Chile lleva la web (en TikTok/Instagram no es clicable, pero se ve)
             texto += "\n\nFicha completa en aiacciones.cl"
-        if pais == "chile" and red == "tiktok" and CANAL_CL.lower() not in texto.lower():
+        con_short = bool(r.get("video_short") and slug.endswith("-short"))
+        if pais == "chile" and (red == "tiktok" or con_short) and CANAL_CL.lower() not in texto.lower():
             # todo video de Chile en TikTok lleva el enlace al canal de YouTube (Daniel, 6-nov-2026)
             texto += f"\n▶️ Video completo en YouTube: {CANAL_CL}"
         canal_yt = PROPIOS[pais][1] if pais in PROPIOS else None
@@ -388,7 +390,7 @@ def programar(base):
             extra += ", assets: [{image: {url: %s}}]" % json.dumps(imagen)
             if red == "instagram":
                 extra += ", metadata: {instagram: {type: post, shouldShareToFeed: true}}"
-        elif r.get("video"):
+        elif r.get("video") or con_short:
             url = enlace_video(carpeta)
             if not url:
                 fallas.append(f"{slug} ({r['nombre']}): falta video.mp4 en el commit de la carpeta")
