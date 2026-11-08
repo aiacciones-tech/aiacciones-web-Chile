@@ -6,6 +6,8 @@ from PIL import Image
 plt.rcParams['text.parse_math']=False
 D=sys.argv[1]; I=json.load(open(f"{D}/info.json")); T=dict(json.load(open(sys.argv[2] if len(sys.argv)>2 else f"{D}/times.json")))
 slug=f"bolsa-{I['fecha']}"
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__))); import campana
+CAMP=("\n"+campana.DESCRIPCION) if campana.activa(I["fecha"]) else ""
 WEB="https://aiacciones.cl/"; CAL="https://aiacciones.cl/calendario/"
 mmss=lambda s:f"{int(s)//60}:{int(s)%60:02d}"
 AVISO=f"""AVISO IMPORTANTE
@@ -17,11 +19,11 @@ AVISO=f"""AVISO IMPORTANTE
 • Riesgos: invertir en acciones implica riesgo de pérdida, incluso de todo el capital. Las rentabilidades pasadas no garantizan rentabilidades futuras. Los datos pueden contener errores; verifícalos en las fuentes originales.
 • Producción: guion, gráficos y locución (voz sintética) generados con herramientas de inteligencia artificial y revisados con las fuentes citadas."""
 cap="\n".join(f"{mmss(T[k]) if i else '0:00'} {t}" for i,(k,t) in enumerate(I["capitulos"]))
-desc=(f"{I['resumen']}\n📅 Calendario de resultados y dividendos: {CAL}\n\n"+"\n\n".join("• "+c for c in I["claves"])+
+desc=(f"{I['resumen']}\n📅 Calendario de resultados y dividendos: {CAL}{CAMP}\n\n"+"\n\n".join("• "+c for c in I["claves"])+
       f"\n\nCapítulos\n{cap}\n\nFuentes: {I['fuentes']}. AIAcciones Chile no tiene posiciones en las acciones citadas.\n\nMás análisis de acciones chilenas: {WEB}\n\n{AVISO}\n\n{I['hashtags']}")
 assert len(I["titulo"])<=100 and "<" not in desc and ">" not in desc and len(desc.encode())<5000, (len(I["titulo"]),len(desc.encode()))
 json.dump({"title":I["titulo"],"description":desc,"tags":I["tags"],"privacy":"public"},open(f"{D}/meta-youtube.json","w"),ensure_ascii=False,indent=1)
-sd=(f"{I['resumen']}\nVideo completo (noticias, análisis fundamental y técnico): {{video:{slug}}}\n📅 {CAL}\n"
+sd=(f"{I['resumen']}\nVideo completo (noticias, análisis fundamental y técnico): {{video:{slug}}}\n📅 {CAL}{CAMP}\n"
     f"Fuentes: {I['fuentes']}. Elaborado por AIAcciones Chile el {I['elaborado']} (hora de Chile). Contenido informativo: no es una recomendación de inversión ni asesoría personalizada. Análisis técnico: datos, no señales. Sin posiciones en las acciones citadas. Invertir conlleva riesgo de pérdida.\n#Shorts #IPSA #BolsaDeSantiago")
 assert len(I["titulo_short"])<=100
 json.dump({"title":I["titulo_short"],"description":sd,"tags":I["tags"][:6]+["Shorts"],"privacy":"public"},open(f"{D}/meta-short.json","w"),ensure_ascii=False,indent=1)
