@@ -6,6 +6,7 @@ from PIL import Image
 plt.rcParams['text.parse_math']=False
 D=sys.argv[1]; I=json.load(open(f"{D}/info.json")); T=dict(json.load(open(sys.argv[2] if len(sys.argv)>2 else f"{D}/times.json")))
 slug=f"bolsa-{I['fecha']}"
+CANAL="https://www.youtube.com/@AIAccionesEspa%C3%B1a"
 # Llamada a comentar y suscribirse (Daniel, 8-nov-2026), hasta el 22-nov-2026 incluido
 CTA=I["fecha"]<="2026-11-22"
 CTA_TXT="💬 ¿Qué te ha parecido el resumen de hoy y qué te gustaría ver? Déjanos tu comentario: nos ayuda a mejorar el canal.\n🔔 Suscríbete a @AIAccionesEspaña para no perderte el resumen de cada día de bolsa.\n\n" if CTA else ""
@@ -30,10 +31,19 @@ json.dump({"title":I["titulo_short"],"description":sd,"tags":I["tags"][:6]+["Sho
 x=f"{I['x']}\n\n▶️ {{youtube}}\n\nInformativo, no es recomendación. Sin posiciones."
 assert len(x.replace("{youtube}","x"*23))<=280, len(x)
 open(f"{D}/post-x.txt","w").write(x)
-li=(f"IBEX 35 | La bolsa española hoy ({I['fecha_txt']})\n\n{I['resumen']}\n\n"+"\n\n".join("• "+c for c in I["claves"])+
+# Telegram: texto largo con todas las claves y el enlace al vídeo completo
+tg=(f"IBEX 35 | La bolsa española hoy ({I['fecha_txt']})\n\n{I['resumen']}\n\n"+"\n\n".join("• "+c for c in I["claves"])+
     ("\n\n💬 Déjanos tu comentario en el vídeo y 🔔 suscríbete al canal." if CTA else "")+"\n\n▶️ Vídeo completo (3 min): {youtube}\n📊 Hechos relevantes del IBEX 35: https://aiacciones.es/hechos/\n\n"
     "Contenido informativo, no es una recomendación de inversión. El análisis técnico describe datos, no son señales de compra o venta. AIAcciones España no tiene posiciones en los valores citados.\n\n"+I["hashtags"])
-assert len(li.replace("{youtube}","https://youtu.be/XXXXXXXXXXX"))<=2950, len(li)
+open(f"{D}/post-telegram.txt","w").write(tg)
+# LinkedIn (regla permanente de Daniel, 8-nov-2026): el Short subido como vídeo (encolar.sh lo pone en la carpeta -short),
+# texto = 3 o 4 datos clave + una conclusión, sin relleno; transparencia sobre el canal; termina con el enlace al canal.
+L=I["linkedin"]; assert 3<=len(L["datos"])<=4
+li=(f"IBEX 35 | {I['fecha_txt'][0].upper()+I['fecha_txt'][1:]}\n\n"+"\n".join("• "+d for d in L["datos"])+f"\n\n{L['conclusion']}\n\n"
+    +("💬 ¿Qué te ha parecido? Déjanos tu comentario para mejorar el canal y suscríbete.\n\n" if CTA else "")
+    +"Contenido informativo, no es una recomendación de inversión. AIAcciones España no tiene posiciones en los valores citados.\n\n"
+    +"Vídeo elaborado por AIAcciones España (@AIAccionesEspaña).\n"+CANAL)
+assert "{youtube}" not in li and len(li)<=2950, len(li)
 open(f"{D}/post-linkedin.txt","w").write(li)
 open(f"{D}/post-tiktok.txt","w").write(I["tiktok"]+("\n💬 Cuéntanos en los comentarios qué te gustaría ver y síguenos." if CTA else ""))
 # miniatura 1280x720

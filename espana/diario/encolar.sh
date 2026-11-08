@@ -17,12 +17,13 @@ C=cola-es/bolsa-$F; CS=cola-es/bolsa-$F-short
 [ -f $C/resultado.json ] && { echo "ya subido: $C"; exit 1; }
 mkdir -p $C $CS
 cp $B/youtube-bolsa-espana-$F.mp4 $C/video.mp4; cp $B/meta-youtube.json $C/meta.json; cp $B/miniatura-youtube.png $C/miniatura.png
-cp $B/post-linkedin.txt $C/post-linkedin.txt; cp $B/post-x.txt $C/post-x.txt
-[ -f $B/post-telegram.txt ] && cp $B/post-telegram.txt $C/post-telegram.txt
+cp $B/post-x.txt $C/post-x.txt; cp $B/post-telegram.txt $C/post-telegram.txt
 cp $B/short-bolsa-espana-$F.mp4 $CS/video.mp4; cp $B/meta-short.json $CS/meta.json
 cp $B/post-tiktok.txt $CS/post-tiktok.txt; cp $B/post-tiktok.txt $CS/post-instagram.txt
+# LinkedIn: el Short como vídeo, no como enlace (Daniel, 8-nov-2026)
+cp $B/post-linkedin.txt $CS/post-linkedin.txt
 git add $C $CS; git commit -qm "Cola España: vídeo diario del IBEX 35 $F (vídeo, Short y posts)"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin youtube-cola 2>/dev/null && break; sleep $((2**i)); done
-for i in $(seq 80); do git pull -q origin youtube-cola 2>/dev/null; [ -f $C/resultado.json ] && [ -f $CS/resultado.json ] && [ -f $C/buffer.json ] && break; sleep 15; done
+for i in $(seq 80); do git pull -q origin youtube-cola 2>/dev/null; [ -f $C/resultado.json ] && [ -f $CS/resultado.json ] && [ -f $C/buffer.json ] && [ -f $CS/buffer-linkedin.json ] && break; sleep 15; done
 V=$(python3 -c "import json;print(json.load(open('$C/resultado.json'))['videoId'])"); SH=$(python3 -c "import json;print(json.load(open('$CS/resultado.json'))['videoId'])")
 echo "diario $F: YouTube $V, Short $SH" | tee -a $B/ids.txt

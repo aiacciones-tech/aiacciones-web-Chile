@@ -70,5 +70,14 @@
   "der2": "RSI 54 · Estocástico 78",
   "pie": "Tecnológicas  |  Empleo EE. UU.  |  Solaria +3,6%  |  Acerinox -3,6%",
   "fecha": "VIERNES 6 NOV 2026"
+ },
+ "linkedin": {
+  "datos": [
+   "El IBEX 35 cae un 0,60%, hasta 19.369,5 puntos, pero suma un 3,84% en la semana, la mejor desde abril.",
+   "La caída del Nasdaq del jueves (más de un 5%) por las dudas sobre la inversión en IA arrastra a Europa: DAX -1,92%.",
+   "EE. UU. crea 165.000 empleos en octubre, frente a unos 65.000 esperados.",
+   "Técnico: justo bajo la media de 50 sesiones (19.399); RSI 54 y estocástico 78, cerca de sobrecompra."
+  ],
+  "conclusion": "Conclusión: un tropiezo tras una gran semana, con el índice pendiente de recuperar su media de 50 sesiones y de la Fed."
  }
 }
