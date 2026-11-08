@@ -42,7 +42,7 @@ def s_title(t):
     T(f, 0.94, 0.615, INDICE[k], MUTED, 30, "bold", alpha=a)
     f.text(0.94, 0.48, num(r["cierre"]), color=FG, fontsize=96, weight="bold", ha="right", alpha=a)
     f.text(0.94, 0.39, f"{pct(r['var_pct'])}   ({r['var_pts']:+,.2f})", color=cc, fontsize=46, weight="bold", ha="right", alpha=a)
-    if r.get("semana_pct") is not None:
+    if r.get("semana_pct") is not None and r["semana_pct"] != r["var_pct"]:  # el domingo (primera sesión de la semana) no se repite
         T(f, 0.94, 0.31, f"في الأسبوع: {pct(r['semana_pct'])}", FG, 30, "bold", alpha=ease((t - 0.2) / 0.5))
     I = [v for v in M[f"{k}_intradia"]["velas"] if dt.datetime.fromtimestamp(v["t"], TZ).date() == FECHA]
     IC = np.array([v["c"] for v in I]); prev = r["anterior"]
