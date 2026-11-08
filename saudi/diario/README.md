@@ -2,7 +2,7 @@
 
 Cada día de sesión de Tadawul (domingo a jueves; cierre a las 15:00 en Riad, 12:00 UTC; sin video en festivos como el Eid o el Día Nacional):
 un video de máximo 3 minutos y su Short para @SaudiArabiaAIStocks, todo en árabe (voz, textos en pantalla, título, descripción y posts),
-con posts en X, Threads, Facebook, TikTok, Instagram y Telegram. Adaptado del video diario de EAU (`eau/diario/`).
+con posts en X, Threads, Facebook, LinkedIn, TikTok, Instagram y Telegram. Adaptado del video diario de EAU (`eau/diario/`).
 Muestra: sesión del jueves 5-nov-2026 (`ejemplo-2026-11-05/`).
 
 ## Guion (7 escenas, `make_video.py`)
@@ -35,6 +35,12 @@ El volumen de Nomu no viene en la vela del índice: se calcula sumando sus accio
 5. `AUD=<scratch> python3 make_short.py <dir>/short.json` y `python3 gen_meta.py <dir>`. Todo lo que se entrega termina en `-SA` (regla de Daniel, 7-nov-2026).
 6. `SCRATCH=<scratch> bash encolar.sh <dir>`: comprueba los archivos y el enlace del canal, el límite de YouTube (~10 subidas/24 h, compartido con los videos de resultados)
    y encola en `cola-sa/bolsa-<fecha>` y `cola-sa/bolsa-<fecha>-short` de `youtube-cola`.
+
+## LinkedIn (regla permanente de Daniel, 8-nov-2026)
+En LinkedIn va el Short subido como video (no como enlace): `encolar.sh` pone `post-linkedin.txt` en `cola-sa/bolsa-<fecha>-short/`.
+El texto sale de `info.json` → `linkedin`: `datos` con 3 o 4 cifras clave y qué cambió, y `conclusion` (una frase). Es un resumen con valor, sin relleno
+(sin la línea de la campaña), dice «فيديو من إعداد قناة Saudi Arabia AI Stocks» y termina con el enlace al canal https://www.youtube.com/@SaudiArabiaAIStocks.
+Facebook sigue con el texto largo y el enlace al video (`post-facebook.txt` en la carpeta del video largo).
 
 ## Árabe
 - Fuente: Noto Naskh Arabic (`fonts/`, OFL). Texto: `comun.ar()` une las letras con arabic-reshaper; matplotlib 3.11+ ordena de derecha a izquierda (libraqm); en versiones anteriores lo hace python-bidi.

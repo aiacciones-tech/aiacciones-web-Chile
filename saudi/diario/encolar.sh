@@ -1,15 +1,15 @@
 #!/bin/bash
 # bash encolar.sh <carpeta del día>: encola el video diario en árabe y su Short en cola-sa/bolsa-<fecha>[-short]/ de la rama youtube-cola.
 # Después: youtube-saudi.yml sube a YouTube (@SaudiArabiaAIStocks), buffer.yml publica en X, Threads y Facebook (video largo)
-# y en TikTok e Instagram (Short como video/Reel), y telegram-saudi.yml en Telegram (post-telegram.txt).
+# y en LinkedIn, TikTok e Instagram (Short como video nativo/Reel), y telegram-saudi.yml en Telegram (post-telegram.txt).
 set -e
 B=$(cd "$1" && pwd); F=$(python3 -c "import json;print(json.load(open('$B/info.json'))['fecha'])"); S=${SCRATCH:-/tmp/saudi-scratch}; mkdir -p $S
 for f in video-bolsa-$F-SA.mp4 short-bolsa-$F-SA.mp4 meta-youtube-$F-SA.json meta-short-$F-SA.json miniatura-$F-SA.png post-x-$F-SA.txt post-threads-$F-SA.txt \
-         post-facebook-$F-SA.txt post-tiktok-$F-SA.txt post-instagram-$F-SA.txt post-telegram-$F-SA.txt; do
+         post-facebook-$F-SA.txt post-linkedin-$F-SA.txt post-tiktok-$F-SA.txt post-instagram-$F-SA.txt post-telegram-$F-SA.txt; do
   test -s "$B/$f" || { echo "falta $B/$f"; exit 1; }
 done
 grep -q "SaudiArabiaAIStocks" $B/meta-youtube-$F-SA.json && grep -q "SaudiArabiaAIStocks" $B/meta-short-$F-SA.json || { echo "falta el enlace del canal en los metadatos"; exit 1; }
-for p in x threads facebook tiktok instagram telegram; do grep -q "SaudiArabiaAIStocks" $B/post-$p-$F-SA.txt || { echo "falta el enlace del canal en post-$p"; exit 1; }; done
+for p in x threads facebook linkedin tiktok instagram telegram; do grep -q "SaudiArabiaAIStocks" $B/post-$p-$F-SA.txt || { echo "falta el enlace del canal en post-$p"; exit 1; }; done
 [ -d $S/cola ] || git clone -q --depth 1 -b youtube-cola https://github.com/aiacciones-tech/aiacciones-web-Chile.git $S/cola; cd $S/cola; git pull -q origin youtube-cola 2>/dev/null
 git config user.name "aiacciones-bot"; git config user.email "aiacciones-bot@users.noreply.github.com"
 python3 - <<PY
@@ -31,6 +31,10 @@ for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git p
 # Los posts van en un segundo push, cuando el video ya está en la rama (Buffer toma el video del Short desde GitHub).
 cp $B/post-x-$F-SA.txt $C/post-x.txt; cp $B/post-threads-$F-SA.txt $C/post-threads.txt; cp $B/post-facebook-$F-SA.txt $C/post-facebook.txt
 cp $B/post-telegram-$F-SA.txt $C/post-telegram.txt
+# LinkedIn (Daniel, 8-nov-2026): el Short como video nativo -> post-linkedin.txt en la carpeta -short (buffer.py lo sube con el video.mp4).
+# En cola-sa, Facebook usaría post-linkedin.txt como texto alterno; en la carpeta -short se marca como hecho para que no se duplique.
+cp $B/post-linkedin-$F-SA.txt $CS/post-linkedin.txt
+echo '{"omitido": "Facebook va en la carpeta del video largo (post-facebook.txt)"}' > $CS/buffer-facebook.json
 cp $B/post-tiktok-$F-SA.txt $CS/post-tiktok.txt; cp $B/post-instagram-$F-SA.txt $CS/post-instagram.txt
 git add cola-sa; git diff --cached --quiet || git commit -qm "Cola Arabia Saudita: posts del video diario $F"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done
