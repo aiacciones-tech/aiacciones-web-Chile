@@ -39,7 +39,17 @@ li = (f"أسهم الإمارات | ملخص جلسة {I['fecha_txt']}\n\n{I['re
       f"\n\n▶️ الفيديو الكامل (3 دقائق): {{youtube}}\n{canal_linea}\n\n"
       f"المصادر: {I['fuentes']}.\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. التحليل الفني يصف بيانات وليس إشارات شراء أو بيع. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n\n" + I["hashtags"])
 assert len(li.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 2950, len(li)
-open(f"{D}/post-linkedin-{F}-UAE.txt", "w").write(li)
+# Facebook: el texto largo con el enlace al video (carpeta del video largo).
+open(f"{D}/post-facebook-{F}-UAE.txt", "w").write(li)
+# LinkedIn (regla permanente de Daniel, 8-nov-2026): el Short subido como video (no enlace), con un resumen con valor
+# (3-4 datos clave con cifras y qué cambió + una conclusión, sin relleno), la autoría transparente y al final el enlace al canal.
+L = I.get("linkedin") or {"datos": I["claves_cortas"], "conclusion": I["resumen"]}
+assert 3 <= len(L["datos"]) <= 4, "LinkedIn: 3 o 4 datos clave"
+lk = (f"أسهم الإمارات | جلسة {I['fecha_txt']}\n\n" + "\n".join("• " + c for c in L["datos"]) + f"\n\nالخلاصة: {L['conclusion']}\n\n"
+      "محتوى تعليمي وليس نصيحة استثمارية. التحليل الفني بيانات وليس إشارات شراء أو بيع.\n"
+      f"فيديو من إعداد قناة AI Stocks UAE.\n{CANAL}")
+assert len(lk) <= 2950 and "{youtube}" not in lk and lk.rstrip().endswith(CANAL)
+open(f"{D}/post-linkedin-{F}-UAE.txt", "w").write(lk)
 tk = f"{I['tiktok']}\n{canal_linea}\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n{I['hashtags_short']}"
 open(f"{D}/post-tiktok-{F}-UAE.txt", "w").write(tk); open(f"{D}/post-instagram-{F}-UAE.txt", "w").write(tk)
 tg = (f"📊 أسهم الإمارات | {I['fecha_txt']}\n\n{I['resumen']}\n\n" + "\n".join("• " + c for c in I["claves_cortas"]) +
