@@ -30,10 +30,14 @@ json.dump({"title":I["titulo_short"],"description":sd,"tags":I["tags"][:6]+["Sho
 x=f"{I['x']}\n\n▶️ {{youtube}}\n📅 aiacciones.cl/calendario\nInformativo, no es recomendación."
 assert len(x.replace("{youtube}","x"*23))<=270, len(x)
 open(f"{D}/post-x.txt","w").write(x)
-li=(f"IPSA | La Bolsa de Santiago hoy ({I['fecha_txt']})\n\n{I['resumen']}\n\n"+"\n\n".join("• "+c for c in I["claves"])+
-    f"\n\n▶️ Video completo (3 min): {{youtube}}\n📅 Calendario de resultados y dividendos: {CAL}\n\n"
+# LinkedIn (Daniel, 8-nov-2026): se publica el Short como video; texto con un resumen que aporte valor,
+# aviso transparente de que el video es de AIAcciones Chile y el enlace al canal. Va en cola/<slug>-short/.
+li=(f"📊 IPSA | La Bolsa de Santiago hoy ({I['fecha_txt']})\n\n{I['resumen']}\n\n"+"\n\n".join("• "+c for c in I["claves"])+
+    "\n\n🎥 Este video corto es de AIAcciones Chile: resumimos cada sesión de la Bolsa de Santiago con datos públicos, noticias con fuente y análisis técnico, con guion, gráficos y voz generados con inteligencia artificial."
+    "\n▶️ El análisis completo de 3 minutos y los resúmenes de cada día están en nuestro canal de YouTube: https://www.youtube.com/@aiaccioneschile"
+    f"\n📅 Calendario de resultados y dividendos: {CAL}\n\n"
     "Contenido informativo, no es una recomendación de inversión. El análisis técnico describe datos, no son señales de compra o venta. AIAcciones Chile no tiene posiciones en las acciones citadas.\n\n"+I["hashtags"])
-assert len(li.replace("{youtube}","https://youtu.be/XXXXXXXXXXX"))<=2950, len(li)
+assert len(li)<=2950, len(li)
 open(f"{D}/post-linkedin.txt","w").write(li)
 tg=(f"📊 IPSA · {I['fecha_txt']}\n\n{I['resumen']}\n\n"+"\n".join("• "+c for c in I["claves"][:3])+
     f"\n\n▶️ Video: {{youtube}}\n📅 {CAL}\nYouTube: youtube.com/@aiaccioneschile\nContenido informativo, no es recomendación de inversión.")

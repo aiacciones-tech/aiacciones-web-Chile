@@ -1,6 +1,6 @@
 #!/bin/bash
 # bash encolar.sh <carpeta del día>: encola el video diario del IPSA y su Short en cola/bolsa-<fecha>[-short]/ de la rama youtube-cola.
-# Después: youtube.yml sube a YouTube (@aiaccioneschile), buffer.yml publica en X, LinkedIn y TikTok y telegram-chile.yml en Telegram.
+# Después: youtube.yml sube a YouTube (@aiaccioneschile), buffer.yml publica en X (video largo), LinkedIn y TikTok (el Short) y telegram-chile.yml en Telegram.
 set -e
 B=$(cd "$1" && pwd); F=$(python3 -c "import json;print(json.load(open('$B/info.json'))['fecha'])"); S=${SCRATCH:-/tmp/cl-scratch}; mkdir -p $S
 [ -d $S/cola ] || git clone -q -b youtube-cola https://github.com/aiacciones-tech/aiacciones-web-Chile.git $S/cola; cd $S/cola; git pull -q origin youtube-cola 2>/dev/null
@@ -17,8 +17,8 @@ C=cola/bolsa-$F; CS=cola/bolsa-$F-short
 [ -f $C/resultado.json ] && { echo "ya subido: $C"; exit 1; }
 mkdir -p $C $CS
 cp $B/youtube-bolsa-chile-$F.mp4 $C/video.mp4; cp $B/meta-youtube.json $C/meta.json; cp $B/miniatura-youtube.png $C/miniatura.png
-cp $B/post-linkedin.txt $C/post-linkedin.txt; cp $B/post-x.txt $C/post-x.txt; cp $B/post-telegram.txt $C/post-telegram.txt
-cp $B/short-bolsa-chile-$F.mp4 $CS/video.mp4; cp $B/meta-short.json $CS/meta.json; cp $B/post-tiktok.txt $CS/post-tiktok.txt
+cp $B/post-x.txt $C/post-x.txt; cp $B/post-telegram.txt $C/post-telegram.txt
+cp $B/short-bolsa-chile-$F.mp4 $CS/video.mp4; cp $B/meta-short.json $CS/meta.json; cp $B/post-tiktok.txt $CS/post-tiktok.txt; cp $B/post-linkedin.txt $CS/post-linkedin.txt  # LinkedIn: el Short como video
 git add $C $CS; git commit -qm "Cola Chile: video diario del IPSA $F (video, Short y posts)"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin youtube-cola 2>/dev/null && break; sleep $((2**i)); done
 for i in $(seq 80); do git pull -q origin youtube-cola 2>/dev/null; [ -f $C/resultado.json ] && [ -f $CS/resultado.json ] && break; sleep 15; done
