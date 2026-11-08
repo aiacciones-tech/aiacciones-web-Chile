@@ -43,6 +43,14 @@ li = (f"أسهم البحرين | ملخص جلسة {I['fecha_txt']}\n\n{I['resu
       f"المصادر: {I['fuentes']}.\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. التحليل الفني يصف بيانات وليس إشارات شراء أو بيع. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n\n" + I["hashtags"])
 assert len(li.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 2950, len(li)
 open(f"{D}/post-facebook-{F}-bahrain.txt", "w").write(li)
+# LinkedIn (Daniel, permanent rule from 8-nov-2026): the Short uploaded as a video, with a summary of 3-4 key data of the
+# video (figures and what changed) and a conclusion, no filler; it says the video is by the channel and ends with the channel link.
+L = I["linkedin"]; assert 3 <= len(L["datos"]) <= 4 and L["conclusion"], "info-bahrain.json: linkedin needs 3-4 datos and a conclusion"
+ln = (f"بورصة البحرين | {I['fecha_txt']}\n\n" + "\n".join("• " + d for d in L["datos"]) + f"\n\nالخلاصة: {L['conclusion']}\n\n"
+      "محتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية.\n"
+      f"🎬 فيديو من إعداد قناة Bahrain AI Stocks (أسهم البحرين).\n▶️ {CANAL}")
+assert ln.rstrip().endswith(CANAL) and "{youtube}" not in ln and len(ln) <= 2950, len(ln)
+open(f"{D}/post-linkedin-{F}-bahrain.txt", "w").write(ln)
 tk = f"{I['tiktok']}\n{canal_linea}\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n{I['hashtags_short']}"
 open(f"{D}/post-tiktok-{F}-bahrain.txt", "w").write(tk); open(f"{D}/post-instagram-{F}-bahrain.txt", "w").write(tk)
 tg = (f"📊 أسهم البحرين | {I['fecha_txt']}\n\n{I['resumen']}\n\n" + "\n".join("• " + c for c in I["claves_cortas"]) +

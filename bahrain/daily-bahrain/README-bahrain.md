@@ -31,10 +31,14 @@ Ojo: el mínimo diario de Mubasher puede traer un precio que no aparece en el in
    Al Bilad, Al Ayam, Al Watan, TradeArabia, Zawya, Argaam, Asharq Business, Banker. Solo cuenta como motivo lo publicado ese día o la víspera tras el cierre.
 3. Copia `sample-2026-11-05-bahrain/` a la carpeta del día (sin mp4/png/txt) con `market-bahrain.json` del día y cambia `video-bahrain.json`
    (textos y locución, números en palabras), `info-bahrain.json` (título, descripción, posts, miniatura) y `short-bahrain.json` (menos de 59 s; fecha en la primera escena).
+   LinkedIn (regla permanente de Daniel, 8-nov-2026): `info-bahrain.json` lleva `linkedin` con 3-4 `datos` clave del vídeo (cifras y qué cambió) y una
+   `conclusion`, sin relleno. `make-meta-bahrain.py` añade «فيديو من إعداد قناة Bahrain AI Stocks» y termina con el enlace del canal; el Short va como vídeo.
 4. `AUD=<scratch> python3 make-video-bahrain.py <dir> preview` (revisa los PNG), luego sin `preview` (máx. 180 s; unas 230 palabras de locución).
 5. `AUD=<scratch> python3 make-short-bahrain.py <dir>/short-bahrain.json` y `python3 make-meta-bahrain.py <dir>`.
 6. `SCRATCH=<scratch> bash enqueue-daily-bahrain.sh <dir>`: comprueba archivos y enlace del canal, el límite de YouTube (~10 subidas/24 h, compartido con
    los vídeos de resultados) y encola en `cola-bahrain/daily-<fecha>` y `cola-bahrain/daily-<fecha>-short` de `youtube-cola`.
+   `REDES=linkedin` (lo que usa hoy la tarea diaria): además de YouTube, solo el Short en LinkedIn (`post-linkedin.txt` en la carpeta `-short`, cuenta 2 de Buffer).
+   `REDES=todas` añade X, Threads, Facebook, TikTok, Instagram y Telegram; `REDES=ninguna` (o `SOLO_YOUTUBE=1`), solo YouTube.
 
 ## Árabe
 - Fuente: Noto Naskh Arabic (`fonts/`, OFL). `ar()` une las letras con arabic-reshaper; matplotlib 3.11+ ordena de derecha a izquierda (libraqm).
