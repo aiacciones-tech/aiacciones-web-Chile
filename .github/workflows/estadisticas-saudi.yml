@@ -1,0 +1,62 @@
+# Informe semanal de estadísticas de Saudi Arabia AI Stocks (YouTube, X, Facebook, Instagram, TikTok, Threads y Telegram).
+# Corre los viernes a las 09:00 de Riad (06:00 UTC) con scripts/estadisticas-saudi.py y:
+#   1) guarda el informe en la rama estadisticas-saudi (informes-saudi/informe-AAAA-MM-DD-saudi.md),
+#      junto con snapshot-saudi.json para comparar con la semana anterior;
+#   2) abre un issue "Informe semanal Arabia Saudita AAAA-MM-DD" con el informe (GitHub avisa por correo);
+#   3) lo muestra en el resumen de la ejecución.
+# YouTube: usa YT_SAUDI_STATS_REFRESH_TOKEN si existe (token con youtube.readonly + yt-analytics.readonly);
+# si no, el token de subida YT_SAUDI_REFRESH_TOKEN; y si ese no puede leer, el feed público del canal.
+# Buffer: BUFFER_ACCESS_TOKEN_SAUDI y BUFFER_ACCESS_TOKEN_SAUDI2. Telegram: TELEGRAM_BOT_TOKEN_SAUDI y TELEGRAM_CHANNEL_SAUDI.
+# "Run workflow" lo genera en el momento (con dias=N cubre otro período).
+name: Informe semanal de estadísticas (Arabia Saudita)
+concurrency: estadisticas-saudi
+on:
+  schedule:
+    - cron: '0 6 * * 5'
+  workflow_dispatch:
+    inputs:
+      dias:
+        description: "Días que cubre el informe"
+        default: "7"
+permissions:
+  contents: write
+  issues: write
+jobs:
+  informe:
+    runs-on: ubuntu-latest
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_SAUDI_CLIENT_ID || secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_SAUDI_CLIENT_SECRET || secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_SAUDI_STATS_REFRESH_TOKEN || secrets.YT_SAUDI_REFRESH_TOKEN }}
+      BUFFER_API_KEY_SA: ${{ secrets.BUFFER_ACCESS_TOKEN_SAUDI }}
+      BUFFER_API_KEY_SA2: ${{ secrets.BUFFER_ACCESS_TOKEN_SAUDI2 }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN_SAUDI }}
+      TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL_SAUDI || vars.TELEGRAM_CHANNEL_SAUDI }}
+      DIAS: ${{ inputs.dias || '7' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Traer los informes anteriores (rama estadisticas-saudi)
+        run: |
+          if git fetch --depth 1 origin estadisticas-saudi; then
+            git worktree add informes FETCH_HEAD
+            git -C informes checkout -B estadisticas-saudi
+          else
+            git worktree add --orphan -b estadisticas-saudi informes
+          fi
+      - name: Generar el informe
+        run: python3 scripts/estadisticas-saudi.py informes/informes-saudi > informe.md
+      - name: Guardar en la rama estadisticas-saudi
+        run: |
+          cd informes
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add informes-saudi
+          git diff --cached --quiet && exit 0
+          git commit -m "Informe semanal Arabia Saudita $(date -u +%F)"
+          git push origin estadisticas-saudi
+      - name: Abrir el issue con el informe
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --repo "$GITHUB_REPOSITORY" --title "Informe semanal Arabia Saudita $(date -u +%F)" --body-file informe.md
+          cat informe.md >> "$GITHUB_STEP_SUMMARY"
