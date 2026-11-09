@@ -43,7 +43,7 @@ jobs:
         if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'no'
         run: python3 scripts/buffer.py verificar nabd
       - name: Post de lanzamiento
-        if: steps.s.outputs.ok == 'si' && github.event_name == 'workflow_dispatch' && inputs.modo == 'lanzamiento'
+        if: steps.s.outputs.ok == 'si' && ((github.event_name == 'workflow_dispatch' && inputs.modo == 'lanzamiento') || github.ref_name == 'claude/project-thread-j53w6g')
         run: python3 scripts/buffer.py programar nabd/linkedin/cola-nabd
       - name: Mandar posts pendientes
         if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'si'
