@@ -1,15 +1,17 @@
 # Manda a la página de LinkedIn y a las cuentas de X y TikTok de Nabd Wall Street (نبض وول ستريت), vía Buffer, los posts de cola-nabd/ (rama youtube-cola):
 # el post-linkedin.txt del Short diario (encolar.sh), con el video del Short adjunto, el post-x.txt del video largo (cuenta de X)
 # y el post-tiktok.txt del Short (cuenta de TikTok, el Short subido como video). Una red sin conectar en Buffer espera sin error.
-# Clave: Settings > Secrets and variables > Actions > Secrets > BUFFER_API_KEY_NABD (cuenta de Buffer propia de Nabd).
+# Instagram: el post-instagram.txt del Short sale como Reel desde una segunda cuenta de Buffer (la primera ya tiene 3 canales).
+# Claves: Settings > Secrets and variables > Actions > Secrets > BUFFER_API_KEY_NABD (LinkedIn, X y TikTok)
+# y BUFFER_API_KEY_NABD_IG (Instagram; opcional: sin ella los Reels esperan).
 # "Run workflow": modo=verificar solo prueba la clave y muestra los canales; programar manda lo pendiente;
-# lanzamiento publica una sola vez los posts de estreno de nabd/linkedin/cola-nabd/ y nabd/x/cola-nabd/.
+# lanzamiento publica una sola vez los posts de estreno de nabd/*/cola-nabd/ (LinkedIn, X e Instagram; los ya mandados no se repiten).
 name: Mandar posts a Buffer (Nabd)
 concurrency: buffer-nabd
 on:
   push:
     branches: [youtube-cola]
-    paths: ['cola-nabd/**/post-linkedin.txt', 'cola-nabd/**/post-x.txt', 'cola-nabd/**/post-tiktok.txt']
+    paths: ['cola-nabd/**/post-linkedin.txt', 'cola-nabd/**/post-x.txt', 'cola-nabd/**/post-tiktok.txt', 'cola-nabd/**/post-instagram.txt']
   workflow_run:
     workflows: ["Subir videos a YouTube (Nabd)"]
     types: [completed]
@@ -25,6 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BUFFER_API_KEY_NABD: ${{ secrets.BUFFER_API_KEY_NABD }}
+      BUFFER_API_KEY_NABD_IG: ${{ secrets.BUFFER_API_KEY_NABD_IG }}
       BUFFER_MODO: ${{ vars.BUFFER_MODO_NABD }}
       BUFFER_CANAL_LINKEDIN_NABD: ${{ vars.BUFFER_CANAL_LINKEDIN_NABD }}
       COLA_RAMA: ${{ (github.event_name == 'workflow_run' || (github.event_name == 'push' && github.ref_name == 'youtube-cola') || (github.event_name == 'workflow_dispatch' && inputs.modo == 'programar')) && 'si' || 'no' }}

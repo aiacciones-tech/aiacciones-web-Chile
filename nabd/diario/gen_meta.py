@@ -1,7 +1,7 @@
 # Metadatos de YouTube (video y Short), posts (X, Threads, Facebook, LinkedIn, TikTok, Instagram, Telegram) y miniatura del video diario en árabe de Nabd Wall Street (نبض وول ستريت).
 # Uso: python3 gen_meta.py <carpeta del día>   (lee info.json y times.json, que escribe make_video.py)
 # Todos los archivos que se entregan terminan en -Nabd (regla de Daniel, 8-nov-2026); encolar.sh copia a cola-nabd/ el video, el Short, sus metadatos y la miniatura.
-# post-telegram lo publica telegram-Nabd.yml; post-linkedin, post-x y post-tiktok buffer-Nabd.yml (vía encolar.sh); el resto quedan listos por si se conectan más redes.
+# post-telegram lo publica telegram-Nabd.yml; post-linkedin, post-x, post-tiktok y post-instagram buffer-Nabd.yml (vía encolar.sh); el resto quedan listos por si se conectan más redes.
 import json, sys, os, re
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from comun import *
