@@ -34,7 +34,7 @@ El contenedor de Claude no llega a TradingView ni a Yahoo. En festivos no se gua
 5. `AUD=<scratch> python3 make_short.py <dir>/short.json` y `python3 gen_meta.py <dir>`. Todo lo que se entrega termina en `-Nabd` (regla de Daniel, 8-nov-2026).
 6. `SCRATCH=<scratch> bash encolar.sh <dir>`: comprueba los archivos y el enlace del canal, el límite de YouTube (~10 subidas/24 h) y encola en
    `cola-nabd/bolsa-<fecha>` y `cola-nabd/bolsa-<fecha>-short` de `youtube-cola`; `youtube-Nabd.yml` los sube.
-   Nabd aún no tiene Buffer ni Telegram: los posts se generan pero no se encolan.
+   El post de Telegram va como `post-telegram.txt` del video largo y lo publica `telegram-Nabd.yml` (secretos `TELEGRAM_BOT_TOKEN_NABD` y `TELEGRAM_CHANNEL_NABD`; sin ellos no hace nada). Nabd aún no tiene Buffer: el resto de posts se generan pero no se encolan.
 
 ## Árabe y marca
 - Fuente: Tajawal (`fonts/`, OFL, la de la marca). Texto: `comun.ar()` une las letras con arabic-reshaper; matplotlib 3.11+ ordena de derecha a izquierda.
