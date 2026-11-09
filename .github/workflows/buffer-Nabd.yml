@@ -2,7 +2,7 @@
 # el post-linkedin.txt del Short diario (encolar.sh), con el video del Short adjunto, y el post-x.txt del video largo (cuenta de X).
 # Clave: Settings > Secrets and variables > Actions > Secrets > BUFFER_API_KEY_NABD (cuenta de Buffer propia de Nabd).
 # "Run workflow": modo=verificar solo prueba la clave y muestra los canales; programar manda lo pendiente;
-# lanzamiento publica una sola vez el post de estreno de nabd/linkedin/cola-nabd/lanzamiento/.
+# lanzamiento publica una sola vez los posts de estreno de nabd/linkedin/cola-nabd/ y nabd/x/cola-nabd/.
 name: Mandar posts a Buffer (Nabd)
 concurrency: buffer-nabd
 on:
@@ -44,7 +44,7 @@ jobs:
         run: python3 scripts/buffer.py verificar nabd
       - name: Post de lanzamiento
         if: steps.s.outputs.ok == 'si' && github.event_name == 'workflow_dispatch' && inputs.modo == 'lanzamiento'
-        run: python3 scripts/buffer.py programar nabd/linkedin/cola-nabd
+        run: for d in nabd/*/cola-nabd; do python3 scripts/buffer.py programar $d; done
       - name: Mandar posts pendientes
         if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'si'
         run: |
