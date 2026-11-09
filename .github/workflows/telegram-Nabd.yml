@@ -3,7 +3,8 @@
 # Credenciales: Settings > Secrets and variables > Actions > TELEGRAM_BOT_TOKEN_NABD (token de @BotFather)
 # y TELEGRAM_CHANNEL_NABD (@usuario del canal). El bot tiene que ser administrador del canal.
 # Solo post-telegram.txt (lo pone encolar.sh en el video largo; el Short no se publica). Sin los secretos no hace nada.
-# "Run workflow" con modo=verificar solo prueba el bot y el canal; modo=publicar manda lo pendiente.
+# "Run workflow" con modo=verificar solo prueba el bot y el canal; modo=publicar manda lo pendiente;
+# modo=bienvenida publica y fija el mensaje de bienvenida (nabd/telegram/), una sola vez al estrenar el canal.
 name: Publicar en Telegram (Nabd)
 concurrency: telegram-nabd
 on:
@@ -16,7 +17,7 @@ on:
   workflow_dispatch:
     inputs:
       modo:
-        description: "verificar (solo el bot y el canal) o publicar (desde la rama youtube-cola)"
+        description: "verificar (solo el bot y el canal), publicar (desde la rama youtube-cola) o bienvenida (mensaje fijado)"
         default: verificar
 permissions:
   contents: write
@@ -43,6 +44,9 @@ jobs:
       - name: Verificar bot y canal
         if: steps.s.outputs.ok == 'si' && github.event_name == 'workflow_dispatch' && inputs.modo != 'publicar'
         run: python3 scripts/telegram.py verificar
+      - name: Bienvenida
+        if: steps.s.outputs.ok == 'si' && github.event_name == 'workflow_dispatch' && inputs.modo == 'bienvenida'
+        run: python3 nabd/telegram/bienvenida.py
       - name: Publicar pendientes
         if: steps.s.outputs.ok == 'si' && (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar')
         run: python3 scripts/telegram.py publicar cola-nabd
