@@ -10,7 +10,7 @@ porque la primera (`BUFFER_API_KEY_NABD`) ya tiene LinkedIn, X y TikTok, el máx
   (rama `youtube-cola`), junto al `video.mp4` del Short, y `buffer-Nabd.yml` lo publica como Reel (también en el feed).
 - **Post de bienvenida** (primera foto del perfil): `nabd/instagram/cola-nabd/lanzamiento/` (texto + `imagen.png`
   1080x1350). Se publica una sola vez con "Run workflow" de `buffer-Nabd.yml`, modo `lanzamiento`
-  (los de LinkedIn y X ya tienen su `buffer*.json` y no se repiten).
+  (los de LinkedIn y X ya tienen su `buffer*.json` y no se repiten). Publicado el 9-nov-2026 (`buffer-instagram.json`; mientras exista no se repite).
 - Mientras Instagram no esté conectado (o falte el secreto), el post espera sin error; los cierres de hace más de
   3 días no se mandan.
 - Comprobar la conexión: "Run workflow" de `buffer-Nabd.yml` con `modo=verificar` (debe decir
