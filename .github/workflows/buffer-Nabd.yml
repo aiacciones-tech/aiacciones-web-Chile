@@ -1,5 +1,6 @@
-# Manda a la página de LinkedIn y a la cuenta de X de Nabd Wall Street (نبض وول ستريت), vía Buffer, los posts de cola-nabd/ (rama youtube-cola):
-# el post-linkedin.txt del Short diario (encolar.sh), con el video del Short adjunto, y el post-x.txt del video largo (cuenta de X).
+# Manda a la página de LinkedIn y a las cuentas de X y TikTok de Nabd Wall Street (نبض وول ستريت), vía Buffer, los posts de cola-nabd/ (rama youtube-cola):
+# el post-linkedin.txt del Short diario (encolar.sh), con el video del Short adjunto, el post-x.txt del video largo (cuenta de X)
+# y el post-tiktok.txt del Short (cuenta de TikTok, el Short subido como video). Una red sin conectar en Buffer espera sin error.
 # Clave: Settings > Secrets and variables > Actions > Secrets > BUFFER_API_KEY_NABD (cuenta de Buffer propia de Nabd).
 # "Run workflow": modo=verificar solo prueba la clave y muestra los canales; programar manda lo pendiente;
 # lanzamiento publica una sola vez los posts de estreno de nabd/linkedin/cola-nabd/ y nabd/x/cola-nabd/.
@@ -8,7 +9,7 @@ concurrency: buffer-nabd
 on:
   push:
     branches: [youtube-cola]
-    paths: ['cola-nabd/**/post-linkedin.txt', 'cola-nabd/**/post-x.txt']
+    paths: ['cola-nabd/**/post-linkedin.txt', 'cola-nabd/**/post-x.txt', 'cola-nabd/**/post-tiktok.txt']
   workflow_run:
     workflows: ["Subir videos a YouTube (Nabd)"]
     types: [completed]
