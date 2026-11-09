@@ -1,0 +1,40 @@
+# Datos de Wall Street (S&P 500, Nasdaq, Dow Jones, Russell 2000) para el vídeo diario en árabe de Nabd Wall Street (nabd/diario/).
+# Los días de sesión de Nueva York (lunes a viernes, salvo festivos de EE. UU.) a las 21:40 UTC: 16:40 en Nueva York en horario de invierno
+# y 17:40 en verano, siempre después del cierre de las 16:00.
+# Guarda datos/mercado-<fecha>.json en la rama datos-diario-nabd (no en main, para no disparar despliegues).
+# Un push a una rama claude/** (prueba del código) también guarda, pero solo con la bolsa cerrada, para no guardar datos a mitad de sesión.
+name: Datos del video diario (Nabd)
+on:
+  schedule:
+    - cron: "40 21 * * 1-5"
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths: ["nabd/diario/datos_mercado.py", ".github/workflows/datos-diario-Nabd.yml"]
+permissions:
+  contents: write
+concurrency: datos-diario-nabd
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar datos
+        id: datos
+        # En la ejecución programada no se guarda nada si la bolsa no abrió hoy (festivo).
+        env:
+          SOLO_DIA_DE_SESION: ${{ github.event_name == 'schedule' && '1' || '0' }}
+        run: pip install -q websocket-client && python3 nabd/diario/datos_mercado.py
+      - name: Guardar en la rama datos-diario-nabd
+        if: github.event_name != 'push' || steps.datos.outputs.cerrado == '1'
+        run: |
+          ls nabd/diario/datos/mercado-*.json >/dev/null 2>&1 || exit 0
+          mkdir -p /tmp/out && cp nabd/diario/datos/mercado-*.json /tmp/out/
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          if git fetch -q origin datos-diario-nabd; then git checkout -q -B datos-diario-nabd origin/datos-diario-nabd; else git checkout -q --orphan datos-diario-nabd && git rm -rfq . ; fi
+          mkdir -p datos && cp /tmp/out/*.json datos/
+          git add datos
+          git diff --cached --quiet && exit 0
+          git commit -qm "Datos del video diario Nabd $(date -u +%F)"
+          for i in 1 2 3; do git push -q origin datos-diario-nabd && break; sleep 5; git pull -q --rebase origin datos-diario-nabd; done

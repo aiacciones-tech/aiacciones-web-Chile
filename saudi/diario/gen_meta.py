@@ -1,4 +1,4 @@
-# Metadatos de YouTube (video y Short), posts (X, Threads, Facebook, TikTok, Instagram, Telegram) y miniatura del video diario en árabe de @SaudiArabiaAIStocks.
+# Metadatos de YouTube (video y Short), posts (X, Threads, Facebook, LinkedIn, TikTok, Instagram, Telegram) y miniatura del video diario en árabe de @SaudiArabiaAIStocks.
 # Uso: python3 gen_meta.py <carpeta del día>   (lee info.json y times.json, que escribe make_video.py)
 # Todos los archivos que se entregan terminan en -SA (regla de Daniel, 7-nov-2026); encolar.sh los copia a cola-sa/ con los nombres de la cola.
 import json, sys, os, re
@@ -46,6 +46,15 @@ li = (f"أسهم السعودية | ملخص جلسة {I['fecha_txt']}\n\n{I['re
       f"المصادر: {I['fuentes']}.\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. التحليل الفني يصف بيانات وليس إشارات شراء أو بيع. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n\n" + I["hashtags"])
 assert len(li.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 2950, len(li)
 open(f"{D}/post-facebook-{F}-SA.txt", "w").write(li)
+# LinkedIn (regla permanente de Daniel, 8-nov-2026): el Short subido como video nativo (no enlace), con un resumen con valor
+# (3-4 datos clave con cifras y qué cambió + una conclusión, sin relleno), la autoría transparente y al final el enlace al canal.
+L = I["linkedin"]
+assert 3 <= len(L["datos"]) <= 4, "LinkedIn: 3 o 4 datos clave"
+lk = (f"أسهم السعودية | جلسة {I['fecha_txt']}\n\n" + "\n".join("• " + c for c in L["datos"]) + f"\n\nالخلاصة: {L['conclusion']}\n\n"
+      "محتوى تعليمي وليس نصيحة استثمارية. التحليل الفني بيانات وليس إشارات شراء أو بيع.\n"
+      f"فيديو من إعداد قناة Saudi Arabia AI Stocks.\n{CANAL}")
+assert len(lk) <= 2950 and "{youtube}" not in lk and lk.rstrip().endswith(CANAL)
+open(f"{D}/post-linkedin-{F}-SA.txt", "w").write(lk)
 tk = f"{I['tiktok']}\n{cta_post}{canal_linea}\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n{I['hashtags_short']}"
 open(f"{D}/post-tiktok-{F}-SA.txt", "w").write(tk); open(f"{D}/post-instagram-{F}-SA.txt", "w").write(tk)
 tg = (f"📊 أسهم السعودية | {I['fecha_txt']}\n\n{I['resumen']}\n\n" + "\n".join("• " + c for c in I["claves_cortas"]) +
