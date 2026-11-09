@@ -112,16 +112,17 @@ def s_fact(t):
 
 def s_movers(t):
     V_=VJ["valores"]; MOT=V_.get("motivos",{})
-    f=base_fig(3,"Valores del IBEX 35",f"{R['bajan']} bajan y {R['suben']} suben" if R['bajan']>=R['suben'] else f"{R['suben']} suben y {R['bajan']} bajan",V_["fuente"])
-    for col_x,lst,cc,title in [(0.06,R["mejores"],ACC,"MÁS SUBEN"),(0.52,R["peores"],NEG,"MÁS BAJAN")]:
+    f=base_fig(3,"Valores del IBEX 35",(lambda n,v1,v2: f"{n} {v1 if n==1 else v2}")(R['bajan'],"baja","bajan")+" y "+(lambda n,v1,v2: f"{n} {v1 if n==1 else v2}")(R['suben'],"sube","suben") if R['bajan']>=R['suben'] else (lambda n,v1,v2: f"{n} {v1 if n==1 else v2}")(R['suben'],"sube","suben")+" y "+(lambda n,v1,v2: f"{n} {v1 if n==1 else v2}")(R['bajan'],"baja","bajan"),V_["fuente"])
+    t2="MÁS BAJAN" if all(x[2]<0 for x in R["peores"]) else ("LOS MÁS FLOJOS" if any(x[2]<0 for x in R["peores"]) else "LOS QUE MENOS SUBEN")
+    for col_x,lst,cc,title in [(0.06,R["mejores"],ACC,"MÁS SUBEN"),(0.52,R["peores"],NEG,t2)]:
         f.text(col_x,0.72,title,color=cc,fontsize=24,weight="bold"); mx=max(abs(x[2]) for x in R["mejores"]+R["peores"])
         for i,(nom,tk,ch) in enumerate(lst):
             b=ease((t-i*0.08)/0.4)
             if b<=0: continue
             y=0.645-i*0.095; bw=0.13*abs(ch)/mx*b
-            f.patches.append(plt.Rectangle((col_x+0.19,y-0.004),bw,0.035,transform=f.transFigure,color=cc,figure=f))
+            f.patches.append(plt.Rectangle((col_x+0.19,y-0.004),bw,0.035,transform=f.transFigure,color=ACC if ch>0 else (NEG if ch<0 else DIM),figure=f))
             f.text(col_x,y,nom,color=FG,fontsize=25,weight="bold",alpha=b)
-            f.text(col_x+0.19+bw+0.008,y,pc(ch),color=FG,fontsize=23,weight="bold",alpha=b)
+            f.text(col_x+0.19+bw+0.008,y,pc(ch) if ch else "0,00%",color=FG,fontsize=23,weight="bold",alpha=b)
             if tk in MOT: f.text(col_x,y-0.035,MOT[tk],color=MUTED,fontsize=17,alpha=b)
     if V_.get("extra"): f.text(0.06,0.14,V_["extra"],color=ACC2,fontsize=25,weight="bold",alpha=ease((t-0.5)/0.4))
     return to_arr(f)
