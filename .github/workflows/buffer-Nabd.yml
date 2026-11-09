@@ -1,0 +1,62 @@
+# Manda a la página de LinkedIn de Nabd Wall Street (نبض وول ستريت), vía Buffer, los posts de cola-nabd/ (rama youtube-cola):
+# el post-linkedin.txt del Short diario (encolar.sh), con el video del Short adjunto.
+# Clave: Settings > Secrets and variables > Actions > Secrets > BUFFER_API_KEY_NABD (cuenta de Buffer propia de Nabd).
+# "Run workflow": modo=verificar solo prueba la clave y muestra los canales; programar manda lo pendiente;
+# lanzamiento publica una sola vez el post de estreno de nabd/linkedin/cola-nabd/lanzamiento/.
+name: Mandar posts a Buffer (Nabd)
+concurrency: buffer-nabd
+on:
+  push:
+    branches: [youtube-cola, claude/project-thread-j53w6g]
+    paths: ['cola-nabd/**/post-linkedin.txt', '.github/workflows/buffer-Nabd.yml']
+  workflow_run:
+    workflows: ["Subir videos a YouTube (Nabd)"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "verificar (solo la clave), programar (desde la rama youtube-cola) o lanzamiento (post de estreno, una vez)"
+        default: verificar
+permissions:
+  contents: write
+jobs:
+  buffer:
+    runs-on: ubuntu-latest
+    env:
+      BUFFER_API_KEY_NABD: ${{ secrets.BUFFER_API_KEY_NABD }}
+      BUFFER_MODO: ${{ vars.BUFFER_MODO_NABD }}
+      BUFFER_CANAL_LINKEDIN_NABD: ${{ vars.BUFFER_CANAL_LINKEDIN_NABD }}
+      COLA_RAMA: ${{ (github.event_name == 'workflow_run' || (github.event_name == 'push' && github.ref_name == 'youtube-cola') || (github.event_name == 'workflow_dispatch' && inputs.modo == 'programar')) && 'si' || 'no' }}
+    steps:
+      - name: Comprobar secreto
+        id: s
+        run: |
+          if [ -z "$BUFFER_API_KEY_NABD" ]; then
+            echo "Falta el secreto BUFFER_API_KEY_NABD: no se manda nada."; echo "ok=no" >> $GITHUB_OUTPUT
+            [ "${{ github.event_name }}" != workflow_dispatch ] || exit 1
+          else echo "ok=si" >> $GITHUB_OUTPUT; fi
+      - uses: actions/checkout@v4
+        if: steps.s.outputs.ok == 'si'
+        with:
+          ref: ${{ env.COLA_RAMA == 'si' && 'youtube-cola' || github.ref }}
+      - name: Verificar clave
+        if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'no'
+        run: python3 scripts/buffer.py verificar nabd
+      - name: Post de lanzamiento
+        if: steps.s.outputs.ok == 'si' && github.event_name == 'workflow_dispatch' && inputs.modo == 'lanzamiento'
+        run: python3 scripts/buffer.py programar nabd/linkedin/cola-nabd
+      - name: Mandar posts pendientes
+        if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'si'
+        run: |
+          if [ -d cola-nabd ]; then python3 scripts/buffer.py programar cola-nabd; else echo "No hay cola-nabd/."; fi
+      - name: Guardar IDs de Buffer
+        if: always() && steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'si'
+        run: |
+          [ -d cola-nabd ] || exit 0
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add cola-nabd
+          git diff --cached --quiet && exit 0
+          git commit -m "IDs de Buffer Nabd $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
+          exit 1

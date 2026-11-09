@@ -49,6 +49,8 @@ BUFFER_ACCESS_TOKEN_SAUDI2); variables con sufijo _SA (BUFFER_CANAL_SA, BUFFER_C
 Baréin (canal Bahrain AI Stocks, posts en árabe): igual que Arabia Saudita, `programar cola-bahrain` con su propia
 cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_BAHRAIN, que el workflow pasa como BUFFER_API_KEY_BAHRAIN, y opcional
 BUFFER_ACCESS_TOKEN_BAHRAIN2 / _BAHRAIN3 por el límite de 3 canales del plan gratis); variables con sufijo _BAHRAIN.
+Nabd Wall Street (نبض وول ستريت, en árabe): `programar cola-nabd` con su propia cuenta de Buffer (secreto
+BUFFER_API_KEY_NABD, página de LinkedIn); variables con sufijo _NABD. `verificar nabd` prueba solo esa cuenta.
 Threads: <cola>/<slug>/post-threads.txt (máximo 500 caracteres), con imagen.png o miniatura.png adjunta si hay.
 Solo usa la biblioteca estándar de Python.
 """
@@ -144,12 +146,15 @@ CLAVES_SA = ("BUFFER_API_KEY_SA", "BUFFER_API_KEY_SA2")  # cuentas de Buffer sol
 CANAL_SA = "https://www.youtube.com/@SaudiArabiaAIStocks"  # handle por confirmar
 CLAVES_BH = ("BUFFER_API_KEY_BAHRAIN", "BUFFER_API_KEY_BAHRAIN2", "BUFFER_API_KEY_BAHRAIN3")  # cuentas solo de Baréin
 CANAL_BH = "https://www.youtube.com/@BahrainAIStocks"  # handle por confirmar cuando Daniel cree el canal
-SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA", "saudi": "_SA", "bahrain": "_BAHRAIN"}
+CLAVES_NABD = ("BUFFER_API_KEY_NABD",)  # cuenta de Buffer de Nabd Wall Street (página de LinkedIn)
+CANAL_NABD = "https://www.youtube.com/channel/UCRU3n034y5dJBEGnhAKjhfQ"
+SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA", "saudi": "_SA", "bahrain": "_BAHRAIN", "nabd": "_NABD"}
 # países con cuentas de Buffer propias (todos sus canales son de ese país) y su canal de YouTube
 PROPIOS = {"eau": (CLAVES_EAU, CANAL_EAU, "BUFFER_ACCESS_TOKEN_EAU", "EAU"),
            "qatar": (CLAVES_QA, CANAL_QA, "BUFFER_ACCESS_TOKEN_QA", "Qatar"),
            "saudi": (CLAVES_SA, CANAL_SA, "BUFFER_ACCESS_TOKEN_SAUDI", "Arabia Saudita"),
-           "bahrain": (CLAVES_BH, CANAL_BH, "BUFFER_ACCESS_TOKEN_BAHRAIN", "Baréin")}
+           "bahrain": (CLAVES_BH, CANAL_BH, "BUFFER_ACCESS_TOKEN_BAHRAIN", "Baréin"),
+           "nabd": (CLAVES_NABD, CANAL_NABD, "BUFFER_API_KEY_NABD", "Nabd Wall Street")}
 
 
 def sin_tildes(t):
@@ -230,6 +235,19 @@ def canales_eau(pais="eau"):
 def usar_clave(pais):
     global CLAVE
     CLAVE = "BUFFER_API_KEY_ES" if pais == "espana" and os.environ.get("BUFFER_API_KEY_ES") else "BUFFER_API_KEY"
+
+
+def verificar_propio(pais):
+    """Solo la cuenta de Buffer de ese país (p. ej. `verificar nabd`), sin tocar las claves de Chile."""
+    claves, _, secreto, rotulo = PROPIOS[pais]
+    if not os.environ.get(claves[0]):
+        sys.exit(f"{rotulo}: falta el secreto {secreto}.")
+    lista = canales_eau(pais)
+    for c in lista:
+        print(f"- {c['service']}: {c.get('displayName') or c['name']} [{c['id']}] en {c['org']}")
+    for red in REDES:
+        ea = elegir_canal(red, lista, pais)
+        print(f"{rotulo}, {REDES[red]['nombre']}: " + (f"{ea.get('displayName') or ea['name']} [{ea['id']}]" if ea else "sin canal"))
 
 
 def verificar():
@@ -330,7 +348,7 @@ def enlace_video(carpeta, nombre="video.mp4"):
 
 def programar(base):
     global CLAVE
-    pais = {"cola-es": "espana", "cola-eau": "eau", "cola-qa": "qatar", "cola-sa": "saudi", "cola-bahrain": "bahrain"}.get(os.path.basename(os.path.normpath(base)), "chile")
+    pais = {"cola-es": "espana", "cola-eau": "eau", "cola-qa": "qatar", "cola-sa": "saudi", "cola-bahrain": "bahrain", "cola-nabd": "nabd"}.get(os.path.basename(os.path.normpath(base)), "chile")
     modo = (os.environ.get("BUFFER_MODO") or "ahora").strip().lower()
     if modo not in MODOS:
         sys.exit(f"BUFFER_MODO debe ser ahora, cola o borrador, no {modo!r}.")
@@ -423,8 +441,10 @@ def programar(base):
 
 
 if __name__ == "__main__":
-    if sys.argv[1:2] == ["verificar"]:
+    if sys.argv[1:] == ["verificar"]:
         verificar()
+    elif sys.argv[1:2] == ["verificar"] and len(sys.argv) == 3 and sys.argv[2] in PROPIOS:
+        verificar_propio(sys.argv[2])
     elif sys.argv[1:2] == ["programar"] and len(sys.argv) == 3:
         programar(sys.argv[2])
     else:
