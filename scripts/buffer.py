@@ -377,6 +377,14 @@ def programar(base):
         if canal is None:
             print(f"{slug}: {r['nombre']} no está conectado en Buffer; queda pendiente.")
             continue
+        fecha = re.search(r"(\d{4}-\d{2}-\d{2})", slug)
+        if pais == "nabd" and fecha and (datetime.now(timezone.utc).date()
+                                         - datetime.strptime(fecha[1], "%Y-%m-%d").date()).days > 3:
+            # Nabd: un cierre de hace más de 3 días ya no es noticia (p. ej. al conectar X después); no se manda
+            json.dump({"caducado": True, "fecha": datetime.now(timezone.utc).isoformat(timespec="seconds")},
+                      open(os.path.join(carpeta, r["registro"]), "w", encoding="utf-8"), indent=1)
+            print(f"{slug} ({r['nombre']}): de hace más de 3 días; no se manda.")
+            continue
         texto, privado = texto_final(carpeta, archivo_post(carpeta, r, pais))
         if texto is None:
             print(f"{slug} ({r['nombre']}): {privado}; queda pendiente.")

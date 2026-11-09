@@ -3,7 +3,9 @@
 # Después youtube-Nabd.yml los sube al canal Nabd Wall Street (نبض وول ستريت).
 # El post de Telegram (post-telegram-<fecha>-Nabd.txt) va como post-telegram.txt del video largo: telegram-Nabd.yml lo publica
 # con la miniatura cuando el video ya está en YouTube. El post de LinkedIn (post-linkedin-<fecha>-Nabd.txt) va como
-# post-linkedin.txt del Short: buffer-Nabd.yml lo manda a la página de LinkedIn con el Short adjunto. El resto se queda en la carpeta del día.
+# post-linkedin.txt del Short: buffer-Nabd.yml lo manda a la página de LinkedIn con el Short adjunto. El post de X (post-x-<fecha>-Nabd.txt)
+# va como post-x.txt del video largo: buffer-Nabd.yml lo manda a X con el enlace al video (si X no está conectado en Buffer, espera).
+# El resto se queda en la carpeta del día.
 set -e
 B=$(cd "$1" && pwd); F=$(python3 -c "import json;print(json.load(open('$B/info.json'))['fecha'])"); S=${SCRATCH:-/tmp/nabd-scratch}; mkdir -p $S
 for f in video-bolsa-$F-Nabd.mp4 short-bolsa-$F-Nabd.mp4 meta-youtube-$F-Nabd.json meta-short-$F-Nabd.json miniatura-$F-Nabd.png; do
@@ -27,6 +29,7 @@ C=cola-nabd/bolsa-$F; CS=cola-nabd/bolsa-$F-short
 mkdir -p $C $CS
 cp $B/video-bolsa-$F-Nabd.mp4 $C/video.mp4; cp $B/meta-youtube-$F-Nabd.json $C/meta.json; cp $B/miniatura-$F-Nabd.png $C/miniatura.png
 [ -s $B/post-telegram-$F-Nabd.txt ] && cp $B/post-telegram-$F-Nabd.txt $C/post-telegram.txt
+[ -s $B/post-x-$F-Nabd.txt ] && cp $B/post-x-$F-Nabd.txt $C/post-x.txt
 cp $B/short-bolsa-$F-Nabd.mp4 $CS/video.mp4; cp $B/meta-short-$F-Nabd.json $CS/meta.json
 [ -s $B/post-linkedin-$F-Nabd.txt ] && cp $B/post-linkedin-$F-Nabd.txt $CS/post-linkedin.txt
 git add cola-nabd; git commit -qm "Cola Nabd: video diario de Wall Street $F (video y Short)"
