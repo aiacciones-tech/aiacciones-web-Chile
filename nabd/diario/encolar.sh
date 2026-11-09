@@ -1,7 +1,8 @@
 #!/bin/bash
 # bash encolar.sh <carpeta del día>: encola el video diario en árabe de Wall Street y su Short en cola-nabd/bolsa-<fecha>[-short]/ de la rama youtube-cola.
 # Después youtube-Nabd.yml los sube al canal Nabd Wall Street (نبض وول ستريت).
-# Nabd aún no tiene Buffer ni Telegram: los posts que genera gen_meta.py se quedan en la carpeta del día y no se encolan.
+# El post de Telegram (post-telegram-<fecha>-Nabd.txt) va como post-telegram.txt del video largo: telegram-Nabd.yml lo publica
+# con la miniatura cuando el video ya está en YouTube. El resto de posts (Buffer) se quedan en la carpeta del día.
 set -e
 B=$(cd "$1" && pwd); F=$(python3 -c "import json;print(json.load(open('$B/info.json'))['fecha'])"); S=${SCRATCH:-/tmp/nabd-scratch}; mkdir -p $S
 for f in video-bolsa-$F-Nabd.mp4 short-bolsa-$F-Nabd.mp4 meta-youtube-$F-Nabd.json meta-short-$F-Nabd.json miniatura-$F-Nabd.png; do
@@ -24,6 +25,7 @@ C=cola-nabd/bolsa-$F; CS=cola-nabd/bolsa-$F-short
 [ -f $C/resultado.json ] && { echo "ya subido: $C"; exit 1; }
 mkdir -p $C $CS
 cp $B/video-bolsa-$F-Nabd.mp4 $C/video.mp4; cp $B/meta-youtube-$F-Nabd.json $C/meta.json; cp $B/miniatura-$F-Nabd.png $C/miniatura.png
+[ -s $B/post-telegram-$F-Nabd.txt ] && cp $B/post-telegram-$F-Nabd.txt $C/post-telegram.txt
 cp $B/short-bolsa-$F-Nabd.mp4 $CS/video.mp4; cp $B/meta-short-$F-Nabd.json $CS/meta.json
 git add cola-nabd; git commit -qm "Cola Nabd: video diario de Wall Street $F (video y Short)"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done

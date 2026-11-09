@@ -1,0 +1,62 @@
+# Publica en el canal de Telegram de Nabd Wall Street (نبض وول ستريت) cada video diario de cola-nabd/ (rama youtube-cola)
+# cuando ya está subido a YouTube: foto (miniatura.png) + post-telegram.txt con el enlace del video.
+# Credenciales: Settings > Secrets and variables > Actions > TELEGRAM_BOT_TOKEN_NABD (token de @BotFather)
+# y TELEGRAM_CHANNEL_NABD (@usuario del canal). El bot tiene que ser administrador del canal.
+# Solo post-telegram.txt (lo pone encolar.sh en el video largo; el Short no se publica). Sin los secretos no hace nada.
+# "Run workflow" con modo=verificar solo prueba el bot y el canal; modo=publicar manda lo pendiente;
+# modo=bienvenida publica y fija el mensaje de bienvenida (nabd/telegram/), una sola vez al estrenar el canal.
+name: Publicar en Telegram (Nabd)
+concurrency: telegram-nabd
+on:
+  workflow_run:
+    workflows: ["Subir videos a YouTube (Nabd)"]
+    types: [completed]
+  push:
+    branches: [youtube-cola]
+    paths: ['cola-nabd/**/post-telegram.txt']
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "verificar (solo el bot y el canal), publicar (desde la rama youtube-cola) o bienvenida (mensaje fijado)"
+        default: verificar
+permissions:
+  contents: write
+jobs:
+  telegram:
+    runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN_NABD }}
+      TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL_NABD || vars.TELEGRAM_CHANNEL_NABD }}
+      TELEGRAM_SOLO_POST_TELEGRAM: "1"
+      TELEGRAM_CANAL_YOUTUBE: https://www.youtube.com/channel/UCRU3n034y5dJBEGnhAKjhfQ
+    steps:
+      - name: Comprobar secretos
+        id: s
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHANNEL" ]; then
+            echo "Faltan TELEGRAM_BOT_TOKEN_NABD o TELEGRAM_CHANNEL_NABD: no se publica nada."; echo "ok=no" >> $GITHUB_OUTPUT
+            [ "${{ github.event_name }}" != workflow_dispatch ] || exit 1
+          else echo "ok=si" >> $GITHUB_OUTPUT; fi
+      - uses: actions/checkout@v4
+        if: steps.s.outputs.ok == 'si'
+        with:
+          ref: ${{ (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar') && 'youtube-cola' || github.ref }}
+      - name: Verificar bot y canal
+        if: steps.s.outputs.ok == 'si' && github.event_name == 'workflow_dispatch' && inputs.modo != 'publicar'
+        run: python3 scripts/telegram.py verificar
+      - name: Bienvenida
+        if: steps.s.outputs.ok == 'si' && github.event_name == 'workflow_dispatch' && inputs.modo == 'bienvenida'
+        run: python3 nabd/telegram/bienvenida.py
+      - name: Publicar pendientes
+        if: steps.s.outputs.ok == 'si' && (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar')
+        run: python3 scripts/telegram.py publicar cola-nabd
+      - name: Guardar lo publicado
+        if: always() && steps.s.outputs.ok == 'si' && (github.event_name != 'workflow_dispatch' || inputs.modo == 'publicar')
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add cola-nabd
+          git diff --cached --quiet && exit 0
+          git commit -m "Telegram Nabd $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
+          exit 1
