@@ -5,6 +5,7 @@
 # con la miniatura cuando el video ya está en YouTube. El post de LinkedIn (post-linkedin-<fecha>-Nabd.txt) va como
 # post-linkedin.txt del Short: buffer-Nabd.yml lo manda a la página de LinkedIn con el Short adjunto. El post de X (post-x-<fecha>-Nabd.txt)
 # va como post-x.txt del video largo: buffer-Nabd.yml lo manda a X con el enlace al video (si X no está conectado en Buffer, espera).
+# El post de TikTok (post-tiktok-<fecha>-Nabd.txt) va como post-tiktok.txt del Short: buffer-Nabd.yml sube el Short a TikTok con ese texto.
 # El resto se queda en la carpeta del día.
 set -e
 B=$(cd "$1" && pwd); F=$(python3 -c "import json;print(json.load(open('$B/info.json'))['fecha'])"); S=${SCRATCH:-/tmp/nabd-scratch}; mkdir -p $S
@@ -32,6 +33,7 @@ cp $B/video-bolsa-$F-Nabd.mp4 $C/video.mp4; cp $B/meta-youtube-$F-Nabd.json $C/m
 [ -s $B/post-x-$F-Nabd.txt ] && cp $B/post-x-$F-Nabd.txt $C/post-x.txt
 cp $B/short-bolsa-$F-Nabd.mp4 $CS/video.mp4; cp $B/meta-short-$F-Nabd.json $CS/meta.json
 [ -s $B/post-linkedin-$F-Nabd.txt ] && cp $B/post-linkedin-$F-Nabd.txt $CS/post-linkedin.txt
+[ -s $B/post-tiktok-$F-Nabd.txt ] && cp $B/post-tiktok-$F-Nabd.txt $CS/post-tiktok.txt
 git add cola-nabd; git commit -qm "Cola Nabd: video diario de Wall Street $F (video y Short)"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done
 for i in $(seq 80); do git pull -q origin youtube-cola 2>/dev/null; [ -f $C/resultado.json ] && [ -f $CS/resultado.json ] && break; sleep 15; done

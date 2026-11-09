@@ -1,7 +1,7 @@
 # Metadatos de YouTube (video y Short), posts (X, Threads, Facebook, LinkedIn, TikTok, Instagram, Telegram) y miniatura del video diario en árabe de Nabd Wall Street (نبض وول ستريت).
 # Uso: python3 gen_meta.py <carpeta del día>   (lee info.json y times.json, que escribe make_video.py)
 # Todos los archivos que se entregan terminan en -Nabd (regla de Daniel, 8-nov-2026); encolar.sh copia a cola-nabd/ el video, el Short, sus metadatos y la miniatura.
-# post-telegram lo publica telegram-Nabd.yml y post-linkedin buffer-Nabd.yml (vía encolar.sh); el resto quedan listos por si se conectan más redes.
+# post-telegram lo publica telegram-Nabd.yml; post-linkedin, post-x y post-tiktok buffer-Nabd.yml (vía encolar.sh); el resto quedan listos por si se conectan más redes.
 import json, sys, os, re
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from comun import *
@@ -56,7 +56,12 @@ lk = (f"نبض وول ستريت | جلسة {I['fecha_txt']}\n\n" + "\n".join("�
       f"فيديو من إعداد قناة نبض وول ستريت (Nabd Wall Street).\n{CANAL}")
 assert len(lk) <= 2950 and "{youtube}" not in lk and lk.rstrip().endswith(CANAL)
 open(f"{D}/post-linkedin-{F}-Nabd.txt", "w").write(lk)
-tk = f"{I['tiktok']}\n{cta_post}{canal_linea}\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n{I['hashtags_short']}"
+# TikTok e Instagram (Reels): sin #Shorts (es de YouTube) y con el aviso de IA en el texto, porque el canal es 100% IA (Daniel, 9-nov-2026)
+tags_tk = " ".join(t for t in I["hashtags_short"].split() if t.lower() != "#shorts")
+tags_tk = ("#نبض_وول_ستريت " + tags_tk).strip() if "#نبض_وول_ستريت" not in tags_tk else tags_tk
+tk = (f"{I['tiktok']}\n{cta_post}{canal_linea}\n🤖 فيديو من إعداد الذكاء الاصطناعي (نص وصوت ورسوم).\n"
+      f"محتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n{tags_tk}")
+assert len(tk) <= 2200, len(tk)
 open(f"{D}/post-tiktok-{F}-Nabd.txt", "w").write(tk); open(f"{D}/post-instagram-{F}-Nabd.txt", "w").write(tk)
 tg = (f"📊 نبض وول ستريت | {I['fecha_txt']}\n\n{I['resumen']}\n\n" + "\n".join("• " + c for c in I["claves_cortas"]) +
       f"\n\n▶️ الفيديو الكامل: {{youtube}}\n{cta_post}{canal_linea}\n\nمحتوى تعليمي وليس نصيحة استثمارية. لا نملك مراكز في الأسهم المذكورة.")
