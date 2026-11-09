@@ -50,7 +50,8 @@ Baréin (canal Bahrain AI Stocks, posts en árabe): igual que Arabia Saudita, `p
 cuenta de Buffer (secreto BUFFER_ACCESS_TOKEN_BAHRAIN, que el workflow pasa como BUFFER_API_KEY_BAHRAIN, y opcional
 BUFFER_ACCESS_TOKEN_BAHRAIN2 / _BAHRAIN3 por el límite de 3 canales del plan gratis); variables con sufijo _BAHRAIN.
 Nabd Wall Street (نبض وول ستريت, en árabe): `programar cola-nabd` con su propia cuenta de Buffer (secreto
-BUFFER_API_KEY_NABD, página de LinkedIn); variables con sufijo _NABD. `verificar nabd` prueba solo esa cuenta.
+BUFFER_API_KEY_NABD: LinkedIn, X y TikTok) y una segunda para Instagram (BUFFER_API_KEY_NABD_IG, por el límite de
+3 canales del plan gratis); variables con sufijo _NABD. `verificar nabd` prueba solo esas cuentas.
 Threads: <cola>/<slug>/post-threads.txt (máximo 500 caracteres), con imagen.png o miniatura.png adjunta si hay.
 Solo usa la biblioteca estándar de Python.
 """
@@ -146,7 +147,7 @@ CLAVES_SA = ("BUFFER_API_KEY_SA", "BUFFER_API_KEY_SA2")  # cuentas de Buffer sol
 CANAL_SA = "https://www.youtube.com/@SaudiArabiaAIStocks"  # handle por confirmar
 CLAVES_BH = ("BUFFER_API_KEY_BAHRAIN", "BUFFER_API_KEY_BAHRAIN2", "BUFFER_API_KEY_BAHRAIN3")  # cuentas solo de Baréin
 CANAL_BH = "https://www.youtube.com/@BahrainAIStocks"  # handle por confirmar cuando Daniel cree el canal
-CLAVES_NABD = ("BUFFER_API_KEY_NABD",)  # cuenta de Buffer de Nabd Wall Street (página de LinkedIn)
+CLAVES_NABD = ("BUFFER_API_KEY_NABD", "BUFFER_API_KEY_NABD_IG")  # cuentas de Buffer de Nabd Wall Street (LinkedIn, X y TikTok; Instagram)
 CANAL_NABD = "https://www.youtube.com/channel/UCRU3n034y5dJBEGnhAKjhfQ"
 SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA", "saudi": "_SA", "bahrain": "_BAHRAIN", "nabd": "_NABD"}
 # países con cuentas de Buffer propias (todos sus canales son de ese país) y su canal de YouTube
@@ -244,7 +245,7 @@ def verificar_propio(pais):
         sys.exit(f"{rotulo}: falta el secreto {secreto}.")
     lista = canales_eau(pais)
     for c in lista:
-        print(f"- {c['service']}: {c.get('displayName') or c['name']} [{c['id']}] en {c['org']}")
+        print(f"- {c['service']}: {c.get('displayName') or c['name']} [{c['id']}] en {c['org']} ({c['clave']})")
     for red in REDES:
         ea = elegir_canal(red, lista, pais)
         print(f"{rotulo}, {REDES[red]['nombre']}: " + (f"{ea.get('displayName') or ea['name']} [{ea['id']}]" if ea else "sin canal"))
