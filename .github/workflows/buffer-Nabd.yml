@@ -49,6 +49,18 @@ jobs:
       - name: Post de lanzamiento
         if: steps.s.outputs.ok == 'si' && github.event_name == 'workflow_dispatch' && inputs.modo == 'lanzamiento'
         run: for d in nabd/*/cola-nabd; do python3 scripts/buffer.py programar $d; done
+      - name: Guardar IDs del lanzamiento
+        # para que un modo lanzamiento posterior no repita los posts de estreno (sin pasos a mano)
+        if: always() && steps.s.outputs.ok == 'si' && github.event_name == 'workflow_dispatch' && inputs.modo == 'lanzamiento'
+        continue-on-error: true
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add nabd/*/cola-nabd
+          git diff --cached --quiet && exit 0
+          git commit -m "IDs de Buffer del lanzamiento Nabd $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
+          echo "::warning::No pude guardar los IDs del lanzamiento en ${{ github.ref_name }}"
       - name: Mandar posts pendientes
         if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'si'
         run: |
