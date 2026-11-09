@@ -7,8 +7,8 @@ name: Mandar posts a Buffer (Nabd)
 concurrency: buffer-nabd
 on:
   push:
-    branches: [youtube-cola, claude/project-thread-j53w6g]
-    paths: ['cola-nabd/**/post-linkedin.txt', '.github/workflows/buffer-Nabd.yml']
+    branches: [youtube-cola]
+    paths: ['cola-nabd/**/post-linkedin.txt']
   workflow_run:
     workflows: ["Subir videos a YouTube (Nabd)"]
     types: [completed]
@@ -43,7 +43,7 @@ jobs:
         if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'no'
         run: python3 scripts/buffer.py verificar nabd
       - name: Post de lanzamiento
-        if: steps.s.outputs.ok == 'si' && ((github.event_name == 'workflow_dispatch' && inputs.modo == 'lanzamiento') || github.ref_name == 'claude/project-thread-j53w6g')
+        if: steps.s.outputs.ok == 'si' && github.event_name == 'workflow_dispatch' && inputs.modo == 'lanzamiento'
         run: python3 scripts/buffer.py programar nabd/linkedin/cola-nabd
       - name: Mandar posts pendientes
         if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'si'
