@@ -11,7 +11,8 @@ YAHOO = {"qe": ["^GNRI", "GNRI.QA"]}  # respaldo
 CTX = ["QSE:GNRI", "ADX:FADGI", "DFM:DFMGI", "TADAWUL:TASI", "TVC:KWSE", "BAHRAIN:BAX", "MSM:MSX30", "NYMEX:JKM1!", "ICEENDEX:TFM1!", "NYMEX:NG1!", "TVC:UKOIL", "TVC:USOIL", "ICEEUR:BRN1!", "NYMEX:CL1!", "FX:UKOIL", "OANDA:BCOUSD", "SP:SPX", "NASDAQ:NDX", "DJ:DJI", "TVC:NI225", "TVC:HSI", "SSE:000001",
        "TVC:KOSPI", "TVC:SX5E", "TVC:UKX", "TVC:GOLD", "TVC:US10Y", "TVC:US02Y", "TVC:DXY", "FX_IDC:USDQAR"]
 COLS = ["name", "description", "close", "change", "change_abs", "volume", "Value.Traded", "average_volume_10d_calc",
-        "market_cap_basic", "time", "Perf.W", "Perf.1M", "Perf.YTD", "type", "exchange", "sector"]
+        "market_cap_basic", "time", "Perf.W", "Perf.1M", "Perf.YTD", "type", "exchange", "sector",
+        "RSI", "SMA50", "SMA200", "price_52_week_high", "price_52_week_low", "Perf.3M", "Perf.6M"]  # técnicos por acción (vídeo de 5 min)
 
 
 def get(url, data=None, extra=None):
