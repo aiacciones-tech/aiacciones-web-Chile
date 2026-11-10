@@ -1,6 +1,6 @@
 """Voz neuronal de Azure (ar-SA-HamedNeural) para el vídeo largo de Nabd Wall Street, frase a frase.
 Corre en GitHub Actions (voz-Nabd.yml), porque el contenedor de Claude no llega a Azure. La clave nunca sale de los secretos.
-uso: AZURE_SPEECH_KEY=... AZURE_SPEECH_REGION=westeurope python3 voz_azure.py <video.json> <carpeta de salida>
+uso: AZURE_SPEECH_KEY=... AZURE_SPEECH_REGION=northeurope python3 voz_azure.py <video.json> <carpeta de salida>
 Escribe <clave>.wav (24 kHz, 16 bits, mono) por frase y manifest.json; make_video.py los usa con VOZ_DIR=<carpeta>."""
 import json, os, sys, time, urllib.request, html
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +26,7 @@ def sintetiza(frase, key, region):
 
 def main():
     VJ = json.load(open(sys.argv[1])); out = sys.argv[2]; os.makedirs(out, exist_ok=True)
-    key, region = os.environ["AZURE_SPEECH_KEY"], os.environ.get("AZURE_SPEECH_REGION", "westeurope")
+    key, region = os.environ["AZURE_SPEECH_KEY"], os.environ.get("AZURE_SPEECH_REGION", "northeurope")
     F = [f for t in textos(VJ) for f in frases(t)]
     n = 0
     for f in F:

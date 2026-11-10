@@ -2,7 +2,7 @@
 # Se lanza sola cuando la sesión diaria sube nabd/diario/<fecha>/video.json a una rama claude/nabd-diario-*, o a mano con "Run workflow".
 # Deja un wav por frase en <fecha>/ de la rama voz-nabd (se reescribe cada día, sin historial, para no engordar el repo);
 # make_video.py los usa con VOZ_DIR. Sin los secretos no hace nada y el vídeo sale con la voz Piper.
-# Secretos: AZURE_SPEECH_KEY_NABD (Clave 1 del recurso de voz de Azure) y AZURE_SPEECH_REGION_NABD (p. ej. westeurope).
+# Secretos: AZURE_SPEECH_KEY_NABD (Clave 1 del recurso de voz de Azure) y AZURE_SPEECH_REGION_NABD (p. ej. northeurope).
 # modo=verificar solo prueba la clave con una frase.
 name: Voz Azure del video diario (Nabd)
 on:
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_NABD }}
-      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_NABD || 'westeurope' }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_NABD || 'northeurope' }}
     steps:
       - uses: actions/checkout@v4
       - name: Comprobar la clave
