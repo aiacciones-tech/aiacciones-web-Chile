@@ -1,0 +1,102 @@
+{
+ "empresa": "IPSA",
+ "trimestre": "9 nov 2026",
+ "out": "short-bolsa-chile-2026-11-09.mp4",
+ "fuente": "Fuentes: TradingView, TheStreet\n(9-nov-2026). RSI y estocástico: calculados.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "IPSA · Sesión del",
+   "titulo": "9 nov 2026",
+   "sub": "Lunes · la Bolsa de Santiago hoy",
+   "big": "+0,50%",
+   "big_fs": 165,
+   "big_label": "Cierre: 10.589,7 puntos",
+   "color": "acc",
+   "pregunta": "+53 puntos",
+   "voz": "El IPSA sube cero coma cincuenta por ciento el lunes, con Wall Street a favor. Tres claves."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Nasdaq 100 (EE. UU.)",
+   "big": "+3,40%",
+   "delta": "rebote tras su peor semana",
+   "color": "acc",
+   "barras": [
+    [
+     "IPSA",
+     0.5
+    ],
+    [
+     "S&P 500",
+     2.35
+    ],
+    [
+     "Nasdaq 100",
+     3.4
+    ]
+   ],
+   "fmt": "+{:.2f}%",
+   "nota": "El petróleo cayó cerca de 3%\n(TheStreet).",
+   "voz": "Uno. Wall Street: el Nasdaq rebotó tres coma cuatro por ciento, y el petróleo cayó."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Cobre (COMEX)",
+   "big": "+2,23%",
+   "delta": "US$6,38 la libra",
+   "color": "acc",
+   "barras": [
+    [
+     "IPSA",
+     0.5
+    ],
+    [
+     "Bovespa",
+     2.22
+    ],
+    [
+     "Cobre",
+     2.23
+    ]
+   ],
+   "fmt": "+{:.2f}%",
+   "nota": "Pero CAP y SQM-B cayeron,\nsin noticia concreta en prensa.",
+   "voz": "Dos. El cobre subió dos coma dos por ciento, pero CAP y SQM frenaron al IPSA."
+  },
+  {
+   "tipo": "kpis",
+   "label": "Análisis técnico",
+   "items": [
+    [
+     "44",
+     "RSI (neutral)",
+     "acc2"
+    ],
+    [
+     "37",
+     "Estocástico",
+     "acc"
+    ],
+    [
+     "10.741",
+     "Resistencia",
+     "fg"
+    ]
+   ],
+   "nota": "Media de 50: 11.037. Media de 200: 10.923.\nSon datos, no señales de compra o venta.",
+   "voz": "Tres. El gráfico: el IPSA sigue bajo sus medias, con el RSI en zona neutral."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "IPSA · 9 nov",
+   "titular": "Sube con Wall Street\ny el cobre.",
+   "cta": "Video completo en el canal",
+   "web": "aiacciones.cl/calendario",
+   "voz": "El análisis completo, en nuestro canal. Contenido informativo, no es una recomendación de inversión."
+  }
+ ],
+ "length_scale": 0.95
+}
