@@ -27,7 +27,7 @@ def s_titulo(e, t):
     f = fig(W, H); a = ease(t / 0.5)
     T(f, XR, 0.80, e["kicker"], GOLD, 36, "bold", alpha=a)
     f.patches.append(plt.Rectangle((0, 0.665), 1.0, 0.115, transform=f.transFigure, color=GOLD, alpha=a, figure=f))
-    T(f, XR, 0.722, e["fecha"], BG, 76, "bold", va="center", alpha=a)
+    T(f, XR, 0.722, e["fecha"], BG, 76 if len(e["fecha"]) <= 21 else 64, "bold", va="center", alpha=a)
     for i, (nom, big, sub, c) in enumerate(e["indices"]):
         b = ease((t - 0.15 - i * 0.15) / 0.5); y = 0.57 - i * 0.165
         T(f, XR, y, nom, MUTED, 38, "bold", alpha=b)
