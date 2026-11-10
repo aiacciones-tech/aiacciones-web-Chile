@@ -172,6 +172,122 @@ def tech(k, n_sec, t):
 def s_tech(t): return tech("bax", 4, t)
 
 
+def _tabla(f, filas, t, y0=0.715, dy=0.063, xv=0.67):
+    for i, (lab, val, cc) in enumerate(filas):
+        b = ease((t - 0.3 - i * 0.05) / 0.4)
+        if b <= 0: continue
+        y = y0 - i * dy
+        T(f, 0.94, y, lab, MUTED, 19, alpha=b)
+        T(f, xv, y, val, cc, 21, "bold", ha="left", alpha=b)
+
+
+def _eje_meses(ax, dates, idx):
+    tk = [j for j in range(1, NB) if dates[idx[j]].month != dates[idx[j - 1]].month]
+    if not tk or tk[0] > 12: tk = [0] + tk
+    ax.set_xticks(tk, [ar(MESES[dates[idx[j]].month - 1]) for j in tk]); ax.tick_params(labelsize=15)
+
+
+def s_tech_mom(t):
+    """Momentum: RSI 14, stochastic and MACD (12, 26, 9) of the index over 6 months."""
+    TJ = VJ["tecnico"].get("momentum", {}); r = R["bax"]; mo = r["momentum"]; a_ = A["bax"]
+    f = base_fig(4, "التحليل الفني · الزخم", TJ.get("titulo", f"القوة النسبية {num(r['rsi14'], 1)} · MACD {num(mo['macd'], 1)}"),
+                 "RSI 14 والعشوائي (14، 3، 3) و MACD (12، 26، 9): محسوبة من شموع مباشر اليومية لمؤشر البحرين العام. هذه بيانات وليست إشارات شراء أو بيع.")
+    n = len(a_["c"]); idx = np.arange(n - NB, n); x = np.arange(NB); m = max(2, int(NB * ease(t / 0.8)))
+    ax = f.add_axes([0.05, 0.53, 0.56, 0.21]); clean(ax)
+    ax.axhspan(70, 100, color=NEG, alpha=0.07); ax.axhspan(0, 30, color=TEAL, alpha=0.07)
+    for lv in (30, 50, 70): ax.axhline(lv, color=DIM, lw=0.8, ls=":")
+    ax.plot(x[:m], a_["RSI"][idx][:m], color=BLUE, lw=2.4, label="RSI 14")
+    ax.set_xlim(-1, NB); ax.set_ylim(0, 100); ax.set_xticks([]); ax.yaxis.tick_right(); ax.set_yticks([30, 50, 70]); ax.tick_params(axis="y", labelsize=14)
+    ax.legend(frameon=False, labelcolor=FG, fontsize=15, loc="upper left")
+    ax2 = f.add_axes([0.05, 0.36, 0.56, 0.15]); clean(ax2)
+    for lv in (20, 80): ax2.axhline(lv, color=DIM, lw=0.8, ls=":")
+    ax2.plot(x[:m], a_["K"][idx][:m], color=TEAL, lw=1.8, label="%K"); ax2.plot(x[:m], a_["D"][idx][:m], color=NEG, lw=1.8, label="%D")
+    ax2.set_xlim(-1, NB); ax2.set_ylim(0, 100); ax2.set_xticks([]); ax2.yaxis.tick_right(); ax2.set_yticks([20, 80]); ax2.tick_params(axis="y", labelsize=14)
+    ax2.legend(frameon=False, labelcolor=FG, fontsize=14, loc="upper left", ncol=2)
+    ax3 = f.add_axes([0.05, 0.13, 0.56, 0.21]); clean(ax3)
+    hh = a_["HIST"][idx]
+    ax3.bar(x[:m], hh[:m], color=[TEAL if v >= 0 else NEG for v in hh[:m]], width=0.8, alpha=0.6)
+    ax3.plot(x[:m], a_["MACD"][idx][:m], color=BLUE, lw=2, label="MACD"); ax3.plot(x[:m], a_["SIG"][idx][:m], color=GOLD, lw=1.8, label=ar("خط الإشارة"))
+    ax3.axhline(0, color=DIM, lw=0.8); ax3.set_xlim(-1, NB); ax3.yaxis.tick_right(); ax3.tick_params(axis="y", labelsize=13)
+    ax3.legend(frameon=False, labelcolor=FG, fontsize=14, loc="upper right", ncol=2); _eje_meses(ax3, a_["dates"], idx)
+    hist_txt = ("يتسع" if abs(mo["macd_hist"]) > abs(mo["macd_hist_prev"]) else "يضيق") + (" موجبًا" if mo["macd_hist"] >= 0 else " سالبًا")
+    filas = [("RSI 14 اليوم", num(r["rsi14"], 1), BLUE),
+             ("RSI قبل 5 جلسات", num(mo["rsi_5"], 1), MUTED),
+             ("RSI قبل 20 جلسة", num(mo["rsi_20"], 1), MUTED),
+             ("أدنى RSI في 6 أشهر", num(mo["rsi_min_6m"], 1), MUTED),
+             ("جلسات متتالية دون 30", str(mo["rsi_sesiones_bajo_30"]) if mo["rsi_sesiones_bajo_30"] else "لا يوجد", TEAL),
+             ("العشوائي %K / %D", f"{num(r['estoc_k'], 0)} / {num(r['estoc_d'], 0)}" + ("  · %K فوق %D" if mo["estoc_k_sobre_d"] else "  · %K دون %D"), TEAL),
+             ("MACD / خط الإشارة", f"{num(mo['macd'], 2)} / {num(mo['macd_senal'], 2)}", BLUE),
+             ("مدرج MACD", f"{num(mo['macd_hist'], 2)}  · {hist_txt}", TEAL if mo["macd_hist"] >= 0 else NEG)]
+    _tabla(f, filas, t)
+    return to_arr(f)
+
+
+def s_tech_vol(t):
+    """Volume against its 10 and 50-session averages, ATR and performance over several horizons."""
+    TJ = VJ["tecnico"].get("volumen", {}); r = R["bax"]; mo = r["momentum"]; a_ = A["bax"]
+    f = base_fig(4, "التحليل الفني · الحجم والتقلب والأداء", TJ.get("titulo", f"{'ارتفاع' if mo['perf_ytd'] >= 0 else 'تراجع'} {num(abs(mo['perf_ytd']), 1)}% منذ بداية العام"),
+                 "الحجم ومتوسطاه و ATR 14 والتقلب السنوي (20 جلسة) والأداء: محسوبة من بيانات مباشر لمؤشر البحرين العام. هذه بيانات وليست إشارات شراء أو بيع.")
+    n = len(a_["c"]); idx = np.arange(n - NB, n); x = np.arange(NB); m = max(2, int(NB * ease(t / 0.8)))
+    ax = f.add_axes([0.05, 0.40, 0.56, 0.34]); clean(ax)
+    vv = a_["vol"][idx] / 1e6
+    ax.bar(x[:m], vv[:m], color=MUTED, width=0.8, alpha=0.55)
+    ax.plot(x[:m], a_["V10"][idx][:m] / 1e6, color=BLUE, lw=2.2, label=ar("متوسط 10 جلسات"))
+    ax.plot(x[:m], a_["V50"][idx][:m] / 1e6, color=GOLD, lw=2.2, label=ar("متوسط 50 جلسة"))
+    ax.set_xlim(-1, NB); ax.set_xticks([]); ax.yaxis.tick_right(); ax.tick_params(axis="y", labelsize=13)
+    ax.set_ylim(0, np.nanpercentile(vv, 98) * 1.25)
+    ax.legend(frameon=False, labelcolor=FG, fontsize=15, loc="upper left", ncol=2)
+    T(f, 0.05, 0.755, "حجم التداول (مليون سهم)", MUTED, 16, ha="left")
+    ax2 = f.add_axes([0.05, 0.13, 0.56, 0.22]); clean(ax2)
+    ax2.plot(x[:m], a_["ATR"][idx][:m], color=NEG, lw=2.2, label="ATR 14")
+    ax2.set_xlim(-1, NB); ax2.yaxis.tick_right(); ax2.tick_params(axis="y", labelsize=13)
+    ax2.legend(frameon=False, labelcolor=FG, fontsize=14, loc="lower left"); _eje_meses(ax2, a_["dates"], idx)
+    vm = lambda v: "—" if v is None else f"{v / 1e6:,.2f} م"
+    filas = [("حجم اليوم", vm(mo["vol_hoy"]), FG), ("متوسط 10 / 50 جلسة", f"{vm(mo['vol_media10'])} / {vm(mo['vol_media50'])}", BLUE),
+             ("ATR 14", f"{num(mo['atr14'], 2)} · {num(mo['atr14_pct'], 2)}%", NEG),
+             ("التقلب السنوي (20 جلسة)", f"{num(mo['volatilidad20_anual_pct'], 1)}%", NEG),
+             ("عن قمة 52 أسبوعًا", pct(mo["dist_max52_pct"], 1), NEG), ("عن قاع 52 أسبوعًا", pct(mo["dist_min52_pct"], 1), TEAL)]
+    _tabla(f, filas, t, y0=0.715, dy=0.058)
+    # performance bars, right to left
+    P = [("أسبوع", mo["perf_1s"]), ("شهر", mo["perf_1m"]), ("3 أشهر", mo["perf_3m"]), ("6 أشهر", mo["perf_6m"]), ("منذ بداية العام", mo["perf_ytd"])]
+    P = [(l, v) for l, v in P if v is not None]; mx = max([abs(v) for _, v in P] + [0.5])
+    T(f, 0.94, 0.36, "الأداء (محسوب)", GOLD, 21, "bold", alpha=ease((t - 0.5) / 0.4))
+    for i, (l, v) in enumerate(P):
+        b = ease((t - 0.55 - i * 0.05) / 0.35)
+        if b <= 0: continue
+        y = 0.31 - i * 0.04; cx = 0.78; bw = 0.10 * abs(v) / mx * b; cc = TEAL if v >= 0 else NEG
+        T(f, 0.94, y, l, MUTED, 17, alpha=b)
+        f.patches.append(plt.Rectangle((cx if v >= 0 else cx - bw, y - 0.002), bw, 0.024, transform=f.transFigure, color=cc, figure=f))
+        f.text(cx + bw + 0.006 if v >= 0 else cx - bw - 0.006, y, pct(v, 1), color=FG, fontsize=16, weight="bold", ha="left" if v >= 0 else "right", alpha=b)
+    return to_arr(f)
+
+
+def s_tech_acc(t):
+    """Technical snapshot of the biggest stocks of the index (TradingView scanner)."""
+    TJ = VJ["tecnico"].get("acciones", {}); L = R["tecnico_acciones"]
+    f = base_fig(4, "التحليل الفني · أكبر أسهم المؤشر", TJ.get("titulo", "المؤشرات الفنية لأكبر الأسهم"),
+                 "أكبر أسهم المؤشر بالقيمة السوقية. RSI 14 والعشوائي %K والمتوسطات والأداء: TradingView؛ البعد عن المتوسطات: محسوب. هذه بيانات وليست إشارات شراء أو بيع.")
+    cols = [(0.94, "السهم", "right"), (0.66, "الإغلاق", "left"), (0.57, "اليوم", "left"), (0.48, "RSI 14", "left"), (0.40, "%K", "left"),
+            (0.32, "عن م 50", "left"), (0.23, "عن م 200", "left"), (0.13, "3 أشهر", "left")]
+    for xc, h, ha in cols: T(f, xc if ha == "right" else xc, 0.70, h, GOLD, 20, "bold", ha="right" if ha == "right" else "right")
+    sg = lambda v: MUTED if v is None else (TEAL if v >= 0 else NEG)
+    rc = lambda v: MUTED if v is None else BLUE  # neutral colour: levels are data, not signals
+    for i, s in enumerate(L):
+        b = ease((t - 0.15 - i * 0.07) / 0.4)
+        if b <= 0: continue
+        y = 0.63 - i * 0.075
+        T(f, 0.94, y, s["nombre"], FG, 22, "bold", alpha=b); T(f, 0.94, y - 0.03, s["ticker"], MUTED, 14, alpha=b)
+        vals = [(num(s["cierre"], 3), FG), (pct(s["cambio"]) if s["cambio"] is not None else "—", sg(s["cambio"])),
+                (num(s["rsi"], 0) if s["rsi"] is not None else "—", rc(s["rsi"])), (num(s["estoc_k"], 0) if s["estoc_k"] is not None else "—", rc(s["estoc_k"])),
+                (pct(s["dist_sma50_pct"], 1) if s["dist_sma50_pct"] is not None else "—", sg(s["dist_sma50_pct"])),
+                (pct(s["dist_sma200_pct"], 1) if s["dist_sma200_pct"] is not None else "—", sg(s["dist_sma200_pct"])),
+                (pct(s["perf_3m"], 1) if s["perf_3m"] is not None else "—", sg(s["perf_3m"]))]
+        for (xc, _, _), (v, cc) in zip(cols[1:], vals):
+            f.text(xc, y, v, color=cc, fontsize=21, weight="bold", ha="right", alpha=b)
+    if TJ.get("nota"): T(f, 0.94, 0.15, TJ["nota"], BLUE, 21, "bold", alpha=ease((t - 0.6) / 0.4))
+    return to_arr(f)
+
+
 def s_agenda(t):
     G = VJ["agenda"]; f = base_fig(5, "الأجندة", G["titulo"], G["fuente"])
     for i, (d_, e_, s_) in enumerate(G["filas"]):
@@ -199,7 +315,8 @@ def s_fin(t):
     return with_logo(to_arr(f), LGB, x=110, y=90)
 
 
-SEQ = [s_title, s_news, s_fact, s_movers, s_tech, s_agenda, s_fin]; BIG = {s_title, s_fin}
+SEQ = [s_title, s_news, s_fact, s_movers, s_tech, s_tech_mom, s_tech_vol] + ([s_tech_acc] if R["tecnico_acciones"] else []) + [s_agenda, s_fin]
+BIG = {s_title, s_fin}
 def frame(fn, t):
     arr = fn(t); return arr if fn in BIG else with_logo(arr, LGS, x=60, y=48)
 
@@ -214,7 +331,7 @@ if __name__ == "__main__":
     LEAD, TAIL = 0.12, 0.45
     durs = [LEAD + len(a) / sr + TAIL for a, _ in clips]; durs[0] += 0.4; durs[-1] += 1.5
     print("duración prevista", round(sum(durs), 1), [round(d, 1) for d in durs])
-    if sum(durs) > 180: sys.exit(f"Video demasiado largo: {sum(durs):.1f} s (máx. 180). Acorta la locución.")
+    if sum(durs) > 300: sys.exit(f"Video demasiado largo: {sum(durs):.1f} s (máx. 300, 5 minutos). Acorta la locución.")
     leads = [LEAD + (0.4 if j == 0 else 0) for j in range(len(SEQ))]
     times, t0 = render([lambda t, fn=fn: frame(fn, t) for fn in SEQ], durs, ([a for a, _ in clips], leads), sr, W, H, FPS, OUT,
                        os.path.join(AUD, "video-silent.mp4"), os.path.join(AUD, "full.wav"))

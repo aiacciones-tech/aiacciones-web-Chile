@@ -35,6 +35,12 @@ def velas(D, k):
     return dates, o, hi, lo, c, vol
 
 
+def _ema(a, n):
+    k_ = 2 / (n + 1); e = a[0]
+    for x in a:
+        e = x * k_ + e * (1 - k_); yield e
+
+
 def calc_indice(D, k):
     dates, o, hi, lo, c, vol = velas(D, k)
     sma = lambda n: np.array([c[max(0, i - n + 1):i + 1].mean() if i >= n - 1 else np.nan for i in range(len(c))])
@@ -69,7 +75,30 @@ def calc_indice(D, k):
     sem = [i for i, d in enumerate(dates) if d <= dates[-1] - dt.timedelta(days=(dates[-1].weekday() + 1) % 7 + 1)]  # Bahrain Bourse week: Sunday to Thursday
     ult_bajo = max([i for i in range(len(c) - 1) if c[i] <= c[-1]], default=None)
     ult_alto = max([i for i in range(len(c) - 1) if c[i] >= c[-1]], default=None)
-    return dict(fecha=dates[-1].isoformat(), cierre=round(float(c[-1]), 2), anterior=round(float(c[-2]), 2),
+    # Momentum, volume and volatility for the longer technical section (Daniel, 10-nov-2026: 5-minute video, more technical analysis)
+    ema = lambda a, n: np.array(list(_ema(a, n)))
+    MACD = ema(c, 12) - ema(c, 26); SIG = ema(MACD, 9); HIST = MACD - SIG
+    tr = np.maximum(hi[1:] - lo[1:], np.maximum(abs(hi[1:] - c[:-1]), abs(lo[1:] - c[:-1])))
+    ATR = np.array([np.nan] + [tr[max(0, i - 13):i + 1].mean() if i >= 13 else np.nan for i in range(len(tr))])
+    ret = np.diff(np.log(c)); vol20 = float(np.std(ret[-20:], ddof=1) * np.sqrt(250) * 100)
+    perf = lambda days: (lambda j: round(float(c[-1] / c[j] * 100 - 100), 2) if j is not None else None)(
+        max([i for i, d in enumerate(dates) if d <= dates[-1] - dt.timedelta(days=days)], default=None))
+    ytd = max([i for i, d in enumerate(dates) if d.year < dates[-1].year], default=None)
+    bajo30 = 0
+    for v_ in RSI[::-1]:
+        if v_ < 30: bajo30 += 1
+        else: break
+    V10 = np.array([np.nanmean(vol[max(0, i - 9):i + 1]) for i in range(len(vol))]); V50 = np.array([np.nanmean(vol[max(0, i - 49):i + 1]) for i in range(len(vol))])
+    mom = dict(rsi_5=round(float(RSI[-6]), 1), rsi_20=round(float(RSI[-21]), 1), rsi_min_6m=round(float(np.nanmin(RSI[-126:])), 1),
+               rsi_sesiones_bajo_30=bajo30, macd=round(float(MACD[-1]), 2), macd_senal=round(float(SIG[-1]), 2), macd_hist=round(float(HIST[-1]), 2),
+               macd_hist_prev=round(float(HIST[-2]), 2), estoc_k_sobre_d=bool(K[-1] > Dl[-1]),
+               atr14=round(float(ATR[-1]), 2), atr14_pct=round(float(ATR[-1] / c[-1] * 100), 2), volatilidad20_anual_pct=round(vol20, 1),
+               rango_dia_pct=round(float((hi[-1] - lo[-1]) / c[-2] * 100), 2),
+               perf_1s=perf(7), perf_1m=perf(30), perf_3m=perf(91), perf_6m=perf(182), perf_ytd=round(float(c[-1] / c[ytd] * 100 - 100), 2) if ytd is not None else None,
+               dist_max52_pct=round(float(c[-1] / hi[i_hi] * 100 - 100), 2), dist_min52_pct=round(float(c[-1] / lo[i_lo] * 100 - 100), 2),
+               vol_media10=None if np.isnan(V10[-1]) else round(float(V10[-1])), vol_media50=None if np.isnan(V50[-1]) else round(float(V50[-1])),
+               vol_hoy=None if np.isnan(vol[-1]) else round(float(vol[-1])))
+    return dict(fecha=dates[-1].isoformat(), cierre=round(float(c[-1]), 2), anterior=round(float(c[-2]), 2), momentum=mom,
                 var_pct=round(float(c[-1] / c[-2] * 100 - 100), 2), var_pts=round(float(c[-1] - c[-2]), 2),
                 semana_pct=round(float(c[-1] / c[sem[-1]] * 100 - 100), 2) if sem else None, cierre_semana_anterior=round(float(c[sem[-1]]), 2) if sem else None,
                 max_dia=round(float(hi[-1]), 2), min_dia=round(float(lo[-1]), 2),
@@ -84,7 +113,7 @@ def calc_indice(D, k):
                 valor_negociado_bhd=round(sum(valor_bhd(v) for v in acc)), negociadas=len(acc),
                 suben=sum(1 for v in acc if (v.get("change") or 0) > 0), bajan=sum(1 for v in acc if (v.get("change") or 0) < 0),
                 sin_cambio=sum(1 for v in acc if v.get("change") == 0), niveles=niveles), \
-        dict(dates=dates, o=o, hi=hi, lo=lo, c=c, S50=S50, S200=S200, RSI=RSI, K=K, D=Dl)
+        dict(dates=dates, o=o, hi=hi, lo=lo, c=c, S50=S50, S200=S200, RSI=RSI, K=K, D=Dl, MACD=MACD, SIG=SIG, HIST=HIST, ATR=ATR, vol=vol, V10=V10, V50=V50)
 
 
 USD_COTIZA = {"GFH", "ABC", "ITHMR", "BARKA", "KHCB", "INOVEST", "ARIG", "KFH", "UGIC", "BASREC"}  # quoted in US dollars when TradingView does not say
@@ -143,6 +172,23 @@ def contexto(D, fecha):
     return out
 
 
+def tecnico_acciones(D, extra=None, n=6):
+    """Technical snapshot of the biggest stocks of the index (by market cap) from TradingView's scanner columns, when it has them."""
+    nom = dict(NOMBRES, **(extra or {})); out = []
+    rows = [(t.split(":")[1], v) for t, v in D.get("acciones", {}).items()
+            if t.split(":")[1] not in NO_INDICE and (v.get("indexes") is None or any(i.get("proname") == "BAHRAIN:BHBX" for i in v["indexes"]))]
+    for tk, v in sorted(rows, key=lambda x: -(x[1].get("market_cap_basic") or 0)):
+        if v.get("RSI") is None or v.get("close") is None: continue
+        r2 = lambda x, d=1: None if x is None else round(float(x), d)
+        dist = lambda m: None if not m else round(float(v["close"] / m * 100 - 100), 1)
+        out.append({"ticker": tk, "nombre": nom.get(tk, v.get("description")), "cierre": v["close"], "cambio": r2(v.get("change"), 2),
+                    "rsi": r2(v.get("RSI")), "estoc_k": r2(v.get("Stoch.K")), "dist_sma50_pct": dist(v.get("SMA50")), "dist_sma200_pct": dist(v.get("SMA200")),
+                    "perf_1m": r2(v.get("Perf.1M")), "perf_3m": r2(v.get("Perf.3M")), "perf_ytd": r2(v.get("Perf.YTD")),
+                    "max52": v.get("price_52_week_high"), "min52": v.get("price_52_week_low")})
+        if len(out) >= n: break
+    return out
+
+
 def calc(D, extra=None):
     R = {"bax": calc_indice(D, "bax")}
     A = {k: R[k][1] for k in R}; R = {k: R[k][0] for k in R}
@@ -151,6 +197,7 @@ def calc(D, extra=None):
     R["activos"] = [{"ticker": v["ticker"], "nombre": dict(NOMBRES, **(extra or {})).get(v["ticker"], v.get("description")), "valor_bhd": round(valor_bhd(v)),
                      "cambio": round(v.get("change") or 0, 2)} for v in sorted(acciones(D, "bax", f), key=valor_bhd, reverse=True)[:5]]
     R["contexto"] = contexto(D, f)
+    R["tecnico_acciones"] = tecnico_acciones(D, extra)
     return R, A
 
 
