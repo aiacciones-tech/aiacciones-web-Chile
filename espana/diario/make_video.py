@@ -1,6 +1,6 @@
 # Vídeo diario de la bolsa española (IBEX 35): 1080p, locución Piper es_ES davefx, logo AIAcciones España.
 # Uso: AUD=<scratch> python3 make_video.py <carpeta del día> [preview]
-#   La carpeta del día tiene mercado.json (de datos/mercado-<fecha>.json) y video.json (textos y locución; ver ejemplo-2026-11-06/).
+#   La carpeta del día tiene mercado.json (de datos/mercado-<fecha>.json) y video.json (textos y locución; ver ejemplo-2026-11-09/).
 #   Escribe <carpeta>/youtube-bolsa-espana-<fecha>.mp4 y AUD/times.json (capítulos).
 import subprocess, os, sys, wave, json, textwrap, numpy as np, matplotlib
 matplotlib.use("Agg")

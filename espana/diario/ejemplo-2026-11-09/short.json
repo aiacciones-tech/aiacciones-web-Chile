@@ -1,0 +1,106 @@
+{
+ "empresa": "IBEX 35",
+ "trimestre": "9 nov 2026",
+ "out": "short-bolsa-espana-2026-11-09.mp4",
+ "fuente": "Fuentes: TradingView, Yahoo Finance, Infobae e\nInvesting.com (9-nov-2026). RSI y estocástico: calculados.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "IBEX 35 · Sesión del",
+   "titulo": "9 nov 2026",
+   "sub": "Lunes · la bolsa española hoy",
+   "big": "+1,93%",
+   "big_fs": 165,
+   "big_label": "Cierre: 19.742,5 puntos",
+   "color": "acc",
+   "pregunta": "33 valores al alza",
+   "voz": "El IBEX treinta y cinco sube casi un dos por ciento el lunes, con treinta y tres valores al alza. Tres claves."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Brent (petróleo)",
+   "big": "-5,5%",
+   "delta": "caída máxima del lunes, ~93 $",
+   "color": "neg",
+   "barras": [
+    [
+     "Nasdaq 100",
+     3.1
+    ],
+    [
+     "Euro Stoxx 50",
+     1.94
+    ],
+    [
+     "IBEX 35",
+     1.93
+    ]
+   ],
+   "fmt": "+{:.2f}%",
+   "nota": "Esperanza de salida diplomática\nEE. UU.-Irán (Infobae).",
+   "voz": "Uno. El petróleo: el Brent llegó a caer un cinco y medio por ciento por la esperanza de una salida diplomática entre Estados Unidos e Irán."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Banca española",
+   "big": "+3,50%",
+   "big_fs": 150,
+   "delta": "Santander, el lunes",
+   "color": "acc",
+   "barras": [
+    [
+     "Bankinter",
+     2.57
+    ],
+    [
+     "Sabadell",
+     2.67
+    ],
+    [
+     "CaixaBank",
+     3.06
+    ],
+    [
+     "Santander",
+     3.5
+    ]
+   ],
+   "fmt": "+{:.2f}%",
+   "nota": "Informe de JPMorgan: ROTE del 22,2%\nen 2028 (Investing.com).",
+   "voz": "Dos. La banca: Santander subió un tres y medio por ciento y CaixaBank, un tres, tras un informe de JP Morgan."
+  },
+  {
+   "tipo": "kpis",
+   "label": "Análisis técnico",
+   "items": [
+    [
+     "60",
+     "RSI (neutral)",
+     "acc2"
+    ],
+    [
+     "82",
+     "Estocástico",
+     "neg"
+    ],
+    [
+     "19.762",
+     "Resistencia",
+     "fg"
+    ]
+   ],
+   "nota": "Media de 50: 19.394. Media de 200: 18.730.\nSon datos, no señales de compra o venta.",
+   "voz": "Tres. El gráfico: el RSI está en zona neutral y el estocástico entra en sobrecompra."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "IBEX 35 · 9 nov",
+   "titular": "Sube con la banca y\nel petróleo a la baja.",
+   "cta": "Déjanos tu comentario y suscríbete al canal",
+   "voz": "El análisis completo, en nuestro canal. Déjanos tu comentario y suscríbete. Contenido informativo, no es una recomendación de inversión."
+  }
+ ],
+ "length_scale": 0.95
+}
