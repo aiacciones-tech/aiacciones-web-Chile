@@ -14,6 +14,7 @@ Muestra: sesión del jueves 5-nov-2026 (`sample-2026-11-05-bahrain/`). Regla de 
    - `s_tech_mom`: RSI 14 de 6 meses (hoy, hace 5 y 20 sesiones, mínimo de 6 meses, sesiones seguidas bajo 30), estocástico %K/%D y MACD (12,26,9) con señal e histograma. Títulos en `tecnico.momentum.titulo`.
    - `s_tech_vol`: volumen frente a sus medias de 10 y 50 sesiones, ATR 14, volatilidad anualizada de 20 sesiones, distancia a máximo y mínimo de 52 semanas y rendimiento a 1 semana, 1 y 3 meses, 6 meses y en el año. `tecnico.volumen.titulo`.
    - `s_tech_acc`: tabla técnica de los 6 mayores valores del índice (RSI, %K, distancia a SMA 50/200, rendimiento 3 meses) del escáner de TradingView. Solo aparece si el escáner trae esos datos. `tecnico.acciones.titulo` y `nota` opcional.
+   - Ejemplo completo de 5 minutos (4:44, prueba no publicada): `sample-5min-2026-11-10-bahrain/video-bahrain.json`.
    - Cada escena técnica tiene su voz (`voz.s_tech_mom`, `voz.s_tech_vol`, `voz.s_tech_acc`) y su capítulo en `capitulos` de info-bahrain.json. Datos, no señales: nada de «comprar», «vender», «sobreventa = oportunidad».
 6. **Agenda** (`s_agenda`): resultados, juntas, dividendos, salidas a bolsa y datos de los próximos días.
 7. **Cierre** (`s_fin`): resumen, enlace al canal y aviso legal completo en árabe (también en la descripción).
