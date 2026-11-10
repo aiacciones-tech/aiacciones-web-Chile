@@ -41,7 +41,7 @@ jobs:
           if [ -z "$F" ]; then F=$(ls -d nabd/diario/20??-??-?? | sort | tail -1 | xargs basename); fi
           echo "fecha $F"
           python3 nabd/diario/voz_azure.py nabd/diario/$F/video.json /tmp/voz/$F
-          git config user.name "aiacciones-bot"; git config user.email "aiacciones-bot@users.noreply.github.com"
-          cd /tmp/voz && git init -q -b voz-nabd && git add . && git commit -qm "Voz Azure del video diario Nabd $F"
+          cd /tmp/voz && git init -q -b voz-nabd && git add .
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Voz Azure del video diario Nabd $F"
           git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
           for i in 1 2 3; do git push -qf origin voz-nabd && break; sleep 5; done
