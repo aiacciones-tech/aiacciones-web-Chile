@@ -68,7 +68,9 @@ def tv(tickers):
 
 def tv_acciones():
     """Every Bahrain Bourse stock (for the 5 biggest gainers and losers)."""
-    cols = COLS + ["typespecs", "subtype", "indexes"]
+    # Technical columns of each stock as TradingView's scanner computes them (daily), for the stocks scene of the technical analysis.
+    cols = COLS + ["typespecs", "subtype", "indexes", "RSI", "SMA50", "SMA200", "Stoch.K", "Stoch.D", "Perf.3M", "Perf.6M",
+                   "price_52_week_high", "price_52_week_low", "ATR", "Volatility.M"]
     body = {"columns": cols, "range": [0, 300], "filter": [{"left": "exchange", "operation": "equal", "right": "BAHRAIN"}], "sort": {"sortBy": "market_cap_basic", "sortOrder": "desc"}}
     err = None
     for mk in ("bahrain", "global"):
