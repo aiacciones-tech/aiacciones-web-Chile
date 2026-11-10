@@ -270,7 +270,7 @@ def s_tech_acc(t):
     cols = [(0.94, "السهم", "right"), (0.66, "الإغلاق", "left"), (0.57, "اليوم", "left"), (0.48, "RSI 14", "left"), (0.40, "%K", "left"),
             (0.32, "عن م 50", "left"), (0.23, "عن م 200", "left"), (0.13, "3 أشهر", "left")]
     for xc, h, ha in cols: T(f, xc if ha == "right" else xc, 0.70, h, GOLD, 20, "bold", ha="right" if ha == "right" else "right")
-    sg = lambda v: MUTED if v is None else (TEAL if v >= 0 else NEG)
+    sg = lambda v: MUTED if v is None else (FG if v == 0 else TEAL if v > 0 else NEG)
     rc = lambda v: MUTED if v is None else BLUE  # neutral colour: levels are data, not signals
     for i, s in enumerate(L):
         b = ease((t - 0.15 - i * 0.07) / 0.4)
