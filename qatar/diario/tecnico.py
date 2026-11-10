@@ -67,6 +67,22 @@ def calc_indice(D, k):
     else:
         hoy = sum(v["volume"] or 0 for v in acc); med = sum(v["average_volume_10d_calc"] or 0 for v in acc)
         vr = hoy / med * 100 - 100 if med else None; vfuente = "suma de acciones"
+    # MACD (12, 26, 9) y bandas de Bollinger (20, 2) sobre el cierre; rendimientos; retroceso de Fibonacci del último gran tramo de 52 semanas
+    ema = lambda a, n: np.array([x for x in _ema(a, n)])
+    E12, E26 = ema(c, 12), ema(c, 26); MACD = E12 - E26; SIG = ema(MACD, 9); HIST = MACD - SIG
+    cruce = max([i for i in range(1, len(c)) if np.sign(HIST[i]) != np.sign(HIST[i - 1])], default=None)
+    BBM = np.array([c[i - 19:i + 1].mean() if i >= 19 else np.nan for i in range(len(c))])
+    BBS = np.array([c[i - 19:i + 1].std() if i >= 19 else np.nan for i in range(len(c))]); BBU, BBL = BBM + 2 * BBS, BBM - 2 * BBS
+    ancho = (BBU - BBL) / BBM * 100; anc_ok = ancho[~np.isnan(ancho)][-250:]
+    perf = {}
+    for nom, dias in (("1s", 7), ("1m", 30), ("3m", 91), ("6m", 182), ("1a", 365)):
+        j = max([i for i, d in enumerate(dates) if d <= dates[-1] - dt.timedelta(days=dias)], default=None)
+        perf[nom] = None if j is None else round(float(c[-1] / c[j] * 100 - 100), 2)
+    j = max([i for i, d in enumerate(dates) if d.year < dates[-1].year], default=None)
+    perf["ytd"] = None if j is None else round(float(c[-1] / c[j] * 100 - 100), 2)
+    a_, b_ = (i_hi, i_lo) if i_hi < i_lo else (i_lo, i_hi)  # tramo entre el máximo y el mínimo de 52 semanas, en orden de fechas
+    baja = i_hi < i_lo; top, bot = float(hi[i_hi]), float(lo[i_lo])
+    fibo = [{"nivel": f, "valor": round(bot + (top - bot) * f if baja else top - (top - bot) * f, 2)} for f in (0.236, 0.382, 0.5, 0.618, 0.786)]
     sem = [i for i, d in enumerate(dates) if d <= dates[-1] - dt.timedelta(days=(dates[-1].weekday() + 1) % 7 + 1)]  # semana de la QSE: domingo a jueves
     ult_bajo = max([i for i in range(len(c) - 1) if c[i] <= c[-1]], default=None)
     ult_alto = max([i for i in range(len(c) - 1) if c[i] >= c[-1]], default=None)
@@ -84,8 +100,45 @@ def calc_indice(D, k):
                 volumen_vs_media10_pct=None if vr is None else round(float(vr), 1), volumen_fuente=vfuente,
                 valor_negociado_qar=round(sum(v.get("Value.Traded") or 0 for v in acc)),
                 suben=sum(1 for v in acc if (v.get("change") or 0) > 0), bajan=sum(1 for v in acc if (v.get("change") or 0) < 0),
-                sin_cambio=sum(1 for v in acc if v.get("change") == 0), niveles=niveles), \
-        dict(dates=dates, o=o, hi=hi, lo=lo, c=c, S50=S50, S200=S200, RSI=RSI, K=K, D=Dl)
+                sin_cambio=sum(1 for v in acc if v.get("change") == 0), niveles=niveles,
+                macd=round(float(MACD[-1]), 2), macd_senal=round(float(SIG[-1]), 2), macd_hist=round(float(HIST[-1]), 2),
+                macd_hist_prev=round(float(HIST[-2]), 2), macd_ultimo_cruce=dates[cruce].isoformat() if cruce else None,
+                macd_cruce_tipo=None if not cruce else ("alcista" if HIST[cruce] > 0 else "bajista"),
+                bb_sup=round(float(BBU[-1]), 2), bb_med=round(float(BBM[-1]), 2), bb_inf=round(float(BBL[-1]), 2),
+                bb_pct_b=round(float((c[-1] - BBL[-1]) / (BBU[-1] - BBL[-1]) * 100), 1), bb_ancho_pct=round(float(ancho[-1]), 2),
+                bb_ancho_percentil_1a=round(float((anc_ok < ancho[-1]).mean() * 100)),
+                rendimiento=perf, fibo_tramo="bajista" if baja else "alcista", fibo_desde=dates[a_].isoformat(), fibo_hasta=dates[b_].isoformat(),
+                fibo=fibo, dist_max_52s_pct=round(float(c[-1] / hi[i_hi] * 100 - 100), 2), dist_min_52s_pct=round(float(c[-1] / lo[i_lo] * 100 - 100), 2)), \
+        dict(dates=dates, o=o, hi=hi, lo=lo, c=c, S50=S50, S200=S200, RSI=RSI, K=K, D=Dl, MACD=MACD, SIG=SIG, HIST=HIST, BBU=BBU, BBM=BBM, BBL=BBL,
+             i_hi=i_hi, i_lo=i_lo)
+
+
+def _ema(a, n):
+    k = 2 / (n + 1); e = a[0]
+    for x in a:
+        e = x * k + e * (1 - k); yield e
+
+
+GRANDES = 8  # valores de mayor capitalización en la escena «أكبر الأسهم فنيًا»
+
+
+def amplitud(D, extra=None):
+    """Amplitud técnica del mercado y técnicos de los mayores valores (columnas del escáner de TradingView: RSI 14 y medias simples 50/200 diarias)."""
+    nom = dict(NOMBRES, **(extra or {}))
+    acc = [(k.split(":")[1], v) for k, v in D.get("acciones", {}).items() if v.get("exchange") == "QSE" and v.get("close")]
+    ok = [(t, v) for t, v in acc if v.get("SMA50") and v.get("SMA200") and v.get("RSI") is not None]
+    if not ok: return None
+    n = len(ok); pc = lambda x: round(x / n * 100)
+    g = sorted(ok, key=lambda x: -(x[1].get("market_cap_basic") or 0))[:GRANDES]
+    fila = lambda t, v: {"ticker": t, "nombre": nom.get(t, t), "cierre": v["close"], "cambio": round(v.get("change") or 0, 2),
+                         "vs_sma50": round(v["close"] / v["SMA50"] * 100 - 100, 1), "vs_sma200": round(v["close"] / v["SMA200"] * 100 - 100, 1),
+                         "rsi": round(v["RSI"], 1), "vs_max52": round(v["close"] / v["price_52_week_high"] * 100 - 100, 1) if v.get("price_52_week_high") else None,
+                         "perf_1m": None if v.get("Perf.1M") is None else round(v["Perf.1M"], 1)}
+    return {"n": n, "sobre_sma50": sum(1 for _, v in ok if v["close"] > v["SMA50"]), "sobre_sma200": sum(1 for _, v in ok if v["close"] > v["SMA200"]),
+            "pct_sobre_sma50": pc(sum(1 for _, v in ok if v["close"] > v["SMA50"])), "pct_sobre_sma200": pc(sum(1 for _, v in ok if v["close"] > v["SMA200"])),
+            "rsi_sobre_70": sum(1 for _, v in ok if v["RSI"] > 70), "rsi_bajo_30": sum(1 for _, v in ok if v["RSI"] < 30),
+            "max_52s_hoy": sum(1 for _, v in ok if v.get("price_52_week_high") and v["close"] >= v["price_52_week_high"] * 0.995),
+            "grandes": [fila(t, v) for t, v in g]}
 
 
 def movers(D, extra=None):
@@ -100,6 +153,7 @@ def calc(D, extra=None):
     R = {k: calc_indice(D, k) for k in ("qe",)}
     A = {k: R[k][1] for k in R}; R = {k: R[k][0] for k in R}
     R["mejores"], R["peores"] = movers(D, extra)
+    R["amplitud"] = amplitud(D, extra)
     R["fecha"] = R["qe"]["fecha"]
     R["contexto"] = {k: {"close": v.get("close"), "change": None if v.get("change") is None else round(v["change"], 2)} for k, v in D.get("tv", {}).items()}
     return R, A
