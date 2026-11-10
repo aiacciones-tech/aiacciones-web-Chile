@@ -22,7 +22,7 @@ M=json.load(open(f"{DIR}/mercado.json")); VJ=json.load(open(f"{DIR}/video.json")
 R,A=calc(M); TV=M["tv"]; TK=M.get("ipsa_tickers",{})
 OUT=f"{DIR}/youtube-bolsa-chile-{R['fecha']}.mp4"
 FECHA_TXT=VJ["fecha_txt"].upper()
-SECS=["Noticias","Por qué se movió","Acciones","Técnico","Agenda"]; NS=len(SECS)
+SECS=["Noticias","Por qué se movió","Acciones","Sectores","Perspectiva","Técnico","Agenda"]; NS=len(SECS)
 es=lambda v,d=1:f"{v:,.{d}f}".replace(",","X").replace(".",",").replace("X",".")
 pc=lambda v:f"{v:+.2f}%".replace(".",",")
 col=lambda c:COLS.get(c,c)
@@ -122,8 +122,42 @@ def s_movers(t):
     if V_.get("extra"): f.text(0.06,0.14,V_["extra"],color=ACC2,fontsize=25,weight="bold",alpha=ease((t-0.5)/0.4))
     return to_arr(f)
 
+def hbars(ax,L,e,hl=None,fs=20):
+    y=np.arange(len(L))[::-1]; v=[x[1] for x in L]; lim=max(abs(min(v)),abs(max(v)),0.1)*1.6
+    ax.barh(y,[x*e for x in v],color=[(ACC2 if n==hl else (ACC if x>=0 else NEG)) for n,x in L],height=0.6)
+    ax.set_yticks(y,[n for n,_ in L]); ax.tick_params(colors=FG,labelsize=fs); ax.set_xticks([]); ax.axvline(0,color=DIM,lw=1.5)
+    ax.set_xlim(-lim if min(v)<0 else -lim*0.35,lim if max(v)>0 else lim*0.35)
+    if e>=0.99:
+        for yy,x in zip(y,v): ax.text(x+(lim*0.03 if x>=0 else -lim*0.03),yy,pc(x),va="center",ha="left" if x>=0 else "right",color=FG,fontsize=fs-1,weight="bold")
+
+def s_sect(t):
+    G=VJ["sectores"]; f=base_fig(4,"Sectores del IPSA",G["titulo"],"Variación del día de las 31 acciones del MSCI IPSA (TradingView), agrupadas por sector y ponderadas por capitalización bursátil: calculado. No son los pesos oficiales del índice.")
+    ax=f.add_axes([0.25,0.15,0.30,0.58]); clean(ax); hbars(ax,[(n,x) for n,x,_ in R["sectores"]],ease(t/0.7))
+    f.text(0.06,0.745,"Variación del día por sector",color=MUTED,fontsize=20)
+    for i,(a_,b_,cc) in enumerate(G["items"]):
+        b=ease((t-0.2-i*0.12)/0.4)
+        if b<=0: continue
+        yy=0.68-i*0.20
+        f.text(0.62,yy,a_,color=col(cc),fontsize=29 if len(a_)<=30 else 25,weight="bold",alpha=b)
+        f.text(0.62,yy-0.025,"\n".join(textwrap.wrap(b_,44)[:2]),color=MUTED,fontsize=20,alpha=b,va="top",linespacing=1.25)
+    return to_arr(f)
+
+def s_persp(t):
+    P=VJ["perspectiva"]; f=base_fig(5,"En perspectiva",P["titulo"],"Rentabilidad del MSCI IPSA en cada plazo, con cierres diarios de TradingView; máximo y mínimo de 52 semanas: calculado.")
+    ax=f.add_axes([0.16,0.15,0.36,0.58]); clean(ax); hbars(ax,[(n,x) for n,x in R["periodos"]],ease(t/0.7),fs=22)
+    f.text(0.06,0.745,"Rentabilidad del IPSA",color=MUTED,fontsize=20)
+    d=lambda s:dt.date.fromisoformat(s); fd=lambda s:f"{d(s).day}-{MESES[d(s).month-1]}-{d(s).year}"
+    rows=[(f"{pc(R['dist_max_52s_pct'])}",f"bajo el máximo de 52 semanas\n({es(R['max_52s'],0)}, {fd(R['max_52s_fecha'])})",NEG),
+          (f"{pc(R['dist_min_52s_pct'])}",f"sobre el mínimo de 52 semanas\n({es(R['min_52s'],0)}, {fd(R['min_52s_fecha'])})",ACC)]
+    for i,(big,lab,cc) in enumerate(rows):
+        b=ease((t-0.25-i*0.12)/0.4)
+        if b<=0: continue
+        f.text(0.62,0.64-i*0.20,big,color=cc,fontsize=46,weight="bold",alpha=b); f.text(0.62,0.62-i*0.20,lab,color=MUTED,fontsize=21,va="top",alpha=b,linespacing=1.3)
+    if P.get("nota"): f.text(0.62,0.22,"\n".join(textwrap.wrap(P["nota"],40)),color=ACC2,fontsize=22,weight="bold",alpha=ease((t-0.5)/0.4),linespacing=1.3)
+    return to_arr(f)
+
 def s_tech1(t):
-    T=VJ["tecnico"]; f=base_fig(4,"Análisis técnico",T["titulo1"],"Velas diarias, últimos 6 meses. Datos: TradingView (MSCI IPSA). Medias móviles simples y niveles (máximos y mínimos recientes): calculado. Son datos, no señales de compra o venta.")
+    T=VJ["tecnico"]; f=base_fig(6,"Análisis técnico",T["titulo1"],"Velas diarias, últimos 6 meses. Datos: TradingView (MSCI IPSA). Medias móviles simples y niveles (máximos y mínimos recientes): calculado. Son datos, no señales de compra o venta.")
     ax=f.add_axes([0.06,0.16,0.70,0.58]); clean(ax)
     n=len(c); idx=np.arange(n-NB,n); x=np.arange(NB); m=max(1,int(NB*ease(t/0.8)))
     for j in range(m):
@@ -143,7 +177,7 @@ def s_tech1(t):
     return to_arr(f)
 
 def s_tech2(t):
-    T=VJ["tecnico"]; f=base_fig(4,"Análisis técnico",T["titulo2"],"RSI de 14 sesiones (Wilder) y estocástico lento (14, 3, 3) con datos de TradingView: calculado. Monto: 30 acciones del IPSA en pesos (precio x acciones, TradingView) frente a su media de 10 sesiones: calculado.")
+    T=VJ["tecnico"]; f=base_fig(6,"Análisis técnico",T["titulo2"],"RSI de 14 sesiones (Wilder) y estocástico lento (14, 3, 3) con datos de TradingView: calculado. Monto: 30 acciones del IPSA en pesos (precio x acciones, TradingView) frente a su media de 10 sesiones: calculado.")
     n=len(c); idx=np.arange(n-NB,n); x=np.arange(NB); m=max(2,int(NB*ease(t/0.8)))
     for rect,title,series,bands in [([0.06,0.45,0.66,0.25],f"RSI 14: {es(R['rsi14'],0)}",[(RSI,ACC2,"RSI")],(70,30)),
                                      ([0.06,0.13,0.66,0.25],f"Estocástico (14,3,3): %K {es(R['estoc_k'],0)} · %D {es(R['estoc_d'],0)}",[(K,ACC,"%K"),(Dl,NEG,"%D")],(80,20))]:
@@ -161,7 +195,7 @@ def s_tech2(t):
     return to_arr(f)
 
 def s_agenda(t):
-    G=VJ["agenda"]; f=base_fig(5,"Agenda",G["titulo"],G["fuente"]); a=ease(t/0.6)
+    G=VJ["agenda"]; f=base_fig(7,"Agenda",G["titulo"],G["fuente"]); a=ease(t/0.6)
     for i,(d_,e_,s_) in enumerate(G["filas"]):
         b=ease((t-i*0.12)/0.4); y=0.64-i*0.10
         cc=MUTED if s_ in ("estimada","estimado") else FG
@@ -178,7 +212,7 @@ def s_fin(t):
     f.text(0.06,0.07,"Fuentes: "+Fn["fuentes"]+". Indicadores técnicos: calculados.\nContenido informativo: no es una recomendación de inversión ni asesoría personalizada. AIAcciones Chile no tiene posiciones en las acciones citadas.\nInvertir en bolsa conlleva riesgo de pérdida; las rentabilidades pasadas no garantizan las futuras. Aviso completo en la descripción.",color=MUTED,fontsize=17,linespacing=1.5)
     return with_logo(to_arr(f),LGB,x=110,y=110)
 
-SEQ=[s_title,s_news,s_fact,s_movers,s_tech1,s_tech2,s_agenda,s_fin]; BIG={s_title,s_fin}
+SEQ=[s_title,s_news,s_fact,s_movers,s_sect,s_persp,s_tech1,s_tech2,s_agenda,s_fin]; BIG={s_title,s_fin}
 def frame(fn,t):
     arr=fn(t); return arr if fn in BIG else with_logo(arr)
 
@@ -199,7 +233,8 @@ if __name__=="__main__":
         nz=np.where(np.abs(a)>300)[0]; a=a[max(nz[0]-int(0.03*sr),0):nz[-1]+int(0.08*sr)]
         f_in,f_out=int(0.015*sr),int(0.06*sr); a[:f_in]*=np.linspace(0,1,f_in); a[-f_out:]*=np.linspace(1,0,f_out); clips.append(a)
     durs=[LEAD+len(a)/sr+TAIL for a in clips]; durs[0]+=0.4; durs[-1]+=1.5
-    if sum(durs)>180: sys.exit(f"Vídeo demasiado largo: {sum(durs):.1f} s (máx. 180). Acorta la locución.")
+    if sum(durs)>250: sys.exit(f"Vídeo demasiado largo: {sum(durs):.1f} s (máx. 250, objetivo unos 4 min). Acorta la locución.")
+    if sum(durs)<200: print(f"Aviso: el video dura {sum(durs):.1f} s; el objetivo es unos 4 minutos (220-245 s).")
     ANIM=30; XF=8; ff=imageio_ffmpeg.get_ffmpeg_exe()
     proc=subprocess.Popen([ff,"-y","-f","rawvideo","-pix_fmt","rgb24","-s",f"{W}x{H}","-r",str(FPS),"-i","-","-c:v","libx264","-pix_fmt","yuv420p","-crf","20","-preset","medium",SILENT],stdin=subprocess.PIPE,stderr=subprocess.DEVNULL)
     t0=0; times=[]; audio=[]

@@ -17,7 +17,7 @@ IPSA = ["AGUAS-A", "CHILE", "BCI", "ITAUCL", "BSANTANDER", "CAP", "CENCOSUD", "C
         "CONCHATORO", "ANDINA-B", "CMPC", "COPEC", "ENELAM", "ENELCHILE", "ECL", "ENTEL", "FALABELLA", "IAM", "ILC", "LTM",
         "PAMPA", "PARAUCO", "MALLPLAZA", "QUINENCO", "RIPLEY", "SALFACORP", "SMU", "SQM-B"]
 COLS = ["name", "description", "close", "change", "change_abs", "volume", "Value.Traded", "average_volume_10d_calc",
-        "market_cap_basic", "time", "Perf.W", "Perf.1M", "Perf.YTD", "type", "country"]
+        "market_cap_basic", "time", "Perf.W", "Perf.1M", "Perf.YTD", "type", "country", "SMA50", "SMA200", "RSI"]
 
 
 def get(url, data=None, extra=None):
