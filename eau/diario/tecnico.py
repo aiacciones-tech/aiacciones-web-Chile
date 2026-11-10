@@ -60,7 +60,7 @@ def calc_indice(D, k):
         if round(v) in seen or (t == "res" and v <= c[-1]) or (t == "sop" and v >= c[-1]): continue
         seen.add(round(v)); niveles.append({"tipo": t, "valor": round(v, 2), "fecha": d.isoformat()})
     # volumen: el de la vela del índice si lo hay (ADX); si no (DFM), la suma de las acciones del mercado (calculado)
-    ex = k.upper(); acc = [v for v in D.get("acciones", {}).values() if v.get("exchange") == ex]
+    ex = k.upper(); acc = [v for v in D.get("acciones", {}).values() if v.get("exchange") == ex and de_hoy(D, v)]
     if not np.isnan(vol[-1]) and np.isfinite(vol[-11:-1]).all():
         vr = vol[-1] / vol[-11:-1].mean() * 100 - 100; vfuente = "índice"
     else:
@@ -87,10 +87,17 @@ def calc_indice(D, k):
         dict(dates=dates, o=o, hi=hi, lo=lo, c=c, S50=S50, S200=S200, RSI=RSI, K=K, D=Dl)
 
 
+def de_hoy(D, v):
+    """True si la cotización es de la sesión del día (los valores sin negociación conservan la variación de su último día)."""
+    if not v.get("time") or not D.get("sesion"):
+        return True
+    return dt.datetime.fromtimestamp(v["time"], TZ).date().isoformat() == D["sesion"]
+
+
 def movers(D, extra=None):
     nom = dict(NOMBRES, **(extra or {}))
     L = sorted([(v["change"], k.split(":")[1], v["exchange"]) for k, v in D.get("acciones", {}).items()
-                if v.get("change") is not None and (v.get("Value.Traded") or 0) >= MIN_VALOR])
+                if v.get("change") is not None and (v.get("Value.Traded") or 0) >= MIN_VALOR and de_hoy(D, v)])
     f = lambda x: {"ticker": x[1], "mercado": x[2], "nombre": nom.get(x[1], x[1]), "cambio": round(x[0], 2)}
     return [f(x) for x in L[::-1][:5]], [f(x) for x in L[:5]]
 
