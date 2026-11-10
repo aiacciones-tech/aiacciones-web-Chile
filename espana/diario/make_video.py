@@ -12,6 +12,7 @@ HERE=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,HERE)
 from tecnico import calc, MESES
 DIR=os.path.abspath(sys.argv[1]); PREVIEW=len(sys.argv)>2 and sys.argv[2]=="preview"
 W,H,FPS=1920,1080,30
+MAXDUR=300  # hasta 5 minutos, con más peso del análisis técnico (Daniel, 10-nov-2026)
 BG="#0B1E3A"; FG="#FFFFFF"; MUTED="#9FB3CC"; ACC="#2FB7A3"; ACC2="#4C8DF0"; NEG="#F2A541"; DIM="#3A5378"; PUR="#C38BF2"
 COLS={"acc":ACC,"acc2":ACC2,"neg":NEG,"fg":FG,"muted":MUTED,"pur":PUR}
 LOGO=os.environ.get("LOGO","/mnt/project-files/espana/marca/logo-aiacciones-espana.png")
@@ -165,6 +166,66 @@ def s_tech2(t):
         f.text(0.77,0.64-i*0.17,big,color=cc,fontsize=44,weight="bold",alpha=a); f.text(0.77,0.60-i*0.17-0.04,lab,color=MUTED,fontsize=18,alpha=a)
     return to_arr(f)
 
+def s_tech3(t):
+    T=VJ["tecnico"]; f=base_fig(4,"Análisis técnico",T.get("titulo3","Bandas de Bollinger y MACD"),"Bandas de Bollinger (20 sesiones, 2 desviaciones) y MACD (12, 26, 9) con datos diarios de Yahoo Finance: calculado. Son datos, no señales de compra o venta.")
+    NB3=90; n=len(c); idx=np.arange(n-NB3,n); x=np.arange(NB3); m=max(2,int(NB3*ease(t/0.8)))
+    BU,BL,BM,MACD,SIG,HIST=A["BU"],A["BL"],A["BM"],A["MACD"],A["SIG"],A["HIST"]
+    ax=f.add_axes([0.06,0.40,0.66,0.36]); clean(ax)
+    ax.fill_between(x[:m],BL[idx][:m],BU[idx][:m],color=ACC2,alpha=0.12)
+    ax.plot(x[:m],BU[idx][:m],color=ACC2,lw=1.5); ax.plot(x[:m],BL[idx][:m],color=ACC2,lw=1.5); ax.plot(x[:m],BM[idx][:m],color=ACC2,lw=1.2,ls="--")
+    for j in range(m):
+        i=idx[j]; cc=ACC if c[i]>=o[i] else NEG
+        ax.vlines(j,lo[i],hi[i],color=cc,lw=1.2); ax.add_patch(plt.Rectangle((j-0.35,min(o[i],c[i])),0.7,max(abs(c[i]-o[i]),3),color=cc))
+    ax.set_xlim(-1,NB3); ax.set_yticks([]); ax.set_xticks([])
+    ax.set_ylim(min(lo[idx].min(),np.nanmin(BL[idx]))-100,max(hi[idx].max(),np.nanmax(BU[idx]))+100)
+    f.text(0.06,0.77,f"Bollinger (20, 2): banda superior {es(R['boll_sup'],0)} · inferior {es(R['boll_inf'],0)}",color=FG,fontsize=22,weight="bold")
+    ax2=f.add_axes([0.06,0.13,0.66,0.20]); clean(ax2)
+    hv=HIST[idx]; ax2.bar(x[:m],hv[:m],color=[ACC if v>=0 else NEG for v in hv[:m]],width=0.8,alpha=0.7)
+    ax2.plot(x[:m],MACD[idx][:m],color=ACC2,lw=2.2,label="MACD"); ax2.plot(x[:m],SIG[idx][:m],color=NEG,lw=2.2,label="Señal")
+    ax2.axhline(0,color=DIM,lw=1); ax2.set_xlim(-1,NB3); ax2.set_xticks([]); ax2.set_yticks([])
+    ax2.legend(frameon=False,labelcolor=FG,fontsize=16,loc="upper left",ncol=2)
+    f.text(0.06,0.345,f"MACD (12, 26, 9): {es(R['macd'],0)} · señal {es(R['macd_senal'],0)} · histograma {es(R['macd_hist'],0)}",color=FG,fontsize=22,weight="bold")
+    a=ease((t-0.4)/0.4); cr=R.get("macd_cruce")
+    pos="por encima de la banda superior" if c[-1]>R["boll_sup"] else ("por debajo de la banda inferior" if c[-1]<R["boll_inf"] else "dentro de las bandas")
+    items=[(es(R["boll_ancho_pct"],1)+"%","Ancho de las bandas\n(volatilidad)",ACC2),("Cierre",pos[0].upper()+pos[1:].replace(" de las bandas","\nde las bandas").replace(" de la banda","\nde la banda"),FG)]
+    if cr: items.append(("Cruce "+cr["tipo"],"del MACD,\nel "+dt.date.fromisoformat(cr["fecha"]).strftime("%-d")+"-"+MESES[dt.date.fromisoformat(cr["fecha"]).month-1],ACC if cr["tipo"]=="alcista" else NEG))
+    for i,(big,lab,cc) in enumerate(items):
+        f.text(0.77,0.64-i*0.17,big,color=cc,fontsize=38 if len(big)<12 else 30,weight="bold",alpha=a); f.text(0.77,0.60-i*0.17-0.04,lab,color=MUTED,fontsize=18,alpha=a)
+    return to_arr(f)
+
+def s_tech4(t):
+    T=VJ["tecnico"]; f=base_fig(4,"Análisis técnico",T.get("titulo4","La tendencia por plazos"),"Cierres diarios del IBEX 35 (Yahoo Finance), últimos 2 años, y variación por plazos: calculado. Son datos, no señales de compra o venta.")
+    ax=f.add_axes([0.06,0.15,0.50,0.58]); clean(ax); n=len(c); m=max(2,int(n*ease(t/0.8)))
+    ax.plot(np.arange(m),c[:m],color=FG,lw=2); ax.plot(np.arange(m),S200[:m],color=PUR,lw=2.5,label=f"Media 200 sesiones ({es(S200[-1],0)})")
+    ax.set_xlim(0,n-1); ax.set_yticks([])
+    yt=[j for j in range(1,n) if dates[j].year!=dates[j-1].year]
+    ax.set_xticks(yt,[str(dates[j].year) for j in yt]); ax.legend(frameon=False,labelcolor=FG,fontsize=17,loc="upper left")
+    f.text(0.06,0.75,"IBEX 35, últimos 2 años",color=FG,fontsize=22,weight="bold")
+    P=R["plazos"]; lim=max(abs(v) for _,v in P)*1.25; a=ease((t-0.3)/0.5)
+    for i,(lab,v) in enumerate(P):
+        y=0.66-i*0.11; f.text(0.62,y,lab,color=FG,fontsize=26,weight="bold",alpha=a)
+        bw=0.11*abs(v)/lim*a; x0=0.79
+        f.patches.append(plt.Rectangle((x0 if v>=0 else x0-bw,y-0.005),bw,0.04,transform=f.transFigure,color=ACC if v>=0 else NEG,figure=f))
+        f.text(x0+(bw+0.008 if v>=0 else 0.008),y,pc(v),color=FG,fontsize=24,weight="bold",alpha=a)
+    return to_arr(f)
+
+def s_tech5(t):
+    T=VJ["tecnico"]; VT=R["valores_tecnico"]
+    f=base_fig(4,"Análisis técnico",T.get("titulo5",f"{R['sobre_sma50']} de {R['con_datos']} valores, sobre su media de 50"),"Velas diarias de los últimos 3 meses (Yahoo Finance). Distancia a la media de 50 sesiones, RSI 14 y estocástico %K (14,3): calculado. Son datos, no señales.")
+    sel=T.get("valores") or ["SAN","BBVA","IBE","ITX","CABK","TEF","AMS","REP"]
+    sel=[k for k in sel if k in VT][:8]
+    hdr=[(0.06,"Valor"),(0.30,"Día"),(0.45,"Frente a media 50"),(0.66,"RSI 14"),(0.80,"Estocástico")]
+    for x,h in hdr: f.text(x,0.70,h,color=MUTED,fontsize=20,weight="bold")
+    for i,k in enumerate(sel):
+        b=ease((t-i*0.07)/0.4); y=0.635-i*0.061; v=VT[k]; ch=R["todos"].get(k)
+        f.text(0.06,y,v["nombre"],color=FG,fontsize=25,weight="bold",alpha=b)
+        if ch is not None: f.text(0.30,y,pc(ch),color=ACC if ch>0 else (NEG if ch<0 else MUTED),fontsize=25,weight="bold",alpha=b)
+        d=v["vs_sma50_pct"]; f.text(0.45,y,pc(d),color=ACC if d>0 else NEG,fontsize=25,weight="bold",alpha=b)
+        rr=round(v["rsi14"]); f.text(0.66,y,es(rr,0),color=NEG if rr>70 else (ACC2 if rr<30 else FG),fontsize=25,weight="bold",alpha=b)
+        kk=round(v["estoc_k"]); f.text(0.80,y,es(kk,0)+(" · sobrecompra" if kk>80 else (" · sobreventa" if kk<20 else "")),color=NEG if kk>80 else (ACC2 if kk<20 else FG),fontsize=25 if 20<=kk<=80 else 21,weight="bold",alpha=b)
+    f.text(0.06,0.125,"RSI: sobrecompra > 70, sobreventa < 30 · Estocástico: sobrecompra > 80, sobreventa < 20",color=ACC2,fontsize=20,alpha=ease((t-0.6)/0.4))
+    return to_arr(f)
+
 def s_agenda(t):
     G=VJ["agenda"]; f=base_fig(5,"Agenda",G["titulo"],G["fuente"]); a=ease(t/0.6)
     for i,(d_,e_,s_) in enumerate(G["filas"]):
@@ -183,20 +244,26 @@ def s_fin(t):
     f.text(0.06,0.07,"Fuentes: "+Fn["fuentes"]+". Indicadores técnicos: calculados.\nContenido informativo: no es una recomendación de inversión ni asesoramiento personalizado. AIAcciones España no tiene posiciones en los valores citados.\nInvertir en bolsa conlleva riesgo de pérdida; las rentabilidades pasadas no garantizan las futuras. Aviso completo en la descripción.",color=MUTED,fontsize=17,linespacing=1.5)
     return with_logo(to_arr(f),LGB,x=110,y=110)
 
-SEQ=[s_title,s_news,s_fact,s_movers,s_tech1,s_tech2,s_agenda,s_fin]; BIG={s_title,s_fin}
+SEQ=[s_title,s_news,s_fact,s_movers,s_tech1,s_tech3,s_tech2,s_tech4,s_tech5,s_agenda,s_fin]; BIG={s_title,s_fin}
 def frame(fn,t):
     arr=fn(t); return arr if fn in BIG else with_logo(arr)
 
 if __name__=="__main__":
     os.makedirs(AUD,exist_ok=True)
+    if len(sys.argv)>2 and sys.argv[2]=="textos":  # locución final de cada escena (con la llamada a comentar), para voz.sh
+        json.dump({fn.__name__:VJ["voz"][fn.__name__] for fn in SEQ},sys.stdout,ensure_ascii=False); sys.exit()
     if PREVIEW:
         for fn in SEQ: Image.fromarray(frame(fn,1.0)).save(os.path.join(AUD,"prev_"+fn.__name__+".png"))
         sys.exit()
     TTS=["--length-scale","0.97","--noise-scale","0.55","--noise-w-scale","0.6","--sentence-silence","0.1"]
     LEAD,TAIL=0.12,0.45
+    VOZ_DIR=os.path.join(DIR,"voz")  # mp3 de voz neuronal (voz.sh); si falta alguno, Piper
     for fn in SEQ:
-        p=os.path.join(AUD,fn.__name__+".wav")
-        subprocess.run(["python3","-m","piper","-m",VOICE,"-f",p]+TTS,input=(VJ["voz"][fn.__name__]+"\n").encode(),check=True,capture_output=True)
+        p=os.path.join(AUD,fn.__name__+".wav"); mp=os.path.join(VOZ_DIR,fn.__name__+".mp3")
+        if os.path.exists(mp): subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(),"-y","-loglevel","error","-i",mp,"-ac","1","-ar","24000","-c:a","pcm_s16le",p],check=True)
+        else:
+            print("AVISO: sin voz neuronal para",fn.__name__,"-> Piper",flush=True)
+            subprocess.run(["python3","-m","piper","-m",VOICE,"-f",p]+TTS,input=(VJ["voz"][fn.__name__]+"\n").encode(),check=True,capture_output=True)
     clips=[]
     for fn in SEQ:
         w=wave.open(os.path.join(AUD,fn.__name__+".wav")); sr=w.getframerate()
@@ -204,7 +271,7 @@ if __name__=="__main__":
         nz=np.where(np.abs(a)>300)[0]; a=a[max(nz[0]-int(0.03*sr),0):nz[-1]+int(0.08*sr)]
         f_in,f_out=int(0.015*sr),int(0.06*sr); a[:f_in]*=np.linspace(0,1,f_in); a[-f_out:]*=np.linspace(1,0,f_out); clips.append(a)
     durs=[LEAD+len(a)/sr+TAIL for a in clips]; durs[0]+=0.4; durs[-1]+=1.5
-    if sum(durs)>180: sys.exit(f"Vídeo demasiado largo: {sum(durs):.1f} s (máx. 180). Acorta la locución.")
+    if sum(durs)>MAXDUR: sys.exit(f"Vídeo demasiado largo: {sum(durs):.1f} s (máx. {MAXDUR}). Acorta la locución.")
     ANIM=30; XF=8; ff=imageio_ffmpeg.get_ffmpeg_exe()
     proc=subprocess.Popen([ff,"-y","-f","rawvideo","-pix_fmt","rgb24","-s",f"{W}x{H}","-r",str(FPS),"-i","-","-c:v","libx264","-pix_fmt","yuv420p","-crf","20","-preset","medium",SILENT],stdin=subprocess.PIPE,stderr=subprocess.DEVNULL)
     t0=0; times=[]; audio=[]

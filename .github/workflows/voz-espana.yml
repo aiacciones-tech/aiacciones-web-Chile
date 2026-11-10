@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install -q edge-tts==7.0.2
+      - run: pip install -q -U edge-tts  # sin fijar versión: sigue los cambios del servicio de Microsoft
       - name: Generar y guardar audio
         env:
           ID: ${{ inputs.id }}
