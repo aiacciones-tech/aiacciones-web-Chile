@@ -1,6 +1,44 @@
 {
- "actualizado": "2026-11-09T23:18Z",
+ "actualizado": "2026-11-10T13:18Z",
  "items": [
+  {
+   "id": "2fd0ded5-219a-4841-a203-5d486f4b88ac",
+   "tipo": "OIR",
+   "fecha": "2026-11-10 11:02",
+   "entidad": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+   "nif": "A48265169",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad comunica información relativa a la ejecución del programa de recompra de acciones.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b2fd0ded5-219a-4841-a203-5d486f4b88ac%7d",
+   "ticker": "BBVA",
+   "temas": []
+  },
+  {
+   "id": "667d2434-ec41-449e-9dec-fd369f348360",
+   "tipo": "OIR",
+   "fecha": "2026-11-10 10:39",
+   "entidad": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Compras de autocartera de ACS del 3 al 9 de noviembre del 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b667d2434-ec41-449e-9dec-fd369f348360%7d",
+   "ticker": "ACS",
+   "temas": []
+  },
+  {
+   "id": "b699f429-1d3d-4da3-b2c3-93ed6c43ea8d",
+   "tipo": "OIR",
+   "fecha": "2026-11-10 08:41",
+   "entidad": "FLUIDRA, S.A.",
+   "nif": "A",
+   "categoria": "Otra información relevante",
+   "titulo": "Información sobre segundo pago del dividendo 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bb699f429-1d3d-4da3-b2c3-93ed6c43ea8d%7d",
+   "ticker": "FDR",
+   "temas": [
+    "dividendos"
+   ]
+  },
   {
    "id": "30a9d4c9-9b21-4411-bb25-c77b9032737b",
    "tipo": "OIR",
