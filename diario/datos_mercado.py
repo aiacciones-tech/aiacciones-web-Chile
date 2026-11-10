@@ -17,7 +17,7 @@ IPSA = ["AGUAS-A", "CHILE", "BCI", "ITAUCL", "BSANTANDER", "CAP", "CENCOSUD", "C
         "CONCHATORO", "ANDINA-B", "CMPC", "COPEC", "ENELAM", "ENELCHILE", "ECL", "ENTEL", "FALABELLA", "IAM", "ILC", "LTM",
         "PAMPA", "PARAUCO", "MALLPLAZA", "QUINENCO", "RIPLEY", "SALFACORP", "SMU", "SQM-B"]
 COLS = ["name", "description", "close", "change", "change_abs", "volume", "Value.Traded", "average_volume_10d_calc",
-        "market_cap_basic", "time", "Perf.W", "Perf.1M", "Perf.YTD", "type", "country"]
+        "market_cap_basic", "time", "Perf.W", "Perf.1M", "Perf.YTD", "type", "country", "SMA50", "SMA200", "RSI"]
 
 
 def get(url, data=None, extra=None):
@@ -122,8 +122,12 @@ def main():
         fecha = datetime.datetime.utcfromtimestamp(res["ipsa_diario"]["velas"][-1]["t"]).date().isoformat()  # vela diaria: fecha de la sesión
     except Exception:
         pass
+    # Antes del cierre (16:00 Santiago = 19:00 UTC en horario de verano) TradingView ya muestra la vela del día, plana o a medias:
+    # ese archivo se marca "-parcial" para que la rutina no lo tome por la sesión completa.
+    ahora = datetime.datetime.utcnow()
+    parcial = fecha == ahora.date().isoformat() and ahora.hour * 60 + ahora.minute < 19 * 60 + 5
     os.makedirs(os.path.join(ROOT, "datos"), exist_ok=True)
-    p = os.path.join(ROOT, "datos", f"mercado-{fecha}.json")
+    p = os.path.join(ROOT, "datos", f"mercado-{fecha}{'-parcial' if parcial else ''}.json")
     json.dump(res, open(p, "w"), ensure_ascii=False)
     print("escrito", p, "errores:", res["errores"], "chile:", len(res.get("chile", {})), "faltan:", [k for k, v in res.get("ipsa_tickers", {}).items() if not v], "busqueda:", res["busqueda"][:15],
           "velas:", res.get("ipsa_diario", {}).get("simbolo"), len(res.get("ipsa_diario", {}).get("velas", [])), len(res.get("ipsa_intradia", {}).get("velas", [])))

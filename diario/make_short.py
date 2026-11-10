@@ -1,5 +1,5 @@
 # YouTube Short vertical (1080x1920, <60 s) del video diario del IPSA, con locución Piper fluida y logo AIAcciones Chile.
-# Lee una especificación JSON (ver diario/ejemplo-2026-11-06/short.json) y escribe el mp4 en spec["out"].
+# Lee una especificación JSON (ver diario/ejemplo-2026-11-09/short.json) y escribe el mp4 en spec["out"].
 # Uso: VOICE=.../es_MX-claude-high.onnx AUD=scratch python3 make_short.py <carpeta del día>/short.json [preview]
 # "out" relativo se resuelve respecto a la carpeta del JSON.
 import subprocess, os, sys, wave, json, numpy as np, matplotlib
