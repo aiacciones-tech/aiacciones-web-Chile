@@ -8,6 +8,10 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"
 INDICES = {"tasi": ["TADAWUL:TASI"], "nomu": ["TADAWUL:NOMUC"]}   # velas: el primero que responda
 YAHOO = {"tasi": ["^TASI.SR"], "nomu": ["^NOMUC.SR"]}  # respaldo
+# Respaldo de las velas de contexto en Yahoo Finance cuando el websocket de TradingView no entrega series (pasó el 10-nov-2026).
+YAHOO_CTX = {"ADX:FADGI": "FADGI.FGI", "DFM:DFMGI": "DFMGI.AE", "QSE:GNRI": "^GNRI.QA", "ICEEUR:BRN1!": "BZ=F", "SP:SPX": "^GSPC",
+             "NASDAQ:NDX": "^NDX", "TVC:NI225": "^N225", "TVC:HSI": "^HSI", "TVC:KOSPI": "^KS11", "SSE:000001": "000001.SS",
+             "TVC:SX5E": "^STOXX50E", "TVC:GOLD": "GC=F", "TVC:US10Y": "^TNX", "TADAWUL:2222": "2222.SR"}
 CTX = ["TADAWUL:TASI", "TADAWUL:NOMUC", "TADAWUL:2222", "ADX:FADGI", "DFM:DFMGI", "TVC:UKOIL", "TVC:USOIL", "ICEEUR:BRN1!", "NYMEX:CL1!", "FX:UKOIL", "OANDA:BCOUSD", "SP:SPX", "NASDAQ:NDX", "DJ:DJI", "TVC:NI225", "TVC:HSI", "SSE:000001",
        "TVC:KOSPI", "QSE:GNRI", "BAHRAIN:BAX", "EGX:EGX30", "TVC:SA10Y", "TVC:SX5E", "TVC:UKX", "TVC:GOLD", "TVC:US10Y", "TVC:US02Y", "TVC:DXY", "FX_IDC:USDSAR"]
 CTX_VELAS = ["ADX:FADGI", "DFM:DFMGI", "QSE:GNRI", "ICEEUR:BRN1!", "SP:SPX", "NASDAQ:NDX", "TVC:NI225", "TVC:HSI", "TVC:KOSPI", "SSE:000001",
@@ -60,7 +64,7 @@ def tv_buscar(texto, bolsa):
 
 def tv_velas(simbolo, resol="1D", n=500):
     """Velas históricas de TradingView por su websocket público (sin cuenta, datos con el retraso habitual)."""
-    import random, string, re, websocket
+    import random, string, re, time, websocket
     ws = websocket.create_connection("wss://data.tradingview.com/socket.io/websocket?type=chart",
                                      header=["Origin: https://www.tradingview.com", "User-Agent: " + UA], timeout=30)
     def send(m, p):
@@ -72,7 +76,10 @@ def tv_velas(simbolo, resol="1D", n=500):
     send("resolve_symbol", [cs, "s1", "=" + json.dumps({"symbol": simbolo, "adjustment": "splits"})])
     send("create_series", [cs, "sds_1", "s1", "s1", resol, n, ""])
     buf, velas = "", None
+    fin = time.time() + 45  # si TradingView no manda la serie (solo latidos), fallar y pasar al respaldo
     for _ in range(200):
+        if time.time() > fin:
+            ws.close(); raise RuntimeError("TradingView no devolvió la serie a tiempo: " + simbolo)
         r = ws.recv(); buf += r
         for hb in re.findall(r"~m~\d+~m~(~h~\d+)", r):
             ws.send(f"~m~{len(hb)}~m~{hb}")
@@ -113,11 +120,19 @@ def main():
     # Velas diarias recientes del contexto: el cambio del día de la sesión (Golfo y Asia) y del cierre anterior (Wall Street, Europa),
     # porque el escáner solo da el último cambio y la sesión de Tadawul cierra antes de que abra Wall Street.
     res["ctx_velas"] = {}
+    tv_ok = res.get("tasi_diario", {}).get("fuente") == "TradingView"
     for sym in CTX_VELAS:
         try:
+            if not tv_ok:
+                raise RuntimeError("websocket de TradingView sin series; se usa Yahoo")
             res["ctx_velas"][sym] = tv_velas(sym, "1D", 15)["velas"]
         except Exception as e:
             res["errores"].append(f"tv ctx {sym}: {e}")
+            if sym in YAHOO_CTX:
+                try:
+                    res["ctx_velas"][sym] = yahoo(YAHOO_CTX[sym], "1mo", "1d")["velas"]
+                except Exception as e2:
+                    res["errores"].append(f"yahoo ctx {sym}: {e2}")
     try:
         res["acciones"] = tv_acciones()
     except Exception as e:
