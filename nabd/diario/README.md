@@ -25,7 +25,8 @@ En todas: ticker inferior (índices, macro, sectores y titulares de `video.json`
 `make_video.py` hace antes un **control de calidad** (manual, sección 8): fecha de las velas, sesiones suficientes para la media de 200,
 sectores y macro presentes, las 5 acciones en los datos y con noticia/lectura/voz, agenda posterior a la sesión; si algo falla, no renderiza.
 Además escribe `guion-<fecha>-Nabd.md` (tabla tiempo | narración | visual | datos) y `datos-<fecha>-Nabd.csv` (datos usados con fuente y hora).
-Duración aceptada: 450-630 s. Con Piper salen unas 80 palabras por minuto (unas 750 palabras para 9 min); con Azure, unas 115 (unas 1.000).
+Duración aceptada: 450-630 s. Con Azure salen unas 110 palabras por minuto, pausas incluidas (900 palabras = 8:00; unas 1.000 para 9 min);
+con Piper, unas 90 (las mismas 900 palabras = 9:50).
 
 ## Datos
 `datos_mercado.py` corre en GitHub Actions (`datos-diario-Nabd.yml`, 21:40 UTC de lunes a viernes) y deja `datos/mercado-<fecha>.json`
