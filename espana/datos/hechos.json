@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-11-10T20:30Z",
+ "actualizado": "2026-11-11T12:29Z",
  "items": [
+  {
+   "id": "f661132b-e44c-4cde-a66a-644319f0480c",
+   "tipo": "OIR",
+   "fecha": "2026-11-10 22:03",
+   "entidad": "CELLNEX TELECOM, S.A.",
+   "nif": "A64907306",
+   "categoria": "Sobre instrumentos financieros",
+   "titulo": "La compañía remite información sobre la emisión de un bono",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bf661132b-e44c-4cde-a66a-644319f0480c%7d",
+   "ticker": "CLNX",
+   "temas": []
+  },
   {
    "id": "8c080b6e-ad97-47b4-8be9-05b401d79f36",
    "tipo": "OIR",
