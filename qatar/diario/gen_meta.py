@@ -35,9 +35,13 @@ except Exception:
     largo_x = lambda s: len(re.sub(r"https?://\S+", "x" * 23, s))
 assert largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 280, largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX"))
 open(f"{D}/post-x-{F}-qatar.txt", "w").write(x)
-li = (f"أسهم قطر | ملخص جلسة بورصة قطر {I['fecha_txt']}\n\n{I['resumen']}\n\n" + "\n\n".join("• " + c for c in I["claves"]) +
-      f"\n\n▶️ الفيديو الكامل (3 دقائق): {{youtube}}\n{canal_linea}\n\n"
-      f"المصادر: {I['fuentes']}.\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. التحليل الفني يصف بيانات وليس إشارات شراء أو بيع. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n\n" + I["hashtags"])
+CL = list(I["claves"])
+while True:  # LinkedIn admite ~3000 caracteres: con el vídeo de 5 min hay más claves técnicas; se quitan desde la penúltima hasta que quepa
+    li = (f"أسهم قطر | ملخص جلسة بورصة قطر {I['fecha_txt']}\n\n{I['resumen']}\n\n" + "\n\n".join("• " + c for c in CL) +
+          f"\n\n▶️ الفيديو الكامل (5 دقائق): {{youtube}}\n{canal_linea}\n\n"
+          f"المصادر: {I['fuentes']}.\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. التحليل الفني يصف بيانات وليس إشارات شراء أو بيع. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n\n" + I["hashtags"])
+    if len(li.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 2950 or len(CL) <= 2: break
+    CL.pop(-2)
 assert len(li.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 2950, len(li)
 open(f"{D}/post-linkedin-{F}-qatar.txt", "w").write(li)
 open(f"{D}/post-facebook-{F}-qatar.txt", "w").write(li)  # página de Facebook (Buffer 1): mismo texto que LinkedIn
