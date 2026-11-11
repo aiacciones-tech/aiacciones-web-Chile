@@ -1620,4 +1620,62 @@ FICHAS = [
                 'Estrategias de Inversión; Bolsamanía (cotización); stockanalysis.com (históricos).',
      'fuentes_corto': 'Cellnex, Europa Press, Reuters, Business People, Zona Movilidad, Bolsamanía y stockanalysis.com',
      'elaborado': '7-nov-2026, 23:15'},
+    {'id': 'acs',
+     'nombre': 'ACS',
+     'ticker': 'ACS',
+     'sector': 'Construcción e infraestructuras',
+     'lede': 'Grupo español de construcción e infraestructuras presidido por Florentino Pérez. Controla Hochtief, y a través de ella Turner (Estados '
+             'Unidos) y CIMIC (Australia); tiene además la división de Ingeniería y Construcción (Dragados, entre otras) y la de Infraestructuras '
+             '(participación en Abertis, Iridium y ACS Digital & Energy). Los centros de datos son ya una cuarta parte de su cartera.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'tercer trimestre de 2026 (nueve meses)',
+     'titular': 'Beneficio neto atribuible de 789 M€ hasta septiembre (+20,5%); sin los 70 M€ extraordinarios de 2025, el beneficio ordinario crece un '
+                '35%, en la parte alta de su objetivo anual (+30% a +35%). Ventas de 41.262 M€ (+12,3%), EBITDA de 2.506 M€ (+13,0%) y cartera récord de '
+                '110.994 M€ (+24,3%), con unos 26.000 M€ en centros de datos. La deuda neta es de 908 M€ en septiembre, frente a una caja neta de 1.006 '
+                'M€ en junio, tras comprar el resto de Thiess y más acciones de Hochtief.',
+     'precio': '92,95 €',
+     'precio_fecha': '11-nov-2026',
+     'multiplos': [('PER 12 meses', '~22,3x'), ('Precio / valor contable', '~4,1x'), ('Rentab. dividendo', '~2,5%'), ('Capitalización', '~25.760 M€')],
+     'multiplos_nota': 'Calculados con el cierre de 92,95 € del 11-nov-2026 (Bolsamanía), antes de los resultados (publicados a las 18:00). PER con el '
+                       'BPA de 12 meses (2025 + 9M26 - 9M25: 3,69 + 3,02 - 2,55 = 4,16 €); capitalización con 277,1 M de acciones (stockanalysis.com); '
+                       'precio / valor contable con el patrimonio por acción de stockanalysis.com (junio de 2026); rentabilidad con el dividendo con '
+                       'cargo a 2025 (0,457 € + 1,866 € = 2,323 €). No usamos EV/EBITDA porque las definiciones de EBITDA de ACS y de la fuente '
+                       'histórica no coinciden. A cierre de 2023, 2024 y 2025 (stockanalysis.com) el PER era 13,6x, 14,9x y 22,8x, el precio / valor '
+                       'contable 1,88x, 2,41x y 4,19x, y la rentabilidad por dividendo 5,46%, 4,34% y 2,78%.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ventas', '41.262', '+12,3%'),
+               ('EBITDA', '2.506', '+13,0%'),
+               ('EBIT', '1.807', '+20,7%'),
+               ('Beneficio neto atribuible', '789', '+20,5%'),
+               ('Beneficio neto ordinario', '789', '+35,0%'),
+               ('Beneficio neto 3T (calculado)', '279', '+36,1%'),
+               ('Cartera', '110.994', '+24,3%'),
+               ('Deuda neta (sep-26)', '908', '-1.319 a/a')],
+     'kpi': 'BPA 3,02 € (+18,5%). Beneficio ordinario por división: Turner 524 M€ (+44,2%), CIMIC 157 M€ (+22,1%), Ingeniería y Construcción 192 M€ '
+            '(+21,8%), Infraestructuras 131 M€ (-5,9%; el texto de la nota cita 141 M€) y corporación -213 M€. Turner: ventas +23,8% sin divisas, EBITDA '
+            '905 M€ (+41%), margen antes de impuestos 4,0% y cartera de 48.947 M€ (+42,4%). CIMIC: ventas 8.208 M€ y BAI ordinario 355 M€ (+12,3%). '
+            'Ingeniería y Construcción: ventas +9,5%, EBITDA 544 M€ (+22,6%), margen 6,4% (+81 pb). Abertis: ventas +4% y EBITDA +5%; Iridium: BAI 35 '
+            'M€. Contratación 56.228 M€ (+28,2%); centros de datos ~26.000 M€ de cartera (+94%). Flujo neto de las operaciones (12 meses) 2.385 M€; '
+            'inversiones 9M 2.172 M€ (Thiess 727, Hochtief 524, centros de datos 644) y desinversiones 598 M€; colocación de acciones de 1.703 M€ en '
+            'mayo.',
+     'guia': 'Objetivo 2026: crecimiento del beneficio neto ordinario del 30% al 35% (unos 1.114-1.157 M€ sobre los 857 M€ de 2025, calculado); a '
+             'septiembre crece un 35%. Dividendo con cargo a 2025: 0,457 € brutos (febrero de 2026) y 1,866 € brutos (dividendo flexible; fecha ex '
+             '29-jun-2026 y pago en efectivo el 15-jul-2026), 2,323 € en total. La nota de 9M no anuncia un nuevo dividendo; la remuneración al '
+             'accionista de 12 meses (890 M€, con minoritarios de Hochtief) incluye recompras, sin importe detallado.',
+     'positivos': ['El beneficio ordinario crece un 35% hasta septiembre, en la parte alta del objetivo, y el del tercer trimestre un 36% (calculado).',
+                   'Cartera récord de 110.994 M€ (+24,3%), con los centros de datos en ~26.000 M€ (+94%).',
+                   'Mejoran los márgenes: Turner llega al 4,0% antes de impuestos e Ingeniería y Construcción al 6,4% de EBITDA.'],
+     'riesgos': ['De caja neta de 1.006 M€ en junio a deuda neta de 908 M€ en septiembre, tras comprar el resto de Thiess (727 M€) y más Hochtief (524 '
+                 'M€).',
+                 'Infraestructuras gana un 5,9% menos y la corporación resta 213 M€.',
+                 'Creciente dependencia de Turner (524 M€ de beneficio) y de los centros de datos, una cuarta parte de la cartera.'],
+     'videos': [('W0lEuCDqG0Q', 'ACS resultados 3T 2026: beneficio 789 M€ (+20,5%), ordinario +35% | Cartera récord de 110.994 M€'),
+                ('E1iNDgVxGIw', 'ACS 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-25',
+     'proximo_estimado': True,
+     'fuentes': 'ACS, nota de prensa de resultados de enero a septiembre de 2026 (CNMV y grupoacs.com, 11-nov-2026) y notas de resultados del primer '
+                'semestre de 2026 y de 2025; Hochtief (nota 9M26, 5-nov-2026); Europa Press (dividendo flexible, 24-jun-2026), Bolsamanía, Valencia '
+                'Plaza, OKDiario y El Conciso (11-nov-2026); stockanalysis.com (acciones, valor contable y múltiplos históricos, sep-2026).',
+     'fuentes_corto': 'ACS (CNMV), Europa Press, Bolsamanía y stockanalysis.com',
+     'elaborado': '11-nov-2026, 23:30'},
 ]
