@@ -1,6 +1,6 @@
 {
  "trimestre": "3T 2026",
- "actualizado": "2026-11-07",
+ "actualizado": "2026-11-11",
  "empresas": [
   {
    "fecha": "2026-10-20",
@@ -246,6 +246,15 @@
    "fuente": "IAG, informe de gestión intermedio 9M 2026 (CNMV, 6-nov-2026)"
   },
   {
+   "fecha": "2026-11-11",
+   "empresa": "ACS",
+   "ticker": "ACS",
+   "sector": "Construcción",
+   "estado": "Publicada",
+   "nota": "Publicados el 11-nov-2026 tras el cierre: ventas 9M 41.262 M€ (+12,3%), beneficio neto 789 M€ (+20,5%), cartera récord de 110.994 M€.",
+   "fuente": "ACS, nota de prensa de resultados 9M 2026 (CNMV, 11-nov-2026)"
+  },
+  {
    "fecha": "2026-11-12",
    "empresa": "Telefónica",
    "ticker": "TEF",
@@ -289,15 +298,6 @@
    "estado": "Estimada",
    "nota": "Ejercicio feb-ene: en diciembre publica 9M (feb-oct), no el 3T calendario.",
    "fuente": "PcBolsa (3T25: inicios de diciembre)"
-  },
-  {
-   "fecha": null,
-   "empresa": "ACS",
-   "ticker": "ACS",
-   "sector": "Construcción",
-   "estado": "Por confirmar",
-   "nota": "Suele publicar a fines de octubre.",
-   "fuente": "Sin fuente de fecha"
   },
   {
    "fecha": null,
