@@ -323,7 +323,9 @@ def s_esc(k, t):
         y = 0.62 - i * 0.15
         rect(f, 0.50, y - 0.05, 0.44, 0.125, cc, 0.13 * b); rect(f, 0.935, y - 0.05, 0.005, 0.125, cc, b)
         T(f, 0.925, y + 0.035, tt, cc, 26, "bold", alpha=b)
-        T(f, 0.925, y - 0.01, "\n".join(textwrap.wrap(tx, 50)), FG, 20, va="center", linespacing=1.3, alpha=b)
+        L_ = textwrap.wrap(tx, 50); fs_ = 20
+        if len(L_) > 2: L_ = textwrap.wrap(tx, 58); fs_ = 18  # tres líneas pisan el título de la tarjeta
+        T(f, 0.925, y - 0.01, "\n".join(L_), FG, fs_, va="center", linespacing=1.3, alpha=b)
     c = a_["c"][-60:]; n = len(c); ax = f.add_axes([0.05, 0.25, 0.40, 0.48]); clean(ax)
     ax.plot(np.arange(n), c, color=FG, lw=2.5)
     lv = [(l["valor"], TEAL) for l in up if abs(l["dist_pct"]) <= 7] + [(l["valor"], NEG) for l in dn if abs(l["dist_pct"]) <= 7]
