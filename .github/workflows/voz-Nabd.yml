@@ -1,0 +1,47 @@
+# Voz neuronal de Azure (ar-SA-HamedNeural) para el vídeo diario largo de Nabd Wall Street (nabd/diario/voz_azure.py).
+# Se lanza sola cuando la sesión diaria sube nabd/diario/<fecha>/video.json a una rama claude/nabd-diario-*, o a mano con "Run workflow".
+# Deja un wav por frase en <fecha>/ de la rama voz-nabd (se reescribe cada día, sin historial, para no engordar el repo);
+# make_video.py los usa con VOZ_DIR. Sin los secretos no hace nada y el vídeo sale con la voz Piper.
+# Secretos: AZURE_SPEECH_KEY_NABD (Clave 1 del recurso de voz de Azure) y AZURE_SPEECH_REGION_NABD (p. ej. northeurope).
+# modo=verificar solo prueba la clave con una frase.
+name: Voz Azure del video diario (Nabd)
+on:
+  push:
+    branches: ["claude/nabd-diario-**"]
+    paths: ["nabd/diario/*/video.json"]
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "generar (la voz de un día) o verificar (solo la clave)"
+        default: verificar
+      fecha:
+        description: "fecha de la sesión (AAAA-MM-DD) para modo=generar; vacío = la carpeta más reciente"
+        default: ""
+permissions:
+  contents: write
+concurrency: voz-nabd
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_NABD }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_NABD || 'northeurope' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Comprobar la clave
+        id: clave
+        run: |
+          if [ -z "$AZURE_SPEECH_KEY" ]; then echo "Falta el secreto AZURE_SPEECH_KEY_NABD: el vídeo saldrá con la voz Piper."; echo "ok=0" >> $GITHUB_OUTPUT; exit 0; fi
+          echo '{"voz":{"x":"مرحبا بكم في نبض وول ستريت."}}' > /tmp/prueba.json
+          python3 nabd/diario/voz_azure.py /tmp/prueba.json /tmp/prueba && ls -la /tmp/prueba && echo "ok=1" >> $GITHUB_OUTPUT
+      - name: Generar la voz del día
+        if: steps.clave.outputs.ok == '1' && (github.event_name == 'push' || inputs.modo == 'generar')
+        run: |
+          F="${{ inputs.fecha }}"
+          if [ -z "$F" ]; then F=$(ls -d nabd/diario/20??-??-?? | sort | tail -1 | xargs basename); fi
+          echo "fecha $F"
+          python3 nabd/diario/voz_azure.py nabd/diario/$F/video.json /tmp/voz/$F
+          cd /tmp/voz && git init -q -b voz-nabd && git add .
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Voz Azure del video diario Nabd $F"
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          for i in 1 2 3; do git push -qf origin voz-nabd && break; sleep 5; done

@@ -106,7 +106,11 @@ if __name__=="__main__":
     clips=[]
     for i,e in enumerate(E):
         p=os.path.join(AUD,f"short_{i}.wav")
-        subprocess.run(["python3","-m","piper","-m",VOICE,"-f",p]+TTS,input=(e["voz"]+"\n").encode(),check=True,stderr=subprocess.DEVNULL)
+        mp=os.path.join(os.path.dirname(os.path.abspath(sys.argv[1])),"voz",f"short_{i}.mp3")  # voz neuronal (voz.sh); si falta, Piper
+        if os.path.exists(mp): subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(),"-y","-loglevel","error","-i",mp,"-ac","1","-ar","24000","-c:a","pcm_s16le",p],check=True)
+        else:
+            print("AVISO: sin voz neuronal para la escena",i,"-> Piper",flush=True)
+            subprocess.run(["python3","-m","piper","-m",VOICE,"-f",p]+TTS,input=(e["voz"]+"\n").encode(),check=True,stderr=subprocess.DEVNULL)
         w=wave.open(p); sr=w.getframerate(); a=np.frombuffer(w.readframes(w.getnframes()),dtype=np.int16).astype(np.float32)
         nz=np.where(np.abs(a)>300)[0]; a=a[max(nz[0]-int(0.03*sr),0):nz[-1]+int(0.08*sr)]
         fi,fo=int(0.015*sr),int(0.06*sr); a[:fi]*=np.linspace(0,1,fi); a[-fo:]*=np.linspace(1,0,fo); clips.append(a)

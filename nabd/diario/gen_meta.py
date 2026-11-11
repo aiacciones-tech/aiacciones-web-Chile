@@ -22,9 +22,16 @@ AVISO = f"""إخلاء مسؤولية مهم
 • تضارب المصالح: لا تملك القناة ولا معدّوها مراكز في الأسهم المذكورة، ولا يتلقون أي مقابل من الشركات، ولم يُرسل المحتوى إلى أي شركة قبل نشره.
 • المخاطر: الاستثمار في الأسهم ينطوي على مخاطر قد تصل إلى خسارة رأس المال كاملًا، والأداء السابق لا يضمن النتائج المستقبلية. قد تحتوي البيانات على أخطاء، فتحقق منها في مصادرها الأصلية.
 • الإنتاج: النص والرسوم والصوت (صوت اصطناعي) من إعداد أدوات الذكاء الاصطناعي، ومراجعة مع المصادر المذكورة."""
-cap = "\n".join(f"{mmss(T[k]) if i else '0:00'} {t}" for i, (k, t) in enumerate(I["capitulos"]))
-desc = (f"{I['resumen']}\n\n{cta_desc}" + "\n\n".join("• " + c for c in I["claves"]) +
-        f"\n\nالفصول\n{cap}\n\nالمصادر: {I['fuentes']}. لا نملك مراكز في الأسهم المذكورة.\n\n{AVISO}\n\n{I['hashtags']}\n\nاشترك في القناة: {CANAL}")
+# Capítulos: los del info.json si todos existen en times.json; si no, los de las 8 secciones del vídeo largo (manual de Daniel, 10-nov-2026)
+CAPS = [("s_title", "المقدمة"), ("s_indices", "المؤشرات الرئيسية"), ("s_news", "لماذا تحركت السوق"), ("s_sectores", "القطاعات"),
+        ("s_accion_1", "أسهم اليوم"), ("s_macro", "الاقتصاد الكلي والنفط"), ("s_tech_spx", "التحليل الفني: إس آند بي 500"),
+        ("s_tech_ndx", "التحليل الفني: ناسداك 100"), ("s_agenda", "ماذا ننتظر في الجلسة المقبلة"), ("s_fin", "الخلاصة وقناة تيليغرام")]
+caps = I.get("capitulos") if I.get("capitulos") and all(k in T for k, _ in I["capitulos"]) else [c for c in CAPS if c[0] in T]
+cap = "\n".join(f"{mmss(T[k]) if i else '0:00'} {t}" for i, (k, t) in enumerate(caps))
+MIN = max(1, round(T.get("_total", 180) / 60))
+tg_linea = f"📢 انضموا مجانًا إلى قناتنا على تيليغرام: {TELEGRAM}"
+desc = (f"{I['resumen']}\n\n{tg_linea}\n\n{cta_desc}" + "\n\n".join("• " + c for c in I["claves"]) +
+        f"\n\nالفصول\n{cap}\n\nالمصادر: {I['fuentes']}. لا نملك مراكز في الأسهم المذكورة.\n\n{AVISO}\n\n{I['hashtags']}\n\nاشترك في القناة: {CANAL}\n{tg_linea}")
 assert len(I["titulo"]) <= 100 and "<" not in desc and ">" not in desc and len(desc) < 5000, (len(I["titulo"]), len(desc))
 json.dump({"title": I["titulo"], "description": desc, "tags": I["tags"], "privacy": "public", "language": "ar", "categoryId": "27"}, open(f"{D}/meta-youtube-{F}-Nabd.json", "w"), ensure_ascii=False, indent=1)
 sd = (f"{I['resumen']}\nالفيديو الكامل (الأخبار والتحليل الأساسي والفني): {{video:{slug}}}\n"
@@ -43,7 +50,7 @@ if cta_x and largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) > 2
 assert largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 280, largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX"))
 open(f"{D}/post-x-{F}-Nabd.txt", "w").write(x); open(f"{D}/post-threads-{F}-Nabd.txt", "w").write(x)
 li = (f"نبض وول ستريت | ملخص جلسة {I['fecha_txt']}\n\n{I['resumen']}\n\n" + "\n\n".join("• " + c for c in I["claves"]) +
-      f"\n\n▶️ الفيديو الكامل (3 دقائق): {{youtube}}\n{cta_post}{canal_linea}\n\n"
+      f"\n\n▶️ الفيديو الكامل ({MIN} دقائق): {{youtube}}\n{cta_post}{canal_linea}\n\n"
       f"المصادر: {I['fuentes']}.\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. التحليل الفني يصف بيانات وليس إشارات شراء أو بيع. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n\n" + I["hashtags"])
 assert len(li.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 2950, len(li)
 open(f"{D}/post-facebook-{F}-Nabd.txt", "w").write(li)

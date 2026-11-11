@@ -1,0 +1,209 @@
+{
+ "fecha_txt": "lunes 9 nov 2026",
+ "titular": "+53 puntos con Wall Street",
+ "title_fuente": "Datos: TradingView, MSCI IPSA (cierre 9-nov-2026; anterior 6-nov: 10.536,5).",
+ "voz": {
+  "s_title": "Bolsa de Santiago, lunes nueve de noviembre. El IPSA cerró en diez mil quinientos ochenta y nueve puntos, con un alza de cero coma cincuenta por ciento, cincuenta y tres puntos más que el viernes. Durante la sesión llegó a diez mil seiscientos cincuenta, y luego moderó el avance.",
+  "s_news": "Las noticias. Wall Street rebotó con fuerza: el Nasdaq cien subió tres coma cuatro por ciento y recuperó parte de su peor semana desde abril de dos mil veinticinco. El petróleo cayó cerca de tres por ciento, después de que Trump restara importancia a nuevos ataques a Irán. En Chile, el dólar bajó a novecientos setenta pesos. Y Nvidia cayó en la apertura, por una investigación interna de su directorio sobre su presidente ejecutivo.",
+  "s_fact": "¿Por qué subió? Primero, Wall Street: el S and P quinientos ganó dos coma tres por ciento y Brasil, dos coma dos. Segundo, el cobre: subió dos coma dos por ciento, a seis coma treinta y ocho dólares la libra. Tercero, el dólar: bajó seis décimas en Chile, con el petróleo a la baja. El IPSA subió menos que sus pares, frenado por CAP y SQM.",
+  "s_movers": "Diecinueve acciones subieron y once bajaron. LATAM ganó tres coma dos por ciento, el día en que cayó el petróleo, aunque sin una noticia propia. Salfacorp, Falabella, Itaú y Cencosud subieron entre dos y tres, sin un motivo concreto en la prensa. Abajo, CAP cayó cuatro por ciento y SQM casi tres, también sin noticia concreta. SMU bajó uno coma cuatro, el día en que publica sus resultados.",
+  "s_tech1": "Análisis técnico. Empecemos por la tendencia. El IPSA sigue bajo sus dos medias móviles: cuatro por ciento bajo la de cincuenta sesiones, en once mil treinta y siete, y tres por ciento bajo la de doscientas, en diez mil novecientos veintitrés. Además, la media de cincuenta viene bajando desde mediados de octubre y se acerca a la de doscientas. La resistencia más cercana es el máximo del jueves cinco, diez mil setecientos cuarenta y uno, y luego once mil doscientos cuarenta y cuatro. Los soportes están en diez mil trescientos veinte, el mínimo del tres de noviembre, y en diez mil doscientos cincuenta y cuatro.",
+  "s_tech2": "El impulso. El RSI de catorce sesiones está en cuarenta y cuatro, en zona neutral, lejos de la sobreventa de treinta que tocó a fines de octubre. El estocástico está en treinta y siete, con la línea rápida sobre la lenta. El monto transado fue seis por ciento menor que su media de diez sesiones: el alza llegó con menos negocios de lo habitual.",
+  "s_agenda": "La agenda. El martes reporta Falabella y se conoce la inflación de Estados Unidos. El diecisiete reporta SQM, el dieciocho se espera a Ripley, y el veinte, a Vapores y Sigdo Koppers.",
+  "s_fin": "En resumen: el IPSA subió cero coma cincuenta por ciento, con Wall Street y el cobre a favor, y CAP y SQM en contra. Contenido informativo, no es una recomendación de inversión. Aviso completo en la descripción y más en aiacciones punto ce ele.",
+  "s_sect": "Por sectores, con un cálculo propio ponderado por capitalización. Transporte y telecomunicaciones fue el mejor, con dos coma seis por ciento, gracias a LATAM. Le siguió el retail y consumo, con uno coma cuatro, y los bancos, con cero coma nueve. Al otro lado, las materias primas cayeron uno coma ocho por ciento: CAP y SQM bajaron aunque el cobre subió, una diferencia que la prensa consultada no explica.",
+  "s_persp": "En perspectiva. El IPSA sube dos coma uno por ciento en una semana, pero cae cuatro coma uno en un mes y seis en tres meses. En lo que va del año gana uno por ciento, y en doce meses, diez coma tres. Hoy está nueve coma siete por ciento bajo su máximo de cincuenta y dos semanas, de enero, y once por ciento sobre su mínimo, de noviembre del año pasado.",
+  "s_tech3": "Ahora, las bandas de Bollinger y el MACD. El IPSA cerró dentro de sus bandas, entre diez mil doscientos treinta y ocho y once mil ciento setenta y cuatro, bajo su línea media de veinte sesiones, en diez mil setecientos seis. Las bandas tienen un ancho de ocho coma siete por ciento. El MACD sigue en terreno negativo, pero este lunes cruzó al alza su línea de señal, y el histograma pasó a positivo por primera vez desde el cuatro de septiembre.",
+  "s_tech4": "Y debajo del índice, las treinta y una acciones. Solo siete están sobre su media de cincuenta sesiones, y trece, sobre la de doscientas. Ninguna tiene un RSI sobre setenta. En cambio, CAP, Mallplaza y CMPC están en sobreventa, con un RSI bajo treinta. Engie tiene el RSI más alto, sesenta y siete. Son datos, no señales de compra o venta."
+ },
+ "noticias": {
+  "titulo": "Rebota Wall Street; cae el petróleo y el dólar",
+  "fuente": "Fuentes: TheStreet (9-nov-2026; Wall Street, petróleo y Nvidia); Infobae con datos de Dow Jones (dólar, cierre 9-nov-2026); TradingView (Nasdaq 100).",
+  "items": [
+   [
+    "Wall Street",
+    "Nasdaq 100 +3,4%: rebote tras la peor semana del S&P 500 desde abril de 2025"
+   ],
+   [
+    "Petróleo",
+    "WTI -3% a US$88,1: Trump resta importancia a nuevos ataques a Irán"
+   ],
+   [
+    "Dólar en Chile",
+    "Cierra en $970,61 (-0,62%, Dow Jones vía Infobae)"
+   ],
+   [
+    "Nvidia",
+    "Cae en la apertura por una investigación interna del directorio sobre su CEO"
+   ]
+  ]
+ },
+ "factores": {
+  "titulo": "Wall Street y el cobre a favor; CAP y SQM en contra",
+  "fuente": "Variación del 9-nov: TradingView (índices y cobre COMEX). Dólar: cierre según Dow Jones, vía Infobae. Contexto de Wall Street y petróleo: TheStreet (9-nov-2026).",
+  "bolsas_titulo": "Bolsas el lunes 9-nov",
+  "bolsas": [
+   [
+    "Kospi (Corea)",
+    "TVC:KOSPI"
+   ],
+   [
+    "Hang Seng",
+    "TVC:HSI"
+   ],
+   [
+    "IPSA",
+    "BCS:MXIPSAGC"
+   ],
+   [
+    "IPC México",
+    "BMV:ME"
+   ],
+   [
+    "DAX (Alemania)",
+    "XETR:DAX"
+   ],
+   [
+    "Dow Jones",
+    "DJ:DJI"
+   ],
+   [
+    "Bovespa",
+    "BMFBOVESPA:IBOV"
+   ],
+   [
+    "S&P 500",
+    "SP:SPX"
+   ],
+   [
+    "Nasdaq 100",
+    "NASDAQ:NDX"
+   ]
+  ],
+  "items": [
+   [
+    "S&P 500: +2,35%",
+    "rebote tras su peor semana desde abril de 2025",
+    "acc"
+   ],
+   [
+    "Cobre: US$6,38/lb (+2,2%)",
+    "futuro COMEX",
+    "acc"
+   ],
+   [
+    "Dólar: $970,61 (-0,62%)",
+    "con el petróleo a la baja (WTI -3%)",
+    "acc2"
+   ],
+   [
+    "CAP -4,05% y SQM-B -2,85%",
+    "frenaron al IPSA (sin noticia concreta)",
+    "fg"
+   ]
+  ]
+ },
+ "valores": {
+  "fuente": "Variación del 9-nov-2026: TradingView (31 acciones del MSCI IPSA). Petróleo: TheStreet. SMU: calendario de aiacciones.cl. Sin motivo: la prensa consultada no da uno.",
+  "motivos": {
+   "LTM": "sin noticia propia; ese día cayó el petróleo",
+   "SALFACORP": "sin noticia concreta en prensa",
+   "FALABELLA": "sin noticia concreta; reporta el martes",
+   "ITAUCL": "sin noticia concreta en prensa",
+   "CENCOSUD": "sin noticia concreta en prensa",
+   "CAP": "sin noticia concreta en prensa",
+   "SQM-B": "sin noticia concreta en prensa",
+   "PAMPA": "sin noticia concreta en prensa",
+   "CMPC": "sin noticia concreta en prensa",
+   "SMU": "publica sus resultados del 3T este día"
+  },
+  "extra": "Copec: +0,14%"
+ },
+ "tecnico": {
+  "titulo1": "Bajo sus medias de 50 y 200 sesiones",
+  "titulo2": "RSI neutral; estocástico %K sobre %D",
+  "niveles": [
+   [
+    11244.0,
+    "Máx. 28-sep 11.244",
+    "res"
+   ],
+   [
+    10740.9,
+    "Máx. 5-nov 10.741",
+    "res"
+   ],
+   [
+    10319.9,
+    "Mín. 3-nov 10.320",
+    "sop"
+   ]
+  ],
+  "leyenda": "upper left",
+  "rsi_txt": "RSI: zona neutral\n(sobreventa < 30)",
+  "estoc_txt": "Estocástico: %K sobre %D;\nsobreventa < 20",
+  "monto_txt": "Monto transado frente\na su media de 10 sesiones",
+  "titulo3": "Dentro de las bandas; el MACD cruza su señal al alza",
+  "titulo4": "Solo 7 de 31 acciones, sobre su media de 50",
+  "nota4": "CAP, Mallplaza y CMPC tienen un RSI bajo 30. Ninguna supera 70."
+ },
+ "agenda": {
+  "titulo": "Los próximos días",
+  "fuente": "Calendario de resultados de aiacciones.cl (fechas informadas por las empresas a la CMF; estimadas según el año anterior). IPC de EE. UU.: calendario de la BLS.",
+  "filas": [
+   [
+    "Mar 10-nov",
+    "Falabella: resultados 3T 2026",
+    "confirmada"
+   ],
+   [
+    "Mar 10-nov",
+    "EE. UU.: IPC de octubre",
+    "BLS"
+   ],
+   [
+    "Mar 17-nov",
+    "SQM: resultados (tras el cierre)",
+    "confirmada"
+   ],
+   [
+    "Mié 18-nov",
+    "Ripley: resultados 3T 2026",
+    "estimada"
+   ],
+   [
+    "Vie 20-nov",
+    "Vapores y Sigdo Koppers: 3T 2026",
+    "conf./estim."
+   ]
+  ]
+ },
+ "fin": {
+  "titular": "+0,50% con Wall Street y el cobre; CAP y SQM, a la baja.",
+  "fuentes": "TradingView; TheStreet; Infobae (Dow Jones); calendario de aiacciones.cl"
+ },
+ "sectores": {
+  "titulo": "Transporte y retail lideran; materias primas, a la baja",
+  "items": [
+   [
+    "Transporte y telecom.: +2,6%",
+    "LATAM subió 3,2%, el día en que el petróleo cayó cerca de 3%",
+    "acc"
+   ],
+   [
+    "Retail y consumo: +1,4%",
+    "Falabella, Cencosud y Salfacorp entre las que más subieron",
+    "acc"
+   ],
+   [
+    "Materias primas: -1,8%",
+    "CAP y SQM-B cayeron pese al alza del cobre",
+    "neg"
+   ]
+  ]
+ },
+ "perspectiva": {
+  "titulo": "+2,1% en una semana, pero -4,1% en un mes",
+  "nota": "Sube 10,3% en 12 meses, pero está 9,7% bajo su máximo de enero."
+ }
+}

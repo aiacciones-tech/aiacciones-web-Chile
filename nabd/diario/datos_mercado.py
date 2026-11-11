@@ -8,13 +8,15 @@ from zoneinfo import ZoneInfo
 ROOT = os.path.dirname(os.path.abspath(__file__))
 NY = ZoneInfo("America/New_York")
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"
-INDICES = {"spx": ["SP:SPX"], "ndq": ["NASDAQ:IXIC"], "dji": ["DJ:DJI"], "rut": ["TVC:RUT", "RUSSELL:RUT", "CBOE:RUT"]}   # velas: el primero que responda
-YAHOO = {"spx": ["^GSPC"], "ndq": ["^IXIC"], "dji": ["^DJI"], "rut": ["^RUT"]}  # respaldo
+INDICES = {"spx": ["SP:SPX"], "ndq": ["NASDAQ:IXIC"], "dji": ["DJ:DJI"], "rut": ["TVC:RUT", "RUSSELL:RUT", "CBOE:RUT"], "ndx": ["NASDAQ:NDX"]}   # velas: el primero que responda
+YAHOO = {"spx": ["^GSPC"], "ndq": ["^IXIC"], "dji": ["^DJI"], "rut": ["^RUT"], "ndx": ["^NDX"]}  # respaldo
+N_VELAS = 5000   # unos 20 años de sesiones: el máximo histórico del S&P 500, Nasdaq 100 y Dow Jones cae dentro
+SECTORES = ["AMEX:XLK", "AMEX:XLF", "AMEX:XLE", "AMEX:XLV", "AMEX:XLY", "AMEX:XLI"]  # ETF sectoriales SPDR (manual de producción, 10-nov-2026)
 INTRADIA = ("spx",)
 CTX = ["SP:SPX", "NASDAQ:IXIC", "DJ:DJI", "NASDAQ:NDX", "TVC:VIX", "TVC:UKOIL", "TVC:USOIL", "TVC:GOLD", "TVC:US10Y", "TVC:US02Y", "TVC:DXY",
-       "BITSTAMP:BTCUSD", "TADAWUL:TASI", "ADX:FADGI", "DFM:DFMGI", "QSE:GNRI", "TVC:SX5E", "TVC:UKX", "XETR:DAX", "TVC:NI225", "TVC:HSI"]
+       "BITSTAMP:BTCUSD", "TADAWUL:TASI", "ADX:FADGI", "DFM:DFMGI", "QSE:GNRI", "TVC:SX5E", "TVC:UKX", "XETR:DAX", "TVC:NI225", "TVC:HSI"] + SECTORES
 CTX_VELAS = ["TVC:VIX", "TVC:UKOIL", "TVC:GOLD", "TVC:US10Y", "TVC:DXY", "BITSTAMP:BTCUSD", "NASDAQ:NDX",
-             "TADAWUL:TASI", "ADX:FADGI", "DFM:DFMGI", "QSE:GNRI", "TVC:SX5E", "XETR:DAX", "TVC:UKX", "TVC:NI225", "TVC:HSI"]
+             "TADAWUL:TASI", "ADX:FADGI", "DFM:DFMGI", "QSE:GNRI", "TVC:SX5E", "XETR:DAX", "TVC:UKX", "TVC:NI225", "TVC:HSI", "TVC:USOIL"] + SECTORES
 COLS = ["name", "description", "close", "change", "change_abs", "volume", "Value.Traded", "average_volume_10d_calc",
         "market_cap_basic", "time", "Perf.W", "Perf.1M", "Perf.YTD", "type", "exchange", "sector"]
 
@@ -84,6 +86,19 @@ def tv_velas(simbolo, resol="1D", n=500):
     return {"simbolo": simbolo, "fuente": "TradingView", "velas": velas}
 
 
+def candidatas(acc, n=8):
+    """Acciones del S&P 500 que pueden ser protagonistas del día: las que más suben y bajan (más de 50 millones de dólares negociados),
+    las de mayor valor negociado y las de volumen más alto frente a su media de 10 sesiones. De ellas se descargan velas para su gráfico."""
+    L = [(t, v) for t, v in acc.items() if any(i.get("proname") == "SP:SPX" for i in (v.get("indexes") or []))
+         and v.get("change") is not None and (v.get("Value.Traded") or 0) >= 50e6]
+    rel = lambda v: (v.get("volume") or 0) / v["average_volume_10d_calc"] if v.get("average_volume_10d_calc") else 0
+    out = []
+    for key, rev in ((lambda x: x[1]["change"], True), (lambda x: x[1]["change"], False), (lambda x: x[1].get("Value.Traded") or 0, True),
+                     (lambda x: rel(x[1]) if (x[1].get("Value.Traded") or 0) >= 100e6 else 0, True)):
+        out += [t for t, _ in sorted(L, key=key, reverse=rev)[:n]]
+    return list(dict.fromkeys(out))
+
+
 def fecha_vela(t):
     """Fecha de la sesión de una vela diaria (TradingView la marca a las 00:00 UTC o a la apertura; las dos caen en el mismo día UTC)."""
     return datetime.datetime.fromtimestamp(t, datetime.timezone.utc).date()
@@ -100,7 +115,7 @@ def main():
     for k in INDICES:
         for sym in INDICES[k]:
             try:
-                res[f"{k}_diario"] = tv_velas(sym, "1D", 520)
+                res[f"{k}_diario"] = tv_velas(sym, "1D", N_VELAS)
                 if k in INTRADIA: res[f"{k}_intradia"] = tv_velas(sym, "5", 600)
                 break
             except Exception as e:
@@ -108,7 +123,7 @@ def main():
         if f"{k}_diario" not in res:
             for sym in YAHOO[k]:
                 try:
-                    res[f"{k}_diario"] = yahoo(sym, "2y", "1d")
+                    res[f"{k}_diario"] = yahoo(sym, "max", "1d")
                     if k in INTRADIA: res[f"{k}_intradia"] = yahoo(sym, "5d", "5m")
                     break
                 except Exception as e:
@@ -127,6 +142,12 @@ def main():
         res["acciones"] = tv_acciones()
     except Exception as e:
         res["errores"].append(f"tradingview acciones: {e}")
+    res["acciones_velas"] = {}
+    for t in candidatas(res.get("acciones", {})):
+        try:
+            res["acciones_velas"][t] = [{k_: v[k_] for k_ in "tohlcv"} for v in tv_velas(t, "1D", 70)["velas"]]
+        except Exception as e:
+            res["errores"].append(f"tv velas {t}: {e}")
     hoy = datetime.datetime.now(NY).date().isoformat()
     fecha = hoy
     try:

@@ -164,6 +164,58 @@ def s_tech_adx(t): return tech("adx", 4, t)
 def s_tech_dfm(t): return tech("dfm", 4, t)
 
 
+MES_AR = lambda iso: f"{int(iso[8:10])} {MESES[int(iso[5:7]) - 1]} {iso[:4]}"
+ZONA = {"sobrecompra": "منطقة التشبع الشرائي", "sobreventa": "منطقة التشبع البيعي", "neutral": "منطقة محايدة"}
+
+
+def barra(f, x0, x1, y, v, lo_, hi_, zonas=(), b=1.0, col=GOLD, h=0.016):
+    """Barra horizontal (izquierda = mínimo, derecha = máximo) con zonas sombreadas y un marcador en v."""
+    rect = lambda a, w, c, al: f.patches.append(plt.Rectangle((a, y), w, h, transform=f.transFigure, color=c, alpha=al * b, figure=f))
+    rect(x0, x1 - x0, DIM, 0.9)
+    for a, z, c in zonas: rect(x0 + (a - lo_) / (hi_ - lo_) * (x1 - x0), (z - a) / (hi_ - lo_) * (x1 - x0), c, 0.35)
+    xm = x0 + min(max((v - lo_) / (hi_ - lo_), 0), 1) * (x1 - x0)
+    f.patches.append(plt.Rectangle((xm - 0.004, y - 0.012), 0.008, h + 0.024, transform=f.transFigure, color=col, alpha=b, figure=f))
+    return xm
+
+
+def s_tech_panel(t):
+    P = VJ["tecnico"].get("panel", {})
+    f = base_fig(4, "التحليل الفني · لوحة المؤشرات", P.get("titulo", "أبوظبي ودبي: الاتجاه والزخم والمستويات"),
+                 "محسوب من الشموع اليومية (TradingView): الأداء مقابل إغلاق قبل شهر و3 أشهر ونهاية العام الماضي، وتقاطع المتوسطين، والدعوم والمقاومات من القمم والقيعان الحديثة. هذه بيانات وليست إشارات شراء أو بيع.")
+    for col, k in enumerate(("adx", "dfm")):
+        r = R[k]; xr = 0.94 - col * 0.455; xl = xr - 0.405
+        b0 = ease((t - col * 0.15) / 0.4)
+        T(f, xr, 0.71, INDICE[k], GOLD, 27, "bold", alpha=b0)
+        T(f, xl, 0.71, f"{num(r['cierre'])}  ({pct(r['var_pct'])})", TEAL if r["var_pct"] >= 0 else NEG, 25, "bold", ha="left", alpha=b0)
+        y = 0.645
+        cr = r.get("cruce")
+        tend = ("المتوسط 50 فوق 200" if r["sma50_sobre_sma200"] else "المتوسط 50 دون 200")
+        if cr: tend += " · " + ("تقاطع ذهبي" if cr["tipo"] == "dorado" else "تقاطع الموت") + " في " + MES_AR(cr["fecha"])
+        filas = [("الاتجاه", tend, BLUE if r["sma50_sobre_sma200"] else NEG)]
+        perfs = [(n_, r[x_]) for n_, x_ in (("شهر", "perf_1m"), ("3 أشهر", "perf_3m"), ("منذ بداية العام", "perf_ytd")) if r.get(x_) is not None]
+        filas.append(("الأداء", "  ·  ".join(f"{n_} {pct(v_, 1)}" for n_, v_ in perfs), FG))
+        filas.append(("أقرب مقاومة", "—" if r["res_cercana"] is None else f"{num(r['res_cercana'])}  ({pct(r['dist_res_pct'], 1)})", NEG))
+        filas.append(("أقرب دعم", "—" if r["sop_cercano"] is None else f"{num(r['sop_cercano'])}  ({pct(r['dist_sop_pct'], 1)})", TEAL))
+        vr = r["volumen_vs_media10_pct"]
+        filas.append(("حجم التداول", ("—" if vr is None else pct(vr, 0)) + " عن متوسط 10 جلسات", MUTED))
+        for i, (lab, val, cc) in enumerate(filas):
+            b = ease((t - 0.15 - col * 0.15 - i * 0.06) / 0.4)
+            T(f, xr, y, lab, MUTED, 18, alpha=b); T(f, xr - 0.10, y, val, cc, 19, "bold", alpha=b); y -= 0.047
+        # barras: rango de 52 semanas, RSI 14 y %K del estocástico
+        bb = ease((t - 0.45 - col * 0.15) / 0.4); y -= 0.01
+        T(f, xr, y, f"نطاق 52 أسبوعًا · الإغلاق عند {num(r['pos_52s_pct'], 0)}% من النطاق", MUTED, 18, alpha=bb); y -= 0.04
+        barra(f, xl, xr, y, r["cierre"], r["min_52s"], r["max_52s"], b=bb)
+        T(f, xl, y - 0.03, num(r["min_52s"], 0), MUTED, 15, ha="left", alpha=bb); T(f, xr, y - 0.03, num(r["max_52s"], 0), MUTED, 15, alpha=bb)
+        y -= 0.07
+        T(f, xr, y, f"RSI 14: {num(r['rsi14'], 1)} · {ZONA[r['rsi_zona']]}", BLUE, 18, "bold", alpha=bb); y -= 0.038
+        barra(f, xl, xr, y, r["rsi14"], 0, 100, ((0, 30, TEAL), (70, 100, NEG)), b=bb, col=BLUE)
+        y -= 0.06
+        T(f, xr, y, f"العشوائي (14، 3، 3): K {num(r['estoc_k'], 0)} · D {num(r['estoc_d'], 0)} · {ZONA[r['estoc_zona']]}", TEAL, 18, "bold", alpha=bb); y -= 0.038
+        barra(f, xl, xr, y, r["estoc_k"], 0, 100, ((0, 20, TEAL), (80, 100, NEG)), b=bb, col=TEAL)
+    f.lines.append(plt.Line2D([0.5, 0.5], [0.12, 0.74], transform=f.transFigure, color=DIM, lw=1, figure=f))
+    return to_arr(f)
+
+
 def s_agenda(t):
     G = VJ["agenda"]; f = base_fig(5, "الأجندة", G["titulo"], G["fuente"])
     for i, (d_, e_, s_) in enumerate(G["filas"]):
@@ -191,7 +243,9 @@ def s_fin(t):
     return with_logo(to_arr(f), LGB, x=110, y=90)
 
 
-SEQ = [s_title, s_news, s_fact, s_movers, s_tech_adx, s_tech_dfm, s_agenda, s_fin]; BIG = {s_title, s_fin}
+SEQ = [s_title, s_news, s_fact, s_movers, s_tech_adx, s_tech_dfm, s_tech_panel, s_agenda, s_fin]; BIG = {s_title, s_fin}
+if "s_tech_panel" not in VJ["voz"]: SEQ.remove(s_tech_panel)  # guiones anteriores al 10-nov-2026
+MAX_SEG = 300  # Daniel (10-nov-2026): hasta 5 minutos, con más peso del análisis técnico
 def frame(fn, t):
     arr = fn(t); return arr if fn in BIG else with_logo(arr, LGS, x=60, y=48)
 
@@ -205,7 +259,7 @@ if __name__ == "__main__":
     LEAD, TAIL = 0.12, 0.45
     durs = [LEAD + len(a) / sr + TAIL for a, _ in clips]; durs[0] += 0.4; durs[-1] += 1.5
     print("duración prevista", round(sum(durs), 1), [round(d, 1) for d in durs])
-    if sum(durs) > 180: sys.exit(f"Video demasiado largo: {sum(durs):.1f} s (máx. 180). Acorta la locución.")
+    if sum(durs) > MAX_SEG: sys.exit(f"Video demasiado largo: {sum(durs):.1f} s (máx. {MAX_SEG}). Acorta la locución.")
     leads = [LEAD + (0.4 if j == 0 else 0) for j in range(len(SEQ))]
     times, t0 = render([lambda t, fn=fn: frame(fn, t) for fn in SEQ], durs, ([a for a, _ in clips], leads), sr, W, H, FPS, OUT,
                        os.path.join(AUD, "video-silent.mp4"), os.path.join(AUD, "full.wav"))

@@ -1,0 +1,32 @@
+# Locución natural (voz neuronal es-ES) para el vídeo diario de España. El contenedor de Claude no llega al servicio de voz; GitHub Actions sí.
+# Entrada: rama datos-diario-es, voz/<id>/textos.json ({"escena": "texto"}). Salida: voz/<id>/<escena>.mp3 en la misma rama.
+name: Voz del vídeo diario (España)
+on:
+  workflow_dispatch:
+    inputs:
+      id:
+        description: "Carpeta voz/<id> en la rama datos-diario-es"
+        required: true
+permissions:
+  contents: write
+concurrency: datos-diario-es
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q -U edge-tts  # sin fijar versión: sigue los cambios del servicio de Microsoft
+      - name: Generar y guardar audio
+        env:
+          ID: ${{ inputs.id }}
+        run: |
+          case "$ID" in *[!A-Za-z0-9_-]*|"") echo "id no válido"; exit 1;; esac
+          cp espana/diario/voz_neural.py /tmp/voz_neural.py
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git fetch -q origin datos-diario-es && git checkout -q -B datos-diario-es origin/datos-diario-es
+          python3 /tmp/voz_neural.py "voz/$ID/textos.json" "voz/$ID"
+          git add "voz/$ID"
+          git diff --cached --quiet && exit 0
+          git commit -qm "Voz del vídeo diario $ID"
+          for i in 1 2 3; do git push -q origin datos-diario-es && break; sleep 5; git pull -q --rebase origin datos-diario-es; done

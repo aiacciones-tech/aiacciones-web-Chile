@@ -7,10 +7,16 @@ from zoneinfo import ZoneInfo
 NY = ZoneInfo("America/New_York")
 RIAD = dt.timezone(dt.timedelta(hours=3))  # hora del Golfo (Riad, Kuwait, Doha, Manama); Dubái y Mascate son una hora más
 TZ = RIAD
-CLAVES = ("spx", "ndq", "dji", "rut")
-INDICE = {"spx": "مؤشر إس آند بي 500", "ndq": "مؤشر ناسداك المركب", "dji": "مؤشر داو جونز الصناعي", "rut": "مؤشر راسل 2000"}
-INDICE_CORTO = {"spx": "إس آند بي 500", "ndq": "ناسداك", "dji": "داو جونز", "rut": "راسل 2000"}
-SIMBOLO = {"spx": "SP:SPX", "ndq": "NASDAQ:IXIC", "dji": "DJ:DJI", "rut": "TVC:RUT"}
+CLAVES = ("spx", "ndq", "dji", "rut", "ndx")
+INDICE = {"spx": "مؤشر إس آند بي 500", "ndq": "مؤشر ناسداك المركب", "dji": "مؤشر داو جونز الصناعي", "rut": "مؤشر راسل 2000", "ndx": "مؤشر ناسداك 100"}
+INDICE_CORTO = {"spx": "إس آند بي 500", "ndq": "ناسداك", "dji": "داو جونز", "rut": "راسل 2000", "ndx": "ناسداك 100"}
+SIMBOLO = {"spx": "SP:SPX", "ndq": "NASDAQ:IXIC", "dji": "DJ:DJI", "rut": "TVC:RUT", "ndx": "NASDAQ:NDX"}
+# ETF sectoriales SPDR del manual de producción (10-nov-2026)
+SECTORES = {"AMEX:XLK": "التكنولوجيا", "AMEX:XLF": "المال", "AMEX:XLE": "الطاقة", "AMEX:XLV": "الرعاية الصحية",
+            "AMEX:XLY": "السلع الاستهلاكية الكمالية", "AMEX:XLI": "الصناعة"}
+# Indicadores macro del manual: (símbolo, nombre, unidad); el bono va en rendimiento (%) y su cambio en puntos básicos
+MACRO = [("TVC:US10Y", "عائد 10 سنوات", "%"), ("TVC:DXY", "الدولار DXY", ""), ("TVC:VIX", "التقلب VIX", ""),
+         ("TVC:USOIL", "النفط WTI", "دولار"), ("TVC:GOLD", "الذهب", "دولار")]
 MESES = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"]
 DIAS = ["الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت", "الأحد"]
 # Nombres en árabe de las grandes empresas del S&P 500 por ticker (el video.json del día puede añadir más en "nombres").
@@ -28,7 +34,15 @@ NOMBRES = {"AAPL": "أبل", "NVDA": "إنفيديا", "MSFT": "مايكروسو
            "UNP": "يونيون باسيفيك", "TMUS": "تي موبايل", "PFE": "فايزر", "BA": "بوينغ", "NKE": "نايكي", "SBUX": "ستاربكس", "UBER": "أوبر",
            "ABNB": "إير بي إن بي", "APP": "آب لوفين", "VST": "فيسترا", "COHR": "كوهيرنت", "AXON": "أكسون", "MCHP": "مايكروتشيب",
            "CHTR": "تشارتر", "PODD": "إنسوليت", "DXCM": "ديكسكوم", "SMCI": "سوبر مايكرو", "ADBE": "أدوبي", "NOW": "سيرفس ناو",
-           "INTU": "إنتويت", "PYPL": "باي بال", "SCHW": "تشارلز شواب", "COIN": "كوينبيس", "HOOD": "روبن هود", "SPGI": "إس آند بي غلوبال"}
+           "INTU": "إنتويت", "PYPL": "باي بال", "SCHW": "تشارلز شواب", "COIN": "كوينبيس", "HOOD": "روبن هود", "SPGI": "إس آند بي غلوبال",
+           "HON": "هانيويل", "TRV": "ترافلرز", "SHW": "شيروين ويليامز", "MMM": "ثري إم", "MPWR": "مونوليثيك باور", "TER": "تيرادين",
+           "FSLR": "فيرست سولار", "TTWO": "تيك-تو", "AKAM": "أكاماي", "SPCX": "سبيس إكس"}
+SECTOR_AR = {"Electronic Technology": "التكنولوجيا الإلكترونية", "Technology Services": "خدمات التكنولوجيا", "Finance": "المال",
+             "Health Technology": "التكنولوجيا الصحية", "Retail Trade": "التجزئة", "Consumer Non-Durables": "السلع الاستهلاكية غير المعمرة",
+             "Producer Manufacturing": "التصنيع", "Energy Minerals": "الطاقة", "Consumer Services": "الخدمات الاستهلاكية", "Consumer Durables": "السلع المعمرة",
+             "Utilities": "المرافق", "Non-Energy Minerals": "المعادن", "Industrial Services": "الخدمات الصناعية", "Transportation": "النقل",
+             "Commercial Services": "الخدمات التجارية", "Process Industries": "الصناعات التحويلية", "Communications": "الاتصالات",
+             "Health Services": "الخدمات الصحية", "Distribution Services": "التوزيع", "Miscellaneous": "متنوع"}
 MIN_VALOR = 50e6  # solo valores con más de 50 millones de dólares negociados en la sesión
 
 
@@ -37,7 +51,9 @@ def fecha_ar(d, dia=True):
 
 
 def fecha_vela(t):
-    return dt.datetime.fromtimestamp(t, dt.timezone.utc).date()
+    """Fecha de la sesión de una vela diaria. +6 h: las velas de futuros (petróleo, oro, dólar) empiezan a las 22:00-23:00 UTC del día anterior
+    (18:00 en Nueva York) y son de la sesión del día siguiente; las de acciones e índices (13:30-14:30 UTC) y las de 00:00 UTC no cambian de día."""
+    return (dt.datetime.fromtimestamp(t, dt.timezone.utc) + dt.timedelta(hours=6)).date()
 
 
 def nombre_en(desc):
@@ -59,7 +75,7 @@ def velas(D, k):
 def calc_indice(D, k):
     dates, o, hi, lo, c, vol = velas(D, k)
     sma = lambda n: np.array([c[max(0, i - n + 1):i + 1].mean() if i >= n - 1 else np.nan for i in range(len(c))])
-    S50, S200 = sma(50), sma(200)
+    S20, S50, S200 = sma(20), sma(50), sma(200)
     dd = np.diff(c); g = np.where(dd > 0, dd, 0); ls = np.where(dd < 0, -dd, 0); RSI = [np.nan] * 15
     ag, al = g[:14].mean(), ls[:14].mean()
     for i in range(14, len(dd)):
@@ -99,12 +115,116 @@ def calc_indice(D, k):
              dist_max_52s_pct=round(float(c[-1] / hi[i_hi] * 100 - 100), 2),
              cierre_mas_bajo_desde=dates[ult_bajo].isoformat() if ult_bajo is not None else None,
              cierre_mas_alto_desde=dates[ult_alto].isoformat() if ult_alto is not None else None,
-             volumen_vs_media10_pct=None if vr is None else round(float(vr), 1), niveles=niveles)
+             volumen_vs_media10_pct=None if vr is None else round(float(vr), 1), niveles=niveles,
+             sma20=round(float(S20[-1]), 2), dist_sma20_pct=round(float(c[-1] / S20[-1] * 100 - 100), 2),
+             volumen=None if np.isnan(vol[-1]) else float(vol[-1]), sesiones=len(c), historia_desde=dates[0].isoformat())
+    i_ath = int(np.argmax(hi))  # máximo de toda la historia descargada (desde historia_desde)
+    r.update(max_hist=round(float(hi[i_ath]), 2), max_hist_fecha=dates[i_ath].isoformat(), dist_max_hist_pct=round(float(c[-1] / hi[i_ath] * 100 - 100), 2),
+             # Es el máximo histórico si los datos empiezan antes de 2007, o si supera en más de un 50% el máximo del primer año de datos
+             # (para los índices de EE. UU., cuyos máximos anteriores a 2016 quedan muy por debajo de los actuales).
+             max_hist_es_historico=bool(dates[0] <= dt.date(2007, 1, 1) or hi[i_ath] > 1.5 * hi[:250].max()))
+    r["tendencia"] = tendencia(r)
+    r["escenarios"] = escenarios(r)
     if k == "spx":
         acc = acciones(D)
         r.update(suben=sum(1 for v in acc if (v.get("change") or 0) > 0), bajan=sum(1 for v in acc if (v.get("change") or 0) < 0),
                  sin_cambio=sum(1 for v in acc if v.get("change") == 0), valor_negociado_usd=round(sum(v.get("Value.Traded") or 0 for v in acc)))
-    return r, dict(dates=dates, o=o, hi=hi, lo=lo, c=c, S50=S50, S200=S200, RSI=RSI, K=K, D=Dl)
+    return r, dict(dates=dates, o=o, hi=hi, lo=lo, c=c, vol=vol, S20=S20, S50=S50, S200=S200, RSI=RSI, K=K, D=Dl)
+
+
+def tendencia(r):
+    """Tendencia general por la posición del cierre frente a las medias (cálculo propio, no una previsión)."""
+    c, a, b, d = r["cierre"], r["sma20"], r["sma50"], r["sma200"]
+    if c > b > d: return "صاعد" if c > a else "صاعد مع تراجع"
+    if c < b < d: return "هابط" if c < a else "هابط مع ارتداد"
+    return "عرضي" if c >= d else "دون متوسط 200"
+
+
+def escenarios(r):
+    """Tres escenarios con niveles calculados (máximos/mínimos recientes y de 52 semanas, y medias de 20, 50 y 200 sesiones):
+    alcista = cierres por encima de la primera y la segunda resistencia; neutral = rango entre el primer soporte y la primera resistencia;
+    bajista = cierres por debajo del primer y el segundo soporte. Son condiciones, no previsiones."""
+    c = r["cierre"]
+    L = [(l["valor"], {"res": "قمة", "sop": "قاع"}[l["tipo"]] + " " + l["fecha"]) for l in r["niveles"]]
+    L += [(r["sma20"], "متوسط 20 جلسة"), (r["sma50"], "متوسط 50 جلسة"), (r["sma200"], "متوسط 200 جلسة")]
+    if r.get("max_52s"): L.append((r["max_52s"], "أعلى مستوى في 52 أسبوعًا"))
+    if r.get("min_52s"): L.append((r["min_52s"], "أدنى مستوى في 52 أسبوعًا"))
+    arriba = sorted({round(v, 2): e for v, e in L if v > c * 1.001}.items())
+    abajo = sorted({round(v, 2): e for v, e in L if v < c * 0.999}.items(), reverse=True)
+    # niveles separados al menos un 0,4% entre sí, para que el escenario tenga dos escalones distintos
+    sep = lambda X: [x for i, x in enumerate(X) if i == 0 or abs(x[0] / X[i - 1][0] - 1) > 0.004]
+    arriba, abajo = sep(arriba)[:2], sep(abajo)[:2]
+    f = lambda x: {"valor": x[0], "et": x[1], "dist_pct": round(x[0] / c * 100 - 100, 2)}
+    return {"alcista": [f(x) for x in arriba], "bajista": [f(x) for x in abajo],
+            "neutral": [f(abajo[0]), f(arriba[0])] if arriba and abajo else []}
+
+
+def sectores(D):
+    """ETF sectoriales: cambio del día y de la semana (TradingView), ordenados de mejor a peor."""
+    out = []
+    for sym, nom in SECTORES.items():
+        v = (D.get("tv") or {}).get(sym)
+        if not v or v.get("change") is None: continue
+        out.append({"simbolo": sym.split(":")[1], "nombre": nom, "cierre": round(v["close"], 2), "cambio": round(v["change"], 2),
+                    "semana": None if v.get("Perf.W") is None else round(v["Perf.W"], 2), "mes": None if v.get("Perf.1M") is None else round(v["Perf.1M"], 2)})
+    return sorted(out, key=lambda x: -x["cambio"])
+
+
+def macro(D, fecha):
+    """Bono a 10 años, DXY, VIX, WTI y oro: cierre, cambio del día (el bono en puntos básicos) y las últimas 15 sesiones para el gráfico."""
+    out = []
+    for sym, nom, uni in MACRO:
+        V = [v for v in (D.get("ctx_velas") or {}).get(sym, []) if fecha_vela(v["t"]) <= fecha]
+        if len(V) < 2: continue
+        c, p = V[-1]["c"], V[-2]["c"]
+        out.append({"simbolo": sym, "nombre": nom, "unidad": uni, "cierre": round(c, 3 if sym.endswith("10Y") else 2), "fecha": fecha_vela(V[-1]["t"]).isoformat(),
+                    "cambio_pct": round(c / p * 100 - 100, 2), "cambio_pb": round((c - p) * 100, 1) if sym.endswith("10Y") else None,
+                    "serie": [round(v["c"], 3) for v in V[-15:]], "mismo_dia": fecha_vela(V[-1]["t"]) == fecha})
+    return out
+
+
+def dow_aportes(D, R):
+    """Aportación en puntos de cada valor al Dow Jones (índice ponderado por precio): cambio en dólares / divisor.
+    El divisor se deduce del propio día: suma de los cambios en dólares / cambio del índice en puntos (محسوب)."""
+    en = lambda v: any(i.get("proname") == "DJ:DJI" for i in (v.get("indexes") or []))
+    M_ = [dict(v, ticker=t.split(":")[1]) for t, v in D.get("acciones", {}).items() if en(v) and v.get("change_abs") is not None]
+    if "dji" not in R or len(M_) < 28 or not R["dji"]["var_pts"]: return None
+    div = sum(v["change_abs"] for v in M_) / R["dji"]["var_pts"]
+    if not (0.05 < div < 0.5): return None   # faltan valores o el cambio es casi cero: no se puede deducir
+    L = sorted(({"ticker": v["ticker"], "nombre": NOMBRES.get(v["ticker"], nombre_en(v.get("description"))), "puntos": round(v["change_abs"] / div, 1),
+                 "cambio": round(v["change"], 2), "sector": v.get("sector")} for v in M_), key=lambda x: -x["puntos"])
+    sec = {}
+    for x in L: x["sector"] = SECTOR_AR.get(x["sector"], x["sector"]); sec[x["sector"]] = round(sec.get(x["sector"], 0) + x["puntos"], 1)
+    return {"divisor": round(div, 5), "valores": L, "sectores": sorted(sec.items(), key=lambda x: -x[1])}
+
+
+def candidatas(D, extra=None, n=12):
+    """Acciones del S&P 500 para elegir las cinco protagonistas: cambio, cierre, volumen, volumen frente a su media de 10 sesiones,
+    valor negociado y si hay velas para su gráfico. Ordenadas por |cambio| x volumen relativo; el guion elige las 5 con noticia que lo explique."""
+    nom = dict(NOMBRES, **(extra or {})); VV = D.get("acciones_velas") or {}
+    out = []
+    for v in acciones(D):
+        if v.get("change") is None or (v.get("Value.Traded") or 0) < MIN_VALOR: continue
+        rel = (v.get("volume") or 0) / v["average_volume_10d_calc"] if v.get("average_volume_10d_calc") else None
+        key = next((k for k in VV if k.split(":")[1] == v["ticker"]), None)
+        out.append({"ticker": v["ticker"], "nombre": nom.get(v["ticker"], nombre_en(v.get("description"))), "nombre_en": nombre_en(v.get("description")),
+                    "cierre": round(v["close"], 2), "cambio": round(v["change"], 2), "volumen": v.get("volume"), "vol_rel": None if rel is None else round(rel, 2),
+                    "valor_usd": round(v.get("Value.Traded") or 0), "sector": v.get("sector"), "velas": key is not None,
+                    "puntuacion": round(abs(v["change"]) * (rel or 1), 2)})
+    return sorted(out, key=lambda x: -x["puntuacion"])[:n]
+
+
+def accion(D, ticker, extra=None):
+    """Datos de una acción del S&P 500 por ticker, con sus velas diarias si se descargaron."""
+    nom = dict(NOMBRES, **(extra or {}))
+    for t, v in D.get("acciones", {}).items():
+        if t.split(":")[1] != ticker: continue
+        rel = (v.get("volume") or 0) / v["average_volume_10d_calc"] if v.get("average_volume_10d_calc") else None
+        return {"ticker": ticker, "simbolo": t, "nombre": nom.get(ticker, nombre_en(v.get("description"))), "nombre_en": nombre_en(v.get("description")),
+                "cierre": round(v["close"], 2), "cambio": round(v["change"], 2), "cambio_abs": round(v.get("change_abs") or 0, 2), "volumen": v.get("volume"),
+                "vol_rel": None if rel is None else round(rel, 2), "valor_usd": round(v.get("Value.Traded") or 0), "semana": v.get("Perf.W"),
+                "velas": (D.get("acciones_velas") or {}).get(t)}
+    return None
 
 
 def acciones(D):
@@ -157,7 +277,27 @@ def calc(D, extra=None):
     R["grandes"] = grandes(D, extra=extra)
     R["fecha"] = R["spx"]["fecha"]
     R["contexto"] = contexto(D, dt.date.fromisoformat(R["fecha"]))
+    R["sectores"] = sectores(D)
+    R["macro"] = macro(D, dt.date.fromisoformat(R["fecha"]))
+    R["dow_aportes"] = dow_aportes(D, R)
+    R["candidatas"] = candidatas(D, extra)
+    R["ndx_grandes"] = grandes_ndx(D, extra)
     return R, A
+
+
+def grandes_ndx(D, extra=None, n=8):
+    """Las n mayores del Nasdaq 100 por capitalización con su cambio (comportamiento de las grandes tecnológicas)."""
+    nom = dict(NOMBRES, **(extra or {}))
+    en = lambda v: any(i.get("proname") == "NASDAQ:NDX" for i in (v.get("indexes") or []))
+    L = sorted((dict(v, ticker=t.split(":")[1]) for t, v in D.get("acciones", {}).items() if en(v) and v.get("change") is not None),
+               key=lambda v: -(v.get("market_cap_basic") or 0))
+    vistos, out = set(), []
+    for v in L:
+        n_ = nom.get(v["ticker"], nombre_en(v.get("description")))
+        if n_ in vistos: continue
+        vistos.add(n_); out.append({"ticker": v["ticker"], "nombre": n_, "cambio": round(v["change"], 2)})
+        if len(out) == n: break
+    return out
 
 
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ AVISO = f"""إخلاء مسؤولية مهم
 • أعدّته قناة Saudi Arabia AI Stocks في {I['elaborado']} (بتوقيت الرياض) ببيانات جلسة {I['fecha_txt']}، ويُنشر بعد إغلاق كل يوم تداول.
 • هذا المحتوى تعليمي وإعلامي فقط ويعتمد على معلومات عامة. لا يُعد توصية استثمارية ولا دعوة لشراء أو بيع أي ورقة مالية ولا استشارة مالية شخصية، ولا يراعي وضعك أو أهدافك أو مدى تحملك للمخاطر. استشر جهة مرخصة من هيئة السوق المالية قبل أي قرار استثماري.
 • الحقائق والآراء: الأرقام من إفصاحات الشركات على تداول السعودية ومن مصادر السوق المذكورة ({I['fuentes']}). الحسابات الخاصة موضحة بعبارة «محسوب». لا نصدر أسعارًا مستهدفة ولا نحكم على أن سهمًا ما رخيص أو مرتفع الثمن.
-• التحليل الفني: المتوسطات المتحركة ومؤشر القوة النسبية والمؤشر العشوائي ومستويات الدعم والمقاومة محسوبة من بيانات الإغلاق العامة. تصف حركة السعر في الماضي، وليست إشارات شراء أو بيع ولا تتنبأ بالمستقبل.
+• التحليل الفني: المتوسطات المتحركة ومؤشر القوة النسبية والمؤشر العشوائي وMACD ونطاق بولينجر ومتوسط المدى الحقيقي ونقاط الارتكاز ومستويات الدعم والمقاومة محسوبة من بيانات الإغلاق العامة. تصف حركة السعر في الماضي، وليست إشارات شراء أو بيع ولا تتنبأ بالمستقبل.
 • تضارب المصالح: لا تملك القناة ولا معدّوها مراكز في الأسهم المذكورة، ولا يتلقون أي مقابل من الشركات، ولم يُرسل المحتوى إلى أي شركة قبل نشره.
 • المخاطر: الاستثمار في الأسهم ينطوي على مخاطر قد تصل إلى خسارة رأس المال كاملًا، والأداء السابق لا يضمن النتائج المستقبلية. قد تحتوي البيانات على أخطاء، فتحقق منها في مصادرها الأصلية.
 • الإنتاج: النص والرسوم والصوت (صوت اصطناعي) من إعداد أدوات الذكاء الاصطناعي، ومراجعة مع المصادر المذكورة."""
@@ -41,9 +41,14 @@ except Exception:
 if cta_x and largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) > 280: x = x.replace(cta_x, "")  # sin sitio en X: va sin la línea de la campaña
 assert largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 280, largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX"))
 open(f"{D}/post-x-{F}-SA.txt", "w").write(x); open(f"{D}/post-threads-{F}-SA.txt", "w").write(x)
-li = (f"أسهم السعودية | ملخص جلسة {I['fecha_txt']}\n\n{I['resumen']}\n\n" + "\n\n".join("• " + c for c in I["claves"]) +
-      f"\n\n▶️ الفيديو الكامل (3 دقائق): {{youtube}}\n{cta_post}{canal_linea}\n\n"
+MIN = max(1, round((max(T.values()) + 12) / 60))  # duración aproximada del video en minutos (desde times.json)
+cl_fb = list(I["claves"])
+def fb(cl): return (f"أسهم السعودية | ملخص جلسة {I['fecha_txt']}\n\n{I['resumen']}\n\n" + "\n\n".join("• " + c for c in cl) +
+      f"\n\n▶️ الفيديو الكامل ({MIN} دقائق): {{youtube}}\n{cta_post}{canal_linea}\n\n"
       f"المصادر: {I['fuentes']}.\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. التحليل الفني يصف بيانات وليس إشارات شراء أو بيع. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n\n" + I["hashtags"])
+li = fb(cl_fb)
+while len(li.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) > 2950 and len(cl_fb) > 3:  # Facebook: si no cabe, fuera la clave más larga
+    cl_fb.remove(max(cl_fb, key=len)); li = fb(cl_fb)
 assert len(li.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 2950, len(li)
 open(f"{D}/post-facebook-{F}-SA.txt", "w").write(li)
 # LinkedIn (regla permanente de Daniel, 8-nov-2026): el Short subido como video nativo (no enlace), con un resumen con valor

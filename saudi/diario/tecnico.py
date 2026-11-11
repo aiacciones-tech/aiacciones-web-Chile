@@ -64,6 +64,56 @@ def velas(D, k):
     return dates, o, hi, lo, c, vol
 
 
+def ema(a, n):
+    out = np.full(len(a), np.nan); k = 2 / (n + 1)
+    for i in range(len(a)):
+        out[i] = a[i] if i == 0 or np.isnan(out[i - 1]) else a[i] * k + out[i - 1] * (1 - k)
+    return out
+
+
+def ultimo_cruce(a, b, dates):
+    """Última sesión en que la serie a cruzó la serie b: ("arriba"|"abajo", fecha, sesiones desde entonces)."""
+    d = a - b
+    for i in range(len(d) - 1, 0, -1):
+        if np.isnan(d[i]) or np.isnan(d[i - 1]): break
+        if (d[i] > 0) != (d[i - 1] > 0):
+            return {"tipo": "arriba" if d[i] > 0 else "abajo", "fecha": dates[i].isoformat(), "sesiones": len(d) - 1 - i}
+    return None
+
+
+def extra_tecnico(dates, hi, lo, c, vol, S50, S200, RSI, K, Dl):
+    """Análisis técnico ampliado (formato de unos 5 min, Daniel 10-nov-2026): tendencia, momento, volumen, volatilidad y pivotes. Todo calculado."""
+    n = len(c); r2 = lambda x, d=2: None if x is None or not np.isfinite(x) else round(float(x), d)
+    S20 = np.array([c[max(0, i - 19):i + 1].mean() if i >= 19 else np.nan for i in range(n)])
+    sd20 = np.array([c[i - 19:i + 1].std() if i >= 19 else np.nan for i in range(n)])
+    BBu, BBl = S20 + 2 * sd20, S20 - 2 * sd20
+    MACD = ema(c, 12) - ema(c, 26); SIG = ema(MACD, 9); HIST = MACD - SIG
+    tr = np.array([hi[0] - lo[0]] + [max(hi[i] - lo[i], abs(hi[i] - c[i - 1]), abs(lo[i] - c[i - 1])) for i in range(1, n)])
+    ATR = np.full(n, np.nan); ATR[14] = tr[1:15].mean()
+    for i in range(15, n): ATR[i] = (ATR[i - 1] * 13 + tr[i]) / 14
+    V50 = np.array([np.nanmean(vol[i - 50:i]) if i >= 50 and np.isfinite(vol[i - 50:i]).sum() >= 40 else np.nan for i in range(n)])
+    def perf(dias):
+        j = [i for i, d in enumerate(dates) if d <= dates[-1] - dt.timedelta(days=dias)]
+        return r2(c[-1] / c[j[-1]] * 100 - 100) if j else None
+    ytd = [i for i, d in enumerate(dates) if d.year < dates[-1].year]
+    P = (hi[-1] + lo[-1] + c[-1]) / 3
+    m3 = slice(n - 63, n)
+    R = dict(sma20=r2(S20[-1]), dist_sma20_pct=r2(c[-1] / S20[-1] * 100 - 100),
+             pendiente_sma50_20s_pct=r2(S50[-1] / S50[-21] * 100 - 100), pendiente_sma200_20s_pct=r2(S200[-1] / S200[-21] * 100 - 100),
+             cruce_50_200=ultimo_cruce(S50, S200, dates), cruce_precio_sma50=ultimo_cruce(c, S50, dates),
+             rendimiento={"semana": perf(7), "mes": perf(30), "3meses": perf(91), "6meses": perf(182), "anio": perf(365),
+                          "en_el_anio": r2(c[-1] / c[ytd[-1]] * 100 - 100) if ytd else None},
+             rsi14_hace5=r2(RSI[-6], 1), rsi14_min_3m=r2(np.nanmin(RSI[m3]), 1), rsi14_max_3m=r2(np.nanmax(RSI[m3]), 1),
+             cruce_k_d=ultimo_cruce(K, Dl, dates),
+             macd=r2(MACD[-1]), macd_senal=r2(SIG[-1]), macd_hist=r2(HIST[-1]), macd_hist_prev=r2(HIST[-2]), cruce_macd=ultimo_cruce(MACD, SIG, dates),
+             atr14=r2(ATR[-1]), atr14_pct=r2(ATR[-1] / c[-1] * 100), rango_dia_pct=r2((hi[-1] - lo[-1]) / c[-2] * 100),
+             bb_sup=r2(BBu[-1]), bb_inf=r2(BBl[-1]), bb_ancho_pct=r2((BBu[-1] - BBl[-1]) / S20[-1] * 100),
+             bb_ancho_min_6m_pct=r2(np.nanmin(((BBu - BBl) / S20 * 100)[-126:])), pct_b=r2((c[-1] - BBl[-1]) / (BBu[-1] - BBl[-1]) * 100, 0),
+             volumen_vs_media50_pct=r2(vol[-1] / V50[-1] * 100 - 100, 1) if np.isfinite(vol[-1]) and np.isfinite(V50[-1]) else None,
+             pivotes={"P": r2(P), "R1": r2(2 * P - lo[-1]), "R2": r2(P + hi[-1] - lo[-1]), "S1": r2(2 * P - hi[-1]), "S2": r2(P - (hi[-1] - lo[-1]))})
+    return R, dict(vol=vol, S20=S20, BBu=BBu, BBl=BBl, MACD=MACD, SIG=SIG, HIST=HIST, ATR=ATR)
+
+
 def calc_indice(D, k):
     dates, o, hi, lo, c, vol = velas(D, k)
     sma = lambda n: np.array([c[max(0, i - n + 1):i + 1].mean() if i >= n - 1 else np.nan for i in range(len(c))])
@@ -98,7 +148,8 @@ def calc_indice(D, k):
     sem = [i for i, d in enumerate(dates) if d <= dates[-1] - dt.timedelta(days=(dates[-1].weekday() + 1) % 7 + 1)]  # semana de Tadawul: domingo a jueves
     ult_bajo = max([i for i in range(len(c) - 1) if c[i] <= c[-1]], default=None)
     ult_alto = max([i for i in range(len(c) - 1) if c[i] >= c[-1]], default=None)
-    return dict(fecha=dates[-1].isoformat(), cierre=round(float(c[-1]), 2), anterior=round(float(c[-2]), 2),
+    X = extra_tecnico(dates, hi, lo, c, vol, S50, S200, RSI, K, Dl)
+    return dict(**X[0], fecha=dates[-1].isoformat(), cierre=round(float(c[-1]), 2), anterior=round(float(c[-2]), 2),
                 var_pct=round(float(c[-1] / c[-2] * 100 - 100), 2), var_pts=round(float(c[-1] - c[-2]), 2),
                 semana_pct=round(float(c[-1] / c[sem[-1]] * 100 - 100), 2) if sem else None, cierre_semana_anterior=round(float(c[sem[-1]]), 2) if sem else None,
                 max_dia=round(float(hi[-1]), 2), min_dia=round(float(lo[-1]), 2),
@@ -113,7 +164,7 @@ def calc_indice(D, k):
                 valor_negociado_sar=round(sum(v.get("Value.Traded") or 0 for v in acc)),
                 suben=sum(1 for v in acc if (v.get("change") or 0) > 0), bajan=sum(1 for v in acc if (v.get("change") or 0) < 0),
                 sin_cambio=sum(1 for v in acc if v.get("change") == 0), niveles=niveles), \
-        dict(dates=dates, o=o, hi=hi, lo=lo, c=c, S50=S50, S200=S200, RSI=RSI, K=K, D=Dl)
+        dict(dates=dates, o=o, hi=hi, lo=lo, c=c, S50=S50, S200=S200, RSI=RSI, K=K, D=Dl, **X[1])
 
 
 def acciones(D, k):

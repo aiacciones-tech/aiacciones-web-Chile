@@ -43,6 +43,15 @@ jobs:
         if: steps.s.outputs.ok == 'si'
         with:
           ref: ${{ env.COLA_RAMA == 'si' && 'youtube-cola' || github.ref }}
+      - name: Scripts del workflow (no los de youtube-cola)
+        # la rama youtube-cola guarda su propia copia (vieja) de scripts/buffer.py, que no conoce cola-nabd:
+        # el script siempre sale del commit del workflow (main), y la cola de youtube-cola (10-nov-2026)
+        if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'si'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          path: _src
+          sparse-checkout: scripts
       - name: Verificar clave
         if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'no'
         run: python3 scripts/buffer.py verificar nabd
@@ -64,7 +73,7 @@ jobs:
       - name: Mandar posts pendientes
         if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'si'
         run: |
-          if [ -d cola-nabd ]; then python3 scripts/buffer.py programar cola-nabd; else echo "No hay cola-nabd/."; fi
+          if [ -d cola-nabd ]; then python3 _src/scripts/buffer.py programar cola-nabd; else echo "No hay cola-nabd/."; fi
       - name: Guardar IDs de Buffer
         if: always() && steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'si'
         run: |

@@ -1,6 +1,82 @@
 {
- "actualizado": "2026-11-09T23:18Z",
+ "actualizado": "2026-11-10T20:30Z",
  "items": [
+  {
+   "id": "8c080b6e-ad97-47b4-8be9-05b401d79f36",
+   "tipo": "OIR",
+   "fecha": "2026-11-10 20:31",
+   "entidad": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+   "nif": "A48265169",
+   "categoria": "Sobre instrumentos financieros",
+   "titulo": "La Sociedad comunica que ha acordado la realización de una emisión de participaciones preferentes eventualmente convertibles en acciones ordinarias de BBVA de nueva emisión por un importe nominal conjunto de 1.000.000.000 de euros.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b8c080b6e-ad97-47b4-8be9-05b401d79f36%7d",
+   "ticker": "BBVA",
+   "temas": []
+  },
+  {
+   "id": "794cc6a1-991e-498e-b489-d12514d7b8dc",
+   "tipo": "OIR",
+   "fecha": "2026-11-10 17:03",
+   "entidad": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+   "nif": "A",
+   "categoria": "Otra información relevante",
+   "titulo": "Nota de prensa sobre la adquisición por el Grupo ACS de VOLTAN",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b794cc6a1-991e-498e-b489-d12514d7b8dc%7d",
+   "ticker": "ACS",
+   "temas": []
+  },
+  {
+   "id": "efe6a67e-f0b8-4a2f-b13f-a13406d9da3c",
+   "tipo": "OIR",
+   "fecha": "2026-11-10 14:54",
+   "entidad": "MERLIN PROPERTIES, SOCIMI, S.A.",
+   "nif": "A86977790",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "MERLIN - Datos conferencia resultados 9M26 (viernes 13 de noviembre @15h CET)",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7befe6a67e-f0b8-4a2f-b13f-a13406d9da3c%7d",
+   "ticker": "MRL",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "2fd0ded5-219a-4841-a203-5d486f4b88ac",
+   "tipo": "OIR",
+   "fecha": "2026-11-10 11:02",
+   "entidad": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+   "nif": "A48265169",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad comunica información relativa a la ejecución del programa de recompra de acciones.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b2fd0ded5-219a-4841-a203-5d486f4b88ac%7d",
+   "ticker": "BBVA",
+   "temas": []
+  },
+  {
+   "id": "667d2434-ec41-449e-9dec-fd369f348360",
+   "tipo": "OIR",
+   "fecha": "2026-11-10 10:39",
+   "entidad": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Compras de autocartera de ACS del 3 al 9 de noviembre del 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b667d2434-ec41-449e-9dec-fd369f348360%7d",
+   "ticker": "ACS",
+   "temas": []
+  },
+  {
+   "id": "b699f429-1d3d-4da3-b2c3-93ed6c43ea8d",
+   "tipo": "OIR",
+   "fecha": "2026-11-10 08:41",
+   "entidad": "FLUIDRA, S.A.",
+   "nif": "A",
+   "categoria": "Otra información relevante",
+   "titulo": "Información sobre segundo pago del dividendo 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bb699f429-1d3d-4da3-b2c3-93ed6c43ea8d%7d",
+   "ticker": "FDR",
+   "temas": [
+    "dividendos"
+   ]
+  },
   {
    "id": "30a9d4c9-9b21-4411-bb25-c77b9032737b",
    "tipo": "OIR",

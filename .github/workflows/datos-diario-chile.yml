@@ -2,11 +2,13 @@
 # El contenedor de Claude no llega a Yahoo ni a TradingView; GitHub Actions sí.
 # Guarda datos/mercado-<fecha>.json en la rama datos-diario-cl (no en main, para no disparar despliegues).
 # Cada día hábil a las 20:15 UTC (17:15 en Santiago en horario de verano, 16:15 en invierno), tras el cierre de las 16:00.
+# Antes de las 19:05 UTC del día de la sesión el archivo se guarda como mercado-<fecha>-parcial.json (la vela del día aún no está cerrada).
 # Formato aprobado por Daniel el 7-nov-2026.
 name: Datos del video diario (Chile)
 on:
   schedule:
     - cron: "15 20 * * 1-5"
+    - cron: "50 20 * * 1-5"   # respaldo: el cron de GitHub a veces se atrasa horas (9-nov-2026 corrió a las 02:44 UTC)
   workflow_dispatch:
 permissions:
   contents: write

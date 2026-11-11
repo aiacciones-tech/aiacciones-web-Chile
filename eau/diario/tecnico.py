@@ -60,7 +60,7 @@ def calc_indice(D, k):
         if round(v) in seen or (t == "res" and v <= c[-1]) or (t == "sop" and v >= c[-1]): continue
         seen.add(round(v)); niveles.append({"tipo": t, "valor": round(v, 2), "fecha": d.isoformat()})
     # volumen: el de la vela del índice si lo hay (ADX); si no (DFM), la suma de las acciones del mercado (calculado)
-    ex = k.upper(); acc = [v for v in D.get("acciones", {}).values() if v.get("exchange") == ex]
+    ex = k.upper(); acc = [v for v in D.get("acciones", {}).values() if v.get("exchange") == ex and de_hoy(D, v)]
     if not np.isnan(vol[-1]) and np.isfinite(vol[-11:-1]).all():
         vr = vol[-1] / vol[-11:-1].mean() * 100 - 100; vfuente = "índice"
     else:
@@ -69,7 +69,24 @@ def calc_indice(D, k):
     sem = [i for i, d in enumerate(dates) if d <= dates[-1] - dt.timedelta(days=dates[-1].weekday() + 1)]
     ult_bajo = max([i for i in range(len(c) - 1) if c[i] <= c[-1]], default=None)
     ult_alto = max([i for i in range(len(c) - 1) if c[i] >= c[-1]], default=None)
-    return dict(fecha=dates[-1].isoformat(), cierre=round(float(c[-1]), 2), anterior=round(float(c[-2]), 2),
+    # panel técnico: rendimiento, cruce de medias, posición en el rango de 52 semanas y distancia a los niveles (calculado)
+    def perf(dias):
+        j = max([i for i, d in enumerate(dates) if d <= dates[-1] - dt.timedelta(days=dias)], default=None)
+        return None if j is None else round(float(c[-1] / c[j] * 100 - 100), 2)
+    jy = max([i for i, d in enumerate(dates) if d.year < dates[-1].year], default=None)
+    dif = S50 - S200; cr = [i for i in range(1, len(c)) if np.isfinite(dif[i - 1]) and np.sign(dif[i]) != np.sign(dif[i - 1]) and dif[i] != 0]
+    cruce = None if not cr else {"tipo": "dorado" if dif[cr[-1]] > 0 else "muerte", "fecha": dates[cr[-1]].isoformat()}
+    res = [l["valor"] for l in niveles if l["tipo"] == "res"]; sop = [l["valor"] for l in niveles if l["tipo"] == "sop"]
+    extra = dict(perf_1m=perf(30), perf_3m=perf(91), perf_ytd=None if jy is None else round(float(c[-1] / c[jy] * 100 - 100), 2),
+                 sma50_sobre_sma200=bool(dif[-1] > 0), cruce=cruce,
+                 pos_52s_pct=round(float((c[-1] - lo[i_lo]) / (hi[i_hi] - lo[i_lo]) * 100), 1),
+                 dist_max_52s_pct=round(float(c[-1] / hi[i_hi] * 100 - 100), 2), dist_min_52s_pct=round(float(c[-1] / lo[i_lo] * 100 - 100), 2),
+                 res_cercana=min(res) if res else None, dist_res_pct=round(float(min(res) / c[-1] * 100 - 100), 2) if res else None,
+                 sop_cercano=max(sop) if sop else None, dist_sop_pct=round(float(max(sop) / c[-1] * 100 - 100), 2) if sop else None,
+                 rsi_zona="sobrecompra" if RSI[-1] >= 70 else "sobreventa" if RSI[-1] <= 30 else "neutral",
+                 estoc_zona="sobrecompra" if K[-1] >= 80 else "sobreventa" if K[-1] <= 20 else "neutral",
+                 estoc_cruce="K>D" if K[-1] > Dl[-1] else "K<D")
+    return dict(**extra, fecha=dates[-1].isoformat(), cierre=round(float(c[-1]), 2), anterior=round(float(c[-2]), 2),
                 var_pct=round(float(c[-1] / c[-2] * 100 - 100), 2), var_pts=round(float(c[-1] - c[-2]), 2),
                 semana_pct=round(float(c[-1] / c[sem[-1]] * 100 - 100), 2) if sem else None, cierre_semana_anterior=round(float(c[sem[-1]]), 2) if sem else None,
                 max_dia=round(float(hi[-1]), 2), min_dia=round(float(lo[-1]), 2),
@@ -84,13 +101,20 @@ def calc_indice(D, k):
                 valor_negociado_aed=round(sum(v.get("Value.Traded") or 0 for v in acc)),
                 suben=sum(1 for v in acc if (v.get("change") or 0) > 0), bajan=sum(1 for v in acc if (v.get("change") or 0) < 0),
                 sin_cambio=sum(1 for v in acc if v.get("change") == 0), niveles=niveles), \
-        dict(dates=dates, o=o, hi=hi, lo=lo, c=c, S50=S50, S200=S200, RSI=RSI, K=K, D=Dl)
+        dict(dates=dates, o=o, hi=hi, lo=lo, c=c, vol=vol, S50=S50, S200=S200, RSI=RSI, K=K, D=Dl)
+
+
+def de_hoy(D, v):
+    """True si la cotización es de la sesión del día (los valores sin negociación conservan la variación de su último día)."""
+    if not v.get("time") or not D.get("sesion"):
+        return True
+    return dt.datetime.fromtimestamp(v["time"], TZ).date().isoformat() == D["sesion"]
 
 
 def movers(D, extra=None):
     nom = dict(NOMBRES, **(extra or {}))
     L = sorted([(v["change"], k.split(":")[1], v["exchange"]) for k, v in D.get("acciones", {}).items()
-                if v.get("change") is not None and (v.get("Value.Traded") or 0) >= MIN_VALOR])
+                if v.get("change") is not None and (v.get("Value.Traded") or 0) >= MIN_VALOR and de_hoy(D, v)])
     f = lambda x: {"ticker": x[1], "mercado": x[2], "nombre": nom.get(x[1], x[1]), "cambio": round(x[0], 2)}
     return [f(x) for x in L[::-1][:5]], [f(x) for x in L[:5]]
 
