@@ -1,6 +1,56 @@
 {
- "actualizado": "2026-11-11T12:29Z",
+ "actualizado": "2026-11-11T19:52Z",
  "items": [
+  {
+   "id": "a92e0340-7642-4b7c-9280-14924c101f50",
+   "tipo": "OIR",
+   "fecha": "2026-11-11 19:07",
+   "entidad": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+   "nif": "A",
+   "categoria": "Otra información relevante",
+   "titulo": "Plan de Incentivos a Largo Plazo de Directivos de Grupo ACS durante el periodo 2026-2031",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7ba92e0340-7642-4b7c-9280-14924c101f50%7d",
+   "ticker": "ACS",
+   "temas": []
+  },
+  {
+   "id": "24d85ce1-a789-455e-b047-84156a5c5dd6",
+   "tipo": "OIR",
+   "fecha": "2026-11-11 18:02",
+   "entidad": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+   "nif": "A",
+   "categoria": "Otra información relevante",
+   "titulo": "La Sociedad remite Nota de Prensa correspondiente al 3er trimestre 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b24d85ce1-a789-455e-b047-84156a5c5dd6%7d",
+   "ticker": "ACS",
+   "temas": []
+  },
+  {
+   "id": "b6123e07-bfa5-4500-afd8-8a929196b347",
+   "tipo": "OIR",
+   "fecha": "2026-11-11 18:00",
+   "entidad": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+   "nif": "A",
+   "categoria": "Otra información relevante",
+   "titulo": "La Sociedad remite Presentación de Resultados correspondiente al 3er trimestre 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bb6123e07-bfa5-4500-afd8-8a929196b347%7d",
+   "ticker": "ACS",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "b88d9cf6-8fcd-4d94-821a-cdfe40ed78e9",
+   "tipo": "OIR",
+   "fecha": "2026-11-11 16:20",
+   "entidad": "REPSOL, S.A.",
+   "nif": "A78374725",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Operaciones realizadas por Repsol, S.A. al amparo de su Programa de Recompra de acciones entre el 5 y el 10 de noviembre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bb88d9cf6-8fcd-4d94-821a-cdfe40ed78e9%7d",
+   "ticker": "REP",
+   "temas": []
+  },
   {
    "id": "f661132b-e44c-4cde-a66a-644319f0480c",
    "tipo": "OIR",
