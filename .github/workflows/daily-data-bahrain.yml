@@ -19,9 +19,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Earlier downloads (fill the daily candles Mubasher has not added yet)
+        run: |
+          mkdir -p /tmp/prev
+          if git fetch -q --depth 1 origin daily-data-bahrain; then git archive FETCH_HEAD data | tar -x -C /tmp/prev || true; fi
+          ls /tmp/prev/data | tail -3 || true
       - name: Download data
         # On scheduled runs nothing is saved if Bahrain Bourse did not open today (weekend or holiday).
         env:
+          PREV_DIR: /tmp/prev/data
           SOLO_DIA_DE_SESION: ${{ github.event_name == 'schedule' && '1' || '0' }}
         run: pip install -q websocket-client && python3 bahrain/daily-bahrain/market-data-bahrain.py
       - name: Save to branch daily-data-bahrain

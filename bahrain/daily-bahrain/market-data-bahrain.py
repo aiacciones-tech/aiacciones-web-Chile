@@ -157,6 +157,25 @@ def main():
     dia = lambda v: datetime.datetime.utcfromtimestamp(v["t"] + TZH).date().isoformat()
     # Mubasher adds the day's daily candle hours after the close; the 1-minute intraday has it right away. If the intraday
     # has a later session than the daily candles, build that day's candle from the intraday (open, high, low, close, volume).
+    # Mubasher can also lag more than a day (11-nov-2026: the 10-nov candle was still missing). Sessions between its last daily
+    # candle and today are taken from earlier downloads (PREV_DIR = data/ of branch daily-data-bahrain, checked out by the workflow).
+    try:
+        prev = os.environ.get("PREV_DIR")
+        if prev and os.path.isdir(prev):
+            d_ult = dia(res["bax_diario"]["velas"][-1]); hoy_i = dia(res["bax_intradia"]["velas"][-1])
+            tiene = {dia(v) for v in res["bax_diario"]["velas"]}; extra = {}
+            for f in sorted(os.listdir(prev)):  # oldest first, so the newest download of a day wins
+                if not (f.startswith("market-") and f.endswith("-bahrain.json")): continue
+                try:
+                    for v in json.load(open(os.path.join(prev, f)))["bax_diario"]["velas"]:
+                        if d_ult < dia(v) < hoy_i and dia(v) not in tiene: extra[dia(v)] = dict(v, de_descarga_anterior=f)
+                except Exception:
+                    continue
+            if extra:
+                res["bax_diario"]["velas"] += [extra[d] for d in sorted(extra)]
+                res["errores"].append("daily candles from earlier downloads (Mubasher late): " + ", ".join(sorted(extra)))
+    except Exception as e:
+        res["errores"].append(f"daily candles from earlier downloads: {e}")
     try:
         d_ult = dia(res["bax_diario"]["velas"][-1])
         intra = [v for v in res["bax_intradia"]["velas"] if dia(v) == dia(res["bax_intradia"]["velas"][-1])]
