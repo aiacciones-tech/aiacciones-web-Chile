@@ -540,55 +540,61 @@ FICHAS = [
      'ticker': 'TEF',
      'sector': 'Telecomunicaciones',
      'lede': 'Operadora de telecomunicaciones con cuatro mercados principales: España, Brasil, Alemania y Reino Unido (Virgin Media O2, al 50%). Está '
-             'saliendo de Hispanoamérica: Colombia y Chile se vendieron en el 1T 2026 y la venta de México está firmada y pendiente de autorizaciones.',
-     'periodo': '1S 2026',
-     'periodo_largo': 'primer semestre de 2026',
-     'titular': 'EBITDA ajustado de 5.768 M€ (+3,8%; +2,3% a tipos constantes), con Brasil (+10% constante) y España (+2,1%) al alza y Alemania a la '
-                'baja. Resultado neto atribuido de −338 M€ (pérdida un 75% menor que en el 1S 2025) por el impacto de 1.001 M€ de la venta de Chile. En '
-                'el 2T, ingresos y EBITDA ligeramente por encima del consenso recopilado por Telefónica; el beneficio, muy por debajo por una provisión '
-                'de 265 M€ en Alemania.',
-     'precio': '3,252 €',
-     'precio_fecha': '13-oct-2026',
+             'saliendo de Hispanoamérica: Colombia y Chile se desconsolidaron en febrero de 2026 y la venta de México, firmada en abril, sigue en el '
+             'balance como activo en venta a septiembre.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'tercer trimestre de 2026 (nueve meses)',
+     'titular': 'Vuelve a beneficios: resultado neto atribuido de 464 M€ hasta septiembre, frente a una pérdida de 1.080 M€ en 9M 2025; las operaciones '
+                'continuadas ganan 1.333 M€ (+21,6%) y las discontinuadas restan 870 M€ (-60%). Ingresos de 24.825 M€ (+2,8%; +1,0% a tipos constantes) '
+                'y EBITDA ajustado de 8.846 M€ (+4,6%; +2,5% constante). Sube la guía 2026 de EBITDA ajustado, caja operativa y flujo de caja libre '
+                '(~3.100 M€), pero rebaja la de ingresos totales (+1% a +1,5%).',
+     'precio': '3,43 €',
+     'precio_fecha': '12-nov-2026',
      'multiplos': [('PER 12 meses', 'n/d (pérdidas)'),
-                   ('PER forward', '8,9x'),
-                   ('EV/EBITDA', '7,4x'),
-                   ('Rentab. dividendo 12 m', '9,2%'),
-                   ('FCF yield', '19,1%'),
-                   ('Capitalización', '~18.300 M€')],
-     'multiplos_nota': 'Precio, PER forward, rentabilidad por dividendo (0,30 € en 12 meses) y capitalización a 13-oct-2026; EV/EBITDA y FCF yield a '
-                       '25-sep-2026 (stockanalysis.com). Con el dividendo de 2026 (0,15 €) la rentabilidad sería del 4,6% (calculado). A cierre de 2023, '
-                       '2024 y 2025 el EV/EBITDA era 8,6x, 6,6x y 8,7x, y el precio / valor contable 0,74x, 0,98x y 1,11x. Sin PER en esos años por '
-                       'pérdidas.',
-     'tabla_titulo': 'Cifras en millones de euros · 1S 2026 y variación frente al 1S 2025 (operaciones continuadas salvo el resultado total)',
-     'tabla': [('Ingresos', '16.392', '+1,7%'),
-               ('EBITDA ajustado', '5.768', '+3,8%'),
-               ('EBITDA ajustado España', '2.301', '+2,1%'),
-               ('EBITDA ajustado Brasil', '2.215', '+15,1%'),
-               ('EBITDAaL-CapEx', '2.654', '+4,0%'),
-               ('Beneficio neto ajustado (continuadas)', '954', ''),
-               ('Resultado neto atribuido (total)', '−338', '−75% de pérdida'),
-               ('BPA ajustado continuadas (calculado)', '~0,17 €', '')],
-     'kpi': 'Margen EBITDA ajustado 35,2% (34,5% en 1S 2025, calculado). Alemania: ingresos −11% y EBITDA ajustado −7,2% en el 2T por la migración de '
-            'clientes de 1&1. Virgin Media O2 (2T): ingresos de servicio −3,9% y EBITDA ajustado −2,9%. CapEx 1.908 M€ (11,6% de los ingresos). Flujo de '
-            'caja libre 944 M€. Deuda financiera neta 25.278 M€ (−8,4% a/a; −1.546 M€ desde diciembre), apalancamiento 2,68x EBITDAaL.',
-     'guia': 'Guía 2026 (tipos constantes): EBITDAaL-CapEx más de +3% (antes, más de +2%); ingresos y EBITDA ajustado +1,5% a +2,5% (ingresos hacia la '
-             'parte baja, según la conferencia); CapEx / ingresos ~12%; flujo de caja libre ~3.000 M€; apalancamiento de 2,5x en 2028. Dividendo 2026 de '
-             '0,15 € en efectivo, pagadero en junio de 2027 (0,30 € en el ejercicio 2025).',
-     'positivos': ['Brasil (EBITDA +10% constante) y España (bajas de clientes en mínimos) tiran del grupo.',
-                   'La deuda neta baja un 8,4% y el apalancamiento cae a 2,68x.',
-                   'Sube la previsión de caja operativa para 2026 a más de +3%.'],
-     'riesgos': ['Alemania: ingresos −11% en el 2T y unos 155 M€ más de reestructuración previstos en el segundo semestre.',
-                 'Reino Unido: competencia intensa y deuda de Virgin Media O2 de unas 5,9 veces el EBITDA.',
-                 'La salida de Hispanoamérica resta 812 M€ en el semestre y la venta de México sigue pendiente.'],
-     'videos': [('u63YAPRgUtE', 'Telefónica resultados 1S 2026: EBITDA ajustado +3,8% y sube la guía de caja | Brasil +10%'),
-                ('0Acp3sPlQZE', 'Telefónica 1S 2026 en 60 segundos (Short)')],
-     'proximo': '2026-11-12',
-     'fuentes': 'Telefónica, nota de resultados del primer semestre 2026 (29-jul-2026, CNMV y telefonica.com) y del 1T 2026; Renta 4 Banco (resultados y '
-                'conferencia, 29-jul-2026); Benzinga España (consenso de Telefónica y Alemania, 23 y 30-jul-2026); Investing.com (conferencia, '
-                '29-jul-2026); El Conciso (29-jul-2026); Virgin Media O2 (resultados 2T26); stockanalysis.com (precio y múltiplos, 25-sep y '
-                '13-oct-2026).',
-     'fuentes_corto': 'Renta 4 Banco, Benzinga, Investing.com, El Conciso, Virgin Media O2 y stockanalysis.com',
-     'elaborado': '15-oct-2026, 13:30'},
+                   ('PER forward', '~9,4x'),
+                   ('EV/EBITDA', '~7,4x'),
+                   ('Precio / valor contable', '~1,06x'),
+                   ('Rentab. dividendo 2026', '~4,4%'),
+                   ('Capitalización', '~19.310 M€')],
+     'multiplos_nota': 'Calculados con 3,43 € (12-nov-2026, intradía hacia las 10:10, tras los resultados; Rankia e Investing.com) y 5.630 M de '
+                       'acciones. Sin PER de 12 meses: el resultado atribuido de 12 meses sigue en pérdidas (-4.318 + 464 + 1.080 = -2.774 M€, '
+                       'calculado). PER forward, EV/EBITDA y precio / valor contable: datos de stockanalysis.com del 19/20-oct-2026 reescalados al '
+                       'precio. Rentabilidad con el dividendo de 2026 (0,15 €); con los 0,30 € pagados en 12 meses, 8,7%. A cierre de 2023, 2024 y 2025 '
+                       '(stockanalysis.com) el EV/EBITDA era 8,6x, 6,6x y 8,7x; el PER forward 11,0x, 12,7x y 10,8x; el precio / valor contable 0,74x, '
+                       '0,98x y 1,11x, y la rentabilidad por dividendo 9,86%, 8,35% y 8,86%.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ingresos', '24.825', '+2,8%'),
+               ('EBITDA ajustado', '8.846', '+4,6%'),
+               ('OpCFaL ajustado (EBITDAaL-CapEx)', '4.018', '+6,1%'),
+               ('Flujo de caja libre (continuadas)', '1.963', '+10,7%'),
+               ('Beneficio neto operaciones continuadas', '1.333', '+21,6%'),
+               ('Resultado neto atribuido (total)', '464', '-1.080 en 9M25'),
+               ('Resultado neto 3T', '802', '+191,1%'),
+               ('Deuda financiera neta (sep-26)', '25.186', '-10,8%')],
+     'kpi': 'Margen EBITDA ajustado 35,6% (35,0%); 3T 36,5%. BPA básico 0,04 € (-0,23 €); de continuadas 0,19 € (0,16 €); ajustado de continuadas 0,25 € '
+            '(0,29 €) con un beneficio neto ajustado de 1.583 M€ (-14,1%). España: ingresos 9.828 M€ (+2,5%) y EBITDA 3.501 M€ (+2,3%), churn 0,7%. '
+            'Brasil: ingresos 7.907 M€ (+7,4% constante) y EBITDA 3.473 M€ (+9,9% constante). Alemania: ingresos 5.597 M€ (-7,6%; 3T -2,9%) y EBITDA '
+            '1.745 M€ (-8,5%). Virgin Media O2 (100%): ingresos -6,7% y EBITDA ajustado -3,0%. Por clientes (9M): residencial 14.678 M€, empresas 5.950 '
+            'M€, mayorista 4.197 M€ (3T -7,0%). CapEx 3.005 M€ (12,1% de los ingresos). Apalancamiento 2,63x (2,78x en dic-25).',
+     'guia': 'Guía 2026 (tipos constantes): EBITDA ajustado algo más de +2,5% (antes +1,5% a +2,5%); OpCFaL ajustado más de +3,5% (antes más de +3%); '
+             'flujo de caja libre ~3.100 M€ (antes ~3.000 M€); ingresos totales +1% a +1,5% (antes +1,5% a +2,5%); ingresos de servicio ~+1,5% (nuevo); '
+             'CapEx / ingresos ~12%; apalancamiento de 2,5x en 2028. Dividendo con cargo a 2026: 0,15 € en efectivo, a pagar en junio de 2027 (sujeto a '
+             'la junta; fecha exacta sin fijar). Con cargo a 2025 pagó 0,30 € (el último tramo, 0,15 €, el 18-jun-2026).',
+     'positivos': ['Vuelve a beneficios (464 M€) y el beneficio de las operaciones continuadas sube un 21,6%.',
+                   'Sube la guía 2026 de EBITDA ajustado, caja operativa y flujo de caja libre (~3.100 M€).',
+                   'La deuda neta baja un 10,8% y el apalancamiento cae a 2,63x.'],
+     'riesgos': ['Rebaja la previsión de ingresos totales (+1% a +1,5%) y el negocio mayorista cae un 7% en el 3T.',
+                 'Alemania: EBITDA ajustado -8,5% en 9M; Virgin Media O2 pierde ingresos (-6,7%).',
+                 'El beneficio neto ajustado de continuadas cae un 14,1% y la venta de México sigue pendiente de cierre.'],
+     'videos': [('DdiJ7FHnuAU', 'Telefónica resultados 3T 2026: vuelve a beneficios (464 M€) | Sube la guía de caja, rebaja ingresos'),
+                ('tpiuLVcy-rw', 'Telefónica 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-25',
+     'proximo_estimado': True,
+     'fuentes': 'Telefónica, informe y nota de prensa de resultados de enero a septiembre de 2026 (CNMV y telefonica.com, 12-nov-2026) y nota de '
+                'resultados del primer semestre de 2026; XTB e Investing.com (consenso y reacción, 12-nov-2026), Rankia (precio y dividendo, '
+                '12-nov-2026); stockanalysis.com (múltiplos actuales e históricos, oct-2026).',
+     'fuentes_corto': 'Telefónica (CNMV), XTB, Investing.com, Rankia y stockanalysis.com',
+     'elaborado': '12-nov-2026, 11:30'},
     {'id': 'endesa',
      'nombre': 'Endesa',
      'ticker': 'ELE',
@@ -1620,4 +1626,62 @@ FICHAS = [
                 'Estrategias de Inversión; Bolsamanía (cotización); stockanalysis.com (históricos).',
      'fuentes_corto': 'Cellnex, Europa Press, Reuters, Business People, Zona Movilidad, Bolsamanía y stockanalysis.com',
      'elaborado': '7-nov-2026, 23:15'},
+    {'id': 'acs',
+     'nombre': 'ACS',
+     'ticker': 'ACS',
+     'sector': 'Construcción e infraestructuras',
+     'lede': 'Grupo español de construcción e infraestructuras presidido por Florentino Pérez. Controla Hochtief, y a través de ella Turner (Estados '
+             'Unidos) y CIMIC (Australia); tiene además la división de Ingeniería y Construcción (Dragados, entre otras) y la de Infraestructuras '
+             '(participación en Abertis, Iridium y ACS Digital & Energy). Los centros de datos son ya una cuarta parte de su cartera.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'tercer trimestre de 2026 (nueve meses)',
+     'titular': 'Beneficio neto atribuible de 789 M€ hasta septiembre (+20,5%); sin los 70 M€ extraordinarios de 2025, el beneficio ordinario crece un '
+                '35%, en la parte alta de su objetivo anual (+30% a +35%). Ventas de 41.262 M€ (+12,3%), EBITDA de 2.506 M€ (+13,0%) y cartera récord de '
+                '110.994 M€ (+24,3%), con unos 26.000 M€ en centros de datos. La deuda neta es de 908 M€ en septiembre, frente a una caja neta de 1.006 '
+                'M€ en junio, tras comprar el resto de Thiess y más acciones de Hochtief.',
+     'precio': '92,95 €',
+     'precio_fecha': '11-nov-2026',
+     'multiplos': [('PER 12 meses', '~22,3x'), ('Precio / valor contable', '~4,1x'), ('Rentab. dividendo', '~2,5%'), ('Capitalización', '~25.760 M€')],
+     'multiplos_nota': 'Calculados con el cierre de 92,95 € del 11-nov-2026 (Bolsamanía), antes de los resultados (publicados a las 18:00). PER con el '
+                       'BPA de 12 meses (2025 + 9M26 - 9M25: 3,69 + 3,02 - 2,55 = 4,16 €); capitalización con 277,1 M de acciones (stockanalysis.com); '
+                       'precio / valor contable con el patrimonio por acción de stockanalysis.com (junio de 2026); rentabilidad con el dividendo con '
+                       'cargo a 2025 (0,457 € + 1,866 € = 2,323 €). No usamos EV/EBITDA porque las definiciones de EBITDA de ACS y de la fuente '
+                       'histórica no coinciden. A cierre de 2023, 2024 y 2025 (stockanalysis.com) el PER era 13,6x, 14,9x y 22,8x, el precio / valor '
+                       'contable 1,88x, 2,41x y 4,19x, y la rentabilidad por dividendo 5,46%, 4,34% y 2,78%.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Ventas', '41.262', '+12,3%'),
+               ('EBITDA', '2.506', '+13,0%'),
+               ('EBIT', '1.807', '+20,7%'),
+               ('Beneficio neto atribuible', '789', '+20,5%'),
+               ('Beneficio neto ordinario', '789', '+35,0%'),
+               ('Beneficio neto 3T (calculado)', '279', '+36,1%'),
+               ('Cartera', '110.994', '+24,3%'),
+               ('Deuda neta (sep-26)', '908', '-1.319 a/a')],
+     'kpi': 'BPA 3,02 € (+18,5%). Beneficio ordinario por división: Turner 524 M€ (+44,2%), CIMIC 157 M€ (+22,1%), Ingeniería y Construcción 192 M€ '
+            '(+21,8%), Infraestructuras 131 M€ (-5,9%; el texto de la nota cita 141 M€) y corporación -213 M€. Turner: ventas +23,8% sin divisas, EBITDA '
+            '905 M€ (+41%), margen antes de impuestos 4,0% y cartera de 48.947 M€ (+42,4%). CIMIC: ventas 8.208 M€ y BAI ordinario 355 M€ (+12,3%). '
+            'Ingeniería y Construcción: ventas +9,5%, EBITDA 544 M€ (+22,6%), margen 6,4% (+81 pb). Abertis: ventas +4% y EBITDA +5%; Iridium: BAI 35 '
+            'M€. Contratación 56.228 M€ (+28,2%); centros de datos ~26.000 M€ de cartera (+94%). Flujo neto de las operaciones (12 meses) 2.385 M€; '
+            'inversiones 9M 2.172 M€ (Thiess 727, Hochtief 524, centros de datos 644) y desinversiones 598 M€; colocación de acciones de 1.703 M€ en '
+            'mayo.',
+     'guia': 'Objetivo 2026: crecimiento del beneficio neto ordinario del 30% al 35% (unos 1.114-1.157 M€ sobre los 857 M€ de 2025, calculado); a '
+             'septiembre crece un 35%. Dividendo con cargo a 2025: 0,457 € brutos (febrero de 2026) y 1,866 € brutos (dividendo flexible; fecha ex '
+             '29-jun-2026 y pago en efectivo el 15-jul-2026), 2,323 € en total. La nota de 9M no anuncia un nuevo dividendo; la remuneración al '
+             'accionista de 12 meses (890 M€, con minoritarios de Hochtief) incluye recompras, sin importe detallado.',
+     'positivos': ['El beneficio ordinario crece un 35% hasta septiembre, en la parte alta del objetivo, y el del tercer trimestre un 36% (calculado).',
+                   'Cartera récord de 110.994 M€ (+24,3%), con los centros de datos en ~26.000 M€ (+94%).',
+                   'Mejoran los márgenes: Turner llega al 4,0% antes de impuestos e Ingeniería y Construcción al 6,4% de EBITDA.'],
+     'riesgos': ['De caja neta de 1.006 M€ en junio a deuda neta de 908 M€ en septiembre, tras comprar el resto de Thiess (727 M€) y más Hochtief (524 '
+                 'M€).',
+                 'Infraestructuras gana un 5,9% menos y la corporación resta 213 M€.',
+                 'Creciente dependencia de Turner (524 M€ de beneficio) y de los centros de datos, una cuarta parte de la cartera.'],
+     'videos': [('W0lEuCDqG0Q', 'ACS resultados 3T 2026: beneficio 789 M€ (+20,5%), ordinario +35% | Cartera récord de 110.994 M€'),
+                ('E1iNDgVxGIw', 'ACS 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-25',
+     'proximo_estimado': True,
+     'fuentes': 'ACS, nota de prensa de resultados de enero a septiembre de 2026 (CNMV y grupoacs.com, 11-nov-2026) y notas de resultados del primer '
+                'semestre de 2026 y de 2025; Hochtief (nota 9M26, 5-nov-2026); Europa Press (dividendo flexible, 24-jun-2026), Bolsamanía, Valencia '
+                'Plaza, OKDiario y El Conciso (11-nov-2026); stockanalysis.com (acciones, valor contable y múltiplos históricos, sep-2026).',
+     'fuentes_corto': 'ACS (CNMV), Europa Press, Bolsamanía y stockanalysis.com',
+     'elaborado': '11-nov-2026, 23:30'},
 ]
