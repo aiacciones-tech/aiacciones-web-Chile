@@ -268,9 +268,9 @@
    "empresa": "Acciona",
    "ticker": "ANA",
    "sector": "Infraestructuras / energía",
-   "estado": "Estimada",
-   "nota": "3T25: 13-nov-2025.",
-   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+   "estado": "Publicada",
+   "nota": "Publicó el 12-nov-2026 tras el cierre (CNMV 20:08) su informe de tendencias de negocio del 3T: apunta a la parte alta de su guía de EBITDA 2026 (2.800-3.100 M€) y cartera concesional récord de 141.282 M€.",
+   "fuente": "Acciona, informe de tendencias de negocio 3T 2026 (CNMV, 12-nov-2026)"
   },
   {
    "fecha": "2026-11-12",
@@ -282,13 +282,13 @@
    "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-12",
    "empresa": "Merlin Properties",
    "ticker": "MRL",
    "sector": "Inmobiliario (SOCIMI)",
-   "estado": "Estimada",
-   "nota": "3T25: 14-nov-2025.",
-   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+   "estado": "Publicada",
+   "nota": "Publicó el 12-nov-2026 tras el cierre (CNMV 19:11): rentas 9M 442,1 M€ (+11,1%), FFO 274,5 M€ (+11,9%), guía de FFO 2026 de 0,58 € por acción.",
+   "fuente": "Merlin Properties, resultados 9M26 (CNMV, 12-nov-2026)"
   },
   {
    "fecha": "2026-12-02",
