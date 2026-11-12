@@ -3,6 +3,6 @@
  "url": "https://www.youtube.com/watch?v=Cx7u0vVkexA",
  "privacy": "public",
  "subido": "2026-11-03T19:01:41+00:00",
- "miniatura": "error 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n        \"domain\": \"you",
+ "miniatura": "error 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"The user has uploaded too many thumbnails recently. Please try the request again later.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has uploaded too many thumbnails recently. Please try the request again later.\",\n        \"domain\": \"youtube.t",
  "publicado": "2026-11-04T07:04:35+00:00"
 }
