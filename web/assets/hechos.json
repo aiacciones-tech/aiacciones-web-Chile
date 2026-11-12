@@ -1,6 +1,16 @@
 {
- "actualizado": "2026-11-11T01:28Z",
+ "actualizado": "2026-11-12T02:30Z",
  "items": [
+  {
+   "num": "2026110717052",
+   "id": "itau",
+   "ent": "BANCO ITAÚ CHILE",
+   "fecha": "2026-11-11 12:31",
+   "materias": [
+    "Colocaciones relacionadas"
+   ],
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=84eda0aa9d883907f2d6292e4cc3dbe4VFdwQmVVNXFSWGhOUkdONFRucEJNVTFuUFQwPQ==&secuencia=-1&t=1794450602"
+  },
   {
    "num": "2026110704791",
    "id": "aguas-a",
@@ -9,7 +19,7 @@
    "materias": [
     "Otros"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=7e9a82bc644922c1d8b9b48f44c9605bVFdwQmVVNXFSWGhOUkdOM1RrUmpOVTFSUFQwPQ==&secuencia=-1&t=1794360481"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=7e9a82bc644922c1d8b9b48f44c9605bVFdwQmVVNXFSWGhOUkdOM1RrUmpOVTFSUFQwPQ==&secuencia=-1&t=1794450602"
   },
   {
    "num": "2026110703591",
