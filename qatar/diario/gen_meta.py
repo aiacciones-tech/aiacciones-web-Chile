@@ -1,4 +1,4 @@
-# Metadatos de YouTube (video y Short), posts (X, LinkedIn/Facebook, TikTok, Instagram, Telegram) y miniatura del video diario en árabe.
+# Metadatos de YouTube (video y Short), posts (X, Threads, LinkedIn/Facebook, TikTok, Instagram, Telegram) y miniatura del video diario en árabe.
 # Uso: python3 gen_meta.py <carpeta del día>   (lee info.json y times.json, que escribe make_video.py)
 # Todos los archivos que se entregan terminan en -qatar (regla de Daniel, 2-nov-2026); encolar.sh los copia a cola-qa/ con los nombres de la cola.
 import json, sys, os, re
@@ -35,6 +35,10 @@ except Exception:
     largo_x = lambda s: len(re.sub(r"https?://\S+", "x" * 23, s))
 assert largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 280, largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX"))
 open(f"{D}/post-x-{F}-qatar.txt", "w").write(x)
+# Threads (Buffer 1, desde 12-nov-2026 en lugar de Facebook, que cerró la cuenta): el texto de X con una pregunta para abrir conversación
+th_post = f"{I['x']}\n\n💬 ما توقعك للجلسة القادمة؟ شاركنا في الردود.\n\n▶️ {{youtube}}\n{canal_linea}\n\nمحتوى تعليمي وليس نصيحة استثمارية."
+assert len(th_post.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 500, len(th_post)
+open(f"{D}/post-threads-{F}-qatar.txt", "w").write(th_post)
 CL = list(I["claves"])
 while True:  # LinkedIn admite ~3000 caracteres: con el vídeo de 5 min hay más claves técnicas; se quitan desde la penúltima hasta que quepa
     li = (f"أسهم قطر | ملخص جلسة بورصة قطر {I['fecha_txt']}\n\n{I['resumen']}\n\n" + "\n\n".join("• " + c for c in CL) +
