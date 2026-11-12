@@ -14,11 +14,11 @@ AVISO = f"""إخلاء مسؤولية مهم
 • أعدّته قناة Bahrain AI Stocks في {I['elaborado']} (بتوقيت المنامة) ببيانات جلسة {I['fecha_txt']}، ويُنشر بعد إغلاق كل يوم تداول.
 • هذا المحتوى تعليمي وإعلامي فقط ويعتمد على معلومات عامة. لا يُعد توصية استثمارية ولا دعوة لشراء أو بيع أي ورقة مالية ولا استشارة مالية شخصية، ولا يراعي وضعك أو أهدافك أو مدى تحملك للمخاطر. استشر جهة مرخصة من مصرف البحرين المركزي قبل أي قرار استثماري.
 • الحقائق والآراء: الأرقام من إفصاحات الشركات على بورصة البحرين ومن مصادر السوق المذكورة ({I['fuentes']}). الحسابات الخاصة موضحة بعبارة «محسوب». لا نصدر أسعارًا مستهدفة ولا نحكم على أن سهمًا ما رخيص أو مرتفع الثمن.
-• التحليل الفني: المتوسطات المتحركة ومؤشر القوة النسبية والمؤشر العشوائي ومستويات الدعم والمقاومة محسوبة من بيانات الإغلاق العامة. تصف حركة السعر في الماضي، وليست إشارات شراء أو بيع ولا تتنبأ بالمستقبل.
+• التحليل الفني: المتوسطات المتحركة ومؤشر القوة النسبية والمؤشر العشوائي و MACD ومتوسط المدى الحقيقي ATR والتقلب ومستويات الدعم والمقاومة محسوبة من بيانات الإغلاق العامة. تصف حركة السعر في الماضي، وليست إشارات شراء أو بيع ولا تتنبأ بالمستقبل.
 • تضارب المصالح: لا تملك القناة ولا معدّوها مراكز في الأسهم المذكورة، ولا يتلقون أي مقابل من الشركات، ولم يُرسل المحتوى إلى أي شركة قبل نشره.
 • المخاطر: الاستثمار في الأسهم ينطوي على مخاطر قد تصل إلى خسارة رأس المال كاملًا، والأداء السابق لا يضمن النتائج المستقبلية. قد تحتوي البيانات على أخطاء، فتحقق منها في مصادرها الأصلية.
 • الإنتاج: النص والرسوم والصوت (صوت اصطناعي) من إعداد أدوات الذكاء الاصطناعي، ومراجعة مع المصادر المذكورة."""
-cap = "\n".join(f"{mmss(T[k]) if i else '0:00'} {t}" for i, (k, t) in enumerate(I["capitulos"]))
+cap = "\n".join(f"{mmss(T[k]) if i else '0:00'} {t}" for i, (k, t) in enumerate([c for c in I["capitulos"] if c[0] in T]))  # s_tech_acc only exists when the scanner has data
 CTA = (CTA_DESC + CANAL + "\n\n") if cta_activa(I["fecha"]) else ""
 desc = (f"{I['resumen']}\n\n" + CTA + "\n\n".join("• " + c for c in I["claves"]) +
         f"\n\nالفصول\n{cap}\n\nالمصادر: {I['fuentes']}. لا نملك مراكز في الأسهم المذكورة.\n\n{AVISO}\n\n{I['hashtags']}\n\nاشترك في القناة: {CANAL}")
@@ -43,6 +43,14 @@ li = (f"أسهم البحرين | ملخص جلسة {I['fecha_txt']}\n\n{I['resu
       f"المصادر: {I['fuentes']}.\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. التحليل الفني يصف بيانات وليس إشارات شراء أو بيع. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n\n" + I["hashtags"])
 assert len(li.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 2950, len(li)
 open(f"{D}/post-facebook-{F}-bahrain.txt", "w").write(li)
+# LinkedIn (Daniel, permanent rule from 8-nov-2026): the Short uploaded as a video, with a summary of 3-4 key data of the
+# video (figures and what changed) and a conclusion, no filler; it says the video is by the channel and ends with the channel link.
+L = I["linkedin"]; assert 3 <= len(L["datos"]) <= 4 and L["conclusion"], "info-bahrain.json: linkedin needs 3-4 datos and a conclusion"
+ln = (f"بورصة البحرين | {I['fecha_txt']}\n\n" + "\n".join("• " + d for d in L["datos"]) + f"\n\nالخلاصة: {L['conclusion']}\n\n"
+      "محتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية.\n"
+      f"🎬 فيديو من إعداد قناة Bahrain AI Stocks (أسهم البحرين).\n▶️ {CANAL}")
+assert ln.rstrip().endswith(CANAL) and "{youtube}" not in ln and len(ln) <= 2950, len(ln)
+open(f"{D}/post-linkedin-{F}-bahrain.txt", "w").write(ln)
 tk = f"{I['tiktok']}\n{canal_linea}\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n{I['hashtags_short']}"
 open(f"{D}/post-tiktok-{F}-bahrain.txt", "w").write(tk); open(f"{D}/post-instagram-{F}-bahrain.txt", "w").write(tk)
 tg = (f"📊 أسهم البحرين | {I['fecha_txt']}\n\n{I['resumen']}\n\n" + "\n".join("• " + c for c in I["claves_cortas"]) +

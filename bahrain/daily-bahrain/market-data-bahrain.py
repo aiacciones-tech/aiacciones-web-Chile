@@ -68,7 +68,9 @@ def tv(tickers):
 
 def tv_acciones():
     """Every Bahrain Bourse stock (for the 5 biggest gainers and losers)."""
-    cols = COLS + ["typespecs", "subtype", "indexes"]
+    # Technical columns of each stock as TradingView's scanner computes them (daily), for the stocks scene of the technical analysis.
+    cols = COLS + ["typespecs", "subtype", "indexes", "RSI", "SMA50", "SMA200", "Stoch.K", "Stoch.D", "Perf.3M", "Perf.6M",
+                   "price_52_week_high", "price_52_week_low", "ATR", "Volatility.M"]
     body = {"columns": cols, "range": [0, 300], "filter": [{"left": "exchange", "operation": "equal", "right": "BAHRAIN"}], "sort": {"sortBy": "market_cap_basic", "sortOrder": "desc"}}
     err = None
     for mk in ("bahrain", "global"):
@@ -152,6 +154,37 @@ def main():
     except Exception as e:
         res["errores"].append(f"tradingview acciones: {e}")
     hoy = (now + datetime.timedelta(hours=3)).date().isoformat()  # Manama time (UTC+3, no DST)
+    dia = lambda v: datetime.datetime.utcfromtimestamp(v["t"] + TZH).date().isoformat()
+    # Mubasher adds the day's daily candle hours after the close; the 1-minute intraday has it right away. If the intraday
+    # has a later session than the daily candles, build that day's candle from the intraday (open, high, low, close, volume).
+    # Mubasher can also lag more than a day (11-nov-2026: the 10-nov candle was still missing). Sessions between its last daily
+    # candle and today are taken from earlier downloads (PREV_DIR = data/ of branch daily-data-bahrain, checked out by the workflow).
+    try:
+        prev = os.environ.get("PREV_DIR")
+        if prev and os.path.isdir(prev):
+            d_ult = dia(res["bax_diario"]["velas"][-1]); hoy_i = dia(res["bax_intradia"]["velas"][-1])
+            tiene = {dia(v) for v in res["bax_diario"]["velas"]}; extra = {}
+            for f in sorted(os.listdir(prev)):  # oldest first, so the newest download of a day wins
+                if not (f.startswith("market-") and f.endswith("-bahrain.json")): continue
+                try:
+                    for v in json.load(open(os.path.join(prev, f)))["bax_diario"]["velas"]:
+                        if d_ult < dia(v) < hoy_i and dia(v) not in tiene: extra[dia(v)] = dict(v, de_descarga_anterior=f)
+                except Exception:
+                    continue
+            if extra:
+                res["bax_diario"]["velas"] += [extra[d] for d in sorted(extra)]
+                res["errores"].append("daily candles from earlier downloads (Mubasher late): " + ", ".join(sorted(extra)))
+    except Exception as e:
+        res["errores"].append(f"daily candles from earlier downloads: {e}")
+    try:
+        d_ult = dia(res["bax_diario"]["velas"][-1])
+        intra = [v for v in res["bax_intradia"]["velas"] if dia(v) == dia(res["bax_intradia"]["velas"][-1])]
+        if intra and dia(intra[-1]) > d_ult:
+            t0 = int(datetime.datetime.fromisoformat(dia(intra[-1])).replace(tzinfo=datetime.timezone.utc).timestamp()) - TZH
+            res["bax_diario"]["velas"].append({"t": t0, "o": intra[0]["o"], "h": max(v["h"] for v in intra), "l": min(v["l"] for v in intra),
+                                               "c": intra[-1]["c"], "v": sum(v["v"] or 0 for v in intra), "de_intradia": True})
+    except Exception as e:
+        res["errores"].append(f"daily candle from intraday: {e}")
     fecha = hoy
     try:
         fecha = datetime.datetime.utcfromtimestamp(res["bax_diario"]["velas"][-1]["t"] + TZH).date().isoformat()

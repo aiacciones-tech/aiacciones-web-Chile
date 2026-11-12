@@ -1,7 +1,7 @@
 # Vídeo diario en árabe de la Bolsa de Baréin (Bahrain All Share Index)
 
 Cada sesión de Bahrain Bourse (domingo a jueves, 09:30-13:00 en Manama, UTC+3; sin vídeo en festivos como el Eid o el Día Nacional):
-un vídeo de máximo 3 minutos y su Short para @BahrainAIStocks, todo en árabe (voz, textos en pantalla, título, descripción y posts),
+un vídeo de máximo 5 minutos (desde el 10-nov-2026, con más peso del análisis técnico) y su Short para @BahrainAIStocks, todo en árabe (voz, textos en pantalla, título, descripción y posts),
 con posts en X, Threads, Facebook, TikTok, Instagram y Telegram. Adaptado del diario saudí (`saudi/diario/`) y del de EAU (`eau/diario/`).
 Muestra: sesión del jueves 5-nov-2026 (`sample-2026-11-05-bahrain/`). Regla de Daniel: nombres de archivos y carpetas en inglés con sufijo `-bahrain`.
 
@@ -11,6 +11,11 @@ Muestra: sesión del jueves 5-nov-2026 (`sample-2026-11-05-bahrain/`). Regla de 
 3. **Análisis fundamental** (`s_fact`): barras de bolsas del Golfo y Asia (mismo día) y de Wall Street y Europa (víspera) + 2-4 factores (Brent, Fed y CBB por el ancla del dinar, flujos extranjeros si hay datos).
 4. **Valores** (`s_movers`): hasta 5 que más suben y 5 que más bajan (solo los que negociaron ese día más de 1.000 dinares), con su motivo. Sin motivo publicado: «لا يوجد خبر محدد في الصحافة»; nunca se inventa. Bahrain Bourse es poco líquida: si solo se mueven 2 o 3, se dice en pantalla y no se rellena.
 5. **Técnico** (`s_tech`): velas de 6 meses, medias de 50 y 200 sesiones, soportes y resistencias, RSI 14, estocástico (14,3,3) y volumen frente a su media de 10 sesiones. «هذه بيانات وليست إشارات شراء أو بيع».
+   - `s_tech_mom`: RSI 14 de 6 meses (hoy, hace 5 y 20 sesiones, mínimo de 6 meses, sesiones seguidas bajo 30), estocástico %K/%D y MACD (12,26,9) con señal e histograma. Títulos en `tecnico.momentum.titulo`.
+   - `s_tech_vol`: volumen frente a sus medias de 10 y 50 sesiones, ATR 14, volatilidad anualizada de 20 sesiones, distancia a máximo y mínimo de 52 semanas y rendimiento a 1 semana, 1 y 3 meses, 6 meses y en el año. `tecnico.volumen.titulo`.
+   - `s_tech_acc`: tabla técnica de los 6 mayores valores del índice (RSI, %K, distancia a SMA 50/200, rendimiento 3 meses) del escáner de TradingView. Solo aparece si el escáner trae esos datos. `tecnico.acciones.titulo` y `nota` opcional.
+   - Ejemplo completo de 5 minutos (4:44, prueba no publicada): `sample-5min-2026-11-10-bahrain/video-bahrain.json`.
+   - Cada escena técnica tiene su voz (`voz.s_tech_mom`, `voz.s_tech_vol`, `voz.s_tech_acc`) y su capítulo en `capitulos` de info-bahrain.json. Datos, no señales: nada de «comprar», «vender», «sobreventa = oportunidad».
 6. **Agenda** (`s_agenda`): resultados, juntas, dividendos, salidas a bolsa y datos de los próximos días.
 7. **Cierre** (`s_fin`): resumen, enlace al canal y aviso legal completo en árabe (también en la descripción).
 
@@ -31,10 +36,14 @@ Ojo: el mínimo diario de Mubasher puede traer un precio que no aparece en el in
    Al Bilad, Al Ayam, Al Watan, TradeArabia, Zawya, Argaam, Asharq Business, Banker. Solo cuenta como motivo lo publicado ese día o la víspera tras el cierre.
 3. Copia `sample-2026-11-05-bahrain/` a la carpeta del día (sin mp4/png/txt) con `market-bahrain.json` del día y cambia `video-bahrain.json`
    (textos y locución, números en palabras), `info-bahrain.json` (título, descripción, posts, miniatura) y `short-bahrain.json` (menos de 59 s; fecha en la primera escena).
-4. `AUD=<scratch> python3 make-video-bahrain.py <dir> preview` (revisa los PNG), luego sin `preview` (máx. 180 s; unas 230 palabras de locución).
+   LinkedIn (regla permanente de Daniel, 8-nov-2026): `info-bahrain.json` lleva `linkedin` con 3-4 `datos` clave del vídeo (cifras y qué cambió) y una
+   `conclusion`, sin relleno. `make-meta-bahrain.py` añade «فيديو من إعداد قناة Bahrain AI Stocks» y termina con el enlace del canal; el Short va como vídeo.
+4. `AUD=<scratch> python3 make-video-bahrain.py <dir> preview` (revisa los PNG), luego sin `preview` (máx. 300 s; unas 400-430 palabras de locución, casi la mitad en las escenas técnicas).
 5. `AUD=<scratch> python3 make-short-bahrain.py <dir>/short-bahrain.json` y `python3 make-meta-bahrain.py <dir>`.
 6. `SCRATCH=<scratch> bash enqueue-daily-bahrain.sh <dir>`: comprueba archivos y enlace del canal, el límite de YouTube (~10 subidas/24 h, compartido con
    los vídeos de resultados) y encola en `cola-bahrain/daily-<fecha>` y `cola-bahrain/daily-<fecha>-short` de `youtube-cola`.
+   `REDES=linkedin` (lo que usa hoy la tarea diaria): además de YouTube, solo el Short en LinkedIn (`post-linkedin.txt` en la carpeta `-short`, cuenta 2 de Buffer).
+   `REDES=todas` añade X, Threads, Facebook, TikTok, Instagram y Telegram; `REDES=ninguna` (o `SOLO_YOUTUBE=1`), solo YouTube.
 
 ## Árabe
 - Fuente: Noto Naskh Arabic (`fonts/`, OFL). `ar()` une las letras con arabic-reshaper; matplotlib 3.11+ ordena de derecha a izquierda (libraqm).
