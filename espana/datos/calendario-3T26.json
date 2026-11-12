@@ -1,6 +1,6 @@
 {
  "trimestre": "3T 2026",
- "actualizado": "2026-11-11",
+ "actualizado": "2026-11-12",
  "empresas": [
   {
    "fecha": "2026-10-20",
@@ -259,9 +259,9 @@
    "empresa": "Telefónica",
    "ticker": "TEF",
    "sector": "Telecomunicaciones",
-   "estado": "Confirmada",
-   "nota": "Enero-septiembre 2026.",
-   "fuente": "telefonica.com, calendario del inversor"
+   "estado": "Publicada",
+   "nota": "Publicados el 12-nov-2026: beneficio neto 9M 464 M€ (9M25: -1.080 M€), ingresos 24.825 M€ (+2,8%), deuda neta -10,8%.",
+   "fuente": "Telefónica, resultados enero-septiembre 2026 (12-nov-2026)"
   },
   {
    "fecha": "2026-11-12",

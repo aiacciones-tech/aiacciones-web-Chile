@@ -72,7 +72,8 @@ DIVIDENDOS = [
      "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b257f9041-bc4d-464f-a465-142e355c07a0%7d"},
     {"ticker": "TEF", "importe": "0,15 €", "tipo": "Dividendo 2026, en efectivo",
      "ex": None, "pago": None, "pago_txt": "junio de 2027",
-     "fuente": "Telefónica, resultados del 1S 2026", "url": None},
+     "fuente": "Telefónica, nota de prensa de resultados 3T 2026 (12-nov-2026)",
+     "url": "https://www.telefonica.com/es/wp-content/uploads/sites/4/2026/11/resultados-telefonica-3t-2026-nota-de-prensa.pdf"},
 ]
 
 # Dividendos que la empresa ha anunciado sin importe o sin fecha todavía (texto de su última comunicación).
