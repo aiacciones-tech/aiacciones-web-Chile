@@ -1,6 +1,84 @@
 {
- "actualizado": "2026-11-12T13:35Z",
+ "actualizado": "2026-11-12T21:05Z",
  "items": [
+  {
+   "id": "63f3c75f-a5a7-44d1-a710-fb3385920730",
+   "tipo": "OIR",
+   "fecha": "2026-11-12 20:16",
+   "entidad": "CORPORACION ACCIONA ENERGIAS RENOVABLES, S.A.",
+   "nif": "A85483311",
+   "categoria": "Comunicación de operaciones vinculadas",
+   "titulo": "ACCIONA Energía comunica la aprobación de una operación vinculada con ACCIONA, S.A.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b63f3c75f-a5a7-44d1-a710-fb3385920730%7d",
+   "ticker": "ANE",
+   "temas": []
+  },
+  {
+   "id": "04e1082f-58b6-492e-9f1a-ed55d33ed143",
+   "tipo": "OIR",
+   "fecha": "2026-11-12 20:08",
+   "entidad": "ACCIONA, S.A.",
+   "nif": "A08001851",
+   "categoria": "Otra información relevante",
+   "titulo": "ACCIONA remite Informe de Tendencias de Negocio correspondiente al tercer trimestre del ejercicio (3T 2026)",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b04e1082f-58b6-492e-9f1a-ed55d33ed143%7d",
+   "ticker": "ANA",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "51d44962-d638-400e-9c3e-347b660a5550",
+   "tipo": "OIR",
+   "fecha": "2026-11-12 19:11",
+   "entidad": "MERLIN PROPERTIES, SOCIMI, S.A.",
+   "nif": "A86977790",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "MERLIN - Resultados 9M26",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b51d44962-d638-400e-9c3e-347b660a5550%7d",
+   "ticker": "MRL",
+   "temas": [
+    "resultados"
+   ]
+  },
+  {
+   "id": "307a6e46-0305-42c3-ab72-10e6a93a2537",
+   "tipo": "OIR",
+   "fecha": "2026-11-12 18:56",
+   "entidad": "MERLIN PROPERTIES, SOCIMI, S.A.",
+   "nif": "A86977790",
+   "categoria": "Otra información relevante",
+   "titulo": "MERLIN - Dividendo a cuenta 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b307a6e46-0305-42c3-ab72-10e6a93a2537%7d",
+   "ticker": "MRL",
+   "temas": [
+    "dividendos"
+   ]
+  },
+  {
+   "id": "fabc02f5-b361-40a4-868e-179886491eb4",
+   "tipo": "OIR",
+   "fecha": "2026-11-12 17:28",
+   "entidad": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+   "nif": "A",
+   "categoria": "Otra información relevante",
+   "titulo": "La Sociedad remite Presentación del Capital Markets Day 2026 – Part 2",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bfabc02f5-b361-40a4-868e-179886491eb4%7d",
+   "ticker": "ACS",
+   "temas": []
+  },
+  {
+   "id": "0bdf1470-dd5a-4055-9f5e-6a96908e5880",
+   "tipo": "OIR",
+   "fecha": "2026-11-12 14:42",
+   "entidad": "MAPFRE, S.A.",
+   "nif": "A08055741",
+   "categoria": "Sobre calificaciones crediticias",
+   "titulo": "Fitch Ratings mejora la calificación crediticia de Mapfre y de sus obligaciones subordinadas",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b0bdf1470-dd5a-4055-9f5e-6a96908e5880%7d",
+   "ticker": "MAP",
+   "temas": []
+  },
   {
    "id": "b3df39b2-7602-4042-86d2-e8be7dabd425",
    "tipo": "OIR",
