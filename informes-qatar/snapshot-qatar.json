@@ -5,7 +5,7 @@
   "vistas": 1637,
   "videos": {
    "vbZ82RFo0vU": 15,
-   "wWLRFxA-2_I": 7,
+   "wWLRFxA-2_I": 8,
    "NQRvDHMUNpw": 2,
    "qUgLLfBwoGk": 14,
    "BrrmUaMtRcE": 9,
@@ -63,51 +63,49 @@
  },
  "telegram": 2,
  "buffer": {
+  "Threads": {
+   "posts": 1,
+   "reactions": 0,
+   "comments": 0,
+   "views": 0,
+   "quotes": 0,
+   "reposts": 0
+  },
   "X": {
-   "posts": 28,
+   "posts": 1,
    "reactions": 0,
    "comments": 0,
    "reposts": 0,
-   "impressions": 17,
-   "clicks": 0
-  },
-  "Facebook": {
-   "posts": 23,
-   "reactions": 0,
-   "comments": 0,
-   "impressions": 54,
-   "reach": 0,
-   "shares": 0,
+   "impressions": 0,
    "clicks": 0
   },
   "YouTube": {
-   "posts": 55,
-   "reactions": 9,
+   "posts": 2,
+   "reactions": 0,
    "comments": 0,
-   "views": 1632
+   "views": 0
   },
   "LinkedIn": {
-   "posts": 30,
-   "reactions": 1,
+   "posts": 1,
+   "reactions": 0,
    "comments": 0,
-   "impressions": 5,
-   "reach": 1,
+   "impressions": 0,
+   "reach": 0,
    "shares": 0
   },
   "Instagram": {
-   "posts": 24,
+   "posts": 1,
    "reactions": 0,
    "comments": 0,
-   "views": 27,
+   "views": 0,
    "shares": 0,
    "saves": 0,
-   "totalTimeWatched": 0.91,
-   "averageTimeWatched": 2.02,
-   "reach": 25,
-   "follows": 0
+   "totalTimeWatched": 0,
+   "averageTimeWatched": 0,
+   "reach": 0
   },
   "TikTok": {
-   "posts": 25,
+   "posts": 1,
    "reactions": 0,
    "comments": 0,
    "views": 0,
