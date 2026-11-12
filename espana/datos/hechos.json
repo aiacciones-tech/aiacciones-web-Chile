@@ -1,6 +1,42 @@
 {
- "actualizado": "2026-11-11T19:52Z",
+ "actualizado": "2026-11-12T13:35Z",
  "items": [
+  {
+   "id": "b3df39b2-7602-4042-86d2-e8be7dabd425",
+   "tipo": "OIR",
+   "fecha": "2026-11-12 13:05",
+   "entidad": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+   "nif": "A",
+   "categoria": "Otra información relevante",
+   "titulo": "La Sociedad remite Presentación del Capital Market Day 2026 – Part 1",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bb3df39b2-7602-4042-86d2-e8be7dabd425%7d",
+   "ticker": "ACS",
+   "temas": []
+  },
+  {
+   "id": "fd5ae440-7556-41a7-bc71-ee13fb3af43b",
+   "tipo": "OIR",
+   "fecha": "2026-11-12 12:12",
+   "entidad": "BANCO SANTANDER, S.A.",
+   "nif": "A39000013",
+   "categoria": "Convocatoria de Junta o Asamblea",
+   "titulo": "Convocatoria de una junta general extraordinaria de accionistas",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bfd5ae440-7556-41a7-bc71-ee13fb3af43b%7d",
+   "ticker": "SAN",
+   "temas": []
+  },
+  {
+   "id": "bac73697-ec28-4549-9ad6-fdaf65d60931",
+   "tipo": "OIR",
+   "fecha": "2026-11-12 07:59",
+   "entidad": "BANCO SANTANDER, S.A.",
+   "nif": "A39000013",
+   "categoria": "Otra información relevante",
+   "titulo": "Santander mejora un 5% la ecuación de canje de la oferta prevista para adquirir las acciones de Santander Brasil que aún no posee",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bbac73697-ec28-4549-9ad6-fdaf65d60931%7d",
+   "ticker": "SAN",
+   "temas": []
+  },
   {
    "id": "a92e0340-7642-4b7c-9280-14924c101f50",
    "tipo": "OIR",
