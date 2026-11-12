@@ -1,6 +1,6 @@
 #!/bin/bash
 # bash encolar.sh <carpeta del día>: encola el video diario en árabe de la Bolsa de Qatar y su Short en cola-qa/bolsa-<fecha>[-short]/
-# de la rama youtube-cola. Después: youtube-qatar.yml sube a YouTube (@QatarAIStocks), buffer.yml publica en X y Facebook (Buffer 1)
+# de la rama youtube-cola. Después: youtube-qatar.yml sube a YouTube (@QatarAIStocks), buffer.yml publica en X y Threads (Buffer 1; Facebook cerró la cuenta el 12-nov-2026)
 # y en LinkedIn, TikTok e Instagram (Buffer 2), y telegram-qatar.yml en Telegram (post-telegram.txt).
 set -e
 B=$(cd "$1" && pwd); F=$(python3 -c "import json;print(json.load(open('$B/info.json'))['fecha'])"); S=${SCRATCH:-/tmp/qa-scratch}; mkdir -p $S
@@ -24,6 +24,7 @@ git add cola-qa; git commit -qm "Cola Qatar: video diario de la bolsa $F (video 
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done
 # Los posts van en un segundo push, cuando el video ya está en la rama (Buffer toma el video del Short desde GitHub).
 cp $B/post-x-$F-qatar.txt $C/post-x.txt; cp $B/post-linkedin-$F-qatar.txt $C/post-linkedin.txt; cp $B/post-facebook-$F-qatar.txt $C/post-facebook.txt; cp $B/post-telegram-$F-qatar.txt $C/post-telegram.txt
+[ -f $B/post-threads-$F-qatar.txt ] && cp $B/post-threads-$F-qatar.txt $C/post-threads.txt
 cp $B/post-tiktok-$F-qatar.txt $CS/post-tiktok.txt; cp $B/post-instagram-$F-qatar.txt $CS/post-instagram.txt
 git add cola-qa; git diff --cached --quiet || git commit -qm "Cola Qatar: posts del video diario $F"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done
