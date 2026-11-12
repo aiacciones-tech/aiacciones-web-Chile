@@ -117,6 +117,33 @@ def subir_uno(t, carpeta):
     print(f"{os.path.basename(carpeta)}: {res['url']} ({res['privacy']}, miniatura {res['miniatura']})")
 
 
+def poner_miniatura(t, vid, mini):
+    req = urllib.request.Request(f"{API}/upload/youtube/v3/thumbnails/set?videoId={vid}",
+                                 open(mini, "rb").read(),
+                                 {"Authorization": f"Bearer {t}", "Content-Type": "image/png"})
+    try:
+        urllib.request.urlopen(req, timeout=120)
+        return "si"
+    except urllib.error.HTTPError as e:
+        return f"error {e.code}: {e.read().decode('utf-8', 'replace')[:300]}"
+
+
+def miniaturas(base, filtro=""):
+    """Reintenta la miniatura de los videos ya subidos cuyo resultado.json dice "error" (p. ej. antes de verificar el canal)."""
+    t = None
+    for d in sorted(os.listdir(base)):
+        c = os.path.join(base, d); rp = os.path.join(c, "resultado.json"); mini = os.path.join(c, "miniatura.png")
+        if filtro not in d or not (os.path.exists(rp) and os.path.exists(mini)):
+            continue
+        res = json.load(open(rp, encoding="utf-8"))
+        if not str(res.get("miniatura", "")).startswith("error"):
+            continue
+        t = t or token()
+        res["miniatura"] = poner_miniatura(t, res["videoId"], mini)
+        json.dump(res, open(rp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print(f"{d}: miniatura {res['miniatura']}")
+
+
 def subir(base):
     pendientes = sorted(os.path.join(base, d) for d in os.listdir(base)
                         if os.path.exists(os.path.join(base, d, "meta.json"))
@@ -131,4 +158,9 @@ def subir(base):
 
 if __name__ == "__main__":
     modo = sys.argv[1] if len(sys.argv) > 1 else "verificar"
-    verificar() if modo == "verificar" else subir(sys.argv[2] if len(sys.argv) > 2 else "cola")
+    if modo == "verificar":
+        verificar()
+    elif modo == "miniaturas":
+        miniaturas(sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else "")
+    else:
+        subir(sys.argv[2] if len(sys.argv) > 2 else "cola")
