@@ -282,8 +282,8 @@ def s_vol(t):
     ax2.set_xlim(-1, NBx); ax2.yaxis.tick_right(); ax2.tick_params(axis="y", labelsize=13); ejes_fecha(ax2, dates, idx, NBx)
     T(f, 0.61, 0.325, "الحجم (مليون سهم)", MUTED, 16)
     v10p, v50p = r["volumen_vs_media10_pct"], r.get("volumen_vs_media50_pct")
-    filas = [("الحجم مقابل متوسط 10 جلسات", "—" if v10p is None else pct(v10p, 0), MUTED),
-             ("الحجم مقابل متوسط 50 جلسة", "—" if v50p is None else pct(v50p, 0), MUTED),
+    filas = [("الحجم مقابل متوسط 10 جلسات", "—" if v10p is None else pct(v10p, 0 if abs(v10p) >= 1 else 1), MUTED),
+             ("الحجم مقابل متوسط 50 جلسة", "—" if v50p is None else pct(v50p, 0 if abs(v50p) >= 1 else 1), MUTED),
              ("قيمة التداول", f"{r['valor_negociado_sar'] / 1e9:.1f} مليار ريال", FG),
              ("ATR 14 (نقاط · نسبة)", f"{num(r['atr14'], 0)} · {num(r['atr14_pct'], 2)}%", BLUE),
              ("مدى جلسة اليوم", f"{num(r['rango_dia_pct'], 2)}%", BLUE),
