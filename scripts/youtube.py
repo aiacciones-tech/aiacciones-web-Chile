@@ -142,6 +142,9 @@ def miniaturas(base, filtro=""):
         res["miniatura"] = poner_miniatura(t, res["videoId"], mini)
         json.dump(res, open(rp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         print(f"{d}: miniatura {res['miniatura']}")
+        if res["miniatura"].startswith("error 429"):
+            print("Límite de miniaturas de YouTube alcanzado; reintenta más tarde.")
+            break
 
 
 def subir(base):
