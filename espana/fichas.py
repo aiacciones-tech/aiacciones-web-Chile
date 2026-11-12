@@ -1684,4 +1684,124 @@ FICHAS = [
                 'Plaza, OKDiario y El Conciso (11-nov-2026); stockanalysis.com (acciones, valor contable y múltiplos históricos, sep-2026).',
      'fuentes_corto': 'ACS (CNMV), Europa Press, Bolsamanía y stockanalysis.com',
      'elaborado': '11-nov-2026, 23:30'},
+    {'id': 'acciona',
+     'nombre': 'Acciona',
+     'ticker': 'ANA',
+     'sector': 'Infraestructuras y energía renovable',
+     'lede': 'Grupo de infraestructuras (construcción, concesiones y agua) y energía renovable a través de su filial cotizada Acciona Energía. Consolida '
+             'también Nordex (aerogeneradores) y tiene inmobiliaria (Living), la gestora Bestinver y las motos eléctricas Silence.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'informe de tendencias de negocio del tercer trimestre de 2026 (enero-septiembre)',
+     'titular': 'Informe de tendencias de negocio (una actualización, no unas cuentas: no trae ingresos, EBITDA ni beneficio de los nueve meses). '
+                'Acciona mantiene un EBITDA 2026 de 2.800-3.100 M€ y ahora apunta a la parte alta; la cartera concesional marca un récord de 141.282 M€ '
+                '(+45,8% frente a diciembre) y Nordex casi duplica su EBITDA (633 M€). No alcanzará este año su objetivo de rotación de activos de '
+                '~2.000 M€.',
+     'precio': '220,60 €',
+     'precio_fecha': '12-nov-2026',
+     'multiplos': [('EV/EBITDA guía 2026', '6,4x-7,1x'),
+                   ('PER 12 meses', '~32,6x'),
+                   ('Precio / valor contable', '~1,83x'),
+                   ('Rentab. dividendo', '2,6%'),
+                   ('Capitalización', '~11.736 M€')],
+     'multiplos_nota': 'Calculados con 220,60 € (cierre del 12-nov-2026, Bolsamanía e Investing.com; el informe se publicó a las 20:08, después del '
+                       'cierre) y 53,20 M de acciones. EV = capitalización + deuda financiera neta con NIIF 16 a 30-jun-2026 (8.243 M€), sin '
+                       'minoritarios, entre la guía de EBITDA 2026 (3.100 y 2.800 M€). PER con el beneficio neto atribuible de 12 meses: 803 - 526 + 83 '
+                       '= 360 M€ (calculado). Rentabilidad con el dividendo pagado el 9-jul-2026 (5,749 €). Precio / valor contable: dato de '
+                       'stockanalysis.com (20-oct-2026) reescalado al precio. Con la misma fórmula, el EV/EBITDA era 5,3x al cierre de 2024 y de 2025 '
+                       '(calculado). A cierre de 2023, 2024 y 2025 (stockanalysis.com) el PER era 13,5x, 14,0x y 12,6x; el precio / valor contable '
+                       '1,08x, 0,93x y 1,61x, y la rentabilidad por dividendo 3,98%, 5,08% y 3,09%.',
+     'tabla_titulo': 'Cifras del informe de tendencias 3T 2026 (millones de euros salvo indicación) y comparación',
+     'tabla': [('Guía EBITDA 2026', '2.800-3.100', 'parte alta; 2025: 3.211'),
+               ('Cartera concesional (sep-26)', '141.282', '+45,8% vs dic-25'),
+               ('Cartera de construcción (sep-26)', '18.650', '+2,4% vs dic-25'),
+               ('Cartera D&C de agua (sep-26)', '1.379', '-22,9% vs dic-25'),
+               ('Producción Acciona Energía 9M (GWh)', '18.558', '+3,9%'),
+               ('EBITDA Nordex 9M', '633', '324 en 9M25'),
+               ('Pedidos de turbinas Nordex 9M (MW)', '7.733', '+16,1%'),
+               ('Liquidez (sep-26)', '10.367', '8.097 en sep-25')],
+     'kpi': 'Concesiones: 79 activos en 12 países con ingresos durante 49 años; Pernambuco (~36.000 M€) y Alto Piranhas (~3.800 M€) en Brasil y '
+            'Northland Corridor (~1.500 M€) en Nueva Zelanda; cartera concesional de Agua 46.322 M€ (casi x7); dividendos y distribuciones esperados '
+            '~64.000 M€ hasta 2085; capital invertido 1.071 M€ (879 en dic-25). Cartera de D&C y O&M 22.614 M€ (~2,5 años de ventas). Energía: precio '
+            'medio 57,3 €/MWh (54,8 en el 1S; 62,3 en 9M25). Nordex: margen EBITDA 10,6% (6,5%), cartera 19.341 M€ (+20,2%; 7.126 M€ de servicios). '
+            'Living: 432 viviendas entregadas (502). Bestinver: 8.386 M€ gestionados (+9,5%). Silence: 4.684 unidades (+85,7%). 9M: inversión neta '
+            '~1.000 M€ y desinversiones ~500 M€. Coste medio de la deuda 4,29% (63% variable). Deuda neta 30-jun-26: 8.243 M€ (el informe no la da a '
+            'septiembre).',
+     'guia': 'Guía 2026: EBITDA 2.800-3.100 M€, en la parte alta (1S26: 1.153 M€; el 2S implícito sería de 1.647-1.947 M€, calculado); inversión neta '
+             'ordinaria ~2.000 M€ (antes 2.200-2.500 M€); deuda neta / EBITDA por debajo de 3,0x a 31-dic-2026; Acciona Energía, EBITDA ~1.200 M€ (1.546 '
+             'M€ en 2025). Rotación de activos: no alcanzará el objetivo de ~2.000 M€ en 2026 (retrasos en la operación con MIP, México y EE. UU.; '
+             'Sudáfrica, previsto en el 4T). El informe no anuncia dividendo; con cargo a 2025 pagó 5,749 € brutos el 9-jul-2026 (ex-dividendo 7-jul).',
+     'positivos': ['Apunta a la parte alta de su guía de EBITDA 2026 (hasta 3.100 M€).',
+                   'Cartera concesional récord de 141.282 M€ (+45,8%), con Brasil como motor.',
+                   'Nordex casi duplica su EBITDA (633 M€) y eleva su guía de margen al 11,5-12,5%.'],
+     'riesgos': ['La rotación de activos no llegará a los ~2.000 M€ previstos en 2026 (MIP sin cerrar).',
+                 'Acciona Energía: precio medio un 8% inferior al de hace un año y EBITDA previsto de ~1.200 M€ (-22%).',
+                 'La cartera de obras de agua cae un 22,9% y el informe no trae beneficio ni deuda neta a septiembre.'],
+     'videos': [('VdjGCQDPL2k', 'Acciona 3T 2026: EBITDA hacia 3.100 M€ y concesiones récord | Informe de tendencias de negocio'),
+                ('3Vd4udNaAY4', 'Acciona 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-25',
+     'proximo_estimado': True,
+     'fuentes': 'Acciona, Informe de Tendencias de Negocio 3T 2026 (CNMV, 12-nov-2026), según Europa Press (PressDigital), El Español, El Periódico de '
+                'la Energía y Demócrata (12-nov-2026); Acciona, informes de resultados del primer semestre de 2026 y de 2025 y de tendencias de negocio '
+                '9M 2025 (acciona.com); Bolsamanía (dividendo, 30-jun-2026, y precio, 12-nov-2026); Investing.com (precio, 12-nov-2026); '
+                'stockanalysis.com (múltiplos actuales e históricos, oct-2026).',
+     'fuentes_corto': 'Acciona (CNMV), Europa Press, El Español, Bolsamanía, Investing.com y stockanalysis.com',
+     'elaborado': '12-nov-2026, 23:30'},
+    {'id': 'merlin',
+     'nombre': 'Merlin Properties',
+     'ticker': 'MRL',
+     'sector': 'Inmobiliaria (socimi)',
+     'lede': 'Socimi con oficinas en Madrid, Barcelona y Lisboa, centros comerciales y logística en España y Portugal, y un plan de centros de datos '
+             '(Plan MEGA, 704 MW IT en tres fases). En marzo de 2026 amplió capital en unos 768 M€ para financiar los centros de datos.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'tercer trimestre de 2026 (nueve meses)',
+     'titular': 'FFO de 274,5 M€ hasta septiembre (+11,9%) y rentas brutas de 442,1 M€ (+11,1%; +3,4% comparable), con los centros de datos en 46,5 M€ '
+                '(x2,4). Por la ampliación de capital, el FFO por acción sube un 1,7%, hasta 0,44 €. Merlin eleva su previsión de FFO por acción de 2026 '
+                'a 0,58 € (0,55 € en julio) y aprueba un dividendo a cuenta de 0,20 € (ex-dividendo 20-nov, pago 10-dic-2026).',
+     'precio': '11,78 €',
+     'precio_fecha': '12-nov-2026',
+     'multiplos': [('Precio / EPRA NTA', '0,73x'),
+                   ('Descuento sobre NTA', '27%'),
+                   ('Precio / FFO previsto 2026', '~20,3x'),
+                   ('Rentab. dividendo (12 meses)', '3,6%'),
+                   ('LTV', '24,9%'),
+                   ('Capitalización', '~7.300 M€')],
+     'multiplos_nota': 'Calculados con 11,78 € (cierre del 12-nov-2026, Bolsamania; los resultados se publicaron después, a las 19:11) y 620 M de '
+                       'acciones. EPRA NTA de 16,13 € por acción a 30-sep-2026; FFO previsto de 0,58 € por acción (guía 2026); dividendos cobrados en 12 '
+                       'meses: 0,42 € (0,20 € en dic-25 y ~0,22 € en may-26). Con los precios y el NTA de cierre de cada año (informes de Merlin), el '
+                       'precio / NTA era 0,67x en 2023, 0,71x en 2024 y 0,81x en 2025 (descuentos del 33%, 29% y 19%), y el precio / FFO, 16,5x, 18,5x y '
+                       '21,4x.',
+     'tabla_titulo': 'Cifras en millones de euros · 9M 2026 y variación frente a 9M 2025',
+     'tabla': [('Rentas brutas', '442,1', '+11,1%'),
+               ('Rentas comparables (like-for-like)', '—', '+3,4%'),
+               ('Rentas netas', '370,0', '+9,6%'),
+               ('EBITDA', '346,9', '+12,5%'),
+               ('FFO', '274,5', '+11,9%'),
+               ('Beneficio neto', '669,7', '+14,8%'),
+               ('Rentas de centros de datos', '46,5', '19,1 en 9M25'),
+               ('Deuda neta (sep-26)', '3.482', '3.743 en dic-25')],
+     'kpi': 'FFO por acción 0,44 € (+1,7%), AFFO por acción 0,43 € (+3,4%) y BPA 1,08 € (+4,4%), con 620 M de acciones frente a 564 M. Rentas por '
+            'negocio: oficinas 221,9 M€ (+2,4%; +2,3% comparable), centros comerciales 108,0 M€ (+9,5%; +7,1%), logística 64,0 M€ (+0,6%; +1,6%) y '
+            'centros de datos 46,5 M€. Ocupación 95,0% (+38 pb frente a junio): oficinas 93,7%, logística 95,7%, centros comerciales 97,2%. Subida de '
+            'renta en renovaciones: +1,0%, +4,3% y +5,1%. Centros de datos: 160 MW IT alquilados, 68 MW reservados y ~206 MW en negociación avanzada; la '
+            'Fase I (64 MW) está 100% alquilada, con 67 M€ de rentas estimadas en 2026 y 97 M€ en 2027; 162 MW pasan a cartera futura por retrasos '
+            'eléctricos. GAV 13.657 M€; EPRA NTA 10.003 M€ (16,13 € por acción, +7,3%). LTV 24,9% (28,9% en dic-25); liquidez 2.484 M€; refinanciación '
+            'de 3.750 M€ sin vencimientos en tres años.',
+     'guia': 'Guía 2026: FFO por acción de 0,58 € (antes 0,55 €, en julio); ocupación de oficinas por encima del 94% al cierre del año. Dividendo a '
+             'cuenta de 2026: 0,20 € brutos por acción; ex-dividendo 20-nov-2026, registro 23-nov y pago 10-dic-2026. Con cargo a 2025 pagó 0,20 € en '
+             'diciembre de 2025 y ~0,22 € en mayo de 2026.',
+     'positivos': ['FFO +11,9% y previsión de FFO por acción elevada a 0,58 €.',
+                   'Las rentas de centros de datos se multiplican por 2,4, hasta 46,5 M€; la Fase I está 100% alquilada.',
+                   'LTV del 24,9% (28,9% en diciembre) y refinanciación de 3.750 M€ sin vencimientos en tres años.'],
+     'riesgos': ['Por la ampliación de capital, el FFO por acción solo sube un 1,7%.',
+                 'Oficinas al 93,7% de ocupación y logística con un +1,6% comparable.',
+                 'Centros de datos: cerca de 5.000 M€ de inversión prevista en la Fase III (2026-2030) y 162 MW retrasados por la conexión eléctrica.'],
+     'videos': [('eTEpUYtOwGM', 'Merlin resultados 3T 2026: FFO +11,9% y previsión de 0,58 € | Centros de datos x2,4'),
+                ('RCP6m2Ww6dU', 'Merlin 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-25',
+     'proximo_estimado': True,
+     'fuentes': 'Merlin Properties, resumen ejecutivo de resultados de enero a septiembre de 2026 y comunicado de dividendo a cuenta (CNMV y '
+                'merlinproperties.com, 12-nov-2026), resumen ejecutivo 6M26 e informes de resultados FY25 y FY24; Bolsamania (precio y dividendo, '
+                '12-nov-2026), El Español y EjePrime (centros de datos, 12-nov-2026).',
+     'fuentes_corto': 'Merlin Properties (CNMV), Bolsamania, El Español y EjePrime',
+     'elaborado': '12-nov-2026, 23:30'},
 ]
