@@ -1,0 +1,33 @@
+# Datos de la serie «عمالقة وول ستريت» de Nabd Wall Street (nabd/serie20/): último informe de resultados de las 20 empresas en la SEC
+# (8-K 2.02 o 10-Q/10-K), texto del comunicado, series trimestrales XBRL y próximas fechas de resultados (TradingView).
+# Lo guarda en la rama datos-serie20-nabd (calendario.json y <TICKER>/), que lee la rutina diaria de la serie.
+# Corre cada día a las 11:00 y a las 23:30 UTC (después de los resultados que salen tras el cierre de Nueva York).
+name: Datos de la serie 20 acciones (Nabd)
+on:
+  schedule:
+    - cron: "0 11 * * *"
+    - cron: "30 23 * * *"
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths: ["nabd/serie20/datos_sec.py", ".github/workflows/serie20-datos-Nabd.yml"]
+permissions:
+  contents: write
+concurrency: datos-serie20-nabd
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Datos anteriores (para no descargar dos veces los comunicados)
+        run: |
+          mkdir -p /tmp/datos
+          if git fetch -q --depth 1 origin datos-serie20-nabd; then git archive FETCH_HEAD | tar -x -C /tmp/datos; fi
+      - name: Descargar de la SEC y TradingView
+        run: python3 nabd/serie20/datos_sec.py /tmp/datos
+      - name: Guardar en la rama datos-serie20-nabd
+        run: |
+          # sin historial (como voz-nabd): la rama es siempre la foto más reciente, para no engordar el repo
+          cd /tmp/datos && git init -q -b datos-serie20-nabd && git add -A
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Datos serie 20 Nabd $(date -u +%F' '%H:%M)"
+          for i in 1 2 3; do git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" HEAD:datos-serie20-nabd && break; sleep 5; done
