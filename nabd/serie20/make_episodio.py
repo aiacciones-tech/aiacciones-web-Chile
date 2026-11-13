@@ -64,7 +64,7 @@ def s_portada(t):
     T(f, 0.94, 0.88, MARCA + " · سلسلة " + SERIE, GOLD, 30, "bold", alpha=a)
     rect(f, 0, 0.66, 1.0, 0.17, GOLD, a)
     T(f, 0.94, 0.745, VJ["ar"], BG, 88, "bold", va="center", alpha=a)
-    f.text(0.06, 0.745, VJ["ticker"], color=BG, fontsize=64, weight="bold", ha="left", va="center", alpha=a)
+    f.text(0.20, 0.745, VJ["ticker"], color=BG, fontsize=64, weight="bold", ha="left", va="center", alpha=a)
     T(f, 0.94, 0.55, VJ["trimestre"], FG, 42, "bold", alpha=ease((t - 0.15) / 0.5))
     T(f, 0.94, 0.48, f"إعلان النتائج: {fecha_ar(VJ['fecha_resultados'])} · {VJ['sector']}", MUTED, 28, alpha=ease((t - 0.25) / 0.5))
     if VJ.get("titular"): T(f, 0.94, 0.33, VJ["titular"], BLUE, 34, "bold", alpha=ease((t - 0.35) / 0.5))
@@ -75,24 +75,24 @@ def yoy(v): return "" if v is None else f"{v:+.1f}% على أساس سنوي"
 
 
 def kpis():
-    K = [("الإيرادات", mm(U.get("total_revenue_fq")), yoy(U.get("total_revenue_yoy_growth_fq")), (U.get("total_revenue_yoy_growth_fq") or 0) >= 0),
+    K = [("إجمالي الإيرادات (قبل مصروف الفوائد)" if VJ.get("sector_tipo") == "banco" else "الإيرادات", mm(U.get("total_revenue_fq")), yoy(U.get("total_revenue_yoy_growth_fq")), (U.get("total_revenue_yoy_growth_fq") or 0) >= 0),
          ("صافي الربح", mm(U.get("net_income_fq")), yoy(U.get("net_income_yoy_growth_fq")), (U.get("net_income_yoy_growth_fq") or 0) >= 0),
          ("ربحية السهم المخففة", "—" if U.get("earnings_per_share_diluted_fq") is None else f"{U['earnings_per_share_diluted_fq']:.2f} $",
           yoy(U.get("earnings_per_share_diluted_yoy_growth_fq")), (U.get("earnings_per_share_diluted_yoy_growth_fq") or 0) >= 0)]
     if U.get("free_cash_flow_fq") is not None and VJ.get("sector_tipo") != "banco":
-        K.append(("التدفق النقدي الحر للربع", mm(U["free_cash_flow_fq"]), "التشغيلي ناقص الإنفاق الرأسمالي", U["free_cash_flow_fq"] >= 0))
+        K.append(("التدفق النقدي الحر للربع", mm(U["free_cash_flow_fq"]), "التشغيلي − الرأسمالي", U["free_cash_flow_fq"] >= 0))
     elif U.get("oper_income_fq") is not None and U.get("total_revenue_fq"):
         K.append(("الهامش التشغيلي للربع", f"{U['oper_income_fq'] / U['total_revenue_fq'] * 100:.1f}%", "محسوب", True))
     return K
 
 
 def s_resultados(t):
-    f = base(2, "نتائج الربع · " + (S["evento"] or {}).get("periodo", ""), VJ.get("titulo_resultados", "أهم أرقام " + VJ["trimestre"]))
+    f = base(2, "نتائج الربع", VJ.get("titulo_resultados", "أهم أرقام " + VJ["trimestre"]))
     K = kpis()
     for i, (lab, big, sub, up) in enumerate(K):
         b = ease((t - i * 0.12) / 0.4); x0 = 0.94 - (i + 1) * 0.215 + 0.01
         rect(f, x0, 0.36, 0.2, 0.36, NAVY, b); rect(f, x0, 0.715, 0.2, 0.006, GOLD, b)
-        T(f, x0 + 0.185, 0.655, lab, MUTED, 22, "bold", alpha=b)
+        T(f, x0 + 0.185, 0.69, "\n".join(textwrap.wrap(lab, 20)), MUTED, 21, "bold", alpha=b, va="top", linespacing=1.3)
         T(f, x0 + 0.185, 0.53, big, FG, 36 if len(big) <= 14 else 30, "bold", alpha=b)
         T(f, x0 + 0.185, 0.43, sub, TEAL if up else NEG, 20, "bold", alpha=b, va="center")
     fuente(f, FUENTE_TV + ". التغير على أساس سنوي مقارنةً بالربع نفسه من العام السابق.")
@@ -103,18 +103,19 @@ def s_ingresos(t):
     f = base(3, "الإيرادات وهامش صافي الربح", VJ.get("titulo_ingresos", "آخر ثمانية أرباع"))
     X = [x for x in TRI if x.get("ingresos")]; ee = ease(t)
     if X:
-        ax = f.add_axes([0.08, 0.27, 0.84, 0.46]); clean(ax); i = np.arange(len(X)); v = [x["ingresos"] / 1e9 for x in X]
+        ax = f.add_axes([0.08, 0.25, 0.84, 0.36]); clean(ax); i = np.arange(len(X)); v = [x["ingresos"] / 1e9 for x in X]
         ax.bar(i, [y * ee for y in v], color=[GOLD if j == len(X) - 1 else BLUE for j in range(len(X))], width=0.6)
-        ax.set_xticks(i, [ar(lbl_tri(x["periodo"])) for x in X]); ax.set_yticks([]); ax.set_ylim(0, max(v) * 1.35); ax.tick_params(labelsize=15)
+        ax.set_xticks(i, [ar(lbl_tri(x["periodo"])) for x in X]); ax.set_yticks([]); ax.set_ylim(0, max(v) * 1.2); ax.tick_params(labelsize=15)
+        ax.set_xlim(-0.5, len(X) - 0.5)
         if t > 0.5:
             for j, y in zip(i, v): ax.text(j, y * ee + max(v) * 0.03, f"{y:,.1f}", ha="center", color=FG, fontsize=17, weight="bold")
         mg = [(j, x["beneficio_neto"] / x["ingresos"] * 100) for j, x in zip(i, X) if x.get("beneficio_neto") is not None]
-        if mg and t > 0.4:
-            a2 = ax.twinx(); clean(a2); a2.set_yticks([])
+        if mg and t > 0.4:  # el margen en su propia franja, encima de las barras
+            a2 = f.add_axes([0.08, 0.63, 0.84, 0.09]); clean(a2); a2.set_yticks([]); a2.set_xticks([]); a2.set_xlim(-0.5, len(X) - 0.5)
             a2.plot([m[0] for m in mg], [m[1] for m in mg], color=TEAL, lw=3, marker="o", ms=9)
-            lo, hi = min(m[1] for m in mg), max(m[1] for m in mg); a2.set_ylim(lo - (hi - lo + 5) * 2.2, hi + (hi - lo + 5) * 0.4)
-            for j, m in mg: a2.text(j, m + (hi - lo + 5) * 0.12, f"{m:.0f}%", ha="center", color=TEAL, fontsize=15, weight="bold")
-        T(f, 0.92, 0.745, "الأعمدة: الإيرادات الفصلية (مليار $) · الخط الأخضر: هامش صافي الربح (محسوب)", MUTED, 18)
+            lo, hi = min(m[1] for m in mg), max(m[1] for m in mg); r = (hi - lo) or 1; a2.set_ylim(lo - r * 0.3, hi + r * 0.9)
+            for j, m in mg: a2.text(j, m + r * 0.25, f"{m:.0f}%", ha="center", color=TEAL, fontsize=15, weight="bold")
+        T(f, 0.92, 0.745, ("الأعمدة: إجمالي الإيرادات قبل مصروف الفوائد (مليار $)" if VJ.get("sector_tipo") == "banco" else "الأعمدة: الإيرادات الفصلية (مليار $)") + " · الخط الأخضر: هامش صافي الربح (محسوب)", MUTED, 18)
     fuente(f, FUENTE_TV + ". الأرباع حسب السنة المالية للشركة (ر = ربع). الهامش = صافي الربح ÷ الإيرادات (محسوب).")
     return to_arr(f)
 
@@ -176,14 +177,14 @@ def s_expectativas(t):
     if rv and U.get("revenue_surprise_percent_fq") is not None and abs(rr - U["total_revenue_fq"]) <= 0.05 * U["total_revenue_fq"]:
         filas.append(("الإيرادات", f"الفعلي {mm(rr)} · التقدير {mm(rv)} · الفارق {U['revenue_surprise_percent_fq']:+.1f}%", U["revenue_surprise_percent_fq"] >= 0))
     if U.get("earnings_per_share_forecast_next_fq") is not None:
-        filas.append(("تقدير المحللين للربع المقبل", f"ربحية السهم {U['earnings_per_share_forecast_next_fq']:.2f} $" +
+        filas.append(("تقدير الربع المقبل", f"ربحية السهم {U['earnings_per_share_forecast_next_fq']:.2f} $" +
                       (f" · الإيرادات {mm(U['revenue_forecast_next_fq'])}" if U.get("revenue_forecast_next_fq") and len(filas) > 1 else ""), None))
     filas += [(a, b, None) for a, b in (E.get("items") or [])[:max(0, 4 - len(filas))]]
     for i, (tit, txt, up) in enumerate(filas[:4]):
         b = ease((t - i * 0.1) / 0.4); y = 0.62 - i * 0.12
         rect(f, 0.06, y, 0.88, 0.1, NAVY, b); rect(f, 0.935, y, 0.005, 0.1, GOLD if up is None else (TEAL if up else NEG), b)
         T(f, 0.92, y + 0.05, tit, FG, 26, "bold", va="center", alpha=b)
-        T(f, 0.70, y + 0.05, txt, MUTED, 20, va="center", alpha=b)
+        T(f, 0.68, y + 0.05, txt, MUTED, 20, va="center", alpha=b)
     fuente(f, "تقديرات المحللين ونتيجة المقارنة: " + FUENTE_TV + "." + (" " + E["fuente"] if E.get("fuente") else ""))
     return to_arr(f)
 
