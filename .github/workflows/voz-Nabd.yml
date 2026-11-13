@@ -15,7 +15,7 @@ on:
         description: "generar (la voz de un día) o verificar (solo la clave)"
         default: verificar
       fecha:
-        description: "fecha de la sesión (AAAA-MM-DD) para modo=generar; vacío = la carpeta más reciente"
+        description: "fecha de la sesión (AAAA-MM-DD) o carpeta con video.json (p. ej. nabd/serie20/intro) para modo=generar; vacío = la carpeta más reciente"
         default: ""
 permissions:
   contents: write
@@ -40,7 +40,9 @@ jobs:
           F="${{ inputs.fecha }}"
           if [ -z "$F" ]; then F=$(ls -d nabd/diario/20??-??-?? | sort | tail -1 | xargs basename); fi
           echo "fecha $F"
-          python3 nabd/diario/voz_azure.py nabd/diario/$F/video.json /tmp/voz/$F
+          # fecha también puede ser otra carpeta del repo con video.json (p. ej. nabd/serie20/intro, vídeos especiales)
+          D=nabd/diario/$F; [ -f "$F/video.json" ] && D=$F; F=$(basename "$F")
+          python3 nabd/diario/voz_azure.py $D/video.json /tmp/voz/$F
           cd /tmp/voz && git init -q -b voz-nabd && git add .
           git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Voz Azure del video diario Nabd $F"
           git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
