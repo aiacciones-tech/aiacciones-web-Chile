@@ -1,0 +1,28 @@
+# PRUEBA (no toca el flujo de publicación): genera en CPU candidatos de imagen para un presentador IA de Nabd Wall Street
+# con SDXL-Turbo (Hugging Face). Deja los PNG en la rama avatar-nabd. Solo se lanza con push a la rama de la prueba.
+name: Prueba avatar (Nabd)
+on:
+  push:
+    branches: ["claude/project-thread-9tfxe4"]
+    paths: ["nabd/avatar/**", ".github/workflows/avatar-prueba-Nabd.yml"]
+permissions:
+  contents: write
+concurrency: avatar-nabd
+jobs:
+  imagen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: Instalar
+        run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q diffusers transformers accelerate safetensors
+      - name: Generar candidatos
+        run: nproc; python nabd/avatar/gen_presentador.py /tmp/out 2>&1 | tee /tmp/out-log.txt; cp /tmp/out-log.txt /tmp/out/log.txt
+      - name: Subir a la rama avatar-nabd
+        run: |
+          cd /tmp/out && git init -q -b avatar-nabd && git add .
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Candidatos de presentador IA (prueba)"
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          for i in 1 2 3; do git push -qf origin avatar-nabd && break; sleep 5; done
