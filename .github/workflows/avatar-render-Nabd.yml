@@ -1,6 +1,7 @@
 # PRUEBA (no toca el flujo de publicación): anima la imagen del presentador IA con SadTalker (gratis, código abierto)
-# en la CPU del runner de GitHub y mide el tiempo de render. Lee nabd/avatar/render.txt (línea 1: PNG de la rama avatar-nabd;
-# línea 2: wav del repo). Deja los mp4 y el log en la rama avatar-nabd-render. Solo se lanza con push a la rama de la prueba.
+# en la CPU de los runners de GitHub y mide el tiempo de render. El audio va en 3 trozos (cortados en silencios) que se
+# renderizan en paralelo en 3 runners y luego se unen. Lee nabd/avatar/render.txt (línea 1: PNG de la rama avatar-nabd).
+# Deja el mp4, tiempos y logs en la rama avatar-nabd-render. Solo se lanza con push a la rama de la prueba.
 name: Prueba avatar render (Nabd)
 on:
   push:
@@ -12,7 +13,10 @@ concurrency: avatar-nabd-render
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 300
+    strategy:
+      matrix: { trozo: [1, 2, 3] }
+    env: { PYTHONUNBUFFERED: "1" }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -20,38 +24,50 @@ jobs:
       - name: SadTalker y pesos (GitHub releases)
         run: |
           T0=$(date +%s)
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null
           git clone -q --depth 1 https://github.com/OpenTalker/SadTalker.git /tmp/st
           cd /tmp/st && mkdir -p checkpoints gfpgan/weights
           R=https://github.com/OpenTalker/SadTalker/releases/download/v0.0.2-rc
           for f in mapping_00109-model.pth.tar mapping_00229-model.pth.tar SadTalker_V0.0.2_256.safetensors; do curl -sSL -o checkpoints/$f $R/$f; done
           curl -sSL -o gfpgan/weights/alignment_WFLW_4HG.pth https://github.com/xinntao/facexlib/releases/download/v0.1.0/alignment_WFLW_4HG.pth
           curl -sSL -o gfpgan/weights/detection_Resnet50_Final.pth https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_Resnet50_Final.pth
-          curl -sSL -o gfpgan/weights/GFPGANv1.4.pth https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.4.pth
-          curl -sSL -o gfpgan/weights/parsing_parsenet.pth https://github.com/xinntao/facexlib/releases/download/v0.2.2/parsing_parsenet.pth
           pip install -q torch==2.1.2 torchvision==0.16.2 --index-url https://download.pytorch.org/whl/cpu
           pip install -q "numpy==1.23.4" face_alignment==1.3.5 imageio==2.19.3 imageio-ffmpeg==0.4.7 librosa==0.9.2 numba resampy==0.3.1 pydub==0.25.1 scipy==1.10.1 kornia==0.6.8 tqdm yacs==0.1.8 pyyaml joblib==1.1.0 scikit-image==0.19.3 basicsr==1.4.2 facexlib==0.3.0 gfpgan av safetensors "opencv-python==4.8.1.78"
-          sed -i 's/from torchvision.transforms.functional_tensor import/from torchvision.transforms.functional import/' $(python -c "import basicsr,os;print(os.path.dirname(basicsr.__file__))")/data/degradations.py || true
-          echo "instalacion: $(( $(date +%s)-T0 )) s" | tee -a /tmp/tiempos.txt
+          echo "trozo ${{ matrix.trozo }} instalacion: $(( $(date +%s)-T0 )) s" | tee -a /tmp/tiempos.txt
       - name: Render
         run: |
-          IMG=$(sed -n 1p nabd/avatar/render.txt); WAV=$(sed -n 2p nabd/avatar/render.txt)
+          IMG=$(sed -n 1p nabd/avatar/render.txt); WAV=$GITHUB_WORKSPACE/nabd/avatar/trozo-${{ matrix.trozo }}.wav
           git fetch -q origin avatar-nabd && git show origin/avatar-nabd:"$IMG" > /tmp/presentador.png
-          mkdir -p /tmp/out && cp /tmp/presentador.png /tmp/out/ && cp "$WAV" /tmp/out/voz.wav
-          echo "cpus: $(nproc)  audio: $(ffprobe -v error -show_entries format=duration -of csv=p=0 $WAV) s" | tee -a /tmp/tiempos.txt
+          mkdir -p /tmp/out
+          echo "trozo ${{ matrix.trozo }} cpus: $(nproc)  audio: $(ffprobe -v error -show_entries format=duration -of csv=p=0 $WAV) s" | tee -a /tmp/tiempos.txt
           cd /tmp/st
           T=$(date +%s)
-          python inference.py --driven_audio "$GITHUB_WORKSPACE/$WAV" --source_image /tmp/presentador.png --result_dir /tmp/r1 --still --preprocess full --cpu 2>&1 | grep -v -i warn | tail -20
-          echo "sadtalker sin mejora: $(( $(date +%s)-T )) s" | tee -a /tmp/tiempos.txt
-          cp $(ls /tmp/r1/*.mp4 | head -1) /tmp/out/avatar-sin-mejora.mp4
-          T=$(date +%s)
-          python inference.py --driven_audio "$GITHUB_WORKSPACE/$WAV" --source_image /tmp/presentador.png --result_dir /tmp/r2 --still --preprocess full --enhancer gfpgan --cpu 2>&1 | grep -v -i warn | tail -20
-          echo "sadtalker con gfpgan: $(( $(date +%s)-T )) s" | tee -a /tmp/tiempos.txt
-          cp $(ls /tmp/r2/*.mp4 | head -1) /tmp/out/avatar-gfpgan.mp4 || true
-      - name: Subir a la rama avatar-nabd-render
-        if: always()
+          python inference.py --driven_audio "$WAV" --source_image /tmp/presentador.png --result_dir /tmp/r1 --still --preprocess full --cpu 2>&1 | tr '\r' '\n' | grep -v -i warn | while IFS= read -r l; do echo "$(date +%H:%M:%S) $l"; done > /tmp/out/log-render-${{ matrix.trozo }}.txt || true
+          tail -15 /tmp/out/log-render-${{ matrix.trozo }}.txt
+          echo "trozo ${{ matrix.trozo }} sadtalker: $(( $(date +%s)-T )) s" | tee -a /tmp/tiempos.txt
+          cp $(ls /tmp/r1/*.mp4 | head -1) /tmp/out/trozo-${{ matrix.trozo }}.mp4
+      - if: always()
+        run: cp /tmp/tiempos.txt /tmp/out/tiempos-${{ matrix.trozo }}.txt || true
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: "trozo-${{ matrix.trozo }}", path: /tmp/out }
+  unir:
+    needs: render
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { path: /tmp/a, merge-multiple: true }
+      - name: Unir y subir a la rama avatar-nabd-render
         run: |
-          mkdir -p /tmp/out && cp /tmp/tiempos.txt /tmp/out/ || true
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null
+          mkdir -p /tmp/out && cp /tmp/a/*.txt /tmp/out/ || true
+          cd /tmp/a && ls -la
+          if ls trozo-1.mp4 trozo-2.mp4 trozo-3.mp4; then
+            for i in 1 2 3; do ffmpeg -v error -y -i trozo-$i.mp4 -c:v libx264 -preset fast -crf 18 -r 25 -c:a aac -ar 44100 -ac 1 n$i.mp4; echo "file n$i.mp4" >> l.txt; done
+            ffmpeg -v error -y -f concat -i l.txt -c copy /tmp/out/avatar-sadtalker.mp4
+          fi
           cd /tmp/out && git init -q -b avatar-nabd-render && git add .
-          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Render de prueba del avatar (SadTalker CPU)"
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Render de prueba del avatar (SadTalker CPU, 3 trozos en paralelo)"
           git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
           for i in 1 2 3; do git push -qf origin avatar-nabd-render && break; sleep 5; done
