@@ -1,16 +1,16 @@
 # Episodio de la serie «عمالقة وول ستريت» (Nabd Wall Street): una empresa tras su informe de resultados, 1920x1080, máximo 4 minutos
 # (Daniel, 13-nov-2026). 7 escenas: portada, resultados del trimestre, ingresos y margen (8 trimestres), balance y deuda/caja frente a la
-# capitalización, flujo de caja de 12 meses, frente a las expectativas y la guía, y cierre. Los gráficos salen de sec.json (SEC XBRL, rama
-# datos-serie20-nabd); lo que aún no está en XBRL (el trimestre recién publicado) lo añade video.json desde el comunicado (EX-99.1).
+# capitalización, flujo de caja, frente a las estimaciones de los analistas y la guía, y cierre. Todas las cifras de pantalla salen de
+# datos.json (TradingView, rama datos-serie20-nabd); video.json pone la locución, los titulares y la guía de la empresa (con fuente).
 # Uso: AUD=<scratch> [VOZ_DIR=<wav de Azure>] python3 make_episodio.py <carpeta del episodio> [preview]
-#   La carpeta tiene video.json y sec.json. Escribe serie20-<ticker>-<fecha>-Nabd.mp4, times.json y guion-<...>-Nabd.md.
+#   La carpeta tiene video.json y datos.json. Escribe serie20-<ticker>-<fecha>-Nabd.mp4, times.json y guion-<...>-Nabd.md.
 import os, sys, json, textwrap, datetime as dt, numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, os.path.join(HERE, "..", "diario"))
 from comun import *
 
 DIR = os.path.abspath(sys.argv[1]); PREVIEW = len(sys.argv) > 2 and sys.argv[2] == "preview"
 AUD = os.environ.get("AUD", "aud"); os.makedirs(AUD, exist_ok=True)
-VJ = json.load(open(f"{DIR}/video.json")); S = json.load(open(f"{DIR}/sec.json")); V = VJ["voz"]
+VJ = json.load(open(f"{DIR}/video.json")); S = json.load(open(f"{DIR}/datos.json")); V = VJ["voz"]; U = S["ultimo"]
 SERIE = "عمالقة وول ستريت"; NAVY = "#13294B"; W, H = 1920, 1080
 MIN_S, MAX_S = 120, 240   # máximo 4 minutos (Daniel, 13-nov-2026)
 BASE = f"serie20-{VJ['ticker'].lower()}-{VJ['fecha_resultados']}"
@@ -19,6 +19,7 @@ MESES = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "ي
 fecha_ar = lambda s: (lambda d: f"{d.day} {MESES[d.month - 1]} {d.year}")(dt.date.fromisoformat(s))
 LG = load_logo(130); LGB = load_logo(230)
 SECS = ["المقدمة", "النتائج", "الإيرادات والهامش", "الميزانية", "التدفقات النقدية", "التوقعات", "الخلاصة"]
+FUENTE_TV = f"TradingView (بيانات أساسية مأخوذة من تقارير الشركة)، {str(S.get('generado', ''))[:10]}"
 
 
 def T(f, x, y, s, c=FG, fs=24, w="normal", ha="right", **k):
@@ -50,17 +51,12 @@ def base(n, kicker, title):
 def fuente(f, s): T(f, 0.94, 0.17, "\n".join(textwrap.wrap(s, 170)), MUTED, 14, linespacing=1.35)
 
 
-# Trimestres: XBRL + el trimestre nuevo del comunicado si aún no está
-TRI = [dict(t) for t in S.get("trimestres", [])]
-for n in VJ.get("trimestres_nuevos", []):
-    TRI = [t for t in TRI if t["fin"] != n["fin"]] + [dict(n, _comunicado=True)]
-TRI = sorted(TRI, key=lambda t: t["fin"])[-8:]
-BAL = dict((S.get("balance") or [{}])[-1]); BAL.update(VJ.get("balance_nuevo") or {})
-CAP = VJ.get("cap_mercado") or S.get("cap_mercado")
+TRI = [t for t in S.get("trimestres", []) if t.get("ingresos")][-8:]
+CAP = S.get("cap_mercado")
 
 
-def lbl_tri(fin):
-    d = dt.date.fromisoformat(fin); return f"{MESES[d.month - 1][:5]}\n{d.year}"
+def lbl_tri(p):
+    return f"ر{p[-1]}\n{p[:4]}" if p else ""   # trimestre del año fiscal de la empresa
 
 
 def s_portada(t):
@@ -75,16 +71,31 @@ def s_portada(t):
     return with_logo(to_arr(f), LGB, x=110, y=40)
 
 
+def yoy(v): return "" if v is None else f"{v:+.1f}% على أساس سنوي"
+
+
+def kpis():
+    K = [("الإيرادات", mm(U.get("total_revenue_fq")), yoy(U.get("total_revenue_yoy_growth_fq")), (U.get("total_revenue_yoy_growth_fq") or 0) >= 0),
+         ("صافي الربح", mm(U.get("net_income_fq")), yoy(U.get("net_income_yoy_growth_fq")), (U.get("net_income_yoy_growth_fq") or 0) >= 0),
+         ("ربحية السهم المخففة", "—" if U.get("earnings_per_share_diluted_fq") is None else f"{U['earnings_per_share_diluted_fq']:.2f} $",
+          yoy(U.get("earnings_per_share_diluted_yoy_growth_fq")), (U.get("earnings_per_share_diluted_yoy_growth_fq") or 0) >= 0)]
+    if U.get("free_cash_flow_fq") is not None and VJ.get("sector_tipo") != "banco":
+        K.append(("التدفق النقدي الحر للربع", mm(U["free_cash_flow_fq"]), "التشغيلي ناقص الإنفاق الرأسمالي", U["free_cash_flow_fq"] >= 0))
+    elif U.get("oper_income_fq") is not None and U.get("total_revenue_fq"):
+        K.append(("الهامش التشغيلي للربع", f"{U['oper_income_fq'] / U['total_revenue_fq'] * 100:.1f}%", "محسوب", True))
+    return K
+
+
 def s_resultados(t):
-    f = base(2, "نتائج الربع", VJ.get("titulo_resultados", "أهم أرقام " + VJ["trimestre"]))
-    K = VJ["kpis"][:4]
-    for i, (lab, big, sub, c) in enumerate(K):
+    f = base(2, "نتائج الربع · " + (S["evento"] or {}).get("periodo", ""), VJ.get("titulo_resultados", "أهم أرقام " + VJ["trimestre"]))
+    K = kpis()
+    for i, (lab, big, sub, up) in enumerate(K):
         b = ease((t - i * 0.12) / 0.4); x0 = 0.94 - (i + 1) * 0.215 + 0.01
         rect(f, x0, 0.36, 0.2, 0.36, NAVY, b); rect(f, x0, 0.715, 0.2, 0.006, GOLD, b)
-        T(f, x0 + 0.185, 0.655, lab, MUTED, 24, "bold", alpha=b)
-        T(f, x0 + 0.185, 0.53, big, col(c) if c else FG, 40 if len(big) <= 14 else 32, "bold", alpha=b)
-        T(f, x0 + 0.185, 0.42, sub, FG, 20, alpha=b, va="center")
-    fuente(f, VJ.get("fuente_kpis", "بيان النتائج المودع لدى SEC (8-K، المرفق 99.1). التغيرات محسوبة."))
+        T(f, x0 + 0.185, 0.655, lab, MUTED, 22, "bold", alpha=b)
+        T(f, x0 + 0.185, 0.53, big, FG, 36 if len(big) <= 14 else 30, "bold", alpha=b)
+        T(f, x0 + 0.185, 0.43, sub, TEAL if up else NEG, 20, "bold", alpha=b, va="center")
+    fuente(f, FUENTE_TV + ". التغير على أساس سنوي مقارنةً بالربع نفسه من العام السابق.")
     return to_arr(f)
 
 
@@ -94,7 +105,7 @@ def s_ingresos(t):
     if X:
         ax = f.add_axes([0.08, 0.27, 0.84, 0.46]); clean(ax); i = np.arange(len(X)); v = [x["ingresos"] / 1e9 for x in X]
         ax.bar(i, [y * ee for y in v], color=[GOLD if j == len(X) - 1 else BLUE for j in range(len(X))], width=0.6)
-        ax.set_xticks(i, [lbl_tri(x["fin"]) for x in X]); ax.set_yticks([]); ax.set_ylim(0, max(v) * 1.35); ax.tick_params(labelsize=15)
+        ax.set_xticks(i, [ar(lbl_tri(x["periodo"])) for x in X]); ax.set_yticks([]); ax.set_ylim(0, max(v) * 1.35); ax.tick_params(labelsize=15)
         if t > 0.5:
             for j, y in zip(i, v): ax.text(j, y * ee + max(v) * 0.03, f"{y:,.1f}", ha="center", color=FG, fontsize=17, weight="bold")
         mg = [(j, x["beneficio_neto"] / x["ingresos"] * 100) for j, x in zip(i, X) if x.get("beneficio_neto") is not None]
@@ -104,19 +115,14 @@ def s_ingresos(t):
             lo, hi = min(m[1] for m in mg), max(m[1] for m in mg); a2.set_ylim(lo - (hi - lo + 5) * 2.2, hi + (hi - lo + 5) * 0.4)
             for j, m in mg: a2.text(j, m + (hi - lo + 5) * 0.12, f"{m:.0f}%", ha="center", color=TEAL, fontsize=15, weight="bold")
         T(f, 0.92, 0.745, "الأعمدة: الإيرادات الفصلية (مليار $) · الخط الأخضر: هامش صافي الربح (محسوب)", MUTED, 18)
-    nota = "SEC EDGAR XBRL (10-Q و 10-K)" + ("، والربع الأخير من بيان النتائج (8-K)" if any(x.get("_comunicado") for x in X) else "") + \
-           ". الربع الرابع وبعض التدفقات محسوبة من الأرقام المتراكمة. الهامش = صافي الربح ÷ الإيرادات (محسوب)."
-    fuente(f, nota)
+    fuente(f, FUENTE_TV + ". الأرباع حسب السنة المالية للشركة (ر = ربع). الهامش = صافي الربح ÷ الإيرادات (محسوب).")
     return to_arr(f)
 
 
 def s_balance(t):
-    f = base(4, "الميزانية العمومية", VJ.get("titulo_balance", "النقد والديون وحقوق المساهمين"))
-    caja = (BAL.get("caja") or 0) + (BAL.get("inversiones_cp") or 0)
-    deuda = sum(BAL.get(k) or 0 for k in ("deuda_lp", "deuda_cp", "papel_comercial"))
-    items = [("النقد والاستثمارات قصيرة الأجل", mm(caja) if caja else "—", BLUE),
-             ("الديون (طويلة وقصيرة الأجل)", mm(deuda) if deuda else "—", NEG),
-             ("حقوق المساهمين", mm(BAL.get("patrimonio")), TEAL)]
+    f = base(4, "الميزانية العمومية · نهاية الربع", VJ.get("titulo_balance", "النقد والديون وحقوق المساهمين"))
+    caja, deuda = U.get("cash_n_short_term_invest_fq"), U.get("total_debt_fq")
+    items = [("النقد والاستثمارات قصيرة الأجل", mm(caja), BLUE), ("إجمالي الديون", mm(deuda), NEG), ("حقوق المساهمين", mm(U.get("total_equity_fq")), TEAL)]
     for i, (lab, big, c) in enumerate(items):
         b = ease((t - i * 0.12) / 0.4); y = 0.62 - i * 0.135
         rect(f, 0.50, y, 0.44, 0.115, NAVY, b); rect(f, 0.935, y, 0.005, 0.115, c, b)
@@ -130,41 +136,55 @@ def s_balance(t):
             y = 0.53 - j * 0.15
             T(f, 0.45, y, lab, MUTED, 22, "bold", alpha=b)
             f.text(0.06, y - 0.075, "—" if v is None else f"{v:.1f}%", color=c, fontsize=54, weight="bold", ha="left", alpha=b)
-    fuente(f, f"SEC EDGAR XBRL، الميزانية في {BAL.get('fin', '—')}" + (" (أو بيان النتائج)" if VJ.get("balance_nuevo") else "") +
-           f". القيمة السوقية: TradingView ({str(S.get('cap_fecha', ''))[:10]}). النسب محسوبة وليست حكمًا شرعيًا ولا توصية.")
+    fuente(f, FUENTE_TV + ". النسب محسوبة، وهي بيانات وليست حكمًا شرعيًا ولا توصية." +
+           (" في البنوك تشمل الديون الودائع والاقتراض ولا تُقارن مباشرةً بالشركات الأخرى." if VJ.get("sector_tipo") == "banco" else ""))
     return to_arr(f)
 
 
 def s_flujo(t):
-    f = base(5, "التدفقات النقدية · آخر 12 شهرًا (محسوب)", VJ.get("titulo_flujo", "من أين يأتي النقد وأين يذهب"))
-    U = TRI[-4:]
-    tot = lambda k: sum(x[k] for x in U) if U and all(x.get(k) is not None for x in U) else None
-    fo, cx, dv, rc = tot("flujo_operativo"), tot("capex"), tot("dividendos"), tot("recompras")
-    fl = fo - cx if fo is not None and cx is not None else None
-    L = [(l, v, c) for l, v, c in [("التدفق النقدي التشغيلي", fo, TEAL), ("الإنفاق الرأسمالي", cx, NEG), ("التدفق النقدي الحر", fl, GOLD),
-                                   ("التوزيعات النقدية", dv, BLUE), ("إعادة شراء الأسهم", rc, BLUE)] if v is not None]
-    if L:
-        ax = f.add_axes([0.08, 0.27, 0.62, 0.48]); clean(ax); y = np.arange(len(L))[::-1]; ee = ease(t); mx = max(abs(v) for _, v, _ in L)
-        ax.barh(y, [abs(v) * ee for _, v, _ in L], color=[c for _, _, c in L], height=0.6); ax.set_xlim(mx * 1.3, 0)
-        ax.set_yticks([]); ax.set_xticks([])
-        for yy, (l, v, c) in zip(y, L):
-            ax.text(-0.01, yy, ar(l), transform=ax.get_yaxis_transform(), ha="left", va="center", color=FG, fontsize=22, weight="bold")
-            if t > 0.5: ax.text(abs(v) * ee + mx * 0.02, yy, ar(mm(v)), ha="right", va="center", color=FG, fontsize=18, weight="bold")
-    else:
-        T(f, 0.94, 0.5, "لا تتوفر بيانات التدفقات النقدية الفصلية الكاملة في XBRL", MUTED, 28)
-    fuente(f, "SEC EDGAR XBRL: مجموع آخر أربعة أرباع (محسوب). التدفق النقدي الحر = التدفق التشغيلي ناقص الإنفاق الرأسمالي (محسوب).")
+    f = base(5, "التدفقات النقدية", VJ.get("titulo_flujo", "من أين يأتي النقد وأين يذهب"))
+    L = [(l, v, c) for l, v, c in [("التدفق التشغيلي (12 شهرًا)", U.get("cash_f_operating_activities_ttm"), TEAL),
+                                   ("الإنفاق الرأسمالي (12 شهرًا)", abs(U["capital_expenditures_ttm"]) if U.get("capital_expenditures_ttm") else None, NEG),
+                                   ("التدفق الحر (12 شهرًا)", U.get("free_cash_flow_ttm"), GOLD)] if v is not None]
+    for i, (lab, v, c) in enumerate(L):
+        b = ease((t - i * 0.12) / 0.4); y = 0.62 - i * 0.135
+        rect(f, 0.55, y, 0.39, 0.115, NAVY, b); rect(f, 0.935, y, 0.005, 0.115, c, b)
+        T(f, 0.92, y + 0.075, lab, MUTED, 22, "bold", alpha=b); T(f, 0.92, y + 0.025, mm(v), FG, 34, "bold", alpha=b)
+    X = [x for x in TRI if x.get("flujo_libre") is not None]
+    if X:
+        ax = f.add_axes([0.06, 0.30, 0.46, 0.40]); clean(ax); i = np.arange(len(X)); v = [x["flujo_libre"] / 1e9 for x in X]; ee = ease(t)
+        ax.bar(i, [y * ee for y in v], color=[TEAL if y >= 0 else NEG for y in v], width=0.6); ax.axhline(0, color=DIM, lw=1)
+        ax.set_xticks(i, [ar(lbl_tri(x["periodo"])) for x in X]); ax.set_yticks([]); ax.tick_params(labelsize=13)
+        lo, hi = min(v + [0]), max(v + [0]); ax.set_ylim(lo - (hi - lo) * 0.15, hi + (hi - lo) * 0.25)
+        if t > 0.5:
+            for j, y in zip(i, v): ax.text(j, y * ee + (hi - lo) * (0.04 if y >= 0 else -0.1), f"{y:,.1f}", ha="center", color=FG, fontsize=14, weight="bold")
+        T(f, 0.52, 0.72, "التدفق النقدي الحر في كل ربع (مليار $)", MUTED, 18)
+    fuente(f, FUENTE_TV + ". التدفق النقدي الحر = التدفق التشغيلي ناقص الإنفاق الرأسمالي.")
     return to_arr(f)
 
 
 def s_expectativas(t):
-    E = VJ["expectativas"]
-    f = base(6, "مقارنةً بالتوقعات وتوجيهات الإدارة", E.get("titulo", "ماذا قالت الأرقام والإدارة"))
-    for i, (tit, txt) in enumerate(E["items"][:4]):
+    E = VJ.get("expectativas") or {}
+    f = base(6, "مقارنةً بتقديرات المحللين", E.get("titulo", "ماذا انتظر السوق وماذا تحقق"))
+    filas = []
+    if U.get("earnings_per_share_forecast_fq") is not None and U.get("eps_surprise_percent_fq") is not None:
+        real = U["earnings_per_share_forecast_fq"] + (U.get("eps_surprise_fq") or 0); gaap = U.get("earnings_per_share_diluted_fq")
+        lab = "ربحية السهم" if gaap and abs(real - gaap) <= 0.05 * abs(gaap) else "ربحية السهم المعدّلة"   # los analistas comparan con la cifra ajustada
+        filas.append((lab, f"الفعلي {real:.2f} $ · التقدير {U['earnings_per_share_forecast_fq']:.2f} $ · الفارق {U['eps_surprise_percent_fq']:+.1f}%",
+                      U["eps_surprise_percent_fq"] >= 0))
+    rv = U.get("revenue_forecast_fq"); rr = rv + (U.get("revenue_surprise_fq") or 0) if rv else None
+    if rv and U.get("revenue_surprise_percent_fq") is not None and abs(rr - U["total_revenue_fq"]) <= 0.05 * U["total_revenue_fq"]:
+        filas.append(("الإيرادات", f"الفعلي {mm(rr)} · التقدير {mm(rv)} · الفارق {U['revenue_surprise_percent_fq']:+.1f}%", U["revenue_surprise_percent_fq"] >= 0))
+    if U.get("earnings_per_share_forecast_next_fq") is not None:
+        filas.append(("تقدير المحللين للربع المقبل", f"ربحية السهم {U['earnings_per_share_forecast_next_fq']:.2f} $" +
+                      (f" · الإيرادات {mm(U['revenue_forecast_next_fq'])}" if U.get("revenue_forecast_next_fq") and len(filas) > 1 else ""), None))
+    filas += [(a, b, None) for a, b in (E.get("items") or [])[:max(0, 4 - len(filas))]]
+    for i, (tit, txt, up) in enumerate(filas[:4]):
         b = ease((t - i * 0.1) / 0.4); y = 0.62 - i * 0.12
-        rect(f, 0.06, y, 0.88, 0.1, NAVY, b); rect(f, 0.935, y, 0.005, 0.1, GOLD, b)
+        rect(f, 0.06, y, 0.88, 0.1, NAVY, b); rect(f, 0.935, y, 0.005, 0.1, GOLD if up is None else (TEAL if up else NEG), b)
         T(f, 0.92, y + 0.05, tit, FG, 26, "bold", va="center", alpha=b)
-        T(f, 0.62, y + 0.05, txt, MUTED, 20, va="center", alpha=b)
-    fuente(f, E["fuente"])
+        T(f, 0.70, y + 0.05, txt, MUTED, 20, va="center", alpha=b)
+    fuente(f, "تقديرات المحللين ونتيجة المقارنة: " + FUENTE_TV + "." + (" " + E["fuente"] if E.get("fuente") else ""))
     return to_arr(f)
 
 
@@ -216,18 +236,21 @@ def frame(n, fn, t): return fn(t) if n in BIG else with_logo(fn(t), LG, x=60, y=
 
 
 def control():
-    """Antes de renderizar: los datos que se muestran existen y el guion no inventa (las cifras de pantalla vienen de sec.json o del comunicado)."""
+    """Antes de renderizar: el evento de resultados y las cifras existen, y video.json tiene todo lo que pide la pantalla."""
     err = []
-    for k in ("ticker", "ar", "trimestre", "fecha_resultados", "sector", "kpis", "expectativas", "claves", "voz", "fuente_kpis"):
+    for k in ("ticker", "ar", "en", "trimestre", "fecha_resultados", "sector", "claves", "voz", "info", "miniatura"):
         if not VJ.get(k): err.append(f"falta {k} en video.json")
     for n, _ in ESC:
         if not V.get(n): err.append(f"falta la locución {n}")
-    if len(VJ.get("kpis", [])) < 3: err.append("kpis: 3 o 4")
-    if not [x for x in TRI if x.get("ingresos")]: err.append("sin ingresos trimestrales (sec.json ni trimestres_nuevos)")
-    if not S.get("evento"): err.append("sec.json sin evento de resultados")
-    elif S["evento"]["fecha"] != VJ["fecha_resultados"]: err.append(f"fecha_resultados {VJ['fecha_resultados']} distinta del evento SEC {S['evento']['fecha']}")
-    for x in VJ.get("trimestres_nuevos", []):
-        if not x.get("fuente"): err.append(f"trimestres_nuevos {x.get('fin')}: falta la fuente")
+    ev = S.get("evento")
+    if not ev: err.append("datos.json sin evento de resultados desde el inicio de la serie")
+    else:
+        if ev["fecha"] != VJ["fecha_resultados"]: err.append(f"fecha_resultados {VJ['fecha_resultados']} distinta del evento {ev['fecha']}")
+        if not ev.get("datos_listos"): err.append("TradingView aún no tiene las cifras del trimestre publicado (datos_listos=false): espera a mañana")
+    if len(TRI) < 4: err.append("menos de 4 trimestres con ingresos")
+    if not U.get("total_revenue_fq"): err.append("sin ingresos del trimestre")
+    for a, b in (VJ.get("expectativas") or {}).get("items", []):
+        if not (VJ.get("expectativas") or {}).get("fuente"): err.append("expectativas.items sin fuente"); break
     if err: sys.exit("CONTROL DE CALIDAD:\n- " + "\n- ".join(err))
 
 

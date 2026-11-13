@@ -21,16 +21,18 @@ def main():
     pend = []
     for e in cal["empresas"]:
         ev = e.get("evento")
-        if not ev: continue
+        if not ev or not ev.get("datos_listos"): continue   # sin cifras del trimestre en TradingView todavía: espera
         carpeta = f"serie20-{e['ticker'].lower()}-{ev['fecha']}"
         if carpeta in hechos: continue
-        pend.append({"ticker": e["ticker"], "fecha": ev["fecha"], "periodo": ev.get("periodo"), "tipo": ev["tipo"], "carpeta": carpeta, "cap": e.get("cap") or 0})
+        pend.append({"ticker": e["ticker"], "fecha": ev["fecha"], "periodo": ev.get("periodo"), "carpeta": carpeta, "cap": e.get("cap") or 0})
     pend.sort(key=lambda x: (x["fecha"], -x["cap"]))
     libres = max(0, MAX_DIA - hoy_n)
     print(f"datos de {cal['generado']} · ya encolados hoy ({hoy}, Riad): {hoy_n} · huecos hoy: {libres}")
     print("hechos:", ", ".join(sorted(hechos)) or "ninguno")
-    for i, p in enumerate(pend): print(f"{'HOY ' if i < libres else '    '}{p['ticker']:6} resultados {p['fecha']} ({p['tipo']}, periodo {p['periodo']})")
-    prox = sorted((e["proxima"][:10], e["ticker"]) for e in cal["empresas"] if e.get("proxima") and e["proxima"][:10] >= hoy)
+    for i, p in enumerate(pend): print(f"{'HOY ' if i < libres else '    '}{p['ticker']:6} resultados {p['fecha']} (periodo fiscal {p['periodo']})")
+    prox = sorted((e["proxima_ny"], e["ticker"]) for e in cal["empresas"] if e.get("proxima_ny") and e["proxima_ny"] >= hoy)
+    esperando = [e["ticker"] for e in cal["empresas"] if e.get("evento") and not e["evento"].get("datos_listos")]
+    if esperando: print("con resultados pero sin cifras en TradingView todavía:", ", ".join(esperando))
     print("próximos resultados (TradingView):", ", ".join(f"{t} {f}" for f, t in prox))
     print(json.dumps({"hoy": pend[:libres], "pendientes": pend[libres:], "proximos": prox}, ensure_ascii=False))
 
