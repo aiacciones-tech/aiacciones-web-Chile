@@ -1,10 +1,10 @@
 {
- "fecha": "2026-11-12",
+ "fecha": "2026-11-13",
  "youtube": {
   "suscriptores": 4,
-  "vistas": 1637,
+  "vistas": 1667,
   "videos": {
-   "vbZ82RFo0vU": 15,
+   "vbZ82RFo0vU": 20,
    "wWLRFxA-2_I": 8,
    "NQRvDHMUNpw": 2,
    "qUgLLfBwoGk": 14,
@@ -33,7 +33,7 @@
    "T5b2sG2Te1M": 0,
    "OBY8mmMwVcc": 138,
    "WKQWCfXJKko": 61,
-   "f_BuUjb5qh4": 2,
+   "f_BuUjb5qh4": 3,
    "aMf4c3azTj4": 352,
    "TfI1vVcTs8s": 0,
    "KhRD56zxfuk": 3,
@@ -52,7 +52,7 @@
    "IkzmWK_YEXc": 0,
    "9T5see5sOQY": 1,
    "xBKv7z-nZUI": 2,
-   "yoqpq0e_GXw": 4,
+   "yoqpq0e_GXw": 5,
    "x_DYla6GdfU": 97,
    "fndn50K-QM4": 1,
    "ONe5-DObNdI": 0,
@@ -72,21 +72,21 @@
    "reposts": 0
   },
   "X": {
-   "posts": 1,
+   "posts": 13,
    "reactions": 0,
    "comments": 0,
    "reposts": 0,
-   "impressions": 0,
+   "impressions": 7,
    "clicks": 0
   },
   "YouTube": {
-   "posts": 2,
-   "reactions": 0,
+   "posts": 26,
+   "reactions": 3,
    "comments": 0,
-   "views": 0
+   "views": 519
   },
   "LinkedIn": {
-   "posts": 1,
+   "posts": 15,
    "reactions": 0,
    "comments": 0,
    "impressions": 0,
@@ -94,18 +94,18 @@
    "shares": 0
   },
   "Instagram": {
-   "posts": 1,
+   "posts": 13,
    "reactions": 0,
    "comments": 0,
-   "views": 0,
+   "views": 27,
    "shares": 0,
    "saves": 0,
-   "totalTimeWatched": 0,
-   "averageTimeWatched": 0,
-   "reach": 0
+   "totalTimeWatched": 0.91,
+   "averageTimeWatched": 2.02,
+   "reach": 25
   },
   "TikTok": {
-   "posts": 1,
+   "posts": 13,
    "reactions": 0,
    "comments": 0,
    "views": 0,
