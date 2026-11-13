@@ -69,7 +69,7 @@ def s_porque(t):
     if t > 0.6:
         for yy, x in zip(y, v): ax.text(x * ee + max(v) * 0.015, yy, f"{x:,.0f}", va="center", color=MUTED, fontsize=13, weight="bold")
     T(f, 0.49, 0.815, "القيمة السوقية (مليار دولار)", MUTED, 18, alpha=a)
-    T(f, 0.94, 0.11, FUENTE, MUTED, 15)
+    T(f, 0.94, 0.17, FUENTE, MUTED, 15)
     return with_logo(to_arr(f), LG, x=60, y=40)
 
 
@@ -85,7 +85,7 @@ def s_lista(k, t):
         T(f, x0 + 0.385, y + 0.018, e["sector"], MUTED, 18, va="center", alpha=b)
         f.text(x0 + 0.015, y + 0.058, e["ticker"], color=GOLD, fontsize=24, weight="bold", ha="left", va="center", alpha=b)
         T(f, x0 + 0.015, y + 0.02, f"{e['cap']:,.0f} مليار $", FG, 18, ha="left", va="center", alpha=b)
-    T(f, 0.94, 0.11, FUENTE, MUTED, 15)
+    T(f, 0.94, 0.17, FUENTE, MUTED, 15)
     return with_logo(to_arr(f), LG, x=60, y=40)
 
 
@@ -163,6 +163,7 @@ def overlay(marcas, leads, W_, H_, ancho=72, fs=27, banda=True):
         return SUB_CACHE[s]
 
     def ov(fr, j, ts, tg):
+        if not banda: return fr  # Short: sin subtítulos (la franja inferior queda bajo el título y el canal de YouTube)
         fr = fr.copy(); bh = 46 if banda else 0
         if banda:
             fr[H_ - bh:] = (fr[H_ - bh:].astype(np.float32) * 0.1 + band * 0.9).astype(np.uint8); fr[H_ - bh - 2:H_ - bh] = (0xD4, 0xAF, 0x37)
@@ -196,7 +197,7 @@ def sh_2(t):
     f = fig(SW, SH); T(f, XR, 0.80, "الشركات العشرون", GOLD, 44, "bold", alpha=ease(t / 0.4))
     for i, e in enumerate(E):
         b = ease((t - i * 0.03) / 0.4); c, r = divmod(i, 10); x = XR - c * 0.38; y = 0.735 - r * 0.048
-        T(f, x, y, f"{i + 1}. {e['ar']}", FG, 30, "bold", alpha=b)
+        T(f, x, y, f"{i + 1}  {e['ar']}", FG, 30, "bold", alpha=b)
     T(f, XR, 0.235, "مرتبة حسب القيمة السوقية · إغلاق 12 نوفمبر 2026", MUTED, 26, alpha=ease((t - 0.4) / 0.4))
     return with_logo(to_arr(f), LGs, x=90, y=150)
 
