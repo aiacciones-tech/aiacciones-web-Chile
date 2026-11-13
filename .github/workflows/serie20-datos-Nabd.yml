@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
   push:
     branches: ["claude/**"]
-    paths: ["nabd/serie20/datos_sec.py", ".github/workflows/serie20-datos-Nabd.yml"]
+    paths: ["nabd/serie20/datos_sec.py", "nabd/serie20/sonda_tv.py", ".github/workflows/serie20-datos-Nabd.yml"]
 permissions:
   contents: write
 concurrency: datos-serie20-nabd
@@ -26,7 +26,9 @@ jobs:
       - name: Descargar de la SEC y TradingView
         env:
           SONDA: ${{ github.event_name == 'push' && '1' || '' }}
-        run: python3 nabd/serie20/datos_sec.py /tmp/datos
+        run: |
+          [ -n "$SONDA" ] && python3 nabd/serie20/sonda_tv.py || true
+          python3 nabd/serie20/datos_sec.py /tmp/datos
       - name: Guardar en la rama datos-serie20-nabd
         run: |
           # sin historial (como voz-nabd): la rama es siempre la foto más reciente, para no engordar el repo
