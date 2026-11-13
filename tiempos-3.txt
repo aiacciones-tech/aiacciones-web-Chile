@@ -1,0 +1,3 @@
+trozo 3 instalacion: 152 s
+trozo 3 cpus: 4  audio: 10.230000 s
+trozo 3 sadtalker: 1742 s
