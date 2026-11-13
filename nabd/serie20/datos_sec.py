@@ -38,6 +38,20 @@ INST = {  # conceptos de saldo (balance)
 }
 
 
+def sonda():
+    """Diagnóstico: qué responde la SEC con cada User-Agent (la SEC devuelve 403 si no le gusta el UA)."""
+    for ua in [UA["User-Agent"], "Nabd Wall Street aiacciones-bot@users.noreply.github.com", "aiacciones-tech research bot (github.com/aiacciones-tech)"]:
+        for h in ({"User-Agent": ua}, {"User-Agent": ua, "Accept-Encoding": "gzip, deflate", "Host": "data.sec.gov"}):
+            try:
+                r = urllib.request.urlopen(urllib.request.Request("https://data.sec.gov/submissions/CIK0000320193.json", headers=h), timeout=30)
+                print("SEC OK", r.status, h)
+            except urllib.error.HTTPError as e:
+                print("SEC", e.code, h, e.read()[:300])
+            except Exception as e:
+                print("SEC error", e, h)
+            time.sleep(0.5)
+
+
 def get(url, tries=4):
     for i in range(tries):
         try:
@@ -161,6 +175,7 @@ def fecha_ts(v):
 
 def main():
     out = sys.argv[1]; os.makedirs(out, exist_ok=True); hoy = dt.date.today()
+    if os.environ.get("SONDA"): sonda()
     try:
         tick = {v["ticker"]: v["cik_str"] for v in json.loads(get("https://www.sec.gov/files/company_tickers.json")).values()}
     except Exception:

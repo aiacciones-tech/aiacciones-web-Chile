@@ -24,6 +24,8 @@ jobs:
           mkdir -p /tmp/datos
           if git fetch -q --depth 1 origin datos-serie20-nabd; then git archive FETCH_HEAD | tar -x -C /tmp/datos; fi
       - name: Descargar de la SEC y TradingView
+        env:
+          SONDA: ${{ github.event_name == 'push' && '1' || '' }}
         run: python3 nabd/serie20/datos_sec.py /tmp/datos
       - name: Guardar en la rama datos-serie20-nabd
         run: |
