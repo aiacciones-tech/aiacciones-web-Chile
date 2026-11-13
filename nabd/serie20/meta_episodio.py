@@ -34,7 +34,8 @@ try:
 except Exception:
     largo_x = lambda s: len(re.sub(r"https?://\S+", "x" * 23, s))
 x = f"{I['x']}\n\n▶️ {{youtube}}\n\n#عمالقة_وول_ستريت · محتوى تعليمي وليس نصيحة استثمارية."
-assert largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 280, largo_x(x)
+# buffer.py añade el enlace al canal (PROPIOS); con él tiene que caber en 280
+assert largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX") + f"\n{CANAL}") <= 280, largo_x(x)
 open(f"{D}/post-x-{BASE}-Nabd.txt", "w").write(x)
 tg = (f"📊 {SERIE} | {VJ['ar']} ({VJ['ticker']}) · {VJ['trimestre']}\n\n{I['resumen']}\n\n" + "\n".join("• " + c for c in VJ["claves"]) +
       f"\n\n▶️ الحلقة كاملة: {{youtube}}\nقناتنا على يوتيوب: {CANAL}\n\nمحتوى تعليمي وليس نصيحة استثمارية. لا نملك مراكز في الأسهم المذكورة.")
