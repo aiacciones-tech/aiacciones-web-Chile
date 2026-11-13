@@ -1,6 +1,54 @@
 {
- "actualizado": "2026-11-12T21:05Z",
+ "actualizado": "2026-11-13T12:57Z",
  "items": [
+  {
+   "id": "a9755b2b-cd00-400d-9395-b625e2898315",
+   "tipo": "OIR",
+   "fecha": "2026-11-13 13:35",
+   "entidad": "ACCIONA, S.A.",
+   "nif": "A08001851",
+   "categoria": "Contratos de liquidez y contrapartida",
+   "titulo": "La Sociedad remite detalle de las operaciones del Contrato de Liquidez comprendidas entre el 12/08/26 y el 12/11/26, ambos inclusive",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7ba9755b2b-cd00-400d-9395-b625e2898315%7d",
+   "ticker": "ANA",
+   "temas": []
+  },
+  {
+   "id": "288bbb24-2207-4698-89bd-e6df67ea70c3",
+   "tipo": "OIR",
+   "fecha": "2026-11-13 13:34",
+   "entidad": "CORPORACION ACCIONA ENERGIAS RENOVABLES, S.A.",
+   "nif": "A85483311",
+   "categoria": "Contratos de liquidez y contrapartida",
+   "titulo": "ACCIONA Energía remite detalle de las operaciones del Contrato de Liquidez comprendidas entre el 12/08/26 y el 12/11/26, ambos inclusive",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b288bbb24-2207-4698-89bd-e6df67ea70c3%7d",
+   "ticker": "ANE",
+   "temas": []
+  },
+  {
+   "id": "7dc6b82f-648b-415b-a3ec-98e06be64fb4",
+   "tipo": "OIR",
+   "fecha": "2026-11-13 12:21",
+   "entidad": "CAIXABANK, S.A.",
+   "nif": "A08663619",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información relativa a la ejecución de su Programa de recompra de acciones propias.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b7dc6b82f-648b-415b-a3ec-98e06be64fb4%7d",
+   "ticker": "CABK",
+   "temas": []
+  },
+  {
+   "id": "4bc41343-3f28-493f-bcaf-9526d64b23b3",
+   "tipo": "OIR",
+   "fecha": "2026-11-13 07:57",
+   "entidad": "ENAGAS, S.A.",
+   "nif": "A",
+   "categoria": "Sobre operaciones corporativas",
+   "titulo": "Enagás incrementa en un 18% su participación en Teréga, hasta el 49,5% de su capital social",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b4bc41343-3f28-493f-bcaf-9526d64b23b3%7d",
+   "ticker": "ENG",
+   "temas": []
+  },
   {
    "id": "63f3c75f-a5a7-44d1-a710-fb3385920730",
    "tipo": "OIR",
