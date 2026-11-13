@@ -1,6 +1,6 @@
 {
  "trimestre": "3T 2026",
- "actualizado": "2026-11-12",
+ "actualizado": "2026-11-13",
  "empresas": [
   {
    "fecha": "2026-10-20",
@@ -277,9 +277,9 @@
    "empresa": "Acciona Energía",
    "ticker": "ANE",
    "sector": "Renovables",
-   "estado": "Estimada",
-   "nota": "3T25: 13-nov-2025.",
-   "fuente": "PcBolsa, calendario 3T25 (22-oct-2025), misma semana en 2026"
+   "estado": "Publicada",
+   "nota": "Publicó el 12-nov-2026 tras el cierre su informe de tendencias de negocio 9M: producción consolidada 18.558 GWh (+3,9%), precio capturado 57,3 €/MWh (-8,1%); mantiene un EBITDA 2026 de unos 1.200 M€.",
+   "fuente": "Acciona Energía, informe de tendencias de negocio 9M 2026 (CNMV, 12-nov-2026)"
   },
   {
    "fecha": "2026-11-12",

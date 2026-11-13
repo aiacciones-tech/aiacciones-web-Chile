@@ -1804,4 +1804,67 @@ FICHAS = [
                 '12-nov-2026), El Español y EjePrime (centros de datos, 12-nov-2026).',
      'fuentes_corto': 'Merlin Properties (CNMV), Bolsamania, El Español y EjePrime',
      'elaborado': '12-nov-2026, 23:30'},
+    {'id': 'acciona-energia',
+     'nombre': 'Acciona Energía',
+     'ticker': 'ANE',
+     'sector': 'Energía renovable',
+     'lede': 'Corporación Acciona Energías Renovables, filial cotizada de renovables del grupo Acciona (su matriz y accionista de control). Produce y '
+             'vende electricidad eólica, solar, hidráulica y de otras tecnologías en España y en más de veinte países, y rota activos para financiar su '
+             'crecimiento.',
+     'periodo': '3T 2026',
+     'periodo_largo': 'informe de tendencias de negocio de enero-septiembre de 2026 (9M 2026)',
+     'titular': 'Informe de tendencias de negocio (una actualización, no unas cuentas: no trae ingresos, EBITDA, beneficio ni deuda neta de los nueve '
+                'meses). La producción consolidada sube un 3,9%, hasta 18.558 GWh, pero el precio medio capturado baja un 8,1%, a 57,3 €/MWh. Mantiene '
+                'un EBITDA 2026 de ~1.200 M€, recorta la inversión neta ordinaria a 700-750 M€ y no alcanzará este año su objetivo de venta de activos '
+                'de ~2.000 M€; su matriz le presta 500 M€ perpetuos al 7,7%.',
+     'precio': '20,56 €',
+     'precio_fecha': '13-nov-2026 (intradía, 10:43)',
+     'multiplos': [('EV/EBITDA guía 2026', '~9,3x'),
+                   ('PER 12 meses', '~36,7x'),
+                   ('Precio / valor contable', '~1,01x'),
+                   ('Rentab. dividendo', '0,15%'),
+                   ('Capitalización', '~6.673 M€')],
+     'multiplos_nota': 'Calculados con 20,56 € (13-nov-2026, 10:43, precio intradía de pcbolsa; -5,5% frente al cierre del 12-nov, 21,76 €) y 324,55 M '
+                       'de acciones. EV = capitalización + deuda financiera neta a 30-jun-2026 (4.442 M€), entre la guía de EBITDA 2026 (~1.200 M€); con '
+                       'la definición de stockanalysis.com (incluye arrendamientos y minoritarios) sería ~10,0x. PER con el beneficio neto atribuible de '
+                       '12 meses: 655 - 455 - 18 = 182 M€ (calculado). Rentabilidad con el dividendo pagado el 18-jun-2026 (0,03 €). Precio / valor '
+                       'contable: dato de stockanalysis.com (25-sep-2026) reescalado al precio. A cierre de 2023, 2024 y 2025 (stockanalysis.com) el '
+                       'EV/EBITDA era 10,3x, 10,5x y 8,5x; el PER 17,6x, 16,2x y 11,1x; el precio / valor contable 1,48x, 0,93x y 1,18x, y la '
+                       'rentabilidad por dividendo 1,80%, 2,52% y 0,13%.',
+     'tabla_titulo': 'Cifras del informe de tendencias 9M 2026 y comparación',
+     'tabla': [('Producción total 9M (GWh)', '20.746', '+2,6%'),
+               ('Producción consolidada 9M (GWh)', '18.558', '+3,9%'),
+               ('Precio medio capturado 9M (€/MWh)', '57,3', '-8,1% (62,3 en 9M25)'),
+               ('Precio capturado España 9M (€/MWh)', '64,1', '-19,8% (79,9 en 9M25)'),
+               ('Capacidad instalada sep-26 (MW)', '14.492', '-667 MW en 12 meses'),
+               ('En construcción sep-26 (MW)', '545', '763 en jun-26'),
+               ('Guía EBITDA 2026 (M€)', '~1.200', 'se mantiene; 2025: 1.546'),
+               ('Inversión neta ordinaria 2026 (M€)', '700-750', 'antes ~900')],
+     'kpi': 'Producción consolidada: internacional +11,7%, España -10,9% (venta de activos eólicos e hidráulicos); 3T26 ~6.023 GWh (calculado). Precio: '
+            '54,8 €/MWh en el 1S26, mejora en el 3T; internacional 54,4 €/MWh (53,1); en España, coberturas -9,3 €/MWh. Capacidad consolidada 12.920 MW; '
+            '463 MW nuevos en 9M (objetivo 2026: ~700 MW); más de 1 GW en construcción previsto a fin de año. Aprobados en el 3T: fotovoltaica Madison '
+            '(EE. UU.) de 125 MWp y tres baterías en R. Dominicana (21,2 MW / 41,7 MWh). Préstamo de Acciona: 500 M€ perpetuo y subordinado, 7,70% '
+            'durante cinco años y después referencia + 4,33%, intereses diferibles; se espera registrar como patrimonio. Deuda neta 30-jun-26: 4.442 M€ '
+            '(4.161 en dic-25; el informe no la da a septiembre).',
+     'guia': 'Guía 2026: EBITDA ~1.200 M€ (1.546 M€ en 2025, con plusvalías por rotación; 1S26: 388 M€, el 2S implícito sería ~812 M€, calculado); '
+             'producción consolidada ~25,5 TWh (antes ~26 TWh); precio capturado 55-60 €/MWh; inversión neta ordinaria 700-750 M€ (antes ~900 M€). '
+             'Rotación de activos: no alcanzará ~2.000 M€ en 2026 (retraso de la operación con MIP en México; Sudáfrica, cierre previsto en el 4T). '
+             'Deuda neta a fin de 2026: 3.250-3.500 M€ según El Español (guía anterior: menos de 3.000 M€). El informe no anuncia dividendo; con cargo a '
+             '2025 pagó 0,03 € brutos el 18-jun-2026 (ex-dividendo 16-jun).',
+     'positivos': ['Producción consolidada +3,9%, con el negocio internacional +11,7%.',
+                   'El precio capturado repunta en el 3T (57,3 €/MWh frente a 54,8 en el 1S) y mantiene un EBITDA 2026 de ~1.200 M€.',
+                   'Préstamo de 500 M€ de la matriz que no computa como deuda; más de 1 GW en construcción previsto a fin de año.'],
+     'riesgos': ['La venta de activos no llegará a los ~2.000 M€ previstos en 2026 (MIP sin cerrar).',
+                 'Deuda neta prevista a fin de año por encima de 3.000 M€ (según El Español) y préstamo de la matriz al 7,7%.',
+                 'Precio en España -19,8% frente a hace un año y producción 2026 rebajada a ~25,5 TWh.'],
+     'videos': [('Pk0xl9x-UuQ', 'Acciona Energía 3T 2026: produce +3,9%, cobra -8,1% | Informe de tendencias de negocio'),
+                ('iO_0fO_K8h8', 'Acciona Energía 3T 2026 en 60 segundos (Short)')],
+     'proximo': '2027-02-26',
+     'proximo_estimado': True,
+     'fuentes': 'Acciona Energía, Informe de Tendencias de Negocio 9M 2026 (CNMV, 12-nov-2026), según Energías Renovables (13-nov-2026) y El Español '
+                '(12-nov-2026); préstamo de Acciona: Europa Press (Diario Siglo XXI) y Demócrata (12-nov-2026); Acciona Energía, informes de resultados '
+                '1S26 y de tendencias 9M 2025 (acciona-energia.com); resultados 2025 (Quartr, Merca2); pcbolsa y PressDigital (precio, 13-nov-2026); '
+                'stockanalysis.com (múltiplos actuales e históricos).',
+     'fuentes_corto': 'Acciona Energía (CNMV), Energías Renovables, El Español, Europa Press, pcbolsa y stockanalysis.com',
+     'elaborado': '13-nov-2026, 11:30'},
 ]
