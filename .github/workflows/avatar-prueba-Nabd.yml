@@ -4,7 +4,7 @@ name: Prueba avatar (Nabd)
 on:
   push:
     branches: ["claude/project-thread-9tfxe4"]
-    paths: ["nabd/avatar/**", ".github/workflows/avatar-prueba-Nabd.yml"]
+    paths: ["nabd/avatar/gen_presentador.py"]
 permissions:
   contents: write
 concurrency: avatar-nabd
