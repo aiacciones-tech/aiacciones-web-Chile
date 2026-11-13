@@ -7,34 +7,33 @@ Reglas de Daniel: **máximo 4 minutos** por vídeo; **máximo 3 vídeos de la se
 El vídeo diario (nabd/diario/, 8-10 min) es otra cosa y no cambia.
 
 ## Piezas
-- `datos_sec.py` + `.github/workflows/serie20-datos-Nabd.yml` (11:00 y 23:30 UTC, o a mano): rama `datos-serie20-nabd` con `calendario.json`
-  (último evento de resultados de cada empresa en la SEC y próximas fechas de TradingView) y `<TICKER>/sec.json` (series trimestrales XBRL,
-  balance, capitalización) y `<TICKER>/comunicado-<fecha>.txt` (texto del EX-99.1 del 8-K, con su URL en la primera línea).
-- `plan.py <datos> <cola-nabd>`: los episodios de hoy (0-3) y los pendientes.
+- `datos_tv.py` + `.github/workflows/serie20-datos-Nabd.yml` (11:00 y 23:30 UTC, o a mano): rama `datos-serie20-nabd` con `calendario.json`
+  (fecha del último informe de cada empresa, su trimestre fiscal, `datos_listos` y la próxima fecha) y `<TICKER>/datos.json` (cifras del
+  trimestre, 12 trimestres de historial, balance, flujo de caja, estimaciones y sorpresa de los analistas). Fuente: TradingView. La SEC
+  (EDGAR) bloquea las descargas automáticas desde GitHub Actions y WebFetch (403 / robots), así que no se usa.
+- `plan.py <datos> <cola-nabd>`: los episodios de hoy (0-3) y los pendientes. Solo cuenta informes con `datos_listos`.
 - `make_episodio.py <carpeta> [preview]`: 7 escenas, 1920x1080, voz Azure con `VOZ_DIR` (Piper si falta), control de calidad, 120-240 s.
+  Todas las cifras de pantalla salen solas de `datos.json`; `video.json` solo pone textos, locución y la guía de la empresa.
 - `meta_episodio.py <carpeta>`: meta de YouTube, post de Telegram y de X, miniatura. Sin Short.
 - `encolar.sh <carpeta>`: cola-nabd/serie20-<ticker>-<fecha>/ en youtube-cola; youtube-Nabd.yml sube, telegram-Nabd.yml y buffer-Nabd.yml (X) publican.
-- Ejemplo de `video.json`: `episodios/ejemplo/video.json`.
+- Ejemplos de `video.json`: `episodios/serie20-jpm-2026-10-13/` (banco: `"sector_tipo": "banco"`), `serie20-jnj-2026-10-13/`, `serie20-nflx-2026-10-20/`.
 
 ## Pasos de cada día
-1. Lanza `serie20-datos-Nabd.yml` (workflow_dispatch en main) y espera a que termine (2-5 min); clona la rama `datos-serie20-nabd` (--depth 1).
+1. Lanza `serie20-datos-Nabd.yml` (workflow_dispatch en main) y espera a que termine (1-2 min); clona la rama `datos-serie20-nabd` (--depth 1).
 2. Clona `cola-nabd/` de `youtube-cola` (no hagas `git fetch` de toda la rama, es enorme): `git clone -q --depth 1 --filter=blob:none --sparse -b youtube-cola
    https://github.com/aiacciones-tech/aiacciones-web-Chile.git <scratch>/cola && cd <scratch>/cola && git sparse-checkout set cola-nabd`.
    `python3 nabd/serie20/plan.py <datos> <scratch>/cola/cola-nabd`. Si "hoy" está vacío, termina con un resumen de una línea (pendientes y próximos).
-3. Por cada episodio de hoy: carpeta `nabd/serie20/episodios/<carpeta>/` (p. ej. `serie20-nvda-2026-11-19`); copia ahí `<datos>/<TICKER>/sec.json`.
-   Lee el comunicado (`comunicado-<fecha>.txt`) y `sec.json`. Busca en la prensa del día de resultados o posterior (Reuters, CNBC, Yahoo Finance,
-   AP, MarketWatch, la web de relación con inversores) las expectativas de los analistas (consenso LSEG/FactSet de ingresos y BPA) y la guía de la
-   empresa. Escribe `video.json` como en el ejemplo:
-   - `kpis` (3-4): cifras del comunicado del trimestre (ingresos, beneficio neto o BPA diluido, margen, dato propio del negocio) con su variación
-     interanual (محسوب si la calculas tú). `fuente_kpis` dice de dónde sale cada una.
-   - `trimestres_nuevos`: si el trimestre recién publicado aún no está en `sec.json` (el 10-Q suele llegar días después del 8-K), añádelo con
-     `fin` (fecha de cierre del trimestre), `ingresos`, `beneficio_neto` (en dólares, sin redondear) y `fuente` (URL del comunicado). Nada más.
-     `balance_nuevo` igual, solo si el comunicado trae el balance y es más reciente que el de `sec.json`.
-   - `expectativas.items` (2-4 filas): frente al consenso (con el nombre del medio y la fecha) y la guía de la empresa. Si no encuentras una fuente
-     publicada, dilo («لم نجد تقديرًا منشورًا للمحللين») en vez de inventar.
-   - `voz`: 7 locuciones en árabe estándar, números en palabras, **330-400 palabras en total** (Azure ~110 palabras/min: 3:00-3:40).
-     La locución repite las cifras de pantalla; los ratios de deuda/caja frente a la capitalización salen en pantalla calculados: no los inventes.
-   - `info` (título ≤ 100 caracteres, resumen, fuentes, hashtags, texto de X ≤ 200 caracteres), `claves` (3), `miniatura`.
+3. Por cada episodio de hoy: carpeta `nabd/serie20/episodios/<carpeta>/` (p. ej. `serie20-nvda-2026-11-17`); copia ahí `<datos>/<TICKER>/datos.json`.
+   Lee `datos.json` (sobre todo `ultimo` y `trimestres`). Busca en la prensa del día de resultados (WebSearch y el agente web-fetch: nota de
+   prensa de la empresa en su web de inversores, Reuters, CNBC, AP, Yahoo Finance) qué explicó los números (segmentos, cargos extraordinarios)
+   y la guía de la empresa para el próximo trimestre o el año. Escribe `video.json` como los ejemplos:
+   - `voz`: 7 locuciones en árabe estándar, números en palabras, **330-400 palabras en total** (Azure ~110 palabras/min: 3:00-3:40). Las cifras
+     que se dicen son las de pantalla (`datos.json`, redondeadas igual); lo que venga de la prensa se atribuye («حسب بيان الشركة»…).
+     Si la prensa y TradingView difieren, se dice la de TradingView en pantalla y se aclara.
+   - `expectativas.items` (0-2 filas extra, `[título, texto]`): guía de la empresa u otro dato de prensa, con `expectativas.fuente` (medio y fecha).
+     Las filas de estimaciones y sorpresa las pone `make_episodio.py` desde `datos.json`. Si no encuentras fuente, no añadas filas.
+   - `info` (título ≤ 100 caracteres, resumen, fuentes, hashtags, `x` ≤ 200 caracteres, tags), `claves` (3), `miniatura` (cifra en dígitos
+     latinos y $, p. ej. "$15.2B"), `titular`, `sector`, `trimestre` ("الربع الثالث 2026", según el periodo fiscal de `datos.json`).
    Hechos, opiniones y escenarios separados. Nada de comprar/vender, precio objetivo ni «barata/cara». Las ratios no son juicio de halal/haram.
 4. Voz: sube los `video.json` a la rama `claude/nabd-serie20-<fecha de hoy>` (desde main) y lanza `voz-Nabd.yml` en esa rama con
    modo=generar y fecha=`nabd/serie20/episodios/<carpeta1>,nabd/serie20/episodios/<carpeta2>,...` (una sola ejecución para todos: la rama
@@ -44,5 +43,5 @@ El vídeo diario (nabd/diario/, 8-10 min) es otra cosa y no cambia.
    Si el control de calidad o la duración fallan, corrige la causa (acorta la locución y vuelve a generar la voz); no lo saltes.
 6. `SCRATCH=<scratch> bash nabd/serie20/encolar.sh <carpeta>` (uno detrás de otro). Espera el enlace de YouTube.
 7. Copia el mp4, la miniatura, el meta y el guion a `/mnt/project-files/nabd-serie-20/<carpeta>/`. Commit de `video.json` (no del mp4 ni de
-   sec.json) en la rama del día y abre PR.
+   datos.json) en la rama del día y abre PR.
 8. Resumen corto en español: enlaces de YouTube, duración, voz, qué queda pendiente para los próximos días y cualquier fallo.
