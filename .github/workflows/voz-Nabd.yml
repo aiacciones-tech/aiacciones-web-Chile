@@ -40,9 +40,12 @@ jobs:
           F="${{ inputs.fecha }}"
           if [ -z "$F" ]; then F=$(ls -d nabd/diario/20??-??-?? | sort | tail -1 | xargs basename); fi
           echo "fecha $F"
-          # fecha también puede ser otra carpeta del repo con video.json (p. ej. nabd/serie20/intro, vídeos especiales)
-          D=nabd/diario/$F; [ -f "$F/video.json" ] && D=$F; F=$(basename "$F")
-          python3 nabd/diario/voz_azure.py $D/video.json /tmp/voz/$F
+          # fecha también puede ser una o varias carpetas del repo con video.json, separadas por comas
+          # (p. ej. nabd/serie20/intro o los episodios del día de la serie 20 acciones); cada una sale en <rama voz-nabd>/<nombre de la carpeta>
+          for X in ${F//,/ }; do
+            D=nabd/diario/$X; [ -f "$X/video.json" ] && D=$X
+            python3 nabd/diario/voz_azure.py $D/video.json /tmp/voz/$(basename "$X")
+          done
           cd /tmp/voz && git init -q -b voz-nabd && git add .
           git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Voz Azure del video diario Nabd $F"
           git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
