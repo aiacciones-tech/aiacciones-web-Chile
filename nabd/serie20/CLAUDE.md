@@ -6,6 +6,12 @@ Reglas de Daniel: **máximo 4 minutos** por vídeo; **máximo 3 vídeos de la se
 `plan.py` lo reparte); sin pasos manuales; todo lo que se entrega termina en `-Nabd`. Presentación de la serie: https://www.youtube.com/watch?v=hU3GozeSL_U
 El vídeo diario (nabd/diario/, 8-10 min) es otra cosa y no cambia.
 
+**Dos ejecuciones al día** (Daniel, 14-nov-2026), cada una en una sesión nueva con este mismo procedimiento: 12:23 UTC (15:23 Riad) y
+22:53 UTC (01:53 Riad, ~1,5 h después de los resultados que salen tras el cierre de Nueva York, para publicarlos esa misma noche).
+El tope de 3 vídeos cuenta por día de Riad (`encolado.txt`): la de las 22:53 UTC ya es el día siguiente en Riad y comparte el cupo con
+la de las 12:23 UTC de ese día. Las dos leen cola-nabd/, así que un episodio ya encolado no se repite. Si TradingView aún no tiene las
+cifras del trimestre (`datos_listos` falso), ese episodio sale en la siguiente ejecución.
+
 ## Piezas
 - `datos_tv.py` + `.github/workflows/serie20-datos-Nabd.yml` (11:00 y 23:30 UTC, o a mano): rama `datos-serie20-nabd` con `calendario.json`
   (fecha del último informe de cada empresa, su trimestre fiscal, `datos_listos` y la próxima fecha) y `<TICKER>/datos.json` (cifras del
@@ -37,7 +43,8 @@ El vídeo diario (nabd/diario/, 8-10 min) es otra cosa y no cambia.
    Hechos, opiniones y escenarios separados. Nada de comprar/vender, precio objetivo ni «barata/cara». Las ratios no son juicio de halal/haram.
 4. Voz: sube los `video.json` a la rama `claude/nabd-serie20-<fecha de hoy>` (desde main) y lanza `voz-Nabd.yml` en esa rama con
    modo=generar y fecha=`nabd/serie20/episodios/<carpeta1>,nabd/serie20/episodios/<carpeta2>,...` (una sola ejecución para todos: la rama
-   `voz-nabd` se reescribe en cada ejecución). Espera (2-4 min) y clona `voz-nabd`: `VOZ_DIR=<clon>/<carpeta>`. Si falla, sigue con Piper y dilo.
+   `voz-nabd` se reescribe en cada ejecución). Espera (2-4 min) y clona `voz-nabd`: `VOZ_DIR=<clon>/<carpeta>`. La rama la reescribe cada ejecución (también la del vídeo diario,
+   que corre desde las 21:47 UTC): si al clonarla faltan tus carpetas, vuelve a lanzar `voz-Nabd.yml` y clónala en cuanto termine. Si falla, sigue con Piper y dilo.
 5. `AUD=<scratch> python3 nabd/serie20/make_episodio.py <carpeta> preview` y mira TODOS los PNG (textos cortados, solapes, cifras que no
    cuadren con la locución); luego sin preview con `VOZ_DIR`; después `python3 nabd/serie20/meta_episodio.py <carpeta>`.
    Si el control de calidad o la duración fallan, corrige la causa (acorta la locución y vuelve a generar la voz); no lo saltes.
