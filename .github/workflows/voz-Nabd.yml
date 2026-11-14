@@ -53,7 +53,7 @@ jobs:
             python3 nabd/diario/voz_azure.py $D/video.json /tmp/voz/$(basename "$X")
             # Presentador IA (HeyGen) en la apertura del diario, martes y jueves (prueba de un mes, 14-nov-2026). Opcional: nunca para la voz.
             if [[ "$X" =~ ^20[0-9]{2}-[0-9]{2}-[0-9]{2}$ ]] && [ "${{ inputs.avatar }}" != "no" ] && [ -n "$HEYGEN_API_KEY" ]; then
-              pip install -q numpy matplotlib pillow arabic-reshaper python-bidi || true
+              pip install -q numpy matplotlib pillow arabic-reshaper python-bidi imageio-ffmpeg || true
               [ "${{ inputs.avatar }}" = "si" ] && export AVATAR_DIAS=0,1,2,3,4,5,6
               timeout 1800 python3 nabd/diario/avatar_heygen.py $D/video.json /tmp/voz/$X $X || true
             fi

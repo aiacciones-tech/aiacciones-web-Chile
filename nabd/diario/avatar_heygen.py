@@ -67,9 +67,13 @@ def main():
         if d.get("status") == "completed":
             raw = os.path.join(out, "avatar-raw.mp4"); urllib.request.urlretrieve(d["video_url"], raw)
             # más ligero para la rama voz-nabd: 720x720, sin audio (make_video.py usa la voz Azure original)
-            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-an", "-vf", "scale=720:720", "-c:v", "libx264", "-crf", "20", "-preset", "medium",
-                            "-pix_fmt", "yuv420p", os.path.join(out, "avatar.mp4")], check=True)
-            os.remove(raw)
+            try:  # los runners ya no traen ffmpeg: el de imageio-ffmpeg
+                import imageio_ffmpeg
+                subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-v", "error", "-y", "-i", raw, "-an", "-vf", "scale=720:720", "-c:v", "libx264", "-crf", "20",
+                                "-preset", "medium", "-pix_fmt", "yuv420p", os.path.join(out, "avatar.mp4")], check=True)
+                os.remove(raw)
+            except Exception as e:  # ya está pagado: mejor el original pesado que nada
+                print("avatar: sin recomprimir", repr(e)[:200]); os.replace(raw, os.path.join(out, "avatar.mp4"))
             info.update(ok=True, video_id=vid, segundos_generacion=round(time.time() - t0), duracion_video=d.get("duration"))
             info["saldo_despues"] = saldo()[0]
             return fin("listo")
