@@ -58,7 +58,9 @@ def main():
     if not ia or not aa: return fin("no se pudieron subir la foto o el audio")
     t0 = time.time()
     c = api("POST", "/v3/videos", {"type": "image", "image": {"type": "asset_id", "asset_id": ia}, "audio_asset_id": aa,
-                                    "aspect_ratio": "1:1", "resolution": "1080p", "expressiveness": "medium", "title": f"Nabd apertura {fecha}"})
+                                    "aspect_ratio": "1:1", "resolution": "1080p", "expressiveness": "medium",
+                                    "motion_prompt": "calm professional TV news anchor talking to the camera, subtle head movement, hands resting still, no objects in hands",
+                                    "title": f"Nabd apertura {fecha}"})
     vid = (c.get("data") or {}).get("video_id")
     if not vid: return fin(f"HeyGen rechazó el vídeo: {json.dumps(c.get('error') or c, ensure_ascii=False)[:300]}")
     while time.time() - t0 < 1500:
