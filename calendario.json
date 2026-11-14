@@ -1,0 +1,257 @@
+{
+ "generado": "2026-11-14T16:51:36+00:00",
+ "inicio": "2026-10-01",
+ "fuente": "TradingView",
+ "empresas": [
+  {
+   "ticker": "NVDA",
+   "simbolo": "NASDAQ:NVDA",
+   "cap": 3924685147094.9995,
+   "evento": null,
+   "proxima": "2026-11-17T21:00+00:00",
+   "proxima_ny": "2026-11-17"
+  },
+  {
+   "ticker": "MSFT",
+   "simbolo": "NASDAQ:MSFT",
+   "cap": 3890434724972,
+   "evento": {
+    "fecha": "2026-10-28",
+    "hora_utc": "2026-10-28T20:08+00:00",
+    "periodo": "2027-Q1",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-01-26T12:00+00:00",
+   "proxima_ny": "2027-01-26"
+  },
+  {
+   "ticker": "AAPL",
+   "simbolo": "NASDAQ:AAPL",
+   "cap": 5177380193450,
+   "evento": {
+    "fecha": "2026-11-02",
+    "hora_utc": "2026-11-02T21:30+00:00",
+    "periodo": "2026-Q4",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-02-04T12:00+00:00",
+   "proxima_ny": "2027-02-04"
+  },
+  {
+   "ticker": "GOOGL",
+   "simbolo": "NASDAQ:GOOGL",
+   "cap": 3597233825714,
+   "evento": {
+    "fecha": "2026-10-28",
+    "hora_utc": "2026-10-28T21:10+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-02-02T12:00+00:00",
+   "proxima_ny": "2027-02-02"
+  },
+  {
+   "ticker": "AMZN",
+   "simbolo": "NASDAQ:AMZN",
+   "cap": 2883431337431.0005,
+   "evento": {
+    "fecha": "2026-10-29",
+    "hora_utc": "2026-10-29T20:03+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-02-04T12:00+00:00",
+   "proxima_ny": "2027-02-04"
+  },
+  {
+   "ticker": "META",
+   "simbolo": "NASDAQ:META",
+   "cap": 1640314328162.0002,
+   "evento": {
+    "fecha": "2026-10-21",
+    "hora_utc": "2026-10-21T20:03+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-02-03T12:00+00:00",
+   "proxima_ny": "2027-02-03"
+  },
+  {
+   "ticker": "AVGO",
+   "simbolo": "NASDAQ:AVGO",
+   "cap": 1656497352252,
+   "evento": null,
+   "proxima": "2026-12-09T21:15+00:00",
+   "proxima_ny": "2026-12-09"
+  },
+  {
+   "ticker": "TSLA",
+   "simbolo": "NASDAQ:TSLA",
+   "cap": 1542445253687,
+   "evento": {
+    "fecha": "2026-10-21",
+    "hora_utc": "2026-10-21T20:06+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-02-03T12:00+00:00",
+   "proxima_ny": "2027-02-03"
+  },
+  {
+   "ticker": "BRK",
+   "simbolo": "NYSE:BRK.A",
+   "cap": 1259897167577.284,
+   "evento": {
+    "fecha": "2026-11-07",
+    "hora_utc": "2026-11-07T05:00+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-02-22T12:00+00:00",
+   "proxima_ny": "2027-02-22"
+  },
+  {
+   "ticker": "JPM",
+   "simbolo": "NYSE:JPM",
+   "cap": 919345500534,
+   "evento": {
+    "fecha": "2026-10-13",
+    "hora_utc": "2026-10-13T10:47+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-01-14T11:45+00:00",
+   "proxima_ny": "2027-01-14"
+  },
+  {
+   "ticker": "LLY",
+   "simbolo": "NYSE:LLY",
+   "cap": 1357965400452,
+   "evento": {
+    "fecha": "2026-10-29",
+    "hora_utc": "2026-10-29T10:45+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-02-10T12:00+00:00",
+   "proxima_ny": "2027-02-10"
+  },
+  {
+   "ticker": "WMT",
+   "simbolo": "NASDAQ:WMT",
+   "cap": 1016233508094,
+   "evento": null,
+   "proxima": "2026-11-19T12:00+00:00",
+   "proxima_ny": "2026-11-19"
+  },
+  {
+   "ticker": "ORCL",
+   "simbolo": "NYSE:ORCL",
+   "cap": 379025313513.99994,
+   "evento": null,
+   "proxima": "2026-12-14T12:00+00:00",
+   "proxima_ny": "2026-12-14"
+  },
+  {
+   "ticker": "V",
+   "simbolo": "NYSE:V",
+   "cap": 789523953153.9999,
+   "evento": {
+    "fecha": "2026-10-27",
+    "hora_utc": "2026-10-27T20:12+00:00",
+    "periodo": "2026-Q4",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-01-28T12:00+00:00",
+   "proxima_ny": "2027-01-28"
+  },
+  {
+   "ticker": "MA",
+   "simbolo": "NYSE:MA",
+   "cap": 576012933961.9999,
+   "evento": {
+    "fecha": "2026-10-29",
+    "hora_utc": "2026-10-29T12:01+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-01-28T12:00+00:00",
+   "proxima_ny": "2027-01-28"
+  },
+  {
+   "ticker": "XOM",
+   "simbolo": "NYSE:XOM",
+   "cap": 695874536343.0001,
+   "evento": {
+    "fecha": "2026-10-30",
+    "hora_utc": "2026-10-30T10:30+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-02-02T12:00+00:00",
+   "proxima_ny": "2027-02-02"
+  },
+  {
+   "ticker": "NFLX",
+   "simbolo": "NASDAQ:NFLX",
+   "cap": 255208177848,
+   "evento": {
+    "fecha": "2026-10-20",
+    "hora_utc": "2026-10-20T20:09+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-01-26T12:00+00:00",
+   "proxima_ny": "2027-01-26"
+  },
+  {
+   "ticker": "COST",
+   "simbolo": "NASDAQ:COST",
+   "cap": 490194082697.00006,
+   "evento": null,
+   "proxima": "2026-12-10T21:15+00:00",
+   "proxima_ny": "2026-12-10"
+  },
+  {
+   "ticker": "JNJ",
+   "simbolo": "NYSE:JNJ",
+   "cap": 687888919006.0001,
+   "evento": {
+    "fecha": "2026-10-13",
+    "hora_utc": "2026-10-13T10:20+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-01-26T14:30+00:00",
+   "proxima_ny": "2027-01-26"
+  },
+  {
+   "ticker": "PLTR",
+   "simbolo": "NASDAQ:PLTR",
+   "cap": 404771468402.99994,
+   "evento": {
+    "fecha": "2026-11-02",
+    "hora_utc": "2026-11-02T21:08+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-02-17T12:00+00:00",
+   "proxima_ny": "2027-02-17"
+  }
+ ]
+}
