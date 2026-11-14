@@ -1,0 +1,29 @@
+# Prueba temporal de los secretos AZURE_SPEECH_KEY_GE / AZURE_SPEECH_REGION_GE del canal alemán.
+# Se ejecuta solo al hacer push a esta rama; sintetiza una frase alemana y comprueba que Azure devuelve audio.
+# No imprime la clave. Esta rama se borra cuando exista voz-<Cod>.yml.
+name: verificar-azure-GE
+on:
+  push:
+    branches: [claude/ge-verificar-azure]
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Frase de prueba con de-DE-ConradNeural
+        env:
+          KEY: ${{ secrets.AZURE_SPEECH_KEY_GE }}
+          REGION: ${{ secrets.AZURE_SPEECH_REGION_GE }}
+        run: |
+          [ -n "$KEY" ] || { echo "::error::Falta el secreto AZURE_SPEECH_KEY_GE"; exit 1; }
+          [ -n "$REGION" ] || { echo "::error::Falta el secreto AZURE_SPEECH_REGION_GE"; exit 1; }
+          echo "Región: $REGION"
+          SSML='<speak version="1.0" xml:lang="de-DE"><voice name="de-DE-ConradNeural">Der S&amp;P 500 schloss mit einem Plus von 0,8 Prozent.</voice></speak>'
+          code=$(curl -s -o prueba.wav -w '%{http_code}' -X POST "https://${REGION}.tts.speech.microsoft.com/cognitiveservices/v1" \
+            -H "Ocp-Apim-Subscription-Key: $KEY" -H "Content-Type: application/ssml+xml" \
+            -H "X-Microsoft-OutputFormat: riff-24khz-16bit-mono-pcm" -H "User-Agent: verificar-azure-GE" --data "$SSML")
+          bytes=$(stat -c %s prueba.wav)
+          echo "HTTP $code, $bytes bytes"
+          [ "$code" = "200" ] && [ "$bytes" -gt 10000 ] || { echo "::error::Azure no devolvió audio (HTTP $code)"; exit 1; }
+          echo "OK: la clave y la región funcionan"
+      - uses: actions/upload-artifact@v4
+        with: {name: prueba-azure-GE, path: prueba.wav}
