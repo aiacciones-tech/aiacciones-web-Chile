@@ -1,0 +1,7 @@
+saldo antes: {"billing_type":"wallet","wallet":{"auto_reload":{"enabled":false},"currency":"usd","remaining_balance":15.0},"subscription":null,"usage_based":null}
+subida imagen: {"error":null,"asset_id":"2bf4d29b1d20462e939f97cf91adb81e"}
+subida audio: {"error":null,"asset_id":"bb99f5d1a83a47cebecadb79524c4f16"}
+crear: {"data":{"output_format":"mp4","resolution":"1080p","resolution_note":null,"status":"waiting","video_id":"9e60a77f5bc09ea2a3e76d0064f69d7c"}}
+tiempo de generacion HeyGen: 113 s (audio 31.5 s)
+duracion devuelta: 31.52
+saldo despues: {"billing_type":"wallet","wallet":{"auto_reload":{"enabled":false},"currency":"usd","remaining_balance":13.8},"subscription":null,"usage_based":null}
