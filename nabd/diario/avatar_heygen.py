@@ -82,3 +82,7 @@ if __name__ == "__main__":
         main()
     except Exception as e:  # el avatar es opcional: nunca debe parar la voz del día
         print("avatar: error", repr(e)[:300])
+        try:
+            json.dump({"ok": False, "motivo": "error: " + repr(e)[:300].replace(os.environ.get("HEYGEN_API_KEY") or "\0", "***")},
+                      open(os.path.join(sys.argv[2], "avatar.json"), "w"), ensure_ascii=False)
+        except Exception: pass
