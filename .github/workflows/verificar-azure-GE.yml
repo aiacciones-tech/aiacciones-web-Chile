@@ -16,7 +16,14 @@ jobs:
         run: |
           [ -n "$KEY" ] || { echo "::error::Falta el secreto AZURE_SPEECH_KEY_GE"; exit 1; }
           [ -n "$REGION" ] || { echo "::error::Falta el secreto AZURE_SPEECH_REGION_GE"; exit 1; }
-          echo "Región: $REGION"
+          # Diagnóstico sin mostrar el valor (GitHub lo enmascara): forma del texto guardado
+          echo "Región: longitud ${#REGION}; espacios: $([[ "$REGION" == *" "* ]] && echo sí || echo no); mayúsculas: $([[ "$REGION" =~ [A-Z] ]] && echo sí || echo no); parece URL: $([[ "$REGION" == *"://"* ]] && echo sí || echo no); salto de línea: $([[ "$REGION" == *$'\n'* ]] && echo sí || echo no)"
+          # Normaliza: «North Europe» -> northeurope; una URL de endpoint -> su región
+          R=$(printf '%s' "$REGION" | tr -d ' \r\n\t' | tr 'A-Z' 'a-z' | sed -E 's#^https?://##; s#\..*$##')
+          KEY=$(printf '%s' "$KEY" | tr -d ' \r\n\t')
+          echo "Longitud de la clave: ${#KEY} (debe ser 32 u 84)"
+          for r in northeurope westeurope germanywestcentral swedencentral eastus westus2; do [ "$R" = "$r" ] && echo "Región normalizada reconocida: $r"; done
+          REGION=$R
           SSML='<speak version="1.0" xml:lang="de-DE"><voice name="de-DE-ConradNeural">Der S&amp;P 500 schloss mit einem Plus von 0,8 Prozent.</voice></speak>'
           code=$(curl -s -o prueba.wav -w '%{http_code}' -X POST "https://${REGION}.tts.speech.microsoft.com/cognitiveservices/v1" \
             -H "Ocp-Apim-Subscription-Key: $KEY" -H "Content-Type: application/ssml+xml" \
