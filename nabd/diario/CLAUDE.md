@@ -5,6 +5,11 @@ de la tarea programada allí donde difieran: ya **no** valen "~230 palabras", "m
 ni `ejemplo-2026-11-06/` como plantilla (esa carpeta solo redirige aquí; la plantilla es `ejemplo-2026-11-09/`).
 `make_video.py` rechaza vídeos de menos de 450 s o más de 630 s. Daniel lo aprobó en el hilo del vídeo largo (10-nov-2026).
 
+**Martes y jueves (desde el 17-nov-2026, prueba de un mes):** voz-Nabd.yml añade un presentador IA de HeyGen a la apertura (ver README,
+"Presentador IA"). Espera a que el workflow de la voz termine (unos 3 min más esos días) antes de descargar `voz-nabd`; `make_video.py` lo usa
+solo e imprime `avatar: sí/no`. No cambies la locución de `s_title` después de generar la voz (el avatar se descartaría). Di en el resumen
+si el vídeo salió con presentador y, si no, el motivo de `voz-nabd/<fecha>/avatar.json`.
+
 > Prepara y publica el vídeo diario en árabe de Wall Street del canal Nabd Wall Street (نبض وول ستريت, id UCRU3n034y5dJBEGnhAKjhfQ): el programa «التقرير اليومي», de 8 a 10 minutos, según el manual de producción de Daniel (10-nov-2026). Daniel aprobó (9-nov-2026) publicarlo automáticamente y en público cada día de sesión, sin revisión previa. No quiere ningún paso manual.
 >
 > Repo: aiacciones-tech/aiacciones-web-Chile. Usa nabd/diario/ de main. Sigue nabd/diario/README.md al pie de la letra ("Guion", "Voz", "Pasos de cada día" y "Reglas"). Solo toca nabd/, sus workflows y cola-nabd/.

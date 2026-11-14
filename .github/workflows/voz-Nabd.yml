@@ -4,6 +4,8 @@
 # make_video.py los usa con VOZ_DIR. Sin los secretos no hace nada y el vídeo sale con la voz Piper.
 # Secretos: AZURE_SPEECH_KEY_NABD (Clave 1 del recurso de voz de Azure) y AZURE_SPEECH_REGION_NABD (p. ej. northeurope).
 # modo=verificar solo prueba la clave con una frase.
+# Martes y jueves (o avatar=si) añade el presentador IA de HeyGen en la apertura del diario: avatar.mp4 + avatar.json (avatar_heygen.py,
+# secreto HEYGEN_API_KEY). Es opcional: si falla, la voz se publica igual y el vídeo sale sin presentador.
 name: Voz Azure del video diario (Nabd)
 on:
   push:
@@ -17,6 +19,9 @@ on:
       fecha:
         description: "fecha de la sesión (AAAA-MM-DD) o carpeta con video.json (p. ej. nabd/serie20/intro) para modo=generar; vacío = la carpeta más reciente"
         default: ""
+      avatar:
+        description: "presentador HeyGen en la apertura del diario: auto (martes y jueves), si (cualquier día) o no"
+        default: auto
 permissions:
   contents: write
 concurrency: voz-nabd
@@ -26,6 +31,7 @@ jobs:
     env:
       AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_NABD }}
       AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_NABD || 'northeurope' }}
+      HEYGEN_API_KEY: ${{ secrets.HEYGEN_API_KEY }}
     steps:
       - uses: actions/checkout@v4
       - name: Comprobar la clave
@@ -45,6 +51,12 @@ jobs:
           for X in ${F//,/ }; do
             D=nabd/diario/$X; [ -f "$X/video.json" ] && D=$X
             python3 nabd/diario/voz_azure.py $D/video.json /tmp/voz/$(basename "$X")
+            # Presentador IA (HeyGen) en la apertura del diario, martes y jueves (prueba de un mes, 14-nov-2026). Opcional: nunca para la voz.
+            if [[ "$X" =~ ^20[0-9]{2}-[0-9]{2}-[0-9]{2}$ ]] && [ "${{ inputs.avatar }}" != "no" ] && [ -n "$HEYGEN_API_KEY" ]; then
+              pip install -q numpy matplotlib pillow arabic-reshaper python-bidi || true
+              [ "${{ inputs.avatar }}" = "si" ] && export AVATAR_DIAS=0,1,2,3,4,5,6
+              timeout 1800 python3 nabd/diario/avatar_heygen.py $D/video.json /tmp/voz/$X $X || true
+            fi
           done
           cd /tmp/voz && git init -q -b voz-nabd && git add .
           git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Voz Azure del video diario Nabd $F"

@@ -2,6 +2,8 @@
 # 8 secciones (introducción, los grandes índices, sectores, cinco acciones, macro, análisis técnico con escenarios, agenda y despedida con Telegram),
 # ticker inferior con cotizaciones y titulares, y subtítulos árabes frase a frase. 1080p, logo Nabd.
 # Voz: Azure ar-SA-HamedNeural si VOZ_DIR tiene sus wav (voz-Nabd.yml); si no, Piper ar_JO-kareem.
+# Presentador IA: si VOZ_DIR trae avatar.mp4 + avatar.json (HeyGen, martes y jueves; avatar_heygen.py en voz-Nabd.yml) y su texto coincide con la
+#   locución de s_title, el presentador habla en un recuadro de la escena de apertura en lugar del gráfico intradía.
 # Uso: AUD=<scratch> [VOZ_DIR=<wav de Azure>] python3 make_video.py <carpeta del día> [preview]
 #   La carpeta del día tiene mercado.json y video.json (ver ejemplo-2026-11-09/). Escribe video-bolsa-<fecha>-Nabd.mp4, times.json,
 #   guion-<fecha>-Nabd.md (guion en tabla: tiempo, narración, visual, datos) y datos-<fecha>-Nabd.csv (datos usados, con fuente y hora).
@@ -22,6 +24,46 @@ LG = load_logo(130); LGS = load_logo(95); LGB = load_logo(230)
 NB = 126  # unos 6 meses de sesiones
 TV_TXT = "TradingView"
 NAVY = "#13294B"
+
+
+def avatar_mp4():
+    vd = os.environ.get("VOZ_DIR")
+    p, j = (os.path.join(vd, "avatar.mp4"), os.path.join(vd, "avatar.json")) if vd else (None, None)
+    if not (p and os.path.exists(p) and os.path.exists(j)): return None
+    info = json.load(open(j))
+    if info.get("ok") and info.get("texto") == VJ["voz"]["s_title"]: return p
+    print("avatar: avatar.mp4 no corresponde a la locución actual de s_title; el vídeo sale sin presentador"); return None
+
+
+AVATAR = avatar_mp4()
+
+
+class Presentador:
+    """Fotogramas del avatar (25 fps) leídos en orden con ffmpeg, para pegarlos en la apertura sincronizados con la voz."""
+    S, X, Y, B = 520, 100, 332, 6
+
+    def __init__(self, p):
+        import imageio_ffmpeg, subprocess
+        self.pr = subprocess.Popen([imageio_ffmpeg.get_ffmpeg_exe(), "-v", "error", "-i", p, "-vf", f"scale={self.S}:{self.S}", "-r", "25",
+                                    "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+        self.i, self.fr = -1, None
+
+    def en(self, t):  # fotograma del segundo t de la locución (antes: el primero; después del final: el último)
+        k = max(0, int(t * 25))
+        while self.i < k:
+            b = self.pr.stdout.read(self.S * self.S * 3)
+            if len(b) < self.S * self.S * 3: break
+            self.fr = np.frombuffer(b, np.uint8).reshape(self.S, self.S, 3); self.i += 1
+        return self.fr
+
+    def pegar(self, fr, t):
+        a = self.en(t)
+        if a is None: return fr
+        X, Y, S, B = self.X, self.Y, self.S, self.B
+        fr[Y - B:Y + S + B, X - B:X + S + B] = (0xD4, 0xAF, 0x37); fr[Y:Y + S, X:X + S] = a
+        return fr
+
+
 corto = lambda d: f"{d.day} {MESES[d.month - 1]}"
 fiso = lambda s: re.sub(r"(\d{4})-(\d{2})-(\d{2})", lambda m: corto(dt.date(int(m[1]), int(m[2]), int(m[3]))) + (f" {m[1]}" if int(m[1]) != FECHA.year else ""), s)
 cc_ = lambda v: TEAL if (v or 0) >= 0 else NEG
@@ -87,7 +129,7 @@ def s_title(t):
     I = [v for v in M.get("spx_intradia", {}).get("velas", []) if dt.datetime.fromtimestamp(v["t"], NYZ).date() == FECHA]
     I = [v for v in I if dt.time(9, 30) <= dt.datetime.fromtimestamp(v["t"], NYZ).time() < dt.time(16, 0)]
     IC = np.array([v["c"] for v in I]); prev = r["anterior"]
-    if len(IC) > 2:
+    if len(IC) > 2 and not AVATAR:  # con presentador, su recuadro ocupa el sitio del gráfico intradía
         IC = np.append(IC, r["cierre"])
         ax = f.add_axes([0.06, 0.29, 0.48, 0.33]); clean(ax)
         n = max(2, int(len(IC) * ease(t))); x = np.arange(len(IC))
@@ -468,9 +510,11 @@ def subtitulo(s):
 
 
 def hacer_overlay(marcas, leads):
+    PRES = Presentador(AVATAR) if AVATAR else None
     TIRA = ticker_tira(); L = TIRA.shape[1]; band = np.array([0x13, 0x29, 0x4B], np.float32); gold = np.array([0xD4, 0xAF, 0x37], np.uint8)
     def ov(fr, j, ts, tg):
         fr = fr.copy()
+        if PRES and j == 0: fr = PRES.pegar(fr, ts - leads[0])
         fr[H - 52:] = (fr[H - 52:].astype(np.float32) * 0.1 + band * 0.9).astype(np.uint8); fr[H - 54:H - 52] = gold
         off = int(tg * 85) % L
         for x in range(off - L, W, L): pegar(fr, TIRA, x, H - 52)
@@ -530,6 +574,7 @@ if __name__ == "__main__":
     if len({v[1] for v in V}) > 1 or len({v[3] for v in V}) > 1: sys.exit("voces mezcladas")
     LEAD, TAIL = 0.15, 0.6
     durs = [LEAD + len(a) / sr + TAIL for a, _, _, _ in V]; durs[0] += 0.4; durs[-1] += 2.0
+    print("avatar:", "sí (HeyGen) en la apertura" if AVATAR else "no")
     print("voz", motor, "duración prevista", round(sum(durs), 1), [round(d, 1) for d in durs])
     if not MIN_S <= sum(durs) <= MAX_S: sys.exit(f"Duración {sum(durs):.0f} s fuera de {MIN_S}-{MAX_S} s: alarga o acorta la locución")
     leads = [LEAD + (0.4 if j == 0 else 0) for j in range(len(ESC))]
