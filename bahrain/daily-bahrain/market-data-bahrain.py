@@ -162,17 +162,18 @@ def main():
     try:
         prev = os.environ.get("PREV_DIR")
         if prev and os.path.isdir(prev):
-            d_ult = dia(res["bax_diario"]["velas"][-1]); hoy_i = dia(res["bax_intradia"]["velas"][-1])
+            # Any missing session, also in the middle (15-nov-2026: Mubasher had 12-nov but still not 10 and 11-nov)
+            d_ini = dia(res["bax_diario"]["velas"][0]); hoy_i = dia(res["bax_intradia"]["velas"][-1])
             tiene = {dia(v) for v in res["bax_diario"]["velas"]}; extra = {}
             for f in sorted(os.listdir(prev)):  # oldest first, so the newest download of a day wins
                 if not (f.startswith("market-") and f.endswith("-bahrain.json")): continue
                 try:
                     for v in json.load(open(os.path.join(prev, f)))["bax_diario"]["velas"]:
-                        if d_ult < dia(v) < hoy_i and dia(v) not in tiene: extra[dia(v)] = dict(v, de_descarga_anterior=f)
+                        if d_ini < dia(v) < hoy_i and dia(v) not in tiene: extra[dia(v)] = dict(v, de_descarga_anterior=f)
                 except Exception:
                     continue
             if extra:
-                res["bax_diario"]["velas"] += [extra[d] for d in sorted(extra)]
+                res["bax_diario"]["velas"] = sorted(res["bax_diario"]["velas"] + list(extra.values()), key=lambda v: v["t"])
                 res["errores"].append("daily candles from earlier downloads (Mubasher late): " + ", ".join(sorted(extra)))
     except Exception as e:
         res["errores"].append(f"daily candles from earlier downloads: {e}")
