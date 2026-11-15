@@ -379,6 +379,10 @@ def programar(base):
             print(f"{slug}: {r['nombre']} no está conectado en Buffer; queda pendiente.")
             continue
         fecha = re.search(r"(\d{4}-\d{2}-\d{2})", slug)
+        if slug.startswith("serie20-"):
+            # serie «عمالقة وول ستريت»: la fecha del nombre es la de los resultados, no la del vídeo; cuenta la del encolado
+            enc = os.path.join(carpeta, "encolado.txt")
+            fecha = re.search(r"(\d{4}-\d{2}-\d{2})", open(enc).read()) if os.path.exists(enc) else None
         if pais == "nabd" and fecha and (datetime.now(timezone.utc).date()
                                          - datetime.strptime(fecha[1], "%Y-%m-%d").date()).days > 3:
             # Nabd: un cierre de hace más de 3 días ya no es noticia (p. ej. al conectar X después); no se manda

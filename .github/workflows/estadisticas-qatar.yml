@@ -1,0 +1,62 @@
+# Informe semanal de estadísticas de Qatar AI Stocks (YouTube, X, Facebook, Instagram, TikTok, Threads y Telegram).
+# Corre los viernes a las 09:30 de Doha (06:30 UTC) con scripts/estadisticas-qatar.py y:
+#   1) guarda el informe en la rama estadisticas-qatar (informes-qatar/informe-AAAA-MM-DD-qatar.md),
+#      junto con snapshot-qatar.json para comparar con la semana anterior;
+#   2) abre un issue "Informe semanal Qatar AAAA-MM-DD" con el informe (GitHub avisa por correo);
+#   3) lo muestra en el resumen de la ejecución.
+# YouTube: usa YT_QA_STATS_REFRESH_TOKEN si existe (token con youtube.readonly + yt-analytics.readonly);
+# si no, el token de subida YT_QA_REFRESH_TOKEN; y si ese no puede leer, el feed público del canal.
+# Buffer: BUFFER_ACCESS_TOKEN_QA y BUFFER_ACCESS_TOKEN_QA2. Telegram: TELEGRAM_BOT_TOKEN_QA y TELEGRAM_CHAT_ID_QA.
+# "Run workflow" lo genera en el momento (con dias=N cubre otro período).
+name: Informe semanal de estadísticas (Qatar)
+concurrency: estadisticas-qatar
+on:
+  schedule:
+    - cron: '30 6 * * 5'
+  workflow_dispatch:
+    inputs:
+      dias:
+        description: "Días que cubre el informe"
+        default: "7"
+permissions:
+  contents: write
+  issues: write
+jobs:
+  informe:
+    runs-on: ubuntu-latest
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_QA_CLIENT_ID || secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_QA_CLIENT_SECRET || secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_QA_STATS_REFRESH_TOKEN || secrets.YT_QA_REFRESH_TOKEN }}
+      BUFFER_API_KEY_QA: ${{ secrets.BUFFER_ACCESS_TOKEN_QA }}
+      BUFFER_API_KEY_QA2: ${{ secrets.BUFFER_ACCESS_TOKEN_QA2 }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN_QA }}
+      TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHAT_ID_QA || secrets.TELEGRAM_CHANNEL_QA || vars.TELEGRAM_CHANNEL_QA || '@QatarAIStocks' }}
+      DIAS: ${{ inputs.dias || '7' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Traer los informes anteriores (rama estadisticas-qatar)
+        run: |
+          if git fetch --depth 1 origin estadisticas-qatar; then
+            git worktree add informes FETCH_HEAD
+            git -C informes checkout -B estadisticas-qatar
+          else
+            git worktree add --orphan -b estadisticas-qatar informes
+          fi
+      - name: Generar el informe
+        run: python3 scripts/estadisticas-qatar.py informes/informes-qatar > informe.md
+      - name: Guardar en la rama estadisticas-qatar
+        run: |
+          cd informes
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add informes-qatar
+          git diff --cached --quiet && exit 0
+          git commit -m "Informe semanal Qatar $(date -u +%F)"
+          git push origin estadisticas-qatar
+      - name: Abrir el issue con el informe
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --repo "$GITHUB_REPOSITORY" --title "Informe semanal Qatar $(date -u +%F)" --body-file informe.md
+          cat informe.md >> "$GITHUB_STEP_SUMMARY"

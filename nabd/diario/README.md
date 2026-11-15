@@ -69,6 +69,16 @@ aportación al Dow, las 8 grandes del Nasdaq 100 y las acciones candidatas.
 - **Piper** `ar_JO-kareem-medium` (respaldo, si no hay wav de Azure para todas las frases): `/mnt/project-files/nabd-pipeline/voice/`. `LENGTH_SCALE=0.8`.
 Las frases se parten igual en los dos sitios (`voz_frases.py`); nunca se mezclan las dos voces en un vídeo.
 
+## Presentador IA (HeyGen), martes y jueves
+Prueba de un mes pedida por Daniel (14-nov-2026): los **martes y jueves** (fecha de la sesión en Nueva York), `voz-Nabd.yml`, después de la voz
+de Azure, ejecuta `avatar_heygen.py`: monta el audio de la apertura (`s_title`) igual que `make_video.py`, anima `avatar/presentador.png`
+con la API de HeyGen (Avatar IV, unos 2-3 min, ~2,3 $/min) y deja `avatar.mp4` y `avatar.json` en `<fecha>/` de la rama `voz-nabd`.
+`make_video.py` lo detecta solo con `VOZ_DIR` y pone al presentador hablando en un recuadro de la apertura (en lugar del gráfico intradía)
+si `avatar.json` trae `ok: true` y el mismo texto de `s_title`; si no, el vídeo sale como siempre. Nunca bloquea: sin saldo (menos de 2 $),
+apertura de más de 45 s, error de la API o sin el secreto `HEYGEN_API_KEY`, `avatar.json` dice el motivo y se sigue sin presentador.
+Si cambias la apertura después de generar la voz, el avatar ya no coincide: vuelve a subir `video.json` (se genera otro, y se paga otra vez).
+"Run workflow" de `voz-Nabd.yml` con avatar=si lo fuerza cualquier día; avatar=no lo apaga.
+
 ## Pasos de cada día
 1. Datos de la rama `datos-diario-nabd` (si faltan, lanza `datos-diario-Nabd.yml` y espera).
 2. `python3 tecnico.py` y noticias: Yahoo Finance (live blog del día), CNBC, Reuters, The Closing Print, StockTitan; fuentes oficiales (Fed, BLS,
@@ -76,7 +86,8 @@ Las frases se parten igual en los dos sitios (`voz_frases.py`); nunca se mezclan
 3. Copia `ejemplo-2026-11-09/` (sin mercado.json, mp4, png, md ni csv) a `nabd/diario/<fecha>/`, pon el `mercado.json` del día y reescribe
    `video.json` (pantalla y locución en árabe estándar, números en palabras), `info.json` (título, descripción, posts, miniatura; los capítulos
    salen solos) y `short.json` (menos de 59 s; fecha en la primera escena). Nombres en árabe que falten: `"nombres"` en `video.json`.
-4. Sube `video.json` a la rama `claude/nabd-diario-<fecha>`: `voz-Nabd.yml` genera la voz de Azure (unos 2-4 min); descarga la rama `voz-nabd`.
+4. Sube `video.json` a la rama `claude/nabd-diario-<fecha>`: `voz-Nabd.yml` genera la voz de Azure (unos 2-4 min; martes y jueves, unos 3 min
+   más por el presentador HeyGen); descarga la rama `voz-nabd` cuando el workflow termine.
 5. `AUD=<scratch> python3 make_video.py <dir> preview` (revisa los PNG), luego `AUD=<scratch> VOZ_DIR=<voz-nabd>/<fecha> python3 make_video.py <dir>`.
 6. `AUD=<scratch> python3 make_short.py <dir>/short.json` y `python3 gen_meta.py <dir>`. Todo lo que se entrega termina en `-Nabd` (regla de Daniel, 8-nov-2026).
 7. `SCRATCH=<scratch> bash encolar.sh <dir>`: comprueba los archivos y el enlace del canal, el límite de YouTube (~10 subidas/24 h) y encola en

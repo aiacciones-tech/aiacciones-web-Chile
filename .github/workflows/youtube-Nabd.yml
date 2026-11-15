@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       modo:
-        description: "verificar (solo credenciales) o subir (desde la rama youtube-cola)"
+        description: "verificar (solo credenciales), subir (desde la rama youtube-cola) o miniaturas (reintenta las miniaturas que fallaron)"
         default: verificar
 permissions:
   contents: write
@@ -26,17 +26,36 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ (github.event_name == 'push' || inputs.modo == 'subir') && 'youtube-cola' || github.ref }}
+          ref: ${{ (github.event_name == 'push' || inputs.modo == 'subir' || inputs.modo == 'miniaturas') && 'youtube-cola' || github.ref }}
       - name: Revisar que el token de Nabd esté cargado
         run: test -n "$YT_REFRESH_TOKEN" || { echo "Falta el secreto YT_NABD_REFRESH_TOKEN"; exit 1; }
       - name: Verificar credenciales
-        if: github.event_name == 'workflow_dispatch' && inputs.modo != 'subir'
+        if: github.event_name == 'workflow_dispatch' && inputs.modo != 'subir' && inputs.modo != 'miniaturas'
         run: python3 scripts/youtube.py verificar
       - name: Subir videos pendientes
         if: github.event_name == 'push' || inputs.modo == 'subir'
         run: python3 scripts/youtube.py subir cola-nabd
+      - name: Reintentar miniaturas que fallaron (p. ej. antes de verificar el canal)
+        if: github.event_name == 'workflow_dispatch' && inputs.modo == 'miniaturas'
+        run: |
+          python3 - <<'PY'
+          import glob, json, os, sys, urllib.error, urllib.request
+          sys.path.insert(0, "scripts"); import youtube
+          t = youtube.token()
+          for r in sorted(glob.glob("cola-nabd/*/resultado.json")):
+              d = json.load(open(r, encoding="utf-8")); mini = os.path.join(os.path.dirname(r), "miniatura.png")
+              if d.get("miniatura") == "si" or not os.path.exists(mini): continue
+              req = urllib.request.Request(f"{youtube.API}/upload/youtube/v3/thumbnails/set?videoId={d['videoId']}", open(mini, "rb").read(),
+                                           {"Authorization": f"Bearer {t}", "Content-Type": "image/png"})
+              try:
+                  urllib.request.urlopen(req, timeout=120); d["miniatura"] = "si"
+              except urllib.error.HTTPError as e:
+                  d["miniatura"] = f"error {e.code}: {e.read().decode('utf-8', 'replace')[:300]}"
+              json.dump(d, open(r, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+              print(r, d["videoId"], d["miniatura"][:80])
+          PY
       - name: Guardar IDs de YouTube
-        if: github.event_name == 'push' || inputs.modo == 'subir'
+        if: github.event_name == 'push' || inputs.modo == 'subir' || inputs.modo == 'miniaturas'
         run: |
           git config user.name "aiacciones-bot"
           git config user.email "aiacciones-bot@users.noreply.github.com"

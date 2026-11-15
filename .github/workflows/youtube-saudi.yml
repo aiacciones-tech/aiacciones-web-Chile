@@ -12,8 +12,11 @@ on:
   workflow_dispatch:
     inputs:
       modo:
-        description: "verificar (solo credenciales) o subir (desde la rama youtube-cola)"
+        description: "verificar (solo credenciales), subir (desde la rama youtube-cola) o miniaturas (reintenta las miniaturas que dieron error)"
         default: verificar
+      filtro:
+        description: "solo con modo=miniaturas: texto que debe contener la carpeta (p. ej. 2026-11-12); vacío = todas"
+        default: ""
 permissions:
   contents: write
 jobs:
@@ -26,17 +29,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ (github.event_name == 'push' || inputs.modo == 'subir') && 'youtube-cola' || github.ref }}
+          ref: ${{ (github.event_name == 'push' || inputs.modo == 'subir' || inputs.modo == 'miniaturas') && 'youtube-cola' || github.ref }}
       - name: Revisar que el token de Arabia Saudita esté cargado
         run: test -n "$YT_REFRESH_TOKEN" || { echo "Falta el secreto YT_SAUDI_REFRESH_TOKEN"; exit 1; }
       - name: Verificar credenciales
-        if: github.event_name == 'workflow_dispatch' && inputs.modo != 'subir'
+        if: github.event_name == 'workflow_dispatch' && inputs.modo == 'verificar'
         run: python3 scripts/youtube.py verificar
       - name: Subir videos pendientes
         if: github.event_name == 'push' || inputs.modo == 'subir'
         run: python3 scripts/youtube.py subir cola-sa
+      - name: Reintentar miniaturas
+        if: inputs.modo == 'miniaturas'
+        # La rama youtube-cola puede tener una copia antigua del script: se usa la de main.
+        run: |
+          git fetch -q --depth 1 origin main && git show origin/main:scripts/youtube.py > "$RUNNER_TEMP/youtube.py"
+          python3 "$RUNNER_TEMP/youtube.py" miniaturas cola-sa "${{ inputs.filtro }}"
       - name: Guardar IDs de YouTube
-        if: github.event_name == 'push' || inputs.modo == 'subir'
+        if: github.event_name == 'push' || inputs.modo == 'subir' || inputs.modo == 'miniaturas'
         run: |
           git config user.name "aiacciones-bot"
           git config user.email "aiacciones-bot@users.noreply.github.com"

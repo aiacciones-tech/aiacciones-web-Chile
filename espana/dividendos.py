@@ -74,6 +74,10 @@ DIVIDENDOS = [
      "ex": None, "pago": None, "pago_txt": "junio de 2027",
      "fuente": "Telefónica, nota de prensa de resultados 3T 2026 (12-nov-2026)",
      "url": "https://www.telefonica.com/es/wp-content/uploads/sites/4/2026/11/resultados-telefonica-3t-2026-nota-de-prensa.pdf"},
+    {"ticker": "MRL", "importe": "0,20 €", "tipo": "A cuenta 2026, en efectivo",
+     "ex": "2026-11-20", "pago": "2026-12-10",
+     "fuente": "Merlin Properties, dividendo a cuenta 2026 (CNMV, 12-nov-2026)",
+     "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b307a6e46-0305-42c3-ab72-10e6a93a2537%7d"},
 ]
 
 # Dividendos que la empresa ha anunciado sin importe o sin fecha todavía (texto de su última comunicación).

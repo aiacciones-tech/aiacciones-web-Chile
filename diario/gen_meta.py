@@ -34,7 +34,7 @@ open(f"{D}/post-x.txt","w").write(x)
 # aviso transparente de que el video es de AIAcciones Chile y el enlace al canal. Va en cola/<slug>-short/.
 li=(f"📊 IPSA | La Bolsa de Santiago hoy ({I['fecha_txt']})\n\n{I['resumen']}\n\n"+"\n\n".join("• "+c for c in I["claves"])+
     "\n\n🎥 Este video corto es de AIAcciones Chile: resumimos cada sesión de la Bolsa de Santiago con datos públicos, noticias con fuente y análisis técnico, con guion, gráficos y voz generados con inteligencia artificial."
-    "\n▶️ El análisis completo de unos 4 minutos y los resúmenes de cada día están en nuestro canal de YouTube: https://www.youtube.com/@aiaccioneschile"
+    "\n▶️ El análisis completo de unos 5 minutos y los resúmenes de cada día están en nuestro canal de YouTube: https://www.youtube.com/@aiaccioneschile"
     f"\n📅 Calendario de resultados y dividendos: {CAL}\n\n"
     "Contenido informativo, no es una recomendación de inversión. El análisis técnico describe datos, no son señales de compra o venta. AIAcciones Chile no tiene posiciones en las acciones citadas.\n\n"+I["hashtags"])
 assert len(li)<=2950, len(li)

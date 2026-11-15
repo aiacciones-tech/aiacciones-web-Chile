@@ -4,3 +4,4 @@ times.json
 datos/
 meta-*.json
 post-*.txt
+!avatar/presentador.png
