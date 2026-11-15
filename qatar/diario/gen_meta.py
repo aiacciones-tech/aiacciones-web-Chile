@@ -1,4 +1,4 @@
-# Metadatos de YouTube (video y Short), posts (X, Threads, LinkedIn/Facebook, TikTok, Instagram, Telegram) y miniatura del video diario en árabe.
+# Metadatos de YouTube (video y Short), posts (X, Threads, LinkedIn, TikTok, Instagram, Telegram) y miniatura del video diario en árabe.
 # Uso: python3 gen_meta.py <carpeta del día>   (lee info.json y times.json, que escribe make_video.py)
 # Todos los archivos que se entregan terminan en -qatar (regla de Daniel, 2-nov-2026); encolar.sh los copia a cola-qa/ con los nombres de la cola.
 import json, sys, os, re
@@ -48,7 +48,6 @@ while True:  # LinkedIn admite ~3000 caracteres: con el vídeo de 5 min hay más
     CL.pop(-2)
 assert len(li.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 2950, len(li)
 open(f"{D}/post-linkedin-{F}-qatar.txt", "w").write(li)
-open(f"{D}/post-facebook-{F}-qatar.txt", "w").write(li)  # página de Facebook (Buffer 1): mismo texto que LinkedIn
 tk = f"{I['tiktok']}\n{canal_linea}\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n{I['hashtags_short']}"
 open(f"{D}/post-tiktok-{F}-qatar.txt", "w").write(tk); open(f"{D}/post-instagram-{F}-qatar.txt", "w").write(tk)
 tg = (f"📊 أسهم قطر | بورصة قطر {I['fecha_txt']}\n\n{I['resumen']}\n\n" + "\n".join("• " + c for c in I["claves_cortas"]) +
