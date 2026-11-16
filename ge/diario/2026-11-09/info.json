@@ -1,0 +1,65 @@
+{
+ "fecha": "2026-11-09",
+ "fecha_txt": "Montag, 9. November 2026",
+ "elaborado": "9. November 2026, 23:30 Uhr",
+ "titulo": "Wall Street heute (9. November 2026): S&P 500 +2,35 %, Nasdaq +2,74 % | Der Tagesbericht",
+ "titulo_short": "Wall Street am 9. November 2026: Chipwerte treiben die Erholung, Nvidia fällt #Shorts",
+ "resumen": "Der S&P 500 schloss am Montag, 9. November 2026, bei 7.549,94 Punkten (+2,35 %; +173,08 Punkte). Der Nasdaq Composite stieg um 2,74 % auf 25.253,14, der Dow Jones um 2,15 % auf 52.389,75 und der Russell 2000 um 3,15 % auf 2.840,81.",
+ "claves": [
+  "Nachrichten: Chipwerte führten die Erholung an (AMD +13,26 % nach Kurszielanhebung durch Oppenheimer, Broadcom +8,78 %); Nvidia fiel um 4,27 %, nachdem der Verwaltungsrat eine unabhängige Untersuchung zu Vorstandschef Jensen Huang angekündigt hatte; Alphabet stellte neue TPU-Chips vor; US-Öl WTI −4,41 % auf 86,37 Dollar.",
+  "Warum sich der Markt bewegt hat: Nach den Verlusten der Vorwoche kehrten die Käufer zu KI-Werten zurück, der VIX fiel um 22,24 % auf 19,93, Gold stieg um 1,73 %. Die Rendite 10-jähriger US-Anleihen lag vor den Inflationsdaten am Dienstag bei 4,88 %. In Europa schloss der DAX mit +1,73 %, der Euro Stoxx 50 mit +1,94 %.",
+  "Aktien (S&P 500): 416 Werte stiegen, 80 fielen (berechnet). Größte Gewinner mit mehr als 50 Mio. Dollar Umsatz: Coherent +16,79 %, Monolithic Power +16,60 %, AMD +13,26 %. Verlierer: Nvidia −4,27 %, Akamai −3,37 % (Wandelanleihe über 2,2 Mrd. Dollar). Für die übrigen Bewegungen nannte die Presse keinen konkreten Grund.",
+  "Charttechnik S&P 500 (berechnet): unter der 50-Tage-Linie (7.676; −1,6 %) und über der 200-Tage-Linie (7.328; +3,0 %); Widerstand 7.716, Unterstützung 7.350 und 6.317 (52-Wochen-Tief); RSI 14 bei 45,8. Das sind Daten, keine Kauf- oder Verkaufssignale.",
+  "Termine: Dienstag, 10. November, US-Verbraucherpreise für Oktober (14:30 Uhr deutscher Zeit); Mittwoch, 11. November, Veterans Day, die Börse ist geöffnet; Freitag, 13. November, Erzeugerpreise (14:30 Uhr); 18. November Nvidia-Quartalszahlen nach Börsenschluss."
+ ],
+ "claves_cortas": [
+  "S&P 500 bei 7.549,94 (+2,35 %) · Nasdaq +2,74 %",
+  "AMD +13,26 % · Nvidia −4,27 % nach angekündigter Untersuchung",
+  "Charttechnik: RSI S&P 500 bei 46 · 1,6 % unter der 50-Tage-Linie"
+ ],
+ "linkedin": {
+  "datos": [
+   "S&P 500 bei 7.549,94 (+2,35 %), Nasdaq +2,74 %, Russell 2000 +3,15 %",
+   "416 Werte im S&P 500 stiegen, nur 80 fielen (berechnet)",
+   "Chipwerte führten die Erholung an: AMD +13,26 %, Broadcom +8,78 %; Nvidia −4,27 % nach angekündigter Untersuchung zum Vorstandschef",
+   "Charttechnik: S&P 500 1,6 % unter der 50-Tage-Linie und 3,0 % über der 200-Tage-Linie, RSI 14 bei 45,8"
+  ],
+  "conclusion": "Breite Erholung nach einer Verlustwoche, der Blick richtet sich auf die Inflationsdaten am Dienstag."
+ },
+ "fuentes": "TradingView; Yahoo Finance; StockTitan; CNBC",
+ "x": "Wall Street am 9. November 2026:\nS&P 500 7.549,94 (+2,35 %)\nNasdaq +2,74 % · Dow +2,15 %\nAMD +13,26 % · Nvidia −4,27 %",
+ "tiktok": "Wall Street am Montag, 9. November 2026: S&P 500 +2,35 % und Nasdaq +2,74 % bei einer Erholung, angeführt von Chipwerten, während Nvidia fiel. Drei Punkte: Chips, Nvidia und Charttechnik.",
+ "hashtags": "#WallStreet #Börse #Aktien #SP500 #Nasdaq #DowJones #Börsennews",
+ "hashtags_short": "#WallStreet #Börse #Aktien #Nasdaq #Shorts",
+ "tags": [
+  "Wall Street",
+  "US-Börse",
+  "Aktien",
+  "Börse heute",
+  "S&P 500",
+  "Nasdaq",
+  "Dow Jones",
+  "Russell 2000",
+  "Charttechnik",
+  "Börsennews",
+  "Wall Street auf Deutsch",
+  "Der Tagesbericht"
+ ],
+ "miniatura": {
+  "fecha": "Montag, 9. November 2026",
+  "indices": [
+   [
+    "S&P 500",
+    "+2,35 %",
+    "teal"
+   ],
+   [
+    "Nasdaq",
+    "+2,74 %",
+    "teal"
+   ]
+  ],
+  "sub": "Chipwerte treiben die Erholung · Nvidia −4,27 %",
+  "pie": "Der Tagesbericht · Wall Street auf Deutsch"
+ }
+}

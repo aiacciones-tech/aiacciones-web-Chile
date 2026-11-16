@@ -1,0 +1,161 @@
+{
+ "fecha": "2026-11-09",
+ "titular": "Kräftige Erholung, angeführt von Chipwerten · Nvidia gegen den Trend",
+ "nombres": {},
+ "ticker": [
+  "AMD +13,26 % nach Kurszielanhebung durch Oppenheimer",
+  "Nvidia −4,27 %: unabhängige Untersuchung zum Vorstandschef",
+  "Alphabet stellt neue TPU-Chips vor",
+  "VIX −22 % auf unter 20 Punkte",
+  "US-Inflation für Oktober am Dienstag, 14:30 Uhr deutscher Zeit"
+ ],
+ "voz": {
+  "s_title": "Willkommen zum Tagesbericht von Wall Street auf Deutsch, für Montag, den 9. November. Ein starker Tag an der Wall Street: Nach einer Verlustwoche kehrten die Käufer zurück, vor allem bei Chip- und KI-Werten. Der S&P 500 stieg um 2,35 Prozent auf rund 7.550 Punkte. Alle vier großen Indizes legten zu, der Nasdaq 100 am stärksten. Gegen den Trend fiel Nvidia um gut 4 Prozent, nachdem der Verwaltungsrat eine unabhängige Untersuchung zu Vorstandschef Jensen Huang angekündigt hatte.",
+  "s_indices": "Beginnen wir mit den großen Indizes. Der S&P 500 schloss bei 7.549,94 Punkten, ein Plus von 2,35 Prozent oder 173 Punkten. Der Nasdaq 100 gewann 3,4 Prozent auf 27.908 Punkte, der Dow Jones 2,15 Prozent auf 52.390 Punkte, und die kleineren Werte im Russell 2000 legten 3,15 Prozent zu. Bis zu den Rekorden ist es aber noch ein Stück: Der S&P 500 liegt knapp 3,8 Prozent unter seinem Allzeithoch vom 6. Oktober, der Nasdaq 100 rund 11 Prozent. Über seiner 200-Tage-Linie notiert der S&P 500 um 3 Prozent, der Nasdaq 100 knapp darunter.",
+  "s_grandes": "Wer hat die Indizes bewegt? Unter den größten Werten im Nasdaq 100 sprang Broadcom um fast 9 Prozent, Meta um gut 5 Prozent. Apple, Microsoft und Amazon gewannen zwischen 2,4 und 3 Prozent. Nvidia war mit minus 4,3 Prozent die große Ausnahme. Im Dow Jones kamen die meisten Punkte von Goldman Sachs und Caterpillar, mit jeweils rund 240 Punkten, berechnet aus den Tagesdaten. Nvidia kostete den Dow rund 47 Punkte.",
+  "s_news": "Warum hat sich der Markt bewegt? Nach den Verlusten der Vorwoche griffen Anleger wieder bei Chip- und KI-Aktien zu. AMD sprang um mehr als 13 Prozent, nachdem Oppenheimer seine Einschätzung angehoben hatte, und Broadcom gewann fast 9 Prozent. Alphabet stellte neue TPU-Chips vor, die Nvidia Konkurrenz machen sollen. Die Angst an den Märkten ließ deutlich nach: Der Volatilitätsindex VIX fiel um 22 Prozent auf unter 20 Punkte. Bei Nvidia dagegen drückte die angekündigte Untersuchung zum Vorstandschef auf den Kurs.",
+  "s_sectores": "Zu den Sektoren. Alle sechs Sektor-ETFs schlossen im Plus. Vorne lagen Industrie mit 3,8 Prozent und Technologie mit 3,7 Prozent, getragen von der Erholung der Chipwerte. Zyklischer Konsum gewann 2,9 Prozent. Am schwächsten waren Finanzen mit 1,5 Prozent und Energie mit nur einem halben Prozent, an einem Tag, an dem der US-Ölpreis um 4,4 Prozent fiel.",
+  "s_macro": "Zu Zinsen, Dollar und Rohstoffen. Die Rendite der 10-jährigen US-Staatsanleihe stieg um 2,5 Basispunkte auf 4,88 Prozent, vor den Inflationsdaten am Dienstag. Höhere Renditen verteuern Kredite und belasten die Bewertungen von Wachstumswerten. Der Dollar-Index DXY gab 0,6 Prozent nach. Ein schwächerer Dollar hilft US-Konzernen mit viel Auslandsgeschäft, und für Anleger aus dem Euroraum bedeutet er einen stärkeren Euro. Der VIX fiel auf 19,9 Punkte. Der US-Ölpreis WTI verlor 4,4 Prozent auf rund 86 Dollar, Gold stieg um 1,7 Prozent. Und Europa? Der DAX hatte bereits um 17:30 Uhr mit einem Plus von 1,7 Prozent geschlossen, der Euro Stoxx 50 mit 1,9 Prozent. Der Xetra-Handel beginnt morgen um 9 Uhr.",
+  "s_tech_spx": "Zur Charttechnik. Der S&P 500 notiert unter seiner 20- und seiner 50-Tage-Linie, um 1,2 und 1,6 Prozent, aber 3 Prozent über der 200-Tage-Linie. Nach unserer Berechnung ist das ein Seitwärtstrend. Der RSI liegt bei 46, also im neutralen Bereich. Das Volumen lag etwa auf dem Schnitt der letzten zehn Tage. Der nächste Widerstand ist die 20-Tage-Linie bei rund 7.645 Punkten, die nächste Unterstützung das Tief vom 5. November bei 7.350 Punkten.",
+  "s_esc_spx": "Drei Szenarien für den S&P 500. Im positiven Szenario würde ein Schluss über der 20-Tage-Linie bei 7.645 Punkten die Erholung bestätigen; die nächste Marke wäre die 50-Tage-Linie bei 7.676. Im neutralen Szenario pendelt der Index zwischen 7.350 und 7.645 Punkten. Im negativen Szenario würde ein Schluss unter dem Tief vom 5. November bei 7.350 Punkten das 52-Wochen-Tief bei rund 6.317 Punkten in den Blick rücken. Das sind Bedingungen, keine Prognosen.",
+  "s_tech_ndx": "Der Nasdaq 100 schloss knapp unter seiner 200-Tage-Linie, um 0,3 Prozent, und deutlich unter der 20- und der 50-Tage-Linie. Der RSI liegt bei 41, ebenfalls neutral. Damit ist die Lage technisch schwächer als beim S&P 500, obwohl der Nasdaq heute am stärksten zulegte.",
+  "s_esc_ndx": "Für den Nasdaq 100 beginnt das positive Szenario mit der Rückeroberung der 200-Tage-Linie bei rund 27.995 Punkten; darüber wäre das Hoch vom 4. November bei 28.830 Punkten die nächste Marke. Im neutralen Szenario bleibt der Index zwischen 26.606 und 27.995 Punkten. Im negativen Szenario würde ein Schluss unter dem Tief vom 5. November bei 26.606 Punkten weitere Schwäche signalisieren.",
+  "s_agenda": "Was steht in der nächsten Sitzung an? Am Dienstag kommen die US-Verbraucherpreise für Oktober, um 8:30 Uhr New Yorker Zeit, 14:30 Uhr bei uns. Am Mittwoch, dem Veterans Day, wird an der Börse normal gehandelt. Am Freitag folgen die Erzeugerpreise für Oktober. Und am 18. November legt Nvidia nach Börsenschluss seine Quartalszahlen vor.",
+  "s_fin": "Unser Fazit: eine kräftige Erholung nach einer Verlustwoche, angeführt von den Chipwerten. Der S&P 500 liegt aber weiter unter seiner 50-Tage-Linie, und am Dienstag richtet sich der Blick auf die Inflation. Folgen Sie uns kostenlos auf Telegram, der Link steht in der Videobeschreibung. Wichtiger Hinweis: Das ist keine Anlageberatung, sondern nur Information. Text, Stimme und Grafiken sind mit KI erstellt. Wir sehen uns morgen, auf Wiedersehen."
+ },
+ "indices": {
+  "titulo": "Alle vier Indizes im Plus, Nasdaq 100 vorn"
+ },
+ "grandes": {
+  "titulo": "Broadcom und Meta führen die Tech-Riesen an · Nvidia im Minus"
+ },
+ "noticias": {
+  "titulo": "Chipwerte treiben die Erholung, Untersuchung belastet Nvidia",
+  "fuente": "Quellen: Yahoo Finance; StockTitan; CNBC (9. November 2026); TradingView.",
+  "items": [
+   [
+    "Chipwerte",
+    "AMD +13,26 % nach Kurszielanhebung durch Oppenheimer · Broadcom +8,78 %"
+   ],
+   [
+    "Alphabet",
+    "stellt neue TPU-Chips als Konkurrenz zu Nvidia vor; Aktie +1,18 %"
+   ],
+   [
+    "VIX und Öl",
+    "Volatilitätsindex −22 % auf 19,93 · US-Öl WTI −4,41 %"
+   ],
+   [
+    "Nvidia −4,27 %",
+    "Verwaltungsrat kündigt unabhängige Untersuchung zu Vorstandschef Jensen Huang an"
+   ]
+  ]
+ },
+ "sectores": {
+  "titulo": "Alle sechs Sektoren im Plus · Industrie und Technologie vorn",
+  "items": [
+   [
+    "Industrie und Technologie vorn",
+    "Technologie mit der Erholung der Chipwerte: AMD +13,26 % und Broadcom +8,78 %",
+    "teal"
+   ],
+   [
+    "Finanzen und Energie hinten",
+    "Energie nur +0,52 % an einem Tag, an dem der US-Ölpreis um 4,41 % fiel",
+    "neg"
+   ]
+  ]
+ },
+ "acciones": [
+  {
+   "ticker": "AMD",
+   "noticia": "Oppenheimer hebt seine Einschätzung für die Aktie an (Yahoo Finance).",
+   "lectura": "Führte die Erholung der Chipwerte nach den Verlusten der Vorwoche an, mit rund 26 Mrd. Dollar Umsatz.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Yahoo Finance (9. November 2026).",
+   "voz": "Die erste Aktie: AMD. Das Papier sprang um 13,26 Prozent auf rund 508,60 Dollar, bei einem Umsatz von etwa 26 Milliarden Dollar. Der Grund: Oppenheimer hat seine Einschätzung für die Aktie angehoben. Die Bewegung war Teil einer breiten Erholung der Chipwerte nach den Verlusten der Vorwoche."
+  },
+  {
+   "ticker": "NVDA",
+   "noticia": "Der Verwaltungsrat kündigt eine unabhängige Untersuchung zu Vorstandschef Jensen Huang an (CNBC).",
+   "lectura": "Meistgehandelte Aktie des Tages, Volumen 2,7-mal so hoch wie im Schnitt.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: CNBC (9. November 2026).",
+   "voz": "Die zweite Aktie: Nvidia. Die in Deutschland viel gehandelte Aktie fiel um 4,27 Prozent auf 178,67 Dollar, gegen den Trend der übrigen Chipwerte. Der Verwaltungsrat kündigte eine unabhängige Untersuchung zu Vorstandschef Jensen Huang an. Mit rund 83 Milliarden Dollar war Nvidia die meistgehandelte Aktie des Tages, das Volumen lag mehr als zweieinhalbmal über dem Schnitt."
+  },
+  {
+   "ticker": "COHR",
+   "noticia": "Keine konkrete Meldung in der Presse.",
+   "lectura": "Stärkster Wert im S&P 500, im Zuge der Erholung von Chip- und KI-Aktien.",
+   "voz": "Die dritte Aktie: Coherent, der Hersteller von Lasern und optischen Komponenten. Mit einem Plus von 16,79 Prozent auf 225,19 Dollar war Coherent der stärkste Wert im S&P 500. Eine konkrete Meldung dazu gab es in der Presse nicht; die Aktie stieg mit der Erholung der Chip- und KI-Werte."
+  },
+  {
+   "ticker": "MPWR",
+   "noticia": "Keine konkrete Meldung in der Presse.",
+   "lectura": "Teil der Kaufwelle bei Chipwerten; zweitgrößter Gewinner im Index.",
+   "voz": "Die vierte Aktie: Monolithic Power Systems, ein Spezialist für Stromversorgungs-Chips. Die Aktie gewann 16,6 Prozent auf 1.388 Dollar, der zweitgrößte Anstieg im S&P 500. Auch hier gab es keine konkrete Meldung in der Presse."
+  },
+  {
+   "ticker": "AKAM",
+   "noticia": "Platzierung einer Wandelanleihe über 2,2 Mrd. Dollar (StockTitan).",
+   "lectura": "Rückgang bei fast zweieinhalbfachem Volumen; Wandelanleihen können bei Umwandlung die Zahl der Aktien erhöhen.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: StockTitan (9. November 2026).",
+   "voz": "Die fünfte Aktie: Akamai, der Anbieter von Cloud- und Sicherheitsdiensten. Die Aktie fiel um 3,37 Prozent auf 80,29 Dollar, bei fast zweieinhalbfachem Volumen. Akamai platziert eine Wandelanleihe über 2,2 Milliarden Dollar. Werden solche Anleihen später in Aktien umgewandelt, kann sich die Zahl der Aktien erhöhen."
+  }
+ ],
+ "macro": {
+  "titulo": "VIX fällt um 22 %, Öl um 4 %",
+  "items": {
+   "TVC:US10Y": "Höhere Rendite verteuert Kredite und belastet Wachstumswerte",
+   "TVC:DXY": "Schwächerer Dollar stützt Auslandsgewinne von US-Konzernen",
+   "TVC:VIX": "Unter 20 Punkten: weniger Angst am Markt",
+   "TVC:USOIL": "Wichtig für Energieaktien und die Inflation",
+   "TVC:GOLD": "Sicherer Hafen, abhängig von Dollar und Zinsen"
+  },
+  "europa": "Schwächerer Dollar = stärkerer Euro: US-Gewinne sind in Euro gerechnet etwas weniger wert."
+ },
+ "tecnico": {
+  "spx": {
+   "titulo": "Unter der 20- und 50-Tage-Linie, über der 200-Tage-Linie",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  },
+  "ndx": {
+   "titulo": "Knapp unter der 200-Tage-Linie nach der Erholung",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  }
+ },
+ "agenda": {
+  "titulo": "US-Inflation am Dienstag",
+  "fuente": "Quellen: Yahoo Finance; StockTitan (Wochenkalender). Deutsche Zeit aus der New Yorker Zeit berechnet.",
+  "filas": [
+   [
+    "2026-11-10",
+    "US-Verbraucherpreise (CPI) für Oktober",
+    "08:30",
+    "geplant"
+   ],
+   [
+    "2026-11-11",
+    "Veterans Day: Die Börse ist geöffnet",
+    "",
+    "geplant"
+   ],
+   [
+    "2026-11-13",
+    "US-Erzeugerpreise für Oktober",
+    "08:30",
+    "geplant"
+   ],
+   [
+    "2026-11-18",
+    "Nvidia-Quartalszahlen nach Börsenschluss",
+    "",
+    "geplant"
+   ]
+  ]
+ },
+ "fin": {
+  "titular": "Kräftige Erholung nach einer Verlustwoche, der Blick richtet sich auf die Inflation",
+  "fuentes": "TradingView, Yahoo Finance, CNBC, StockTitan"
+ }
+}

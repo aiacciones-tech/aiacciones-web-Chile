@@ -1,0 +1,93 @@
+{
+ "cabecera": "Wall Street auf Deutsch · 9. November 2026",
+ "out": "short-bolsa-2026-11-09-GE.mp4",
+ "fuente": "Quellen: TradingView, Yahoo Finance\nund StockTitan (9. November 2026). RSI: berechnet.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Wall Street · Sitzung vom",
+   "fecha": "Mo., 9. November 2026",
+   "indices": [
+    [
+     "S&P 500",
+     "+2,35 %",
+     "7.549,94",
+     "teal"
+    ],
+    [
+     "Nasdaq Composite",
+     "+2,74 %",
+     "25.253,14",
+     "teal"
+    ]
+   ],
+   "pregunta": "Kräftige Erholung, angeführt\nvon Chipwerten, Nvidia fällt",
+   "voz": "Wall Street, Montag, 9. November. Eine kräftige Erholung nach einer Verlustwoche. Drei Punkte."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Chipwerte erholen sich",
+   "big": "+13,26 %",
+   "delta": "AMD",
+   "color": "teal",
+   "barras": [
+    [
+     "Coherent",
+     16.79
+    ],
+    [
+     "Monolithic",
+     16.6
+    ],
+    [
+     "AMD",
+     13.26
+    ]
+   ],
+   "nota": "Oppenheimer hebt die Einschätzung für AMD an.\n416 Werte im S&P 500 stiegen, 80 fielen.",
+   "voz": "Eins. Chipwerte führten den Anstieg an, AMD sprang um mehr als 13 Prozent."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Nvidia",
+   "big": "−4,27 %",
+   "delta": "Untersuchung zum Vorstandschef",
+   "color": "neg",
+   "nota": "Der Verwaltungsrat kündigt eine unabhängige\nUntersuchung zu Jensen Huang an (CNBC).",
+   "voz": "Zwei. Nvidia fiel um mehr als 4 Prozent, nach einer angekündigten Untersuchung zum Vorstandschef."
+  },
+  {
+   "tipo": "kpis",
+   "n": 3,
+   "label": "Charttechnik S&P 500",
+   "items": [
+    [
+     "46",
+     "RSI 14",
+     "blue"
+    ],
+    [
+     "−1,6 %",
+     "unter der 50-Tage-Linie",
+     "neg"
+    ],
+    [
+     "+3,0 %",
+     "über der 200-Tage-Linie",
+     "teal"
+    ]
+   ],
+   "nota": "Widerstand 7.716, Unterstützung 7.350.\nDas sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Charttechnisch liegt der Index unter der 50-Tage-Linie, aber über der 200-Tage-Linie."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Der Blick richtet sich\nauf die US-Inflation am Dienstag",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Am Dienstag kommen die US-Inflationsdaten. Das ganze Video finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}
