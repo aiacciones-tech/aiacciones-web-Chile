@@ -1,0 +1,49 @@
+# Voz neuronal de Azure en alemán (de-DE-ConradNeural) para el vídeo diario largo de Wall Street auf Deutsch (ge/diario/voz_azure.py).
+# Se lanza sola cuando la sesión diaria sube ge/diario/<fecha>/video.json a una rama claude/ge-diario-*, o a mano con "Run workflow".
+# Deja un wav por frase en <fecha>/ de la rama voz-ge (se reescribe cada día, sin historial, para no engordar el repo);
+# make_video.py los usa con VOZ_DIR. Sin los secretos no hace nada y el vídeo sale con la voz Piper.
+# Secretos: AZURE_SPEECH_KEY_GE (Clave 1 del recurso de voz de Azure) y AZURE_SPEECH_REGION_GE (se acepta «Germany West Central» o «germanywestcentral»).
+# modo=verificar solo prueba la clave con una frase.
+name: Voz Azure del video diario (Wall Street auf Deutsch)
+on:
+  push:
+    branches: ["claude/ge-diario-**"]
+    paths: ["ge/diario/*/video.json", "ge/diario/*/short.json"]
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "generar (la voz de un día) o verificar (solo la clave)"
+        default: verificar
+      fecha:
+        description: "fecha de la sesión (AAAA-MM-DD) para modo=generar; vacío = la carpeta más reciente"
+        default: ""
+permissions:
+  contents: write
+concurrency: voz-ge
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_GE }}   # recurso Azure Speech propio del canal alemán (F0)
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_GE || 'germanywestcentral' }}   # voz_azure.py normaliza «Germany West Central»
+    steps:
+      - uses: actions/checkout@v4
+      - name: Comprobar la clave
+        id: clave
+        run: |
+          if [ -z "$AZURE_SPEECH_KEY" ]; then echo "Falta el secreto AZURE_SPEECH_KEY_GE: el vídeo saldrá con la voz Piper alemana."; echo "ok=0" >> $GITHUB_OUTPUT; exit 0; fi
+          echo '{"voz":{"x":"Willkommen bei Wall Street auf Deutsch."}}' > /tmp/prueba.json
+          python3 ge/diario/voz_azure.py /tmp/prueba.json /tmp/prueba && ls -la /tmp/prueba && echo "ok=1" >> $GITHUB_OUTPUT
+      - name: Generar la voz del día
+        if: steps.clave.outputs.ok == '1' && (github.event_name == 'push' || inputs.modo == 'generar')
+        run: |
+          F="${{ inputs.fecha }}"
+          if [ -z "$F" ]; then F=$(ls -d ge/diario/20??-??-?? | sort | tail -1 | xargs basename); fi
+          echo "fecha $F"
+          python3 ge/diario/voz_azure.py ge/diario/$F/video.json /tmp/voz/$F
+          # el Short también con Azure (misma carpeta; make_short.py usa VOZ_DIR si están todas sus frases)
+          if [ -f ge/diario/$F/short.json ]; then python3 ge/diario/voz_azure.py ge/diario/$F/short.json /tmp/voz/$F; fi
+          cd /tmp/voz && git init -q -b voz-ge && git add .
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Voz Azure del video diario GE $F"
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          for i in 1 2 3; do git push -qf origin voz-ge && break; sleep 5; done

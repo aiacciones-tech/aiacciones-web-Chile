@@ -149,13 +149,16 @@ CLAVES_BH = ("BUFFER_API_KEY_BAHRAIN", "BUFFER_API_KEY_BAHRAIN2", "BUFFER_API_KE
 CANAL_BH = "https://www.youtube.com/@BahrainAIStocks"  # handle por confirmar cuando Daniel cree el canal
 CLAVES_NABD = ("BUFFER_API_KEY_NABD", "BUFFER_API_KEY_NABD_IG")  # cuentas de Buffer de Nabd Wall Street (LinkedIn, X y TikTok; Instagram)
 CANAL_NABD = "https://www.youtube.com/channel/UCRU3n034y5dJBEGnhAKjhfQ"
-SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA", "saudi": "_SA", "bahrain": "_BAHRAIN", "nabd": "_NABD"}
+CLAVES_GE = ("BUFFER_API_KEY_GE", "BUFFER_API_KEY_IG_GE")  # cuentas de Buffer de Wall Street auf Deutsch (alemán)
+CANAL_GE = "https://www.youtube.com/channel/PENDIENTE"
+SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA", "saudi": "_SA", "bahrain": "_BAHRAIN", "nabd": "_NABD", "ge": "_GE"}
 # países con cuentas de Buffer propias (todos sus canales son de ese país) y su canal de YouTube
 PROPIOS = {"eau": (CLAVES_EAU, CANAL_EAU, "BUFFER_ACCESS_TOKEN_EAU", "EAU"),
            "qatar": (CLAVES_QA, CANAL_QA, "BUFFER_ACCESS_TOKEN_QA", "Qatar"),
            "saudi": (CLAVES_SA, CANAL_SA, "BUFFER_ACCESS_TOKEN_SAUDI", "Arabia Saudita"),
            "bahrain": (CLAVES_BH, CANAL_BH, "BUFFER_ACCESS_TOKEN_BAHRAIN", "Baréin"),
-           "nabd": (CLAVES_NABD, CANAL_NABD, "BUFFER_API_KEY_NABD", "Nabd Wall Street")}
+           "nabd": (CLAVES_NABD, CANAL_NABD, "BUFFER_API_KEY_NABD", "Nabd Wall Street"),
+           "ge": (CLAVES_GE, CANAL_GE, "BUFFER_API_KEY_GE", "Wall Street auf Deutsch")}
 
 
 def sin_tildes(t):
@@ -349,7 +352,7 @@ def enlace_video(carpeta, nombre="video.mp4"):
 
 def programar(base):
     global CLAVE
-    pais = {"cola-es": "espana", "cola-eau": "eau", "cola-qa": "qatar", "cola-sa": "saudi", "cola-bahrain": "bahrain", "cola-nabd": "nabd"}.get(os.path.basename(os.path.normpath(base)), "chile")
+    pais = {"cola-es": "espana", "cola-eau": "eau", "cola-qa": "qatar", "cola-sa": "saudi", "cola-bahrain": "bahrain", "cola-nabd": "nabd", "cola-ge": "ge"}.get(os.path.basename(os.path.normpath(base)), "chile")
     modo = (os.environ.get("BUFFER_MODO") or "ahora").strip().lower()
     if modo not in MODOS:
         sys.exit(f"BUFFER_MODO debe ser ahora, cola o borrador, no {modo!r}.")
@@ -383,7 +386,7 @@ def programar(base):
             # serie «عمالقة وول ستريت»: la fecha del nombre es la de los resultados, no la del vídeo; cuenta la del encolado
             enc = os.path.join(carpeta, "encolado.txt")
             fecha = re.search(r"(\d{4}-\d{2}-\d{2})", open(enc).read()) if os.path.exists(enc) else None
-        if pais == "nabd" and fecha and (datetime.now(timezone.utc).date()
+        if pais in ("nabd", "ge") and fecha and (datetime.now(timezone.utc).date()
                                          - datetime.strptime(fecha[1], "%Y-%m-%d").date()).days > 3:
             # Nabd: un cierre de hace más de 3 días ya no es noticia (p. ej. al conectar X después); no se manda
             json.dump({"caducado": True, "fecha": datetime.now(timezone.utc).isoformat(timespec="seconds")},
