@@ -15,8 +15,8 @@ for w in ("Medium", "Bold"):
 plt.rcParams.update({"font.family": ["Tajawal", "DejaVu Sans"], "text.parse_math": False, "axes.unicode_minus": False})
 LOGO = os.environ.get("LOGO", os.path.join(HERE, "..", "marca", "profile-800-GE.png"))  # logo del canal (ge/marca/hacer_marca.py; kit completo en /mnt/project-files/ge-brand-kit/)
 VOICE = os.environ.get("VOICE", "/mnt/project-files/ge-pipeline/voice/de_DE-thorsten-high.onnx")  # Piper de respaldo (huggingface rhasspy/piper-voices)
-CANAL = "https://www.youtube.com/channel/PENDIENTE"  # sale de youtube-GE.yml modo=verificar
-CANAL_ID = "PENDIENTE"
+CANAL = "https://www.youtube.com/channel/UC23KiHTq_lULliZwAM3dEpA"
+CANAL_ID = "UC23KiHTq_lULliZwAM3dEpA"
 TELEGRAM = "https://t.me/WallStreetAufDeutsch"   # canal de Telegram; el vídeo largo invita a unirse
 PROGRAMA = "Der Tagesbericht"   # nombre del programa dentro de la marca (no usar «Wall Street Daily», que es una marca existente)
 MARCA = "Wall Street auf Deutsch"; MARCA_EN = "Wall Street auf Deutsch"

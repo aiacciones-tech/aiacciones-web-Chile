@@ -150,7 +150,7 @@ CANAL_BH = "https://www.youtube.com/@BahrainAIStocks"  # handle por confirmar cu
 CLAVES_NABD = ("BUFFER_API_KEY_NABD", "BUFFER_API_KEY_NABD_IG")  # cuentas de Buffer de Nabd Wall Street (LinkedIn, X y TikTok; Instagram)
 CANAL_NABD = "https://www.youtube.com/channel/UCRU3n034y5dJBEGnhAKjhfQ"
 CLAVES_GE = ("BUFFER_API_KEY_GE", "BUFFER_API_KEY_IG_GE")  # cuentas de Buffer de Wall Street auf Deutsch (alemán)
-CANAL_GE = "https://www.youtube.com/channel/PENDIENTE"
+CANAL_GE = "https://www.youtube.com/channel/UC23KiHTq_lULliZwAM3dEpA"
 SUFIJOS = {"chile": "", "espana": "_ES", "eau": "_EAU", "qatar": "_QA", "saudi": "_SA", "bahrain": "_BAHRAIN", "nabd": "_NABD", "ge": "_GE"}
 # países con cuentas de Buffer propias (todos sus canales son de ese país) y su canal de YouTube
 PROPIOS = {"eau": (CLAVES_EAU, CANAL_EAU, "BUFFER_ACCESS_TOKEN_EAU", "EAU"),

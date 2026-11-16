@@ -13,7 +13,7 @@ B=$(cd "$1" && pwd); F=$(python3 -c "import json;print(json.load(open('$B/info.j
 for f in video-bolsa-$F-GE.mp4 short-bolsa-$F-GE.mp4 meta-youtube-$F-GE.json meta-short-$F-GE.json miniatura-$F-GE.png; do
   test -s "$B/$f" || { echo "falta $B/$f"; exit 1; }
 done
-ID=PENDIENTE
+ID=UC23KiHTq_lULliZwAM3dEpA
 grep -q "$ID" $B/meta-youtube-$F-GE.json && grep -q "$ID" $B/meta-short-$F-GE.json || { echo "falta el enlace del canal en los metadatos"; exit 1; }
 [ -d $S/cola ] || git clone -q --depth 1 -b youtube-cola https://github.com/aiacciones-tech/aiacciones-web-Chile.git $S/cola; cd $S/cola; git pull -q origin youtube-cola 2>/dev/null
 git config user.name "aiacciones-bot"; git config user.email "aiacciones-bot@users.noreply.github.com"
