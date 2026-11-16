@@ -30,8 +30,8 @@ En todas: ticker inferior (índices, macro, sectores y titulares de `video.json`
 sectores y macro presentes, las 5 acciones en los datos y con noticia/lectura/voz, agenda posterior a la sesión) y escribe
 `guion-<fecha>-GE.md` y `datos-<fecha>-GE.csv`. Duración aceptada: 450-630 s. Las tarjetas de escenarios de tres líneas pasan solas a 58 caracteres y letra 18 (arreglo de Nabd del 11-nov).
 
-**Longitud de la locución:** el alemán con Azure sale a unas 130-140 palabras por minuto con pausas (calibrar con el primer vídeo
-y anotar la cifra real aquí). Objetivo: **1.100-1.250 palabras** para 8:30-9:30.
+**Longitud de la locución:** calibrado el 16-nov-2026 con el ejemplo del 9-nov y Azure de-DE-ConradNeural: 1.086 palabras dieron
+8:30 (510 s), unas **128 palabras por minuto** con pausas. Objetivo: **1.100-1.250 palabras** para 8:40-9:50.
 
 ## Idioma y estilo (alemán)
 - Registro de noticiero económico (estilo Börse/Handelsblatt, frases cortas), tratamiento «Sie». Nada de anglicismos innecesarios,

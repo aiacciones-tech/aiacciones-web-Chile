@@ -13,14 +13,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 for w in ("Medium", "Bold"):
     font_manager.fontManager.addfont(os.path.join(HERE, "fonts", f"Tajawal-{w}.ttf"))
 plt.rcParams.update({"font.family": ["Tajawal", "DejaVu Sans"], "text.parse_math": False, "axes.unicode_minus": False})
-LOGO = os.environ.get("LOGO", "/mnt/project-files/ge-brand-kit/png/profile-800.png")  # logo del canal alemán (kit de marca nuevo)
+LOGO = os.environ.get("LOGO", os.path.join(HERE, "..", "marca", "profile-800-GE.png"))  # logo del canal (ge/marca/hacer_marca.py; kit completo en /mnt/project-files/ge-brand-kit/)
 VOICE = os.environ.get("VOICE", "/mnt/project-files/ge-pipeline/voice/de_DE-thorsten-high.onnx")  # Piper de respaldo (huggingface rhasspy/piper-voices)
 CANAL = "https://www.youtube.com/channel/PENDIENTE"  # sale de youtube-GE.yml modo=verificar
 CANAL_ID = "PENDIENTE"
 TELEGRAM = "https://t.me/WallStreetAufDeutsch"   # canal de Telegram; el vídeo largo invita a unirse
 PROGRAMA = "Der Tagesbericht"   # nombre del programa dentro de la marca (no usar «Wall Street Daily», que es una marca existente)
 MARCA = "Wall Street auf Deutsch"; MARCA_EN = "Wall Street auf Deutsch"
-# Colores heredados de Nabd (cámbialos con el kit de marca alemán): noche #0B1A2E, azul marino #13294B, dorado #D4AF37 (claro #F1D78A), marfil #F5EBDD, sube #22C55E, baja #E5484D
+# Colores de la marca (los mismos del kit de ge/marca/): noche #0B1A2E, azul marino #13294B, dorado #D4AF37 (claro #F1D78A), marfil #F5EBDD, sube #22C55E, baja #E5484D
 BG = "#0B1A2E"; FG = "#F5EBDD"; MUTED = "#A9B4C8"; GOLD = "#D4AF37"; TEAL = "#22C55E"; NEG = "#E5484D"; DIM = "#2A4468"; BLUE = "#7DB7F0"
 COLS = {"gold": GOLD, "teal": TEAL, "neg": NEG, "fg": FG, "muted": MUTED, "blue": BLUE, "acc": TEAL, "acc2": BLUE}
 col = lambda c: COLS.get(c, c)
