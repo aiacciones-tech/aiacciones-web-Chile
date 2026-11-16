@@ -1,6 +1,30 @@
 {
- "actualizado": "2026-11-13T12:57Z",
+ "actualizado": "2026-11-16T13:24Z",
  "items": [
+  {
+   "id": "8864bab4-68fb-464e-8eb3-6d4a0c3d7afe",
+   "tipo": "OIR",
+   "fecha": "2026-11-16 13:32",
+   "entidad": "FERROVIAL N.V.",
+   "nif": "N0119863I",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Operaciones efectuadas por Ferrovial al amparo de su programa de recompra de acciones propias el 6 de noviembre de 2026 y entre el 9 y el 13 de noviembre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b8864bab4-68fb-464e-8eb3-6d4a0c3d7afe%7d",
+   "ticker": "FER",
+   "temas": []
+  },
+  {
+   "id": "c842728e-0a37-454c-8c26-4f43dee296bd",
+   "tipo": "OIR",
+   "fecha": "2026-11-16 10:55",
+   "entidad": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+   "nif": "A48265169",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad comunica información relativa a la ejecución del programa de recompra de acciones.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bc842728e-0a37-454c-8c26-4f43dee296bd%7d",
+   "ticker": "BBVA",
+   "temas": []
+  },
   {
    "id": "a9755b2b-cd00-400d-9395-b625e2898315",
    "tipo": "OIR",
