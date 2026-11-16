@@ -1,0 +1,93 @@
+{
+ "cabecera": "Wall Street auf Deutsch · 16. November 2026",
+ "out": "short-bolsa-2026-11-16-GE.mp4",
+ "fuente": "Quellen: TradingView, Yahoo Finance\nund StockTitan (16. November 2026). RSI: berechnet.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Wall Street · Sitzung vom",
+   "fecha": "Mo., 16. November 2026",
+   "indices": [
+    [
+     "S&P 500",
+     "−1,92 %",
+     "7.416,59",
+     "neg"
+    ],
+    [
+     "Nasdaq Composite",
+     "−2,49 %",
+     "24.509,76",
+     "neg"
+    ]
+   ],
+   "pregunta": "Tech-Ausverkauf vor Nvidia-Zahlen\nund Anthropic-Börsengang",
+   "voz": "Wall Street, Montag, 16. November. Ein Ausverkauf bei Technologiewerten. Drei Punkte."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Chipwerte unter Druck",
+   "big": "−7,62 %",
+   "delta": "Micron",
+   "color": "neg",
+   "barras": [
+    [
+     "Sandisk",
+     -8.58
+    ],
+    [
+     "Micron",
+     -7.62
+    ],
+    [
+     "Intel",
+     -7.02
+    ]
+   ],
+   "nota": "Neue US-Regel zum Fernzugriff auf Chips.\n352 Werte im S&P 500 fielen, 144 stiegen.",
+   "voz": "Eins. Chipwerte fielen am stärksten, Micron und Intel verloren jeweils mehr als 7 Prozent."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Nvidia",
+   "big": "−4,12 %",
+   "delta": "Zahlen am Dienstag",
+   "color": "neg",
+   "nota": "Quartalszahlen am Dienstag nach Börsenschluss,\nAnthropic-Börsengang am Donnerstag erwartet.",
+   "voz": "Zwei. Nvidia fiel um gut 4 Prozent, vor den Quartalszahlen am Dienstag."
+  },
+  {
+   "tipo": "kpis",
+   "n": 3,
+   "label": "Charttechnik S&P 500",
+   "items": [
+    [
+     "40",
+     "RSI 14",
+     "blue"
+    ],
+    [
+     "−3,2 %",
+     "unter der 50-Tage-Linie",
+     "neg"
+    ],
+    [
+     "+1,0 %",
+     "über der 200-Tage-Linie",
+     "teal"
+    ]
+   ],
+   "nota": "Widerstand 7.600, Unterstützung 7.400 und 7.350.\nDas sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Der S&P 500 hält sich nur noch knapp über seiner 200-Tage-Linie."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Der Blick richtet sich\nauf Nvidia am Dienstag",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Am Dienstag kommen die Nvidia-Zahlen. Das ganze Video finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}

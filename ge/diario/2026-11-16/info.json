@@ -1,0 +1,67 @@
+{
+ "fecha": "2026-11-16",
+ "fecha_txt": "Montag, 16. November 2026",
+ "elaborado": "16. November 2026, 23:30 Uhr",
+ "titulo": "Wall Street heute (16. November 2026): S&P 500 −1,92 %, Nasdaq −2,49 % | Der Tagesbericht",
+ "titulo_short": "Wall Street am 16. November 2026: Tech-Ausverkauf vor Nvidia-Zahlen #Shorts",
+ "resumen": "Der S&P 500 schloss am Montag, 16. November 2026, bei 7.416,59 Punkten (−1,92 %; −145,08 Punkte). Der Nasdaq Composite fiel um 2,49 % auf 24.509,76, der Nasdaq 100 um 2,67 % auf 27.197,15, der Dow Jones um 1,41 % auf 51.608,17 und der Russell 2000 um 1,70 % auf 2.742,94.",
+ "claves": [
+  "Nachrichten: Vor den Nvidia-Quartalszahlen (Dienstag nach Börsenschluss) und dem für Donnerstag erwarteten Anthropic-Börsengang fielen Technologiewerte; das US-Handelsministerium erließ eine Regel zum Fernzugriff auf moderne Chips (Micron −7,62 %, Intel −7,02 %); Störungen bei US-Banken, JPMorgan bestätigte Verzögerungen; Empire-State-Index −18 Punkte auf 7,8.",
+  "Warum sich der Markt bewegt hat: Der VIX stieg um 18,71 % auf 22,90. Die Rendite 10-jähriger US-Anleihen lag bei 5,13 %, der US-Ölpreis WTI fiel um 4,16 % auf 85,21 Dollar, Bitcoin fiel zeitweise auf rund 64.000 Dollar. In Europa schloss der DAX mit −0,57 %, der Euro Stoxx 50 mit −0,60 %.",
+  "Aktien (S&P 500): 144 Werte stiegen, 352 fielen (berechnet). Gewinner: Tyson Foods +8,72 % nach Quartalszahlen, Centene +4,91 %, Elevance Health +3,86 %. Verlierer: Sandisk −8,58 %, Micron −7,62 %, Robinhood −7,45 %, Nvidia −4,12 %, Amazon −3,34 %.",
+  "Charttechnik S&P 500 (berechnet): unter der 20-Tage-Linie (7.600; −2,4 %) und der 50-Tage-Linie (7.661; −3,2 %), über der 200-Tage-Linie (7.343; +1,0 %); Widerstand 7.600 und 7.653, Unterstützung 7.400 und 7.350; RSI 14 bei 40,2. Das sind Daten, keine Kauf- oder Verkaufssignale.",
+  "Termine: Dienstag, 17. November, US-Einzelhandelsumsätze (14:30 Uhr deutscher Zeit) und Nvidia-Quartalszahlen (gegen 22:20 Uhr); Donnerstag, 19. November, erwarteter erster Handelstag von Anthropic."
+ ],
+ "claves_cortas": [
+  "S&P 500 bei 7.416,59 (−1,92 %) · Nasdaq −2,49 %",
+  "Micron −7,62 % · Nvidia −4,12 % vor den Zahlen am Dienstag",
+  "Charttechnik: S&P 500 nur noch 1,0 % über der 200-Tage-Linie"
+ ],
+ "linkedin": {
+  "datos": [
+   "S&P 500 bei 7.416,59 (−1,92 %), Nasdaq 100 −2,67 %, Dow Jones −1,41 %",
+   "352 Werte im S&P 500 fielen, nur 144 stiegen (berechnet)",
+   "Chipwerte unter Druck nach neuer US-Regel zum Fernzugriff auf Chips: Micron −7,62 %, Intel −7,02 %, Nvidia −4,12 %",
+   "Charttechnik: S&P 500 3,2 % unter der 50-Tage-Linie und 1,0 % über der 200-Tage-Linie, RSI 14 bei 40,2"
+  ],
+  "conclusion": "Tech-Ausverkauf vor einer Woche, in der Nvidia-Zahlen und der Anthropic-Börsengang den Ton angeben dürften."
+ },
+ "fuentes": "TradingView; Yahoo Finance; StockTitan; CNBC; finanzen.at; onvista",
+ "x": "Wall Street am 16. November 2026:\nS&P 500 7.416,59 (−1,92 %)\nNasdaq −2,49 % · Dow −1,41 %\nMicron −7,62 % · Nvidia −4,12 %",
+ "tiktok": "Wall Street am Montag, 16. November 2026: S&P 500 −1,92 % und Nasdaq −2,49 % bei einem Tech-Ausverkauf vor den Nvidia-Zahlen und dem Anthropic-Börsengang. Drei Punkte: Chips, Nvidia und Charttechnik.",
+ "hashtags": "#WallStreet #Börse #Aktien #SP500 #Nasdaq #Nvidia #Börsennews",
+ "hashtags_short": "#WallStreet #Börse #Aktien #Nasdaq #Shorts",
+ "tags": [
+  "Wall Street",
+  "US-Börse",
+  "Aktien",
+  "Börse heute",
+  "S&P 500",
+  "Nasdaq",
+  "Dow Jones",
+  "Nvidia",
+  "Anthropic",
+  "Micron",
+  "Charttechnik",
+  "Börsennews",
+  "Wall Street auf Deutsch",
+  "Der Tagesbericht"
+ ],
+ "miniatura": {
+  "fecha": "Montag, 16. November 2026",
+  "indices": [
+   [
+    "S&P 500",
+    "−1,92 %",
+    "neg"
+   ],
+   [
+    "Nasdaq",
+    "−2,49 %",
+    "neg"
+   ]
+  ],
+  "sub": "Tech-Ausverkauf vor Nvidia-Zahlen · Micron −7,62 %",
+  "pie": "Der Tagesbericht · Wall Street auf Deutsch"
+ }
+}

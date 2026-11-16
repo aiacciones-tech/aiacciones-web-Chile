@@ -1,0 +1,158 @@
+{
+ "fecha": "2026-11-16",
+ "titular": "Tech-Ausverkauf vor Nvidia-Zahlen und Anthropic-Börsengang · Nasdaq 100 −2,67 %",
+ "nombres": {},
+ "ticker": [
+  "Nvidia −4,12 % vor den Quartalszahlen am Dienstag",
+  "Micron −7,62 %, Intel −7,02 %: Chipwerte unter Druck",
+  "Anthropic-Börsengang für Donnerstag erwartet",
+  "VIX +18,7 % auf 22,9 Punkte",
+  "Empire-State-Index fällt um 18 Punkte auf 7,8",
+  "US-Einzelhandelsumsätze am Dienstag, 14:30 Uhr deutscher Zeit"
+ ],
+ "voz": {
+  "s_title": "Willkommen zum Tagesbericht von Wall Street auf Deutsch, für Montag, den 16. November. Ein schwacher Wochenstart an der Wall Street: Vor einer entscheidenden Woche für das Thema künstliche Intelligenz trennten sich Anleger von Technologieaktien. Der S&P 500 fiel um 1,92 Prozent auf rund 7.417 Punkte. Alle vier großen Indizes schlossen im Minus, der Nasdaq 100 verlor am stärksten. Im Blick: die Quartalszahlen von Nvidia am Dienstag und der für Donnerstag erwartete Börsengang von Anthropic.",
+  "s_indices": "Beginnen wir mit den großen Indizes. Der S&P 500 schloss bei 7.416,59 Punkten, ein Minus von 1,92 Prozent oder 145 Punkten. Der Nasdaq 100 verlor 2,67 Prozent auf 27.197 Punkte, sein dritter Verlusttag in Folge. Der Dow Jones gab 1,41 Prozent auf 51.608 Punkte nach, ein Minus von 739 Punkten, und die kleineren Werte im Russell 2000 fielen um 1,7 Prozent. Im S&P 500 fielen 352 Werte, nur 144 stiegen, berechnet. Der S&P 500 liegt jetzt knapp 5,5 Prozent unter seinem Allzeithoch vom 6. Oktober, der Nasdaq 100 gut 13 Prozent. Über seiner 200-Tage-Linie hält sich der S&P 500 nur noch um 1 Prozent, der Nasdaq 100 liegt 3 Prozent darunter.",
+  "s_grandes": "Wer hat die Indizes bewegt? Unter den größten Werten im Nasdaq 100 fielen Nvidia und Alphabet jeweils um gut 4 Prozent, Broadcom um 3,9 Prozent und Amazon um 3,3 Prozent. Apple und Microsoft hielten sich mit Abschlägen von rund 1 Prozent besser. Im Dow Jones kosteten Caterpillar und Goldman Sachs zusammen rund 325 Punkte, berechnet aus den Tagesdaten. Den größten Beitrag auf der Gewinnerseite lieferte UnitedHealth mit rund 27 Punkten.",
+  "s_news": "Warum hat sich der Markt bewegt? Erstens: Die Woche gilt als Härtetest für den KI-Handel. Nvidia legt am Dienstag nach Börsenschluss Zahlen vor, und am Donnerstag soll Anthropic an die Börse gehen. Berichtet wird eine angestrebte Bewertung von rund 1,4 Billionen Dollar. Zweitens: Das US-Handelsministerium hat eine Regel zum Fernzugriff auf moderne Chips erlassen. Sie soll das Umgehen von Exportbeschränkungen über Rechenzentren im Ausland verhindern. Drittens: Bei mehreren US-Großbanken gab es Störungen in Apps und bei Überweisungen; JPMorgan bestätigte Verzögerungen. Und die Konjunktur: Der Empire-State-Index für die Industrie in New York fiel um 18 Punkte auf 7,8. Der Volatilitätsindex VIX stieg um fast 19 Prozent auf 22,9 Punkte.",
+  "s_sectores": "Zu den Sektoren. Alle sechs Sektor-ETFs schlossen im Minus. Am stärksten traf es die Technologie mit minus 3,2 Prozent. Energie verlor knapp 2 Prozent, an einem Tag, an dem der Ölpreis um mehr als 4 Prozent fiel. Am besten hielten sich Gesundheit mit minus 0,5 Prozent und Finanzen mit minus 0,9 Prozent. Gegen den Trend stiegen die Krankenversicherer Centene und Elevance Health, ohne konkrete Meldung in der Presse.",
+  "s_macro": "Zu Zinsen, Dollar und Rohstoffen. Die Rendite der 10-jährigen US-Staatsanleihe gab um einen Basispunkt auf 5,13 Prozent nach. Renditen über 5 Prozent belasten die Bewertungen von Wachstumswerten. Der Dollar-Index DXY stieg leicht um 0,2 Prozent auf 103,6. Für Anleger aus dem Euroraum bedeutet ein festerer Dollar einen etwas schwächeren Euro. Der US-Ölpreis WTI fiel um 4,2 Prozent auf rund 85 Dollar, die Sorte Brent auf rund 92 Dollar. Laut Yahoo Finance erholen sich die Lieferungen durch die Straße von Hormus weiter. Und Europa? Der DAX hatte bereits um 17:30 Uhr mit einem Minus von 0,57 Prozent bei 26.599 Punkten geschlossen, der Euro Stoxx 50 mit minus 0,6 Prozent. Der Xetra-Handel beginnt morgen um 9 Uhr.",
+  "s_tech_spx": "Zur Charttechnik. Der S&P 500 notiert unter seiner 20- und seiner 50-Tage-Linie, um 2,4 und 3,2 Prozent, aber noch 1 Prozent über der 200-Tage-Linie bei rund 7.343 Punkten. Nach unserer Berechnung ist das weiterhin ein Seitwärtstrend. Der RSI liegt bei 40, im neutralen Bereich, aber nahe der schwächeren Zone. Der Index schloss nur knapp über seinem Tagestief bei 7.400 Punkten. Darunter folgt das Tief vom 5. November bei 7.350 Punkten. Der nächste Widerstand ist die 20-Tage-Linie bei rund 7.600 Punkten.",
+  "s_esc_spx": "Drei Szenarien für den S&P 500. Im positiven Szenario würde ein Schluss über der 20-Tage-Linie bei rund 7.600 Punkten die Lage entspannen; die nächste Marke wäre das Hoch vom 12. November bei 7.653 Punkten. Im neutralen Szenario pendelt der Index zwischen 7.400 und 7.600 Punkten. Im negativen Szenario würde ein Schluss unter 7.400 Punkten das Tief vom 5. November bei 7.350 Punkten und die 200-Tage-Linie bei rund 7.343 in den Blick rücken. Das sind Bedingungen, keine Prognosen.",
+  "s_tech_ndx": "Der Nasdaq 100 liegt 3 Prozent unter seiner 200-Tage-Linie und deutlich unter der 20- und der 50-Tage-Linie. Der RSI liegt bei knapp 38. Auch hier schloss der Index nahe am Tagestief. Seit Jahresbeginn liegt der Nasdaq 100 noch 7,7 Prozent im Plus; in der Spitze waren es laut finanzen.at rund 24 Prozent.",
+  "s_esc_ndx": "Für den Nasdaq 100 beginnt das positive Szenario mit der Rückeroberung der 200-Tage-Linie bei rund 28.048 Punkten; darüber wäre die 20-Tage-Linie bei 28.472 die nächste Marke. Im neutralen Szenario bleibt der Index zwischen dem heutigen Tief bei 27.149 und der 200-Tage-Linie. Im negativen Szenario würde ein Schluss unter 27.149 Punkten das Tief vom 5. November bei 26.606 Punkten in den Blick rücken.",
+  "s_agenda": "Was steht in der nächsten Sitzung an? Am Dienstag kommen die US-Einzelhandelsumsätze, um 8:30 Uhr New Yorker Zeit, 14:30 Uhr bei uns. Nach Börsenschluss, gegen 16:20 Uhr New Yorker Zeit und 22:20 Uhr bei uns, legt Nvidia seine Quartalszahlen vor. Am Donnerstag soll die Anthropic-Aktie erstmals gehandelt werden.",
+  "s_fin": "Unser Fazit: ein deutlicher Rückschlag für Technologiewerte vor einer Woche, in der Nvidia und Anthropic den Ton angeben dürften. Der S&P 500 hält sich noch über seiner 200-Tage-Linie, der Nasdaq 100 nicht mehr. Folgen Sie uns kostenlos auf Telegram, der Link steht in der Videobeschreibung. Wichtiger Hinweis: Das ist keine Anlageberatung, sondern nur Information. Text, Stimme und Grafiken sind mit KI erstellt. Wir sehen uns morgen, auf Wiedersehen."
+ },
+ "indices": {
+  "titulo": "Alle vier Indizes im Minus, Nasdaq 100 −2,67 %"
+ },
+ "grandes": {
+  "titulo": "Nvidia und Alphabet führen die Verluste an · Apple und Microsoft stabiler"
+ },
+ "noticias": {
+  "titulo": "KI-Woche mit Nvidia und Anthropic, neue Chip-Regel, schwache Industriedaten",
+  "fuente": "Quellen: Yahoo Finance; StockTitan; CNBC; finanzen.at; onvista (16. November 2026); TradingView.",
+  "items": [
+   [
+    "Nvidia und Anthropic",
+    "Nvidia-Zahlen am Dienstag nach Börsenschluss · Anthropic-Börsengang am Donnerstag erwartet"
+   ],
+   [
+    "Chip-Regel",
+    "US-Handelsministerium regelt Fernzugriff auf moderne Chips · Micron −7,62 %, Intel −7,02 %"
+   ],
+   [
+    "Banken",
+    "Störungen bei Apps und Überweisungen · JPMorgan bestätigt Verzögerungen, Aktie −2,31 %"
+   ],
+   [
+    "Konjunktur",
+    "Empire-State-Index fällt um 18 Punkte auf 7,8 (erwartet: 16,7) · VIX +18,7 %"
+   ]
+  ]
+ },
+ "sectores": {
+  "titulo": "Alle sechs Sektoren im Minus · Technologie −3,24 %",
+  "items": [
+   [
+    "Gesundheit und Finanzen am stabilsten",
+    "Krankenversicherer gegen den Trend: Centene +4,91 %, Elevance Health +3,86 %",
+    "teal"
+   ],
+   [
+    "Technologie und Energie hinten",
+    "Chipwerte unter Druck; Energie −1,96 % bei einem Ölpreis-Minus von 4,16 %",
+    "neg"
+   ]
+  ]
+ },
+ "acciones": [
+  {
+   "ticker": "NVDA",
+   "noticia": "Quartalszahlen am Dienstag nach Börsenschluss; Jensen Huang war am Donnerstag als Vorstandschef zurückgetreten (Yahoo Finance, StockTitan).",
+   "lectura": "Meistgehandelte Aktie des Tages; seit einer Woche −9,8 %, seit einem Monat −27,9 % (berechnet).",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Yahoo Finance; StockTitan (16. November 2026).",
+   "voz": "Die erste Aktie: Nvidia. Die in Deutschland viel gehandelte Aktie fiel um 4,12 Prozent auf 156,14 Dollar. Mit rund 51 Milliarden Dollar Umsatz war sie die meistgehandelte Aktie des Tages. Am Dienstag legt Nvidia seine Quartalszahlen vor, die ersten seit dem Rücktritt von Vorstandschef Jensen Huang am vergangenen Donnerstag. Laut CNBC konzentriert sich der Verwaltungsrat auf eine Untersuchung zur nationalen Sicherheit; Präsident Trump sprach sich am Montag für eine Rückkehr Huangs aus."
+  },
+  {
+   "ticker": "TSN",
+   "noticia": "Zahlen zum vierten Geschäftsquartal: bereinigter Gewinn je Aktie 0,61 Dollar, 47 % weniger als im Vorjahr; Umsatzausblick für 2027: −3,5 bis −5,5 % (StockTitan).",
+   "lectura": "Stärkster Wert im S&P 500, Volumen 1,7-mal so hoch wie im Schnitt.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: StockTitan (16. November 2026).",
+   "voz": "Die zweite Aktie: Tyson Foods, der Fleischkonzern. Die Aktie stieg um 8,72 Prozent auf 63,95 Dollar und war damit der stärkste Wert im S&P 500, bei 1,7-fachem Volumen. Tyson legte Zahlen zum vierten Geschäftsquartal vor. Der bereinigte Gewinn je Aktie lag bei 61 Cent, 47 Prozent weniger als vor einem Jahr, und für das Geschäftsjahr 2027 erwartet Tyson einen Umsatzrückgang von 3,5 bis 5,5 Prozent. Einen konkreten Grund für den Kursanstieg nannte die Presse nicht."
+  },
+  {
+   "ticker": "MU",
+   "noticia": "Keine konkrete Meldung zum Unternehmen; Chipwerte fielen nach der neuen US-Regel zum Fernzugriff auf Chips und nach Verlusten in Asien (StockTitan).",
+   "lectura": "Seit Jahresbeginn trotz des Rückgangs noch +144 % (berechnet).",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: StockTitan; onvista (16. November 2026).",
+   "voz": "Die dritte Aktie: Micron, der Hersteller von Speicherchips. Die Aktie fiel um 7,62 Prozent auf 719,02 Dollar, bei rund 19 Milliarden Dollar Umsatz. Eine konkrete Meldung zum Unternehmen gab es nicht. Micron fiel mit dem gesamten Chipsektor: Schon in Asien hatten Samsung, SK Hynix und TSMC deutlich nachgegeben. Seit Jahresbeginn liegt Micron trotzdem noch rund 144 Prozent im Plus."
+  },
+  {
+   "ticker": "HOOD",
+   "noticia": "Kursrutsch bei Kryptowerten: Bitcoin fiel am Montag zeitweise auf rund 64.000 Dollar (Yahoo Finance).",
+   "lectura": "Rückgang bei 1,5-fachem Volumen; Coinbase −6,11 %.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Yahoo Finance (16. November 2026).",
+   "voz": "Die vierte Aktie: Robinhood, die Handelsplattform für Aktien und Kryptowährungen. Die Aktie fiel um 7,45 Prozent auf 72,06 Dollar, bei eineinhalbfachem Volumen. Belastet hat der Rückgang bei Kryptowährungen: Bitcoin fiel laut Yahoo Finance am Montag zeitweise auf rund 64.000 Dollar. Auch die Kryptobörse Coinbase verlor 6,11 Prozent."
+  },
+  {
+   "ticker": "AMZN",
+   "noticia": "Amazon hält laut Yahoo Finance mehr als 5 % an Anthropic; Analysten von Vanda warnen, der Börsengang könne Geld aus großen Tech-Werten abziehen.",
+   "lectura": "Kostete den Dow Jones rund 53 Punkte (berechnet).",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Yahoo Finance (16. November 2026).",
+   "voz": "Die fünfte Aktie: Amazon. Die Aktie verlor 3,34 Prozent auf 257,75 Dollar und kostete den Dow Jones rund 53 Punkte, berechnet. Amazon ist laut Yahoo Finance mit mehr als 5 Prozent an Anthropic beteiligt, ebenso wie Alphabet. Analysten von Vanda warnen, der Börsengang könne Geld aus großen Technologiewerten abziehen. Alphabet verlor heute 4,07 Prozent."
+  }
+ ],
+ "macro": {
+  "titulo": "VIX steigt auf 22,9, Öl fällt um 4 %",
+  "items": {
+   "TVC:US10Y": "Über 5 %: hohe Renditen belasten Wachstumswerte",
+   "TVC:DXY": "Festerer Dollar, etwas schwächerer Euro",
+   "TVC:VIX": "Über 20 Punkten: mehr Nervosität am Markt",
+   "TVC:USOIL": "Lieferungen durch die Straße von Hormus erholen sich",
+   "TVC:GOLD": "Sicherer Hafen, abhängig von Dollar und Zinsen"
+  },
+  "europa": "DAX −0,57 % und Euro Stoxx 50 −0,6 %: Europa verlor deutlich weniger als die Wall Street."
+ },
+ "tecnico": {
+  "spx": {
+   "titulo": "Unter der 20- und 50-Tage-Linie, noch 1 % über der 200-Tage-Linie",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  },
+  "ndx": {
+   "titulo": "3 % unter der 200-Tage-Linie, Schluss nahe am Tagestief",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  }
+ },
+ "agenda": {
+  "titulo": "Nvidia-Zahlen am Dienstag",
+  "fuente": "Quellen: StockTitan; Yahoo Finance (16. November 2026). Deutsche Zeit aus der New Yorker Zeit berechnet.",
+  "filas": [
+   [
+    "2026-11-17",
+    "US-Einzelhandelsumsätze",
+    "08:30",
+    "geplant"
+   ],
+   [
+    "2026-11-17",
+    "Nvidia-Quartalszahlen nach Börsenschluss",
+    "16:20",
+    "geplant"
+   ],
+   [
+    "2026-11-19",
+    "Anthropic: erwarteter erster Handelstag",
+    "",
+    "erwartet"
+   ]
+  ]
+ },
+ "fin": {
+  "titular": "Tech-Ausverkauf vor einer Woche, in der Nvidia und Anthropic den Ton angeben",
+  "fuentes": "TradingView, Yahoo Finance, CNBC, StockTitan, finanzen.at, onvista"
+ }
+}
