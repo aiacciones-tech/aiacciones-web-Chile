@@ -6,7 +6,7 @@ todo lo que ve o escucha el público va en **alemán** (Hochdeutsch, trato de «
 
 Cada día de sesión en Nueva York (lunes a viernes; cierre a las 16:00 ET = **22:00 en Berlín** casi todo el año; 21:00 en las
 semanas de marzo y de octubre/noviembre en que EE. UU. y Europa cambian de hora en fechas distintas; sin vídeo en festivos de EE. UU.):
-un vídeo de **8 a 10 minutos** («Der Tagesbericht») y su Short para el canal Wall Street auf Deutsch (https://www.youtube.com/channel/PENDIENTE).
+un vídeo de **8 a 10 minutos** («Der Tagesbericht») y su Short para el canal Wall Street auf Deutsch (https://www.youtube.com/channel/UC23KiHTq_lULliZwAM3dEpA).
 Público: Alemania, Austria y Suiza (DACH). Se publica automáticamente y en público, sin revisión previa, como Nabd.
 El nombre del programa no puede ser «Wall Street Daily» (marca existente).
 Antes de publicar el primer vídeo, el canal debe estar verificado por teléfono (si no, las miniaturas fallan).
