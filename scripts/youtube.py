@@ -76,16 +76,22 @@ def subir_uno(t, carpeta):
     meta["description"] = con_web(enlazar(meta.get("description", ""), os.path.dirname(carpeta)),
                                   os.path.dirname(carpeta))
     video = os.path.join(carpeta, "video.mp4")
+    # Solo el canal alemán (cola-ge/) usa el idioma de su meta y declara contenido sintético;
+    # los demás canales quedan como estaban.
+    ge = os.path.basename(os.path.normpath(os.path.dirname(carpeta))) == "cola-ge"
+    idioma = meta.get("language", "de") if ge else "es"
+    estado = {"privacyStatus": meta.get("privacy", "private"), "selfDeclaredMadeForKids": False}
+    if ge:
+        estado["containsSyntheticMedia"] = True
     cuerpo = json.dumps({
         "snippet": {
             "title": meta["title"][:100],
             "description": meta.get("description", "")[:5000],
             "tags": meta.get("tags", []),
             "categoryId": str(meta.get("categoryId", "27")),
-            "defaultLanguage": "es", "defaultAudioLanguage": "es",
+            "defaultLanguage": idioma, "defaultAudioLanguage": idioma,
         },
-        "status": {"privacyStatus": meta.get("privacy", "private"),
-                   "selfDeclaredMadeForKids": False},
+        "status": estado,
     }).encode()
     _, cab, _ = pedir(f"{API}/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status",
                       cuerpo, {"Authorization": f"Bearer {t}",
