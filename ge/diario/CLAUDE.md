@@ -68,7 +68,7 @@ las 8 grandes del Nasdaq 100 y las candidatas.
 2. `python3 tecnico.py` y noticias del día: Yahoo Finance (live blog), CNBC, Reuters, The Closing Print, StockTitan; en alemán
    como contraste: Handelsblatt, Börse Online, finanzen.net, boerse.de, Reuters Deutschland. Fuentes oficiales (Fed, BLS, BEA,
    Tesoro, SEC EDGAR, notas de resultados) cuando las haya. Solo lo publicado ese día.
-3. Copiar la plantilla del día (la primera vez: crear `ejemplo-<fecha>/` alemán a partir de `ejemplo-2026-11-09-ar/`) a
+3. Copiar la plantilla del día (`ejemplo-2026-11-09/`, sin mercado.json ni salidas; en `video.json` → `macro.europa` va la frase de Europa) a
    `ge/diario/<fecha>/`, poner el `mercado.json` y reescribir `video.json`, `info.json` y `short.json` (< 59 s; fecha en la primera escena).
 4. Subir `video.json` a `claude/ge-diario-<fecha>`: `voz-GE.yml` genera la voz (2-4 min); clonar la rama `voz-ge`.
 5. `AUD=<scratch> python3 make_video.py <dir> preview` (mirar TODOS los PNG), luego `AUD=<scratch> VOZ_DIR=<voz>/<fecha> python3 make_video.py <dir>`.
