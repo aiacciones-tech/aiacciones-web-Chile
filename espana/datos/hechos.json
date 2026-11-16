@@ -1,6 +1,30 @@
 {
- "actualizado": "2026-11-16T13:24Z",
+ "actualizado": "2026-11-16T23:01Z",
  "items": [
+  {
+   "id": "59cba968-4048-4a08-bbb6-b12e3d882b0e",
+   "tipo": "OIR",
+   "fecha": "2026-11-16 18:16",
+   "entidad": "CELLNEX TELECOM, S.A.",
+   "nif": "A64907306",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad informa de la finalización de su programa de recompra de acciones propias y últimas operaciones ejecutadas conforme al programa",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b59cba968-4048-4a08-bbb6-b12e3d882b0e%7d",
+   "ticker": "CLNX",
+   "temas": []
+  },
+  {
+   "id": "4820b88b-80cb-430a-a6e3-d99ae87c7678",
+   "tipo": "OIR",
+   "fecha": "2026-11-16 17:56",
+   "entidad": "BANCO DE SABADELL, S.A.",
+   "nif": "A08000143",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Banco Sabadell informa de las operaciones sobre acciones propias que ha realizado entre los días 9 de noviembre de 2026 y 13 de noviembre de 2026 bajo el programa de recompra.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b4820b88b-80cb-430a-a6e3-d99ae87c7678%7d",
+   "ticker": "SAB",
+   "temas": []
+  },
   {
    "id": "8864bab4-68fb-464e-8eb3-6d4a0c3d7afe",
    "tipo": "OIR",
