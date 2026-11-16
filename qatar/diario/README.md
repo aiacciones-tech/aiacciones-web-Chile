@@ -1,7 +1,7 @@
 # Video diario en árabe de la Bolsa de Qatar (índice QE General)
 
 Cada día de sesión de la QSE (domingo a jueves), después del cierre (13:15 en Doha, 10:15 UTC): un video de unos 5 minutos (máximo 300 s) con énfasis en el análisis técnico, y su Short
-para @QatarAIStocks, todo en árabe (voz, textos en pantalla, título, descripción y posts), con posts en X y Facebook (Buffer 1), LinkedIn,
+para @QatarAIStocks, todo en árabe (voz, textos en pantalla, título, descripción y posts), con posts en X y Threads (Buffer 1; Facebook cerró la cuenta el 12-nov-2026), LinkedIn,
 TikTok e Instagram (Buffer 2) y Telegram. Adaptado del video diario de España (`espana/diario/`) a partir de su versión árabe de EAU (`eau/diario/`).
 Muestra: sesión del jueves 5-nov-2026 (`ejemplo-2026-11-05/`). Formato aprobado por Daniel el 7-nov-2026: datos a las 13:45 de Doha y rutina diaria a las 14:15 (domingo a jueves), publicación automática.
 Desde el 11-nov-2026 (pedido de Daniel el 10-nov): 5 minutos y 4 escenas técnicas. Ejemplo del formato nuevo: `ejemplo-2026-11-10/`.
