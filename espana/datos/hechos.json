@@ -1,6 +1,34 @@
 {
- "actualizado": "2026-11-17T14:10Z",
+ "actualizado": "2026-11-17T22:28Z",
  "items": [
+  {
+   "id": "d8abc3f1-33eb-4f3b-8c7b-f1260754ccc1",
+   "tipo": "OIR",
+   "fecha": "2026-11-17 17:40",
+   "entidad": "ENAGAS, S.A.",
+   "nif": "A",
+   "categoria": "Otra información relevante",
+   "titulo": "Pago dividendo a cuenta 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bd8abc3f1-33eb-4f3b-8c7b-f1260754ccc1%7d",
+   "ticker": "ENG",
+   "temas": [
+    "dividendos"
+   ]
+  },
+  {
+   "id": "94c5ba5b-ff03-40ce-9fb4-7b4cf2a67291",
+   "tipo": "OIR",
+   "fecha": "2026-11-17 17:37",
+   "entidad": "MAPFRE, S.A.",
+   "nif": "A08055741",
+   "categoria": "Otra información relevante",
+   "titulo": "Información sobre el dividendo a cuenta 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b94c5ba5b-ff03-40ce-9fb4-7b4cf2a67291%7d",
+   "ticker": "MAP",
+   "temas": [
+    "dividendos"
+   ]
+  },
   {
    "id": "bbe84723-327f-4998-9f8e-fd83021e61a8",
    "tipo": "OIR",
