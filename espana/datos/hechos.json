@@ -1,6 +1,42 @@
 {
- "actualizado": "2026-11-16T23:01Z",
+ "actualizado": "2026-11-17T14:10Z",
  "items": [
+  {
+   "id": "bbe84723-327f-4998-9f8e-fd83021e61a8",
+   "tipo": "OIR",
+   "fecha": "2026-11-17 12:18",
+   "entidad": "UNICAJA BANCO, S.A.",
+   "nif": "A93139053",
+   "categoria": "Convocatoria de Junta o Asamblea",
+   "titulo": "Acuerdos adoptados por la Junta General Extraordinaria de Accionistas y por el Consejo de Administración.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bbbe84723-327f-4998-9f8e-fd83021e61a8%7d",
+   "ticker": "UNI",
+   "temas": []
+  },
+  {
+   "id": "87f51f3f-074a-42ed-9d62-901b052b0122",
+   "tipo": "OIR",
+   "fecha": "2026-11-17 11:05",
+   "entidad": "INTERNATIONAL CONSOLIDATED AIRLINES GROUP, S.A.",
+   "nif": "A85845535",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información sobre las operaciones efectuadas al amparo de su programa de recompra de acciones",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b87f51f3f-074a-42ed-9d62-901b052b0122%7d",
+   "ticker": "IAG",
+   "temas": []
+  },
+  {
+   "id": "cbfbd4de-5192-40ad-a5b4-db54810244e6",
+   "tipo": "OIR",
+   "fecha": "2026-11-17 09:45",
+   "entidad": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Compras de autocartera del 10 al 16 de noviembre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bcbfbd4de-5192-40ad-a5b4-db54810244e6%7d",
+   "ticker": "ACS",
+   "temas": []
+  },
   {
    "id": "59cba968-4048-4a08-bbb6-b12e3d882b0e",
    "tipo": "OIR",
