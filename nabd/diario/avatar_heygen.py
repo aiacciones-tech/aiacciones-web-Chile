@@ -29,6 +29,13 @@ def api(method, path, body=None, files=None):
         return json.loads(e.read() or b"{}") | {"http": e.code}
 
 
+def subir(f):
+    try:
+        return api("POST", "/v3/assets", files=f)
+    except Exception as e:  # curl con error o respuesta que no es JSON
+        return {"error": repr(e)[:300]}
+
+
 def saldo():
     d = (api("GET", "/v3/users/me").get("data") or {})
     w = d.get("wallet") or {}
@@ -52,10 +59,15 @@ def main():
     wav = os.path.join(out, "avatar-audio.wav")
     import numpy as np
     w = wave.open(wav, "wb"); w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr); w.writeframes(np.clip(a, -32768, 32767).astype(np.int16).tobytes()); w.close()
-    ia = api("POST", "/v3/assets", files=IMG).get("data", {}).get("asset_id")
-    aa = api("POST", "/v3/assets", files=wav).get("data", {}).get("asset_id")
+    ri, ra = {}, {}
+    for _ in range(3):  # la subida falló una vez sin motivo (17-nov-2026): reintenta y anota la respuesta
+        if not (ri.get("data") or {}).get("asset_id"): ri = subir(IMG)
+        if not (ra.get("data") or {}).get("asset_id"): ra = subir(wav)
+        ia, aa = (ri.get("data") or {}).get("asset_id"), (ra.get("data") or {}).get("asset_id")
+        if ia and aa: break
+        time.sleep(10)
     os.remove(wav)
-    if not ia or not aa: return fin("no se pudieron subir la foto o el audio")
+    if not ia or not aa: return fin("no se pudieron subir la foto o el audio: " + json.dumps(ri if not ia else ra, ensure_ascii=False)[:300])
     t0 = time.time()
     c = api("POST", "/v3/videos", {"type": "image", "image": {"type": "asset_id", "asset_id": ia}, "audio_asset_id": aa,
                                     "aspect_ratio": "1:1", "resolution": "1080p", "expressiveness": "medium",
