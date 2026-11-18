@@ -87,3 +87,6 @@ las 8 grandes del Nasdaq 100 y las candidatas.
 - **Impressum** (§ 5 DDG): enlace al Impressum de Daniel en la descripción del canal y en cada descripción de vídeo, cuando exista.
 - Todo archivo de salida termina en `-GE` antes de la extensión.
 - Todos los secretos de GitHub del canal terminan en `_GE` (regla de Daniel).
+
+## Serie de resultados de las 20 grandes
+Además del diario, un vídeo corto (2-4 min) por cada informe de resultados de las 20 mayores empresas de EE. UU.: `ge/serie20/CLAUDE.md`.
