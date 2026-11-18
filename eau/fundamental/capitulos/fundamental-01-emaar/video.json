@@ -2,6 +2,35 @@
  "base": "fundamental-01-emaar",
  "capitulo_n": 1,
  "simbolo": "DFM:EMAAR",
- "simbolos_extra": ["DFM:EMAARDEV", "ADX:ALDAR"],
- "escenas": []
+ "simbolos_extra": [
+  "DFM:EMAARDEV",
+  "ADX:ALDAR"
+ ],
+ "escenas": [],
+ "documentos": [
+  {
+   "id": "fs-2025",
+   "url": "https://candidocs.nasdaqdubai.com/2026/Apr/21/83656b12-4dcb-4072-94f0-59398d4c489a/Emaar%20Properties%20PJSC%20-%20FS%20for%20the%20Year%202025.pdf"
+  },
+  {
+   "id": "ar-2025",
+   "url": "https://uae-cms.emaar.com/uploads/Emaar_Properties_IR_2025_English_F_217e05f4f9.pdf"
+  },
+  {
+   "id": "fs-1t26",
+   "url": "https://feeds.dfm.ae/documents/2026/May/11/ca83f2b5-7d91-4674-86d5-810f5ee11c99/FS%20%20%20Emaar%20Properties%20PJSC%20And%20Its%20Subsidiaries%2031.pdf"
+  },
+  {
+   "id": "pr-9m26",
+   "url": "https://mid-east.info/emaars-net-profit-before-tax-increased-by-18-to-aed-19-8-billion-us-5-4-billion-in-the-first-nine-months-of-2026-revenue-backlog-stands-at-aed-158-8-billion-us-43-2-billion/"
+  },
+  {
+   "id": "gn-9m26",
+   "url": "https://gulfnews.com/business/property/emaar-profit-jumps-17-as-developer-moves-to-buy-out-listed-subsidiary-1.500737248"
+  },
+  {
+   "id": "pr-fy25",
+   "url": "https://www.emaar.com/en/press-release-listing/emaar-achieves-another-record-year-with-highest-ever-sales-revenue-and-profit-in-2025"
+  }
+ ]
 }
