@@ -1,6 +1,26 @@
 {
- "actualizado": "2026-11-17T04:10Z",
+ "actualizado": "2026-11-18T03:07Z",
  "items": [
+  {
+   "num": "2026110726544",
+   "id": "copec",
+   "ent": "EMPRESAS COPEC S.A.",
+   "fecha": "2026-11-17 19:58",
+   "materias": [
+    "Activos o paquetes accionarios, adquisición o enajenación"
+   ],
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=4847093dfdfdcb077a1af1699a6c6f86VFdwQmVVNXFSWGhOUkdONVRtcFZNRTVCUFQwPQ==&secuencia=-1&t=1794971221"
+  },
+  {
+   "num": "2026110725956",
+   "id": "mallplaza",
+   "ent": "PLAZA S.A.",
+   "fecha": "2026-11-17 16:12",
+   "materias": [
+    "Colocación de valores en mercados internacionales y/o nacionales"
+   ],
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f3fd1d53b79b5731d297da1956102fbbVFdwQmVVNXFSWGhOUkdONVRsUnJNVTVuUFQwPQ==&secuencia=-1&t=1794971221"
+  },
   {
    "num": "2026110723274",
    "id": "cmpc",
@@ -9,7 +29,7 @@
    "materias": [
     "Activos o paquetes accionarios, adquisición o enajenación"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=a318bfed819ce73e4754aa1c7763a430VFdwQmVVNXFSWGhOUkdONVRYcEpNMDVCUFQwPQ==&secuencia=-1&t=1794888601"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=a318bfed819ce73e4754aa1c7763a430VFdwQmVVNXFSWGhOUkdONVRYcEpNMDVCUFQwPQ==&secuencia=-1&t=1794971221"
   },
   {
    "num": "2026110719760",
@@ -19,7 +39,7 @@
    "materias": [
     "Colocaciones relacionadas"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=18f081b58d0d2ebd80f4dfc257ff7898VFdwQmVVNXFSWGhOUkdONFQxUmpNazFCUFQwPQ==&secuencia=-1&t=1794888601"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=18f081b58d0d2ebd80f4dfc257ff7898VFdwQmVVNXFSWGhOUkdONFQxUmpNazFCUFQwPQ==&secuencia=-1&t=1794971221"
   },
   {
    "num": "2026110719198",
@@ -29,7 +49,7 @@
    "materias": [
     "Colocación de valores en mercados internacionales y/o nacionales"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=39a007f3a49be4519f3a59793042e896VFdwQmVVNXFSWGhOUkdONFQxUkZOVTlCUFQwPQ==&secuencia=-1&t=1794888601"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=39a007f3a49be4519f3a59793042e896VFdwQmVVNXFSWGhOUkdONFQxUkZOVTlCUFQwPQ==&secuencia=-1&t=1794971221"
   },
   {
    "num": "2026110717052",
@@ -39,7 +59,7 @@
    "materias": [
     "Colocaciones relacionadas"
    ],
-   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=84eda0aa9d883907f2d6292e4cc3dbe4VFdwQmVVNXFSWGhOUkdONFRucEJNVTFuUFQwPQ==&secuencia=-1&t=1794888601"
+   "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=84eda0aa9d883907f2d6292e4cc3dbe4VFdwQmVVNXFSWGhOUkdONFRucEJNVTFuUFQwPQ==&secuencia=-1&t=1794971221"
   },
   {
    "num": "2026110704791",
