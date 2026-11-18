@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-11-17T22:28Z",
+ "actualizado": "2026-11-18T13:42Z",
  "items": [
+  {
+   "id": "b6d032e5-810f-4963-a93a-a5ea8bdd3b25",
+   "tipo": "OIR",
+   "fecha": "2026-11-18 08:30",
+   "entidad": "ENAGAS, S.A.",
+   "nif": "A",
+   "categoria": "Sobre operaciones corporativas",
+   "titulo": "Resolución Laudo TGP",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bb6d032e5-810f-4963-a93a-a5ea8bdd3b25%7d",
+   "ticker": "ENG",
+   "temas": []
+  },
   {
    "id": "d8abc3f1-33eb-4f3b-8c7b-f1260754ccc1",
    "tipo": "OIR",
