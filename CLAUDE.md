@@ -11,3 +11,5 @@
 - **Voz de AIAcciones Chile (diario IPSA, videos de resultados y Shorts):** desde el 18-nov-2026 es Azure `es-CL-LorenzoNeural` (elección de Daniel);
   Piper solo de respaldo. Antes de renderizar, lee `voz-cl/README.md`: `bash voz-cl/pedir.sh <id> <dir> <fuentes>` y luego el render de siempre con
   `PYTHONPATH=<repo>/voz-cl/shim VOZ_DIR=<dir>`. Prevalece sobre "voz Piper" en el texto de las tareas programadas de Chile.
+- **Arabia Saudita, serie educativa semanal «التحليل الفني ببساطة» (sábados):** instrucciones y pasos en `saudi/educativo/CLAUDE.md`
+  (prevalecen sobre el texto de su tarea programada). Plan de temas en `saudi/educativo/plan-saudi.json`.
