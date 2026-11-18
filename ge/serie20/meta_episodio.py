@@ -44,7 +44,7 @@ open(f"{D}/post-telegram-{BASE}-GE.txt", "w").write(tg)
 tk = (f"{SERIE}: {VJ['nombre']} ({VJ['ticker']}) · {VJ['trimestre']}\n\n{I['x']}\n\n" + "\n".join("• " + c for c in VJ["claves"]) +
       f"\n\n▶️ Mehr auf YouTube: Wall Street auf Deutsch\n🤖 Mit KI erstellt (Text, Stimme und Grafiken).\n"
       "Keine Anlageberatung, nur Information und Bildung. Keine Positionen in den genannten Aktien. Risiko bis zum Totalverlust.\n"
-      f"#WallStreetAufDeutsch #WallStreetGiganten #Quartalszahlen #Aktien #Börse {I['hashtags']}")
+      + " ".join(dict.fromkeys(f"#WallStreetAufDeutsch #WallStreetGiganten #Quartalszahlen #Aktien #Börse {I['hashtags']}".split())))
 assert len(tk) <= 2200 and "{youtube}" not in tk, len(tk)
 open(f"{D}/post-tiktok-{BASE}-GE.txt", "w").write(tk)
 
