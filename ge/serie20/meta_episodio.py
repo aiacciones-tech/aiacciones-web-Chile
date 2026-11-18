@@ -40,6 +40,13 @@ tg = (f"📊 {SERIE} | {VJ['nombre']} ({VJ['ticker']}) · {VJ['trimestre']}\n\n{
       f"\n\n▶️ Die ganze Folge: {{youtube}}\nUnser YouTube-Kanal: {CANAL}\n\nKeine Anlageberatung. Nur Information und Bildung. Mit KI erstellt.")
 assert len(tg) <= 1000, len(tg)
 open(f"{D}/post-telegram-{BASE}-GE.txt", "w").write(tg)
+# TikTok (vía Buffer, buffer-GE.yml): el episodio entero (horizontal, 2-4 min) con aviso de IA en el texto; sin {youtube}, que no es clicable allí
+tk = (f"{SERIE}: {VJ['nombre']} ({VJ['ticker']}) · {VJ['trimestre']}\n\n{I['x']}\n\n" + "\n".join("• " + c for c in VJ["claves"]) +
+      f"\n\n▶️ Mehr auf YouTube: Wall Street auf Deutsch\n🤖 Mit KI erstellt (Text, Stimme und Grafiken).\n"
+      "Keine Anlageberatung, nur Information und Bildung. Keine Positionen in den genannten Aktien. Risiko bis zum Totalverlust.\n"
+      f"#WallStreetAufDeutsch #WallStreetGiganten #Quartalszahlen #Aktien #Börse {I['hashtags']}")
+assert len(tk) <= 2200 and "{youtube}" not in tk, len(tk)
+open(f"{D}/post-tiktok-{BASE}-GE.txt", "w").write(tk)
 
 # Miniatura 1280x720
 th = VJ["miniatura"]; f = fig(1280, 720)
