@@ -6,3 +6,5 @@
 - **Wall Street auf Deutsch (canal alemán, código `ge`), vídeo diario:** las instrucciones vigentes están en `ge/diario/CLAUDE.md` y prevalecen
   sobre el texto de su tarea programada. Ese canal solo toca `ge/`, sus workflows `*-GE.yml` y `cola-ge/`; lee los datos de `datos-diario-nabd`
   sin modificarlos. Sus secretos de GitHub terminan en `_GE`.
+- **Arabia Saudita (@SaudiArabiaAIStocks, `saudi/diario/`), vídeo diario:** desde el 18-nov-2026 la voz es Azure `ar-SA-HamedNeural` (workflow `voz-saudi.yml`,
+  rama `voz-saudi`, `VOZ_DIR`). Antes de empezar, lee `saudi/diario/CLAUDE.md`: prevalece sobre el texto de la tarea programada donde difieran.

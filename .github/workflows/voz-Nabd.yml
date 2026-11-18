@@ -48,8 +48,13 @@ jobs:
           echo "fecha $F"
           # fecha también puede ser una o varias carpetas del repo con video.json, separadas por comas
           # (p. ej. nabd/serie20/intro o los episodios del día de la serie 20 acciones); cada una sale en <rama voz-nabd>/<nombre de la carpeta>
+          # wav ya hechos (re-subida del guion sin cambios o con pocos): voz_azure.py salta los que existen y solo pide a Azure las frases nuevas.
+          # Ahorra cuota del plan F0, compartido con el canal de Arabia Saudita (voz-saudi.yml).
+          mkdir -p /tmp/voz; git fetch -q --depth 1 origin voz-nabd 2>/dev/null || true
           for X in ${F//,/ }; do
             D=nabd/diario/$X; [ -f "$X/video.json" ] && D=$X
+            B=$(basename "$X")
+            if git cat-file -e "FETCH_HEAD:$B" 2>/dev/null; then git archive FETCH_HEAD "$B" | tar -x -C /tmp/voz --exclude="$B/avatar*"; echo "reutilizo $(ls /tmp/voz/$B | wc -l) archivos de $B"; fi
             python3 nabd/diario/voz_azure.py $D/video.json /tmp/voz/$(basename "$X")
             # Presentador IA (HeyGen) en la apertura del diario, martes y jueves (prueba de un mes, 14-nov-2026). Opcional: nunca para la voz.
             if [[ "$X" =~ ^20[0-9]{2}-[0-9]{2}-[0-9]{2}$ ]] && [ "${{ inputs.avatar }}" != "no" ] && [ -n "$HEYGEN_API_KEY" ]; then
