@@ -1,0 +1,7 @@
+{
+ "base": "fundamental-01-emaar",
+ "capitulo_n": 1,
+ "simbolo": "DFM:EMAAR",
+ "simbolos_extra": ["DFM:EMAARDEV", "ADX:ALDAR"],
+ "escenas": []
+}
