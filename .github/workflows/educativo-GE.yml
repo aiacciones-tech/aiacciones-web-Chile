@@ -1,0 +1,45 @@
+# Serie educativa «Charttechnik einfach erklärt» de Wall Street auf Deutsch (ge/educativo/): datos y voz de cada lección.
+# Se lanza sola al subir ge/educativo/lecciones/<carpeta>/video.json a una rama claude/ge-educativo-*:
+#  1) velas diarias de TradingView del "simbolo" de la lección (ge/educativo/datos_leccion.py), solo la primera vez (se congelan);
+#  2) voz Azure de-DE-ConradNeural de "voz" (ge/diario/voz_azure.py; mismo recurso y secretos _GE que el diario), si ya hay locución.
+# Deja velas.json y un wav por frase en <carpeta>/ de la rama voz-ge-educativo (rama aparte de voz-ge y voz-ge-serie20).
+name: Datos y voz de la serie educativa (Wall Street auf Deutsch)
+on:
+  push:
+    branches: ["claude/ge-educativo-**"]
+    paths: ["ge/educativo/lecciones/*/video.json"]
+  workflow_dispatch:
+    inputs:
+      carpetas:
+        description: "carpetas de ge/educativo/lecciones separadas por comas; vacío = las que cambian respecto a main"
+        default: ""
+permissions:
+  contents: write
+concurrency: voz-ge-educativo
+jobs:
+  leccion:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_GE }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_GE || 'germanywestcentral' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Datos y voz
+        run: |
+          pip install -q websocket-client
+          C="${{ inputs.carpetas }}"
+          if [ -z "$C" ]; then
+            git fetch -q --depth 1 origin main
+            C=$(git diff --name-only origin/main HEAD -- 'ge/educativo/lecciones/*/video.json' | cut -d/ -f4 | sort -u | paste -sd, -)
+          fi
+          test -n "$C" || { echo "ninguna lección cambiada"; exit 0; }
+          R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git clone -q --depth 1 -b voz-ge-educativo "$R" /tmp/out 2>/dev/null || { mkdir -p /tmp/out && cd /tmp/out && git init -q -b voz-ge-educativo && git remote add origin "$R" && cd -; }
+          for c in ${C//,/ }; do
+            echo "== $c"; J=ge/educativo/lecciones/$c/video.json
+            python3 ge/educativo/datos_leccion.py $J /tmp/out/$c
+            if [ -n "$AZURE_SPEECH_KEY" ]; then python3 ge/diario/voz_azure.py $J /tmp/out/$c; else echo "Falta AZURE_SPEECH_KEY_GE: sin voz Azure"; fi
+          done
+          cd /tmp/out && git add -A
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Serie educativa GE: datos y voz $C" || exit 0
+          for i in 1 2 3; do git push -q origin HEAD:voz-ge-educativo && break; sleep 5; done
