@@ -31,11 +31,12 @@ cambio y volumen de las 31 acciones del IPSA (lista `IPSA`, revisar en cada reba
 2. Noticias y motivos: Diario Financiero, Diario Estrategia, La Tercera/Pulso, Emol, CNN Chile, hechos esenciales CMF (`web/assets/hechos.json`), INE/Banco Central.
    Agenda: `fuente/calendario.py` y `fuente/divs.json`.
 3. Copia `ejemplo-2026-11-09/` a la carpeta del día y cambia `video.json`, `info.json` y `short.json` (menos de 59 s; fecha en la primera escena).
-4. `VOICE=<es_MX-claude-high.onnx> AUD=<scratch> python3 make_video.py <dir> preview` (revisa los PNG), luego sin `preview` (280-320 s; máx. 330).
-5. `python3 make_short.py <dir>/short.json` y `python3 gen_meta.py <dir>` (meta de YouTube con capítulos y aviso, posts y miniatura con la fecha).
+4. `VOICE=<es_MX-claude-high.onnx> AUD=<scratch> python3 make_video.py <dir> preview` (revisa los PNG). Voz Azure Lorenzo (`../voz-cl/README.md`): `bash voz-cl/pedir.sh diario-<fecha> <scratch>/voz <dir>/video.json <dir>/short.json`,
+   y luego, con `PYTHONPATH=<repo>/voz-cl/shim VOZ_DIR=<scratch>/voz`, `make_video.py <dir>` sin `preview` (280-320 s; máx. 330).
+5. `python3 make_short.py <dir>/short.json` (mismo `PYTHONPATH` y `VOZ_DIR`) y `python3 gen_meta.py <dir>` (meta de YouTube con capítulos y aviso, posts y miniatura con la fecha).
 6. `bash encolar.sh <dir>`: revisa el límite de YouTube (compartido con los videos de resultados) y encola en `cola/bolsa-<fecha>` de `youtube-cola`.
 
-Voz: Piper `es_MX-claude-high` (github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-es_MX-claude-high.tar.bz2), ajustes de voz fluida.
+Voz: Azure `es-CL-LorenzoNeural` desde el 18-nov-2026 (elección de Daniel; `voz-cl/`). Respaldo: Piper `es_MX-claude-high` (github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-es_MX-claude-high.tar.bz2), ajustes de voz fluida.
 Logo: `/mnt/project-files/marca/logo-aiacciones-chile.png`. Dependencias: `pip install piper-tts matplotlib imageio-ffmpeg pillow numpy`.
 
 ## Campaña de comentarios (hasta el 22-nov-2026)

@@ -1,0 +1,33 @@
+# Muestras de voz Azure para AIAcciones Chile (Daniel elige la voz que reemplaza a Piper).
+# Se lanza al subir voz-muestras-cl/texto.txt o muestras.py a una rama claude/**, o a mano con "Run workflow".
+# Deja los mp3 en la rama voz-muestras-cl (sin historial). Secretos: AZURE_SPEECH_KEY_CL y AZURE_SPEECH_REGION_CL.
+name: Muestras de voz Azure (Chile)
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["voz-muestras-cl/**", ".github/workflows/voz-muestras-cl.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: voz-muestras-cl
+jobs:
+  muestras:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_CL }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_CL }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generar muestras
+        run: |
+          if [ -z "$AZURE_SPEECH_KEY" ] || [ -z "$AZURE_SPEECH_REGION" ]; then echo "Falta AZURE_SPEECH_KEY_CL o AZURE_SPEECH_REGION_CL"; exit 1; fi
+          python3 voz-muestras-cl/muestras.py voz-muestras-cl/texto.txt /tmp/out/muestras
+          cp voz-muestras-cl/texto.txt /tmp/out/muestras/
+          ls -la /tmp/out/muestras
+          ls /tmp/out/muestras/*.mp3 >/dev/null
+      - name: Subir a la rama voz-muestras-cl
+        run: |
+          cd /tmp/out && git init -q -b voz-muestras-cl && git add muestras
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Muestras de voz Azure Chile"
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          for i in 1 2 3; do git push -qf origin voz-muestras-cl && break; sleep 5; done
