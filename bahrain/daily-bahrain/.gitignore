@@ -5,3 +5,7 @@ sample-*/meta-*-bahrain.json
 sample-*/times-bahrain.json
 data/
 __pycache__/
+# Rendered outputs of each day (delivered to /mnt/project-files/bahrain-pipeline/daily-bahrain/<date>/ and the YouTube queue); only the JSON is versioned.
+20*-bahrain/*-bahrain.mp4
+20*-bahrain/*-bahrain.png
+20*-bahrain/*-bahrain.txt
