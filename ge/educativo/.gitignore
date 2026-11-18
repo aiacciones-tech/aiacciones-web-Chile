@@ -1,0 +1,5 @@
+# salidas del render (se guardan en /mnt/project-files/ge-educativo/, no en el repo)
+lecciones/*/*-GE.*
+lecciones/*/times.json
+lecciones/*/velas.json
+lecciones/*/ids.txt
