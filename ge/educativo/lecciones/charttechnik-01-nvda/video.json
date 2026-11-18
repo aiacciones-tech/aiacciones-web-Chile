@@ -1,0 +1,321 @@
+{
+ "base": "charttechnik-01-nvda",
+ "folge": 1,
+ "simbolo": "NASDAQ:NVDA",
+ "ticker": "NVDA",
+ "nombre": "Nvidia",
+ "tema": "Unterstützung und Widerstand",
+ "ultima_vela": "2026-11-17",
+ "voz": {},
+ "escenas": [
+  {
+   "id": "einstieg",
+   "tipo": "portada",
+   "capitulo": "Einstieg",
+   "sub": "Was Charttechniker damit meinen und wie man diese Zonen im Chart findet",
+   "voz": "Willkommen bei Wall Street auf Deutsch und zur ersten Folge unserer neuen Serie: Charttechnik einfach erklärt. In jeder Folge erklären wir einen Begriff der technischen Analyse, und zwar nicht an einem Lehrbuchbeispiel, sondern am echten Chart einer bekannten US-Aktie. Heute geht es um die Grundlage von allem: Unterstützung und Widerstand. Unser Beispiel ist Nvidia, eine der meistgehandelten Aktien der Welt. Wichtig vorab: Das ist Bildung, keine Anlageberatung. Nvidia dient nur als Anschauungsbeispiel."
+  },
+  {
+   "id": "begriffe",
+   "tipo": "esquema",
+   "modo": "sr",
+   "capitulo": "Die Begriffe",
+   "kicker": "Die Begriffe",
+   "titulo": "Unterstützung unten, Widerstand oben",
+   "notas": [
+    "Unterstützung: Hier fiel der Kurs bisher nicht weiter",
+    "Widerstand: Hier stieg der Kurs bisher nicht weiter",
+    "Beides sind Zonen, keine exakten Linien"
+   ],
+   "voz": "Zuerst die Begriffe. Eine Unterstützung ist ein Kursbereich, in dem ein fallender Kurs in der Vergangenheit mehrmals gestoppt hat und wieder nach oben gedreht ist. Ein Widerstand ist das Gegenstück: ein Bereich, in dem ein steigender Kurs mehrmals gestoppt hat. Im Schaubild sehen Sie, wie der Kurs zwischen beiden Bereichen hin und her pendelt. Und achten Sie auf ein Wort: Bereich. Charttechniker zeichnen meistens keine exakte Linie, sondern eine Zone von einigen Dollar Breite."
+  },
+  {
+   "id": "warum",
+   "tipo": "puntos",
+   "capitulo": "Warum es funktioniert",
+   "kicker": "Warum es funktioniert",
+   "titulo": "Der Markt hat ein Gedächtnis",
+   "puntos": [
+    [
+     "Erinnerung",
+     "Wer an einem Preis gekauft oder verkauft hat, achtet darauf, wenn der Kurs dorthin zurückkehrt."
+    ],
+    [
+     "Aufträge",
+     "An bekannten Marken sammeln sich Kauf- und Verkaufsaufträge, oft auch Stop-Aufträge."
+    ],
+    [
+     "Runde Zahlen",
+     "Marken wie 150 oder 200 Dollar ziehen viel Aufmerksamkeit auf sich."
+    ],
+    [
+     "Je öfter, desto wichtiger",
+     "Eine Zone mit mehreren Berührungen gilt als bedeutender als eine mit nur einer."
+    ]
+   ],
+   "voz": "Warum soll das überhaupt funktionieren? Die Erklärung liegt im Verhalten der Anleger. Wer zu einem bestimmten Preis gekauft oder verkauft hat, erinnert sich daran, wenn der Kurs dorthin zurückkehrt. An solchen Marken sammeln sich deshalb viele Kauf- und Verkaufsaufträge, auch Stop-Aufträge. Runde Zahlen wie 150 oder 200 Dollar verstärken diesen Effekt. Und eine einfache Faustregel: Je öfter der Kurs eine Zone berührt hat, desto mehr Beachtung findet sie. Eine Garantie ist das aber nie."
+  },
+  {
+   "id": "nvda_range",
+   "tipo": "grafico",
+   "capitulo": "Beispiel Nvidia",
+   "kicker": "Beispiel Nvidia, November 2025 bis April 2026",
+   "titulo": "Fünf Monate zwischen zwei Zonen",
+   "desde": "2025-11-01",
+   "hasta": "2026-04-10",
+   "animar_velas": true,
+   "zonas": [
+    {
+     "de": 193,
+     "a": 198,
+     "texto": "Widerstand",
+     "color": "neg"
+    },
+    {
+     "de": 167,
+     "a": 172,
+     "texto": "Unterstützung",
+     "color": "teal"
+    }
+   ],
+   "marcas": [
+    {
+     "fecha": "2025-11-20",
+     "tipo": "techo"
+    },
+    {
+     "fecha": "2026-01-05",
+     "tipo": "techo"
+    },
+    {
+     "fecha": "2026-01-30",
+     "tipo": "techo"
+    },
+    {
+     "fecha": "2026-02-09",
+     "tipo": "techo"
+    },
+    {
+     "fecha": "2026-02-25",
+     "tipo": "techo"
+    },
+    {
+     "fecha": "2025-11-25",
+     "tipo": "suelo"
+    },
+    {
+     "fecha": "2025-12-17",
+     "tipo": "suelo"
+    },
+    {
+     "fecha": "2026-02-05",
+     "tipo": "suelo"
+    },
+    {
+     "fecha": "2026-03-30",
+     "tipo": "suelo",
+     "texto": "kurz darunter"
+    }
+   ],
+   "nota": "Seitwärtsphase",
+   "voz": "Jetzt zum echten Chart. Sie sehen Tageskerzen der Nvidia-Aktie von November 2025 bis April 2026. Über fünf Monate bewegte sich der Kurs in einer Spanne. Oben scheiterte er immer wieder im Bereich von etwa 193 bis 198 Dollar, zum Beispiel im November, zweimal im Januar und zweimal im Februar. Das ist der Widerstand. Unten drehte er im Bereich von etwa 167 bis 172 Dollar wieder nach oben, im November, im Dezember und im Februar. Das ist die Unterstützung. Ende März fiel der Kurs kurz darunter, bis auf 164 Dollar, war aber schon am nächsten Tag zurück in der Spanne. Genau deshalb denken Charttechniker in Zonen und nicht in exakten Linien.",
+   "ultimo": false
+  },
+  {
+   "id": "rollentausch_idee",
+   "tipo": "esquema",
+   "modo": "rollentausch",
+   "capitulo": "Rollentausch",
+   "kicker": "Der Rollentausch",
+   "titulo": "Aus Widerstand wird Unterstützung",
+   "notas": [
+    "Der Kurs bricht über den Widerstand",
+    "Beim Rücksetzer hält die alte Zone von oben",
+    "Umgekehrt: Gebrochene Unterstützung kann zum Widerstand werden"
+   ],
+   "voz": "Was passiert, wenn der Kurs eine solche Zone durchbricht? Dann beobachten Charttechniker oft einen Rollentausch. Ein überwundener Widerstand kann bei einem späteren Rücksetzer zur Unterstützung werden. Der Gedanke dahinter: Wer vorher am Widerstand verkauft hat und den Anstieg verpasst hat, kauft womöglich gerne dort wieder. Das gilt auch umgekehrt. Eine gebrochene Unterstützung kann später zum Widerstand werden."
+  },
+  {
+   "id": "nvda_rollentausch",
+   "tipo": "grafico",
+   "kicker": "Beispiel Nvidia, März bis August 2026",
+   "titulo": "Der alte Widerstand hält von oben",
+   "desde": "2026-03-01",
+   "hasta": "2026-08-14",
+   "animar_velas": true,
+   "zonas": [
+    {
+     "de": 190,
+     "a": 198,
+     "texto": "alter Widerstand,\nneue Unterstützung",
+     "color": "gold"
+    }
+   ],
+   "marcas": [
+    {
+     "fecha": "2026-04-17",
+     "tipo": "suelo",
+     "texto": "Ausbruch"
+    },
+    {
+     "fecha": "2026-05-04",
+     "tipo": "suelo"
+    },
+    {
+     "fecha": "2026-06-29",
+     "tipo": "suelo"
+    },
+    {
+     "fecha": "2026-07-29",
+     "tipo": "suelo"
+    }
+   ],
+   "nota": "Rollentausch",
+   "voz": "Bei Nvidia lässt sich das gut sehen. Mitte April 2026 stieg der Kurs über die alte Widerstandszone und schloss am 17. April bei knapp 202 Dollar. Danach kam er mehrmals zurück: Anfang Mai bis auf knapp 195 Dollar, Ende Juni bis knapp unter 190 Dollar und Ende Juli noch einmal auf 190 Dollar. Jedes Mal drehte der Kurs in dieser Zone wieder nach oben. Der Bereich, der monatelang als Decke gewirkt hatte, wirkte jetzt als Boden. Danach stieg die Aktie bis Anfang Oktober auf über 243 Dollar, den höchsten Kurs der vergangenen zwei Jahre.",
+   "ultimo": false
+  },
+  {
+   "id": "nvda_bruch",
+   "tipo": "grafico",
+   "capitulo": "Wenn Zonen brechen",
+   "kicker": "Beispiel Nvidia, August bis November 2026",
+   "titulo": "Wenn Zonen brechen: auf das Volumen achten",
+   "desde": "2026-08-01",
+   "hasta": "2026-11-17",
+   "animar_velas": true,
+   "zonas": [
+    {
+     "de": 190,
+     "a": 198,
+     "texto": "alte Unterstützung",
+     "color": "gold"
+    },
+    {
+     "de": 167,
+     "a": 172,
+     "texto": "alte Unterstützung",
+     "color": "teal"
+    }
+   ],
+   "marcas": [
+    {
+     "fecha": "2026-11-05",
+     "tipo": "suelo",
+     "texto": "Bruch"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "suelo",
+     "texto": "748 Mio."
+    }
+   ],
+   "nota": "Volumen beim Bruch",
+   "voz": "Zonen halten aber nicht ewig. Im November 2026 brach die Nvidia-Aktie innerhalb weniger Tage durch beide Zonen. Am 5. November schloss sie bei rund 182 Dollar, klar unter der Zone um 190 Dollar. An diesem Tag wurden gut 300 Millionen Aktien gehandelt, mehr als das Zweieinhalbfache des Durchschnitts der vorherigen 50 Handelstage, berechnet. Ein Bruch mit hohem Volumen gilt in der Charttechnik als aussagekräftiger als einer mit wenig Umsatz. Wenige Tage später fiel auch die alte Unterstützung bei 167 bis 172 Dollar. Am 12. November eröffnete die Aktie mit einer Kurslücke bei 151 Dollar, bei rund 750 Millionen gehandelten Aktien.",
+   "ultimo": false
+  },
+  {
+   "id": "nvda_heute",
+   "tipo": "grafico",
+   "capitulo": "Die Lage heute",
+   "kicker": "Nvidia heute: Schlusskurs vom 17. November 2026",
+   "titulo": "Welche Zonen Charttechniker jetzt beobachten",
+   "desde": "2025-11-01",
+   "hasta": "2026-11-17",
+   "zonas": [
+    {
+     "de": 190,
+     "a": 198,
+     "texto": "gebrochen",
+     "color": "neg"
+    },
+    {
+     "de": 167,
+     "a": 172,
+     "texto": "gebrochen",
+     "color": "neg"
+    },
+    {
+     "de": 148.8,
+     "a": 151,
+     "texto": "Tiefs November",
+     "color": "teal"
+    }
+   ],
+   "marcas": [
+    {
+     "fecha": "2026-11-12",
+     "tipo": "suelo"
+    },
+    {
+     "fecha": "2026-11-17",
+     "tipo": "suelo"
+    }
+   ],
+   "nota": "Daten, keine Prognose",
+   "voz": "Und wo steht die Aktie jetzt? Am 17. November schloss Nvidia bei 155,46 Dollar. Nach der Logik des Rollentauschs beobachten Charttechniker die gebrochenen Zonen nun von unten, also den Bereich um 167 bis 172 Dollar und darüber die Zone um 190 bis 198 Dollar. Nach unten liegen die jüngsten Tiefs bei knapp 149 und gut 150 Dollar. Das ist keine Prognose. Es heißt nur: Sollte der Kurs eine dieser Zonen erreichen, wird sich zeigen, ob sie wieder eine Rolle spielt. Diese Bereiche sind von uns eingezeichnet. Andere Analysten können zu etwas anderen Zonen kommen."
+  },
+  {
+   "id": "fehler",
+   "tipo": "puntos",
+   "capitulo": "Typische Fehler",
+   "kicker": "Typische Fehler",
+   "titulo": "Vier Fehler, die Anfänger oft machen",
+   "puntos": [
+    [
+     "Exakte Linien",
+     "Zonen sind Bereiche. Ein Kurs knapp darunter ist noch kein Bruch."
+    ],
+    [
+     "Ein Tag reicht nicht",
+     "Viele achten auf den Schlusskurs und nicht nur auf ein Tagestief."
+    ],
+    [
+     "Volumen ignorieren",
+     "Ein Bruch ohne Volumen ist weniger aussagekräftig."
+    ],
+    [
+     "Zu viele Linien",
+     "Wer überall Linien zieht, sieht am Ende nichts mehr. Wenige, klare Zonen."
+    ]
+   ],
+   "voz": "Zum Schluss vier typische Fehler. Erstens: exakte Linien. Fällt der Kurs kurz unter eine Zone und kehrt gleich zurück, ist das noch kein Bruch, wie Ende März bei Nvidia. Zweitens: Viele Charttechniker achten auf den Schlusskurs und nicht nur auf ein Tagestief. Drittens: das Volumen ignorieren. Ein Bruch mit wenig Handel ist weniger aussagekräftig. Und viertens: zu viele Linien. Wer überall Linien zieht, findet immer eine passende. Besser sind wenige, klare Zonen mit mehreren Berührungen."
+  },
+  {
+   "id": "fazit",
+   "tipo": "fin",
+   "capitulo": "Fazit",
+   "claves": [
+    "Unterstützung und Widerstand sind Zonen, an denen der Kurs schon mehrmals gedreht hat",
+    "Gebrochene Zonen können die Rolle tauschen, wie bei Nvidia 2026",
+    "Brüche mit hohem Volumen gelten als aussagekräftiger",
+    "Charttechnik beschreibt die Vergangenheit, sie ist keine Prognose"
+   ],
+   "siguiente": "Gleitende Durchschnitte und die 200-Tage-Linie",
+   "voz": "Fassen wir zusammen. Unterstützung und Widerstand sind Zonen, an denen der Kurs in der Vergangenheit mehrmals gedreht hat. Werden sie durchbrochen, können sie die Rolle tauschen, wie bei Nvidia im Jahr 2026. Und ein Bruch mit hohem Volumen gilt als aussagekräftiger. Aber Charttechnik beschreibt immer die Vergangenheit, sie sagt keine Kurse voraus. In der nächsten Folge geht es um gleitende Durchschnitte und die 200-Tage-Linie. Wenn Ihnen diese Folge geholfen hat, abonnieren Sie den Kanal und schauen Sie in unseren Telegram-Kanal. Keine Anlageberatung, nur Information und Bildung."
+  }
+ ],
+ "info": {
+  "titulo": "Unterstützung und Widerstand erklärt am Beispiel Nvidia | Charttechnik einfach erklärt, Folge 1",
+  "resumen": "Was sind Unterstützung und Widerstand, warum funktionieren sie und wie findet man sie im Chart? Wir erklären es am echten Chart der Nvidia-Aktie: die Seitwärtsphase von November 2025 bis April 2026, der Rollentausch im Sommer 2026 und der Bruch im November 2026.",
+  "fuentes": "Kursdaten: TradingView (Tageskerzen NASDAQ:NVDA, Stand Schlusskurs 17. November 2026). Zonen und Volumenvergleich: eigene Berechnung.",
+  "hashtags": "#Charttechnik #Nvidia #NVDA #TechnischeAnalyse #Unterstützung #Widerstand #Börsenwissen",
+  "x": "Charttechnik einfach erklärt, Folge 1: Unterstützung und Widerstand am echten Chart von Nvidia. Zonen, Rollentausch und warum das Volumen beim Bruch zählt.",
+  "tags": [
+   "Charttechnik",
+   "technische Analyse",
+   "Unterstützung",
+   "Widerstand",
+   "Nvidia Aktie",
+   "NVDA",
+   "Börse lernen",
+   "Aktien lernen",
+   "Chartanalyse"
+  ]
+ },
+ "miniatura": {
+  "etiqueta": "Charttechnik einfach erklärt · Folge 1",
+  "titulo": "Unterstützung & Widerstand",
+  "sub": "Erklärt am Chart von Nvidia (NVDA)",
+  "grafico": "nvda_range"
+ }
+}
