@@ -1,0 +1,69 @@
+{
+ "fecha": "2026-11-17",
+ "fecha_txt": "Dienstag, 17. November 2026",
+ "elaborado": "18. November 2026, 6:30 Uhr",
+ "titulo": "Wall Street heute (17. November 2026): S&P 500 −1,03 %, Dow −1,64 %, Nvidia-Zahlen | Der Tagesbericht",
+ "titulo_short": "Wall Street am 17. November 2026: Software-Ausverkauf, Nvidia-Umsatz +103 % #Shorts",
+ "resumen": "Der S&P 500 schloss am Dienstag, 17. November 2026, bei 7.340,53 Punkten (−1,03 %; −76,06 Punkte), knapp unter seiner 200-Tage-Linie. Der Dow Jones fiel um 1,64 % auf 50.759,42, der Nasdaq Composite um 0,74 % auf 24.328,38, der Nasdaq 100 um 0,72 % auf 27.001,78 und der Russell 2000 um 1,50 % auf 2.701,87.",
+ "claves": [
+  "Nachrichten: Softwarewerte fielen nach neuen KI-Modellen von OpenAI und vor dem für Donnerstag erwarteten Anthropic-Börsengang (Salesforce −9,45 %, Intuit −7,17 %, ServiceNow −6,51 %; Software-ETF IGV fast −3 %); Netzwerkstörung bei der NSA; Einzelhandelsumsätze Oktober +0,2 %, Industrieproduktion −0,4 %.",
+  "Nvidia nach Börsenschluss: Q3-Umsatz 115,8 Mrd. Dollar (+103 %), Ausblick Q4 rund 130 Mrd. Dollar ±3 %, Aktienrückkauf 150 Mrd. Dollar; nachbörslich zeitweise rund +4,8 % (Schluss im regulären Handel: 155,46 Dollar, −0,44 %).",
+  "Markt: VIX +11,14 % auf 25,45; Rendite 10-jähriger US-Anleihen 5,11 %; WTI 85,60 Dollar (+0,65 %), Brent 93,48 Dollar (+1,90 %). In Europa schloss der DAX mit −2,08 %, der Euro Stoxx 50 mit −2,15 %.",
+  "Aktien (S&P 500): 74 Werte stiegen, 422 fielen (berechnet). Gewinner: Comfort Systems +3,91 %, Coherent +3,65 %, Broadcom +2,46 %. Verlierer: Salesforce −9,45 %, Intuit −7,17 %, ServiceNow −6,51 %, Nike −6,30 %, UnitedHealth −5,42 %.",
+  "Charttechnik S&P 500 (berechnet): knapp unter der 200-Tage-Linie (7.345; −0,05 %), unter der 20-Tage-Linie (7.581; −3,2 %) und der 50-Tage-Linie (7.655; −4,1 %); Widerstand 7.581 und 7.653, Unterstützung 7.288; RSI 14 bei 37,2. Das sind Daten, keine Kauf- oder Verkaufssignale.",
+  "Termine: Mittwoch, 18. November, Quartalszahlen Target, Lowe's und TJX vor Börsenbeginn, US-Baubeginne (14:30 Uhr deutscher Zeit), Palo Alto Networks nach Börsenschluss; Donnerstag, 19. November, erwarteter erster Handelstag von Anthropic."
+ ],
+ "claves_cortas": [
+  "S&P 500 bei 7.340,53 (−1,03 %) · Dow −1,64 %",
+  "Salesforce −9,45 % · Nvidia-Umsatz 115,8 Mrd. Dollar (+103 %)",
+  "Charttechnik: S&P 500 knapp unter der 200-Tage-Linie"
+ ],
+ "linkedin": {
+  "datos": [
+   "S&P 500 bei 7.340,53 (−1,03 %), knapp unter der 200-Tage-Linie; Dow Jones −1,64 %",
+   "422 Werte im S&P 500 fielen, nur 74 stiegen (berechnet)",
+   "Software unter Druck vor dem Anthropic-Börsengang: Salesforce −9,45 %, Intuit −7,17 %, ServiceNow −6,51 %",
+   "Nvidia nach Börsenschluss: Umsatz 115,8 Mrd. Dollar (+103 %), Ausblick rund 130 Mrd. Dollar"
+  ],
+  "conclusion": "Software-Ausverkauf am Tag, starke Nvidia-Zahlen am Abend: Die nächste Sitzung zeigt, was überwiegt."
+ },
+ "fuentes": "TradingView; Yahoo Finance; StockTitan; CNBC",
+ "x": "Wall Street am 17. November 2026:\nS&P 500 7.340,53 (−1,03 %)\nDow −1,64 % · Nasdaq −0,74 %\nSalesforce −9,45 % · Nvidia-Umsatz +103 %",
+ "tiktok": "Wall Street am Dienstag, 17. November 2026: S&P 500 −1,03 % und Dow −1,64 % bei einem Software-Ausverkauf, nach Börsenschluss starke Nvidia-Zahlen. Drei Punkte: Software, Nvidia und Charttechnik.",
+ "hashtags": "#WallStreet #Börse #Aktien #SP500 #Nasdaq #Nvidia #Börsennews",
+ "hashtags_short": "#WallStreet #Börse #Aktien #Nvidia #Shorts",
+ "tags": [
+  "Wall Street",
+  "US-Börse",
+  "Aktien",
+  "Börse heute",
+  "S&P 500",
+  "Nasdaq",
+  "Dow Jones",
+  "Nvidia",
+  "Nvidia Quartalszahlen",
+  "Salesforce",
+  "Anthropic",
+  "Charttechnik",
+  "Börsennews",
+  "Wall Street auf Deutsch",
+  "Der Tagesbericht"
+ ],
+ "miniatura": {
+  "fecha": "Dienstag, 17. November 2026",
+  "indices": [
+   [
+    "S&P 500",
+    "−1,03 %",
+    "neg"
+   ],
+   [
+    "Dow Jones",
+    "−1,64 %",
+    "neg"
+   ]
+  ],
+  "sub": "Software-Ausverkauf · Nvidia-Umsatz +103 %",
+  "pie": "Der Tagesbericht · Wall Street auf Deutsch"
+ }
+}

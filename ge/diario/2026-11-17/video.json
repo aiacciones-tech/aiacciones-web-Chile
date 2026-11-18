@@ -1,0 +1,164 @@
+{
+ "fecha": "2026-11-17",
+ "titular": "Software-Ausverkauf vor dem Anthropic-Börsengang · Nvidia nach Börsenschluss mit Rekordumsatz",
+ "nombres": {},
+ "ticker": [
+  "Nvidia: Quartalsumsatz 115,8 Mrd. Dollar, nachbörslich rund +4,8 %",
+  "Salesforce −9,45 %, ServiceNow −6,51 %, Intuit −7,17 %",
+  "S&P 500 schließt knapp unter der 200-Tage-Linie",
+  "US-Einzelhandel Oktober +0,2 %",
+  "DAX −2,08 %, Euro Stoxx 50 −2,15 %",
+  "Anthropic-Börsengang am Donnerstag erwartet"
+ ],
+ "voz": {
+  "s_title": "Willkommen zum Tagesbericht von Wall Street auf Deutsch, für Dienstag, den 17. November. Der zweite Verlusttag in Folge: Diesmal traf es vor allem Softwareaktien, zwei Tage vor dem erwarteten Börsengang von Anthropic. Der S&P 500 fiel um 1,03 Prozent auf rund 7.341 Punkte und schloss damit knapp unter seiner 200-Tage-Linie. Der Dow Jones verlor sogar 849 Punkte. Nach Börsenschluss legte Nvidia Zahlen vor: Der Umsatz verdoppelte sich, und die Aktie stieg nachbörslich.",
+  "s_indices": "Beginnen wir mit den großen Indizes. Der S&P 500 schloss bei 7.340,53 Punkten, ein Minus von 1,03 Prozent oder 76 Punkten. Laut CNBC ist das der tiefste Schlusskurs seit Ende Juli. Der Dow Jones fiel um 1,64 Prozent auf 50.759 Punkte. Der Nasdaq 100 gab nur 0,72 Prozent auf 27.002 Punkte nach, und der Russell 2000 verlor 1,5 Prozent. Die Breite war sehr schwach: Im S&P 500 fielen 422 Werte, nur 74 stiegen, berechnet aus den Tagesdaten. Seit Wochenbeginn hat der S&P 500 knapp 3 Prozent verloren, der Nasdaq 100 gut 3,4 Prozent. Bis zum Allzeithoch fehlen dem S&P 500 jetzt 6,4 Prozent, dem Nasdaq 100 knapp 14 Prozent.",
+  "s_grandes": "Wer hat die Indizes bewegt? Unter den größten Werten im Nasdaq 100 verlor Microsoft 2,3 Prozent, Alphabet und Meta jeweils gut 1 Prozent. Nvidia gab vor den Zahlen nur 0,4 Prozent nach, Apple und Amazon blieben fast unverändert. Gegen den Trend stiegen Broadcom um 2,5 Prozent und SpaceX um 3,2 Prozent. Im Dow Jones kosteten UnitedHealth und Salesforce zusammen rund 254 Punkte, berechnet aus den Tagesdaten. Dazu kamen Goldman Sachs und Microsoft mit zusammen rund 153 Punkten.",
+  "s_news": "Warum hat sich der Markt bewegt? Erstens: Softwarewerte standen unter Druck. Laut Yahoo Finance belasteten neue KI-Modelle von OpenAI und der für Donnerstag erwartete Börsengang von Anthropic die Branche; Anleger schichten offenbar Geld um. Der Software-ETF IGV fiel um fast 3 Prozent. Zweitens: Vor den Nvidia-Zahlen wurden Chipwerte verkauft, die Verluste im Nasdaq lagen zeitweise bei rund 2 Prozent. Drittens: Eine Netzwerkstörung bei der US-Sicherheitsbehörde NSA sorgte für Unruhe. Die Behörde sprach von einer vorübergehenden Beeinträchtigung bei routinemäßigen Wartungsarbeiten. Bei den Konjunkturdaten stiegen die Einzelhandelsumsätze im Oktober um 0,2 Prozent, etwas mehr als erwartet. Die Industrieproduktion fiel dagegen um 0,4 Prozent. Der Volatilitätsindex VIX stieg um 11 Prozent auf 25,5 Punkte.",
+  "s_sectores": "Zu den Sektoren. Alle sechs Sektor-ETFs schlossen erneut im Minus. Am schwächsten waren Finanzen mit minus 1,9 Prozent und Gesundheit mit minus 1,4 Prozent; im Gesundheitssektor belastete UnitedHealth mit einem Minus von 5,4 Prozent. Technologie verlor 0,9 Prozent; auf Monatssicht steht der Sektor nun 13,3 Prozent im Minus, berechnet. Am besten hielten sich Energie und Industrie mit jeweils gut einem halben Prozent Abschlag.",
+  "s_macro": "Zu Zinsen, Dollar und Rohstoffen. Die Rendite der 10-jährigen US-Staatsanleihe gab um 2 Basispunkte auf 5,11 Prozent nach, bleibt aber über 5 Prozent. Der Dollar-Index DXY war mit 103,6 praktisch unverändert. Der Volatilitätsindex VIX stieg auf 25,5 Punkte, den höchsten Stand dieser Woche. Der US-Ölpreis WTI stieg leicht um 0,7 Prozent auf 85,60 Dollar, Brent um 1,9 Prozent auf 93,48 Dollar. Gold gab leicht nach. Und Europa? Hier war der Tag deutlich schwächer als am Montag: Der DAX schloss um 17:30 Uhr mit minus 2,08 Prozent bei 26.045 Punkten, der Euro Stoxx 50 mit minus 2,15 Prozent. Der Xetra-Handel beginnt heute um 9 Uhr.",
+  "s_tech_spx": "Zur Charttechnik. Der S&P 500 hat seine 200-Tage-Linie bei rund 7.345 Punkten knapp unterschritten, um 0,05 Prozent. Nach unserer Berechnung kippt der Trend damit von seitwärts auf «unter der 200-Tage-Linie». Ein einzelner Schlusskurs knapp darunter ist allerdings noch kein Beleg für eine Trendwende. Zur 20-Tage-Linie fehlen 3,2 Prozent, zur 50-Tage-Linie 4,1 Prozent. Der RSI liegt bei 37, im neutralen Bereich, aber nahe der schwachen Zone. Die nächste Unterstützung ist das heutige Tief bei 7.288 Punkten, der nächste Widerstand die 20-Tage-Linie bei rund 7.581.",
+  "s_esc_spx": "Drei Szenarien für den S&P 500. Im positiven Szenario würde ein Schluss über der 20-Tage-Linie bei rund 7.581 Punkten die Lage entspannen; die nächste Marke wäre das Hoch vom 12. November bei 7.653 Punkten. Im neutralen Szenario pendelt der Index zwischen 7.288 und 7.581 Punkten. Im negativen Szenario würde ein Schluss unter dem heutigen Tief bei 7.288 Punkten weitere Schwäche signalisieren; die nächste markante Marke wäre erst das 52-Wochen-Tief bei rund 6.317 Punkten. Das sind Bedingungen, keine Prognosen.",
+  "s_tech_ndx": "Der Nasdaq 100 liegt 3,8 Prozent unter seiner 200-Tage-Linie und deutlich unter der 20- und der 50-Tage-Linie. Der RSI liegt bei 36. Intraday fiel der Index bis auf 26.581 Punkte, erholte sich aber zum Schluss deutlich vom Tagestief.",
+  "s_esc_ndx": "Für den Nasdaq 100 beginnt das positive Szenario mit der Rückeroberung der 200-Tage-Linie bei rund 28.054 Punkten; darüber wäre die 20-Tage-Linie bei 28.347 die nächste Marke. Im neutralen Szenario bleibt der Index zwischen dem heutigen Tief bei 26.581 und der 200-Tage-Linie. Im negativen Szenario würde ein Schluss unter 26.581 Punkten den Weg in Richtung des 52-Wochen-Tiefs bei 22.841 Punkten öffnen.",
+  "s_agenda": "Was steht in der nächsten Sitzung an? Am Mittwoch legen vor Börsenbeginn Target, Lowe's und TJX ihre Quartalszahlen vor. Um 8:30 Uhr New Yorker Zeit, 14:30 Uhr bei uns, kommen die US-Baubeginne. Nach Börsenschluss folgt Palo Alto Networks. Und am Donnerstag soll die Anthropic-Aktie erstmals gehandelt werden.",
+  "s_fin": "Unser Fazit: ein weiterer Verlusttag, diesmal angeführt von Softwareaktien, und ein S&P 500 knapp unter seiner 200-Tage-Linie. Nach Börsenschluss lieferte Nvidia starke Zahlen; ob das die Stimmung dreht, zeigt sich in der nächsten Sitzung. Folgen Sie uns kostenlos auf Telegram, der Link steht in der Videobeschreibung. Wichtiger Hinweis: Das ist keine Anlageberatung, sondern nur Information. Text, Stimme und Grafiken sind mit KI erstellt. Wir sehen uns morgen, auf Wiedersehen."
+ },
+ "indices": {
+  "titulo": "Alle vier Indizes im Minus, Dow Jones −849 Punkte"
+ },
+ "grandes": {
+  "titulo": "Microsoft im Minus, Broadcom gegen den Trend · Nvidia vor den Zahlen kaum verändert"
+ },
+ "noticias": {
+  "titulo": "Software unter Druck vor dem Anthropic-Börsengang, Nvidia-Zahlen nach Börsenschluss",
+  "fuente": "Quellen: Yahoo Finance; StockTitan; CNBC (17. November 2026); TradingView.",
+  "items": [
+   [
+    "Software",
+    "Neue OpenAI-Modelle und Anthropic-Börsengang belasten · Software-ETF IGV fast −3 %"
+   ],
+   [
+    "Nvidia",
+    "Umsatz 115,8 Mrd. Dollar (+103 %), Ausblick rund 130 Mrd. · nachbörslich rund +4,8 %"
+   ],
+   [
+    "NSA-Störung",
+    "Vorübergehende Netzwerkstörung bei Wartungsarbeiten sorgt für Unruhe"
+   ],
+   [
+    "Konjunktur",
+    "Einzelhandel Oktober +0,2 % · Industrieproduktion −0,4 % · VIX +11 %"
+   ]
+  ]
+ },
+ "sectores": {
+  "titulo": "Alle sechs Sektoren im Minus · Finanzen und Gesundheit hinten",
+  "items": [
+   [
+    "Energie und Industrie am stabilsten",
+    "Jeweils gut ein halbes Prozent Abschlag; Ölpreis Brent +1,9 %",
+    "teal"
+   ],
+   [
+    "Finanzen und Gesundheit hinten",
+    "Finanzen −1,91 %; Gesundheit −1,41 %, belastet von UnitedHealth −5,42 %",
+    "neg"
+   ]
+  ]
+ },
+ "acciones": [
+  {
+   "ticker": "NVDA",
+   "noticia": "Q3: Umsatz 115,8 Mrd. Dollar (+103 %), Ausblick Q4 rund 130 Mrd. ±3 %, Aktienrückkauf 150 Mrd. (StockTitan, Yahoo Finance).",
+   "lectura": "Nachbörslich zeitweise rund +4,8 %; meistgehandelte Aktie des Tages.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: StockTitan; Yahoo Finance (17. November 2026).",
+   "voz": "Die erste Aktie: Nvidia. Im regulären Handel gab die Aktie nur 0,44 Prozent auf 155,46 Dollar nach, bei rund 63 Milliarden Dollar Umsatz. Nach Börsenschluss legte Nvidia die ersten Zahlen seit dem Rücktritt von Jensen Huang vor. Der Quartalsumsatz stieg um 103 Prozent auf 115,8 Milliarden Dollar. Für das laufende Quartal erwartet Nvidia rund 130 Milliarden Dollar, plus minus 3 Prozent, mit einer zusätzlichen Woche. Dazu kündigte der Konzern Aktienrückkäufe über 150 Milliarden Dollar an. Laut Yahoo Finance lagen Zahlen und Ausblick über den Erwartungen. Nachbörslich stieg die Aktie zeitweise um rund 4,8 Prozent."
+  },
+  {
+   "ticker": "CRM",
+   "noticia": "Softwarewerte unter Druck: neue OpenAI-Modelle und der erwartete Anthropic-Börsengang belasten die Branche (Yahoo Finance).",
+   "lectura": "Größter Verlierer im S&P 500, 1,9-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Yahoo Finance (17. November 2026).",
+   "voz": "Die zweite Aktie: Salesforce, der Anbieter von Software für Vertrieb und Kundenservice. Die Aktie fiel um 9,45 Prozent auf 194,52 Dollar, der größte Verlust im S&P 500, bei fast doppeltem Volumen. Eine eigene Unternehmensmeldung gab es nicht. Die ganze Branche stand unter Druck: Laut Yahoo Finance belasteten neue KI-Modelle von OpenAI und der Börsengang von Anthropic. Anleger fürchten, dass KI-Werkzeuge klassische Software ersetzen könnten. Intuit verlor 7,17 Prozent, Workday 5,8 Prozent."
+  },
+  {
+   "ticker": "NOW",
+   "noticia": "Teil des Software-Ausverkaufs; keine eigene Unternehmensmeldung (Yahoo Finance).",
+   "lectura": "Rückgang bei 1,5-fachem Volumen, Schluss unter 93 Dollar.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Yahoo Finance (17. November 2026).",
+   "voz": "Die dritte Aktie: ServiceNow, ein Anbieter von Software zur Automatisierung von Arbeitsabläufen in Unternehmen. Die Aktie fiel um 6,51 Prozent auf 92,90 Dollar, bei eineinhalbfachem Volumen. Auch hier gab es keine eigene Meldung; ServiceNow fiel mit dem gesamten Softwaresektor."
+  },
+  {
+   "ticker": "NKE",
+   "noticia": "Keine konkrete Meldung in der Presse.",
+   "lectura": "Rückgang bei 2,6-fachem Volumen.",
+   "fuente": "Kurs und Volumen: TradingView.",
+   "voz": "Die vierte Aktie: Nike. Der Sportartikelhersteller verlor 6,3 Prozent auf 35,85 Dollar, bei mehr als zweieinhalbfachem Volumen. Eine konkrete Meldung dazu fand sich in der Presse nicht."
+  },
+  {
+   "ticker": "AVGO",
+   "noticia": "Keine konkrete Meldung in der Presse; nachbörslich leicht im Plus (Yahoo Finance).",
+   "lectura": "Einer der wenigen Gewinner unter den großen Tech-Werten.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Yahoo Finance (17. November 2026).",
+   "voz": "Die fünfte Aktie: Broadcom, der Chip- und Softwarekonzern. Gegen den Trend stieg die Aktie um 2,46 Prozent auf 341,60 Dollar und gehörte damit zu den größten Gewinnern im S&P 500. Eine konkrete Meldung dazu gab es nicht; laut Yahoo Finance legte die Aktie auch nachbörslich leicht zu, nach den Nvidia-Zahlen."
+  }
+ ],
+ "macro": {
+  "titulo": "VIX steigt auf 25,5, Rendite bleibt über 5 %",
+  "items": {
+   "TVC:US10Y": "Über 5 %: hohe Renditen belasten Wachstumswerte",
+   "TVC:DXY": "Dollar praktisch unverändert",
+   "TVC:VIX": "Über 25 Punkten: deutlich mehr Nervosität",
+   "TVC:USOIL": "Wichtig für Energieaktien und die Inflation",
+   "TVC:GOLD": "Sicherer Hafen, abhängig von Dollar und Zinsen"
+  },
+  "europa": "DAX −2,08 % und Euro Stoxx 50 −2,15 %: Europa diesmal schwächer als die Wall Street."
+ },
+ "tecnico": {
+  "spx": {
+   "titulo": "Knapp unter der 200-Tage-Linie, RSI bei 37",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  },
+  "ndx": {
+   "titulo": "3,8 % unter der 200-Tage-Linie, Erholung vom Tagestief",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  }
+ },
+ "agenda": {
+  "titulo": "Target, Lowe's und Baubeginne am Mittwoch",
+  "fuente": "Quellen: StockTitan; Yahoo Finance (17. November 2026). Deutsche Zeit aus der New Yorker Zeit berechnet.",
+  "filas": [
+   [
+    "2026-11-18",
+    "Quartalszahlen Target, Lowe's und TJX (vor Börsenbeginn)",
+    "",
+    "geplant"
+   ],
+   [
+    "2026-11-18",
+    "US-Baubeginne",
+    "08:30",
+    "geplant"
+   ],
+   [
+    "2026-11-18",
+    "Palo Alto Networks nach Börsenschluss",
+    "16:30",
+    "geplant"
+   ],
+   [
+    "2026-11-19",
+    "Anthropic: erwarteter erster Handelstag",
+    "",
+    "erwartet"
+   ]
+  ]
+ },
+ "fin": {
+  "titular": "Software-Ausverkauf, S&P 500 unter der 200-Tage-Linie, starke Nvidia-Zahlen nach Börsenschluss",
+  "fuentes": "TradingView, Yahoo Finance, CNBC, StockTitan"
+ }
+}

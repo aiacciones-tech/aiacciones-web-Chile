@@ -1,0 +1,93 @@
+{
+ "cabecera": "Wall Street auf Deutsch · 17. November 2026",
+ "out": "short-bolsa-2026-11-17-GE.mp4",
+ "fuente": "Quellen: TradingView, Yahoo Finance\nund StockTitan (17. November 2026). RSI: berechnet.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Wall Street · Sitzung vom",
+   "fecha": "Di., 17. November 2026",
+   "indices": [
+    [
+     "S&P 500",
+     "−1,03 %",
+     "7.340,53",
+     "neg"
+    ],
+    [
+     "Dow Jones",
+     "−1,64 %",
+     "50.759,42",
+     "neg"
+    ]
+   ],
+   "pregunta": "Software-Ausverkauf,\nNvidia-Zahlen nach Börsenschluss",
+   "voz": "Wall Street, Dienstag, 17. November. Softwareaktien unter Druck, Nvidia mit starken Zahlen. Drei Punkte."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Software unter Druck",
+   "big": "−9,45 %",
+   "delta": "Salesforce",
+   "color": "neg",
+   "barras": [
+    [
+     "Intuit",
+     -7.17
+    ],
+    [
+     "ServiceNow",
+     -6.51
+    ],
+    [
+     "Salesforce",
+     -9.45
+    ]
+   ],
+   "nota": "Neue OpenAI-Modelle und Anthropic-Börsengang belasten.\n422 Werte im S&P 500 fielen, 74 stiegen.",
+   "voz": "Eins. Softwarewerte fielen am stärksten, Salesforce verlor mehr als 9 Prozent."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Nvidia-Umsatz im Quartal",
+   "big": "115,8 Mrd. $",
+   "delta": "+103 % zum Vorjahr",
+   "color": "teal",
+   "nota": "Ausblick rund 130 Mrd. Dollar.\nNachbörslich zeitweise rund +4,8 %.",
+   "voz": "Zwei. Nvidia verdoppelte den Umsatz auf 115,8 Milliarden Dollar, die Aktie stieg nachbörslich."
+  },
+  {
+   "tipo": "kpis",
+   "n": 3,
+   "label": "Charttechnik S&P 500",
+   "items": [
+    [
+     "37",
+     "RSI 14",
+     "blue"
+    ],
+    [
+     "−4,1 %",
+     "unter der 50-Tage-Linie",
+     "neg"
+    ],
+    [
+     "−0,05 %",
+     "unter der 200-Tage-Linie",
+     "neg"
+    ]
+   ],
+   "nota": "Widerstand 7.581, Unterstützung 7.288.\nDas sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Der S&P 500 schloss knapp unter seiner 200-Tage-Linie."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Am Donnerstag:\nder Anthropic-Börsengang",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Am Donnerstag wird der Anthropic-Börsengang erwartet. Das ganze Video finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}
