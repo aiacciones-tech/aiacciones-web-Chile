@@ -8,8 +8,8 @@ sin Short; sin pasos manuales; todo lo que se entrega termina en `-GE`. Instrucc
 Valen todas las reglas de `ge/diario/CLAUDE.md` (Keine Anlageberatung, transparencia IA, secretos `_GE`, solo se toca `ge/`, `*-GE.yml` y `cola-ge/`).
 
 ## Piezas
-- Datos: rama `datos-serie20-nabd` (la escribe `serie20-datos-Nabd.yml` a las 11:00 y 23:30 UTC; **solo lectura**, no se lanza ni se modifica
-  desde aquí salvo que los datos estén viejos: entonces se puede lanzar ese workflow con workflow_dispatch, que solo actualiza su rama).
+- Datos: rama `datos-serie20-nabd` (la escribe `serie20-datos-Nabd.yml` a las 11:00 y 23:30 UTC, a menudo con horas de retraso; **solo lectura**:
+  no se lanza ese workflow desde aquí).
   `calendario.json` y `<TICKER>/datos.json` (TradingView). `datos_listos=false` significa que TradingView aún no tiene el trimestre: se espera.
 - `plan.py <datos> <cola-ge>`: episodios de hoy (0-3, día de Berlín) y pendientes.
 - `make_episodio.py <carpeta> [preview]`: 7 escenas (Einstieg, Das Quartal in Zahlen, Umsatz und Marge, Bilanz, Cashflow, Erwartungen, Fazit),
@@ -18,7 +18,7 @@ Valen todas las reglas de `ge/diario/CLAUDE.md` (Keine Anlageberatung, transpare
 - `encolar.sh <carpeta>`: `cola-ge/serie20-<ticker>-<fecha>/` en `youtube-cola`; `youtube-GE.yml` sube y `telegram-GE.yml` publica.
 - Voz: `.github/workflows/serie20-voz-GE.yml` (Azure de-DE-ConradNeural, mismo recurso que el diario), rama `voz-ge-serie20` (aparte de `voz-ge`).
 - Ejemplo de `video.json`: `episodios/serie20-nvda-2026-11-17/`. Claves: ticker, nombre, sector, sector_tipo («banco» para JPM, BRK no),
-  trimestre («3. Quartal 2026», según el periodo fiscal de datos.json: «Geschäftsjahr» si difiere del natural), fecha_resultados, titular,
+  trimestre (el del año fiscal de la empresa según su nota, p. ej. «3. Quartal GJ 2027» para Nvidia; los gráficos usan la etiqueta de TradingView, que es el trimestre natural en que acaba), fecha_resultados, titular,
   expectativas {items [[título, texto]] 0-2, fuente}, claves (3), voz (7 escenas), info {titulo ≤ 100, resumen, fuentes, hashtags, x ≤ 200, tags},
   miniatura {etiqueta, cifra («57,0 Mrd. $»), sub, color}.
 
