@@ -1,0 +1,40 @@
+# Voz neuronal de Azure en alemán (de-DE-ConradNeural) para los episodios de la serie «Die Wall-Street-Giganten» (ge/serie20/).
+# Se lanza sola al subir ge/serie20/episodios/<carpeta>/video.json a una rama claude/ge-serie20-*: genera la voz de los episodios que cambian
+# respecto a main (o los de carpetas=, separados por comas, a mano). Deja un wav por frase en <carpeta>/ de la rama voz-ge-serie20
+# (se reescribe en cada ejecución, sin historial). Rama aparte para no pisar voz-ge del vídeo diario. make_episodio.py los usa con VOZ_DIR.
+# Mismo recurso de Azure que el diario: AZURE_SPEECH_KEY_GE y AZURE_SPEECH_REGION_GE.
+name: Voz Azure de la serie 20 (Wall Street auf Deutsch)
+on:
+  push:
+    branches: ["claude/ge-serie20-**"]
+    paths: ["ge/serie20/episodios/*/video.json"]
+  workflow_dispatch:
+    inputs:
+      carpetas:
+        description: "carpetas de ge/serie20/episodios separadas por comas (p. ej. serie20-nvda-2026-11-17); vacío = las que cambian respecto a main"
+        default: ""
+permissions:
+  contents: write
+concurrency: voz-ge-serie20
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_GE }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_GE || 'germanywestcentral' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generar la voz
+        run: |
+          test -n "$AZURE_SPEECH_KEY" || { echo "Falta AZURE_SPEECH_KEY_GE: el episodio saldrá con la voz Piper."; exit 0; }
+          C="${{ inputs.carpetas }}"
+          if [ -z "$C" ]; then
+            git fetch -q --depth 1 origin main
+            C=$(git diff --name-only origin/main HEAD -- 'ge/serie20/episodios/*/video.json' | cut -d/ -f4 | sort -u | paste -sd, -)
+          fi
+          test -n "$C" || { echo "ningún episodio cambiado"; exit 0; }
+          for c in ${C//,/ }; do echo "== $c"; python3 ge/diario/voz_azure.py ge/serie20/episodios/$c/video.json /tmp/voz/$c; done
+          cd /tmp/voz && git init -q -b voz-ge-serie20 && git add .
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Voz Azure serie 20 GE: $C"
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          for i in 1 2 3; do git push -qf origin voz-ge-serie20 && break; sleep 5; done
