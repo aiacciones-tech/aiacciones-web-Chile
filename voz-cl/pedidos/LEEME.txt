@@ -1,0 +1,1 @@
+Pedidos de voz Azure: los sube voz-cl/pedir.sh a una rama voz-cl-pedido-<id>; aquí, en main, no queda ninguno.

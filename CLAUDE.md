@@ -8,3 +8,6 @@
   sin modificarlos. Sus secretos de GitHub terminan en `_GE`.
 - **Arabia Saudita (@SaudiArabiaAIStocks, `saudi/diario/`), vídeo diario:** desde el 18-nov-2026 la voz es Azure `ar-SA-HamedNeural` (workflow `voz-saudi.yml`,
   rama `voz-saudi`, `VOZ_DIR`). Antes de empezar, lee `saudi/diario/CLAUDE.md`: prevalece sobre el texto de la tarea programada donde difieran.
+- **Voz de AIAcciones Chile (diario IPSA, videos de resultados y Shorts):** desde el 18-nov-2026 es Azure `es-CL-LorenzoNeural` (elección de Daniel);
+  Piper solo de respaldo. Antes de renderizar, lee `voz-cl/README.md`: `bash voz-cl/pedir.sh <id> <dir> <fuentes>` y luego el render de siempre con
+  `PYTHONPATH=<repo>/voz-cl/shim VOZ_DIR=<dir>`. Prevalece sobre "voz Piper" en el texto de las tareas programadas de Chile.

@@ -1,0 +1,54 @@
+# Voz Azure (es-CL-LorenzoNeural) de los videos de AIAcciones Chile: diario IPSA, resultados y Shorts. Daniel la eligió el 18-nov-2026.
+# Se lanza cuando voz-cl/pedir.sh sube voz-cl/pedidos/<id>.json a la rama voz-cl-pedido-<id>. Deja <id>/<clave>.wav en la rama
+# voz-cl (un solo commit sin historial; carpetas de más de 10 días se borran) y borra la rama del pedido.
+# Secretos: AZURE_SPEECH_KEY_CL y AZURE_SPEECH_REGION_CL (plan F0: 500.000 caracteres al mes). Sin clave o si Azure falla, el video sale con Piper.
+name: Voz Azure de los videos (Chile)
+on:
+  push:
+    branches: ["voz-cl-pedido-*"]
+    paths: ["voz-cl/pedidos/*.json"]
+  workflow_dispatch:
+    inputs:
+      rama:
+        description: "rama del pedido (voz-cl-pedido-<id>)"
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: voz-chile
+  cancel-in-progress: false
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_CL }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_CL }}
+      RAMA: ${{ inputs.rama || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.rama || github.ref }}
+      - name: Sintetizar
+        run: |
+          if [ -z "$AZURE_SPEECH_KEY" ] || [ -z "$AZURE_SPEECH_REGION" ]; then echo "Falta AZURE_SPEECH_KEY_CL o AZURE_SPEECH_REGION_CL"; exit 1; fi
+          mkdir -p /tmp/voz && cd /tmp/voz && git init -q -b voz-cl
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          if git fetch -q --depth 1 origin voz-cl 2>/dev/null; then git read-tree FETCH_HEAD && git checkout-index -a; fi
+          # carpetas de más de 10 días fuera (la rama no guarda historial)
+          for d in */; do d=${d%/}; [ -f "$d/manifest.json" ] || continue
+            python3 -c "import json,sys,datetime as dt;c=json.load(open(sys.argv[1])).get('creado') or '2000-01-01';sys.exit(0 if dt.date.today()-dt.date.fromisoformat(c[:10])>dt.timedelta(days=10) else 1)" "$d/manifest.json" && rm -rf "$d" && echo "borro $d"
+          done
+          cd "$GITHUB_WORKSPACE"
+          for p in voz-cl/pedidos/*.json; do
+            id=$(basename "$p" .json)
+            python3 voz-cl/voz_cl.py sintetizar "$p" "/tmp/voz/$id"
+            sha1sum "$p" | cut -c1-16 > "/tmp/voz/$id/pedido.sha"
+          done
+      - name: Subir a la rama voz-cl
+        run: |
+          cd /tmp/voz && git add -A
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Voz Azure Chile ($RAMA)"
+          for i in 1 2 3 4; do git push -qf origin HEAD:voz-cl && break; sleep $((i*5)); done
+      - name: Borrar la rama del pedido
+        if: always() && startsWith(env.RAMA, 'voz-cl-pedido-')
+        run: git push -q origin --delete "$RAMA" || true
