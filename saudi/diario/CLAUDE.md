@@ -9,7 +9,8 @@
    y renderiza con `VOZ_DIR=<scratch>/voz/<fecha>` en `make_video.py` y `make_short.py`. La línea `listo ... | voz:` dice si salió todo con Azure.
 3. Si cambias una locución, vuelve a hacer push del json y espera el run nuevo (solo pide a Azure las escenas cambiadas).
 4. Si el workflow falla o falta la clave, renderiza sin `VOZ_DIR` (Piper, como antes) y dilo en el resumen.
-5. La voz de Azure es algo más lenta que Piper: respeta el máximo de 330 s; si `make_video.py` dice que es demasiado largo, acorta la locución.
+5. La voz de Azure (rate +8%) es más rápida que Piper: el guion del 17-nov (433 palabras) dura 252 s con Azure y 297 s con Piper.
+   Para unos 5 minutos escribe unas 500-530 palabras de locución; respeta el máximo de 330 s.
 
 La clave es el plan gratuito de Azure compartido con Nabd Wall Street (500.000 caracteres/mes; este canal gasta ~3.200 por sesión).
 No regeneres la voz sin necesidad.

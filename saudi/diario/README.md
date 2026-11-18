@@ -44,7 +44,7 @@ El volumen de Nomu no viene en la vela del índice: se calcula sumando sus accio
 4. Voz: sube `video.json` y `short.json` del día a tu rama `claude/...` (push); `voz-saudi.yml` genera la voz de Azure. Cuando termine,
    `git clone -q --depth 1 -b voz-saudi https://github.com/aiacciones-tech/aiacciones-web-Chile.git <scratch>/voz` y usa `VOZ_DIR=<scratch>/voz/<fecha>` en los dos renders.
    Si el workflow falla o dice que falta la clave, sigue sin `VOZ_DIR` (Piper) y dilo en el resumen.
-5. `AUD=<scratch> VOZ_DIR=... python3 make_video.py <dir> preview` (revisa los PNG), luego sin `preview` (unos 5 minutos, máx. 330 s; unas 480 palabras de locución en total, la mitad en el bloque técnico).
+5. `AUD=<scratch> VOZ_DIR=... python3 make_video.py <dir> preview` (revisa los PNG), luego sin `preview` (unos 5 minutos, máx. 330 s; unas 500-530 palabras de locución con Azure (433 palabras = 252 s; con Piper, 297 s), la mitad en el bloque técnico).
 6. `AUD=<scratch> VOZ_DIR=... python3 make_short.py <dir>/short.json` y `python3 gen_meta.py <dir>`. Todo lo que se entrega termina en `-SA` (regla de Daniel, 7-nov-2026).
 7. `SCRATCH=<scratch> bash encolar.sh <dir>`: comprueba los archivos y el enlace del canal, el límite de YouTube (~10 subidas/24 h, compartido con los videos de resultados)
    y encola en `cola-sa/bolsa-<fecha>` y `cola-sa/bolsa-<fecha>-short` de `youtube-cola`.
