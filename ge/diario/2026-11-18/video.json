@@ -1,0 +1,164 @@
+{
+ "fecha": "2026-11-18",
+ "titular": "Krankenversicherer brechen ein · Nvidia trotz Rekordumsatz im Minus",
+ "nombres": {},
+ "ticker": [
+  "UnitedHealth −10,21 %, Humana −12,98 %",
+  "Nvidia −2,89 % trotz Quartalsumsatz von 115,8 Mrd. Dollar",
+  "Fed-Protokoll: fast alle Notenbanker halten weitere Zinserhöhungen für angemessen",
+  "S&P 500: fünfter Verlusttag in Folge",
+  "WTI −4,19 %, Gold −3,27 %",
+  "Anthropic-Börsengang für Donnerstag erwartet"
+ ],
+ "voz": {
+  "s_title": "Willkommen zum Tagesbericht von Wall Street auf Deutsch, für Mittwoch, den 18. November. Ein gespaltener Markt: Krankenversicherer brachen nach einem Vorschlag der US-Regierung ein und zogen den Dow Jones um 561 Punkte nach unten. Der S&P 500 verlor 0,23 Prozent auf rund 7.324 Punkte, der fünfte Verlusttag in Folge. Der Nasdaq dagegen stieg, vor dem für Donnerstag erwarteten Börsengang von Anthropic. Und Nvidia? Trotz Rekordzahlen fiel die Aktie um fast 3 Prozent.",
+  "s_indices": "Beginnen wir mit den großen Indizes. Der S&P 500 schloss bei 7.323,63 Punkten, ein Minus von 0,23 Prozent oder 17 Punkten. Laut StockTitan ist das die längste Verlustserie seit Juni. Der Dow Jones fiel um 1,11 Prozent auf 50.198 Punkte. Der Nasdaq 100 stieg dagegen um 0,42 Prozent auf 27.116 Punkte, und auch der Russell 2000 legte um 0,46 Prozent zu. Die Breite war ausgeglichen: Im S&P 500 stiegen 235 Werte, 261 fielen, berechnet aus den Tagesdaten. Seit Wochenbeginn hat der S&P 500 3,15 Prozent verloren, der Dow Jones 4,11 Prozent. Bis zum Allzeithoch fehlen dem S&P 500 jetzt 6,6 Prozent.",
+  "s_grandes": "Wer hat die Indizes bewegt? Unter den größten Werten im Nasdaq 100 stieg Amazon um 3,8 Prozent und Broadcom um 3,6 Prozent. Laut CNBC profitierten beide, wie auch Alphabet, von der Vorfreude auf den Anthropic-Börsengang; Amazon und Alphabet sind an Anthropic beteiligt. Nvidia dagegen verlor 2,9 Prozent. Im Dow Jones kostete allein UnitedHealth rund 236 Punkte, berechnet aus den Tagesdaten. Dazu kamen Amgen, Caterpillar und Chevron mit zusammen rund 216 Punkten.",
+  "s_news": "Warum hat sich der Markt bewegt? Erstens: die Krankenversicherer. Laut StockTitan hat die Medicare-Behörde CMS am Montag eine Regel vorgeschlagen, mit der sie zu viel gezahlte Gelder von privaten Medicare-Advantage-Plänen zurückholen will. Fehlerquoten aus Stichproben sollen auf ganze Verträge hochgerechnet werden, rückwirkend ab 2018. Die Behörde rechnet mit 90,2 Milliarden Dollar bis 2036. Zweitens: das Protokoll der US-Notenbank. Fast alle Mitglieder halten weitere Zinserhöhungen für angemessen, wenn sich die Wirtschaft wie erwartet entwickelt. Fed-Gouverneur Christopher Waller sagte laut StockTitan im Sender CNBC, im Dezember sei wohl ein Schritt um einen halben Prozentpunkt nötig. Drittens: Anthropic soll laut Yahoo Finance am Donnerstag an der Nasdaq starten. Die Preisspanne lag bei 70 bis 78 Dollar je Aktie; laut Bloomberg könnte der Preis darüber liegen. Bei den Konjunkturdaten stiegen die Baubeginne im Oktober um 9,9 Prozent, die Baugenehmigungen fielen um 7,4 Prozent.",
+  "s_sectores": "Zu den Sektoren. Am stärksten war zyklischer Konsum mit plus 1,8 Prozent, getragen von Amazon sowie von den Zahlen der Einzelhändler TJX und Target. Technologie legte leicht um 0,3 Prozent zu. Am schwächsten war Energie mit minus 3,3 Prozent, weil der Ölpreis deutlich fiel. Gesundheit verlor 2,2 Prozent, belastet von den Krankenversicherern.",
+  "s_macro": "Zu Zinsen, Dollar und Rohstoffen. Die Rendite der 10-jährigen US-Staatsanleihe gab um knapp 4 Basispunkte auf 5,07 Prozent nach. Der Dollar-Index DXY stieg leicht auf 103,8. Der Volatilitätsindex VIX fiel um 3,5 Prozent auf 24,6 Punkte. Deutlich bewegten sich die Rohstoffe: Der US-Ölpreis WTI fiel um 4,2 Prozent auf 82,01 Dollar. Laut StockTitan stiegen die US-Lagerbestände an Rohöl und Treibstoffen. Gold verlor 3,3 Prozent auf rund 3.723 Dollar; laut CNBC belastete die Erwartung einer Zinserhöhung im Dezember. Und Europa? Der DAX schloss um 17:30 Uhr mit minus 1,19 Prozent bei 25.736 Punkten, der Euro Stoxx 50 mit minus 0,93 Prozent. Der Xetra-Handel beginnt heute um 9 Uhr.",
+  "s_tech_spx": "Zur Charttechnik. Der S&P 500 schloss den zweiten Tag knapp unter seiner 200-Tage-Linie, diesmal 0,31 Prozent darunter, bei rund 7.347 Punkten. Unsere Berechnung zeigt den Trend weiter als «unter der 200-Tage-Linie». Zur 20-Tage-Linie fehlen 3,1 Prozent, zur 50-Tage-Linie 4,3 Prozent. Der RSI liegt bei 37, im neutralen Bereich, aber nahe der schwachen Zone. Die nächste Unterstützung ist das heutige Tief bei 7.286 Punkten, der nächste Widerstand die 200-Tage-Linie.",
+  "s_esc_spx": "Drei Szenarien für den S&P 500. Im positiven Szenario würde ein Schluss über der 200-Tage-Linie bei rund 7.347 Punkten die Lage entspannen; die nächste Marke wäre die 20-Tage-Linie bei rund 7.559 Punkten. Im neutralen Szenario pendelt der Index zwischen 7.286 und 7.347 Punkten. Im negativen Szenario würde ein Schluss unter dem heutigen Tief bei 7.286 Punkten weitere Schwäche signalisieren; die nächste markante Marke wäre erst das 52-Wochen-Tief bei rund 6.317 Punkten. Das sind Bedingungen, keine Prognosen.",
+  "s_tech_ndx": "Der Nasdaq 100 liegt 3,4 Prozent unter seiner 200-Tage-Linie und deutlich unter der 20- und der 50-Tage-Linie. Der RSI liegt bei 38. Der Index hielt sich über dem Tief vom Dienstag bei 26.581 Punkten.",
+  "s_esc_ndx": "Für den Nasdaq 100 beginnt das positive Szenario mit der Rückeroberung der 200-Tage-Linie bei rund 28.063 Punkten; darüber wäre die 20-Tage-Linie bei 28.212 die nächste Marke. Im neutralen Szenario bleibt der Index zwischen dem Tief vom Dienstag bei 26.581 und der 200-Tage-Linie. Im negativen Szenario würde ein Schluss unter 26.581 Punkten den Weg in Richtung des 52-Wochen-Tiefs bei 22.841 Punkten öffnen.",
+  "s_agenda": "Was steht in der nächsten Sitzung an? Am Donnerstag soll die Anthropic-Aktie erstmals an der Nasdaq gehandelt werden, sofern die Börsenaufsicht den Prospekt freigibt. Vor Börsenbeginn legt Walmart Quartalszahlen vor. Um 10 Uhr New Yorker Zeit, 16 Uhr bei uns, folgt ein Bericht der Statistikbehörde zu den Dienstleistungen im dritten Quartal. Außerdem kommt das Videospiel GTA 6 von Take-Two in den Handel.",
+  "s_fin": "Unser Fazit: ein gespaltener Tag. Krankenversicherer und Energiewerte drückten Dow Jones und S&P 500, Amazon und Broadcom stützten den Nasdaq. Nvidia konnte von den Rekordzahlen nicht profitieren, und die Notenbank deutet weitere Zinserhöhungen an. Folgen Sie uns kostenlos auf Telegram, der Link steht in der Videobeschreibung. Wichtiger Hinweis: Das ist keine Anlageberatung, sondern nur Information. Text, Stimme und Grafiken sind mit KI erstellt. Wir sehen uns morgen, auf Wiedersehen."
+ },
+ "indices": {
+  "titulo": "Dow −561 Punkte, Nasdaq 100 im Plus"
+ },
+ "grandes": {
+  "titulo": "Amazon und Broadcom vorn, Nvidia hinten"
+ },
+ "noticias": {
+  "titulo": "Medicare-Regel trifft Versicherer, Fed signalisiert höhere Zinsen",
+  "fuente": "Quellen: StockTitan; Yahoo Finance; CNBC; Bloomberg (über Yahoo Finance), 18. November 2026; TradingView.",
+  "items": [
+   [
+    "Medicare",
+    "CMS will zu viel gezahlte Gelder zurückholen · 90,2 Mrd. Dollar bis 2036 erwartet"
+   ],
+   [
+    "Fed-Protokoll",
+    "Fast alle halten weitere Zinserhöhungen für angemessen · Waller: im Dezember wohl +0,5 Punkte"
+   ],
+   [
+    "Anthropic",
+    "Börsenstart am Donnerstag erwartet · Spanne 70–78 Dollar je Aktie"
+   ],
+   [
+    "Konjunktur",
+    "Baubeginne Oktober +9,9 % · Baugenehmigungen −7,4 %"
+   ]
+  ]
+ },
+ "sectores": {
+  "titulo": "Zyklischer Konsum vorn, Energie und Gesundheit hinten",
+  "items": [
+   [
+    "Konsum und Technologie im Plus",
+    "Zyklischer Konsum +1,79 % mit Amazon, TJX und Target; Technologie +0,34 %",
+    "teal"
+   ],
+   [
+    "Energie und Gesundheit hinten",
+    "Energie −3,27 % mit dem Ölpreis; Gesundheit −2,20 % mit den Versicherern",
+    "neg"
+   ]
+  ]
+ },
+ "acciones": [
+  {
+   "ticker": "UNH",
+   "noticia": "Medicare-Behörde CMS schlägt vor, zu viel gezahlte Gelder von Medicare-Advantage-Plänen zurückzuholen (StockTitan).",
+   "lectura": "Größter Belastungsfaktor im Dow (rund 236 Punkte, berechnet), 2,7-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: StockTitan (18. November 2026).",
+   "voz": "Die erste Aktie: UnitedHealth, der größte private Krankenversicherer der USA. Die Aktie fiel um 10,21 Prozent auf 349,91 Dollar, bei fast dreifachem Volumen. Schon am Dienstag hatte sie 5,4 Prozent verloren. Auslöser ist der Vorschlag der Medicare-Behörde: Fehlerquoten aus Prüfungen sollen auf ganze Verträge hochgerechnet werden, und zu viel gezahlte Gelder sollen zurückfließen. Noch ist es nur ein Vorschlag; Stellungnahmen sind laut StockTitan bis zum 19. Januar möglich."
+  },
+  {
+   "ticker": "HUM",
+   "noticia": "Ebenfalls von der vorgeschlagenen Medicare-Regel getroffen; Humana ist stark vom Medicare-Advantage-Geschäft abhängig.",
+   "lectura": "Größter Verlierer im S&P 500, 1,9-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: StockTitan (18. November 2026).",
+   "voz": "Die zweite Aktie: Humana. Der Versicherer verlor 12,98 Prozent auf 385,78 Dollar, der größte Verlust im S&P 500, bei fast doppeltem Volumen. Humana erzielt einen großen Teil seines Geschäfts mit Medicare-Advantage-Plänen und gilt deshalb als besonders betroffen. Auch Elevance Health verlor 7,6 Prozent und Centene 7 Prozent."
+  },
+  {
+   "ticker": "NVDA",
+   "noticia": "Trotz Rekordumsatz: keine lizenzierten Hopper-Chips mehr nach China, Führungswechsel (StockTitan, Yahoo Finance).",
+   "lectura": "Vorbörslich im Plus, im Handel gedreht; fünfter Verlusttag in Folge.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: StockTitan; Yahoo Finance (18. November 2026).",
+   "voz": "Die dritte Aktie: Nvidia. Nach den Zahlen vom Dienstagabend stieg die Aktie vorbörslich, drehte im Handel aber ins Minus und schloss 2,89 Prozent tiefer bei 150,96 Dollar. Laut StockTitan sagte die kommissarische Chefin Colette Kress, Nvidia liefere keine lizenzierten Hopper-Chips für Rechenzentren mehr nach China. Dazu kommt der Führungswechsel nach dem Rücktritt von Jensen Huang. Laut Yahoo Finance war es der fünfte Verlusttag in Folge. Die ganze Analyse der Zahlen finden Sie in unserer Folge der Serie «Die Wall-Street-Giganten»."
+  },
+  {
+   "ticker": "TJX",
+   "noticia": "Quartalszahlen: vergleichbare Umsätze +4 %, über dem eigenen Plan; Gewinn je Aktie 1,39 Dollar (StockTitan).",
+   "lectura": "Fast doppeltes Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: StockTitan (18. November 2026).",
+   "voz": "Die vierte Aktie: TJX, der Betreiber der Discountketten TJ Maxx und TK Maxx, die es auch in Deutschland und Österreich gibt. Die Aktie stieg um 8,05 Prozent auf 140,30 Dollar, bei fast doppeltem Volumen. Laut StockTitan stiegen die vergleichbaren Umsätze um 4 Prozent und lagen damit über dem eigenen Plan. Der Gewinn je Aktie betrug 1,39 Dollar, ohne Erstattungen von Zöllen 1,34 Dollar."
+  },
+  {
+   "ticker": "TGT",
+   "noticia": "Quartalszahlen: Umsatz 27,1 Mrd. Dollar (+7,1 %), Jahresprognose für den Umsatz angehoben (StockTitan).",
+   "lectura": "Vorbörslich im Minus, dann gedreht; 2,6-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: StockTitan; Yahoo Finance (18. November 2026).",
+   "voz": "Die fünfte Aktie: Target, die US-Kaufhauskette. Die Aktie stieg um 4,01 Prozent auf 165,93 Dollar, bei zweieinhalbfachem Volumen. Laut StockTitan wuchs der Umsatz um 7,1 Prozent auf 27,1 Milliarden Dollar, die vergleichbaren Umsätze um 5,6 Prozent. Der Gewinn je Aktie lag bei 2,65 Dollar; darin stecken 50 Cent aus erstatteten Zöllen. Target hob die Umsatzprognose für das Gesamtjahr an. Vorbörslich war die Aktie noch gefallen."
+  }
+ ],
+ "macro": {
+  "titulo": "Öl −4,2 %, Gold −3,3 %, Rendite bei 5,07 %",
+  "items": {
+   "TVC:US10Y": "Über 5 %: hohe Renditen belasten Wachstumswerte",
+   "TVC:DXY": "Fester Dollar: Zinserhöhungen erwartet",
+   "TVC:VIX": "Knapp 25 Punkte: weiter erhöhte Nervosität",
+   "TVC:USOIL": "Höhere US-Lagerbestände drücken den Preis",
+   "TVC:GOLD": "Zinserwartungen belasten den sicheren Hafen"
+  },
+  "europa": "DAX −1,19 % und Euro Stoxx 50 −0,93 %: Europa schwächer als der Nasdaq, ähnlich wie der Dow."
+ },
+ "tecnico": {
+  "spx": {
+   "titulo": "Zweiter Tag unter der 200-Tage-Linie, RSI bei 37",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  },
+  "ndx": {
+   "titulo": "3,4 % unter der 200-Tage-Linie, über dem Tief vom Dienstag",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  }
+ },
+ "agenda": {
+  "titulo": "Anthropic-Börsenstart und Walmart-Zahlen am Donnerstag",
+  "fuente": "Quellen: StockTitan; Yahoo Finance; Vista Partners; TradingView (18. November 2026). Deutsche Zeit aus der New Yorker Zeit berechnet.",
+  "filas": [
+   [
+    "2026-11-19",
+    "Anthropic: erwarteter erster Handelstag an der Nasdaq",
+    "",
+    "erwartet"
+   ],
+   [
+    "2026-11-19",
+    "Quartalszahlen Walmart (vor Börsenbeginn)",
+    "",
+    "geplant"
+   ],
+   [
+    "2026-11-19",
+    "US-Dienstleistungsbericht 3. Quartal (Census)",
+    "10:00",
+    "geplant"
+   ],
+   [
+    "2026-11-19",
+    "Take-Two: Verkaufsstart von GTA 6",
+    "",
+    "geplant"
+   ]
+  ]
+ },
+ "fin": {
+  "titular": "Krankenversicherer brechen ein, Nasdaq steigt vor dem Anthropic-Börsengang, Nvidia im Minus",
+  "fuentes": "TradingView, StockTitan, Yahoo Finance, CNBC"
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "cabecera": "Wall Street auf Deutsch · 18. November 2026",
+ "out": "short-bolsa-2026-11-18-GE.mp4",
+ "fuente": "Quellen: TradingView, StockTitan\nund Yahoo Finance (18. November 2026). RSI: berechnet.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Wall Street · Sitzung vom",
+   "fecha": "Mi., 18. November 2026",
+   "indices": [
+    [
+     "S&P 500",
+     "−0,23 %",
+     "7.323,63",
+     "neg"
+    ],
+    [
+     "Dow Jones",
+     "−1,11 %",
+     "50.198,17",
+     "neg"
+    ]
+   ],
+   "pregunta": "Versicherer brechen ein,\nNvidia im Minus",
+   "voz": "Wall Street, Mittwoch, 18. November. Krankenversicherer unter Druck, Nvidia im Minus. Drei Punkte."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Krankenversicherer",
+   "big": "−10,21 %",
+   "delta": "UnitedHealth",
+   "color": "neg",
+   "barras": [
+    [
+     "Elevance",
+     -7.63
+    ],
+    [
+     "UnitedHealth",
+     -10.21
+    ],
+    [
+     "Humana",
+     -12.98
+    ]
+   ],
+   "nota": "Medicare-Behörde will zu viel gezahlte Gelder\nzurückholen. Dow Jones −561 Punkte.",
+   "voz": "Eins. Ein Vorschlag der Medicare-Behörde ließ UnitedHealth um gut 10 Prozent fallen."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Nvidia nach den Zahlen",
+   "big": "−2,89 %",
+   "delta": "Schluss bei 150,96 $",
+   "color": "neg",
+   "nota": "Rekordumsatz von 115,8 Mrd. Dollar,\naber keine Hopper-Chips mehr nach China.",
+   "voz": "Zwei. Nvidia fiel trotz Rekordumsatz um fast 3 Prozent."
+  },
+  {
+   "tipo": "kpis",
+   "n": 3,
+   "label": "Charttechnik S&P 500",
+   "items": [
+    [
+     "37",
+     "RSI 14",
+     "blue"
+    ],
+    [
+     "−4,3 %",
+     "unter der 50-Tage-Linie",
+     "neg"
+    ],
+    [
+     "−0,31 %",
+     "unter der 200-Tage-Linie",
+     "neg"
+    ]
+   ],
+   "nota": "Widerstand 7.347, Unterstützung 7.286.\nDas sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Der S&P 500 schloss den fünften Tag in Folge im Minus."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Am Donnerstag:\nAnthropic und Walmart",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Am Donnerstag kommen Anthropic an die Börse und Zahlen von Walmart. Das ganze Video finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}

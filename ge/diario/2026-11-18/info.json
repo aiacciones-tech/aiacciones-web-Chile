@@ -1,0 +1,71 @@
+{
+ "fecha": "2026-11-18",
+ "fecha_txt": "Mittwoch, 18. November 2026",
+ "elaborado": "18. November 2026, 23:30 Uhr",
+ "titulo": "Wall Street heute (18. November 2026): S&P 500 −0,23 %, Dow −1,11 % | Der Tagesbericht",
+ "titulo_short": "Wall Street am 18. November 2026: Versicherer brechen ein, Nvidia −2,89 % #Shorts",
+ "resumen": "Der S&P 500 schloss am Mittwoch, 18. November 2026, bei 7.323,63 Punkten (−0,23 %; −16,90 Punkte), der fünfte Verlusttag in Folge. Der Dow Jones fiel um 1,11 % auf 50.198,17, der Nasdaq Composite stieg um 0,42 % auf 24.429,88, der Nasdaq 100 um 0,42 % auf 27.116,26 und der Russell 2000 um 0,46 % auf 2.714,31.",
+ "claves": [
+  "Nachrichten: Krankenversicherer brachen ein, nachdem die Medicare-Behörde CMS am Montag eine Regel vorgeschlagen hatte, um zu viel gezahlte Gelder von Medicare-Advantage-Plänen zurückzuholen (UnitedHealth −10,21 %, Humana −12,98 %, Elevance −7,63 %). Fed-Protokoll: fast alle Mitglieder halten weitere Zinserhöhungen für angemessen. Anthropic-Börsengang für Donnerstag erwartet.",
+  "Nvidia: −2,89 % auf 150,96 Dollar trotz Quartalsumsatz von 115,8 Mrd. Dollar; laut StockTitan keine lizenzierten Hopper-Chips mehr nach China.",
+  "Markt: VIX −3,54 % auf 24,55; Rendite 10-jähriger US-Anleihen 5,07 %; WTI 82,01 Dollar (−4,19 %), Gold 3.723 Dollar (−3,27 %). In Europa schloss der DAX mit −1,19 %, der Euro Stoxx 50 mit −0,93 %.",
+  "Aktien (S&P 500): 235 Werte stiegen, 261 fielen (berechnet). Gewinner: Okta +12,07 %, Palo Alto Networks +9,90 %, TJX +8,05 %, Target +4,01 %, Amazon +3,82 %. Verlierer: Humana −12,98 %, UnitedHealth −10,21 %, Elevance Health −7,63 %.",
+  "Charttechnik S&P 500 (berechnet): unter der 200-Tage-Linie (7.347; −0,31 %), der 20-Tage-Linie (7.559; −3,1 %) und der 50-Tage-Linie (7.649; −4,3 %); Unterstützung 7.286; RSI 14 bei 36,6. Das sind Daten, keine Kauf- oder Verkaufssignale.",
+  "Termine: Donnerstag, 19. November, erwarteter erster Handelstag von Anthropic, Quartalszahlen Walmart vor Börsenbeginn, US-Dienstleistungsbericht (16 Uhr deutscher Zeit), Verkaufsstart von GTA 6."
+ ],
+ "claves_cortas": [
+  "S&P 500 bei 7.323,63 (−0,23 %) · Dow −1,11 %",
+  "UnitedHealth −10,21 % · Nvidia −2,89 %",
+  "Fed-Protokoll: weitere Zinserhöhungen angedeutet"
+ ],
+ "linkedin": {
+  "datos": [
+   "S&P 500 bei 7.323,63 (−0,23 %), fünfter Verlusttag; Dow Jones −1,11 %, Nasdaq 100 +0,42 %",
+   "Krankenversicherer nach Medicare-Vorschlag: UnitedHealth −10,21 %, Humana −12,98 %",
+   "Nvidia −2,89 % trotz Rekordumsatz von 115,8 Mrd. Dollar",
+   "Fed-Protokoll: fast alle Mitglieder halten weitere Zinserhöhungen für angemessen"
+  ],
+  "conclusion": "Ein gespaltener Markt vor dem Anthropic-Börsengang am Donnerstag."
+ },
+ "fuentes": "TradingView; StockTitan; Yahoo Finance; CNBC; Vista Partners",
+ "x": "Wall Street am 18. November 2026:\nS&P 500 7.323,63 (−0,23 %)\nDow −1,11 % · Nasdaq +0,42 %\nUnitedHealth −10,21 % · Nvidia −2,89 %",
+ "tiktok": "Wall Street am Mittwoch, 18. November 2026: Krankenversicherer brechen ein, der Dow fällt um 561 Punkte, und Nvidia schließt trotz Rekordumsatz im Minus. Drei Punkte: Versicherer, Nvidia und Charttechnik.",
+ "hashtags": "#WallStreet #Börse #Aktien #SP500 #Nasdaq #Nvidia #Börsennews",
+ "hashtags_short": "#WallStreet #Börse #Aktien #Nvidia #Shorts",
+ "tags": [
+  "Wall Street",
+  "US-Börse",
+  "Aktien",
+  "Börse heute",
+  "S&P 500",
+  "Nasdaq",
+  "Dow Jones",
+  "Nvidia",
+  "UnitedHealth",
+  "Humana",
+  "Medicare",
+  "Fed-Protokoll",
+  "Anthropic",
+  "Charttechnik",
+  "Börsennews",
+  "Wall Street auf Deutsch",
+  "Der Tagesbericht"
+ ],
+ "miniatura": {
+  "fecha": "Mittwoch, 18. November 2026",
+  "indices": [
+   [
+    "S&P 500",
+    "−0,23 %",
+    "neg"
+   ],
+   [
+    "Dow Jones",
+    "−1,11 %",
+    "neg"
+   ]
+  ],
+  "sub": "Versicherer brechen ein · Nvidia −2,89 %",
+  "pie": "Der Tagesbericht · Wall Street auf Deutsch"
+ }
+}
