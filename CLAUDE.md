@@ -11,3 +11,5 @@
 - **Voz de AIAcciones Chile (diario IPSA, videos de resultados y Shorts):** desde el 18-nov-2026 es Azure `es-CL-LorenzoNeural` (elección de Daniel);
   Piper solo de respaldo. Antes de renderizar, lee `voz-cl/README.md`: `bash voz-cl/pedir.sh <id> <dir> <fuentes>` y luego el render de siempre con
   `PYTHONPATH=<repo>/voz-cl/shim VOZ_DIR=<dir>`. Prevalece sobre "voz Piper" en el texto de las tareas programadas de Chile.
+- **AI Stocks UAE, serie semanal de análisis fundamental (`eau/fundamental/`):** un capítulo cada sábado (~18:00 EAU). Antes de cada capítulo lee
+  `eau/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
