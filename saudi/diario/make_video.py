@@ -1,4 +1,4 @@
-# Video diario en árabe de la bolsa saudí (TASI y, en una frase, Nomu), unos 5 minutos con bloque técnico de 5 escenas: 1080p, voz Piper ar_JO-kareem, logo Saudi Arabia AI Stocks.
+# Video diario en árabe de la bolsa saudí (TASI y, en una frase, Nomu), unos 5 minutos con bloque técnico de 5 escenas: 1080p, voz Azure ar-SA-HamedNeural (VOZ_DIR, voz-saudi.yml) o Piper ar_JO-kareem, logo Saudi Arabia AI Stocks.
 # Uso: AUD=<scratch> python3 make_video.py <carpeta del día> [preview]
 #   La carpeta del día tiene mercado.json (de datos/mercado-<fecha>.json de la rama datos-diario-saudi) y video.json (textos y locución;
 #   ver ejemplo-2026-11-05/). Escribe <carpeta>/video-bolsa-<fecha>-SA.mp4 y <carpeta>/times.json (capítulos).
@@ -383,4 +383,4 @@ if __name__ == "__main__":
     leads = [LEAD + (0.4 if j == 0 else 0) for j in range(len(SEQ))]
     times, t0 = render([lambda t, fn=fn: frame(fn, t) for fn in SEQ], durs, ([a for a, _ in clips], leads), sr, W, H, FPS, OUT,
                        os.path.join(AUD, "video-silent.mp4"), os.path.join(AUD, "full.wav"))
-    json.dump([(fn.__name__, tt) for fn, tt in zip(SEQ, times)], open(os.path.join(DIR, "times.json"), "w")); print("listo", round(t0, 1), "s", OUT)
+    json.dump([(fn.__name__, tt) for fn, tt in zip(SEQ, times)], open(os.path.join(DIR, "times.json"), "w")); print("listo", round(t0, 1), "s", OUT, "| voz:", "azure" if MOTOR["azure"] and not MOTOR["piper"] else ("mixta" if MOTOR["azure"] else "piper"), MOTOR)

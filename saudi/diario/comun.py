@@ -1,5 +1,5 @@
 """Piezas comunes del video diario en árabe de @SaudiArabiaAIStocks (Saudi Arabia AI Stocks): fuente Noto Naskh Arabic, texto RTL con letras unidas
-(arabic-reshaper + python-bidi, porque matplotlib no une ni reordena el árabe), colores de la marca, logo y locución Piper."""
+(arabic-reshaper + python-bidi, porque matplotlib no une ni reordena el árabe), colores de la marca, logo y locución (Azure con VOZ_DIR; si no, Piper)."""
 import os, subprocess, wave, textwrap, numpy as np, matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -67,11 +67,26 @@ def clean(ax):
 TTS = ["--length-scale", os.environ.get("LENGTH_SCALE", "0.8"), "--noise-scale", "0.6", "--noise-w-scale", "0.7", "--sentence-silence", "0.12"]
 
 
+SR_AZURE = 24000
+MOTOR = {"azure": 0, "piper": 0}
+
+
 def voz(texto, wav):
-    """Locución Piper ar_JO-kareem (piper-tts 1.8+ pone la vocalización/tashkeel). Devuelve (muestras recortadas, sr)."""
-    subprocess.run(["python3", "-m", "piper", "-m", VOICE, "-f", wav] + TTS, input=(texto + "\n").encode(), check=True, capture_output=True)
+    """Locución de una escena. Si VOZ_DIR tiene su wav de Azure (ar-SA-HamedNeural, hecho por voz-saudi.yml), usa ese;
+    si no, Piper ar_JO-kareem (piper-tts 1.8+ pone la vocalización/tashkeel). Devuelve (muestras recortadas, sr).
+    Con VOZ_DIR, todo sale a 24 kHz (Piper se remuestrea si falta algún wav), porque render() mezcla los clips con un solo sr."""
+    from voz_textos import clave
+    vd = os.environ.get("VOZ_DIR"); az = os.path.join(vd, clave(texto) + ".wav") if vd else None
+    if az and os.path.exists(az):
+        wav = az; MOTOR["azure"] += 1
+    else:
+        if vd: print("aviso: sin voz de Azure para", texto[:40], "-> Piper")
+        subprocess.run(["python3", "-m", "piper", "-m", VOICE, "-f", wav] + TTS, input=(texto + "\n").encode(), check=True, capture_output=True)
+        MOTOR["piper"] += 1
     w = wave.open(wav); sr = w.getframerate()
     a = np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16).astype(np.float32)
+    if vd and sr != SR_AZURE:
+        a = np.interp(np.arange(int(len(a) * SR_AZURE / sr)) * sr / SR_AZURE, np.arange(len(a)), a).astype(np.float32); sr = SR_AZURE
     nz = np.where(np.abs(a) > 300)[0]; a = a[max(nz[0] - int(0.03 * sr), 0):nz[-1] + int(0.08 * sr)]
     fi, fo = int(0.015 * sr), int(0.06 * sr); a[:fi] *= np.linspace(0, 1, fi); a[-fo:] *= np.linspace(1, 0, fo)
     return a, sr
