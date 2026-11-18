@@ -27,7 +27,7 @@ Valen todas las reglas de `ge/diario/CLAUDE.md` (Keine Anlageberatung, transpare
    `python3 ge/serie20/plan.py <datos> <scratch>/cola/cola-ge`. Si "hoy" está vacío, termina.
 2. Por cada episodio: `ge/serie20/episodios/<carpeta>/`, copia `datos.json` (no se sube al repo). Busca en la prensa del día (nota de la empresa,
    Reuters, CNBC, AP, Yahoo Finance; en alemán Handelsblatt, Börse Online, finanzen.net) qué explicó los números y la guía de la empresa.
-   Escribe `video.json`: `voz` en alemán, **330-400 palabras** («Prozent», «Milliarden Dollar»), las cifras dichas son las de pantalla;
+   Escribe `video.json`: `voz` en alemán, **380-440 palabras** (calibrado: 419 palabras dieron 3:25 con Azure; «Prozent», «Milliarden Dollar»), las cifras dichas son las de pantalla;
    lo de la prensa se atribuye («laut Mitteilung des Unternehmens»). Nada de comprar/vender, Kursziele ni «günstig/teuer».
 3. Sube los `video.json` a `claude/ge-serie20-<fecha de hoy>`: `serie20-voz-GE.yml` genera la voz (2-4 min). Clona `voz-ge-serie20`: `VOZ_DIR=<clon>/<carpeta>`.
 4. `AUD=<scratch> python3 ge/serie20/make_episodio.py <carpeta> preview` (mira todos los PNG), luego sin preview con `VOZ_DIR`,
