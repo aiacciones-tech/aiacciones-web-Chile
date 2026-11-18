@@ -1,0 +1,54 @@
+{
+ "ticker": "NVDA",
+ "nombre": "Nvidia",
+ "sector": "Halbleiter",
+ "trimestre": "3. Quartal GJ 2027",
+ "fecha_resultados": "2026-11-17",
+ "titular": "115,8 Mrd. $ Umsatz und Prognose von 130 Mrd. $: die ersten Zahlen nach Huangs Rücktritt",
+ "titulo_resultados": "Die wichtigsten Zahlen: August bis Oktober 2026",
+ "expectativas": {
+  "items": [
+   [
+    "Prognose 4. Quartal",
+    "Umsatz 130,0 Mrd. $ ± 3 % · Bruttomarge 71–72 % · ohne Rechenzentrums-Umsatz aus China"
+   ]
+  ],
+  "fuente": "Prognose: Mitteilung von Nvidia vom 17. November 2026 (das 4. Quartal hat eine Woche mehr)."
+ },
+ "claves": [
+  "Umsatz 115,8 Mrd. $ (+103 % zum Vorjahr), über der Analystenschätzung",
+  "Prognose für das 4. Quartal: 130 Mrd. $ ± 3 % (laut Nvidia)",
+  "Jensen Huang am 12. November zurückgetreten; Colette Kress führt kommissarisch"
+ ],
+ "voz": {
+  "e_portada": "Willkommen zu «Die Wall-Street-Giganten», unserer Serie über die zwanzig größten US-Unternehmen. Heute: Nvidia. Der Chipkonzern hat am Dienstagabend die Zahlen für das dritte Quartal seines Geschäftsjahres 2027 vorgelegt, also für August bis Oktober. Es waren die ersten Zahlen nach einem Führungswechsel: Laut Nvidia ist Jensen Huang am 12. November als Vorstandschef zurückgetreten. Finanzchefin Colette Kress führt das Unternehmen kommissarisch.",
+  "e_resultados": "Der Umsatz stieg auf 115,8 Milliarden Dollar, ein Plus von 103 Prozent zum Vorjahr. Der Nettogewinn lag bei 65,3 Milliarden Dollar, gut doppelt so viel wie vor einem Jahr. Der verwässerte Gewinn je Aktie betrug 2,70 Dollar. Der freie Cashflow im Quartal erreichte 43,8 Milliarden Dollar. Laut Mitteilung des Unternehmens kamen 107,6 Milliarden Dollar aus dem Geschäft mit Rechenzentren, 110 Prozent mehr als im Vorjahr.",
+  "e_ingresos": "In jedem der letzten acht Quartale ist der Umsatz gestiegen, von 39,3 auf 115,8 Milliarden Dollar. Die Nettomarge, also der Gewinn im Verhältnis zum Umsatz, lag diesmal bei 56 Prozent, nach 62 Prozent im Vorquartal. Die Bruttomarge betrug laut Nvidia 74,8 Prozent. Als Treiber nennt das Unternehmen die neue Plattform Vera Rubin, die nach eigenen Angaben schneller hochgefahren wurde als jedes Produkt zuvor.",
+  "e_balance": "Zur Bilanz am Quartalsende: Nvidia hatte 97,7 Milliarden Dollar an liquiden Mitteln und kurzfristigen Anlagen. Die Finanzschulden lagen bei 38,1 Milliarden Dollar, das Eigenkapital bei 266,7 Milliarden. Im Verhältnis zum Börsenwert von gut 3.700 Milliarden Dollar entsprechen die Schulden etwa einem Prozent und die Liquidität 2,6 Prozent. Das sind eigene Berechnungen.",
+  "e_flujo": "Beim Cashflow der letzten zwölf Monate: Aus dem laufenden Geschäft flossen 158,9 Milliarden Dollar zu. Für Investitionen gab Nvidia 10,1 Milliarden aus. Daraus ergibt sich ein freier Cashflow von 148,7 Milliarden Dollar. Laut Mitteilung hat Nvidia im Quartal 28,1 Milliarden Dollar über Aktienrückkäufe und Dividenden an die Aktionäre zurückgegeben.",
+  "e_expectativas": "Und im Vergleich zu den Erwartungen? Der Gewinn je Aktie in der bereinigten Rechnung lag mit 2,68 Dollar 7,9 Prozent über der Schätzung der Analysten von 2,48 Dollar. Der Umsatz übertraf die Schätzung von 109,1 Milliarden um 6,2 Prozent. Für das vierte Quartal, das eine Woche länger ist, rechnet Nvidia mit einem Umsatz von 130 Milliarden Dollar, plus oder minus 3 Prozent. Die Analysten hatten laut TradingView 127,6 Milliarden geschätzt. Umsätze mit Rechenzentrumschips in China sind in der Prognose nicht enthalten.",
+  "e_fin": "Fazit: Nvidia steigerte den Umsatz um 103 Prozent auf 115,8 Milliarden Dollar und lag über den Schätzungen, auch die Prognose liegt darüber. An der Spitze steht vorerst eine kommissarische Chefin; der Verwaltungsrat sucht einen dauerhaften Nachfolger. Welches Unternehmen sollen wir als Nächstes analysieren? Schreiben Sie es in die Kommentare. Keine Anlageberatung."
+ },
+ "info": {
+  "titulo": "Nvidia: Quartalszahlen Q3 2027 mit 115,8 Mrd. $ Umsatz | Die Wall-Street-Giganten",
+  "resumen": "Nvidia (NVDA) im 3. Quartal des Geschäftsjahres 2027 (August bis Oktober 2026): Umsatz 115,8 Mrd. Dollar (+103 % zum Vorjahr), davon 107,6 Mrd. aus Rechenzentren; Nettogewinn 65,3 Mrd. Dollar. Umsatz und bereinigter Gewinn je Aktie über den Analystenschätzungen. Prognose für das 4. Quartal: 130 Mrd. Dollar ± 3 %. Es waren die ersten Zahlen nach dem Rücktritt von Jensen Huang am 12. November; Finanzchefin Colette Kress führt das Unternehmen kommissarisch.",
+  "fuentes": "TradingView (Fundamentaldaten und Analystenschätzungen), Mitteilung von Nvidia zu den Quartalszahlen (17. November 2026), Mitteilung von Nvidia zum Führungswechsel (12. November 2026)",
+  "hashtags": "#Nvidia #NVDA #Quartalszahlen #KI #Aktien",
+  "x": "Nvidia | 3. Quartal GJ 2027: Umsatz 115,8 Mrd. $ (+103 %), über den Schätzungen. Prognose Q4: 130 Mrd. $ ± 3 %. Erste Zahlen nach Huangs Rücktritt.",
+  "tags": [
+   "Nvidia",
+   "NVDA",
+   "Nvidia Quartalszahlen",
+   "Nvidia Aktie",
+   "Vera Rubin",
+   "Colette Kress",
+   "KI-Chips"
+  ]
+ },
+ "miniatura": {
+  "etiqueta": "Umsatz · 3. Quartal GJ 2027",
+  "cifra": "115,8 Mrd. $",
+  "sub": "+103 % zum Vorjahr · Prognose 130 Mrd. $",
+  "color": "gold"
+ }
+}

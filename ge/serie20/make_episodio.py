@@ -115,7 +115,7 @@ def s_ingresos(t):
             lo, hi = min(m[1] for m in mg), max(m[1] for m in mg); r = (hi - lo) or 1; a2.set_ylim(lo - r * 0.3, hi + r * 0.9)
             for j, m in mg: a2.text(j, m + r * 0.25, f"{m:.0f} %", ha="center", color=TEAL, fontsize=15, weight="bold")
         T(f, 0.08, 0.745, ("Balken: Gesamterträge vor Zinsaufwand (Mrd. $)" if VJ.get("sector_tipo") == "banco" else "Balken: Quartalsumsatz (Mrd. $)") + " · grüne Linie: Nettomarge (berechnet)", MUTED, 18)
-    fuente(f, FUENTE_TV + ". Quartale nach dem Geschäftsjahr des Unternehmens. Nettomarge = Nettogewinn ÷ Umsatz (berechnet).")
+    fuente(f, FUENTE_TV + ". Quartalsbezeichnung wie bei TradingView (Kalenderquartal des Quartalsendes). Nettomarge = Nettogewinn ÷ Umsatz (berechnet).")
     return to_arr(f)
 
 
