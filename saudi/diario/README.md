@@ -41,9 +41,12 @@ El volumen de Nomu no viene en la vela del índice: se calcula sumando sus accio
    Al Arabiya, Asharq Business, Reuters (Zawya), comunicados en saudiexchange.sa. Ojo con la fecha: solo cuenta como motivo lo publicado ese día o la víspera tras el cierre.
 3. Copia `ejemplo-2026-11-10/` a la carpeta del día (sin los mp4/png) y cambia `video.json` (textos de pantalla y locución, números en palabras),
    `info.json` (título, descripción, posts, miniatura) y `short.json` (menos de 59 s; fecha en la primera escena). Nombres en árabe que falten: `"nombres"` en `video.json`.
-4. `AUD=<scratch> python3 make_video.py <dir> preview` (revisa los PNG), luego sin `preview` (unos 5 minutos, máx. 330 s; unas 480 palabras de locución en total, la mitad en el bloque técnico).
-5. `AUD=<scratch> python3 make_short.py <dir>/short.json` y `python3 gen_meta.py <dir>`. Todo lo que se entrega termina en `-SA` (regla de Daniel, 7-nov-2026).
-6. `SCRATCH=<scratch> bash encolar.sh <dir>`: comprueba los archivos y el enlace del canal, el límite de YouTube (~10 subidas/24 h, compartido con los videos de resultados)
+4. Voz: sube `video.json` y `short.json` del día a tu rama `claude/...` (push); `voz-saudi.yml` genera la voz de Azure. Cuando termine,
+   `git clone -q --depth 1 -b voz-saudi https://github.com/aiacciones-tech/aiacciones-web-Chile.git <scratch>/voz` y usa `VOZ_DIR=<scratch>/voz/<fecha>` en los dos renders.
+   Si el workflow falla o dice que falta la clave, sigue sin `VOZ_DIR` (Piper) y dilo en el resumen.
+5. `AUD=<scratch> VOZ_DIR=... python3 make_video.py <dir> preview` (revisa los PNG), luego sin `preview` (unos 5 minutos, máx. 330 s; unas 480 palabras de locución en total, la mitad en el bloque técnico).
+6. `AUD=<scratch> VOZ_DIR=... python3 make_short.py <dir>/short.json` y `python3 gen_meta.py <dir>`. Todo lo que se entrega termina en `-SA` (regla de Daniel, 7-nov-2026).
+7. `SCRATCH=<scratch> bash encolar.sh <dir>`: comprueba los archivos y el enlace del canal, el límite de YouTube (~10 subidas/24 h, compartido con los videos de resultados)
    y encola en `cola-sa/bolsa-<fecha>` y `cola-sa/bolsa-<fecha>-short` de `youtube-cola`.
 
 ## LinkedIn (regla permanente de Daniel, 8-nov-2026)
@@ -54,7 +57,13 @@ Facebook sigue con el texto largo y el enlace al video (`post-facebook.txt` en l
 
 ## Árabe
 - Fuente: Noto Naskh Arabic (`fonts/`, OFL). Texto: `comun.ar()` une las letras con arabic-reshaper; matplotlib 3.11+ ordena de derecha a izquierda (libraqm); en versiones anteriores lo hace python-bidi.
-- Voz: Piper `ar_JO-kareem-medium` (`/mnt/project-files/saudi-pipeline/voice/`); piper-tts 1.8+ pone el tashkeel. `LENGTH_SCALE=0.8`.
+- Voz (desde el 18-nov-2026, pedido de Daniel): **Azure `ar-SA-HamedNeural`** (acento saudí), hecha en GitHub Actions por `voz-saudi.yml` (`voz_azure.py`, porque el contenedor no llega a Azure).
+  Al subir `saudi/diario/<fecha>/video.json` o `short.json` a cualquier rama `claude/...`, el workflow deja un wav por escena en `<fecha>/` de la rama `voz-saudi` (unos 2 min);
+  `make_video.py` y `make_short.py` los usan con `VOZ_DIR=<clon de voz-saudi>/<fecha>` (la clave del wav es el texto exacto: si cambias una locución, vuelve a subir el json y espera).
+  Una escena sin wav sale con Piper (remuestreado) y `make_video.py` lo dice en la línea `listo ... | voz:`. Sin `VOZ_DIR`, todo con Piper `ar_JO-kareem-medium`
+  (`/mnt/project-files/saudi-pipeline/voice/`; piper-tts 1.8+ pone el tashkeel; `LENGTH_SCALE=0.8`), como respaldo si Azure falla.
+  Clave: `AZURE_SPEECH_KEY_SAUDI` si existe; si no, la de Nabd (`AZURE_SPEECH_KEY_NABD`, plan gratuito F0 de 500.000 caracteres/mes compartido; este canal gasta unos 3.200 por sesión, ~70.000/mes).
+  Re-subir el guion solo pide a Azure las escenas cambiadas.
 - Cifras en pantalla con dígitos occidentales (como Argaam y la prensa financiera saudí); en la voz, en palabras.
 - Marca: verde #0B6E4F y dorado #C9A227 (aclarados sobre fondo oscuro), logo `youtube-kit-saudi/profile-picture-800x800-saudi.png`.
 

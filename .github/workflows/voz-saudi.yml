@@ -1,0 +1,53 @@
+# Voz neuronal de Azure (ar-SA-HamedNeural) para el video diario y el Short de @SaudiArabiaAIStocks (saudi/diario/voz_azure.py).
+# Se lanza sola cuando la sesión diaria sube saudi/diario/<fecha>/video.json o short.json a una rama claude/**, o a mano con "Run workflow".
+# Deja un wav por escena en <fecha>/ de la rama voz-saudi (sin historial, para no engordar el repo); make_video.py y make_short.py
+# los usan con VOZ_DIR. Sin clave, o si Azure falla, no pasa nada: el video sale con la voz Piper.
+# Clave: AZURE_SPEECH_KEY_SAUDI si existe; si no, la de Nabd (AZURE_SPEECH_KEY_NABD, plan gratuito F0 de 500.000 caracteres al mes,
+# compartido: Arabia Saudita gasta unos 70.000 al mes). Región: AZURE_SPEECH_REGION_SAUDI o la de Nabd (northeurope).
+# Los wav del día que ya están en voz-saudi se reutilizan: re-subir el guion solo pide a Azure las escenas cambiadas.
+name: Voz Azure del video diario (Arabia Saudita)
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["saudi/diario/20*/video.json", "saudi/diario/20*/short.json"]
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "generar (la voz de un día) o verificar (solo la clave)"
+        default: verificar
+      fecha:
+        description: "fecha de la sesión (AAAA-MM-DD) para modo=generar; vacío = la carpeta más reciente"
+        default: ""
+permissions:
+  contents: write
+concurrency: voz-saudi
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_SAUDI || secrets.AZURE_SPEECH_KEY_NABD }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_SAUDI || secrets.AZURE_SPEECH_REGION_NABD || 'northeurope' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Comprobar la clave
+        id: clave
+        run: |
+          if [ -z "$AZURE_SPEECH_KEY" ]; then echo "Falta la clave de Azure: el video saldrá con la voz Piper."; echo "ok=0" >> $GITHUB_OUTPUT; exit 0; fi
+          mkdir -p /tmp/prueba && echo '{"voz":{"x":"مرحبا بكم."}}' > /tmp/prueba/video.json
+          python3 saudi/diario/voz_azure.py /tmp/prueba /tmp/prueba/out && ls -la /tmp/prueba/out && echo "ok=1" >> $GITHUB_OUTPUT
+      - name: Generar la voz del día
+        if: steps.clave.outputs.ok == '1' && (github.event_name == 'push' || inputs.modo == 'generar')
+        run: |
+          F="${{ inputs.fecha }}"
+          if [ -z "$F" ]; then F=$(ls -d saudi/diario/20??-??-?? | sort | tail -1 | xargs basename); fi
+          echo "fecha $F"
+          mkdir -p /tmp/voz
+          # wav ya hechos de ese día (re-subida del guion): solo se piden a Azure las escenas nuevas o cambiadas
+          if git fetch -q --depth 1 origin voz-saudi 2>/dev/null && git cat-file -e "FETCH_HEAD:$F" 2>/dev/null; then
+            git archive FETCH_HEAD "$F" | tar -x -C /tmp/voz; echo "reutilizo $(ls /tmp/voz/$F | wc -l) archivos"
+          fi
+          python3 saudi/diario/voz_azure.py saudi/diario/$F /tmp/voz/$F
+          cd /tmp/voz && git init -q -b voz-saudi && git add "$F"
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Voz Azure del video diario Arabia Saudita $F"
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          for i in 1 2 3; do git push -qf origin voz-saudi && break; sleep 5; done

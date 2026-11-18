@@ -1,4 +1,4 @@
-# YouTube Short vertical (1080x1920, < 60 s) del video diario en árabe de @SaudiArabiaAIStocks, con voz Piper y logo.
+# YouTube Short vertical (1080x1920, < 60 s) del video diario en árabe de @SaudiArabiaAIStocks, con voz Azure (VOZ_DIR) o Piper y logo.
 # Uso: AUD=<scratch> python3 make_short.py <carpeta del día>/short.json [preview]
 # Escenas: titulo (fecha de la sesión EN GRANDE, TASI y Nomu), cifra, kpis, fin. "out" relativo a la carpeta del JSON.
 # Zonas seguras de Shorts: arriba ~8 % (búsqueda), abajo ~22 % (título, canal) y franja derecha (botones): el texto va entre y=0.25 y 0.90
@@ -97,4 +97,4 @@ if __name__ == "__main__":
     if sum(durs) > MAXDUR: sys.exit(f"Short demasiado largo: {sum(durs):.1f} s (máx {MAXDUR}). Acorta la voz.")
     times, t0 = render([lambda t, e=e: frame(e, t) for e in E], durs, ([a for a, _ in clips], [LEAD] * len(E)), sr, W, H, FPS, S["out"],
                        os.path.join(AUD, "short-silent.mp4"), os.path.join(AUD, "short-full.wav"), loud=-14, ANIM=24, XF=6)
-    print("listo", S["out"], round(t0, 1), "s")
+    print("listo", S["out"], round(t0, 1), "s", "| voz:", MOTOR)
