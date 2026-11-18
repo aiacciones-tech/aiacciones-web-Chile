@@ -1,0 +1,1212 @@
+=== página 1
+Emaar Properties PJSC
+and its Subsidiaries
+UNAUDITED INTERIM CONDENSED
+CONSOLIDATED FINANCIAL STATEMENTS
+FOR THE PERIOD ENDED 31 MARCH 2026
+=== página 2
+Emaar Properties PJSC and its Subsidiaries
+Unaudited Interim Condensed Consolidated Financial Statements
+For the Period Ended 31 March 2026
+Table of Contents
+Pages
+Report on Review of Interim Condensed Consolidated Financial Statements 1
+Interim Condensed Consolidated Income Statement 2
+Interim Condensed Consolidated Statement of Comprehensive Income 3
+Interim Condensed Consolidated Statement of Financial Position 4
+Interim Condensed Consolidated Statement of Changes in Equity 5 – 6
+Interim Condensed Consolidated Statement of Cash Flows 7
+Notes to the Interim Condensed Consolidated Financial Statements 8 – 26
+=== página 3
+A branch of a member firm of Ernst & Young Global Limited
+ERNST & YOUNG MIDDLE EAST
+(DUBAI BRANCH)
+P.O. Box 9267
+ICD Brookfield Place, Ground Floor
+Al-Mustaqbal Street
+Dubai International Financial Centre
+Emirate of Dubai, United Arab Emirates
+Tel: +971 4 701 0100
++971 4 332 4000
+Fax: +971 4 332 4004
+dubai@ae.ey.com
+https://www.ey.com
+P.L. No. 108937
+REPORT ON REVIEW OF INTERIM CONDENSED CONSOLIDATED FINANCIAL
+STATEMENTS TO THE SHAREHOLDERS OF EMAAR PROPERTIES PJSC
+Introduction
+We have reviewed the accompanying interim condensed consolidated financial statements of Emaar
+Properties PJSC (the “Company”) and its subsidiaries (together referred to as the “Group”) which comprise
+the interim condensed consolidated statement of financial position as at 31 March 2026, and the related
+interim condensed consolidated income statement and interim condensed consolidated statement of
+comprehensive income for the three-months period then ended, and the interim condensed consolidated
+statement of changes in equity and the interim condensed consolidated statement of cash flows  for the
+three months period then ended, and other explanatory notes. Management is responsible for the
+preparation and fair presentation of these interim condensed consolidated financial statements in
+accordance with International Accounting Standard 34, Interim Financial Reporting (“IAS 34”). Our
+responsibility is to express a conclusion on these interim condensed consolidated financial statements based
+on our review.
+Scope of review
+We conducted our review in accordance with International Standard on Review Engagements 2410,
+“Review of Interim Financial Information Performed by the Independent Auditor of the Entity”.
+A review of interim condensed consolidated financial information consists of making inquiries, primarily
+of persons responsible for financial and accounting matters, and applying analytical and
+other review procedures. A review is substantially less in scope than an audit conducted in accordance with
+International Standards on Auditing and consequently does not enable us to obtain assurance that we would
+become aware of all significant matters that might be identified in an audit. Accordingly, we do not express
+an audit opinion.
+Conclusion
+Based on our review, nothing has come to our attention that causes us to believe that the accompanying
+interim condensed consolidated financial statements are not prepared, in all material respects, in
+accordance with IAS 34.
+Other matter
+The interim condensed consolidated financial statements of the Group for the three-month period ended 31
+March 2025 were reviewed by another auditor who expressed an unmodified conclusion on those interim
+condensed consolidated financial statements on 14 May 2025.
+Ernst & Young Middle East (Dubai Branch)
+Ali Hasan 
+Registration No: 5864
+8 May 2026
+Dubai, United Arab Emirates
+
+=== página 4
+Emaar Properties PJSC and its Subsidiaries
+INTERIM CONDENSED CONSOLIDATED INCOME STATEMENT
+Period ended 31 March 2026 (Unaudited)
+The accompanying notes 1 to 25 form an integral part of these interim condensed consolidated financial statements.
+2
+(US $1.00 = AED 3.673)
+Three-month period ended
+─────────────────
+31 March 31 March
+2026 2025
+Notes AED'000 AED'000
+Revenue 4 12,398,012 10,097,712
+Cost of revenue 4 (5,445,265) (4,368,104)
+─────── ───────
+GROSS PROFIT 6,952,747 5,729,608
+Other operating income 156,348 144,877
+Other operating expenses (42,679) (39,037)
+Selling, general and administrative expenses 5 (881,808) (718,538)
+Depreciation of property, plant and equipment (236,517) (160,854)
+Depreciation of investment properties (218,508) (195,225)
+Finance income 6(a) 719,239 647,743
+Finance costs 6(b) (217,292) (221,269)
+Other income, net 7 468,920 135,963
+Share of results of associates and joint ventures 545,525 109,701
+─────── ───────
+PROFIT BEFORE TAX 7,245,975 5,432,969
+Income tax expense 8 (833,854) (797,097)
+─────── ───────
+NET PROFIT FOR THE PERIOD 6,412,121 4,635,872
+═══════ ═══════
+ATTRIBUTABLE TO:
+Owners of the parent 4,997,205 3,709,152
+Non-controlling interests 1,414,916 926,720
+─────── ───────
+6,412,121 4,635,872
+═══════ ═══════
+Earning per share attributable to the owners of the
+Parent:
+-basic and diluted earnings per share (AED) 0.57 0.42
+═══════ ═══════
+=== página 5
+Emaar Properties PJSC and its Subsidiaries
+INTERIM CONDENSED CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME
+Period ended 31 March 2026 (Unaudited)
+The accompanying notes 1 to 25 form an integral part of these interim condensed consolidated financial statements.
+3
+Three-month period ended
+──────────────────
+31 March 31 March
+2026 2025
+AED'000 AED'000
+Net profit for the period 6,412,121 4,635,872
+Other comprehensive income to be reclassified to income statement in
+subsequent periods:
+Decrease in unrealised gains reserve           (14,380)           (94,327)
+(Decrease) / increase in foreign currency translation reserve           (825,568)             76,242
+ ───────  ───────
+Net other comprehensive loss to be reclassified to income statement in
+subsequent periods (839,948) (18,085)
+─────── ───────
+Other comprehensive (loss) / income not to be reclassified to income
+ statement in subsequent periods:
+(Decrease) / increase in fair value of investment (24,147) 26,865
+ ───────  ───────
+Net other comprehensive (loss) / income not to be reclassified to income
+statement in subsequent periods (24,147) 26,865
+─────── ───────
+TOTAL COMPREHENSIVE INCOME FOR THE PERIOD 5,548,026 4,644,652
+═══════ ═══════
+ATTRIBUTABLE TO:
+Owners of the parent         4,344,632       3,709,408
+Non-controlling interests        1,203,394 935,244
+ ───────  ───────
+5,548,026       4,644,652
+═══════ ═══════
+=== página 6
+
+=== página 7
+Emaar Properties PJSC and its Subsidiaries
+INTERIM CONDENSED CONSOLIDATED STATEMENT OF CHANGES IN EQUITY
+Period ended 31 March 2026 (Unaudited)
+The accompanying notes 1 to 25 form an integral part of these interim condensed consolidated financial statements.
+5
+(US $1.00 = AED 3.673)
+Attributable to the owners of the Company
+──────────────────────────────────────────────
+Employees’
+performance Non-
+Share share Retained controlling Total
+capital program Reserves earnings Total interests equity
+AED’000 AED’000 AED’000 AED’000 AED’000 AED’000 AED’000
+Balance at 1 January 2026 (Audited) 8,838,790 (1,684) 26,195,821 59,245,090 94,278,017 13,398,290 107,676,307
+Net profit for the period - - - 4,997,205 4,997,205 1,414,916 6,412,121
+Other comprehensive loss for the period - - (652,573) - (652,573) (211,522) (864,095)
+────── ───── ────── ────── ────── ────── ──────
+Total comprehensive (loss)/income for the period - - (652,573) 4,997,205 4,344,632 1,203,394 5,548,026
+Dividend declared to shareholders (Note 21) - - - (8,838,790) (8,838,790) - (8,838,790)
+Dividend of subsidiaries - - - - - (793,548) (793,548)
+Movement in non-controlling interest - - - - - 166 166
+Transfer of fair value reserve of investments
+designated at FVOCI to retained earnings on sale - - 7,810 (7,810) - - -
+────── ───── ────── ─────── ────── ────── ──────
+Balance as at 31 March 2026 8,838,790 (1,684) 25,551,058 55,395,695 89,783,859 13,808,302 103,592,161
+══════ ═════ ══════ ═══════ ══════ ══════ ══════
+=== página 8
+Emaar Properties PJSC and its Subsidiaries
+INTERIM CONDENSED CONSOLIDATED STATEMENT OF CHANGES IN EQUITY (continued)
+Period ended 31 March 2026 (Unaudited)
+The accompanying notes 1 to 25 form an integral part of these interim condensed consolidated financial statements.
+6
+(US $1.00 = AED 3.673)
+Attributable to the owners of the Company
+─────────────────────────────────────────────
+Employees’
+performance Non-
+Share share Retained controlling Total
+capital program Reserves earnings Total interests equity
+AED’000 AED’000 AED’000 AED’000 AED’000 AED’000 AED’000
+Balance at 1 January 2025 (Audited) 8,838,790 (1,684) 23,926,350 52,664,771 85,428,227 10,641,807 96,070,034
+Net profit for the period - - - 3,709,152 3,709,152 926,720 4,635,872
+Other comprehensive income for the period
+ -  - 256                       - 256 8,524              8,780
+────── ───── ────── ────── ────── ────── ──────
+Total comprehensive income for the period
+ -  -
+256 3,709,152 3,709,408 935,244 4,644,652
+Director's bonus - - - (9,900) (9,900) - (9,900)
+Dividend declared to shareholders - - - (8,838,790) (8,838,790) - (8,838,790)
+Dividend and directors' bonus of subsidiaries - - - (3,126) (3,126) (540,422) (543,548)
+Transfer of fair value reserve of investments
+designated at FVOCI to retained earnings on sale - - (1,135) 1,135 - - -
+────── ───── ────── ─────── ────── ────── ──────
+Balance as at 31 March 2025 8,838,790 (1,684) 23,925,471 47,523,242 80,285,819 11,036,629 91,322,448
+══════ ═════ ══════ ═══════ ══════ ══════ ══════
+=== página 9
+Emaar Properties PJSC and its Subsidiaries
+INTERIM CONDENSED CONSOLIDATED STATEMENT OF CASH FLOWS
+Period ended 31 March 2026 (Unaudited)
+The accompanying notes 1 to 25 form an integral part of these interim condensed consolidated financial statements.
+7
+(US $1.00 = AED 3.673)
+For the three-month period ended
+────────────────────
+31 March 31 March
+2026 2025
+Notes AED'000 AED'000Cas
+h flows from operating activities
+Profit before tax 7,245,975 5,432,969
+Adjustments for:
+Share of results of associates and joint ventures (545,525) (109,701)
+Depreciation (including right-of use assets) 481,179 381,900
+Amortisation of intangible assets 13,680 13,080
+Movement for end-of-service benefits, net 23,811 (612)
+Provision for doubtful receivables and advances 5 14,514 986
+Finance income 6(a) (719,239) (647,743)
+Finance cost 6(b) 217,292 221,269
+────── ──────
+Cash from operations before working capital changes 6,731,687 5,292,148
+Working capital changes:
+Trade and unbilled receivables 376,802 1,399,267
+Other assets, receivables, deposits and prepayments (2,125,512) (759,247)
+Development properties 302,937 292,781
+Advances from customers 2,964,581 2,846,870
+Trade and other payables (920,902) (176,708)
+Retentions payable 228,400 117,896
+────── ──────
+Cash generated from operations 7,557,993 9,013,007
+Income tax, net 8 (39,175) (8,787)
+────── ──────
+Net cash flows from operating activities 7,518,818 9,004,220
+────── ──────
+Cash flows from investing activities
+Purchase of securities  (476,173) (558,106)
+Proceeds from disposal of securities 904,245 146,106
+Finance income received 571,657 409,570
+Dividend received from associates and joint ventures 926 56,570
+Movement in loans and investments in associates and joint ventures, net (32,017) 28,587 
+Amounts incurred on investment properties (152,343) (265,124)
+Amount incurred on property, plant and equipment (272,065) (215,042)
+Deposits maturing after three months (including deposits under lien) 13 (4,214,772) 154,569 
+────── ──────
+Net cash flows used in investing activities (3,670,542) (242,870)
+────── ──────
+Cash flows from financing activities
+Proceeds from interest-bearing loans and borrowings 17 6,428 548,652 
+Repayment of interest-bearing loans and borrowings 17 (526,902) (654,301) 
+Payment of lease liabilities (40,944) (27,358)
+Finance costs paid (270,196) (178,489)
+Directors’ bonus paid - (13,026)
+────── ──────
+Net cash flows used in financing activities (831,614) (324,522)
+────── ──────
+Increase in cash and cash equivalents 3,016,662 8,436,828
+Net foreign exchange difference (131,585) 12,380
+Cash and cash equivalents at the beginning of the period 9 52,632,912 38,631,997 
+────── ──────
+Cash and cash equivalents at the end of the period 9 55,517,989 47,081,205 
+══════ ══════
+=== página 10
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+As at ended 31 March 2026 (Unaudited)
+8
+1 DOMICILE AND ACTIVITIES
+Emaar Properties Public Joint Stock Company (the “Company”) was established as a public joint stock company by Ministerial
+Decree number 66 in the year 1997. The Company was established on 23 June 1997 and commenced operations on 29 July
+1997. The Company and its subsidiaries constitute the Group (the “Group”). The Company’s registered office is at P.O. Box
+9440, Dubai, United Arab Emirates (“UAE”). The shares of the Company are traded on the Dubai Financial Market. The
+principal activities of the Group are property investment, development and development management, shopping malls and retail,
+hospitality, property management and utility services and investments in providers of financial services.
+The interim condensed consolidated financial statements were authorised for issue on 8 May 2026.
+2.1 BASIS OF PREPARATION
+The interim condensed consolidated financial statements of the Group for the period ended 31 March 2026 have been prepared
+in accordance with International Accounting Standard (IAS) 34: Interim Financial Reporting and UAE Federal Decree Law No.
+(32) of 2021, as amended. The Group has prepared the interim condensed consolidated financial statements on the basis that it
+will continue to operate as a going concern.
+The interim condensed consolidated financial statements do not contain all information and disclosures required for full financial
+statements prepared in accordance with IFRS Accounting Standards (IFRS) and should be read in conjunction with the Group’s
+annual consolidated financial statements for the year ended 31 December 2025. The same accounting policies, methods of
+computation, significant accounting judgments and estimates and assumptions are followed in these interim condensed
+consolidated financial statements as compared with the most recent annual consolidated financial statements, except for the new
+standards, amendments and significant estimates and judgements adopted during the current period as explained below in notes
+2.2 and 2.3.
+The interim condensed consolidated financial statements have been prepared in United Arab Emirates Dirhams (AED), which
+is the Company's functional and presentation currency, and all values are rounded to the nearest thousand except where
+otherwise indicated. Each entity in the Group determines its own functional currency and items included in the financial
+statements of each entity are measured using that functional currency.
+The interim condensed consolidated financial statements have been prepared on a historical cost basis. Historical cost is
+generally based on the fair value of the consideration given in exchange for assets.
+The preparation of interim condensed consolidated financial statements on the basis described above requires management to
+make judgements, estimates and assumptions that affect the application of policies and reported amounts of assets and liabilities,
+income and expenses. The estimates and associated assumptions are based on historical experience and various other factors
+that are believed to be reasonable under the circumstances, the results of which for the basis of making the judgements about
+carrying values of assets and liabilities that are not readily apparent from other sources. Actual results may differ from these
+estimates.
+Certain comparative amounts have been reclassified to conform to the presentation used in these interim condensed consolidated
+financial statements.
+Results for the period ended 31 March 2026 are not necessarily indicative of the results that may be expected for the financial
+year ending 31 December 2026.
+Geopolitical events
+The Group continues to monitor regional geopolitical developments, including the recent conflict involving the United States,
+Israel and Iran which has affected certain economic activities and market sentiment across the Gulf Cooperation Council (GCC)
+region. While the situation remains fluid as at the date of approval of these interim condensed consolidated financial statements
+and its longer-term impact is uncertain, management has assessed the implications for the Group’s operations, financial
+performance, liquidity and asset valuations.
+Based on this assessment, management has concluded that there is no material adverse impact on the Group’s core businesses
+in the GCC region, including the UAE. The Group’s real estate development operations remain well supported by a strong
+backlog, ongoing construction activity, and customer collections broadly in line with expectations. Further, our leasing portfolio
+in the region continues to demonstrate resilience, supported by high occupancy levels and a significant fixed-rent component.
+Some impact has been observed post the start of the conflict in hospitality and certain entertainment businesses that are
+dependent on visitor flows; however, these represent a smaller portion of the Group’s overall performance.
+Management has also assessed potential impairment indicators and, having considered the most recent independent valuations
+as at 31 December 2025 that indicate significant headroom over the related carrying values, has concluded that no impairment
+or material valuation adjustment is required as at the reporting date.
+The Group maintains a strong liquidity position, supported by healthy cash collections, available funding and investment-grade
+credit ratings from S&P and Moody’s, each with a stable outlook. Accordingly, these developments are not expected to have a
+material adverse effect on the Group’s interim condensed consolidated financial position, results of operations, or cash flows.
+Management will continue to monitor the situation closely and will reassess its conclusions should circumstances change
+materially.
+=== página 11
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+9
+2.2 MATERIAL ACCOUNTING POLICY INFORMATION
+The accounting policies and the methods of computation adopted in the preparation of these interim condensed consolidated
+financial statements are the same as those applied in the preparation of preceding annual published consolidated financial
+statements of the Group for the year ended 31 December 2025.
+2.3 CHANGES IN THE ACCOUNTING POLICIES AND DISCLOSURES
+A number of new standards are effective for annual periods beginning after 1 January 2026 and earlier application is permitted,
+however, the Group has not early adopted the new or amended standards in preparing these interim condensed consolidated
+financial statements. The following new or amended standards that are adopted in annual periods beginning on 1 January
+2026:
+(a)       New standards, interpretations and amendments adopted by the Group
+Effective date
+Annual Improvements to IFRS Accounting Standards - Volume 11 1 January 2026
+Contracts Referencing Nature-dependent Electricity – Amendments to IFRS 9 and IFRS 7 1 January 2026
+Amendments to the Classification and Measurement of Financial Instruments – Amendments to IFRS
+9 and IFRS 7 1 January 2026
+These standards / improvements have no material impact on the interim condensed consolidated financial statements of the
+Group.
+(b)      Standards, amendments and interpretations in issue but not effective
+The following amended standards and interpretations are not expected to have a significant impact on the Group’s interim
+condensed consolidated financial statements:
+Effective date
+IFRS 18 – Presentation and Disclosure in Financial Statements 1 January 2027
+IFRS 19 – Subsidiaries without Public Accountability: Disclosures 1 January 2027
+Translation to a Hyperinflationary Presentation Currency – Amendments to IAS 21 1 January 2027
+Other than IFRS 18, the Group does not expect the adoption of the above new standards, amendments and interpretations
+issued to have a material impact on the future consolidated financial statements of the Group.
+3         SEGMENT INFORMATION
+Business segments
+Business segment is the primary segment of the Group. For management purposes, the Group is organised into three major
+segments, namely, real estate (develop, sell and manage condominiums, villas, commercial units and plots of land), leasing,
+retail and related activities (develop, lease and manage malls, retail, commercial and residential spaces) and hospitality
+(develop, own and/or manage hotels, serviced apartments and leisure activities). Other segments include businesses that
+individually do not meet the criteria for a reportable segment as per IFRS 8 ‘Operating Segments’. These businesses are
+property management and utility services and investments in providers of financial services.
+Revenue from sources other than property sales, leasing, retail and related activities and hospitality are included in other
+operating income.
+=== página 12
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+10
+3 SEGMENT INFORMATION (continued)
+Business segments (continued)
+Leasing, retail
+ and related
+Real estate activities Hospitality Others Total
+AED’000 AED’000 AED’000 AED’000 AED’000
+Three-month period ended
+31 March 2026
+Revenue
+Revenue from external customer
+- Over a period of time  9,143,992  1,781,806  233,522  -  11,159,320
+- Point in time  658,684  273,778  306,230  -  1,238,692
+ ──────  ───────  ──────  ──────  ───────
+ 9,802,676  2,055,584  539,752  -  12,398,012
+═══════ ═══════ ══════ ══════ ═══════
+Results
+Profit before tax and before (a) & (b)  5,717,413  1,444,792  178,939  128,992  7,470,136
+══════ ══════ ══════ ══════
+(a) Unallocated selling, general
+and administrative expenses  (292,734)
+(b) Unallocated finance income, net  68,573
+ ───────
+Profit before tax for the period 7,245,975
+═══════
+Other segment information
+Capital expenditure
+(Property, plant and equipment
+ and investment properties)  36,935  231,296  130,239  25,938  424,408
+ ══════  ═══════ ══════ ══════ ═══════
+Depreciation
+(Property, plant and equipment, right-
+of-use assets and investment properties) 100,298 252,374 108,859 19,648 481,179
+ ══════  ══════ ══════ ══════ ═══════
+As at 31 March 2026
+Assets and liabilities
+Total segment assets 158,670,832 24,240,479 7,928,668 4,453,728 195,293,707
+═══════ ═══════ ═══════ ═══════ ═══════
+Total segment liabilities 82,554,844 7,110,889 1,422,393 613,420 91,701,546
+═══════ ═══════ ═══════ ═══════ ═══════
+=== página 13
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+11
+3 SEGMENT INFORMATION (continued)
+Business segments (continued)
+Leasing, retail
+and related
+Real estate activities Hospitality Others Total
+AED’000 AED’000 AED’000 AED’000 AED’000
+Three-month period ended
+31 March 2025
+Revenue
+Revenue from external customer
+- Over a period of time  7,014,316  1,552,211  250,696  -  8,817,223
+- Point in time  616,093  341,821  322,575  -  1,280,489
+ ──────  ───────  ──────  ──────  ───────
+ 7,630,409  1,894,032  573,271  -  10,097,712
+═══════ ═══════ ══════ ══════ ═══════
+Results
+Profit before tax and before (a) & (b)  3,771,356  1,382,768  247,015  122,832  5,523,971
+══════ ══════ ══════ ══════
+(a) Unallocated selling, general
+and administrative expenses  (261,300)
+(b) Unallocated finance income, net  170,298
+ ───────
+Profit before tax for the period  5,432,969
+═══════
+Other segment information
+Capital expenditure
+(Property, plant and equipment
+ and investment properties)  58,365  292,184  55,306  74,311  480,166
+ ══════  ═══════ ══════ ══════ ═══════
+Depreciation
+(Property, plant and equipment, right-of-
+use assets and investment properties) 65,395 228,755 70,663 17,087 381,900
+══════ ══════ ══════ ══════ ═══════
+As at 31 December 2025(Audited)
+Assets and liabilities:
+Total segment assets 149,620,399 24,340,404 8,191,240 4,548,644 186,700,687
+════════ ════════ ═══════ ═══════ ════════
+Total segment liabilities 69,491,596 7,355,934 1,566,687 610,163 79,024,380
+════════ ════════ ═══════ ═══════ ════════
+Geographic segments
+The Group is currently operating in number of countries outside the UAE and is engaged in development of several projects
+which have significant impact on the Group results. The domestic segment includes business activities and operations in the
+UAE and the international segment includes business activities and operations outside the UAE (including export sales).
+=== página 14
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+12
+3 SEGMENT INFORMATION (continued)
+Geographic segments (continued)
+The following tables include revenue, profit and certain assets and liabilities information regarding business segments for the
+three months period ended 31 March 2026 and 31 March 2025. Assets and liabilities of the business segments are presented as
+at 31 March 2026 and 31 December 2025.
+Domestic International Total
+AED’000 AED’000 AED’000
+Three-month period ended
+31 March 2026
+Revenue
+Revenue from external customers
+- Over period of time 11,044,425 114,895 11,159,320
+- Point in time 526,333 712,359 1,238,692
+─────── ─────── ───────
+11,570,758 827,254 12,398,012
+═══════ ═══════ ═══════
+Other segment information
+Capital expenditure (property, plant and equipment and
+investment properties) 388,944 35,464 424,408
+════════ ════════ ════════
+Assets
+As at 31 March 2026
+Total assets 165,643,312 29,650,395 195,293,707
+════════ ════════ ════════
+Total liabilities 75,542,245 16,159,301 91,701,546
+════════ ════════ ════════
+Domestic International Total
+AED’000 AED’000 AED’000
+Three-month period ended
+31 March 2025
+Revenue
+Revenue from external customers
+- Over period of time 8,717,598 99,625 8,817,223
+- Point in time 651,947 628,542 1,280,489
+─────── ─────── ───────
+9,369,545 728,167 10,097,712
+═══════ ═══════ ═══════
+Other segment information
+Capital expenditure (property, plant and equipment and
+investment properties) 442,828 37,338 480,166
+═══════ ═══════ ═══════
+Assets
+As at 31 December 2025 (Audited)
+Total assets 155,960,553 30,740,134 186,700,687
+════════ ════════ ════════
+Total liabilities 61,865,083 17,159,297 79,024,380
+════════ ════════ ════════
+=== página 15
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+13
+4 REVENUE AND COST OF REVENUE
+Three-month period ended
+────────────────
+31 March 31 March
+2026 2025
+AED'000 AED'000
+Revenue:
+Revenue from real estate
+Sale of residential units  9,320,699  7,089,921
+Sale of commercial units, plots of land and others  481,977  540,488
+Revenue from hospitality  539,752 573,271
+Revenue from leased properties, retail and related income  2,055,584 1,894,032
+─────── ───────
+12,398,012 10,097,712
+═══════ ══════
+Revenue comprises of income recognized in accordance with:
+Revenue from contract with customers (IFRS 15) 10,706,958 8,626,068
+Leases (IFRS 16) 1,691,054 1,471,644
+ ──────  ──────
+12,398,012 10,097,712
+ ══════ ══════
+ Three-month period ended
+────────────────
+31 March 31 March
+2026 2025
+AED'000 AED'000
+Cost of revenue:
+Cost of revenue from real estate
+Cost of residential units  4,698,229  3,581,573
+Cost of commercial units, plots of land and others  242,025  280,487
+Operating cost of hospitality  236,324 247,562
+Operating cost of leased properties, retail and related activities  268,687 258,482
+ ────── ──────
+5,445,265 4,368,104
+ ══════ ══════
+5 SELLING, GENERAL AND ADMINISTRATIVE EXPENSES
+Three-month period ended
+────────────────
+31 March 31 March
+2026 2025
+AED'000 AED'000
+Sales and marketing expenses  379,938 243,702
+Payroll and related expenses  200,285 189,499
+Property management expenses  70,443  76,920
+Depreciation of right-of-use assets  26,154  25,821
+Provision for doubtful receivables and advances  14,514  986
+Donations 4,722  2,667
+Other expenses  185,752  178,943
+────── ──────
+881,808 718,538
+══════ ══════
+=== página 16
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+14
+6(a)  FINANCE INCOME
+Three-month period ended
+──────────────────
+31 March 31 March
+2026 2025
+AED'000 AED'000
+Finance income from bank deposits and securities 658,402 569,843
+Other finance income 60,837 77,900
+────── ──────
+719,239 647,743
+══════ ══════
+6(b)  FINANCE COSTS
+Three-month period ended
+──────────────────
+31 March 31 March
+2026 2025
+AED'000 AED'000
+Finance costs on borrowings 140,725 149,277
+Other finance costs (Note 22) 76,567 71,992
+────── ──────
+217,292 221,269
+══════ ══════
+7  OTHER INCOME, NET
+Three-month period ended
+──────────────────
+31 March 31 March
+2026 2025
+AED'000 AED'000
+Foreign currency translation gain / (loss), net 352,317 (16,678)
+Others 116,603 152,641
+─────── ───────
+468,920 135,963
+═══════ ═══════
+8 INCOME TAX
+The Group recognizes income tax expense using the tax rate that would be applicable on the taxable profits based on
+management’s estimate. Following the enactment of the UAE Domestic Minimum Top-up Tax (“DMTT”) effective 1 January
+2025, the Group has recognized an additional top-up tax expense to ensure compliance with 15% UAE Domestic Minimum
+Top-up Tax regulations. The Group falls within the scope of DMTT based on the applicable consolidated revenue threshold.
+The Group’s average annual effective tax rate (“ETR”) for the three-month period ended 31 March 2026 is 11.5% (period ended
+31 March 2025 was 14.7%). The major components of income tax expense in the interim condensed consolidated income
+statement are:
+Three-month period ended
+──────────────────
+31 March 31 March
+2026 2025
+AED'000 AED'000
+Consolidated income statement
+Current income tax expenses 498,317 409,757
+Domestic minimum top up tax expenses 444,921 394,361
+Deferred tax credit (109,384) (7,021)
+─────── ───────
+833,854 797,097
+═══════ ══════
+=== página 17
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+15
+8    INCOME TAX (continued)
+31 March 31 December
+2026 2025
+AED'000 AED'000
+(Audited)
+Consolidated statement of financial position
+Income tax payable balance at the beginning of the period/year 3,792,836 1,237,838
+Charge for the period/year, net 943,238 3,398,832
+Paid during the period/year and other adjustments (39,175) (843,834)
+────── ──────
+Income tax payable balance at the end of the period/year 4,696,899 3,792,836
+══════ ══════
+Net deferred tax liabilities balance at the beginning of the period/year 1,040,486 1,117,853
+Deferred tax credit for the period/year (109,384) (67,933)
+Other movements, net (96,862) (9,434)
+─────── ───────
+Net deferred tax liabilities balance at the end of the period/year 834,240 1,040,486
+════════ ════════
+Disclosed as:
+Deferred tax liabilities 1,056,670 1,073,057
+Deferred tax assets (Note 11) (222,430) (32,571)
+──────── ────────
+Net deferred tax liabilities balance at the end of the period/year 834,240 1,040,486
+════════ ════════
+Deferred tax assets and liabilities mainly comprise of temporary differences between the carrying amounts of assets and
+liabilities for financial reporting purposes and their respective tax bases. In the current period, deferred tax assets were
+recognised in India on account of unabsorbed losses and provisions, to the extent considered recoverable. Deferred tax liabilities
+recognised in prior years were on account of fair value gain on India assets recognised upon gaining control of Emaar India
+which is adjusted for the impairments recognised on non-financial assets, purchase price allocation impact due to the acquisition
+of a subsidiary in Egypt and temporary differences arising in Egypt from unrealized income.
+The Group applied the Ministerial Decision 120 of 2023 (‘MD 120’) under Transitional rules for Federal Decree Law No. 47
+of 2022 on taxation of Corporation and Businesses on immovable properties in the UAE. To ensure compliance and obtain
+further clarity on the appropriate method for calculating the impact of MD 120, a formal clarification request had been submitted
+to the Federal Tax Authority (FTA) of the UAE. Based on the received response, management had recognized the tax relief,
+aligning with the principles of IFRIC 23 ‘Uncertainty Over Income Tax Treatments’.
+9  CASH AND CASH EQUIVALENTS
+31 March 31 December
+2026 2025
+AED'000 AED'000
+(Audited)
+Cash in hand 18,216 26,914
+Current and call bank deposit accounts 48,405,794 47,474,011
+Fixed deposits with an original maturity of three months or less 7,093,979 5,131,987
+────── ──────
+Cash and cash equivalents balance 55,517,989 52,632,912
+═══════ ══════
+=== página 18
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+16
+9  CASH AND CASH EQUIVALENTS (continued)
+31 March 31 December
+2026 2025
+AED’000 AED’000
+(Audited)
+Bank balances and cash located:
+Within UAE           54,316,050 51,291,812
+Outside UAE             1,201,939 1,341,100
+ ──────  ──────
+55,517,989 52,632,912
+══════ ══════
+Bank balances and cash are denominated in the following currencies:
+United Arab Emirates Dirham (AED)  54,840,961 51,823,090
+United States Dollar (USD) 261,262 395,665
+Saudi Riyal (SAR) 116,482 92,881
+Indian Rupee (INR) 71,330  82,811
+Egyptian Pound (EGP) 48,002  74,346
+Other currencies 179,952  164,118
+ ──────  ──────
+55,517,989 52,632,912
+══════ ══════
+Cash at banks earn interest at fixed rates based on prevailing bank deposit rates. Short-term fixed deposits are made for varying
+periods from one day to three months, depending on the cash requirements of the Group, and earn interest at the respective short-
+term deposit rates.
+As at the reporting date, bank and cash balances include AED 43,338,467 thousand (31 December 2025: AED 42,199,013
+thousand) representing advances received from customers against sale of development properties which are deposited into
+escrow accounts. These balances are not under lien.
+10 TRADE AND UNBILLED RECEIVABLES
+31 March 31 December
+2026 2025
+AED'000 AED'000
+(Audited)
+Trade receivables
+Amounts receivables within 12 months, net 2,300,985 2,268,596
+Amounts receivable after 12 months                 184,424 180,640
+ ──────  ──────
+2,485,409 2,449,236
+ ──────  ──────
+Unbilled receivables
+Unbilled receivables within 12 months             5,934,070 5,498,765
+Unbilled receivables after 12 months, net 2,385,143 3,189,413
+────── ──────
+8,319,213 8,688,178
+────── ───────
+Total trade and unbilled receivables 10,804,622 11,137,414
+══════ ═══════
+The above trade receivables are net of AED 429,236 thousand (31 December 2025: AED 411,866 thousand) relating to provision
+for doubtful receivables. All other receivables are considered recoverable in full.
+=== página 19
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+17
+11 OTHER ASSETS, RECEIVABLES, DEPOSITS AND PREPAYMENTS
+31 March 31 December
+2026 2025
+AED'000 AED'000
+(Audited)
+Advances to contractors and others (i) 5,552,527 3,910,828
+Deferred sales commission (ii) 4,915,907 4,583,427
+Value added tax recoverable 758,249                513,005
+Receivables from communities owner associations 538,228                522,100
+Recoverable from non-controlling interests, net of provision 510,617                519,102
+Deferred tax assets (Note 8)                  222,430                  32,571
+Prepayments 209,682 204,084
+Inventory - Hospitality and Retail 45,034 45,028
+Other receivables and deposits               1,661,054             1,687,999
+ ──────  ──────
+14,413,728 12,018,144
+══════ ══════
+Maturity profile:
+Within 12 months  13,656,378  11,440,029
+After 12 months  757,350  578,115
+ ──────  ──────
+14,413,728 12,018,144
+══════ ══════
+(i) Advances paid to contractors at the commencement of work are adjusted against progress billings issued by the
+contractors throughout the project construction period.
+(ii) The sales commission incurred to obtain or fulfil a contract with the customers is amortised over the period of satisfying
+performance obligations, where applicable.
+12 DEVELOPMENT PROPERTIES
+31 March
+2026
+AED'000
+Balance at the beginning of the period (Audited) 50,235,463
+Add: cost incurred during the period 5,874,297
+Less: cost transferred to cost of revenue during the period (4,940,254)
+Less: foreign currency translation differences (1,208,599)
+───────
+Balance at the end of the period 49,960,907
+═══════
+Development properties located:
+Within UAE 35,289,354
+Outside UAE 14,671,553
+───────
+49,960,907
+═══════
+=== página 20
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+18
+13  OTHER FINANCIAL ASSETS
+31 March
+2026
+31 December
+2025
+AED’000 AED’000
+(Audited)
+Short term deposits
+Deposits under lien (Note 23 (a)) 539,192 680,155
+Fixed deposits with original maturities of more than three months 22,503,367 18,147,632
+────── ──────
+23,042,559 18,827,787
+────── ──────
+Investment in securities
+Financial assets at amortised cost 596,860 940,151
+Financial assets at fair value through profit and loss 350,710 352,834
+Financial assets at fair value through other comprehensive income 289,378 490,962
+──────── ────────
+1,236,948 1,783,947
+──────── ────────
+Total other financial assets 24,279,507 20,611,734
+════════ ════════
+Other financial assets located:
+Within UAE 21,139,777 17,193,904
+Outside UAE 3,139,730 3,417,830
+──────── ────────
+24,279,507 20,611,734
+════════ ════════
+Fair value hierarchy
+The Group uses the following hierarchy for determining and disclosing the fair value of investment in securities at fair value by
+valuation technique:
+Total Level 1 Level 2 Level 3
+AED'000 AED'000 AED'000 AED'000
+31 March 2026 640,088 61,873 554,821 23,394
+══════ ══════ ══════ ══════
+31 December 2025 (Audited) 843,796 88,643 731,759 23,394
+══════ ══════ ══════ ══════
+Valuations for Level 2 investments in securities have been derived by determining their redemption value which is generally
+net asset value per share of the investee companies. There were no transfers made between Level 1 and Level 2 during the
+period.
+14 LOANS TO ASSOCIATES AND JOINT VENTURES
+31 March 31 December
+2026 2025
+AED'000 AED'000
+(Audited)
+Emaar Dubai South DWC LLC (i) 711,294 705,359
+Zabeel Square 131,383 134,546
+Other associates and joint ventures 230,626 220,184
+───── ─────
+1,073,303 1,060,089
+═════ ═════
+Loans to associates and joint ventures are unsecured, repayable on demand / as per the terms of the agreement and do not carry
+any interest.
+(i) This includes AED 377,456 thousand (31 December 2025: AED 380,618 thousand) which is expected to be recovered
+after 12 months from the reporting date.
+=== página 21
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+19
+15 INVESTMENTS IN ASSOCIATES AND JOINT VENTURES
+31 March 31 December
+2026 2025
+AED’000 AED’000
+(Audited)
+Carrying value of investments in associates and joint ventures:
+Emaar Dubai South DWC LLC 1,782,539 1,363,713
+Amlak Finance PJSC - quoted * 1,530,575 1,494,151
+Emaar, The Economic City (Saudi Joint Stock Company) - quoted* 1,244,689 1,208,033 
+DWTC Emaar LLC 465,300 411,394
+Downtown DCP LLC * 442,961 456,695
+Turner International Middle East Ltd 261,981 260,050
+EII Capital P.S.C.* 138,259 157,383
+Other associates and joint ventures 1,662,376 1,613,859
+─────── ────────
+7,528,680 6,965,278
+═══════ ═══════
+* Represents Group’s investment in associates.
+The Group has the following effective ownership interest in its significant associates and joint ventures: 
+ Ownership
+──────────────────────
+31 March 31 December 
+Country 2026 2025
+(Audited)
+Emaar, The Economic City (Saudi Joint Stock Company) KSA 13.60% 13.60% 
+Amlak Finance PJSC UAE 48.08% 48.08%
+Emaar Bawadi LLC UAE 50.00% 50.00%
+Turner International Middle East Ltd UAE 65.00% 65.00%
+EII Capital P.S.C. UAE 42.27% 42.27%
+Emaar Dubai South DWC LLC UAE 50.00% 50.00%
+DWTC Emaar LLC UAE 50.00% 50.00%
+Downtown DCP LLC UAE 20.00% 20.00%
+Old Town Views LLC UAE 61.25% 61.25%
+Rove Hospitality LLC UAE 50.00% 50.00%
+16 TRADE AND OTHER PAYABLES
+31 March 31 December 
+2026 2025
+AED’000 AED’000
+(Audited)
+Dividend payable (Note 21) 8,838,790 -
+Project contract cost accruals 7,002,188 6,592,263
+Creditors for land purchase 3,416,732 3,854,029
+Payable to non-controlling interests 3,044,752 2,262,318
+Trade payables 1,918,691 1,744,086
+Lease liabilities 778,026 808,886
+Other payables and accruals 4,886,767 5,520,839
+─────── ──────
+29,885,946 20,782,421
+═══════ ═══════
+=== página 22
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+20
+17 INTEREST-BEARING LOANS AND BORROWINGS
+31 March 31 December
+2026 2025
+AED’000 AED’000
+(Audited)
+Balance at the beginning of the period/year 3,382,174 3,265,390
+Add: borrowings drawdown during the period/year 6,428 2,982,277
+Less: borrowings repaid during the period/year (526,902) (2,865,493)
+─────── ──────
+Balance at the end of the period/year 2,861,700 3,382,174
+═══════ ══════
+Interest-bearing loans and borrowings maturity profile:
+Within 12 months 1,996,177 2,427,191
+After 12 months 865,523 954,983
+────── ──────
+Balance at the end of the period/year 2,861,700 3,382,174
+══════ ══════
+Interest-bearing loans and borrowings located:
+Within UAE 3,673 3,673
+Outside UAE 2,858,027 3,378,501
+────── ──────
+2,861,700 3,382,174
+══════ ══════
+The Group has the following unsecured interest-bearing loans and borrowings:
+Unsecured
+- The Group had drawdown AED 3,673 thousand out of AED 7,346,000 thousand Revolving Credit Line Facility (the
+“Facility”) availed from the syndication of commercial banks in UAE, carries profit rate at EIBOR plus 0.95%-1%
+per annum and is repayable by 2030.
+- AED 620,737 thousand loan from commercial banks in the United Arab Emirates, bearing interest at 3-month EIBOR
+plus 0.90% per annum and repayable by 2027.
+- EGP 253,763 thousand (AED 17,083 thousand) of funding facilities from a commercial bank in Egypt, bearing interest
+of 11.28% and repayable by 2027.
+- EGP 395,670 thousand (AED 26,638 thousand) of funding facilities from a commercial bank in Egypt, bearing interest
+of 20.50% and repayable in 2026.
+- EGP 2,699,156 thousand (AED 181,702 thousand) of funding facilities from commercial banks in Egypt, bearing
+interest of 19.5% and repayable in 2026.
+- PKR 36,684,318 thousand (AED 482,325 thousand) of funding facilities from commercial banks in Pakistan, bearing
+interest from 3-month KIBOR -0.15% to -1.0% and repayable in 2026.
+- INR 39,515,219 thousand (AED 1,529,542 thousand) loans from commercial banks in India, bearing interest from
+6.55% to 9.12% per annum and repayable by 2028.
+As at the reporting date, the Group has complied with applicable financial covenants on its loans and borrowings.
+18 SUKUK
+31 March 31 December
+2026 2025
+AED’000 AED’000
+(Audited)
+Emaar Sukuk Limited:
+- Series 3 2,752,849 2,752,565
+- Series 4 1,837,138 1,836,830
+- Series 5 1,834,666 1,834,534
+ ─────── ───────
+Total Sukuk liability as at period / year-end 6,424,653 6,423,929
+═══════ ═══════
+=== página 23
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+21
+18 SUKUK (continued)
+Emaar Sukuk Limited:
+Emaar Sukuk Limited (the “Issuer”), a limited liability company registered in the Cayman Islands and a wholly- owned
+subsidiary of the Group, has established a trust certificate issuance programme (the “Programme”) pursuant to which the
+Issuer may issue from time to time up to USD 2,000,000 thousand (AED 7,346,000 thousand) of trust certificates in series.
+Series 3:
+On 15 September 2016, the Issuer had issued the third series of trust certificates (the “Sukuk 3”) amounting to USD 750,000
+thousand (AED 2,754,750 thousand) under the Programme. The Sukuk 3 is listed on NASDAQ Dubai and is due for repayment
+in 2026. Sukuk 3 carries a profit distribution at the rate of 3.64% per annum to be paid semi-annually. The carrying value of
+Sukuk 3 is as follows:
+31 March 31 December
+2026 2025
+AED’000 AED’000
+(Audited)
+Sukuk liability as at period / year-end 2,752,849 2,752,565
+═══════ ═══════
+Series 4:
+On 17 September 2019, the Issuer issued the fourth series of trust certificates (the “Sukuk 4”) amounting to USD 500,000
+thousand (AED 1,836,500 thousand) under the Programme. The Sukuk 4 is listed on NASDAQ Dubai and is due for repayment
+in 2029. Sukuk 4 carries a profit distribution at the rate of 3.875% per annum to be paid semi-annually. The carrying value of
+Sukuk 4 is as follows:
+31 March 31 December
+2026 2025
+AED’000 AED’000
+(Audited)
+Sukuk liability as at period / year-end 1,837,138 1,836,830
+═══════ ═══════
+Series 5:
+On 6 July 2021, the Issuer has issued fifth series of trust certificates (the “Sukuk 5”) amounting to AED 1,836,500 thousand
+(USD 500,000 thousand) under the Programme. The Sukuk 5 is listed on NASDAQ Dubai and is due for repayment in 2031.
+Sukuk 5 carries a profit distribution at the rate of 3.7% per annum paid semi-annually. The carrying value of Sukuk 5 is as
+follows:
+31 March 31 December
+2026 2025
+AED’000 AED’000
+(Audited)
+Sukuk liability as at period / year-end 1,834,666 1,834,534
+═══════ ═══════
+19 SHARE CAPITAL
+31 March 31 December
+2026 2025
+AED’000 AED’000
+(Audited)
+Authorised capital 8,838,789,849 shares of AED 1 each
+(31 December 2025: 8,838,789,849 shares of AED 1 each) 8,838,790 8,838,790
+═══════ ═══════
+Issued and fully paid-up 8,838,789,849 shares of AED 1 each
+(31 December 2025: 8,838,789,849 shares of AED 1 each) 8,838,790 8,838,790
+═══════ ═══════
+=== página 24
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+22
+20 RESERVES
+Net Foreign
+unrealised currency
+Statutory Capital General Share gains/(losses) translation
+reserve reserve reserve premium reserve reserve Total
+AED’000 AED’000 AED’000 AED’000 AED’000 AED’000 AED’000
+Balance as at 31 December 2025 (Audited) 20,475,441 238,582 12,278,282 876,922 (374,630) (7,298,776) 26,195,821
+Decrease in unrealised reserve - - - - (38,309) - (38,309)
+Transfer of fair value reserve of investments designated at
+FVOCI to retained earnings on sale  -  -  -  - 7,810  -  7,810
+Decrease in foreign currency translation reserve - - - - - (614,264) (614,264)
+─────── ─────── ─────── ─────── ─────── ─────── ───────
+Net loss recognised directly in equity - - - - (30,499) (614,264) (644,763)
+─────── ─────── ─────── ─────── ─────── ─────── ───────
+Balance as at 31 March 2026 (Unaudited) 20,475,441 238,582 12,278,282 876,922 (405,129) (7,913,040) 25,551,058
+═══════ ═══════ ═══════ ═══════ ═══════ ═══════ ═══════
+Balance as at 31 December 2024 (Audited) 20,475,441 3,660 10,518,364 876,922 (411,203) (7,536,834) 23,926,350
+Decrease in unrealised reserve - - - - (67,607) - (67,607)
+Transfer of fair value reserve of investments designated at
+FVOCI to retained earnings on sale - - - - (1,135) - (1,135)
+Increase in foreign currency translation reserve - - - - - 67,863 67,863
+─────── ─────── ─────── ─────── ─────── ─────── ───────
+Net loss recognised directly in equity - - - - (68,742) 67,863 (879)
+─────── ─────── ─────── ─────── ─────── ─────── ───────
+Balance as at 31 March 2025 (Unaudited) 20,475,441 3,660 10,518,364 876,922 (479,945) (7,468,971) 23,925,471
+═══════ ═══════ ═══════ ═══════ ═══════ ═══════ ═══════
+=== página 25
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+23
+21 DIVIDEND
+A dividend of AED 8,838,790 thousand for 2025 (AED 1 per share) was approved by the shareholders of the Company at the
+Annual General Meeting of the Company held on 25 March 2026 and paid subsequently on 20 April 2026.
+22 RELATED PARTY DISCLOSURES
+The Group in the normal course of business enters into transactions with individuals and other entities that falls within the
+definition of related party. The Group’s related parties include key management personnel, entities held under common control,
+associates, joint ventures and others.
+The Group is partly owned by Investment Corporate of Dubai (“ICD”), an entity owned by the Government of Dubai
+(“Government”) which has a significant influence over the Company. The Group enters into transactions, in the normal course
+of business, with Government-owned entities and entities wherein ICD has control, joint control or significant influence. In
+accordance with the exemption available in IAS 24, management has elected not to disclose such transactions, which are primarily
+in nature of financing and operational (power, utilities, land purchases, infrastructure services, construction services etc.) related
+activities, and entered in the normal course of business at commercial terms.
+Related party transactions
+During the period, the following were the significant related party transactions, which were carried out in the normal course of
+business on terms agreed between the parties:
+Three-month period ended
+──────────────────
+31 March 31 March
+2026 2025
+AED’000 AED’000
+Associates, joint ventures and others:
+Property development expenses 2,140 1,480
+Selling, general and administrative expenses 658 966
+Revenue from leasing, retail and related income 668 649
+Cost of revenue 23,049 22,616
+Finance cost 26,478 36,367
+Other operating income 511 3,923
+═════ ═════
+Key management personnel and their related parties:
+Selling, general and administrative expenses 16,447 15,475
+Rental income from leased properties and related income 27,427 23,453
+Finance cost 3,690 4,545
+Cost of revenue 426 1,277
+Other income 7,193 5,966
+Other operating income 2,351 3,613
+═════ ═════
+Related party balances
+Related party balances (and the interim condensed consolidated statement of financial position captions within which these are
+included) are as follows:
+31 March 31 December
+2026 2025
+AED’000 AED’000
+(Audited)
+Associates, joint ventures and others:
+Trade and other payables  2,035,895 2,067,438
+Trade and unbilled receivables  832 793
+══════  ══════
+=== página 26
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+24
+22 RELATED PARTY DISCLOSURE (continued)
+Related party balances (continued)
+31 March 31 December
+2026 2025
+AED’000 AED’000
+(Audited)
+Key management personnel and their related parties:
+Trade and unbilled receivables 2,957 401
+Other assets, receivables, deposits and prepayments 18,922 16,300
+Trade and other payables 290,806 298,731
+══════ ══════
+Compensation of key management personnel
+The remuneration of key management personnel during the period was as follows:
+31 March 31 March
+2026 2025
+AED’000 AED’000
+Benefits including incentive plan 13,114  21,156
+Employees’ end-of-service benefits 1,622  525
+────── ──────
+14,736 21,681
+══════  ══════
+23 GUARANTEES AND CONTINGENCIES
+a) Guarantees
+1. The Group has issued financial guarantees and letters of credit of AED 191,751 thousand (31 December 2025: AED
+203,581 thousand).
+2. The Group has provided a financial guarantee of AED 5,000 thousand (31 December 2025: AED 5,000 thousand) as
+security for the letter of guarantee issued by a commercial bank for issuance of a trade license from the Government of
+Dubai.
+3. The Group has provided performance guarantees of AED 8,735,622 thousand (31 December 2025: AED 9,008,412
+thousand) to the Real Estate Regulatory Authority (RERA), Dubai for its projects as per RERA regulations.
+4. The Group has provided performance guarantees of AED 98,884 thousand (31 December 2025: AED 103,177 thousand)
+to various government authorities in India for its projects. The banks have a lien of AED 538,946 thousand (31 December
+2025: AED 679,909 thousand) towards various facilities.
+5. The Group has been provided with a credit card facility of AED 202 thousand (31 December 2025: 202 thousand) in
+Egypt for its project. The bank has a lien of AED 246 thousand (31 December 2025: AED  246 thousand) towards this
+credit card.
+=== página 27
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+25
+23 GUARANTEES AND CONTINGENCIES (continued)
+b) Contingencies
+1. (a) Andhra Pradesh Industrial Infrastructure Corporation Ltd. (‘APIIC’), a joint venture partner in certain subsidiaries of
+the Group in India, issued a legal notice to Emaar Hills Township Pvt Ltd, (‘EHTPL’ – a joint venture of the Group with
+APIIC)  the SPV with APIIC, to terminate certain development and operational management agreements which were
+entered into between Emaar India Limited, EHTPL and Boulder Hills Leisure Private Limited (‘BHLPL’ – a joint venture
+of the Group with APIIC). In addition thereto, a number of litigations were initiated against the Group by third parties on
+the grounds of alleged irregularities in acquisition and allocation of land, sale plots etc. Under the matter, the Group had
+also received an attachment order of certain properties from Enforcement Directorate. The Group has assets and liabilities
+of INR 4,798 million (AED 186 million) and INR 1,306 million (AED 51 million) respectively.
+The management based on legal advice, is of the opinion that all the aforesaid matters filed by APIIC which are now
+being contested by Telangana State Industrial Infrastructure Corporation (‘TSIIC’), shall be settled amicably by the parties
+through local and legal provisions available.
+(b) TSIIC has filed a Petition before the National Company Law Tribunal, (“NCLT”) Hyderabad Bench against EHTPL
+and certain other parties under Section 241 and 242 of the Indian Companies Act 2013. The management believes that
+since the factual position with respect to demerger proceedings between APIIC and TSIIC has not changed and are still
+pending, therefore TSIIC has no locus standi to file the petition as it is not a shareholder and recorded member of EHTPL,
+and its name has not been entered into the Statutory Register of Members as maintained in terms of the provisions of the
+Indian Companies Act 2013. Accordingly, management believes that the petition filed by TSIIC is not tenable. However,
+on 25 July 2022, the maintainability issue had been decided by the NCLT, Hyderabad Bench in favour of the TSIIC and
+the Group or its representatives have been restrained from dealing with the assets and properties of EHTPL. The Group
+appealed the judgement of the NCLT before the NCLAT. The NCLAT vide judgement dated on 10 October 2022 decided
+the maintainability issue in favour of TSIIC, however, the interim order granting compensation has been set aside by the
+NCLAT. The Group had filed an appeal before the Supreme Court of India to challenge the judgement by NCLAT where
+the Supreme Court declined to interfere in the orders of the NCLAT, however, has left the decision on maintainability
+open till final adjudication of the matter.
+Thereafter, EHTPL has filed an application seeking reference of the matter to arbitration as provided under the contractual
+agreements between the parties. This application is now pending for arguments before the NCLT along with the main
+petition.
+2. Emaar MGF Construction Private Limited (EMCPL), a subsidiary of the Group, had developed and constructed the
+Commonwealth Games Village (CWGV) in India on a Public Private Partnership model in furtherance to the Project
+Development Agreement (PDA) entered with Delhi Development Authority (DDA) on 14 September 2007. After
+acknowledging completion and issuing occupancy certificate, DDA invoked the performance Bank Guarantee (BG) of
+INR 1,830 million (AED 80 million) towards liquidated damages and raised other claims alleging that EMCPL had not
+been able to achieve the project timelines as per the terms of PDA. EMCPL contested the matter by filing petition with
+Delhi High Court who later formed an Arbitral Tribunal where EMCPL filed claims of INR 14,182 million (AED 553
+million) and DDA filed a counter claim of INR 14,460 million (AED 564 million). The final arguments have commenced
+before the Tribunal and are yet to be concluded.
+Based on legal opinion, the Management believes that EMCPL has met the requirements as per PDA and the LD imposed/
+BG invoked and other claims raised by DDA are not justifiable.
+=== página 28
+Emaar Properties PJSC and its Subsidiaries
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS (continued)
+As at 31 March 2026 (Unaudited)
+26
+24  COMMITMENTS
+At 31 March 2026, the Group had commitments of AED 37,421,772 thousand (31 December 2025: AED 35,450,654 thousand)
+which include project commitments of AED 37,028,500 thousand (31 December 2025: AED 35,043,664 thousand). This
+represents the value of contracts entered into by the Group including contracts entered for purchase of plots of land at period
+end net of invoices received and accruals made at that date.
+There are certain claims submitted by contractors and other parties relating to various projects of the Group in the ordinary
+course of business from which it is anticipated that no material unprovided liabilities will arise.
+Operating lease commitments - Group as lessor
+The Group has entered into leases on its investment property portfolio. The future minimum rentals receivable under non-
+cancellable operating leases contracted for as at the reporting date but not recognised as receivables, are as follows:
+31 March 31 December
+2026 2025
+AED’000 AED’000
+(Audited)
+Within one year  5,122,517 5,013,780
+After one year but not more than five years  10,231,420 9,869,131
+More than five years  1,787,255 1,894,539
+─────── ───────
+17,141,192 16,777,450
+═══════ ═══════
+In addition to the above lease commitments, the Group also have rent agreements where in it is entitled to receive rent based
+on turnover of tenants and services charges.
+25 FAIR VALUE OF FINANCIAL INSTRUMENTS
+Financial instruments comprise financial assets and financial liabilities.
+Financial assets of the Group include bank balances and cash, trade and unbilled receivables, investment in securities, loans
+and advances, other receivables and due from related parties. Financial liabilities of the Group include customer deposits,
+interest-bearing loans and borrowings, sukuk, accounts payable, retentions payable and other payable.
+The fair values of the financial assets and liabilities are not materially different from their carrying value unless stated otherwise.
