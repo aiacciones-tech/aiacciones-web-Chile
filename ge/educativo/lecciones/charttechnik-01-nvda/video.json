@@ -315,6 +315,7 @@
  "miniatura": {
   "etiqueta": "Charttechnik einfach erklärt · Folge 1",
   "titulo": "Unterstützung & Widerstand",
-  "sub": "Erklärt am Chart von Nvidia (NVDA)"
+  "sub": "Erklärt am Chart von Nvidia (NVDA)",
+  "grafico": "nvda_range"
  }
 }
