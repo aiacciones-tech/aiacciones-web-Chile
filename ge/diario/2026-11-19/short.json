@@ -1,0 +1,93 @@
+{
+ "cabecera": "Wall Street auf Deutsch · 19. November 2026",
+ "out": "short-bolsa-2026-11-19-GE.mp4",
+ "fuente": "Quellen: TradingView, Yahoo Finance\nund IBTimes (19. November 2026). RSI: berechnet.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Wall Street · Sitzung vom",
+   "fecha": "Do., 19. November 2026",
+   "indices": [
+    [
+     "S&P 500",
+     "−2,02 %",
+     "7.175,83",
+     "neg"
+    ],
+    [
+     "Dow Jones",
+     "−2,19 %",
+     "49.097,06",
+     "neg"
+    ]
+   ],
+   "pregunta": "Anthropic glänzt,\nder Markt fällt",
+   "voz": "Wall Street, Donnerstag, 19. November. Anthropic glänzt an der Börse, der Gesamtmarkt fällt. Drei Punkte."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Anthropic am ersten Tag",
+   "big": "+17,07 %",
+   "delta": "Schluss 97,17 $",
+   "color": "teal",
+   "nota": "Ausgabepreis 83 Dollar, Eröffnung 111,50 Dollar.\nRund 81 Mrd. Dollar eingenommen.",
+   "voz": "Eins. Anthropic schloss am ersten Handelstag 17 Prozent über dem Ausgabepreis."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "S&P 500",
+   "big": "−2,02 %",
+   "delta": "sechster Verlusttag",
+   "color": "neg",
+   "barras": [
+    [
+     "S&P 500",
+     -2.02
+    ],
+    [
+     "Nasdaq 100",
+     -2.21
+    ],
+    [
+     "Dow Jones",
+     -2.19
+    ]
+   ],
+   "nota": "Nur 38 Werte im S&P 500 stiegen, 458 fielen.\nVIX +15,8 % auf 28,4.",
+   "voz": "Zwei. Der S&P 500 fiel um 2 Prozent, den sechsten Tag in Folge."
+  },
+  {
+   "tipo": "kpis",
+   "n": 3,
+   "label": "Charttechnik S&P 500",
+   "items": [
+    [
+     "31",
+     "RSI 14",
+     "blue"
+    ],
+    [
+     "−6,1 %",
+     "unter der 50-Tage-Linie",
+     "neg"
+    ],
+    [
+     "−2,3 %",
+     "unter der 200-Tage-Linie",
+     "neg"
+    ]
+   ],
+   "nota": "Tiefster Schluss seit Ende April.\nDas sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Der RSI fällt auf 31, nahe der überverkauften Zone."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Am Freitag:\nVerbraucherstimmung",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Am Freitag kommt die Verbraucherstimmung. Das ganze Video finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}
