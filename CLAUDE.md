@@ -13,3 +13,5 @@
   `PYTHONPATH=<repo>/voz-cl/shim VOZ_DIR=<dir>`. Prevalece sobre "voz Piper" en el texto de las tareas programadas de Chile.
   Desde el 19-nov-2026 Lorenzo va un 5% más rápido (Daniel, para acortar los videos): el mismo guion del diario dura ~265 s. No alargues el guion
   para llegar a 280 s: en el diario valen 255-320 s (unos 4:15-5:00), aunque la tarea programada diga 280-320.
+- **Arabia Saudita, serie educativa semanal «التحليل الفني ببساطة» (sábados):** instrucciones y pasos en `saudi/educativo/CLAUDE.md`
+  (prevalecen sobre el texto de su tarea programada). Plan de temas en `saudi/educativo/plan-saudi.json`.

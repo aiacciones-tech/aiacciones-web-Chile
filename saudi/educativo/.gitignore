@@ -1,0 +1,5 @@
+# salidas del render (se guardan en /mnt/project-files/saudi-educativo/, no en el repo)
+lecciones/*/*-saudi.*
+lecciones/*/times.json
+lecciones/*/velas.json
+lecciones/*/ids.txt
