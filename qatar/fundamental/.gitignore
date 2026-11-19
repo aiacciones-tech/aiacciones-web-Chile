@@ -1,0 +1,9 @@
+# Salidas del render y de meta_capitulo.py (se entregan en /mnt/project-files/aistocksuae/fundamental/ y se encolan en youtube-cola)
+capitulos/*/*.mp4
+capitulos/*/*.png
+capitulos/*/*.srt
+capitulos/*/meta-*.json
+capitulos/*/post-*.txt
+capitulos/*/times.json
+capitulos/*/guion-*.md
+capitulos/*/ids.txt
