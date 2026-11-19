@@ -278,7 +278,7 @@ if __name__=="__main__":
         f_in,f_out=int(0.015*sr),int(0.06*sr); a[:f_in]*=np.linspace(0,1,f_in); a[-f_out:]*=np.linspace(1,0,f_out); clips.append(a)
     durs=[LEAD+len(a)/sr+TAIL for a in clips]; durs[0]+=0.4; durs[-1]+=1.5
     if sum(durs)>330: sys.exit(f"Vídeo demasiado largo: {sum(durs):.1f} s (máx. 330, objetivo unos 5 min). Acorta la locución.")
-    if sum(durs)<270: print(f"Aviso: el video dura {sum(durs):.1f} s; el objetivo es unos 5 minutos (280-320 s).")
+    if sum(durs)<255: print(f"Aviso: el video dura {sum(durs):.1f} s; el objetivo es 255-320 s (voz Lorenzo +5%, 19-nov-2026).")
     ANIM=30; XF=8; ff=imageio_ffmpeg.get_ffmpeg_exe()
     proc=subprocess.Popen([ff,"-y","-f","rawvideo","-pix_fmt","rgb24","-s",f"{W}x{H}","-r",str(FPS),"-i","-","-c:v","libx264","-pix_fmt","yuv420p","-crf","20","-preset","medium",SILENT],stdin=subprocess.PIPE,stderr=subprocess.DEVNULL)
     t0=0; times=[]; audio=[]
