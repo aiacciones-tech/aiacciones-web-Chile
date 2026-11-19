@@ -1,5 +1,5 @@
 {
-"generado": "2026-11-19T16:15:19+00:00",
+"generado": "2026-11-19T16:19:24+00:00",
 "fuente": "TradingView",
 "empresas": {
 "QSE:QNBK": {
@@ -538,7 +538,8 @@ null
 "price_earnings_current": 10.246129858558858,
 "price_book_current": 1.4926051150928334,
 "price_free_cash_flow_ttm": 11.680973517745528,
-"price_free_cash_flow_current": 11.86802389434112
+"price_free_cash_flow_current": 11.86802389434112,
+"net_income_bef_disc_oper_fy": 4340866887
 },
 "sin_campo": [],
 "velas_semanales": [
