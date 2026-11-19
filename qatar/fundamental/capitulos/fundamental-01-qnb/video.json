@@ -4,12 +4,30 @@
  "simbolo": "QSE:QNBK",
  "simbolos_extra": [],
  "documentos": [
-  {"id": "fs-2025", "url": "https://qnb.com/sites/qnb/qnbqatar/document/en/FinancialResultsQ42025"},
-  {"id": "ar-2025", "url": "https://www.qnb.com/sites/qnb/qnbqatar/document/en/enAnnualReport2025"},
-  {"id": "fs-3t26", "url": "https://www.qnb.com/sites/qnb/qnbqatar/document/en/FinancialResultsQ32026"},
-  {"id": "fs-2t26", "url": "https://www.qnb.com/sites/qnb/qnbqatar/document/en/FinancialResultsQ22026"},
-  {"id": "pr-fy25", "url": "https://mob.qnb.com/sites/qnb/qnbglobal/en/financialresultsq42025news"},
-  {"id": "pen-fy25", "url": "https://thepeninsulaqatar.com/article/13/01/2026/qnb-group-profits-rise-17-in-2025"}
+  {
+   "id": "fs-2025-mob",
+   "url": "https://mob.qnb.com/sites/qnb/qnbqatar/document/en/FinancialResultsQ42025"
+  },
+  {
+   "id": "fs-2025-jobs",
+   "url": "https://jobs.qnb.com/sites/qnb/qnbqatar/document/en/FinancialResultsQ42025"
+  },
+  {
+   "id": "fs-2025-www",
+   "url": "https://www.qnb.com/sites/qnb/qnbqatar/document/en/FinancialResultsQ42025"
+  },
+  {
+   "id": "fs-3t26-mob",
+   "url": "https://mob.qnb.com/sites/qnb/qnbqatar/document/en/FinancialResultsQ32026"
+  },
+  {
+   "id": "pr-fy25-mob",
+   "url": "https://mob.qnb.com/sites/qnb/qnbglobal/en/financialresultsq42025news"
+  },
+  {
+   "id": "pen-fy25",
+   "url": "https://thepeninsulaqatar.com/article/13/01/2026/qnb-group-profits-rise-17-in-2025"
+  }
  ],
  "escenas": []
 }

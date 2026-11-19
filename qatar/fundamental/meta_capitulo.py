@@ -39,11 +39,10 @@ except Exception:
 x = f"{I['x']}\n\n▶️ {{youtube}}\n{canal_linea}\nمحتوى تعليمي وليس نصيحة استثمارية."
 assert largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 280, largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX"))
 open(f"{D}/post-x-{BASE}-qatar.txt", "w").write(x)
-fb = (f"📚 {SERIE} | الحلقة {N}: {VJ['tema']} ({VJ['nombre']})\n\n{I['resumen']}\n\n" + "\n\n".join("• " + c for c in fin["claves"]) +
-      f"\n\n▶️ الحلقة كاملة ({dur} دقائق): {{youtube}}\n{canal_linea}\n\nالمصادر: {I['fuentes']}.\n"
-      "محتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية. لا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n\n" + I["hashtags"])
-assert len(fb.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 2950, len(fb)
-open(f"{D}/post-facebook-{BASE}-qatar.txt", "w").write(fb)
+# Threads (Buffer 1; sustituye a Facebook, que cerró la cuenta el 12-nov-2026): máx. 500 caracteres, con una pregunta y el enlace al canal.
+th = f"{I['x']}\n\n💬 {I.get('pregunta', 'ما المفهوم المالي الذي تريد أن نشرحه في حلقة قادمة؟')}\n\n▶️ {{youtube}}\n{canal_linea}\n\nمحتوى تعليمي وليس نصيحة استثمارية."
+assert len(th.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 500, len(th)
+open(f"{D}/post-threads-{BASE}-qatar.txt", "w").write(th)
 # LinkedIn (regla permanente de Daniel, 8-nov-2026): el Short como vídeo nativo; 3-4 datos clave + conclusión; autoría; enlace al canal al final.
 L = I["linkedin"]; assert 3 <= len(L["datos"]) <= 4, "LinkedIn: 3 o 4 datos clave"
 lk = (f"{SERIE} | الحلقة {N}: {VJ['tema']}\n\n" + "\n".join("• " + c for c in L["datos"]) + f"\n\nالخلاصة: {L['conclusion']}\n\n"
@@ -75,4 +74,4 @@ for i, (big, lab, c) in enumerate(C):
 TT(0.955, 0.05, th["pie"], BLUE, 22)
 p = f"{D}/miniatura-{BASE}-qatar.png"; f.savefig(p, dpi=100, facecolor=BG); plt.close(f)
 im = Image.open(p).convert("RGBA"); lg = Image.open(LOGO).convert("RGBA").resize((170, 170), Image.LANCZOS); im.alpha_composite(lg, (25, 150)); im.convert("RGB").save(p)
-print("ok", BASE, "desc", len(desc), "fb", len(fb), "tg", len(tg), "x", largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")))
+print("ok", BASE, "desc", len(desc), "th", len(th), "tg", len(tg), "x", largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")))
