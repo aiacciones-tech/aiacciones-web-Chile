@@ -11,7 +11,7 @@ Cada wav se nombra con clave(texto); el falso módulo piper de voz-cl/shim/ lo b
 import datetime as dt, hashlib, html, importlib.util, json, os, sys, time, urllib.error, urllib.request
 
 VOZ = os.environ.get("AZURE_VOZ_CL", "es-CL-LorenzoNeural")
-RATE = os.environ.get("AZURE_RATE_CL", "0%")
+RATE = os.environ.get("AZURE_RATE_CL", "+5%")
 SR = 24000
 HERE = os.path.dirname(os.path.abspath(__file__))
 

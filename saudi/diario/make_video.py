@@ -11,7 +11,7 @@ DIR = os.path.abspath(sys.argv[1]); PREVIEW = len(sys.argv) > 2 and sys.argv[2] 
 W, H, FPS = 1920, 1080, 30
 AUD = os.environ.get("AUD", "aud")
 M = json.load(open(f"{DIR}/mercado.json")); VJ = json.load(open(f"{DIR}/video.json"))
-R, A = calc(M, VJ.get("nombres")); FECHA = dt.date.fromisoformat(R["fecha"]); FECHA_TXT = fecha_ar(FECHA)
+R, A = calc(M, VJ.get("nombres"), (VJ.get("valores") or {}).get("excluir", ())); FECHA = dt.date.fromisoformat(R["fecha"]); FECHA_TXT = fecha_ar(FECHA)
 OUT = f"{DIR}/video-bolsa-{R['fecha']}-SA.mp4"
 SECS = ["الأخبار", "التحليل الأساسي", "الأسهم", "التحليل الفني", "الأجندة"]; NS = len(SECS)
 LG = load_logo(130); LGS = load_logo(95); LGB = load_logo(230)
