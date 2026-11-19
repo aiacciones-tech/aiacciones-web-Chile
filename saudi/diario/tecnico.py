@@ -174,11 +174,12 @@ def acciones(D, k):
     return [dict(v, ticker=t.split(":")[1]) for t, v in D.get("acciones", {}).items() if comun(v) and en_tasi(v) == (k == "tasi")]
 
 
-def movers(D, extra=None):
-    """5 que más suben y 5 que más bajan del mercado principal (TASI) con más de MIN_VALOR riyales negociados."""
+def movers(D, extra=None, excluir=()):
+    """5 que más suben y 5 que más bajan del mercado principal (TASI) con más de MIN_VALOR riyales negociados.
+    excluir: tickers cuyo cambio no es de mercado (p. ej. precio ajustado por reducción de capital); video.json → valores.excluir."""
     nom = dict(NOMBRES, **(extra or {}))
     L = sorted([(v["change"], v["ticker"], v.get("description")) for v in acciones(D, "tasi")
-                if v.get("change") is not None and (v.get("Value.Traded") or 0) >= MIN_VALOR])
+                if v.get("change") is not None and (v.get("Value.Traded") or 0) >= MIN_VALOR and v["ticker"] not in set(excluir or ())])
     f = lambda x: {"ticker": x[1], "nombre": nom.get(x[1], x[2]), "nombre_en": x[2], "cambio": round(x[0], 2)}
     return [f(x) for x in L[::-1][:5]], [f(x) for x in L[:5]]
 
@@ -198,10 +199,10 @@ def contexto(D, fecha):
     return out
 
 
-def calc(D, extra=None):
+def calc(D, extra=None, excluir=()):
     R = {k: calc_indice(D, k) for k in ("tasi", "nomu")}
     A = {k: R[k][1] for k in R}; R = {k: R[k][0] for k in R}
-    R["mejores"], R["peores"] = movers(D, extra)
+    R["mejores"], R["peores"] = movers(D, extra, excluir)
     R["fecha"] = R["tasi"]["fecha"]
     R["contexto"] = contexto(D, dt.date.fromisoformat(R["fecha"]))
     return R, A

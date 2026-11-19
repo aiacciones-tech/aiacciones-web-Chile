@@ -172,7 +172,7 @@ def contexto(D, fecha):
     return out
 
 
-def tecnico_acciones(D, extra=None, n=6):
+def tecnico_acciones(D, extra=None, n=6, f=None):
     """Technical snapshot of the biggest stocks of the index (by market cap) from TradingView's scanner columns, when it has them."""
     nom = dict(NOMBRES, **(extra or {})); out = []
     rows = [(t.split(":")[1], v) for t, v in D.get("acciones", {}).items()
@@ -180,8 +180,9 @@ def tecnico_acciones(D, extra=None, n=6):
     for tk, v in sorted(rows, key=lambda x: -(x[1].get("market_cap_basic") or 0)):
         if v.get("RSI") is None or v.get("close") is None: continue
         r2 = lambda x, d=1: None if x is None else round(float(x), d)
+        hoy = f is None or not v.get("time") or dt.datetime.fromtimestamp(v["time"], TZ).date() == f  # no trade today: TradingView keeps the last session's change
         dist = lambda m: None if not m else round(float(v["close"] / m * 100 - 100), 1)
-        out.append({"ticker": tk, "nombre": nom.get(tk, v.get("description")), "cierre": v["close"], "cambio": r2(v.get("change"), 2),
+        out.append({"ticker": tk, "nombre": nom.get(tk, v.get("description")), "cierre": v["close"], "cambio": r2(v.get("change"), 2) if hoy else 0.0,
                     "rsi": r2(v.get("RSI")), "estoc_k": r2(v.get("Stoch.K")), "dist_sma50_pct": dist(v.get("SMA50")), "dist_sma200_pct": dist(v.get("SMA200")),
                     "perf_1m": r2(v.get("Perf.1M")), "perf_3m": r2(v.get("Perf.3M")), "perf_ytd": r2(v.get("Perf.YTD")),
                     "max52": v.get("price_52_week_high"), "min52": v.get("price_52_week_low")})
@@ -197,7 +198,7 @@ def calc(D, extra=None):
     R["activos"] = [{"ticker": v["ticker"], "nombre": dict(NOMBRES, **(extra or {})).get(v["ticker"], v.get("description")), "valor_bhd": round(valor_bhd(v)),
                      "cambio": round(v.get("change") or 0, 2)} for v in sorted(acciones(D, "bax", f), key=valor_bhd, reverse=True)[:5]]
     R["contexto"] = contexto(D, f)
-    R["tecnico_acciones"] = tecnico_acciones(D, extra)
+    R["tecnico_acciones"] = tecnico_acciones(D, extra, f=f)
     return R, A
 
 

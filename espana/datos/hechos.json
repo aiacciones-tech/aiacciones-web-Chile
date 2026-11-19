@@ -1,6 +1,30 @@
 {
- "actualizado": "2026-11-18T13:42Z",
+ "actualizado": "2026-11-18T21:43Z",
  "items": [
+  {
+   "id": "671b6261-0552-4930-8d0a-9c632a160635",
+   "tipo": "OIR",
+   "fecha": "2026-11-18 16:00",
+   "entidad": "MAPFRE, S.A.",
+   "nif": "A08055741",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "Información sobre el ratio de solvencia",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b671b6261-0552-4930-8d0a-9c632a160635%7d",
+   "ticker": "MAP",
+   "temas": []
+  },
+  {
+   "id": "ccfb14e1-b961-4dfb-8117-1c820421ed83",
+   "tipo": "OIR",
+   "fecha": "2026-11-18 15:59",
+   "entidad": "REPSOL, S.A.",
+   "nif": "A78374725",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Operaciones realizadas por Repsol, S.A. al amparo de su Programa de Recompra de acciones entre el 11 y el 17 de noviembre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bccfb14e1-b961-4dfb-8117-1c820421ed83%7d",
+   "ticker": "REP",
+   "temas": []
+  },
   {
    "id": "b6d032e5-810f-4963-a93a-a5ea8bdd3b25",
    "tipo": "OIR",

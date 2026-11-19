@@ -27,7 +27,7 @@ y un video de resultados ~8.000).
 renderiza todo con Piper (sin `PYTHONPATH`/`VOZ_DIR`) y dilo en el mensaje del hilo.
 
 ## Piezas
-- `voz_cl.py`: voz (`AZURE_VOZ_CL`, por defecto es-CL-LorenzoNeural, velocidad normal), `clave(texto)` = nombre del wav, lectura de las
+- `voz_cl.py`: voz (`AZURE_VOZ_CL`, por defecto es-CL-LorenzoNeural; `AZURE_RATE_CL`, por defecto +5%, pedido de Daniel del 19-nov-2026 para acortar los videos), `clave(texto)` = nombre del wav, lectura de las
   fuentes (incluye las frases de la campaña de comentarios de `diario/campana.py` mientras esté activa), síntesis.
 - `shim/piper/`: falso `python3 -m piper`. Con `VOZ_DIR`, copia el wav de Azure de esa locución; si no lo hay, llama al Piper real y lo
   pasa a 24 kHz (todas las escenas con la misma frecuencia). Sin `VOZ_DIR`, es Piper tal cual.
