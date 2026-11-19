@@ -17,7 +17,13 @@ BASES = ["total_revenue", "net_income", "gross_profit", "oper_income", "ebitda",
          "free_cash_flow", "cash_f_operating_activities", "cash_f_investing_activities", "cash_f_financing_activities", "capital_expenditures",
          "return_on_equity", "return_on_assets", "return_on_invested_capital", "dividends_paid", "dps_common_stock_prim_issue",
          "dividend_payout_ratio", "book_value_per_share", "total_shares_outstanding", "price_earnings", "price_book", "price_sales",
-         "enterprise_value_ebitda", "price_free_cash_flow"]
+         "enterprise_value_ebitda", "price_free_cash_flow",
+         # bancos (QNB, QIB…): margen de intereses, comisiones, provisiones, impuestos, minoritarios y cupones de AT1
+         "net_interest_income", "interest_income", "interest_expense", "total_interest_income", "total_interest_expense",
+         "non_interest_income", "total_non_interest_income", "non_interest_expense", "total_non_interest_expense",
+         "loan_loss_provision", "provision_for_loan_losses", "income_tax", "minority_interest", "preferred_dividends",
+         "net_income_bef_disc_oper", "unusual_expense_inc", "operating_expenses", "total_oper_expense", "net_income_starting_line",
+         "dividends_payable", "effective_tax_rate", "efficiency_ratio", "net_interest_margin"]
 SUF = ["_fy", "_fq", "_ttm", "_fy_h", "_fq_h", "_current"]
 SUELTOS = ["name", "description", "close", "currency", "fundamental_currency_code", "market_cap_basic", "price_earnings_ttm", "price_book_fq",
            "price_sales_current", "enterprise_value_current", "enterprise_value_ebitda_ttm", "dividends_yield", "dividends_yield_current",
