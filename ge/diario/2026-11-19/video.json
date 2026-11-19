@@ -1,0 +1,164 @@
+{
+ "fecha": "2026-11-19",
+ "titular": "Anthropic +17 % zum Börsenstart · S&P 500 −2 %, sechster Verlusttag",
+ "nombres": {},
+ "ticker": [
+  "Anthropic: Ausgabepreis 83 Dollar, Schluss 97,17 Dollar (+17,07 %)",
+  "Dow Jones −1.101 Punkte, S&P 500 −2,02 %",
+  "AMD −7,72 % nach Vorwürfen eines Leerverkäufers",
+  "Walmart hebt Jahresprognose an",
+  "Erstanträge auf Arbeitslosenhilfe: 203.000",
+  "VIX +15,8 % auf 28,4"
+ ],
+ "voz": {
+  "s_title": "Willkommen zum Tagesbericht von Wall Street auf Deutsch, für Donnerstag, den 19. November. Ein Tag mit zwei Gesichtern: Anthropic feierte den größten Börsengang der Geschichte, die Aktie schloss 17 Prozent über dem Ausgabepreis. Der Gesamtmarkt aber drehte nach einem freundlichen Start deutlich ins Minus. Der S&P 500 fiel um 2,02 Prozent auf rund 7.176 Punkte, der sechste Verlusttag in Folge. Der Dow Jones verlor 1.101 Punkte.",
+  "s_indices": "Beginnen wir mit den großen Indizes. Der S&P 500 schloss bei 7.175,83 Punkten, ein Minus von 148 Punkten. Laut IBTimes ist das die längste Verlustserie seit 2024. Der Dow Jones fiel um 2,19 Prozent auf 49.097 Punkte, der Nasdaq 100 um 2,21 Prozent auf 26.517 Punkte, der Russell 2000 um 2,18 Prozent. Die Breite war sehr schwach: Im S&P 500 stiegen nur 38 Werte, 458 fielen, berechnet. Seit Wochenbeginn hat der S&P 500 5,1 Prozent verloren, der Dow Jones 6,2 Prozent. Bis zum Allzeithoch fehlen dem S&P 500 jetzt 8,5 Prozent.",
+  "s_grandes": "Wer hat die Indizes bewegt? Alle acht größten Werte im Nasdaq 100 fielen. Amazon verlor 3,9 Prozent, Alphabet und SpaceX gut 3,5 Prozent, Nvidia und Meta gut 3 Prozent. Apple hielt sich mit minus 0,9 Prozent am besten. Im Dow Jones kosteten Goldman Sachs, Caterpillar und UnitedHealth zusammen rund 395 Punkte, berechnet aus den Tagesdaten. Nur Chevron legte leicht zu.",
+  "s_news": "Warum hat sich der Markt bewegt? Erstens: der Börsengang von Anthropic. Die Aktie wurde zu 83 Dollar ausgegeben und eröffnete laut Yahoo Finance bei 111,50 Dollar, 34 Prozent höher. Zum Schluss stand sie bei 97,17 Dollar. Anthropic nahm rund 81 Milliarden Dollar ein. Laut Yahoo Finance verkauften Privatanleger andere KI-Aktien, um Anthropic zu kaufen. Danach beschleunigte sich der Abverkauf. Zweitens: Laut IBTimes belasteten Sorgen über die hohen KI-Ausgaben und steigende Finanzierungskosten; Anleger rechnen mit weiteren Zinserhöhungen der Fed. Drittens: Konjunkturdaten. Die Erstanträge auf Arbeitslosenhilfe stiegen auf 203.000, erwartet waren 197.000. Der Industrieindex der Fed von Philadelphia fiel von 20,9 auf 6,3 Punkte, die gezahlten Preise stiegen deutlich.",
+  "s_sectores": "Zu den Sektoren. Alle sechs Sektor-ETFs schlossen im Minus. Am besten hielt sich Energie mit minus 0,7 Prozent, gestützt vom höheren Ölpreis. Finanzen verloren 1,5 Prozent. Am schwächsten war zyklischer Konsum mit minus 2,8 Prozent, belastet von Amazon. Gesundheit und Industrie fielen jeweils um rund 2 Prozent, Technologie um 1,9 Prozent.",
+  "s_macro": "Zu Zinsen, Dollar und Rohstoffen. Die Rendite der 10-jährigen US-Staatsanleihe gab leicht auf 5,05 Prozent nach. Der Dollar-Index DXY lag fast unverändert bei 103,9. Der Volatilitätsindex VIX sprang um 15,8 Prozent auf 28,4 Punkte. Der US-Ölpreis WTI stieg um 1,5 Prozent auf 83,09 Dollar, Gold fiel um 2,7 Prozent auf rund 3.625 Dollar. Und Europa? Der DAX schloss um 17:30 Uhr mit minus 1,06 Prozent bei 25.464 Punkten, der Euro Stoxx 50 mit minus 0,66 Prozent. Der Xetra-Handel beginnt heute um 9 Uhr.",
+  "s_tech_spx": "Zur Charttechnik. Der S&P 500 liegt jetzt 2,3 Prozent unter seiner 200-Tage-Linie bei rund 7.348 Punkten. Es ist der tiefste Schlusskurs seit Ende April, berechnet. Zur 20-Tage-Linie fehlen 4,8 Prozent, zur 50-Tage-Linie 6,1 Prozent. Der RSI fiel auf 31 und nähert sich damit der Marke von 30, ab der viele Analysten von einem überverkauften Markt sprechen. Der Index schloss fast auf seinem Tagestief bei 7.174 Punkten.",
+  "s_esc_spx": "Drei Szenarien für den S&P 500. Im positiven Szenario würde ein Schluss über der 200-Tage-Linie bei rund 7.348 Punkten die Lage entspannen; die nächste Marke wäre die 20-Tage-Linie bei rund 7.535. Im neutralen Szenario bleibt der Index unter der 200-Tage-Linie, aber über dem 52-Wochen-Tief bei rund 6.317 Punkten, eine sehr weite Spanne. Im negativen Szenario würde ein Schluss unter dem heutigen Tief bei 7.174 Punkten die Schwäche bestätigen. Das sind Bedingungen, keine Prognosen.",
+  "s_tech_ndx": "Der Nasdaq 100 liegt 5,5 Prozent unter seiner 200-Tage-Linie und mehr als 9 Prozent unter der 50-Tage-Linie. Der RSI liegt bei 34. Auch hier schloss der Index nahe am Tagestief, nachdem er am Morgen noch deutlich im Plus gelegen hatte.",
+  "s_esc_ndx": "Für den Nasdaq 100 beginnt das positive Szenario mit der Rückeroberung der 200-Tage-Linie bei rund 28.071 Punkten; darüber wäre das Hoch vom 13. November bei 28.296 die nächste Marke. Im neutralen Szenario bleibt der Index zwischen dem heutigen Tief bei 26.482 und der 200-Tage-Linie. Im negativen Szenario würde ein Schluss unter 26.482 Punkten den Weg in Richtung des 52-Wochen-Tiefs bei 22.841 Punkten öffnen.",
+  "s_agenda": "Was steht in der nächsten Sitzung an? Am Freitag kommt um 10 Uhr New Yorker Zeit, 16 Uhr bei uns, die endgültige Verbraucherstimmung der Universität Michigan für November; erwartet werden 51 Punkte. In Deutschland werden die Erzeugerpreise für Oktober veröffentlicht, und EZB-Präsidentin Christine Lagarde hat einen Auftritt. Außerdem verfallen in den USA die monatlichen Optionen.",
+  "s_fin": "Unser Fazit: Anthropic schaffte einen starken Börsenstart, doch der übrige Markt litt. Der S&P 500 fiel den sechsten Tag in Folge, und der VIX steigt. Folgen Sie uns kostenlos auf Telegram, der Link steht in der Videobeschreibung. Wichtiger Hinweis: Das ist keine Anlageberatung, sondern nur Information. Text, Stimme und Grafiken sind mit KI erstellt. Wir sehen uns morgen, auf Wiedersehen."
+ },
+ "indices": {
+  "titulo": "Alle vier Indizes rund 2 % im Minus"
+ },
+ "grandes": {
+  "titulo": "Alle acht Tech-Schwergewichte im Minus"
+ },
+ "noticias": {
+  "titulo": "Anthropic glänzt, der Gesamtmarkt dreht ins Minus",
+  "fuente": "Quellen: Yahoo Finance; IBTimes; Vista Partners; AP (19. November 2026); TradingView.",
+  "items": [
+   [
+    "Anthropic",
+    "Ausgabepreis 83 $, Eröffnung 111,50 $, Schluss 97,17 $ · rund 81 Mrd. $ eingenommen"
+   ],
+   [
+    "Umschichtung",
+    "Privatanleger verkaufen andere KI-Aktien für Anthropic (Vanda Research)"
+   ],
+   [
+    "Zinsen",
+    "Sorgen über KI-Ausgaben und steigende Finanzierungskosten"
+   ],
+   [
+    "Konjunktur",
+    "Erstanträge 203.000 (erwartet 197.000) · Philly-Fed-Index 6,3 nach 20,9"
+   ]
+  ]
+ },
+ "sectores": {
+  "titulo": "Alle sechs Sektoren im Minus · Konsum am schwächsten",
+  "items": [
+   [
+    "Energie am stabilsten",
+    "Energie −0,65 % mit höherem Ölpreis; Finanzen −1,49 %",
+    "teal"
+   ],
+   [
+    "Konsum, Gesundheit, Industrie hinten",
+    "Zyklischer Konsum −2,79 % mit Amazon; Gesundheit −2,05 %; Industrie −2,00 %",
+    "neg"
+   ]
+  ]
+ },
+ "acciones": [
+  {
+   "ticker": "AMD",
+   "noticia": "Leerverkäufer Hunterbrook wirft AMD vor, Chips seien über Zwischenhändler an einen gesperrten chinesischen Serverhersteller gelangt; AMD weist das zurück (IBTimes).",
+   "lectura": "Rund 35 Mrd. $ Handelsumsatz.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: IBTimes; Yahoo Finance (19. November 2026).",
+   "voz": "Die erste Aktie: AMD, der Chipkonzern. Die Aktie fiel um 7,72 Prozent auf 489,19 Dollar, bei rund 35 Milliarden Dollar Handelsumsatz. Laut IBTimes hat der Leerverkäufer Hunterbrook eine Wette gegen AMD offengelegt und behauptet, AMD-Chips seien über Zwischenhändler an einen chinesischen Serverhersteller gelangt, der auf einer US-Sperrliste steht. AMD weist die Vorwürfe zurück. Laut Yahoo Finance stand AMD außerdem an der Spitze der Verkäufe von Privatanlegern, die Geld in Anthropic umschichteten."
+  },
+  {
+   "ticker": "PANW",
+   "noticia": "Quartalsumsatz 3,44 Mrd. $ (+39 %), über den Erwartungen; Jahresprognose 14,52–14,57 Mrd. $ (Vista Partners).",
+   "lectura": "Gegen den Markt im Plus, 2,3-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Vista Partners (19. November 2026).",
+   "voz": "Die zweite Aktie: Palo Alto Networks, ein Anbieter von Cybersicherheit. Gegen den Markt stieg die Aktie um 6,42 Prozent auf 361,73 Dollar, bei mehr als doppeltem Volumen. Am Mittwochabend hatte das Unternehmen Zahlen vorgelegt: Laut Vista Partners stieg der Umsatz um 39 Prozent auf 3,44 Milliarden Dollar, erwartet waren 3,31 Milliarden. Für das Geschäftsjahr rechnet Palo Alto mit 14,52 bis 14,57 Milliarden Dollar Umsatz. Dazu kommt die Übernahme von Applied Compute für 4,5 Milliarden Dollar in Aktien."
+  },
+  {
+   "ticker": "WMT",
+   "noticia": "Umsatz 188,8 Mrd. $ (+5,2 %), US-Onlinehandel +23 %, Jahresprognose angehoben (Vista Partners, IBTimes).",
+   "lectura": "Leicht im Minus, im fallenden Gesamtmarkt.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Vista Partners; IBTimes (19. November 2026).",
+   "voz": "Die dritte Aktie: Walmart, der größte Einzelhändler der Welt. Vor Börsenbeginn legte Walmart Zahlen vor: Der Umsatz stieg laut IBTimes um 5,2 Prozent auf 188,8 Milliarden Dollar. In den USA wuchsen die vergleichbaren Umsätze ohne Kraftstoff um 2,9 Prozent, der Onlinehandel um 23 Prozent. Walmart hob die Jahresprognose für Umsatz und Gewinn an. Die Aktie schloss trotzdem 1,04 Prozent tiefer bei 126,04 Dollar. Eine eigene Folge zu Walmart bringen wir in unserer Serie «Die Wall-Street-Giganten»."
+  },
+  {
+   "ticker": "INSM",
+   "noticia": "Laut Bloomberg erwägt Sanofi eine Übernahme; keines der Unternehmen hat das bestätigt (Vista Partners).",
+   "lectura": "Rund vierfaches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Bloomberg, zitiert von Vista Partners (19. November 2026).",
+   "voz": "Die vierte Aktie: Insmed, ein Biotech-Unternehmen, das Medikamente gegen seltene Lungenkrankheiten entwickelt. Die Aktie stieg um 20,58 Prozent auf 144,46 Dollar, bei rund vierfachem Volumen. Laut einem Bericht von Bloomberg erwägt der französische Pharmakonzern Sanofi eine Übernahme. Bestätigt hat das keines der beiden Unternehmen."
+  },
+  {
+   "ticker": "V",
+   "noticia": "Cybervorfall bei einem externen Dienstleister, gemeldet von JPMorgan, Visa und Mastercard; begrenzte Kundendaten, keine Kartendaten (Vista Partners).",
+   "lectura": "Kostete den Dow rund 77 Punkte (berechnet).",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Vista Partners (19. November 2026).",
+   "voz": "Die fünfte Aktie: Visa. Die Aktie fiel um 3,12 Prozent auf 402,25 Dollar und kostete den Dow Jones rund 77 Punkte, berechnet. Laut Vista Partners meldeten JPMorgan, Visa und Mastercard einen Cybervorfall bei einem externen Dienstleister. Betroffen seien begrenzte Kundendaten wie E-Mail-Adressen, keine Kartendaten und keine Kernsysteme. Ob der Vorfall den Kurs belastete, ist offen; der gesamte Markt fiel."
+  }
+ ],
+ "macro": {
+  "titulo": "VIX springt auf 28, Gold −2,7 %",
+  "items": {
+   "TVC:US10Y": "Über 5 %: hohe Renditen belasten Wachstumswerte",
+   "TVC:DXY": "Dollar fast unverändert",
+   "TVC:VIX": "Über 28 Punkten: deutlich mehr Nervosität",
+   "TVC:USOIL": "Wichtig für Energieaktien und die Inflation",
+   "TVC:GOLD": "Zinserwartungen belasten den sicheren Hafen"
+  },
+  "europa": "DAX −1,06 % und Euro Stoxx 50 −0,66 %: Europa schwächer, aber weniger als die Wall Street."
+ },
+ "tecnico": {
+  "spx": {
+   "titulo": "Tiefster Schluss seit April, RSI bei 31",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  },
+  "ndx": {
+   "titulo": "5,5 % unter der 200-Tage-Linie, Schluss nahe Tagestief",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  }
+ },
+ "agenda": {
+  "titulo": "Verbraucherstimmung und Optionsverfall am Freitag",
+  "fuente": "Quellen: Finance Calendar; Newsquawk (19. November 2026). Deutsche Zeit aus der New Yorker Zeit berechnet.",
+  "filas": [
+   [
+    "2026-11-20",
+    "Verbraucherstimmung Uni Michigan, November (endgültig)",
+    "10:00",
+    "geplant"
+   ],
+   [
+    "2026-11-20",
+    "Deutschland: Erzeugerpreise Oktober",
+    "",
+    "geplant"
+   ],
+   [
+    "2026-11-20",
+    "EZB-Präsidentin Lagarde spricht",
+    "",
+    "geplant"
+   ],
+   [
+    "2026-11-20",
+    "Verfall der US-Monatsoptionen",
+    "",
+    "geplant"
+   ]
+  ]
+ },
+ "fin": {
+  "titular": "Anthropic +17 % zum Börsenstart, S&P 500 −2 % am sechsten Verlusttag",
+  "fuentes": "TradingView, Yahoo Finance, IBTimes, Vista Partners"
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "fecha": "2026-11-19",
+ "fecha_txt": "Donnerstag, 19. November 2026",
+ "elaborado": "19. November 2026, 23:30 Uhr",
+ "titulo": "Wall Street heute (19. November 2026): S&P 500 −2,02 %, Dow −2,19 % | Der Tagesbericht",
+ "titulo_short": "Wall Street am 19. November 2026: Anthropic +17 %, S&P 500 −2 % #Shorts",
+ "resumen": "Der S&P 500 schloss am Donnerstag, 19. November 2026, bei 7.175,83 Punkten (−2,02 %; −147,80 Punkte), der sechste Verlusttag in Folge. Der Dow Jones fiel um 2,19 % auf 49.097,06, der Nasdaq Composite um 2,25 % auf 23.879,20, der Nasdaq 100 um 2,21 % auf 26.517,05 und der Russell 2000 um 2,18 % auf 2.655,11.",
+ "claves": [
+  "Anthropic (ANT) an der Nasdaq: Ausgabepreis 83 Dollar, Eröffnung 111,50 Dollar, Schluss 97,17 Dollar (+17,07 %); rund 81 Mrd. Dollar eingenommen.",
+  "Nachrichten: Der Markt drehte nach freundlichem Start ins Minus; Sorgen über KI-Ausgaben und steigende Finanzierungskosten (IBTimes). Erstanträge auf Arbeitslosenhilfe 203.000 (erwartet 197.000); Philly-Fed-Index 6,3 nach 20,9.",
+  "Markt: VIX +15,80 % auf 28,43; Rendite 10-jähriger US-Anleihen 5,05 %; WTI 83,09 Dollar (+1,45 %), Gold 3.625 Dollar (−2,68 %). In Europa schloss der DAX mit −1,06 %, der Euro Stoxx 50 mit −0,66 %.",
+  "Aktien: 38 Werte im S&P 500 stiegen, 458 fielen (berechnet). AMD −7,72 %, Palo Alto Networks +6,42 %, Walmart −1,04 % trotz höherer Prognose, Insmed +20,58 %, Visa −3,12 %.",
+  "Charttechnik S&P 500 (berechnet): unter der 200-Tage-Linie (7.348; −2,3 %), der 20-Tage-Linie (7.535; −4,8 %) und der 50-Tage-Linie (7.640; −6,1 %); RSI 14 bei 31,4; tiefster Schluss seit Ende April. Das sind Daten, keine Kauf- oder Verkaufssignale.",
+  "Termine: Freitag, 20. November, Verbraucherstimmung der Uni Michigan (16 Uhr deutscher Zeit), deutsche Erzeugerpreise, Rede von EZB-Präsidentin Lagarde, Verfall der US-Monatsoptionen."
+ ],
+ "claves_cortas": [
+  "S&P 500 bei 7.175,83 (−2,02 %) · Dow −2,19 %",
+  "Anthropic +17,07 % am ersten Handelstag",
+  "Sechster Verlusttag in Folge, VIX bei 28,4"
+ ],
+ "linkedin": {
+  "datos": [
+   "S&P 500 bei 7.175,83 (−2,02 %), sechster Verlusttag; Dow Jones −1.101 Punkte",
+   "Anthropic: Ausgabepreis 83 Dollar, Schluss 97,17 Dollar (+17,07 %), rund 81 Mrd. Dollar eingenommen",
+   "Nur 38 Werte im S&P 500 stiegen, 458 fielen (berechnet)",
+   "Walmart hebt die Jahresprognose an; AMD −7,72 %"
+  ],
+  "conclusion": "Ein Rekord-Börsengang an einem schwachen Tag für den Gesamtmarkt."
+ },
+ "fuentes": "TradingView; Yahoo Finance; IBTimes; Vista Partners; AP",
+ "x": "Wall Street am 19. November 2026:\nS&P 500 7.175,83 (−2,02 %)\nDow −2,19 % · Nasdaq −2,25 %\nAnthropic +17,07 % zum Börsenstart",
+ "tiktok": "Wall Street am Donnerstag, 19. November 2026: Anthropic schließt 17 Prozent über dem Ausgabepreis, doch der S&P 500 fällt um 2 Prozent, den sechsten Tag in Folge. Drei Punkte: Anthropic, Marktbreite und Charttechnik.",
+ "hashtags": "#WallStreet #Börse #Aktien #SP500 #Nasdaq #Anthropic #Börsennews",
+ "hashtags_short": "#WallStreet #Börse #Aktien #Anthropic #Shorts",
+ "tags": [
+  "Wall Street",
+  "US-Börse",
+  "Aktien",
+  "Börse heute",
+  "S&P 500",
+  "Nasdaq",
+  "Dow Jones",
+  "Anthropic",
+  "Anthropic Börsengang",
+  "AMD",
+  "Walmart",
+  "Palo Alto Networks",
+  "Charttechnik",
+  "Börsennews",
+  "Wall Street auf Deutsch",
+  "Der Tagesbericht"
+ ],
+ "miniatura": {
+  "fecha": "Donnerstag, 19. November 2026",
+  "indices": [
+   [
+    "S&P 500",
+    "−2,02 %",
+    "neg"
+   ],
+   [
+    "Dow Jones",
+    "−2,19 %",
+    "neg"
+   ]
+  ],
+  "sub": "Anthropic +17 % · sechster Verlusttag",
+  "pie": "Der Tagesbericht · Wall Street auf Deutsch"
+ }
+}
