@@ -15,3 +15,5 @@
   para llegar a 280 s: en el diario valen 255-320 s (unos 4:15-5:00), aunque la tarea programada diga 280-320.
 - **Arabia Saudita, serie educativa semanal «التحليل الفني ببساطة» (sábados):** instrucciones y pasos en `saudi/educativo/CLAUDE.md`
   (prevalecen sobre el texto de su tarea programada). Plan de temas en `saudi/educativo/plan-saudi.json`.
+- **AI Stocks UAE, serie semanal de análisis fundamental (`eau/fundamental/`):** un capítulo cada sábado (~18:00 EAU). Antes de cada capítulo lee
+  `eau/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.

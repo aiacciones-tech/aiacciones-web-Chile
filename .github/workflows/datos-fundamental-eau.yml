@@ -1,0 +1,46 @@
+# Serie semanal de análisis fundamental en árabe de @AIStocksUAE (eau/fundamental/): datos de TradingView de cada capítulo.
+# Se lanza sola al subir eau/fundamental/capitulos/<carpeta>/video.json a una rama claude/** (o a mano con workflow_dispatch).
+# Deja <carpeta>/datos.json (cifras fundamentales y velas semanales; se congelan la primera vez) y <carpeta>/docs/ (PDF oficiales de
+# "documentos" con su texto) en la rama datos-fundamental-eau.
+# El contenedor de Claude no llega a TradingView; GitHub Actions sí. No toca las ramas ni los datos del vídeo diario.
+name: Datos de la serie fundamental (EAU)
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["eau/fundamental/capitulos/*/video.json"]
+  workflow_dispatch:
+    inputs:
+      carpetas:
+        description: "carpetas de eau/fundamental/capitulos separadas por comas; vacío = las que cambian respecto a main"
+        default: ""
+      refrescar:
+        description: "1 = volver a pedir aunque ya haya datos.json"
+        default: ""
+permissions:
+  contents: write
+concurrency: datos-fundamental-eau
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Datos de TradingView
+        env:
+          REFRESCAR: ${{ inputs.refrescar }}
+        run: |
+          pip install -q websocket-client pypdf
+          C="${{ inputs.carpetas }}"
+          if [ -z "$C" ]; then
+            git fetch -q --depth 1 origin main
+            C=$(git diff --name-only origin/main HEAD -- 'eau/fundamental/capitulos/*/video.json' | cut -d/ -f4 | sort -u | paste -sd, -)
+          fi
+          test -n "$C" || { echo "ningún capítulo cambiado"; exit 0; }
+          R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git clone -q --depth 1 -b datos-fundamental-eau "$R" /tmp/out 2>/dev/null || { mkdir -p /tmp/out && cd /tmp/out && git init -q -b datos-fundamental-eau && git remote add origin "$R" && cd -; }
+          for c in ${C//,/ }; do
+            echo "== $c"; python3 eau/fundamental/datos_fundamental.py eau/fundamental/capitulos/$c/video.json /tmp/out/$c
+            python3 eau/fundamental/docs_fundamental.py eau/fundamental/capitulos/$c/video.json /tmp/out/$c
+          done
+          cd /tmp/out && git add -A
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Serie fundamental EAU: datos $C" || exit 0
+          for i in 1 2 3; do git push -q origin HEAD:datos-fundamental-eau && break; sleep 5; git pull -q --rebase origin datos-fundamental-eau; done
