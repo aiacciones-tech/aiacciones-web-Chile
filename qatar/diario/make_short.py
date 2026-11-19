@@ -77,7 +77,7 @@ def s_fin(e, t):
     else:
         T(f, XR, 0.43, "◀ " + e["cta"], FG, 42, "bold", alpha=ease((t - 0.2) / 0.5))
     f.text(XR, 0.385, "youtube.com/@QatarAIStocks", color=BLUE, fontsize=40, weight="bold", ha="right", alpha=ease((t - 0.2) / 0.5))
-    T(f, XR, 0.355, S["fuente"] + "\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية.\nلا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\nالتحليل الفني بيانات وليس إشارات شراء أو بيع.", MUTED, 24, linespacing=1.5, alpha=a, va="top")
+    T(f, XR, 0.355, S["fuente"] + "\nمحتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية.\nلا نملك مراكز في الأسهم المذكورة. الاستثمار ينطوي على مخاطر.\n" + S.get("aviso_extra", "التحليل الفني بيانات وليس إشارات شراء أو بيع."), MUTED, 24, linespacing=1.5, alpha=a, va="top")
     return with_logo(to_arr(f), LGB, x=(W - 260) // 2, y=150)
 
 

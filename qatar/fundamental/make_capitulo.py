@@ -103,7 +103,7 @@ def s_cuenta(i, e, t):
         vv = r.get("v", [])
         if var and len(vv) == 2 and all(isinstance(x, (int, float)) for x in vv) and vv[1] and not r.get("sin_var"):
             ch = (vv[0] / vv[1] - 1) * 100
-            f.text(xv, y, f"{ch:+.0f}%", color=MUTED if tp == "resta" else (TEAL if ch >= 0 else NEG), fontsize=23, weight="bold", ha="center", va="center", alpha=b)
+            f.text(xv, y, f"{ch:+.0f}%" if abs(ch) >= 1 else f"{ch:+.1f}%", color=MUTED if tp == "resta" else (TEAL if ch >= 0 else NEG), fontsize=23, weight="bold", ha="center", va="center", alpha=b)
     if e.get("nota"): T(f, XR, 0.255, e["nota"], GOLD, 21, "bold", alpha=ease((t - 0.6) / 0.4))
     fuente(f, e)
     return to_arr(f)

@@ -29,8 +29,10 @@ Plan de 10 temas en `plan.json` (empresa sugerida; se puede cambiar si otra ense
   más `info.pregunta` opcional para el post de Threads.
 - `.github/workflows/datos-fundamental-qatar.yml`: al subir `video.json` a una rama `claude/**` pide a TradingView las cifras (`datos_fundamental.py`, ~3 min,
   se congelan) y descarga los `documentos` (PDF o web → texto, `docs_fundamental.py`) a `<base>/` de la rama `datos-fundamental-qatar`.
-  El contenedor no llega a qnb.com, qse.com.qa ni a TradingView; GitHub Actions sí. Las URL de documentos de QNB son del tipo
-  `https://www.qnb.com/sites/qnb/qnbqatar/document/en/FinancialResultsQ42025` (PDF sin extensión).
+  El contenedor no llega a qnb.com, qse.com.qa ni a TradingView; GitHub Actions llega a TradingView, pero qnb.com (y sus espejos mob./jobs.)
+  le responde 403. Si los PDF oficiales no bajan: cifras clave del comunicado de la empresa (el agente web-fetch sí lee mob.qnb.com y la prensa)
+  y desglose de la cuenta de resultados de stockanalysis.com/quote/qse/<TICKER>/financials/income-statement/ (agente web-fetch), atribuido
+  («ستوك أناليسس») y cuadrado con el beneficio y el BPA oficiales. TradingView no da las líneas de banco (margen de intereses, provisiones).
 - `make_capitulo.py <carpeta> [preview]` (con `AUD`): 5:00-7:30, control de calidad; escribe `<base>-qatar.mp4`, `subtitulos-<base>-qatar.srt`, times.json y guion.
 - `../diario/make_short.py <carpeta>/short.json`: el Short (<59 s; escenas titulo, kpis, cifra, fin). `out`: `short-<base>-qatar.mp4`.
 - `meta_capitulo.py <carpeta>`: meta de YouTube (vídeo y Short), posts de X, Threads, LinkedIn (Short nativo), TikTok, Instagram y Telegram, miniatura.
