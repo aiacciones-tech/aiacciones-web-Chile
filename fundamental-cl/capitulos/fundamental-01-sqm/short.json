@@ -33,7 +33,7 @@
      2112
     ]
    ],
-   "fmt": "{:,.0f}",
+   "fmt": "{:.0f}",
    "voz": "Primera línea, los ingresos: dos mil ciento doce millones de dólares en el tercer trimestre, ochenta por ciento más que un año antes."
   },
   {

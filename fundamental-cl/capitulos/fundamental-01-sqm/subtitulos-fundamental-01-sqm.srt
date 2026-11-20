@@ -1,0 +1,455 @@
+1
+00:00:00,250 --> 00:00:05,386
+Bienvenido al primer capítulo de Análisis fundamental en simple, la nueva serie de AIAcciones Chile.
+
+2
+00:00:05,560 --> 00:00:09,939
+Cada domingo explicamos un concepto financiero con las cifras reales de una empresa del IPSA.
+
+3
+00:00:10,113 --> 00:00:13,359
+Hoy partimos por lo más básico: los ingresos y la utilidad,
+
+4
+00:00:13,379 --> 00:00:15,928
+es decir, cómo leer un estado de resultados.
+
+5
+00:00:16,102 --> 00:00:20,557
+Nuestro ejemplo es SQM, con su reporte del tercer trimestre de dos mil veintiséis.
+
+6
+00:00:20,731 --> 00:00:23,520
+SQM es solo un ejemplo para explicar el concepto:
+
+7
+00:00:23,541 --> 00:00:26,664
+esto es contenido educativo y no una recomendación de inversión.
+
+8
+00:00:27,520 --> 00:00:31,044
+El estado de resultados cuenta qué pasó con el negocio durante un período,
+
+9
+00:00:31,064 --> 00:00:32,436
+por ejemplo un trimestre.
+
+10
+00:00:32,610 --> 00:00:34,229
+Se lee de arriba hacia abajo.
+
+11
+00:00:34,403 --> 00:00:38,093
+Arriba están los ingresos: todo lo que la empresa facturó por sus ventas.
+
+12
+00:00:38,267 --> 00:00:40,141
+Luego se resta el costo de ventas,
+
+13
+00:00:40,161 --> 00:00:43,355
+lo que costó producir lo vendido, y queda la utilidad bruta.
+
+14
+00:00:43,529 --> 00:00:45,740
+Después se restan los gastos de administración,
+
+15
+00:00:45,760 --> 00:00:48,277
+el costo de la deuda y otros ingresos o gastos,
+
+16
+00:00:48,297 --> 00:00:50,328
+y queda la utilidad antes de impuestos.
+
+17
+00:00:50,503 --> 00:00:53,723
+Se restan los impuestos y, al final, aparece la utilidad.
+
+18
+00:00:53,897 --> 00:00:57,071
+Por eso a los ingresos se les llama la primera línea y a la utilidad,
+
+19
+00:00:57,091 --> 00:00:58,128
+la última línea.
+
+20
+00:00:58,302 --> 00:01:03,592
+Una aclaración de nombres: en Chile se dice utilidad; en otros países, beneficio neto o ganancia.
+
+21
+00:01:03,766 --> 00:01:04,593
+Es lo mismo.
+
+22
+00:01:05,450 --> 00:01:07,073
+Partamos por la primera línea.
+
+23
+00:01:07,247 --> 00:01:09,688
+Entre julio y septiembre de dos mil veintiséis,
+
+24
+00:01:09,708 --> 00:01:13,281
+SQM tuvo ingresos por dos mil ciento doce millones de dólares.
+
+25
+00:01:13,455 --> 00:01:17,145
+Ojo con la moneda: SQM reporta en dólares, no en pesos.
+
+26
+00:01:17,319 --> 00:01:19,223
+Para saber si eso es mucho o poco,
+
+27
+00:01:19,243 --> 00:01:21,777
+se compara con el mismo trimestre del año anterior,
+
+28
+00:01:21,797 --> 00:01:24,038
+que fueron mil ciento setenta y tres millones.
+
+29
+00:01:24,212 --> 00:01:28,013
+La variación, calculada por nosotros, es de más ochenta por ciento.
+
+30
+00:01:28,187 --> 00:01:29,141
+¿De dónde viene?
+
+31
+00:01:29,315 --> 00:01:31,189
+Los ingresos son volumen por precio.
+
+32
+00:01:31,363 --> 00:01:34,539
+En litio, que fue el setenta y dos por ciento de los ingresos,
+
+33
+00:01:34,559 --> 00:01:37,543
+la empresa vendió setenta y ocho coma nueve mil toneladas,
+
+34
+00:01:37,563 --> 00:01:39,571
+ocho por ciento más que un año antes,
+
+35
+00:01:39,591 --> 00:01:42,952
+y el precio promedio de Novandino, su negocio de litio en Chile,
+
+36
+00:01:42,972 --> 00:01:47,224
+fue de unos diecinueve coma seis dólares por kilo, más del doble que un año antes.
+
+37
+00:01:47,398 --> 00:01:51,269
+Cuando suben a la vez el volumen y el precio, los ingresos crecen muy rápido.
+
+38
+00:01:51,443 --> 00:01:53,800
+Y cuando el precio cae, pasa lo contrario.
+
+39
+00:01:54,650 --> 00:01:57,389
+Ahora veamos el estado completo, línea por línea.
+
+40
+00:01:57,563 --> 00:02:01,269
+A los dos mil ciento doce millones de ingresos se les resta el costo de ventas,
+
+41
+00:02:01,289 --> 00:02:03,247
+mil ciento cuarenta y ocho millones,
+
+42
+00:02:03,267 --> 00:02:06,516
+y queda una utilidad bruta de novecientos sesenta y cuatro millones,
+
+43
+00:02:06,536 --> 00:02:08,397
+casi el triple que un año antes.
+
+44
+00:02:08,571 --> 00:02:12,301
+Los gastos de administración casi no cambiaron: cincuenta y dos millones.
+
+45
+00:02:12,475 --> 00:02:17,791
+El resultado financiero, otros ingresos y la diferencia de cambio sumaron en neto veintisiete millones.
+
+46
+00:02:17,965 --> 00:02:21,826
+Así se llega a una utilidad antes de impuestos de novecientos cuarenta millones.
+
+47
+00:02:22,000 --> 00:02:25,216
+Luego vienen los impuestos, trescientos cuarenta y tres millones,
+
+48
+00:02:25,236 --> 00:02:27,987
+y el interés minoritario, cincuenta y dos millones.
+
+49
+00:02:28,161 --> 00:02:31,026
+La última línea, la utilidad de los controladores,
+
+50
+00:02:31,046 --> 00:02:33,660
+fue de quinientos cuarenta y cuatro millones de dólares.
+
+51
+00:02:33,834 --> 00:02:37,123
+Fíjate en algo clave: los ingresos subieron ochenta por ciento,
+
+52
+00:02:37,143 --> 00:02:39,725
+pero la utilidad subió más de doscientos por ciento.
+
+53
+00:02:39,899 --> 00:02:40,532
+¿Por qué?
+
+54
+00:02:40,706 --> 00:02:43,460
+Porque el costo de ventas creció menos que los ingresos:
+
+55
+00:02:43,480 --> 00:02:45,479
+treinta y nueve por ciento contra ochenta.
+
+56
+00:02:45,653 --> 00:02:49,487
+Cuando el precio sube, gran parte de ese aumento llega directo a la utilidad.
+
+57
+00:02:50,350 --> 00:02:53,183
+Este gráfico muestra el mismo camino como una cascada.
+
+58
+00:02:53,357 --> 00:02:55,214
+La primera barra son los ingresos.
+
+59
+00:02:55,388 --> 00:02:59,107
+Cada barra naranja es algo que se resta, y la azul, algo que se suma.
+
+60
+00:02:59,281 --> 00:03:02,099
+La barra más grande que se descuenta es el costo de ventas,
+
+61
+00:03:02,119 --> 00:03:03,864
+más de la mitad de los ingresos.
+
+62
+00:03:04,038 --> 00:03:05,690
+La segunda son los impuestos.
+
+63
+00:03:05,864 --> 00:03:09,480
+Al final, de cada cien dólares que SQM facturó en el trimestre,
+
+64
+00:03:09,500 --> 00:03:12,897
+le quedaron unos veintiséis dólares de utilidad para sus accionistas.
+
+65
+00:03:13,071 --> 00:03:17,420
+Ese porcentaje se llama margen neto, y es justamente el tema del próximo capítulo.
+
+66
+00:03:18,280 --> 00:03:21,065
+Una línea que suele confundir es el interés minoritario.
+
+67
+00:03:21,239 --> 00:03:24,577
+Cuando una empresa consolida una filial que no es cien por ciento suya,
+
+68
+00:03:24,597 --> 00:03:28,893
+suma todos sus ingresos, pero una parte de la utilidad pertenece a otros socios.
+
+69
+00:03:29,067 --> 00:03:35,025
+En SQM, desde dos mil veintiséis, esa parte corresponde principalmente a Codelco, su socio en Novandino.
+
+70
+00:03:35,199 --> 00:03:38,266
+Por eso hay que mirar la utilidad atribuible a los controladores,
+
+71
+00:03:38,286 --> 00:03:40,154
+la de los accionistas de SQM.
+
+72
+00:03:40,328 --> 00:03:44,953
+Si la dividimos por el número de acciones, unos doscientos ochenta y cinco coma seis millones,
+
+73
+00:03:44,973 --> 00:03:48,964
+obtenemos la utilidad por acción: uno coma noventa y un dólares en el trimestre.
+
+74
+00:03:49,138 --> 00:03:51,993
+Esa cifra es la que se compara con lo que esperaba el mercado.
+
+75
+00:03:52,850 --> 00:03:54,581
+Un solo trimestre es una foto.
+
+76
+00:03:54,755 --> 00:03:57,541
+Para ver la película, conviene mirar varios años.
+
+77
+00:03:57,715 --> 00:03:58,850
+Según TradingView,
+
+78
+00:03:58,870 --> 00:04:03,297
+los ingresos de SQM pasaron de unos dos mil ochocientos millones de dólares en dos
+
+79
+00:04:03,317 --> 00:04:06,864
+mil veintiuno a más de diez mil setecientos millones en dos mil veintidós,
+
+80
+00:04:06,884 --> 00:04:08,892
+cuando el precio del litio estaba en su peak,
+
+81
+00:04:08,912 --> 00:04:11,758
+y después bajaron a unos cuatro mil quinientos millones
+
+82
+00:04:11,778 --> 00:04:14,117
+en dos mil veinticuatro y dos mil veinticinco.
+
+83
+00:04:14,291 --> 00:04:18,548
+Pero mira dos mil veinticuatro: con casi cuatro mil quinientos millones de ingresos,
+
+84
+00:04:18,568 --> 00:04:21,829
+la última línea fue una pérdida de unos cuatrocientos millones.
+
+85
+00:04:22,003 --> 00:04:23,934
+Según el comunicado de SQM,
+
+86
+00:04:23,954 --> 00:04:28,070
+en el primer semestre de ese año registró ajustes contables por pagos del impuesto
+
+87
+00:04:28,090 --> 00:04:31,964
+específico a la minería del litio por mil ciento siete millones de dólares.
+
+88
+00:04:32,138 --> 00:04:34,788
+Ingresos y utilidad no siempre se mueven juntos.
+
+89
+00:04:35,650 --> 00:04:38,879
+Para leer bien un estado de resultados, hazte cuatro preguntas.
+
+90
+00:04:39,053 --> 00:04:40,709
+Primero, ¿contra qué comparo?
+
+91
+00:04:40,883 --> 00:04:44,847
+Frente al año anterior, los ingresos de SQM subieron ochenta por ciento,
+
+92
+00:04:44,867 --> 00:04:47,624
+pero frente al trimestre previo bajaron catorce por ciento,
+
+93
+00:04:47,644 --> 00:04:50,261
+desde dos mil cuatrocientos sesenta y ocho millones.
+
+94
+00:04:50,435 --> 00:04:52,757
+Las dos comparaciones cuentan algo distinto.
+
+95
+00:04:52,931 --> 00:04:55,948
+Segundo, ¿hubo algo extraordinario, que no se repite?
+
+96
+00:04:56,122 --> 00:04:58,093
+Como el ajuste de dos mil veinticuatro.
+
+97
+00:04:58,267 --> 00:05:00,034
+Tercero, ¿utilidad de quién?
+
+98
+00:05:00,208 --> 00:05:03,013
+Si hay minoritarios, mira la de los controladores.
+
+99
+00:05:03,187 --> 00:05:04,831
+Y cuarto, ¿en qué moneda?
+
+100
+00:05:05,005 --> 00:05:09,211
+SQM reporta en dólares, mientras muchas empresas chilenas lo hacen en pesos.
+
+101
+00:05:09,385 --> 00:05:10,696
+Y una pista práctica:
+
+102
+00:05:10,716 --> 00:05:14,275
+todas las empresas del IPSA publican sus estados financieros en la Comisión
+
+103
+00:05:14,295 --> 00:05:17,238
+para el Mercado Financiero y en sus sitios de inversionistas,
+
+104
+00:05:17,258 --> 00:05:19,871
+casi siempre con un comunicado que resume las cifras.
+
+105
+00:05:20,720 --> 00:05:24,546
+En resumen: los ingresos son la primera línea y la utilidad, la última,
+
+106
+00:05:24,566 --> 00:05:27,673
+y entre ambas están los costos, los gastos y los impuestos.
+
+107
+00:05:27,847 --> 00:05:30,214
+En el tercer trimestre de dos mil veintiséis,
+
+108
+00:05:30,234 --> 00:05:33,441
+SQM facturó dos mil ciento doce millones de dólares y
+
+109
+00:05:33,461 --> 00:05:36,553
+ganó quinientos cuarenta y cuatro millones para sus accionistas.
+
+110
+00:05:36,727 --> 00:05:41,201
+Al leer cualquier estado de resultados, compara con el año anterior y con el trimestre previo,
+
+111
+00:05:41,221 --> 00:05:44,830
+busca efectos extraordinarios y mira la utilidad de los controladores.
+
+112
+00:05:45,004 --> 00:05:48,541
+El próximo domingo seguimos con los márgenes, con el ejemplo de CCU.
+
+113
+00:05:48,715 --> 00:05:52,331
+Recuerda que este video es educativo y no una recomendación de inversión.
+
+114
+00:05:52,505 --> 00:05:54,967
+Más análisis en aiacciones punto ce ele.
