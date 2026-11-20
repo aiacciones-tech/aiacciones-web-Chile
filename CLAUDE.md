@@ -17,3 +17,5 @@
   (prevalecen sobre el texto de su tarea programada). Plan de temas en `saudi/educativo/plan-saudi.json`.
 - **AI Stocks UAE, serie semanal de análisis fundamental (`eau/fundamental/`):** un capítulo cada sábado (~18:00 EAU). Antes de cada capítulo lee
   `eau/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Qatar AI Stocks, serie semanal de análisis fundamental (`qatar/fundamental/`):** un capítulo cada sábado (~18:00 Doha). Antes de cada capítulo lee
+  `qatar/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
