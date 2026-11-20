@@ -1,0 +1,88 @@
+{
+ "serie": "التحليل الفني ببساطة",
+ "dia": "sábado ~18:00 Doha, cuando termina la serie fundamental (último capítulo 23-ene-2027); pendiente de confirmar por Daniel",
+ "nota": "Plan de 10 temas (Daniel, 20-nov-2026), uno por semana. La acción de cada lección se elige al escribirla entre las grandes de la QSE, la que mejor enseñe el concepto con su gráfico real; la sugerida es solo un punto de partida. 'lista' = renderizada de muestra; antes de publicarla se vuelve a pedir las velas (refrescar) y se actualiza el guion con los datos nuevos. Al publicar, estado 'publicada' con fecha e IDs de YouTube.",
+ "lecciones": [
+  {
+   "folge": 1,
+   "tema": "الدعم والمقاومة",
+   "es": "Soportes y resistencias",
+   "accion": "QSE:QNBK بنك قطر الوطني",
+   "base": "ta-01-qnb",
+   "estado": "lista",
+   "fecha": "2027-01-30"
+  },
+  {
+   "folge": 2,
+   "tema": "المتوسطات المتحركة",
+   "es": "Medias móviles (50 y 200 sesiones)",
+   "sugerida": "QSE:IQCD صناعات قطر",
+   "estado": "pendiente",
+   "fecha": "2027-02-06"
+  },
+  {
+   "folge": 3,
+   "tema": "خطوط الاتجاه والقنوات السعرية",
+   "es": "Líneas de tendencia y canales",
+   "sugerida": "QSE:ORDS أريدُ (Ooredoo)",
+   "estado": "pendiente",
+   "fecha": "2027-02-13"
+  },
+  {
+   "folge": 4,
+   "tema": "حجم التداول",
+   "es": "Volumen",
+   "sugerida": "QSE:QIBK مصرف قطر الإسلامي",
+   "estado": "pendiente",
+   "fecha": "2027-02-20"
+  },
+  {
+   "folge": 5,
+   "tema": "مؤشر القوة النسبية RSI",
+   "es": "RSI",
+   "sugerida": "QSE:MARK مصرف الريان",
+   "estado": "pendiente",
+   "fecha": "2027-02-27"
+  },
+  {
+   "folge": 6,
+   "tema": "مؤشر الماكد MACD",
+   "es": "MACD",
+   "sugerida": "QSE:QGTS ناقلات",
+   "estado": "pendiente",
+   "fecha": "2027-03-06"
+  },
+  {
+   "folge": 7,
+   "tema": "الشموع اليابانية",
+   "es": "Velas japonesas y sus patrones",
+   "sugerida": "QSE:QEWS الكهرباء والماء القطرية",
+   "estado": "pendiente",
+   "fecha": "2027-03-13"
+  },
+  {
+   "folge": 8,
+   "tema": "النماذج الفنية: الرأس والكتفين والقاع المزدوج",
+   "es": "Figuras: hombro-cabeza-hombro, doble suelo",
+   "sugerida": "la que tenga una figura clara en 2 años",
+   "estado": "pendiente",
+   "fecha": "2027-03-20"
+  },
+  {
+   "folge": 9,
+   "tema": "الفجوات السعرية",
+   "es": "Huecos (gaps)",
+   "sugerida": "la que tenga huecos claros (QNB tuvo uno el 2-mar-2026)",
+   "estado": "pendiente",
+   "fecha": "2027-03-27"
+  },
+  {
+   "folge": 10,
+   "tema": "نطاقات بولينجر",
+   "es": "Bandas de Bollinger",
+   "sugerida": "QSE:CBQK البنك التجاري",
+   "estado": "pendiente",
+   "fecha": "2027-04-03"
+  }
+ ]
+}
