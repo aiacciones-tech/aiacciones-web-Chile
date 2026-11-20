@@ -1,49 +1,38 @@
 {
- "req": [
-  "https://static.mubasher.info/File.Story_Image/faec985cc24a4e7dc8840cb7e0f8ea57/1024.jpg",
-  "https://static.mubasher.info/File.Story_Image/98493106707e0ecfbd684db23e70aee2/1024.jpg",
-  "https://static.mubasher.info/File.Story_Image/b7d13cf70df01da7eb0bb42459def17a/1024.jpg",
-  "https://static.mubasher.info/File.Story_Image/e9e8eac6ee35ee78b44a6fd3075c4582/1024.jpg",
-  "https://static.mubasher.info/File.Story_Image/b85a24579c41abc4f18887c271b4da91/1024.jpg",
-  "https://static.mubasher.info/File.Story_Image/f2f19dab776ec35168c14605ec7cce57/1024.jpg",
-  "https://static.mubasher.info/File.Story_Image/faec985cc24a4e7dc8840cb7e0f8ea57/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/98493106707e0ecfbd684db23e70aee2/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/b7d13cf70df01da7eb0bb42459def17a/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/e9e8eac6ee35ee78b44a6fd3075c4582/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/b85a24579c41abc4f18887c271b4da91/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/f2f19dab776ec35168c14605ec7cce57/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/c533b579a68e241a6332cc871e2248e6/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/bc51747f1ff7ea807c52d40bcfab6541/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/a76be87c96fc4641e173a0fae00f021f/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/ba5a0abf2c24041f79480588f96269af/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/37fe5049da3c32c69c404750b8a21f6e/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/1a0f1adedd477d8791f6eabb85ae806a/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/146b47904cc441334e857048515c1bb4/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/a3081538f7cd1504a58abfc92d8e75e0/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/0ef1a23ff100748d3bd6f12150108446/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/194bf69583932b3a9d8b8714fed40607/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/fdddef7d63a9493091591f6fb7c4a927/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/f0cfbc85daf5e89b3762438c1128e19e/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/06c1e0220bc18fa40d621b4db24b1f32/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/5e0aca6b3de2eaeffa47d732453b8eb3/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/a020c1ccf4550d5d503d77c1d5f24124/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/371111880eb9c20a4192ca76e50a61cd/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/e79c929eab16d743e8b60f129a6167f5/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/b53c856dd57d765227f3febc1a348114/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/30f4f1e2dd1d9a5dabc291de7764f2c6/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/bbbb6b52bdbc6d3fb13733db3c1a1818/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/d21c49a1821082a4f7e7d030865f4a99/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/2a779b96381f1a5a42224529dc5d610d/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/854333d199df548e890dfb0309bcfc49/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/7e4992a666d0ec02e8bced40200c9a47/144.jpg",
-  "https://static.mubasher.info/File.Story_Image/57ec6e9526250589cdb8c612347c0f82/220.jpg",
-  "https://static.mubasher.info/File.Story_Image/3aaae38fc263d19807acf41908c6ed91/220.jpg",
-  "https://static.mubasher.info/File.Story_Image/d1f91ac8ca0c723ec14ea78db105152b/220.jpg",
-  "https://english-old.mubasher.info/mubasherFileServer/File.MubasherCharts/File.Delay_Index_Intraday_Charts_Dir/707cbbc409ec990f19c78c75bd1e06f215.csv"
- ],
- "html": [],
- "click": "Page.wait_for_load_state: Timeout 60000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n=================================",
- "url_after": "https://english-old.mubasher.info/",
- "url_final": "https://english.mubasher.info/countries/sa",
- "len": 504209
+ "NBB": {
+  "url": "https://english-old.mubasher.info/markets/BB/stocks/NBB",
+  "req": [
+   "https://english-old.mubasher.info/mubasherFileServer/File.MubasherCharts/File.Delay_Stock_Intraday_Charts_Dir/220ec8ce6abb3e952a85b8551ba726a1227.csv"
+  ],
+  "html": [
+   "/mubasherFileServer/File.MubasherCharts/File.Delay_Stock_Intraday_Charts_Dir/220ec8ce6abb3e952a85b8551ba726a1227.csv",
+   "https://static.mubasher.info/File.MubasherCharts/File.Historical_Stock_Charts_Dir/220ec8ce6abb3e952a85b8551ba726a1227.csv"
+  ],
+  "csv": [
+   {
+    "url": "https://static.mubasher.info/File.MubasherCharts/File.Historical_Stock_Charts_Dir/220ec8ce6abb3e952a85b8551ba726a1227.csv",
+    "len": 155265,
+    "head": "2006-02-26/00:00:00,0.2,0.2,0.2,0.2,138082\n2006-02-27/00:00:00,0.2,0.2,0.2,0.2,150948\n2006-02-28/00:00:00,0.19,0.19,0.19,0.19,242864\n2006-03-01/00:00:00,0.14,0.14,0.14,0.14,261237\n2006-03-02/00:00:00,",
+    "tail": "0.504,16768\n2025-12-30/00:00:00,0.505,0.51,0.505,0.51,21050\n2025-12-31/00:00:00,0.507,0.507,0.505,0.506,29231\n2026-01-04/00:00:00,0.505,0.505,0.505,0.505,12000\n2026-01-05/00:00:00,0.0,0.0,0.0,0.0,920\n"
+   }
+  ]
+ },
+ "ALBH": {
+  "url": "https://english-old.mubasher.info/markets/BB/stocks/ALBH",
+  "req": [
+   "https://english-old.mubasher.info/mubasherFileServer/File.MubasherCharts/File.Delay_Stock_Intraday_Charts_Dir/591815ae3b9d6286f1b2a489ea4f3f4abaed.csv"
+  ],
+  "html": [
+   "/mubasherFileServer/File.MubasherCharts/File.Delay_Stock_Intraday_Charts_Dir/591815ae3b9d6286f1b2a489ea4f3f4abaed.csv",
+   "https://static.mubasher.info/File.MubasherCharts/File.Historical_Stock_Charts_Dir/591815ae3b9d6286f1b2a489ea4f3f4abaed.csv"
+  ],
+  "csv": [
+   {
+    "url": "https://static.mubasher.info/File.MubasherCharts/File.Historical_Stock_Charts_Dir/591815ae3b9d6286f1b2a489ea4f3f4abaed.csv",
+    "len": 165497,
+    "head": "2010-11-30/00:00:00,0.91,0.915,0.9,0.915,358221\n2010-12-01/00:00:00,0.91,0.91,0.9,0.9,358221\n2010-12-02/00:00:00,0.9,0.9,0.9,0.9,392112\n2010-12-05/00:00:00,0.9,0.905,0.9,0.9,13859\n2010-12-06/00:00:00,",
+    "tail": "2847\n2026-11-16/00:00:00,0.735,0.737,0.734,0.734,49242\n2026-11-17/00:00:00,0.735,0.735,0.731,0.731,30247\n2026-11-18/00:00:00,0.731,0.74,0.731,0.74,162347\n2026-11-19/00:00:00,0.74,0.75,0.74,0.75,10578\n"
+   }
+  ]
+ }
 }
