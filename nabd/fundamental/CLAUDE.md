@@ -10,7 +10,8 @@ Instrucciones en español; lo que ve y oye el público, en árabe. Todo lo que s
 Plan de 10 temas en `plan.json` (empresa sugerida, se puede cambiar si otra enseña mejor el concepto o tiene resultados más recientes; siempre de EE. UU.):
 1 ingresos y beneficio neto (Apple) · 2 márgenes (NVIDIA) · 3 PER (Microsoft) · 4 deuda (Oracle) · 5 flujo de caja libre (Amazon) ·
 6 dividendos (Johnson & Johnson) · 7 ROE (JPMorgan) · 8 balance (Berkshire Hathaway) · 9 valoración P/V, P/VC y EV/EBITDA (Alphabet) · 10 todo junto (Meta).
-Tras el capítulo 10, sigue con temas nuevos (p. ej. crecimiento, recompras, márgenes por segmento) y apúntalos en `plan.json`.
+**La serie termina en el capítulo 10** (Daniel, 20-nov-2026): el capítulo 10 se presenta como cierre de la serie (en la locución y la tarjeta final:
+«الحلقة الأخيرة», sin «الحلقة القادمة»; en su lugar un repaso de los 10 conceptos) y no se inventan capítulos nuevos sin que Daniel lo pida.
 
 ## Reglas de contenido
 - Educación, nunca recomendación: nada de comprar/vender, precio objetivo, «barata/cara» ni «oportunidad». La empresa es «مجرد مثال للشرح».
@@ -57,3 +58,7 @@ Tras el capítulo 10, sigue con temas nuevos (p. ej. crecimiento, recompras, má
 6. `SCRATCH=<scratch> bash encolar.sh <carpeta>`; commit de los json del capítulo (sin mp4/png/srt) en la rama, PR y **fusiónalo tú** (regla de Daniel).
 7. **Aviso de cada vídeo (Daniel, 20-nov-2026):** termina siempre con un mensaje en el hilo, en español, con el enlace del vídeo de YouTube
    (y del Short) en cuanto `encolar.sh` devuelva el `resultado.json`, más duración, voz y cualquier fallo. Si la subida falla, avísalo igual.
+   **Capítulo 10 (el último):** el aviso empieza destacado como cierre, p. ej. «🎓 Fin de la serie «التحليل الأساسي ببساطة»: publicado el capítulo 10 de 10»,
+   con el enlace del capítulo 10 y la lista de los 10 capítulos con sus enlaces (de `cola-nabd/fundamental-*/resultado.json`). Después borra esta
+   tarea programada (`delete_trigger` trig_01YTsf3RwSKpgJPb4sQMWk7v) y dilo en el aviso. Si una ejecución no encuentra capítulo pendiente,
+   no publica nada y responde en una línea que la serie ya terminó.
