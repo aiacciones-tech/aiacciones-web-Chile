@@ -89,6 +89,32 @@
    "voz": "No hay una sola media móvil: cada una mira un plazo. La de veinte sesiones resume más o menos un mes de bolsa y sigue el corto plazo. La de cincuenta, unos dos meses y medio, es la referencia de medio plazo. Y la de doscientas sesiones, casi un año entero, es la gran referencia de largo plazo que vigilan muchos inversores. Además, hay dos familias. La media simple da el mismo peso a todos los cierres. La exponencial da más peso a los más recientes: reacciona antes, pero también se equivoca más. En esta serie usamos medias simples."
   },
   {
+   "id": "como_leer",
+   "tipo": "puntos",
+   "kicker": "Cómo se leen",
+   "titulo": "Tres preguntas que responde una media móvil",
+   "puntos": [
+    [
+     "¿Hacia dónde apunta?",
+     "La pendiente de la media: si sube, el precio medio de esas sesiones está subiendo; si baja, bajando."
+    ],
+    [
+     "¿De qué lado está el precio?",
+     "Por encima o por debajo de la media, y a qué distancia, en porcentaje."
+    ],
+    [
+     "¿Se cruzan las medias?",
+     "Cuando una media rápida corta a una lenta, cambia la lectura de medio plazo frente a la de largo plazo."
+    ]
+   ],
+   "colores": [
+    "#2FB7A3",
+    "#4C8DF0",
+    "#F2A541"
+   ],
+   "voz": "En la práctica, una media móvil responde a tres preguntas. La primera: ¿hacia dónde apunta? Basta con mirar su pendiente. Si la media sube, el precio medio de esas sesiones está subiendo; si baja, está bajando. La segunda: ¿de qué lado está el precio? Por encima o por debajo de la media, y a qué distancia, que se suele medir en porcentaje. Y la tercera: ¿se cruzan las medias? Cuando una media rápida corta a una lenta, cambia la lectura del medio plazo frente a la del largo plazo. Vamos a ver las tres preguntas con Inditex."
+  },
+  {
    "id": "dos_anos",
    "tipo": "grafico",
    "capitulo": "Inditex: medias de 50 y 200",
@@ -253,7 +279,7 @@
     }
    ],
    "nota": "Datos, no señales",
-   "voz": "¿Y cómo está Inditex ahora? Al cierre del 19 de noviembre de 2026, la acción estaba en 58,44 euros. Su media de cincuenta sesiones, en 55,66, y la de doscientas, en 54,70. El precio está por encima de las dos desde el 15 de octubre, y la media de cincuenta lleva por encima de la de doscientas desde el cruce dorado de noviembre de 2025. El 16 de noviembre marcó un máximo de 60,80 euros. Lo planteamos como condiciones, no como previsión. Si el precio cerrara por debajo de la media de cincuenta, la lectura de medio plazo dejaría de ser alcista. Y si la media de cincuenta llegara a cruzar por debajo de la de doscientas, sería un cruce de la muerte. Mientras nada de eso ocurra, la lectura de las medias sigue siendo la misma."
+   "voz": "¿Y cómo está Inditex ahora? Al cierre del 19 de noviembre de 2026, la acción estaba en 58,44 euros. Su media de cincuenta sesiones, en 55,66, y la de doscientas, en 54,70. Es decir, el precio estaba un 5 % por encima de la primera y un 6,8 % por encima de la segunda, y las dos medias apuntaban hacia arriba. El precio está por encima de las dos desde el 15 de octubre, y la media de cincuenta lleva por encima de la de doscientas desde el cruce dorado de noviembre de 2025. El 16 de noviembre marcó un máximo de 60,80 euros. Lo planteamos como condiciones, no como previsión. Si el precio cerrara por debajo de la media de cincuenta, la lectura de medio plazo dejaría de ser alcista. Y si la media de cincuenta llegara a cruzar por debajo de la de doscientas, sería un cruce de la muerte. Mientras nada de eso ocurra, la lectura de las medias sigue siendo la misma."
   },
   {
    "id": "fin",
