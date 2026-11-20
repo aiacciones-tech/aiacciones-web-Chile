@@ -1,20 +1,103 @@
 {
- "mubasher": [
+ "lista": [
   {
-   "url": "https://english.mubasher.info/api/v1/tadawuly/marketIndex/TDWL/constituents/TASI",
-   "len": 61463,
-   "head": "{\"status\":200,\"message\":\"Request responded successfully\",\"data\":[{\"symbol\":\"7204\",\"name\":\"2P\",\"companyId\":14403,\"tickerSerial\":3859833,\"last\":4.51,\"change\":0.10,\"changePercentage\":2.26,\"open\":4.46,\"high\":4.52,\"low\":4.38,\"volume\":1009240,\"turnover\":4493450.06,\"priceDate\":\"2026-11-19\"},{\"symbol\":\"4001\",\"name\":\"A.OTHAIM MARKET\",\"companyId\":831,\"tickerSerial\":14275,\"last\":3.81,\"change\":0.00,\"changePercentage\":0.00,\"open\":3.80,\"high\":3.85,\"low\":3.80,\"volume\":1265930,\"turnover\":4831949.89,\"priceDate\":\"2026-11-19\"},{\"symbol\":\"4191\",\"name\":\"ABO MOATI\",\"companyId\":92243,\"tickerSerial\":641127,\"last\":29."
+   "exchange": "BSE",
+   "name": "GFH",
+   "code": "GFH",
+   "value": "0.452",
+   "chartFileUrl": null,
+   "updatedAt": "2026-11-19 08:56:00",
+   "url": null
   },
   {
-   "url": "https://english.mubasher.info/api/v1/tadawuly/marketIndex/TDWL/constituents/NOMUC",
-   "len": 27713,
-   "head": "{\"status\":200,\"message\":\"Request responded successfully\",\"data\":[{\"symbol\":\"9541\",\"name\":\"ACADEMY OF LEARNING\",\"companyId\":34634,\"tickerSerial\":3686560,\"last\":6.70,\"change\":-0.20,\"changePercentage\":-2.90,\"open\":6.86,\"high\":6.86,\"low\":6.61,\"volume\":16515,\"turnover\":112484.25,\"priceDate\":\"2026-11-19\"},{\"symbol\":\"9524\",\"name\":\"ACITEC\",\"companyId\":184387,\"tickerSerial\":3018207,\"last\":1.27,\"change\":0.10,\"changePercentage\":8.55,\"open\":1.27,\"high\":1.27,\"low\":1.27,\"volume\":5660,\"turnover\":7091.83,\"priceDate\":\"2026-11-19\"},{\"symbol\":\"9634\",\"name\":\"ADEER\",\"companyId\":102163,\"tickerSerial\":4073203,\"last\""
+   "exchange": "BSE",
+   "name": "Al Salam Bank",
+   "code": "SALAM",
+   "value": "0.211",
+   "chartFileUrl": null,
+   "updatedAt": "2026-11-19 09:58:00",
+   "url": null
   },
   {
-   "url": "https://english.mubasher.info/api/v1/stock-prices/daily?countryCode=sa&sort=turnover&desc=true&page=0&size=1000",
-   "len": 118327,
-   "head": "{\"status\":200,\"message\":null,\"data\":{\"content\":[{\"exchange\":\"TDWL\",\"name\":\"SAUDI ARAMCO\",\"url\":null,\"code\":\"2222\",\"value\":\"26.48\",\"change\":\"0.04\",\"changePercentage\":\"0.15\",\"previousClose\":\"26.44\",\"turnover\":\"179079149.68\",\"turnoverUsd\":\"49554782\",\"open\":\"26.3\",\"high\":\"26.48\",\"low\":\"26.28\",\"volume\":\"6786963\",\"trades\":\"7654\",\"status\":\"up\",\"chartFileUrl\":null,\"updatedAt\":\"2026-11-19 12:19:00\"},{\"exchange\":\"TDWL\",\"name\":\"ALRAJHI\",\"url\":null,\"code\":\"1120\",\"value\":\"62.65\",\"change\":\"-0.25\",\"changePercentage\":\"-0.40\",\"previousClose\":\"62.9\",\"turnover\":\"167614742.20\",\"turnoverUsd\":\"46382351\",\"open\":\"62."
+   "exchange": "BSE",
+   "name": "NBB",
+   "code": "NBB",
+   "value": "0.505",
+   "chartFileUrl": null,
+   "updatedAt": "2026-11-19 09:48:00",
+   "url": null
+  },
+  {
+   "exchange": "BSE",
+   "name": "UGH",
+   "code": "UGH",
+   "value": "0.858",
+   "chartFileUrl": null,
+   "updatedAt": "2026-11-19 07:16:00",
+   "url": null
+  },
+  {
+   "exchange": "BSE",
+   "name": "BEYON",
+   "code": "BEYON",
+   "value": "0.445",
+   "chartFileUrl": null,
+   "updatedAt": "2026-11-19 09:20:00",
+   "url": null
+  },
+  {
+   "exchange": "BSE",
+   "name": "KFH",
+   "code": "KFH",
+   "value": "2.41",
+   "chartFileUrl": null,
+   "updatedAt": "2026-11-19 08:56:00",
+   "url": null
+  },
+  {
+   "exchange": "BSE",
+   "name": "Alba",
+   "code": "ALBH",
+   "value": "0.75",
+   "chartFileUrl": null,
+   "updatedAt": "2026-11-19 08:57:00",
+   "url": null
+  },
+  {
+   "exchange": "BSE",
+   "name": "BKIC",
+   "code": "BKIC",
+   "value": "0.425",
+   "chartFileUrl": null,
+   "updatedAt": "2026-11-19 07:48:00",
+   "url": null
+  },
+  {
+   "exchange": "BSE",
+   "name": "BMMI",
+   "code": "BMMI",
+   "value": "0.49",
+   "chartFileUrl": null,
+   "updatedAt": "2026-11-19 09:02:00",
+   "url": null
+  },
+  {
+   "exchange": "BSE",
+   "name": "Ithmaar Holding",
+   "code": "ITHMR",
+   "value": "0.02",
+   "chartFileUrl": null,
+   "updatedAt": "2026-11-19 07:15:00",
+   "url": null
+  },
+  {
+   "exchange": "BSE",
+   "name": "BBK",
+   "code": "BBK",
+   "value": "0.532",
+   "chartFileUrl": null,
+   "updatedAt": "2026-11-19 09:38:00",
+   "url": null
   }
- ],
- "bourse": []
+ ]
 }
