@@ -38,7 +38,7 @@ def s_titulo(e, t):
     T(f, XR, 0.80, f"{SERIE} · الحلقة {VJ['folge']}", GOLD, 34, "bold", alpha=a)
     f.patches.append(plt.Rectangle((0, 0.64), 1.0, 0.13, transform=f.transFigure, color=GOLD, alpha=a, figure=f))
     T(f, XR, 0.705, VJ["tema"], BG, 84 if len(VJ["tema"]) <= 16 else 62, "bold", va="center", alpha=a)
-    T(f, XR, 0.57, f"مثال: سهم {VJ['nombre']} ({VJ['ticker']})", FG, 44, "bold", alpha=ease((t - 0.15) / 0.5))
+    T(f, XR, 0.57, f"مثال: سهم {VJ.get('nombre_corto', VJ['nombre'])} ({VJ['ticker']})", FG, 44, "bold", alpha=ease((t - 0.15) / 0.5))
     if e.get("pregunta"): T(f, XR, 0.47, e["pregunta"], BLUE, 44, "bold", alpha=ease((t - 0.3) / 0.5))
     T(f, XR, 0.38, "محتوى تعليمي وليس توصية استثمارية", MUTED, 30, "bold", alpha=ease((t - 0.4) / 0.5))
     return with_logo(to_arr(f), LG, x=80, y=170)
@@ -62,7 +62,8 @@ def s_grafico(e, t):
     for k, z in enumerate(g.get("zonas", [])):
         b = ease((t - 0.3 - k * 0.12) / 0.35); zc = col(z.get("color", "gold"))
         ax.axhspan(z["de"], z["a"], color=zc, alpha=0.25 * b, lw=0)
-        ax.text(n * 0.99, z["a"] + pad * 0.25, ar(z["texto"]) + f"\n{num(z['de'], DEC)}–{num(z['a'], DEC)}", color=zc, fontsize=26, weight="bold", ha="right", va="bottom", alpha=b,
+        abajo = len(g["zonas"]) > 1 and (z["de"] + z["a"]) == min(x["de"] + x["a"] for x in g["zonas"])  # lowest zone: label under it
+        ax.text(n * 0.99, (z["de"] - pad * 0.25) if abajo else (z["a"] + pad * 0.25), ar(z["texto"]) + f"\n{num(z['de'], DEC)}–{num(z['a'], DEC)}", color=zc, fontsize=26, weight="bold", ha="right", va="top" if abajo else "bottom", alpha=b,
                 bbox=dict(boxstyle="round,pad=0.2", fc=BG, ec="none", alpha=0.8 * b))
     idx = {fecha_v(v["t"]).isoformat(): j for j, v in enumerate(V)}
     for k, m in enumerate(g.get("marcas", [])):

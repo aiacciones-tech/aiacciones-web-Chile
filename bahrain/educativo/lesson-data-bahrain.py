@@ -33,6 +33,7 @@ def velas(tk, n):
         if min(o, h, lo, c) <= 0: continue  # Mubasher writes 0.0 on days without trades
         d = dt.datetime.strptime(p[0], "%Y-%m-%d/%H:%M:%S").replace(tzinfo=dt.timezone.utc)
         out.append({"t": int(d.timestamp()) - TZH + 12 * 3600, "o": o, "h": h, "l": lo, "c": c, "v": v})  # noon Manama: the UTC date is the session date
+    out = list({dt.datetime.fromtimestamp(v["t"], dt.timezone.utc).date(): v for v in out}.values())  # Mubasher repeats some rows: one per day
     return {"simbolo": "BAHRAIN:" + tk, "fuente": "Mubasher", "archivo": CSV.format(fid), "velas": out[-n:]}
 
 

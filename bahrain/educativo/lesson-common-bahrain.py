@@ -20,7 +20,7 @@ MARCA = "Bahrain AI Stocks"
 SERIE = "التحليل الفني ببساطة"
 DIA = "سبت"  # one lesson every Saturday (Bahrain Bourse closed, no daily video)
 # In the voice, Latin names are written in Arabic letters so Piper reads them; the subtitles show them in their original form.
-LATINO = {"بحرين إيه آي ستوكس": "Bahrain AI Stocks", "مباشر": "Mubasher"}
+LATINO = {"بحرين إيه آي ستوكس": "Bahrain AI Stocks"}
 sub_pantalla = lambda s: [s := s.replace(a, b) for a, b in LATINO.items()][-1]
 PANEL = "#2A1218"; BANDA = (0x5A, 0x0A, 0x16); CAJA = np.array([24, 8, 12], np.float32)
 MAX_PALABRAS = 16  # a longer sentence is cut at the comma nearest the middle, so the subtitle fits in two lines

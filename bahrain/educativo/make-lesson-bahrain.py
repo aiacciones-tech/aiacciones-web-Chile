@@ -142,11 +142,17 @@ def s_grafico(i, e, t):
     ax.bar(xs[:rev], np.maximum(np.abs(c - o), (ymax - ymin) * 0.002)[:rev], bottom=np.minimum(o, c)[:rev], width=wd,
            color=[TEAL if u else NEG for u in up[:rev]])
     za = ease((t - 0.25) / 0.35)
-    for k, z in enumerate(e.get("zonas", [])):
+    # label heights: zones close to each other get their labels pushed apart so they do not overlap
+    Z = e.get("zonas", []); ly = [(z["de"] + z["a"]) / 2 for z in Z]; gap = (ymax - ymin + pad * 3.8) * 0.2
+    for k in sorted(range(len(Z)), key=lambda k: ly[k])[1:]:
+        lo_ = max([ly[j] for j in range(len(Z)) if ly[j] <= ly[k] and j != k] or [-1e9])
+        if ly[k] - lo_ < gap:
+            d = (gap - (ly[k] - lo_)) / 2; ly[k] += d; ly[[j for j in range(len(Z)) if ly[j] == lo_][0]] -= d
+    for k, z in enumerate(Z):
         a = ease((t - 0.25 - k * 0.12) / 0.35); cc = col(z.get("color", "gold"))
         ax.axhspan(z["de"], z["a"], color=cc, alpha=0.22 * a, lw=0)
         ax.axhline((z["de"] + z["a"]) / 2, color=cc, lw=1.4, ls="--", alpha=0.8 * a)
-        ax.text(n + n * 0.245, (z["de"] + z["a"]) / 2, ar(z["texto"]) + f"\n{num(z['de'], DEC)}–{num(z['a'], DEC)}", color=cc, fontsize=18, weight="bold",
+        ax.text(n + n * 0.245, ly[k], ar(z["texto"]) + f"\n{num(z['de'], DEC)}–{num(z['a'], DEC)}", color=cc, fontsize=18, weight="bold",
                 ha="right", va="center", alpha=a, linespacing=1.15, bbox=dict(boxstyle="round,pad=0.25", fc=BG, ec="none", alpha=0.85 * a))
     idx = {fecha_v(v["t"]).isoformat(): j for j, v in enumerate(V)}
     for k, m in enumerate(e.get("marcas", [])):
