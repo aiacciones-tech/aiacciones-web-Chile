@@ -407,7 +407,8 @@ def programar(base):
         canal_yt = PROPIOS[pais][1] if pais in PROPIOS else None
         if canal_yt and canal_yt.lower() not in texto.lower():
             # todo post de EAU (y Qatar) lleva el enlace al canal de YouTube (Daniel, 29-oct-2026)
-            con_rotulo = texto + f"\n\nقناتنا على يوتيوب: {canal_yt}"
+            # Wall Street auf Deutsch: el rótulo en alemán, no en árabe (arreglo del 20-nov-2026)
+            con_rotulo = texto + (f"\n\nUnser YouTube-Kanal: {canal_yt}" if pais == "ge" else f"\n\nقناتنا على يوتيوب: {canal_yt}")
             texto = con_rotulo if r["largo"](con_rotulo) <= r["limite"] else texto + f"\n{canal_yt}"
         largo = r["largo"](texto)
         if largo > r["limite"]:

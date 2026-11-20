@@ -40,6 +40,13 @@ tg = (f"📊 {SERIE} | {VJ['nombre']} ({VJ['ticker']}) · {VJ['trimestre']}\n\n{
       f"\n\n▶️ Die ganze Folge: {{youtube}}\nUnser YouTube-Kanal: {CANAL}\n\nKeine Anlageberatung. Nur Information und Bildung. Mit KI erstellt.")
 assert len(tg) <= 1000, len(tg)
 open(f"{D}/post-telegram-{BASE}-GE.txt", "w").write(tg)
+# LinkedIn (página del canal, vía Buffer, buffer-GE.yml; Daniel la conectó el 20-nov-2026): con el enlace al episodio
+li = (f"{SERIE} | {VJ['nombre']} ({VJ['ticker']}) · {VJ['trimestre']}\n\n{I['resumen']}\n\n" + "\n".join("• " + c for c in VJ["claves"]) +
+      f"\n\n▶️ Die ganze Folge: {{youtube}}\n\nKeine Anlageberatung, nur Information und Bildung. Keine Kauf- oder Verkaufsempfehlung. "
+      "Aktien sind mit Risiken bis zum Totalverlust verbunden.\nVideo von Wall Street auf Deutsch, mit KI erstellt (Text, Stimme und Grafiken).\n"
+      + " ".join(dict.fromkeys(f"#WallStreetGiganten #Quartalszahlen #Aktien {I['hashtags']}".split())))
+assert len(li) <= 3000, len(li)
+open(f"{D}/post-linkedin-{BASE}-GE.txt", "w").write(li)
 # TikTok (vía Buffer, buffer-GE.yml): el episodio entero (horizontal, 2-4 min) con aviso de IA en el texto; sin {youtube}, que no es clicable allí
 tk = (f"{SERIE}: {VJ['nombre']} ({VJ['ticker']}) · {VJ['trimestre']}\n\n{I['x']}\n\n" + "\n".join("• " + c for c in VJ["claves"]) +
       f"\n\n▶️ Mehr auf YouTube: Wall Street auf Deutsch\n🤖 Mit KI erstellt (Text, Stimme und Grafiken).\n"
