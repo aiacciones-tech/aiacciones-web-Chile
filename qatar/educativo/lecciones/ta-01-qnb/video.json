@@ -1,0 +1,11 @@
+{
+ "base": "ta-01-qnb",
+ "folge": 1,
+ "simbolo": "QSE:QNBK",
+ "simbolos_extra": ["QSE:GNRI"],
+ "ticker": "QNBK",
+ "nombre": "QNB",
+ "tema": "الدعم والمقاومة",
+ "ultima_vela": "2026-11-19",
+ "escenas": []
+}
