@@ -1,74 +1,20 @@
 {
- "tv_BAHRAIN:NBB": {
-  "error": "invalid TradingView symbol: BAHRAIN:NBB \"m\":\"symbol_error\",\"p\":[\"cs_zgwolpdtmawi\",\"s1\",\"permission denied\",\"group\",\"bahrain_dly\"] | \"m\":\"series_error\",\"p\":[\"cs_zgwolpdtmawi\",\"sds_1\",\"s1\",\"resolve error\",\"cnc1-charts-free-5-stress-tvbs-yfgss-7@cnc1-charts-free-5-stress-tvbs-yfgss-7\"]"
- },
- "tv_BAHRAIN:ALBH": {
-  "error": "invalid TradingView symbol: BAHRAIN:ALBH \"m\":\"symbol_error\",\"p\":[\"cs_xaygyhsoohkx\",\"s1\",\"permission denied\",\"group\",\"bahrain_dly\"] | \"m\":\"series_error\",\"p\":[\"cs_xaygyhsoohkx\",\"sds_1\",\"s1\",\"resolve error\",\"cnc1-charts-free-6-tvbs-r6ywt-7@cnc1-charts-free-6-tvbs-r6ywt-7\"]"
- },
- "mub_nbb": {
-  "status": 200,
-  "len": 23242,
-  "charts": [],
-  "hashes": [
-   "5ca1462c96f0baf888c4af54470eed38"
-  ],
-  "apis": [],
-  "ctx": [],
-  "head": "<!doctype html>\n<html lang=\"en\" dir=\"ltr\" data-beasties-container=\"\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>MubasherInfo</title>\n  <base href=\"/\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"strix-verification\" content=\"strix-verify-5ca1462c96f0baf888c4af54470eed38\">\n\n  <!-- <link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\"> -->\n  <link rel=\"icon\" type=\"image/x-icon\" href=\"fav_icon.svg\">\n  <!-- Installable PWA: no service worker on purpose (cached market data would be stale prices).\n       On Android the manifest's prefer_related_applications points the install offer at the\n       Play Store app instead. -->\n  <link rel=\"manifest\" href=\"manifest.webmanifest\">\n  <meta name=\"theme-color\" content=\"#0075BC\">\n  <link rel=\"apple-touch-icon\" href="
- },
- "mub_nbb_ar": {
-  "status": 200,
-  "len": 23238,
-  "charts": [],
-  "hashes": [
-   "5ca1462c96f0baf888c4af54470eed38"
-  ],
-  "apis": [],
-  "ctx": [],
-  "head": "<!doctype html>\n<html lang=\"ar\" dir=\"rtl\" data-beasties-container=\"\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>MubasherInfo</title>\n  <base href=\"/\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"strix-verification\" content=\"strix-verify-5ca1462c96f0baf888c4af54470eed38\">\n\n  <!-- <link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\"> -->\n  <link rel=\"icon\" type=\"image/x-icon\" href=\"fav_icon.svg\">\n  <!-- Installable PWA: no service worker on purpose (cached market data would be stale prices).\n       On Android the manifest's prefer_related_applications points the install offer at the\n       Play Store app instead. -->\n  <link rel=\"manifest\" href=\"manifest.webmanifest\">\n  <meta name=\"theme-color\" content=\"#0075BC\">\n  <link rel=\"apple-touch-icon\" href="
- },
- "mub_albh": {
-  "status": 200,
-  "len": 23242,
-  "charts": [],
-  "hashes": [
-   "5ca1462c96f0baf888c4af54470eed38"
-  ],
-  "apis": [],
-  "ctx": [],
-  "head": "<!doctype html>\n<html lang=\"en\" dir=\"ltr\" data-beasties-container=\"\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>MubasherInfo</title>\n  <base href=\"/\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"strix-verification\" content=\"strix-verify-5ca1462c96f0baf888c4af54470eed38\">\n\n  <!-- <link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\"> -->\n  <link rel=\"icon\" type=\"image/x-icon\" href=\"fav_icon.svg\">\n  <!-- Installable PWA: no service worker on purpose (cached market data would be stale prices).\n       On Android the manifest's prefer_related_applications points the install offer at the\n       Play Store app instead. -->\n  <link rel=\"manifest\" href=\"manifest.webmanifest\">\n  <meta name=\"theme-color\" content=\"#0075BC\">\n  <link rel=\"apple-touch-icon\" href="
- },
- "mub_idx": {
-  "status": 200,
-  "len": 197164,
-  "charts": [],
-  "hashes": [
-   "178c3074fc155ac5ac6942f0e2c7c85a85",
-   "21d3d93195cbc0446e7f364c8780906f66",
-   "35924cc5aeba9d972147c36d4eadd33f11",
-   "4dcedb695b60a37ad56e0bd2b7794a9ae5",
-   "5ca1462c96f0baf888c4af54470eed38",
-   "6b1eef4c9c686e309cfb7845c9fef65b81",
-   "8b8fd15241035bd59835d711f99c836c30"
-  ],
-  "apis": [],
-  "ctx": [
-   "p class=\"text-[10px] font-medium text-muted text-center\">Price date: November 19, 2026</p><!--container--></div><div class=\"col-span-8 ps-10 flex flex-col gap-8 max-lg:ps-0 max-lg:min-w-0\"><app-stock-chart storagescope=\"stock-exchange\" class=\"block\" ngh=\"9\"><div class=\"relative w-full rounded-xl overflow-hidden border border-theme\" style=\"height: 500px;\"><div class=\"w-full h-full\"></div><div role=\"stat",
-   "x-1 rounded-sm bg-skeleton\" style=\"height: 84%;\"></div><div class=\"flex-1 rounded-sm bg-skeleton\" style=\"height: 80%;\"></div><!--container--></div><span class=\"text-xs text-muted text-center\">Loading chart…</span></div><!--container--><!--container--><div class=\"absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-full bg-black/75 text-white text-xs font-medium pointer-events-none transition",
-   "bottom-3 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-full bg-black/75 text-white text-xs font-medium pointer-events-none transition-opacity duration-300 opacity-0\"> Hold Ctrl and scroll to zoom the chart </div></div></app-stock-chart></div></div></div><div class=\"grid grid-cols-12 gap-8 max-lg:flex max-lg:flex-col max-lg:gap-4\"><div class=\"col-span-8 flex flex-col gap-16 pe-6 border-e border-theme ma",
-   "-1/2 px-3 py-1.5 rounded-full bg-black/75 text-white text-xs font-medium pointer-events-none transition-opacity duration-300 opacity-0\"> Hold Ctrl and scroll to zoom the chart </div></div></app-stock-chart></div></div></div><div class=\"grid grid-cols-12 gap-8 max-lg:flex max-lg:flex-col max-lg:gap-4\"><div class=\"col-span-8 flex flex-col gap-16 pe-6 border-e border-theme max-md:gap-4 max-lg:pe-0 max-lg:",
-   ",\"open\":1818.737,\"high\":1824.37,\"low\":1818.615,\"close\":1823.553,\"volume\":1141138}]}},\"h\":{},\"s\":200,\"st\":\"OK\",\"u\":\"\\u002Fapi\\u002Fv1\\u002Ftadawuly\\u002FmarketIndex\\u002FBB\\u002Findices\\u002FBHBX\\u002Fchart?period=3m\",\"rt\":\"json\"},\"6b1eef4c9c686e309cfb7845c9fef65b818714178518b92de16e87a5f9b29e0f\":{\"b\":{\"status\":200,\"message\":\"Request responded successfully\",\"data\":{\"enableTradingViewLink\":true,\"role\":[\"",
-   "\"displaySymbol\":\"KSE\",\"mainIndexSymbol\":\"03\"},{\"id\":9,\"name\":\"Muscat Securities Market\",\"symbol\":\"MSM\",\"displaySymbol\":\"MSM\",\"mainIndexSymbol\":\"MSX30\"},{\"id\":15,\"name\":\"Abu Dhabi Securities Exchange (Chart Data)\",\"symbol\":\"ADXIDX\",\"displaySymbol\":\"ADXIDX\",\"mainIndexSymbol\":\"FADGI\"}]}},\"h\":{},\"s\":200,\"st\":\"OK\",\"u\":\"\\u002Fapi\\u002Fv1\\u002Ftadawuly\\u002Fauth\\u002Ftadawuly\\u002FinitialData\",\"rt\":\"json\"},\"2"
-  ],
-  "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-beasties-container><head>\n  <meta charset=\"utf-8\">\n  <title>Bahrain Bourse | Mubasher</title>\n  <base href=\"/\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"strix-verification\" content=\"strix-verify-5ca1462c96f0baf888c4af54470eed38\">\n\n  <!-- <link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\"> -->\n  <link rel=\"icon\" type=\"image/x-icon\" href=\"fav_icon.svg\">\n  <!-- Installable PWA: no service worker on purpose (cached market data would be stale prices).\n       On Android the manifest's prefer_related_applications points the install offer at the\n       Play Store app instead. -->\n  <link rel=\"manifest\" href=\"manifest.webmanifest\">\n  <meta name=\"theme-color\" content=\"#0075BC\">\n  <link rel=\"apple-touch-ico"
- },
- "mub_api_nbb": {
-  "error": "HTTP Error 401: Unauthorized"
- },
- "mub_api_nbb2": {
-  "error": "HTTP Error 401: Unauthorized"
- },
- "mub_chart_api": {
-  "error": "HTTP Error 401: Unauthorized"
- }
+ "mubasher": [
+  {
+   "url": "https://english.mubasher.info/api/v1/tadawuly/marketIndex/TDWL/constituents/TASI",
+   "len": 61463,
+   "head": "{\"status\":200,\"message\":\"Request responded successfully\",\"data\":[{\"symbol\":\"7204\",\"name\":\"2P\",\"companyId\":14403,\"tickerSerial\":3859833,\"last\":4.51,\"change\":0.10,\"changePercentage\":2.26,\"open\":4.46,\"high\":4.52,\"low\":4.38,\"volume\":1009240,\"turnover\":4493450.06,\"priceDate\":\"2026-11-19\"},{\"symbol\":\"4001\",\"name\":\"A.OTHAIM MARKET\",\"companyId\":831,\"tickerSerial\":14275,\"last\":3.81,\"change\":0.00,\"changePercentage\":0.00,\"open\":3.80,\"high\":3.85,\"low\":3.80,\"volume\":1265930,\"turnover\":4831949.89,\"priceDate\":\"2026-11-19\"},{\"symbol\":\"4191\",\"name\":\"ABO MOATI\",\"companyId\":92243,\"tickerSerial\":641127,\"last\":29."
+  },
+  {
+   "url": "https://english.mubasher.info/api/v1/tadawuly/marketIndex/TDWL/constituents/NOMUC",
+   "len": 27713,
+   "head": "{\"status\":200,\"message\":\"Request responded successfully\",\"data\":[{\"symbol\":\"9541\",\"name\":\"ACADEMY OF LEARNING\",\"companyId\":34634,\"tickerSerial\":3686560,\"last\":6.70,\"change\":-0.20,\"changePercentage\":-2.90,\"open\":6.86,\"high\":6.86,\"low\":6.61,\"volume\":16515,\"turnover\":112484.25,\"priceDate\":\"2026-11-19\"},{\"symbol\":\"9524\",\"name\":\"ACITEC\",\"companyId\":184387,\"tickerSerial\":3018207,\"last\":1.27,\"change\":0.10,\"changePercentage\":8.55,\"open\":1.27,\"high\":1.27,\"low\":1.27,\"volume\":5660,\"turnover\":7091.83,\"priceDate\":\"2026-11-19\"},{\"symbol\":\"9634\",\"name\":\"ADEER\",\"companyId\":102163,\"tickerSerial\":4073203,\"last\""
+  },
+  {
+   "url": "https://english.mubasher.info/api/v1/stock-prices/daily?countryCode=sa&sort=turnover&desc=true&page=0&size=1000",
+   "len": 118327,
+   "head": "{\"status\":200,\"message\":null,\"data\":{\"content\":[{\"exchange\":\"TDWL\",\"name\":\"SAUDI ARAMCO\",\"url\":null,\"code\":\"2222\",\"value\":\"26.48\",\"change\":\"0.04\",\"changePercentage\":\"0.15\",\"previousClose\":\"26.44\",\"turnover\":\"179079149.68\",\"turnoverUsd\":\"49554782\",\"open\":\"26.3\",\"high\":\"26.48\",\"low\":\"26.28\",\"volume\":\"6786963\",\"trades\":\"7654\",\"status\":\"up\",\"chartFileUrl\":null,\"updatedAt\":\"2026-11-19 12:19:00\"},{\"exchange\":\"TDWL\",\"name\":\"ALRAJHI\",\"url\":null,\"code\":\"1120\",\"value\":\"62.65\",\"change\":\"-0.25\",\"changePercentage\":\"-0.40\",\"previousClose\":\"62.9\",\"turnover\":\"167614742.20\",\"turnoverUsd\":\"46382351\",\"open\":\"62."
+  }
+ ],
+ "bourse": []
 }
