@@ -47,7 +47,7 @@ Q = [dict(
   (D(2026,11,10),"Falabella","FALABELLA","Retail","C",""),
   (D(2026,11,3),"LATAM Airlines","LTM","Aerolínea","C","Adelanta su reporte: el 3T 2025 lo publicó el 14 de noviembre."),
   (D(2026,11,17),"SQM","SQM-B","Minería (litio)","C","Tras el cierre; conferencia el 18 de noviembre."),
-  (D(2026,11,18),"Ripley Corp","RIPLEY","Retail","E","El 3T 2025 publicó el 19 de noviembre."),
+  (D(2026,11,17),"Ripley Corp","RIPLEY","Retail","C",""),
   (D(2026,11,20),"CSAV (Vapores)","VAPORES","Transporte","C",""),
   (D(2026,11,20),"Sigdo Koppers","SK","Holding industrial","E","El 3T 2025 publicó entre el 20 y el 24 de noviembre."),
   (D(2026,11,26),"IAM","IAM","Sanitarias","C",""),
