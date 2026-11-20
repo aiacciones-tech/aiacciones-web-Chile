@@ -17,12 +17,12 @@ jobs:
       - name: Probe
         run: |
           pip install -q websocket-client playwright && python3 -m playwright install --with-deps chromium >/dev/null
-          python3 bahrain/educativo/probe-red-bahrain.py
+          mkdir -p /tmp/probe; python3 bahrain/educativo/probe-velas-bahrain.py
       - name: Save
         run: |
           R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
           git clone -q --depth 1 -b datos-bahrain-educativo "$R" /tmp/out 2>/dev/null || { mkdir -p /tmp/out && cd /tmp/out && git init -q -b datos-bahrain-educativo && git remote add origin "$R" && cd -; }
-          cp /tmp/probe/*.json /tmp/out/
+          cp /tmp/probe/* /tmp/out/
           cd /tmp/out && git add -A
           git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Bahrain educational series: data" || exit 0
           for i in 1 2 3; do git push -q origin HEAD:datos-bahrain-educativo && break; sleep 5; done
