@@ -1,0 +1,55 @@
+{
+ "ticker": "WMT",
+ "nombre": "Walmart",
+ "sector": "Einzelhandel",
+ "sector_tipo": "einzelhandel",
+ "trimestre": "3. Quartal GJ 2027",
+ "fecha_resultados": "2026-11-19",
+ "titular": "188,8 Mrd. $ Umsatz, Onlinehandel +23 % und eine höhere Jahresprognose",
+ "titulo_resultados": "Die wichtigsten Zahlen: August bis Oktober 2026",
+ "expectativas": {
+  "items": [
+   [
+    "Prognose Geschäftsjahr 2027",
+    "Umsatz +4,9 bis 5,2 % · bereinigter Gewinn je Aktie 2,84–2,89 $ (zuvor 2,80–2,87 $)"
+   ]
+  ],
+  "fuente": "Prognose: Mitteilung von Walmart vom 19. November 2026 (Umsatz zu konstanten Wechselkursen)."
+ },
+ "claves": [
+  "Umsatz 188,8 Mrd. $ (+5,2 % zum Vorjahr), über der Analystenschätzung",
+  "US-Onlinehandel +23 %, Werbegeschäft in den USA +37 % (laut Walmart)",
+  "Jahresprognose angehoben: bereinigter Gewinn je Aktie 2,84–2,89 $"
+ ],
+ "voz": {
+  "e_portada": "Willkommen zu «Die Wall-Street-Giganten», unserer Serie über die zwanzig größten US-Unternehmen. Heute: Walmart, der größte Einzelhändler der Welt. Walmart hat am Donnerstag vor Börsenbeginn die Zahlen für das dritte Quartal seines Geschäftsjahres 2027 vorgelegt, also für August bis Oktober. Vorstandschef John Furner sprach laut Mitteilung von starken Ergebnissen und Marktanteilsgewinnen.",
+  "e_resultados": "Der Umsatz stieg um 5,2 Prozent auf 188,8 Milliarden Dollar. Der Nettogewinn fiel dagegen um 19,5 Prozent auf 4,9 Milliarden Dollar, der verwässerte Gewinn je Aktie auf 0,62 Dollar. Laut Walmart lag das vor allem an Verlusten bei Finanzbeteiligungen. Der freie Cashflow im Quartal betrug 1,3 Milliarden Dollar. In den USA stiegen die vergleichbaren Umsätze ohne Kraftstoff um 2,9 Prozent.",
+  "e_ingresos": "In den letzten acht Quartalen schwankte der Umsatz mit der Saison; das vierte Quartal mit dem Weihnachtsgeschäft ist jeweils das stärkste. Die Nettomarge lag diesmal bei rund 3 Prozent und damit etwas unter dem Vorquartal. Als Treiber nennt Walmart den Onlinehandel, der in den USA um 23 Prozent wuchs, und das Werbegeschäft mit einem Plus von 37 Prozent. Die Bruttomarge stieg laut Mitteilung um 0,28 Prozentpunkte.",
+  "e_balance": "Zur Bilanz am Quartalsende: Walmart hatte 13,4 Milliarden Dollar an liquiden Mitteln und kurzfristigen Anlagen. Die Finanzschulden lagen laut TradingView bei 81,2 Milliarden Dollar, das Eigenkapital bei 106,5 Milliarden. Im Verhältnis zum Börsenwert von rund 1.000 Milliarden Dollar entsprechen die Schulden etwa 8 Prozent und die Liquidität 1,3 Prozent. Das sind eigene Berechnungen.",
+  "e_flujo": "Beim Cashflow der letzten zwölf Monate: Aus dem laufenden Geschäft flossen 43,5 Milliarden Dollar zu. Für Investitionen gab Walmart 30,6 Milliarden aus, deutlich mehr als früher. Daraus ergibt sich ein freier Cashflow von 12,9 Milliarden Dollar. Laut Mitteilung hat Walmart seit Jahresbeginn eigene Aktien für 7,8 Milliarden Dollar zurückgekauft.",
+  "e_expectativas": "Und im Vergleich zu den Erwartungen? Der bereinigte Gewinn je Aktie lag mit 0,65 Dollar 1,9 Prozent über der Schätzung der Analysten von 0,64 Dollar. Der Umsatz übertraf die Schätzung von 187,4 Milliarden um 0,8 Prozent. Walmart hob die Jahresprognose an: Der Umsatz soll zu konstanten Wechselkursen um 4,9 bis 5,2 Prozent wachsen, der bereinigte Gewinn je Aktie bei 2,84 bis 2,89 Dollar liegen. Zuvor waren es 2,80 bis 2,87 Dollar.",
+  "e_fin": "Fazit: Walmart steigerte den Umsatz um 5,2 Prozent auf 188,8 Milliarden Dollar und lag leicht über den Schätzungen. Der Nettogewinn fiel wegen Verlusten bei Beteiligungen, die Jahresprognose wurde angehoben. Die Aktie schloss am Donnerstag 1,04 Prozent tiefer bei 126,04 Dollar. Welches Unternehmen sollen wir als Nächstes analysieren? Schreiben Sie es in die Kommentare. Keine Anlageberatung."
+ },
+ "info": {
+  "titulo": "Walmart: Quartalszahlen Q3 2027 mit 188,8 Mrd. $ Umsatz | Die Wall-Street-Giganten",
+  "resumen": "Walmart (WMT) im 3. Quartal des Geschäftsjahres 2027 (August bis Oktober 2026): Umsatz 188,8 Mrd. Dollar (+5,2 % zum Vorjahr); Nettogewinn 4,9 Mrd. Dollar (−19,5 %), belastet von Verlusten bei Finanzbeteiligungen. US-Onlinehandel +23 %, vergleichbare US-Umsätze ohne Kraftstoff +2,9 %. Bereinigter Gewinn je Aktie 0,65 Dollar und Umsatz über den Analystenschätzungen. Jahresprognose angehoben: Umsatz +4,9 bis 5,2 % zu konstanten Wechselkursen, bereinigter Gewinn je Aktie 2,84 bis 2,89 Dollar.",
+  "fuentes": "TradingView (Fundamentaldaten und Analystenschätzungen), Mitteilung von Walmart zu den Quartalszahlen (19. November 2026, SEC EDGAR)",
+  "hashtags": "#Walmart #WMT #Quartalszahlen #Einzelhandel #Aktien",
+  "x": "Walmart | 3. Quartal GJ 2027: Umsatz 188,8 Mrd. $ (+5,2 %), US-Onlinehandel +23 %. Jahresprognose angehoben: bereinigter Gewinn je Aktie 2,84–2,89 $.",
+  "tags": [
+   "Walmart",
+   "WMT",
+   "Walmart Quartalszahlen",
+   "Walmart Aktie",
+   "John Furner",
+   "Einzelhandel",
+   "Onlinehandel"
+  ]
+ },
+ "miniatura": {
+  "etiqueta": "Umsatz · 3. Quartal GJ 2027",
+  "cifra": "188,8 Mrd. $",
+  "sub": "+5,2 % zum Vorjahr · Prognose angehoben",
+  "color": "gold"
+ }
+}
