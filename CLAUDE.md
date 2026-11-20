@@ -19,3 +19,5 @@
   `eau/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Qatar AI Stocks, serie semanal de análisis fundamental (`qatar/fundamental/`):** un capítulo cada sábado (~18:00 Doha). Antes de cada capítulo lee
   `qatar/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Nabd Wall Street, serie semanal «التحليل الأساسي ببساطة» (sábados, `nabd/fundamental/`):** análisis fundamental con cifras reales de empresas de EE. UU.
+  Antes de cada capítulo lee `nabd/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
