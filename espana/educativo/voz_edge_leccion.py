@@ -4,7 +4,7 @@ uso: python3 voz_edge_leccion.py <carpeta de la lección> <carpeta de salida>
 Escribe <clave>.mp3 por frase; los que ya existen no se vuelven a pedir (re-subir el guion solo pide las frases cambiadas)."""
 import asyncio, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from voz_leccion import textos, clave, VOZ, RATE
+from voz_leccion import textos, clave, hablar, VOZ, RATE
 import edge_tts
 
 
@@ -15,7 +15,7 @@ async def main(d, out):
         if os.path.exists(p) and os.path.getsize(p) > 0: continue
         for intento in range(5):
             try:
-                await edge_tts.Communicate(x, VOZ, rate=RATE).save(p)
+                await edge_tts.Communicate(hablar(x), VOZ, rate=RATE).save(p)
                 if os.path.getsize(p) > 0: break
             except Exception as e:
                 print("reintento", intento, e)

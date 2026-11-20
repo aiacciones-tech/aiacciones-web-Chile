@@ -17,6 +17,39 @@ def cta(VJ):
     return VJ.get("publicacion", dt.date.today().isoformat()) <= CTA_HASTA
 
 
+_U = ["cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez", "once", "doce", "trece", "catorce", "quince",
+      "dieciséis", "diecisiete", "dieciocho", "diecinueve", "veinte", "veintiuno", "veintidós", "veintitrés", "veinticuatro", "veinticinco",
+      "veintiséis", "veintisiete", "veintiocho", "veintinueve"]
+_D = {30: "treinta", 40: "cuarenta", 50: "cincuenta", 60: "sesenta", 70: "setenta", 80: "ochenta", 90: "noventa"}
+_C = {100: "ciento", 200: "doscientos", 300: "trescientos", 400: "cuatrocientos", 500: "quinientos", 600: "seiscientos", 700: "setecientos",
+      800: "ochocientos", 900: "novecientos"}
+
+
+def palabras(n):
+    """Entero en palabras (español de España), para la voz: 2025 → «dos mil veinticinco»."""
+    if n < 30: return _U[n]
+    if n < 100: return _D[n // 10 * 10] + ("" if n % 10 == 0 else " y " + _U[n % 10])
+    if n < 1000: return "cien" if n == 100 else _C[n // 100 * 100] + ("" if n % 100 == 0 else " " + palabras(n % 100))
+    if n < 1_000_000:
+        m, r = divmod(n, 1000); pre = "mil" if m == 1 else re.sub(r"(veinti)?uno$", lambda g: "veintiún" if g.group(1) else "un", palabras(m))+ " mil"
+        return pre + ("" if r == 0 else " " + palabras(r))
+    m = n // 1_000_000; r = n % 1_000_000
+    return ("un millón" if m == 1 else re.sub(r"(veinti)?uno$", lambda g: "veintiún" if g.group(1) else "un", palabras(m)) + " millones") + ("" if r == 0 else " " + palabras(r))
+
+
+def hablar(x):
+    """Texto que se manda a la voz: las cifras escritas con dígitos (como en los subtítulos) pasan a palabras.
+    «55,66» → «cincuenta y cinco coma sesenta y seis»; «19.186» → «diecinueve mil ciento ochenta y seis»; «%» → «por ciento».
+    Para el femenino («doscientas sesiones», «una sesión») escribe el número con letras en el guion."""
+    def dec(m):
+        ent = palabras(int(m.group(1).replace(".", "")))
+        if not m.group(2): return ent
+        d = m.group(2)
+        return ent + " coma " + ("cero " * (len(d) - len(d.lstrip("0")))) + (palabras(int(d)) if d.strip("0") else "")
+    x = re.sub(r"(\d+(?:\.\d{3})*|\d+)(?:,(\d+))?", dec, x)
+    return x.replace("%", " por ciento").replace(" ,", ",").replace("  ", " ").strip()
+
+
 def frases(texto):
     out = []
     for f in re.split(r"(?<=[.!?])\s+", " ".join(str(texto).split())):

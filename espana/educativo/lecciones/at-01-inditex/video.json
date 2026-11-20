@@ -1,1 +1,336 @@
-{"base": "at-01-inditex", "capitulo_n": 1, "simbolo": "BME:ITX", "ticker": "ITX", "nombre": "Inditex", "tema": "Las medias móviles", "velas_n": 760, "escenas": []}
+{
+ "base": "at-01-inditex",
+ "capitulo_n": 1,
+ "simbolo": "BME:ITX",
+ "ticker": "ITX",
+ "nombre": "Inditex",
+ "tema": "Las medias móviles",
+ "velas_n": 760,
+ "ultima_vela": "2026-11-19",
+ "publicacion": "2026-12-06",
+ "decimales": 2,
+ "escenas": [
+  {
+   "id": "intro",
+   "tipo": "portada",
+   "capitulo": "Introducción",
+   "sub": "Qué son, cómo se calculan y cómo se leen las de 50 y 200 sesiones",
+   "voz": "Bienvenido a «Análisis técnico, explicado fácil», la nueva serie de AIAcciones España. Cada domingo explicamos un único concepto del análisis técnico, y lo hacemos sobre el gráfico real de Inditex, la mayor empresa del IBEX 35 por capitalización. En este primer capítulo vemos las medias móviles: qué son, cómo se calculan, qué son el cruce dorado y el cruce de la muerte, y por qué a veces fallan. Recuerda: es contenido educativo, no una recomendación de inversión. Inditex es solo un ejemplo."
+  },
+  {
+   "id": "que_es",
+   "tipo": "puntos",
+   "capitulo": "Qué es una media móvil",
+   "kicker": "El concepto",
+   "titulo": "Una media móvil es el precio medio de las últimas sesiones",
+   "puntos": [
+    [
+     "Se calcula",
+     "Se suman los cierres de las últimas N sesiones y se divide entre N. Media de 50: los 50 últimos cierres, entre 50."
+    ],
+    [
+     "Es «móvil»",
+     "Cada día entra el cierre nuevo y sale el más antiguo, así que la línea avanza con el precio."
+    ],
+    [
+     "Suaviza",
+     "Quita el «ruido» de los movimientos diarios y deja ver la dirección de fondo."
+    ],
+    [
+     "Va por detrás",
+     "Solo usa datos pasados: siempre reacciona tarde a los cambios."
+    ]
+   ],
+   "voz": "Empecemos por la definición. Una media móvil es el precio medio de las últimas sesiones. La media de cincuenta sesiones, por ejemplo, suma los cierres de las cincuenta últimas sesiones y los divide entre cincuenta. Se llama móvil porque cada día entra el cierre nuevo y sale el más antiguo, de modo que la línea avanza con el precio. ¿Para qué sirve? Para quitar el ruido de los movimientos diarios y ver la dirección de fondo. Pero tiene un precio: como solo usa datos pasados, siempre va por detrás."
+  },
+  {
+   "id": "esquema",
+   "tipo": "esquema",
+   "modo": "media",
+   "kicker": "Cómo se ve",
+   "titulo": "El precio zigzaguea; la media dibuja la tendencia",
+   "notas": [
+    "Precio por encima de una media que sube: tendencia alcista",
+    "Precio por debajo de una media que baja: tendencia bajista",
+    "La media se aplana: el mercado va de lado"
+   ],
+   "voz": "Así se ve en un esquema. La línea blanca es el precio, con sus subidas y bajadas diarias. La línea azul es la media móvil: mucho más suave, y siempre un poco por detrás. La lectura básica es sencilla. Si el precio está por encima de una media que sube, se habla de tendencia alcista. Si está por debajo de una media que baja, de tendencia bajista. Y cuando la media se aplana, el mercado suele ir de lado."
+  },
+  {
+   "id": "tipos",
+   "tipo": "puntos",
+   "capitulo": "Las medias más usadas",
+   "kicker": "Las más usadas",
+   "titulo": "Corto, medio y largo plazo",
+   "puntos": [
+    [
+     "20 sesiones",
+     "Unas cuatro semanas de bolsa. Sigue los movimientos de corto plazo."
+    ],
+    [
+     "50 sesiones",
+     "Unos dos meses y medio. La referencia de medio plazo."
+    ],
+    [
+     "200 sesiones",
+     "Casi un año de bolsa. La gran referencia de largo plazo."
+    ],
+    [
+     "Simple o exponencial",
+     "La exponencial da más peso a los últimos cierres: reacciona antes, pero también se equivoca más."
+    ]
+   ],
+   "colores": [
+    "#2FB7A3",
+    "#4C8DF0",
+    "#C38BF2",
+    "#F2A541"
+   ],
+   "voz": "No hay una sola media móvil: cada una mira un plazo. La de veinte sesiones resume más o menos un mes de bolsa y sigue el corto plazo. La de cincuenta, unos dos meses y medio, es la referencia de medio plazo. Y la de doscientas sesiones, casi un año entero, es la gran referencia de largo plazo que vigilan muchos inversores. Además, hay dos familias. La media simple da el mismo peso a todos los cierres. La exponencial da más peso a los más recientes: reacciona antes, pero también se equivoca más. En esta serie usamos medias simples."
+  },
+  {
+   "id": "dos_anos",
+   "tipo": "grafico",
+   "capitulo": "Inditex: medias de 50 y 200",
+   "kicker": "Gráfico real",
+   "titulo": "Inditex en dos años, con sus medias de 50 y 200 sesiones",
+   "desde": "2024-11-19",
+   "panel": "",
+   "nota": "Medias simples, calculado",
+   "lineas": [
+    {
+     "ind": "sma50",
+     "texto": "Media 50",
+     "color": "acc2"
+    },
+    {
+     "ind": "sma200",
+     "texto": "Media 200",
+     "color": "pur"
+    }
+   ],
+   "marcas": [
+    {
+     "fecha": "2025-04-08",
+     "tipo": "cruce",
+     "texto": "Cruce de la muerte\n8 abr 2025",
+     "arriba": true
+    },
+    {
+     "fecha": "2025-11-07",
+     "tipo": "cruce",
+     "texto": "Cruce dorado\n7 nov 2025",
+     "arriba": false
+    }
+   ],
+   "voz": "Pasemos al gráfico real. Son las velas diarias de Inditex de los dos últimos años, con la media de cincuenta sesiones en azul y la de doscientas en morado. Cuando la media rápida, la de cincuenta, cruza por debajo de la lenta, la de doscientas, se habla de cruce de la muerte. En Inditex ocurrió el 8 de abril de 2025, con la acción en 44 euros. Cuando ocurre lo contrario, y la de cincuenta cruza por encima de la de doscientas, se habla de cruce dorado. Ocurrió el 7 de noviembre de 2025, con la acción en 47,54 euros. Fíjate en un detalle: los dos cruces llegaron después de que el precio ya hubiera girado. Son confirmaciones tardías, no avisos anticipados."
+  },
+  {
+   "id": "bajo_200",
+   "tipo": "grafico",
+   "kicker": "El precio frente a la media de 200",
+   "titulo": "2025: casi siete meses por debajo de la media de 200",
+   "desde": "2025-01-02",
+   "hasta": "2025-12-31",
+   "panel": "",
+   "ultimo": false,
+   "lineas": [
+    {
+     "ind": "sma200",
+     "texto": "Media 200",
+     "color": "pur"
+    }
+   ],
+   "tramo": [
+    "2025-03-11",
+    "2025-09-29",
+    "Por debajo de la media de 200"
+   ],
+   "marcas": [
+    {
+     "fecha": "2025-03-11",
+     "tipo": "cruce",
+     "texto": "Cierra por debajo\n11 mar",
+     "arriba": true
+    },
+    {
+     "fecha": "2025-08-04",
+     "tipo": "suelo",
+     "texto": "Mínimo 40,80\n4 ago"
+    },
+    {
+     "fecha": "2025-09-30",
+     "tipo": "cruce",
+     "texto": "Vuelve por encima\n30 sep",
+     "arriba": true
+    }
+   ],
+   "voz": "Ahora miremos solo la media de doscientas sesiones durante 2025. El 11 de marzo, Inditex cerró por debajo de ella, y ahí se quedó casi siete meses. En ese tramo marcó su mínimo del periodo, 40,80 euros, el 4 de agosto. El 30 de septiembre volvió a cerrar por encima, en 46,97 euros. Mientras el precio estuvo por debajo, la media actuó como un techo. Esto es lo que más se mira de la media de doscientas: de qué lado está el precio."
+  },
+  {
+   "id": "lateral",
+   "tipo": "grafico",
+   "capitulo": "Cuando las medias fallan",
+   "kicker": "La limitación",
+   "titulo": "En un mercado lateral, las medias dan cruces falsos",
+   "desde": "2026-03-02",
+   "hasta": "2026-06-30",
+   "panel": "",
+   "lineas": [
+    {
+     "ind": "sma50",
+     "texto": "Media 50",
+     "color": "acc2"
+    },
+    {
+     "ind": "sma200",
+     "texto": "Media 200",
+     "color": "pur"
+    }
+   ],
+   "tramo": [
+    "2026-04-10",
+    "2026-05-25",
+    "9 cruces con la media de 50 en siete semanas"
+   ],
+   "ultimo": false,
+   "voz": "Pero las medias no siempre funcionan. Mira la primavera de 2026. Entre el 10 de abril y el 25 de mayo, el precio de Inditex cruzó su media de cincuenta sesiones nueve veces en solo siete semanas. Y en mayo cruzó la de doscientas otras seis veces. Cuando el precio va de lado, sin tendencia, las medias se aplanan y el precio las atraviesa una y otra vez. Cada cruce parece significar algo, y casi ninguno lo hace. Es la principal limitación de las medias móviles: funcionan mejor en tendencia que en un mercado lateral."
+  },
+  {
+   "id": "limites",
+   "tipo": "puntos",
+   "kicker": "Para recordar",
+   "titulo": "Lo que una media móvil puede y no puede hacer",
+   "puntos": [
+    [
+     "Describe",
+     "Resume hacia dónde ha ido el precio y en qué plazo."
+    ],
+    [
+     "No predice",
+     "Se calcula con el pasado: no dice qué hará el precio mañana."
+    ],
+    [
+     "Llega tarde",
+     "Los cruces confirman giros que ya han ocurrido."
+    ],
+    [
+     "Falla de lado",
+     "En mercados laterales da muchos cruces sin continuidad."
+    ],
+    [
+     "Se combina",
+     "Se lee junto al volumen, los soportes o el RSI, que veremos en esta serie."
+    ]
+   ],
+   "voz": "Resumamos lo que una media móvil puede y no puede hacer. Describe hacia dónde ha ido el precio. No predice lo que hará mañana, porque se calcula con datos pasados. Sus cruces llegan tarde: confirman giros que ya han ocurrido. Falla en mercados laterales. Y por eso se lee junto a otras herramientas, como el volumen, los soportes o el RSI, que veremos en los próximos capítulos."
+  },
+  {
+   "id": "ahora",
+   "tipo": "grafico",
+   "capitulo": "La situación actual",
+   "kicker": "Situación actual, como condiciones",
+   "titulo": "Inditex hoy: por encima de sus medias de 50 y 200",
+   "desde": "2026-05-04",
+   "panel": "",
+   "lineas": [
+    {
+     "ind": "sma50",
+     "texto": "Media 50",
+     "color": "acc2"
+    },
+    {
+     "ind": "sma200",
+     "texto": "Media 200",
+     "color": "pur"
+    }
+   ],
+   "marcas": [
+    {
+     "fecha": "2026-11-16",
+     "tipo": "techo",
+     "texto": "Máximo 60,80\n16 nov"
+    }
+   ],
+   "nota": "Datos, no señales",
+   "voz": "¿Y cómo está Inditex ahora? Al cierre del 19 de noviembre de 2026, la acción estaba en 58,44 euros. Su media de cincuenta sesiones, en 55,66, y la de doscientas, en 54,70. El precio está por encima de las dos desde el 15 de octubre, y la media de cincuenta lleva por encima de la de doscientas desde el cruce dorado de noviembre de 2025. El 16 de noviembre marcó un máximo de 60,80 euros. Lo planteamos como condiciones, no como previsión. Si el precio cerrara por debajo de la media de cincuenta, la lectura de medio plazo dejaría de ser alcista. Y si la media de cincuenta llegara a cruzar por debajo de la de doscientas, sería un cruce de la muerte. Mientras nada de eso ocurra, la lectura de las medias sigue siendo la misma."
+  },
+  {
+   "id": "fin",
+   "tipo": "fin",
+   "capitulo": "Resumen",
+   "claves": [
+    "Media móvil: el precio medio de las últimas N sesiones",
+    "50 sesiones, medio plazo; 200 sesiones, largo plazo",
+    "Cruce dorado y cruce de la muerte: confirman tarde",
+    "En mercados laterales, las medias dan cruces falsos"
+   ],
+   "siguiente": "el RSI, el indicador de fuerza relativa",
+   "voz": "En resumen: una media móvil es el precio medio de las últimas sesiones. La de cincuenta mira el medio plazo y la de doscientas, el largo. Sus cruces confirman tendencias, pero llegan tarde, y en mercados laterales dan muchas señales falsas. El próximo domingo, en el capítulo dos, explicamos el RSI, también sobre el gráfico de Inditex. Esto es contenido educativo: no es una recomendación de inversión."
+  }
+ ],
+ "short": [
+  {
+   "id": "s_titulo",
+   "tipo": "titulo",
+   "pregunta": "¿Qué es el cruce dorado?",
+   "voz": "¿Qué es una media móvil y qué es el cruce dorado? Te lo explicamos en menos de un minuto, con el gráfico real de Inditex."
+  },
+  {
+   "id": "s_cruces",
+   "tipo": "grafico",
+   "grafico": "dos_anos",
+   "titulo": "Media de 50 y media de 200",
+   "voz": "La media de cincuenta sesiones es el precio medio de los últimos cincuenta cierres; la de doscientas, de casi un año. En abril de 2025, la de cincuenta cruzó por debajo de la de doscientas: cruce de la muerte. En noviembre de 2025, por encima: cruce dorado."
+  },
+  {
+   "id": "s_ahora",
+   "tipo": "grafico",
+   "grafico": "ahora",
+   "titulo": "Hoy: precio por encima de las dos",
+   "voz": "Hoy Inditex está en 58,44 euros, por encima de sus dos medias. Si cerrara por debajo de la de cincuenta, esa lectura cambiaría. Son condiciones, no previsiones."
+  },
+  {
+   "id": "s_fin",
+   "tipo": "fin",
+   "voz": "El capítulo completo, en nuestro canal. Contenido educativo, no es una recomendación."
+  }
+ ],
+ "info": {
+  "titulo": "Medias móviles explicadas fácil: el gráfico real de Inditex | Análisis técnico, cap. 1",
+  "titulo_short": "¿Qué es el cruce dorado? Medias móviles con Inditex en 1 minuto #Shorts",
+  "resumen": "Primer capítulo de «Análisis técnico, explicado fácil», la serie semanal de AIAcciones España: qué es una media móvil, cómo se calcula, cómo se leen las de 50 y 200 sesiones, qué son el cruce dorado y el cruce de la muerte y por qué fallan en mercados laterales. Todo sobre el gráfico real de Inditex (ITX), la mayor empresa del IBEX 35, con velas diarias hasta el cierre del 19 de noviembre de 2026.",
+  "fuentes": "TradingView (velas diarias de Inditex, BME:ITX, hasta el cierre del 19 de noviembre de 2026); medias móviles: calculado",
+  "hashtags": "#AnálisisTécnico #MediasMóviles #Inditex #IBEX35 #Bolsa #AprenderBolsa",
+  "hashtags_short": "#AnálisisTécnico #MediasMóviles #Inditex #IBEX35 #Shorts",
+  "tags": [
+   "medias móviles",
+   "media móvil 200",
+   "cruce dorado",
+   "cruce de la muerte",
+   "análisis técnico",
+   "aprender bolsa",
+   "Inditex",
+   "ITX",
+   "IBEX 35",
+   "bolsa española"
+  ],
+  "x": "Análisis técnico, explicado fácil | Cap. 1: medias móviles\nInditex: cruce de la muerte el 8-abr-2025 (44 €) y cruce dorado el 7-nov-2025 (47,54 €). Hoy, 58,44 €, por encima de sus medias de 50 (55,66) y 200 (54,70).",
+  "tiktok": "Medias móviles en 1 minuto, con el gráfico real de Inditex: el cruce de la muerte de abril de 2025, el cruce dorado de noviembre de 2025 y dónde está hoy el precio frente a sus medias de 50 y 200 sesiones. Condiciones, no previsiones.",
+  "linkedin": {
+   "datos": [
+    "Cruce de la muerte en Inditex: la media de 50 sesiones cruzó por debajo de la de 200 el 8-abr-2025, con la acción en 44 €. Cruce dorado el 7-nov-2025, en 47,54 €.",
+    "En 2025 el precio pasó casi siete meses por debajo de la media de 200 (11-mar a 30-sep), con un mínimo de 40,80 € el 4-ago.",
+    "Entre el 10-abr y el 25-may-2026 el precio cruzó su media de 50 nueve veces: en mercados laterales las medias dan cruces falsos.",
+    "Al cierre del 19-nov-2026: 58,44 €, por encima de la media de 50 (55,66) y de la de 200 (54,70); máximo de 60,80 € el 16-nov."
+   ],
+   "conclusion": "Las medias móviles describen la tendencia y la confirman tarde; no predicen. Por eso se leen junto a otras herramientas, que iremos explicando cada domingo."
+  }
+ },
+ "miniatura": {
+  "etiqueta": "ANÁLISIS TÉCNICO, EXPLICADO FÁCIL · CAP. 1",
+  "titulo": "Medias móviles",
+  "sub": "El cruce dorado, con el gráfico real de Inditex",
+  "grafico": "dos_anos"
+ }
+}
