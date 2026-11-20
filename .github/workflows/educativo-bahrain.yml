@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Probe
         run: |
-          pip install -q websocket-client
+          pip install -q websocket-client playwright && python3 -m playwright install --with-deps chromium >/dev/null
           mkdir -p /tmp/probe; python3 bahrain/educativo/probe-velas-bahrain.py
       - name: Save
         run: |
