@@ -1,38 +1,245 @@
 {
- "NBB": {
-  "url": "https://english-old.mubasher.info/markets/BB/stocks/NBB",
-  "req": [
-   "https://english-old.mubasher.info/mubasherFileServer/File.MubasherCharts/File.Delay_Stock_Intraday_Charts_Dir/220ec8ce6abb3e952a85b8551ba726a1227.csv"
-  ],
-  "html": [
-   "/mubasherFileServer/File.MubasherCharts/File.Delay_Stock_Intraday_Charts_Dir/220ec8ce6abb3e952a85b8551ba726a1227.csv",
-   "https://static.mubasher.info/File.MubasherCharts/File.Historical_Stock_Charts_Dir/220ec8ce6abb3e952a85b8551ba726a1227.csv"
-  ],
-  "csv": [
-   {
-    "url": "https://static.mubasher.info/File.MubasherCharts/File.Historical_Stock_Charts_Dir/220ec8ce6abb3e952a85b8551ba726a1227.csv",
-    "len": 155265,
-    "head": "2006-02-26/00:00:00,0.2,0.2,0.2,0.2,138082\n2006-02-27/00:00:00,0.2,0.2,0.2,0.2,150948\n2006-02-28/00:00:00,0.19,0.19,0.19,0.19,242864\n2006-03-01/00:00:00,0.14,0.14,0.14,0.14,261237\n2006-03-02/00:00:00,",
-    "tail": "0.504,16768\n2025-12-30/00:00:00,0.505,0.51,0.505,0.51,21050\n2025-12-31/00:00:00,0.507,0.507,0.505,0.506,29231\n2026-01-04/00:00:00,0.505,0.505,0.505,0.505,12000\n2026-01-05/00:00:00,0.0,0.0,0.0,0.0,920\n"
-   }
-  ]
+ "intra": {
+  "len": 198,
+  "head": "2026-11-19/10:03:00,0.505,0.505,0.505,0.505,15000\n2026-11-19/11:54:00,0.505,0.505,0.505,0.505,11745\n2026-11-19/11:57:00,0.505,0.505,0.505,0.505,192\n2026-11-19/12:48:00,0.505,0.505,0.505,0.505,18063\n",
+  "tail": "2026-11-19/10:03:00,0.505,0.505,0.505,0.505,15000\n2026-11-19/11:54:00,0.505,0.505,0.505,0.505,11745\n2026-11-19/11:57:00,0.505,0.505,0.505,0.505,192\n2026-11-19/12:48:00,0.505,0.505,0.505,0.505,18063\n"
  },
- "ALBH": {
-  "url": "https://english-old.mubasher.info/markets/BB/stocks/ALBH",
-  "req": [
-   "https://english-old.mubasher.info/mubasherFileServer/File.MubasherCharts/File.Delay_Stock_Intraday_Charts_Dir/591815ae3b9d6286f1b2a489ea4f3f4abaed.csv"
-  ],
-  "html": [
-   "/mubasherFileServer/File.MubasherCharts/File.Delay_Stock_Intraday_Charts_Dir/591815ae3b9d6286f1b2a489ea4f3f4abaed.csv",
-   "https://static.mubasher.info/File.MubasherCharts/File.Historical_Stock_Charts_Dir/591815ae3b9d6286f1b2a489ea4f3f4abaed.csv"
-  ],
-  "csv": [
+ "hist": {
+  "url": "https://english-old.mubasher.info/markets/BB/stocks/NBB/historical-prices",
+  "hits": [
    {
-    "url": "https://static.mubasher.info/File.MubasherCharts/File.Historical_Stock_Charts_Dir/591815ae3b9d6286f1b2a489ea4f3f4abaed.csv",
-    "len": 165497,
-    "head": "2010-11-30/00:00:00,0.91,0.915,0.9,0.915,358221\n2010-12-01/00:00:00,0.91,0.91,0.9,0.9,358221\n2010-12-02/00:00:00,0.9,0.9,0.9,0.9,392112\n2010-12-05/00:00:00,0.9,0.905,0.9,0.9,13859\n2010-12-06/00:00:00,",
-    "tail": "2847\n2026-11-16/00:00:00,0.735,0.737,0.734,0.734,49242\n2026-11-17/00:00:00,0.735,0.735,0.731,0.731,30247\n2026-11-18/00:00:00,0.731,0.74,0.731,0.74,162347\n2026-11-19/00:00:00,0.74,0.75,0.74,0.75,10578\n"
+    "url": "https://english-old.mubasher.info/cdn-cgi/rum?",
+    "len": 0,
+    "head": ""
    }
+  ],
+  "links": [
+   "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+  ],
+  "dates": []
+ },
+ "nbb": {
+  "url": "https://english-old.mubasher.info/markets/BB/stocks/NBB",
+  "hits": [
+   {
+    "url": "https://analytics.google.com/g/collect?v=2&tid=G-7D5V9JHG0X&gtm=45je6bh1h1v879000295za208zb846134747zd846134747xf1&_p=1795184536537&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGA&cid=4138233.1795184537&frm=0&pscdl=noapi&rcb=9&sr=1400x2000&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938465~115938469~120213116~120385422~120469145~120469153~121049589~121246026~121246034~123785233&sid=1795184536&sct=1&seg=0&dl=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&dt=National%20Bank%20of%20Bahrain%20(NBB)%20-%20Mubasher%20Info&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=1144",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWicuNKnXDEnZsWi7o4g5-wRIa2rtYDLtGMkzFu2IgfixJbPs_arXPtrXbH_GzBZdloT4ib33GQWh04HUmTEiAQUCej_gl3_BoWtEjkDbTTGenA38zQX4rVNZaEqrn-9b7iN8EDIg==",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWicuNKnXDEnZsWi7o4g5-wRIa2rtYDLtGMkzFu2IgfixJbPs_arXPtrXbH_GzBZdloT4ib33GQWh04HUmTEiAQUCej_gl3_BoWtEjkDbTTGenA38zQX4rVNZaEqrn-9b7iN8EDIg==",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://ideanetwork.site/Api/GetLocation/",
+    "len": 2217,
+    "head": "{\"ipAddress\":\"128.85.54.16\",\"ipNumber\":\"2153068048\",\"countryShort\":\"US\",\"countryLong\":\"United States of America\",\"region\":\"Washington\",\"city\":\"Quincy\",\"latitude\":0.0,\"longitude\":0.0,\"zipCode\":\"This method is not applicable for current IP2Location binary data file. Please upgrade your subscription package to install new data file.\",\"timeZone\":\"This method is not applicable for current IP2Location b"
+   },
+   {
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWicuNKnXDEnZsWi7o4g5-wRIa2rtYDLtGMkzFu2IgfixJbPs_arXPtrXbH_GzBZdloT4ib33GQWh04HUmTEiAQUCej_gl3_BoWtEjkDbTTGenA38zQX4rVNZaEqrn-9b7iN8EDIg==",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://securepubads.g.doubleclick.net/gampad/ads?pvsid=6471858818218214&correlator=90384812775517&eid=95403398%2C122882200%2C95401809&output=ldjh&gdfp_req=1&vrg=202611120201&ptt=17&impl=fifs&gdpr=0&us_privacy=1---&gpp_sid=-1&iu_parts=53930451%2Cinterstitial_mubasher&enc_prev_ius=%2F0%2F1&prev_iu_szs=1x1&ifi=2&didk=1951695844&dids=gpt_unit_%2F53930451%2Finterstitia&sfv=1-0-45&ists=1&fas=8&fsapi=1&sc=1&cookie_enabled=1&abxe=1&dt=1795184537108&lmt=1795184537&adxs=-9&adys=-9&biw=1400&bih=2000&scr_x=0&scr_y=0&btvi=-1&ucis=1&oid=2&u_his=2&u_h=2000&u_w=1400&u_ah=2000&u_aw=1400&u_cd=24&u_sd=1&dmc=16&bc=31&nvt=1&uach=WyJMaW51eCIsIiIsIng4NiIsIiIsIjE1OS4wLjgxNTQuNiIsbnVsbCwwLG51bGwsIjY0IixbWyJIZWFkbGVzc0Nocm9tZSIsIjE1OS4wLjgxNTQuNiJdLFsiTm90L0EpQnJhbmQiLCI4LjAuMC4wIl0sWyJDaHJvbWl1bSIsIjE1OS4wLjgxNTQuNiJdXSwwXQ..&url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&vis=1&psz=0x-1&msz=0x-1&fws=2&ohw=0&dlt=1795184536322&idt=566&adks=1607436715&frm=20&eoidce=1",
+    "len": 1354,
+    "head": "{\"/53930451/interstitial_mubasher\":[\"html\",0,null,null,0,0,0,1,0,null,null,null,null,[[\"ID=271da98b655a5a51:T=1795184537:RT=1795184537:S=ALNI_MbnLSRUNSxKtiF5KxjyWco25R0pGw\",1828880537,\"/\",\"mubasher.info\",1],[\"UID=0000172fb09b784e:T=1795184537:RT=1795184537:S=ALNI_MahHMxp8BrgsfcdVUUvWTD0xM1uqA\",1828880537,\"/\",\"mubasher.info\",2]],null,null,null,null,null,null,null,null,null,null,null,0,null,null,nul"
+   },
+   {
+    "url": "https://api-community.mubasher.info/api/v1/auth/tadawuly/initialData",
+    "len": 2093,
+    "head": "{\"status\":200,\"message\":\"Request responded successfully\",\"data\":{\"enableTradingViewLink\":true,\"role\":[\"ADMIN\",\"ANALYST\",\"MEMBER\",\"ANALYST (PENDING)\"],\"enableWhatsapp\":true,\"tradeGameUrl\":\"https://trdgmuat-mtplus.mubashertrade.com/#/secure\",\"frontendClients\":{\"ios\":{\"buildNumber\":218,\"mandatoryUpdate\":true,\"updateMessage\":\"Update to the latest version.\",\"updateUrl\":\"https://apps.apple.com/app/id647"
+   },
+   {
+    "url": "https://securepubads.g.doubleclick.net/gampad/ads?pvsid=6471858818218214&correlator=90384812775517&eid=95403398%2C122882200%2C95401809&output=ldjh&gdfp_req=1&vrg=202611120201&ptt=17&impl=fifs&gdpr=0&us_privacy=1---&gpp_sid=-1&iu_parts=53930451%2CMubasher-Leaderboard-Desktop&enc_prev_ius=%2F0%2F1&prev_iu_szs=728x90&ifi=4&didk=2472179394&dids=div-gpt-ad-1695550548342-0&adfs=2713683328&sfv=1-0-45&sc=1&cookie_enabled=1&abxe=1&dt=1795184537116&lmt=1795184537&adxs=533&adys=50&biw=1400&bih=2000&scr_x=0&scr_y=0&btvi=0&ucis=3&oid=2&u_his=2&u_h=2000&u_w=1400&u_ah=2000&u_aw=1400&u_cd=24&u_sd=1&dmc=16&bc=31&nvt=1&uach=WyJMaW51eCIsIiIsIng4NiIsIiIsIjE1OS4wLjgxNTQuNiIsbnVsbCwwLG51bGwsIjY0IixbWyJIZWFkbGVzc0Nocm9tZSIsIjE1OS4wLjgxNTQuNiJdLFsiTm90L0EpQnJhbmQiLCI4LjAuMC4wIl0sWyJDaHJvbWl1bSIsIjE1OS4wLjgxNTQuNiJdXSwwXQ..&url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&vis=1&psz=728x90&msz=728x90&fws=4&ohw=1400&dlt=1795184536322&idt=566&adks=1002378122&frm=20&eoidce=1",
+    "len": 865,
+    "head": "{\"/53930451/Mubasher-Leaderboard-Desktop\":[\"html\",0,null,null,0,90,728,1,0,null,null,null,null,[[\"ID=110f60bd213c6f42:T=1795184537:RT=1795184537:S=ALNI_MYN2O3GVL2IXaoRDTwmn8ylvbAz8A\",1828880537,\"/\",\"mubasher.info\",1],[\"UID=0000172fb0840375:T=1795184537:RT=1795184537:S=ALNI_MYflzsgS3Lc7Iyis0TVFyLWEYlEvA\",1828880537,\"/\",\"mubasher.info\",2]],null,null,null,null,null,null,null,null,null,null,null,0,[44"
+   },
+   {
+    "url": "https://english-old.mubasher.info/assets/ui/i18n/portal_en.json",
+    "len": 70623,
+    "head": "{\"global.noResults\":\"No results were found\",\"popup.community-menu.community-popup-title.title\":\"Sorry!\",\"you-need-to-login-or-register-to-use-that-feature\":\"You need to log in to your account on the website. If you don't have an account, you can register now to take advantage of this feature\",\"popup.community-menu.community-register\":\"Register\",\"popup.community-menu.community-login\":\"Login\",\"conti"
+   },
+   {
+    "url": "https://securepubads.g.doubleclick.net/gampad/ads?pvsid=6471858818218214&correlator=90384812775517&eid=95403398%2C122882200%2C95401809&output=ldjh&gdfp_req=1&vrg=202611120201&ptt=17&impl=fifs&gdpr=0&us_privacy=1---&gpp_sid=-1&iu_parts=53930451%2CMubasher-1x1&enc_prev_ius=%2F0%2F1&prev_iu_szs=1x1&ifi=3&didk=1369081495&dids=div-gpt-ad-1695552165185-0&adfs=908139578&sfv=1-0-45&sc=1&cookie_enabled=1&abxe=1&dt=1795184537113&lmt=1795184537&adxs=0&adys=0&biw=1400&bih=2000&scr_x=0&scr_y=0&btvi=0&ucis=2&oid=2&u_his=2&u_h=2000&u_w=1400&u_ah=2000&u_aw=1400&u_cd=24&u_sd=1&dmc=16&bc=31&nvt=1&uach=WyJMaW51eCIsIiIsIng4NiIsIiIsIjE1OS4wLjgxNTQuNiIsbnVsbCwwLG51bGwsIjY0IixbWyJIZWFkbGVzc0Nocm9tZSIsIjE1OS4wLjgxNTQuNiJdLFsiTm90L0EpQnJhbmQiLCI4LjAuMC4wIl0sWyJDaHJvbWl1bSIsIjE1OS4wLjgxNTQuNiJdXSwwXQ..&url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&vis=1&psz=1400x0&msz=1400x0&fws=4&ohw=1400&dlt=1795184536322&idt=566&adks=491798691&frm=20&eoidce=1",
+    "len": 840,
+    "head": "{\"/53930451/Mubasher-1x1\":[\"html\",0,null,null,0,0,0,1,0,null,null,null,null,[[\"ID=fa283d6c31eef2f0:T=1795184537:RT=1795184537:S=ALNI_MbvVeJPQWW2ZjXYvir2SB-LSbLHfA\",1828880537,\"/\",\"mubasher.info\",1],[\"UID=0000172fb02b26db:T=1795184537:RT=1795184537:S=ALNI_MYLdxR1yv1TjfuOJasaFaaSlk0Vuw\",1828880537,\"/\",\"mubasher.info\",2]],null,null,null,null,null,null,null,null,null,null,null,0,null,null,null,null,nu"
+   },
+   {
+    "url": "https://english-old.mubasher.info/mubasherFileServer/File.MubasherCharts/File.Delay_Stock_Intraday_Charts_Dir/220ec8ce6abb3e952a85b8551ba726a1227.csv",
+    "len": 198,
+    "head": "2026-11-19/10:03:00,0.505,0.505,0.505,0.505,15000\n2026-11-19/11:54:00,0.505,0.505,0.505,0.505,11745\n2026-11-19/11:57:00,0.505,0.505,0.505,0.505,192\n2026-11-19/12:48:00,0.505,0.505,0.505,0.505,18063\n"
+   },
+   {
+    "url": "https://securepubads.g.doubleclick.net/gampad/ads?pvsid=6471858818218214&correlator=90384812775517&eid=95403398%2C122882200%2C95401809&output=ldjh&gdfp_req=1&vrg=202611120201&ptt=17&impl=fifs&gdpr=0&us_privacy=1---&gpp_sid=-1&iu_parts=53930451%2CMubasher-sec-MPU-Desktop&enc_prev_ius=%2F0%2F1&prev_iu_szs=300x250%7C336x280&ifi=6&didk=3318871152&dids=div-gpt-ad-1695550452500-0&adfs=1600745933&sfv=1-0-45&sc=1&cookie_enabled=1&abxe=1&dt=1795184537120&lmt=1795184537&adxs=994&adys=594&biw=1400&bih=2000&scr_x=0&scr_y=0&btvi=0&ucis=5&oid=2&u_his=2&u_h=2000&u_w=1400&u_ah=2000&u_aw=1400&u_cd=24&u_sd=1&dmc=16&bc=31&nvt=1&uach=WyJMaW51eCIsIiIsIng4NiIsIiIsIjE1OS4wLjgxNTQuNiIsbnVsbCwwLG51bGwsIjY0IixbWyJIZWFkbGVzc0Nocm9tZSIsIjE1OS4wLjgxNTQuNiJdLFsiTm90L0EpQnJhbmQiLCI4LjAuMC4wIl0sWyJDaHJvbWl1bSIsIjE1OS4wLjgxNTQuNiJdXSwwXQ..&url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&vis=1&psz=379x250&msz=379x250&fws=4&ohw=1400&dlt=1795184536322&idt=566&adks=3363968826&frm=20&eoidce=1",
+    "len": 863,
+    "head": "{\"/53930451/Mubasher-sec-MPU-Desktop\":[\"html\",0,null,null,0,250,300,1,0,null,null,null,null,[[\"ID=a9b10a5582ecf05f:T=1795184537:RT=1795184537:S=ALNI_MbBSNiimOAg8YmurOiUbDZJucZLnA\",1828880537,\"/\",\"mubasher.info\",1],[\"UID=0000172fb048486d:T=1795184537:RT=1795184537:S=ALNI_MYJTXdj7ToUUxeT2iY1w3OGW8S_mw\",1828880537,\"/\",\"mubasher.info\",2]],null,null,null,null,null,null,null,null,null,null,null,0,[67698"
+   },
+   {
+    "url": "https://english-old.mubasher.info/cdn-cgi/rum?",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20261118&st=env&sjk=6471858818218214",
+    "len": 18038,
+    "head": "{\"sodar_query_id\":\"mVcAa9CcI8vq5LcP8cf-gAc\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"APvF6aaXvkkWcayicbRIHw2tOZGt4i6YElFrcu5DDdM\",\"bg_binary\":\"AthFvJyipAw1QIFmgRNH5DRCMrzv2LLQp1aeirUwPBF7oqXDklzOBpjDu4bTaGycVYn5eIQOsV90shb3I20CySXsHsG5c6TUvLXwkzsE56c1rthKHIq2jLCXMPps3H9vLFOks3cuxg54hK1i0QzFZjmxhktV+Z4vp9s8LyYqsL90tX+JjUgo9d2bmkEzZh6kbMEcSAltyFOlyKuS106Jjv2XZG7M7bf2nrJ6o5FvB/HHXbSUpGR6uWRZ0"
+   },
+   {
+    "url": "https://n.clarity.ms/collect",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://english-old.mubasher.info/portlet/most-shared/sa?limit=7&relativeURI=/markets/BB/stocks/NBB",
+    "len": 168,
+    "head": "\n    \n    \n\n    <a class=\"mi-article-widget__more-button\" href=\"/news/SA/now/trending/\">\n      <span>More</span>\n      <i class=\"fa fa-chevron-left\"></i>\n    </a>\n  \n  "
+   },
+   {
+    "url": "https://english-old.mubasher.info/portlet/most-read/sa?limit=7&relativeURI=/markets/BB/stocks/NBB",
+    "len": 6440,
+    "head": "\n    \n    \n<!--      <th:block>\n        <div th:remove=\"tag\" th:if=\"${i.index == 1}\">\n          <div th:replace=\"components/ads/internal/native\" />\n          <div th:replace=\"components/ads/internal/mobile-native\" />\n        </div>\n      </th:block>-->\n      <div class=\"mi-home-media-block\">\n        <a class=\"mi-home-media-block__image\" href=\"/news/4704267/Acwa-reaches-financial-close-for-SAR-847-"
+   },
+   {
+    "url": "https://securepubads.g.doubleclick.net/gampad/ads?pvsid=6471858818218214&correlator=90384812775517&eid=95403398%2C122882200%2C95401809&output=ldjh&gdfp_req=1&vrg=202611120201&ptt=17&impl=fifs&gdpr=0&us_privacy=1---&gpp_sid=-1&iu_parts=53930451%2CMubasher-MPU-Desktop&enc_prev_ius=%2F0%2F1&prev_iu_szs=336x280%7C300x250&ifi=5&didk=2829382466&dids=div-gpt-ad-1695550214528-0&adfs=1951431035&sfv=1-0-45&sc=1&cookie_enabled=1&abxe=1&dt=1795184537118&lmt=1795184537&adxs=994&adys=231&biw=1400&bih=2000&scr_x=0&scr_y=0&btvi=0&ucis=4&oid=2&u_his=2&u_h=2000&u_w=1400&u_ah=2000&u_aw=1400&u_cd=24&u_sd=1&dmc=16&bc=31&nvt=1&uach=WyJMaW51eCIsIiIsIng4NiIsIiIsIjE1OS4wLjgxNTQuNiIsbnVsbCwwLG51bGwsIjY0IixbWyJIZWFkbGVzc0Nocm9tZSIsIjE1OS4wLjgxNTQuNiJdLFsiTm90L0EpQnJhbmQiLCI4LjAuMC4wIl0sWyJDaHJvbWl1bSIsIjE1OS4wLjgxNTQuNiJdXSwwXQ..&url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&vis=1&psz=379x250&msz=379x250&fws=4&ohw=1400&dlt=1795184536322&idt=566&adks=2474743710&frm=20&eoidce=1",
+    "len": 852,
+    "head": "{\"/53930451/Mubasher-MPU-Desktop\":[\"html\",0,null,null,0,280,336,1,0,null,null,null,null,[[\"ID=2c3e856b939a323a:T=1795184537:RT=1795184537:S=ALNI_MaqZ9_TfPvUtJj_zCKic1_zlTIO5g\",1828880537,\"/\",\"mubasher.info\",1],[\"UID=0000172fb041d81f:T=1795184537:RT=1795184537:S=ALNI_MZ_OAVnuesb1zUSOPmQ31taM9DbfQ\",1828880537,\"/\",\"mubasher.info\",2]],null,null,null,null,null,null,null,null,null,null,null,0,null,null,"
+   },
+   {
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWicuNKnXDEnZsWi7o4g5-wRIa2rtYDLtGMkzFu2IgfixJbPs_arXPtrXbH_GzBZdloT4ib33GQWh04HUmTEiAQUCej_gl3_BoWtEjkDbTTGenA38zQX4rVNZaEqrn-9b7iN8EDIg==",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWicuNKnXDEnZsWi7o4g5-wRIa2rtYDLtGMkzFu2IgfixJbPs_arXPtrXbH_GzBZdloT4ib33GQWh04HUmTEiAQUCej_gl3_BoWtEjkDbTTGenA38zQX4rVNZaEqrn-9b7iN8EDIg==",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWicuNKnXDEnZsWi7o4g5-wRIa2rtYDLtGMkzFu2IgfixJbPs_arXPtrXbH_GzBZdloT4ib33GQWh04HUmTEiAQUCej_gl3_BoWtEjkDbTTGenA38zQX4rVNZaEqrn-9b7iN8EDIg==",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWicuNKnXDEnZsWi7o4g5-wRIa2rtYDLtGMkzFu2IgfixJbPs_arXPtrXbH_GzBZdloT4ib33GQWh04HUmTEiAQUCej_gl3_BoWtEjkDbTTGenA38zQX4rVNZaEqrn-9b7iN8EDIg==",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVZHpnq03WtuxtZDd_3OK-Dk5kU77cHyvwe1bJ57OevHumy8moeYd9HaUuQoGnD3LUcLHJ11mnVbSr-kG3IaJOcaDpLsnbqj-kSkpSmOo2vp0rdT1j2CcVlEHTEmSQ33kCf6s6KbA==",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://fundingchoicesmessages.google.com/el/AGSKWxXxKuIuZeSlR1g3qHzaaD6v1ksRsK3VQTkRAuhvsJXF2beZR0JCQiWEjkUuwxMl5eOSeMuuLOu4tCa3BB8B5YSAqiyzt1ZIwtyjPWaG1itigjkRkZw7zdH17hKTkpjxmCquQid7QA==",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://n.clarity.ms/collect",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://ad.vidverto.io/delivery/impress?ctype=div&width=720&height=405&tld=english-old.mubasher.info&pzoneid=10223&in_iframe=&position=btf&screen_width=1400&screen_height=2000&top_domain=english-old.mubasher.info&top_url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&domain=english-old.mubasher.info&url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&referrer=&async=1&uid=2437288163&browser_language=en-US&page_language=en&topics=&gdpr=&gdpr_consent=&npa=&vdb=&uuid=c253c50a-807e-4b43-9713-f5bda036ea8b",
+    "len": 78138,
+    "head": "{\"template\":{\"html\":\"<div id=\\\"banner_list_10223\\\"><\\/div>\\r\\n<script>\\r\\n(() => {\\r\\n  const testPlayer = '' === 'enabled';\\r\\n  const vidvertoPlayerUrl = `https:\\/\\/ad.vidverto.io\\/vidverto\\/..\\/vidverto\\/player\\/${testPlayer ? 'test\\/' : ''}vidvertoplayer.js`;\\r\\n  const vidvertoPlayerScript = document.createElement('script');\\r\\n  vidvertoPlayerScript.src = vidvertoPlayerUrl;\\r\\n  vidvertoPlay"
+   },
+   {
+    "url": "https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json?date=20261120",
+    "len": 1545,
+    "head": "{\"generatedAt\":\"2026-11-19T16:00:29.927Z\",\"dataAsOf\":\"2026-11-19T00:00:00.000Z\",\"conversions\":{\"USD\":{\"EUR\":0.9097525473071325,\"USD\":1,\"JPY\":159.97088791848617,\"CZK\":22.222525473071325,\"DKK\":6.79967248908297,\"GBP\":0.7603802765647745,\"HUF\":336.08988355167395,\"PLN\":4.018377001455604,\"RON\":4.86471979621543,\"SEK\":10.141011644832606,\"CHF\":0.8426128093158661,\"ISK\":124.81804949053857,\"NOK\":9.686590247452"
+   },
+   {
+    "url": "https://s.seedtag.com/c/pv?token=3444-9424-01&device=desktop&fullUrl=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&cmp=1&ga=0&cd=&ct=2000&cv=2&v=-&ft=1&uc=1---&gc=&cache=1795184539373",
+    "len": 625,
+    "head": "{\"a\":true,\"u\":\"US\",\"i\":false,\"c\":[{\"type\":\"iframe\",\"src\":\"https://cs.seedtag.com/cs.html?pt=3444-9424-01&pc=AE&cmp=true&us=1---&uid=01a1f956-3703-707d-be42-690020999947&sct=Tag\"}],\"e\":\"YWCUbwA/kMe/rnjp6CSolzrL7RmcJ3QrQ1dG6/a9o6KykGbswoUFyO7ZwxOOu9jg9rHbJjL8l2icrE3INjbJgEwoJSg74B6/tcqP+b+hWyDRpF0/nv4S6VsRcl6GUnwdtMdSLW2/sueU7vX1RhUP0ZucBza9boxBVRgezN9ImVg5F5SFibmXd80xm0GZwQzH2XMY77XLmm9C/l+z5QLZTk7"
+   },
+   {
+    "url": "https://adx.adform.net/adx/openrtb",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://s.seedtag.com/cs/cookies/chips?enable=0",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=ima&tv=imaq_h.3.800.0&st=env&sjk=zYWijuFHQNKL8W++1pgU6Q==",
+    "len": 10902,
+    "head": "{\"sodar_query_id\":\"m1cAa-DYNM2m5LcPhMar0QI\",\"injector_basename\":\"sodar2\",\"bg_hash_basename\":\"APvF6aaXvkkWcayicbRIHw2tOZGt4i6YElFrcu5DDdM\",\"bg_binary\":\"AthslgX3on8DR0iRRxRzu/xOF1sSNFCjFPLQ7GPaW+MMFiA1VEdhz2siCJlIm/nvGbCCaMglNkeAzVguiigyH9/tADOFhG8/DbhRL9cmbffV02c+NrfubMXdYYNnS6n64pzFZwU/EFQWJi0E9alq79GIN6LHT2p0Pw2EYVEv48L6giDQsY93AMlBO06uX72y0/hWxgB9FyJZ9B+LXMAys5R93o0igMywygSX1t/KJVooJ86+/zonJMrx1"
+   },
+   {
+    "url": "https://ad.vidverto.io/delivery/v2/video/pod/NU7NhvMWtQ%2FfuJNKZSlTKlCgI9OUqTELUuaOGVGFyjERP4Qa0V1TkRj1v5H59IW3NyECfsbNw1ZVNu2W%2FYKKfrWN%2BfW9iKvACszqXY5YA1dTniS7YwNKhEcEQXBqoIxmzY%2BUSPLOmYh%2BrlSXHtr0UPrI5RKMj9AjEU%2F4HJtMm7seQhYNpoBrI5t85ugJnXmRfCOgoFNJ07R4VLpnAWaYBw7V42Ewsio8cgrStry1zr71XaK%2F%2BSFJoWZGSmRXWetzD3vQc4uVWRSWGYAf1UvQxhhDJ8i3UwoQKFRKX3NRz%2F2n1ryrnJfW3vz03sG7f4BwhHuYp7ipiYikUT8h1CBKsb%2B0A4plEeC12rXTPFLQeJOmWDjq07MZDD6Ihnf3q5Ap%2BuLRM5tN0nBtpdTDp9virjg634urEuuqsmn7Idr9QS5eIikp7IBc38AQxVSjs2TXtMj%2BUQenqd3hwz%2FVX6JLBpADPffDxxFDhbDzAzJu%2FCnqeyqf%2B4yz1mMU128AaG%2FvX0lo1%2F2ewE%2BblUbf4sjxhrSgqWq2ok6T6QeN6cNe6%2FZHI4otrbAwmp0s6%2B2QhF4lLQA2jN4VLuT6BbWJOqtlkl8T%2BU4xpzOdT%2Fn8aLdMBK85xrNx95wc4hcSUpQPRU6RO0V5EGpGnf6kwwWbXc3mVUzEIQ4tG%2FoDU2BSrhAQMEtFeqnaZZv8odwoYO2qWPLPO5c5XvfkawZ3GpCApcmR4JwWel4una2IGuAN4F9%2F5OYS9hyLrNi5QmESDur%2F6%2Fh5NLn3aWPemJlvi1W5gRZ%2FXHkQOr3FvBGEfT%2By%2FTxuzD%2BuJOT3uaSXKY9GJ%2F8pf0SmPRjVIxr%2FQRXWKY7CCtU0lkKXA9C9Sne%2BdIv%2BEbjV90N52aq19Hg4mQ1dArwjm90ZDai3Y7WAa5LUOAiDJbIpwg%3D%3D?bids=%7B%7D&autoplay=muted",
+    "len": 64402,
+    "head": "<VAST version=\"3.0\"><Ad id=\"96d7517a4f79156e9169f204ccecef37a759ac44921d8b123f880caff6f1e6f8\" sequence=\"1\"><Wrapper><AdSystem>Vidverto Ad Server</AdSystem><Error><![CDATA[https://ad.vidverto.io/vidverto/test/pixel.gif]]></Error><Extensions><Extension type=\"activeview\"><CustomTracking><Tracking event=\"viewable_impression\"><![CDATA[//ad.vidverto.io/delivery/v2/video/tracking?vast=events&token=NQ%2FE"
+   },
+   {
+    "url": "https://ad.vidverto.io/delivery/v2/rtb/video?data=DLEWzK19Oln3trjCzc8IpbbhMlfrZUjs4oGDZUy0qnOrnlhVlB%2Bkv6V%2BERh1VaBa4kTLSfq2riZPZUtwX2YGyW7zyNxXuefV5PdT6Ubv2qhCWIKqmTfFqmedSq8zVR%2FNgfvUfl9O5ECpYUPB%2BEsBy%2BhsJWlZQ26CqlOvfOiHS4bVjiLbr%2FSD3Qu1D0JiTEEIPMYY1mauif1GD6a2ITdIWQzTJVKkX7cMOQQKYqlLvW%2BkTDsoA9BUhecYkpFeL%2BZSDikhcw68rgOxzBC4g4mQqMDp85BFc12NLoIYNeHfl6vMkfsNXIHnnFCPglm9D6y746QB51kaVNkkNxQm5m5V0LIAxJSV5j5FH3XjOB8cvOQKtCqpyS69JHtfEW2dPbME1jSxVWsT%2FOYlCFaASVggTMCGmwdvC3EgxNkOk2CAuGo7%2FLb6TMHqU1LV%2B52BjyBG5gP%2F8eBfJTPw9AJROQL9XsffgBewwB30%2BNYKZLI0haty2D677WEsmB0b5gJ6XonXDcooB%2FKbBB0Y6sgjVFj8B%2BdSzW4%2Bn8JpNoNgV6tMur93LdTi42cI3XPWkzFYVmthHLPuy7IZpxPyBFw1BufeKBDyRXLpAueJDxFaj%2BK9By29x4XUrE4u6Ikj3nFwBsuItTIJiIPBiYagT9A4Wfs3aNbZYsjoHDuYQtreSpq1jgnV8mwaS80X%2BfK%2FiLS9pV4wtF9PH%2Bma4kImGQXXY9vBpxVwrdy0FgiKk2hlgfkRqG3lPqpLz%2FpGVYT%2B4uhupIoCP38ICTfL82ufSAPwIumoBxdA843ADUeK0lrSn0b9cZ4%3D",
+    "len": 5874,
+    "head": "<VAST version=\"3.0\"><Ad id=\"96d7517a4f79156e9169f204ccecef37a759ac44921d8b123f880caff6f1e6f8\"><Wrapper><AdSystem>Vidverto Ad Server</AdSystem><Error><![CDATA[https://ad.vidverto.io/vidverto/test/pixel.gif]]></Error><Extensions><Extension type=\"activeview\"><CustomTracking><Tracking event=\"measurable_impression\"><![CDATA[//ad.vidverto.io/delivery/v2/video/tracking?vast=events&token=ifHWv0oLAVuBZOIC8"
+   },
+   {
+    "url": "https://pubads.g.doubleclick.net/gampad/ads?correlator=90384812775517&description_url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&env=vp&gdfp_req=1&iu=%2F52555387%2C283733231%2Fmubasher.info_video_preroll&npa=0&output=xml_vast4&plcmt=2&ppid=c253c50a-807e-4b43-9713-f5bda036ea8b&sz=1x1%7C300x250%7C320x480%7C400x300%7C444x250%7C480x320%7C480x360%7C600x252%7C600x338%7C640x360%7C640x480%7C720x405%7C1024x768%7C1280x720&tfcd=0&unviewed_position_start=1&url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&vpmute=1&sdkv=h.3.800.0&osd=2&frm=0&vis=1&sdr=1&hl=en&is_amp=0&uach=WyJMaW51eCIsIiIsIng4NiIsIiIsIjE1OS4wLjgxNTQuNiIsbnVsbCwwLG51bGwsIjY0IixbWyJIZWFkbGVzc0Nocm9tZSIsIjE1OS4wLjgxNTQuNiJdLFsiTm90L0EpQnJhbmQiLCI4LjAuMC4wIl0sWyJDaHJvbWl1bSIsIjE1OS4wLjgxNTQuNiJdXSwwXQ..&u_so=l&ctv=0&mpt=Vidverto%2FPlayer&mpv=1.7.0&us_privacy=1---&gdpr=0&gpp_sid=-1&sdki=100000445&ptt=20&vo=0&sjk=zYWijuFHQNKL8W%2B%2B1pgU6Q%3D%3D&adk=4287131193&sdk_apis=2%2C7%2C8&omid_p=Google1%2Fh.3.800.0&media_url=https%3A%2F%2Fcdn.vidverto.io%2Fsecured2%2F-tEhvMyhavdcD2_X3F_rcg%3A1795188138%2F1361%2Fvideo%2F1832%2F480_650.mp4&sid=4C8B0B8F-673C-48B9-96FB-AC5E0B5B145C&a3p=EhQKBW9wZW54GPrc2MqfNEgAUgIIbxIdCg5lc3AuY3JpdGVvLmNvbRiH3NjKnzRIAFICCGQSFwoIcnRiaG91c2UY2t7Yyp80SABSAghq&eid=83323871%2C95331589%2C95332046%2C95403043%2C95408330%2C95411620&top=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&loc=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&dt=1795184540090&cookie=ID%3D2c3e856b939a323a%3AT%3D1795184537%3ART%3D1795184537%3AS%3DALNI_MaqZ9_TfPvUtJj_zCKic1_zlTIO5g&gpic=UID%3D0000172fb041d81f%3AT%3D1795184537%3ART%3D1795184537%3AS%3DALNI_MZ_OAVnuesb1zUSOPmQ31taM9DbfQ&eo_id_str=ID%3D7f0a0e146ef06c0a%3AT%3D1795184537%3ART%3D1795184537%3AS%3DAA-AfjZtNqH4eh20OgLVmJom2bdi&pvsid=6471858818218214&scor=2633185731832192&ged=ve4_td4_tt0_pd4_la4000_er231.500.232.501_vi0.0.2000.1400_vp100_ts0_eb24171",
+    "len": 156,
+    "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<VAST xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"vast.xsd\" version=\"4.0\"/>\n"
+   },
+   {
+    "url": "https://pubads.g.doubleclick.net/gampad/ads?correlator=90384812775517&description_url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&env=vp&gdfp_req=1&iu=%2F52555387%2C283733231%2Fmubasher.info_video_preroll_1&npa=0&output=xml_vast4&plcmt=2&ppid=c253c50a-807e-4b43-9713-f5bda036ea8b&sz=1x1%7C300x250%7C320x480%7C400x300%7C444x250%7C480x320%7C480x360%7C600x252%7C600x338%7C640x360%7C640x480%7C720x405%7C1024x768%7C1280x720&tfcd=0&unviewed_position_start=1&url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&vpmute=1&sdkv=h.3.800.0&osd=2&frm=0&vis=1&sdr=1&hl=en&is_amp=0&uach=WyJMaW51eCIsIiIsIng4NiIsIiIsIjE1OS4wLjgxNTQuNiIsbnVsbCwwLG51bGwsIjY0IixbWyJIZWFkbGVzc0Nocm9tZSIsIjE1OS4wLjgxNTQuNiJdLFsiTm90L0EpQnJhbmQiLCI4LjAuMC4wIl0sWyJDaHJvbWl1bSIsIjE1OS4wLjgxNTQuNiJdXSwwXQ..&u_so=l&ctv=0&mpt=Vidverto%2FPlayer&mpv=1.7.0&us_privacy=1---&gdpr=0&gpp_sid=-1&sdki=100000445&ptt=20&vo=0&sjk=zYWijuFHQNKL8W%2B%2B1pgU6Q%3D%3D&adk=4287131193&sdk_apis=2%2C7%2C8&omid_p=Google1%2Fh.3.800.0&media_url=https%3A%2F%2Fcdn.vidverto.io%2Fsecured2%2F-tEhvMyhavdcD2_X3F_rcg%3A1795188138%2F1361%2Fvideo%2F1832%2F480_650.mp4&sid=4C8B0B8F-673C-48B9-96FB-AC5E0B5B145C&a3p=EhQKBW9wZW54GPrc2MqfNEgAUgIIbxIdCg5lc3AuY3JpdGVvLmNvbRiH3NjKnzRIAFICCGQSFwoIcnRiaG91c2UY2t7Yyp80SABSAghq&eid=83323871%2C95331589%2C95332046%2C95403043%2C95408330%2C95411620&top=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&loc=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&dt=1795184540102&cookie=ID%3D2c3e856b939a323a%3AT%3D1795184537%3ART%3D1795184537%3AS%3DALNI_MaqZ9_TfPvUtJj_zCKic1_zlTIO5g&gpic=UID%3D0000172fb041d81f%3AT%3D1795184537%3ART%3D1795184537%3AS%3DALNI_MZ_OAVnuesb1zUSOPmQ31taM9DbfQ&eo_id_str=ID%3D7f0a0e146ef06c0a%3AT%3D1795184537%3ART%3D1795184537%3AS%3DAA-AfjZtNqH4eh20OgLVmJom2bdi&pvsid=6471858818218214&scor=2633185731832192&ged=ve4_td4_tt0_pd4_la4000_er231.500.232.501_vi0.0.2000.1400_vp100_ts0_eb24171",
+    "len": 156,
+    "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<VAST xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"vast.xsd\" version=\"4.0\"/>\n"
+   },
+   {
+    "url": "https://pubads.g.doubleclick.net/gampad/live/ads?correlator=90384812775517&cust_params=target%3D4&description_url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&env=vp&gdfp_req=1&iu=%2F22836954027%2C283733231%2Fbd_video%2Fbd_mubasher.info_WW_video&npa=0&output=xml_vast4&plcmt=2&ppid=c253c50a-807e-4b43-9713-f5bda036ea8b&sz=1x1%7C300x250%7C320x480%7C400x300%7C444x250%7C480x320%7C480x360%7C600x252%7C600x338%7C640x360%7C640x480%7C720x405%7C1024x768%7C1280x720&tfcd=0&unviewed_position_start=1&url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&vpmute=1&sdkv=h.3.800.0&osd=2&frm=0&vis=1&sdr=1&hl=en&is_amp=0&uach=WyJMaW51eCIsIiIsIng4NiIsIiIsIjE1OS4wLjgxNTQuNiIsbnVsbCwwLG51bGwsIjY0IixbWyJIZWFkbGVzc0Nocm9tZSIsIjE1OS4wLjgxNTQuNiJdLFsiTm90L0EpQnJhbmQiLCI4LjAuMC4wIl0sWyJDaHJvbWl1bSIsIjE1OS4wLjgxNTQuNiJdXSwwXQ..&u_so=l&ctv=0&mpt=Vidverto%2FPlayer&mpv=1.7.0&us_privacy=1---&gdpr=0&gpp_sid=-1&sdki=100000445&ptt=20&vo=0&sjk=zYWijuFHQNKL8W%2B%2B1pgU6Q%3D%3D&adk=4287131193&sdk_apis=2%2C7%2C8&omid_p=Google1%2Fh.3.800.0&media_url=https%3A%2F%2Fcdn.vidverto.io%2Fsecured2%2F-tEhvMyhavdcD2_X3F_rcg%3A1795188138%2F1361%2Fvideo%2F1832%2F480_650.mp4&sid=4C8B0B8F-673C-48B9-96FB-AC5E0B5B145C&a3p=EhQKBW9wZW54GPrc2MqfNEgAUgIIbxIdCg5lc3AuY3JpdGVvLmNvbRiH3NjKnzRIAFICCGQSFwoIcnRiaG91c2UY2t7Yyp80SABSAghq&eid=83323871%2C95331589%2C95332046%2C95403043%2C95408330%2C95411620&top=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&loc=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&dt=1795184540080&cookie=ID%3D2c3e856b939a323a%3AT%3D1795184537%3ART%3D1795184537%3AS%3DALNI_MaqZ9_TfPvUtJj_zCKic1_zlTIO5g&gpic=UID%3D0000172fb041d81f%3AT%3D1795184537%3ART%3D1795184537%3AS%3DALNI_MZ_OAVnuesb1zUSOPmQ31taM9DbfQ&eo_id_str=ID%3D7f0a0e146ef06c0a%3AT%3D1795184537%3ART%3D1795184537%3AS%3DAA-AfjZtNqH4eh20OgLVmJom2bdi&pvsid=6471858818218214&scor=2633185731832192&ged=ve4_td4_tt0_pd4_la4000_er231.500.232.501_vi0.0.2000.1400_vp100_ts0_eb24171",
+    "len": 156,
+    "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<VAST xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"vast.xsd\" version=\"4.0\"/>\n"
+   },
+   {
+    "url": "https://s.seedtag.com/c/v2/tag/bid",
+    "len": 0,
+    "head": ""
+   },
+   {
+    "url": "https://ad.vidverto.io/vidverto/test/pixel.gif",
+    "len": 42,
+    "head": "GIF89a\u0001\u0000\u0001\u0000\ufffd\u0000\u0000\u0000\u0000\u0000\ufffd\ufffd\ufffd!\ufffd\u0004\u0001\u0000\u0000\u0000\u0000,\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000\u0000\u0002\u0001D\u0000;"
+   },
+   {
+    "url": "https://ad.vidverto.io/vidverto/test/pixel.gif",
+    "len": 42,
+    "head": "GIF89a\u0001\u0000\u0001\u0000\ufffd\u0000\u0000\u0000\u0000\u0000\ufffd\ufffd\ufffd!\ufffd\u0004\u0001\u0000\u0000\u0000\u0000,\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000\u0000\u0002\u0001D\u0000;"
+   },
+   {
+    "url": "https://ad.vidverto.io/vidverto/test/pixel.gif",
+    "len": 42,
+    "head": "GIF89a\u0001\u0000\u0001\u0000\ufffd\u0000\u0000\u0000\u0000\u0000\ufffd\ufffd\ufffd!\ufffd\u0004\u0001\u0000\u0000\u0000\u0000,\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000\u0000\u0002\u0001D\u0000;"
+   }
+  ],
+  "links": [
+   "//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js",
+   "/countries/sa/ipos/capital-increase",
+   "/mubasherFileServer/File.MubasherCharts/File.Delay_Stock_Intraday_Charts_Dir/220ec8ce6abb3e952a85b8551ba726a1227.csv",
+   "https://app.sureview.tv/api/get-ads/160",
+   "https://fonts.googleapis.com/css?family=Nunito",
+   "https://fonts.googleapis.com/css?family=Roboto:400,700,300,100",
+   "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9231611818968439&amp;output=html&amp;adk=92132729&amp;adf=2980977366&amp;abgtt=6&amp;lmt=1795184536&amp;plaf=1%3A2%2C2%3A2%2C7%3A2&amp;plat=1%3A128%2C2%3A128%2C3%3A128%2C4%3A128%2C8%3A128%2C9%3A32%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB&amp;pra=5&amp;aiof=14&amp;asro=0&amp;aimartd=4&amp;aieuf=1&amp;aicrs=1&amp;uach=WyJMaW51eCIsIiIsIng4NiIsIiIsIjE1OS4wLjgxNTQuNiIsbnVsbCwwLG51bGwsIjY0IixbWyJIZWFkbGVzc0Nocm9tZSIsIjE1OS4wLjgxNTQuNiJdLFsiTm90L0EpQnJhbmQiLCI4LjAuMC4wIl0sWyJDaHJvbWl1bSIsIjE1OS4wLjgxNTQuNiJdXSwwXQ..&amp;dt=1795184536722&amp;bpp=4&amp;bdt=400&amp;idt=138&amp;shv=r20261118&amp;mjsv=m202611110101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie_enabled=1&amp;eoidce=1&amp;nras=1&amp;correlator=166078593411&amp;frm=20&amp;pv=2&amp;u_tz=0&amp;u_his=2&amp;u_h=2000&amp;u_w=1400&amp;u_ah=2000&amp;u_aw=1400&amp;u_cd=24&amp;u_sd=1&amp;dmc=16&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1400&amp;bih=2000&amp;scr_x=0&amp;scr_y=0&amp;eid=42532761%2C95404663%2C95409937%2C122881368&amp;oid=2&amp;pvsid=6471858818218214&amp;tmod=281950168&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1400%2C0%2C1400%2C2000%2C1400%2C2000&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;bz=1&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=156",
+   "https://imasdk.googleapis.com/js/core/bridge3.800.0_en.html#compression_dictionary_version=%22m202611100101%22&amp;deid=%22%22&amp;eventfe_experiment_ids=%5B%5D&amp;fid=%22goog_2068069518%22&amp;genotype_experiment_data=%7B%22experimentStateProto%22%3A%22%5B%5B%5B45713128%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45848619%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45869267%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B957164676%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45816264%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45761044%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45803173%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45722344%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45879521%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45801847%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45784857%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45668885%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45843251%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45685340%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45734716%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45735891%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45663239%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45676441%2Cnull%2Cnull%2C%5B%5D%5D%2C%5Bnull%2C45645574%2Cnull%2C%5B%5D%5D%2C%5B45688859%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45870731%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45870732%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45685601%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5Bnull%2C45685602%2Cnull%2C%5Bnull%2C100%5D%5D%2C%5B45830425%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45820997%2Cnull%2Cnull%2C%5B%5D%5D%2C%5Bnull%2C45812678%2Cnull%2C%5B%5D%5D%2C%5B1009155880%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45756824%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45794243%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45747172%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B775241416%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B781107959%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B781107958%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B792614055%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B781107957%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45729602%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45753603%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45753604%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45877073%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45868504%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45867420%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45851551%2Cnull%2Cnull%2C%5B%5D%5D%2C%5Bnull%2Cnull%2C45886931%2C%5Bnull%2Cnull%2C%5C%22EgkIn8fuFRICCAA%3D%5C%22%5D%5D%2C%5Bnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2C45823412%5D%5D%2C%5B%5B16%2C%5B%5B100%2C%5B%5B83323870%5D%2C%5B83323871%2C%5B%5B45830425%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B83324496%5D%2C%5B83324497%2C%5B%5B1009155880%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B1000%2C%5B%5B95332046%5D%5D%5D%2C%5Bnull%2C%5B%5B95332047%5D%5D%5D%2C%5B10%2C%5B%5B95338769%2C%5B%5Bnull%2C45645574%2Cnull%2C%5Bnull%2C1%5D%5D%5D%5D%2C%5B95338770%2C%5B%5Bnull%2C45645574%2Cnull%2C%5Bnull%2C2%5D%5D%5D%5D%5D%5D%2C%5B50%2C%5B%5B95351425%5D%2C%5B95351426%2C%5B%5B45676441%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B1%2C%5B%5B95373378%2C%5B%5B792614055%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%2C%5B95373379%2C%5B%5B45747172%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B781107959%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B792614055%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B781107957%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95378629%5D%2C%5B95378630%2C%5B%5B45729602%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%2C%5B95404887%2C%5B%5B45729602%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%2C%5B95411620%2C%5B%5B45729602%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45877073%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95389581%5D%2C%5B95389582%2C%5B%5B635466687%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B50%2C%5B%5B95394237%5D%2C%5B95394238%2C%5B%5B45801847%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B100%2C%5B%5B95394594%5D%2C%5B95394595%2C%5B%5B45803173%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95398837%5D%2C%5B95398838%2C%5B%5Bnull%2C960449109%2Cnull%2C%5Bnull%2C1%5D%5D%5D%5D%5D%5D%2C%5B500%2C%5B%5B95401453%5D%2C%5B95403043%2C%5B%5B45668885%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45843251%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B50%2C%5B%5B95405338%5D%2C%5B95405339%2C%5B%5B45816264%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95407374%5D%2C%5B95407375%2C%5B%5B45867420%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B100%2C%5B%5B95407513%5D%2C%5B95407514%2C%5B%5B45868504%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95407589%5D%2C%5B95407590%2C%5B%5B45869267%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B500%2C%5B%5B95408328%5D%2C%5B95408330%2C%5B%5B45870731%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45870732%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%5D%5D%2C%5B34%2C%5B%5B10%2C%5B%5B95404718%2C%5B%5Bnull%2Cnull%2Cnull%2C%5Bnull%2Cnull%2Cnull%2C%5B%5C%22CgUIsIW%2FLQ%3D%3D%5C%22%5D%5D%2Cnull%2Cnull%2Cnull%2C45823412%5D%5D%5D%2C%5B95404719%2C%5B%5Bnull%2Cnull%2Cnull%2C%5Bnull%2Cnull%2Cnull%2C%5B%5C%22CgUIsYW%2FLRIJCJ%2FH7hUSAggB%5C%22%5D%5D%2Cnull%2Cnull%2Cnull%2C45823412%5D%5D%5D%5D%2C%5B4%2Cnull%2C114%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5C%2245851551%5C%22%5D%5D%5D%5D%5D%2C%5B35%2C%5B%5Bnull%2C%5B%5B95404720%5D%2C%5B95404721%2C%5B%5B45851551%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%2C%5B4%2Cnull%2C114%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5C%2245851551%5C%22%5D%5D%5D%5D%5D%5D%2Cnull%2Cnull%2C%5Bnull%2C1000%2C1%2C1000%5D%5D%22%7D&amp;imalib_experiments=%5B95331589%2C83323871%2C95332046%2C95411620%2C95403043%2C95408330%5D&amp;is_eap_loader=false&amp;managed_js_experiment_id=0&amp;page_correlator=789096938499691&amp;pvsid=6471858818218214&amp;top_accessible_page_url=%22https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB%22",
+   "https://imasdk.googleapis.com/js/core/bridge3.800.0_en.html#compression_dictionary_version=%22m202611100101%22&amp;deid=%22%22&amp;eventfe_experiment_ids=%5B%5D&amp;fid=%22goog_2068069520%22&amp;genotype_experiment_data=%7B%22experimentStateProto%22%3A%22%5B%5B%5B45713128%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45848619%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45869267%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B957164676%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45816264%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45761044%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45803173%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45722344%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45879521%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45801847%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45784857%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45668885%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45843251%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45685340%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45734716%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45735891%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45663239%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45676441%2Cnull%2Cnull%2C%5B%5D%5D%2C%5Bnull%2C45645574%2Cnull%2C%5B%5D%5D%2C%5B45688859%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45870731%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45870732%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45685601%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5Bnull%2C45685602%2Cnull%2C%5Bnull%2C100%5D%5D%2C%5B45830425%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45820997%2Cnull%2Cnull%2C%5B%5D%5D%2C%5Bnull%2C45812678%2Cnull%2C%5B%5D%5D%2C%5B1009155880%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45756824%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45794243%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45747172%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B775241416%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B781107959%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B781107958%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B792614055%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B781107957%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45729602%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45753603%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45753604%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45877073%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45868504%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45867420%2Cnull%2Cnull%2C%5B%5D%5D%2C%5B45851551%2Cnull%2Cnull%2C%5B%5D%5D%2C%5Bnull%2Cnull%2C45886931%2C%5Bnull%2Cnull%2C%5C%22EgkIn8fuFRICCAA%3D%5C%22%5D%5D%2C%5Bnull%2Cnull%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2C45823412%5D%5D%2C%5B%5B16%2C%5B%5B100%2C%5B%5B83323870%5D%2C%5B83323871%2C%5B%5B45830425%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B83324496%5D%2C%5B83324497%2C%5B%5B1009155880%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B1000%2C%5B%5B95332046%5D%5D%5D%2C%5Bnull%2C%5B%5B95332047%5D%5D%5D%2C%5B10%2C%5B%5B95338769%2C%5B%5Bnull%2C45645574%2Cnull%2C%5Bnull%2C1%5D%5D%5D%5D%2C%5B95338770%2C%5B%5Bnull%2C45645574%2Cnull%2C%5Bnull%2C2%5D%5D%5D%5D%5D%5D%2C%5B50%2C%5B%5B95351425%5D%2C%5B95351426%2C%5B%5B45676441%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B1%2C%5B%5B95373378%2C%5B%5B792614055%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%2C%5B95373379%2C%5B%5B45747172%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B781107959%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B792614055%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B781107957%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95378629%5D%2C%5B95378630%2C%5B%5B45729602%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%2C%5B95404887%2C%5B%5B45729602%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%2C%5B95411620%2C%5B%5B45729602%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45877073%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95389581%5D%2C%5B95389582%2C%5B%5B635466687%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B50%2C%5B%5B95394237%5D%2C%5B95394238%2C%5B%5B45801847%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B100%2C%5B%5B95394594%5D%2C%5B95394595%2C%5B%5B45803173%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95398837%5D%2C%5B95398838%2C%5B%5Bnull%2C960449109%2Cnull%2C%5Bnull%2C1%5D%5D%5D%5D%5D%5D%2C%5B500%2C%5B%5B95401453%5D%2C%5B95403043%2C%5B%5B45668885%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45843251%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B50%2C%5B%5B95405338%5D%2C%5B95405339%2C%5B%5B45816264%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95407374%5D%2C%5B95407375%2C%5B%5B45867420%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B100%2C%5B%5B95407513%5D%2C%5B95407514%2C%5B%5B45868504%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B10%2C%5B%5B95407589%5D%2C%5B95407590%2C%5B%5B45869267%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%2C%5B500%2C%5B%5B95408328%5D%2C%5B95408330%2C%5B%5B45870731%2Cnull%2Cnull%2C%5B1%5D%5D%2C%5B45870732%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%5D%5D%5D%2C%5B34%2C%5B%5B10%2C%5B%5B95404718%2C%5B%5Bnull%2Cnull%2Cnull%2C%5Bnull%2Cnull%2Cnull%2C%5B%5C%22CgUIsIW%2FLQ%3D%3D%5C%22%5D%5D%2Cnull%2Cnull%2Cnull%2C45823412%5D%5D%5D%2C%5B95404719%2C%5B%5Bnull%2Cnull%2Cnull%2C%5Bnull%2Cnull%2Cnull%2C%5B%5C%22CgUIsYW%2FLRIJCJ%2FH7hUSAggB%5C%22%5D%5D%2Cnull%2Cnull%2Cnull%2C45823412%5D%5D%5D%5D%2C%5B4%2Cnull%2C114%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5C%2245851551%5C%22%5D%5D%5D%5D%5D%2C%5B35%2C%5B%5Bnull%2C%5B%5B95404720%5D%2C%5B95404721%2C%5B%5B45851551%2Cnull%2Cnull%2C%5B1%5D%5D%5D%5D%5D%2C%5B4%2Cnull%2C114%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5C%2245851551%5C%22%5D%5D%5D%5D%5D%5D%2Cnull%2Cnull%2C%5Bnull%2C1000%2C1%2C1000%5D%5D%22%7D&amp;imalib_experiments=%5B95331589%2C83323871%2C95332046%2C95411620%2C95403043%2C95408330%5D&amp;is_eap_loader=false&amp;managed_js_experiment_id=0&amp;page_correlator=789096938499691&amp;pvsid=6471858818218214&amp;top_accessible_page_url=%22https%3A%2F%2Fenglish-old.mubasher.info%2Fmarkets%2FBB%2Fstocks%2FNBB%22",
+   "https://imasdk.googleapis.com/js/sdkloader/ima3.js",
+   "https://static.jubnaadserve.com/api/widget.js",
+   "https://static.mubasher.info/File.MubasherCharts/File.Historical_Stock_Charts_Dir/220ec8ce6abb3e952a85b8551ba726a1227.csv",
+   "https://www.google.com/recaptcha/api2/aframe"
+  ],
+  "dates": [
+   "2026-06-06",
+   "2026-06-06"
   ]
  }
 }
