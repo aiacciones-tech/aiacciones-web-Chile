@@ -45,3 +45,4 @@ Plan de 10 temas en `plan-espana.json` (marca cada capítulo publicado). Modelo:
 4. `SCRATCH=<scratch con clon de youtube-cola> bash encolar.sh <carpeta>`; copia mp4, Short, miniatura, metadatos, guion y posts a
    `/mnt/project-files/espana/educativo/<base>/`.
 5. Actualiza `plan-espana.json` (estado `publicada`, fecha, IDs) y abre un PR de la rama a main y fusiónalo si los checks pasan.
+6. Si el capítulo publicado es el 10 (el último del plan), avisa a Daniel en el hilo de la serie con un mensaje: «Publicado el último capítulo de la serie» con los enlaces (lo pidió el 20-nov-2026), y no programes más capítulos sin que él lo pida.
