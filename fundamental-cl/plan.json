@@ -1,0 +1,17 @@
+{
+ "serie": "Análisis fundamental en simple",
+ "dia": "domingo, publicación ~10:00 de Santiago (el diario IPSA va de lunes a viernes a las 18:41 y la rutina de resultados corre cada noche a las 23:00)",
+ "inicio": "primer domingo tras el fin de la temporada de resultados 3T26 (plazo CMF de los estados a septiembre: fines de noviembre de 2026)",
+ "capitulos": [
+  {"n": 1, "fecha": "2026-12-06", "tema": "Ingresos y utilidad", "tema_largo": "Ingresos y utilidad: cómo leer un estado de resultados", "empresa": "SQM", "ticker": "SQM-B", "simbolo": "BCS:SQM_B", "simbolos_extra": ["NYSE:SQM"], "base": "fundamental-01-sqm"},
+  {"n": 2, "fecha": "2026-12-13", "tema": "Márgenes", "tema_largo": "Márgenes: bruto, EBITDA y neto (cuánto queda de cada peso vendido)", "empresa": "CCU", "ticker": "CCU", "simbolo": "BCS:CCU", "nota": "empresa de consumo con costo de ventas claro; contraste con el margen de ciclo alto de SQM"},
+  {"n": 3, "fecha": "2026-12-20", "tema": "La razón precio/utilidad (P/U o PER)", "tema_largo": "Precio/utilidad: cuántos años de utilidad paga el precio", "empresa": "Banco de Chile", "ticker": "CHILE", "simbolo": "BCS:CHILE", "nota": "banco: utilidad estable; explicar utilidad por acción y P/U de 12 meses"},
+  {"n": 4, "fecha": "2026-12-27", "tema": "Deuda", "tema_largo": "Deuda: deuda neta, deuda/EBITDA y cobertura de intereses", "empresa": "Enel Chile", "ticker": "ENELCHILE", "simbolo": "BCS:ENELCHILE"},
+  {"n": 5, "fecha": "2027-01-03", "tema": "Flujo de caja", "tema_largo": "Flujo de caja: operacional, inversión (capex) y flujo de caja libre", "empresa": "Empresas CMPC", "ticker": "CMPC", "simbolo": "BCS:CMPC", "nota": "capex alto: utilidad frente a flujo libre"},
+  {"n": 6, "fecha": "2027-01-10", "tema": "Dividendos", "tema_largo": "Dividendos: rentabilidad por dividendo, payout y el mínimo legal del 30%", "empresa": "Banco Santander Chile", "ticker": "BSANTANDER", "simbolo": "BCS:BSANTANDER"},
+  {"n": 7, "fecha": "2027-01-17", "tema": "ROE y ROA", "tema_largo": "Rentabilidad: ROE y ROA (cuánto gana la empresa con su patrimonio y sus activos)", "empresa": "Bci", "ticker": "BCI", "simbolo": "BCS:BCI"},
+  {"n": 8, "fecha": "2027-01-24", "tema": "El balance", "tema_largo": "El balance: activos, pasivos, patrimonio y liquidez", "empresa": "Falabella", "ticker": "FALABELLA", "simbolo": "BCS:FALABELLA"},
+  {"n": 9, "fecha": "2027-01-31", "tema": "Valoración", "tema_largo": "Valoración: precio/valor libro y EV/EBITDA", "empresa": "Empresas Copec", "ticker": "COPEC", "simbolo": "BCS:COPEC"},
+  {"n": 10, "fecha": "2027-02-07", "tema": "Todo junto", "tema_largo": "Todo junto: comparar dos empresas del mismo sector con las herramientas de la serie", "empresa": "Falabella y Cencosud", "ticker": "FALABELLA / CENCOSUD", "simbolo": "BCS:FALABELLA", "simbolos_extra": ["BCS:CENCOSUD"], "ultimo": true}
+ ]
+}

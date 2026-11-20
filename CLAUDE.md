@@ -19,3 +19,5 @@
   `eau/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Qatar AI Stocks, serie semanal de análisis fundamental (`qatar/fundamental/`):** un capítulo cada sábado (~18:00 Doha). Antes de cada capítulo lee
   `qatar/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **AIAcciones Chile, serie semanal «Análisis fundamental en simple» (`fundamental-cl/`):** un capítulo cada domingo (~10:00 Santiago) desde el 6-dic-2026,
+  en español con la voz Lorenzo. Antes de cada capítulo lee `fundamental-cl/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.

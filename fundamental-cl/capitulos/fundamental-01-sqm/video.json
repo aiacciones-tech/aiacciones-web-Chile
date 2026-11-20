@@ -2,11 +2,395 @@
  "base": "fundamental-01-sqm",
  "capitulo_n": 1,
  "simbolo": "BCS:SQM_B",
- "simbolos_extra": ["NYSE:SQM"],
- "documentos": [
-  {"id": "release-3t26", "url": "https://ir.sqm.com/system/files-encrypted/nasdaq_kms/assets/2026/11/17/18-57-21/6-K_3Q2026%20Earnings%20release_eng_VF.pdf"},
-  {"id": "eeff-3t26", "url": "https://ir.sqm.com/system/files-encrypted/nasdaq_kms/assets/2026/11/17/19-22-42/EEFF%20SQM%20S.A.%20Q3%202026.pdf.pdf"},
-  {"id": "release-4t25", "url": "https://ir.sqm.com/static-files/de05cbb3-8026-4dca-98e9-662c1c567efb"}
+ "simbolos_extra": [
+  "NYSE:SQM"
  ],
- "escenas": []
+ "documentos": [
+  {
+   "id": "release-3t26",
+   "url": "https://ir.sqm.com/system/files-encrypted/nasdaq_kms/assets/2026/11/17/18-57-21/6-K_3Q2026%20Earnings%20release_eng_VF.pdf"
+  },
+  {
+   "id": "eeff-3t26",
+   "url": "https://ir.sqm.com/system/files-encrypted/nasdaq_kms/assets/2026/11/17/19-22-42/EEFF%20SQM%20S.A.%20Q3%202026.pdf.pdf"
+  },
+  {
+   "id": "release-4t25",
+   "url": "https://ir.sqm.com/static-files/de05cbb3-8026-4dca-98e9-662c1c567efb"
+  }
+ ],
+ "escenas": [
+  {
+   "id": "intro",
+   "tipo": "portada",
+   "capitulo": "Introducción",
+   "sub": "Cómo leer un estado de resultados, de la primera a la última línea",
+   "voz": "Bienvenido al primer capítulo de Análisis fundamental en simple, la nueva serie de AIAcciones Chile. Cada domingo explicamos un concepto financiero con las cifras reales de una empresa del IPSA. Hoy partimos por lo más básico: los ingresos y la utilidad, es decir, cómo leer un estado de resultados. Nuestro ejemplo es SQM, con su reporte del tercer trimestre de dos mil veintiséis. SQM es solo un ejemplo para explicar el concepto: esto es contenido educativo y no una recomendación de inversión."
+  },
+  {
+   "id": "que_es",
+   "tipo": "puntos",
+   "capitulo": "Qué es el estado de resultados",
+   "kicker": "El estado de resultados",
+   "titulo": "De la primera línea a la última",
+   "puntos": [
+    [
+     "Ingresos",
+     "La primera línea: lo que la empresa factura por sus ventas en el período."
+    ],
+    [
+     "Costo de ventas",
+     "Lo que cuesta producir lo vendido. Ingresos menos costo = utilidad bruta."
+    ],
+    [
+     "Gastos",
+     "Administración, intereses de la deuda y otros ingresos o gastos."
+    ],
+    [
+     "Impuestos",
+     "El impuesto a las ganancias se resta antes de llegar al final."
+    ],
+    [
+     "Utilidad",
+     "La última línea: lo que queda para los accionistas de la empresa."
+    ]
+   ],
+   "fuente": "Esquema general de un estado de resultados (normas IFRS).",
+   "voz": "El estado de resultados cuenta qué pasó con el negocio durante un período, por ejemplo un trimestre. Se lee de arriba hacia abajo. Arriba están los ingresos: todo lo que la empresa facturó por sus ventas. Luego se resta el costo de ventas, lo que costó producir lo vendido, y queda la utilidad bruta. Después se restan los gastos de administración, el costo de la deuda y otros ingresos o gastos, y queda la utilidad antes de impuestos. Se restan los impuestos y, al final, aparece la utilidad. Por eso a los ingresos se les llama la primera línea y a la utilidad, la última línea. Una aclaración de nombres: en Chile se dice utilidad; en otros países, beneficio neto o ganancia. Es lo mismo."
+  },
+  {
+   "id": "ingresos",
+   "tipo": "kpis",
+   "capitulo": "Los ingresos",
+   "kicker": "Primera línea",
+   "titulo": "Ingresos de SQM en el tercer trimestre de 2026",
+   "items": [
+    {
+     "big": "2.112",
+     "label": "Ingresos 3T 2026",
+     "sub": "US$ millones",
+     "color": "acc"
+    },
+    {
+     "big": "1.173",
+     "label": "Ingresos 3T 2025",
+     "sub": "US$ millones, un año antes",
+     "color": "muted"
+    },
+    {
+     "big": "+80%",
+     "label": "Variación a/a",
+     "sub": "calculado",
+     "color": "acc"
+    },
+    {
+     "big": "72%",
+     "label": "Peso del litio",
+     "sub": "1.517 de 2.112 (calculado)",
+     "color": "acc2"
+    }
+   ],
+   "nota": "Ingresos = volumen × precio. Litio 3T 2026: 78,9 mil t (+8% a/a) y ~US$ 19,6/kg en Novandino (+123% a/a).",
+   "voz": "Partamos por la primera línea. Entre julio y septiembre de dos mil veintiséis, SQM tuvo ingresos por dos mil ciento doce millones de dólares. Ojo con la moneda: SQM reporta en dólares, no en pesos. Para saber si eso es mucho o poco, se compara con el mismo trimestre del año anterior, que fueron mil ciento setenta y tres millones. La variación, calculada por nosotros, es de más ochenta por ciento. ¿De dónde viene? Los ingresos son volumen por precio. En litio, que fue el setenta y dos por ciento de los ingresos, la empresa vendió setenta y ocho coma nueve mil toneladas, ocho por ciento más que un año antes, y el precio promedio de Novandino, su negocio de litio en Chile, fue de unos diecinueve coma seis dólares por kilo, más del doble que un año antes. Cuando suben a la vez el volumen y el precio, los ingresos crecen muy rápido. Y cuando el precio cae, pasa lo contrario.",
+   "fuente": "Fuente: SQM, comunicado de resultados del 3T 2026 (6-K, 17-nov-2026). Precio realizado: ingresos ÷ volumen, aproximado (calculado). Variaciones: calculado."
+  },
+  {
+   "id": "cuenta",
+   "tipo": "cuenta",
+   "capitulo": "Línea por línea",
+   "kicker": "El estado de resultados de SQM",
+   "titulo": "Tercer trimestre: 2026 frente a 2025",
+   "columnas": [
+    "3T 2026",
+    "3T 2025"
+   ],
+   "filas": [
+    {
+     "t": "Ingresos",
+     "v": [
+      2112.0,
+      1173.0
+     ],
+     "tipo": "ingreso"
+    },
+    {
+     "t": "Costo de ventas",
+     "v": [
+      1148.2,
+      828.3
+     ],
+     "tipo": "resta"
+    },
+    {
+     "t": "Utilidad bruta",
+     "v": [
+      963.8,
+      344.7
+     ],
+     "tipo": "sub"
+    },
+    {
+     "t": "Gastos de administración",
+     "v": [
+      51.5,
+      49.3
+     ],
+     "tipo": "resta"
+    },
+    {
+     "t": "Financiero neto, otros y dif. de cambio",
+     "v": [
+      27.3,
+      -29.8
+     ],
+     "tipo": "suma",
+     "sin_var": true
+    },
+    {
+     "t": "Utilidad antes de impuestos",
+     "v": [
+      939.6,
+      265.6
+     ],
+     "tipo": "sub"
+    },
+    {
+     "t": "Impuesto a las ganancias",
+     "v": [
+      343.1,
+      85.6
+     ],
+     "tipo": "resta"
+    },
+    {
+     "t": "Interés minoritario",
+     "v": [
+      52.2,
+      1.6
+     ],
+     "tipo": "resta",
+     "sin_var": true
+    },
+    {
+     "t": "Utilidad de los controladores",
+     "v": [
+      544.2,
+      178.4
+     ],
+     "tipo": "final"
+    }
+   ],
+   "nota": "La utilidad creció más rápido que los ingresos: +205% contra +80% (calculado).",
+   "fuente": "Fuente: SQM, comunicado de resultados del 3T 2026 (6-K, 17-nov-2026) y estados financieros al 30-sep-2026. Variaciones: calculado. Costo de ventas = ingresos − utilidad bruta (calculado); resultado financiero, otros y dif. de cambio por diferencia (calculado).",
+   "voz": "Ahora veamos el estado completo, línea por línea. A los dos mil ciento doce millones de ingresos se les resta el costo de ventas, mil ciento cuarenta y ocho millones, y queda una utilidad bruta de novecientos sesenta y cuatro millones, casi el triple que un año antes. Los gastos de administración casi no cambiaron: cincuenta y dos millones. El resultado financiero, otros ingresos y la diferencia de cambio sumaron en neto veintisiete millones. Así se llega a una utilidad antes de impuestos de novecientos cuarenta millones. Luego vienen los impuestos, trescientos cuarenta y tres millones, y el interés minoritario, cincuenta y dos millones. La última línea, la utilidad de los controladores, fue de quinientos cuarenta y cuatro millones de dólares. Fíjate en algo clave: los ingresos subieron ochenta por ciento, pero la utilidad subió más de doscientos por ciento. ¿Por qué? Porque el costo de ventas creció menos que los ingresos: treinta y nueve por ciento contra ochenta. Cuando el precio sube, gran parte de ese aumento llega directo a la utilidad."
+  },
+  {
+   "id": "cascada",
+   "tipo": "cascada",
+   "capitulo": "De ingresos a utilidad",
+   "kicker": "Cómo se llega a la última línea",
+   "titulo": "De cada 100 dólares de ingresos, quedaron 26 de utilidad",
+   "pasos": [
+    {
+     "t": "Ingresos",
+     "v": 2112.0,
+     "tipo": "total"
+    },
+    {
+     "t": "Costo de ventas",
+     "v": 1148.2,
+     "tipo": "resta"
+    },
+    {
+     "t": "Gastos de administración",
+     "v": 51.5,
+     "tipo": "resta"
+    },
+    {
+     "t": "Financiero, otros y dif. de cambio",
+     "v": 27.3,
+     "tipo": "suma"
+    },
+    {
+     "t": "Impuestos",
+     "v": 343.1,
+     "tipo": "resta"
+    },
+    {
+     "t": "Interés minoritario",
+     "v": 52.2,
+     "tipo": "resta"
+    },
+    {
+     "t": "Utilidad de los controladores",
+     "v": 544.2,
+     "tipo": "total"
+    }
+   ],
+   "nota": "544 / 2.112 = 25,8% (calculado)",
+   "fuente": "Fuente: SQM, comunicado de resultados del 3T 2026 (6-K, 17-nov-2026) y estados financieros al 30-sep-2026. Variaciones: calculado. Porcentajes: calculado.",
+   "voz": "Este gráfico muestra el mismo camino como una cascada. La primera barra son los ingresos. Cada barra naranja es algo que se resta, y la azul, algo que se suma. La barra más grande que se descuenta es el costo de ventas, más de la mitad de los ingresos. La segunda son los impuestos. Al final, de cada cien dólares que SQM facturó en el trimestre, le quedaron unos veintiséis dólares de utilidad para sus accionistas. Ese porcentaje se llama margen neto, y es justamente el tema del próximo capítulo."
+  },
+  {
+   "id": "controladores",
+   "tipo": "formula",
+   "capitulo": "Utilidad por acción",
+   "kicker": "¿Utilidad de quién?",
+   "titulo": "Controladores, minoritarios y utilidad por acción",
+   "formula": "Utilidad por acción = utilidad de los controladores ÷ número de acciones",
+   "ejemplo": [
+    [
+     "Utilidad de los controladores, 3T 2026",
+     "US$ 544,2 millones"
+    ],
+    [
+     "Acciones de SQM (series A y B)",
+     "285,6 millones"
+    ],
+    [
+     "Utilidad por acción",
+     "US$ 1,91"
+    ]
+   ],
+   "nota": "Interés minoritario: la parte de la utilidad de una filial que es de otros socios. En SQM, desde 2026, sobre todo la de Codelco en Novandino (comunicado de SQM).",
+   "fuente": "Fuente: SQM, comunicado de resultados del 3T 2026 (6-K, 17-nov-2026) y estados financieros al 30-sep-2026. Variaciones: calculado. Acciones: StockAnalysis. División: calculado.",
+   "voz": "Una línea que suele confundir es el interés minoritario. Cuando una empresa consolida una filial que no es cien por ciento suya, suma todos sus ingresos, pero una parte de la utilidad pertenece a otros socios. En SQM, desde dos mil veintiséis, esa parte corresponde principalmente a Codelco, su socio en Novandino. Por eso hay que mirar la utilidad atribuible a los controladores, la de los accionistas de SQM. Si la dividimos por el número de acciones, unos doscientos ochenta y cinco coma seis millones, obtenemos la utilidad por acción: uno coma noventa y un dólares en el trimestre. Esa cifra es la que se compara con lo que esperaba el mercado."
+  },
+  {
+   "id": "historia",
+   "tipo": "barras",
+   "capitulo": "Varios años",
+   "kicker": "La película, no la foto",
+   "titulo": "Ingresos y utilidad anuales de SQM, 2021-2025",
+   "categorias": [
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "series": [
+    {
+     "nombre": "Ingresos",
+     "valores": [
+      2853,
+      10760,
+      7466,
+      4489,
+      4569
+     ],
+     "color": "acc"
+    },
+    {
+     "nombre": "Utilidad",
+     "valores": [
+      583,
+      3924,
+      2012,
+      -401,
+      587
+     ],
+     "color": "acc2"
+    }
+   ],
+   "nota": "En 2024 hubo ingresos por casi 4.500 millones y, aun así, pérdida.",
+   "fuente": "Fuente: TradingView (NYSE:SQM, ingresos y utilidad anuales en US$, normalizados por TradingView). Ajuste de 2024: comunicado de SQM del 1S 2024.",
+   "voz": "Un solo trimestre es una foto. Para ver la película, conviene mirar varios años. Según TradingView, los ingresos de SQM pasaron de unos dos mil ochocientos millones de dólares en dos mil veintiuno a más de diez mil setecientos millones en dos mil veintidós, cuando el precio del litio estaba en su peak, y después bajaron a unos cuatro mil quinientos millones en dos mil veinticuatro y dos mil veinticinco. Pero mira dos mil veinticuatro: con casi cuatro mil quinientos millones de ingresos, la última línea fue una pérdida de unos cuatrocientos millones. Según el comunicado de SQM, en el primer semestre de ese año registró ajustes contables por pagos del impuesto específico a la minería del litio por mil ciento siete millones de dólares. Ingresos y utilidad no siempre se mueven juntos."
+  },
+  {
+   "id": "claves_lectura",
+   "tipo": "puntos",
+   "capitulo": "Cómo leerlo bien",
+   "kicker": "Cuatro preguntas al leer un estado de resultados",
+   "titulo": "Antes de sacar conclusiones",
+   "puntos": [
+    [
+     "¿Contra qué comparo?",
+     "Con el mismo trimestre del año anterior (a/a) y con el trimestre previo (t/t)."
+    ],
+    [
+     "¿Hubo algo extraordinario?",
+     "Ajustes o cargos que no se repiten, como el de 2024."
+    ],
+    [
+     "¿Utilidad de quién?",
+     "La de los controladores, no la total, si hay minoritarios."
+    ],
+    [
+     "¿En qué moneda?",
+     "SQM reporta en dólares; muchas empresas chilenas, en pesos."
+    ]
+   ],
+   "fuente": "Fuente: SQM, comunicados de resultados del 3T 2026 (6-K, 17-nov-2026) y del 2T 2026, y del 1S 2024 (ajuste de 2024). Variaciones: calculado.",
+   "voz": "Para leer bien un estado de resultados, hazte cuatro preguntas. Primero, ¿contra qué comparo? Frente al año anterior, los ingresos de SQM subieron ochenta por ciento, pero frente al trimestre previo bajaron catorce por ciento, desde dos mil cuatrocientos sesenta y ocho millones. Las dos comparaciones cuentan algo distinto. Segundo, ¿hubo algo extraordinario, que no se repite? Como el ajuste de dos mil veinticuatro. Tercero, ¿utilidad de quién? Si hay minoritarios, mira la de los controladores. Y cuarto, ¿en qué moneda? SQM reporta en dólares, mientras muchas empresas chilenas lo hacen en pesos. Y una pista práctica: todas las empresas del IPSA publican sus estados financieros en la Comisión para el Mercado Financiero y en sus sitios de inversionistas, casi siempre con un comunicado que resume las cifras."
+  },
+  {
+   "id": "fin",
+   "tipo": "fin",
+   "capitulo": "En resumen",
+   "claves": [
+    "Ingresos = primera línea; utilidad = última línea. Entre ellas: costos, gastos e impuestos.",
+    "SQM, 3T 2026: ingresos US$ 2.112 millones (+80% a/a) y utilidad US$ 544 millones (+205% a/a).",
+    "Compara a/a y t/t, busca efectos extraordinarios y mira la utilidad de los controladores.",
+    "Más ingresos no siempre es más utilidad: en 2024 SQM tuvo pérdida."
+   ],
+   "siguiente": "Márgenes: bruto, EBITDA y neto, con CCU (13 de diciembre)",
+   "voz": "En resumen: los ingresos son la primera línea y la utilidad, la última, y entre ambas están los costos, los gastos y los impuestos. En el tercer trimestre de dos mil veintiséis, SQM facturó dos mil ciento doce millones de dólares y ganó quinientos cuarenta y cuatro millones para sus accionistas. Al leer cualquier estado de resultados, compara con el año anterior y con el trimestre previo, busca efectos extraordinarios y mira la utilidad de los controladores. El próximo domingo seguimos con los márgenes, con el ejemplo de CCU. Recuerda que este video es educativo y no una recomendación de inversión. Más análisis en aiacciones punto ce ele."
+  }
+ ],
+ "ticker": "SQM-B",
+ "nombre": "SQM",
+ "tema": "Ingresos y utilidad",
+ "publicar": "2026-12-06",
+ "fuente_general": "Fuente: SQM, comunicado de resultados del 3T 2026 (6-K, 17-nov-2026) y estados financieros al 30-sep-2026. Variaciones: calculado.",
+ "info": {
+  "titulo": "Cómo leer un estado de resultados: ingresos y utilidad con SQM (SQM-B) | Análisis fundamental 1",
+  "titulo_short": "Ingresos vs. utilidad: qué queda de cada 100 dólares en SQM #Shorts",
+  "resumen": "Capítulo 1 de «Análisis fundamental en simple»: qué son los ingresos y la utilidad y cómo se lee un estado de resultados línea por línea, con las cifras reales de SQM (SQM-B) en el tercer trimestre de 2026.",
+  "fuentes": "SQM (comunicado de resultados 3T 2026, 6-K del 17-nov-2026; estados financieros al 30-sep-2026; comunicado del 1S 2024), TradingView (serie anual) y StockAnalysis (número de acciones)",
+  "x": "📚 Análisis fundamental en simple, cap. 1: cómo leer un estado de resultados.\nSQM 3T26: ingresos US$2.112 MM (+80%) → utilidad US$544 MM. De cada US$100 facturados quedaron ~26.",
+  "linkedin": {
+   "datos": [
+    "Ingresos (primera línea): US$ 2.112 millones en el 3T 2026, +80% frente al 3T 2025.",
+    "Costo de ventas e impuestos fueron las mayores restas; la utilidad de los controladores llegó a US$ 544 millones (+205%).",
+    "De cada US$ 100 de ingresos quedaron unos US$ 26 de utilidad (margen neto 25,8%, calculado).",
+    "En 2024 SQM tuvo ingresos por casi US$ 4.500 millones y aun así pérdida, por ajustes ligados al impuesto específico a la minería del litio."
+   ],
+   "conclusion": "los ingresos dicen cuánto vende una empresa; la utilidad, cuánto queda para sus accionistas. Hay que leer las dos, y comparar con el año anterior y con el trimestre previo."
+  },
+  "hashtags": "#AnálisisFundamental #SQM #IPSA #AccionesChilenas #EducaciónFinanciera #BolsaDeSantiago",
+  "hashtags_short": "#Shorts #AnálisisFundamental #SQM #IPSA #EducaciónFinanciera",
+  "tags": [
+   "estado de resultados",
+   "ingresos",
+   "utilidad",
+   "utilidad por acción",
+   "SQM",
+   "litio",
+   "educación financiera"
+  ]
+ },
+ "miniatura": {
+  "etiqueta": "ANÁLISIS FUNDAMENTAL · CAP. 1",
+  "titulo": "¿Cómo leer un estado de resultados?",
+  "sub": "Ingresos y utilidad, con las cifras reales de SQM (SQM-B)",
+  "cifras": [
+   [
+    "2.112",
+    "Ingresos 3T26 (US$ MM)",
+    "acc"
+   ],
+   [
+    "544",
+    "Utilidad 3T26 (US$ MM)",
+    "acc2"
+   ],
+   [
+    "26%",
+    "Margen neto",
+    "neg"
+   ]
+  ],
+  "pie": "Contenido educativo · aiacciones.cl"
+ }
 }
