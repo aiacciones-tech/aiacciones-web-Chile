@@ -41,7 +41,8 @@ el script avisa si la última vela tiene más de 10 días: entonces usa otra acc
   Dependencias: `pip install piper-tts "matplotlib>=3.11" imageio-ffmpeg pillow numpy arabic-reshaper python-bidi`.
 
 ## Pasos de cada sábado (tarea programada, 17:07 Manama)
-1. `plan-lessons-bahrain.json`: la primera lección `pendiente` (o `lista`). Elige la acción bahreiní que mejor enseñe el concepto.
+1. `plan-lessons-bahrain.json`: la primera lección `pendiente` (o `lista`). **Si su `fecha` es posterior a hoy (p. ej. el sábado 21-nov-2026), no hagas nada.**
+   Elige la acción bahreiní que mejor enseñe el concepto.
 2. Escribe `lessons/<base>-bahrain/video-bahrain.json` (para la lección 1 ya existe: solo refresca las velas y rehaz la escena `ahora`, el
    `ultima_vela`, la info y el LinkedIn con el último cierre). Commit y push → `educativo-bahrain.yml` (~30 s); velas en `datos-bahrain-educativo`.
 3. Preview (`... preview`), mira TODOS los PNG; luego el render final, el Short y `make-lesson-meta-bahrain.py`.
