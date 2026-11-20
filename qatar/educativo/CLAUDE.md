@@ -3,7 +3,7 @@
 Vídeos educativos de análisis técnico en árabe, **un concepto por vídeo**, explicado sobre el **gráfico real** de una acción de la Bolsa de Qatar
 (QSE; datos de TradingView), con la voz y la marca del canal (Piper `ar_JO-kareem-medium`, colores y logo de `qatar/diario/comun.py`).
 ~6 minutos, subtítulos (quemados y `.srt`), miniatura y Short. **Un vídeo por semana.** Daniel (20-nov-2026): la serie **empieza cuando termine
-la serie fundamental** (`qatar/fundamental/`, 10 sábados, el último el 23-ene-2027); el día propuesto es el sábado ~18:00 Doha desde el
+la serie fundamental** (`qatar/fundamental/`, 10 sábados, el último el 23-ene-2027); Daniel eligió (20-nov-2026) el sábado ~18:00 Doha desde el
 30-ene-2027 (`DIA` en `comun_leccion.py` y `plan-qatar.json`; cámbialos si Daniel elige otro). Después del primero, los demás se publican solos.
 Copia de `saudi/educativo/` (que a su vez viene de la alemana `ge/educativo/`, PR #184) con la marca, la voz y las redes de Qatar.
 Plan de 10 temas en `plan-qatar.json` (marca cada lección publicada). Instrucciones en español; lo que ve y oye el público, en árabe.
