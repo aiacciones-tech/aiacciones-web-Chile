@@ -1,6 +1,30 @@
 {
- "actualizado": "2026-11-18T21:43Z",
+ "actualizado": "2026-11-20T13:52Z",
  "items": [
+  {
+   "id": "8f56ce33-c864-4a91-8bea-aae5f15abbf6",
+   "tipo": "OIR",
+   "fecha": "2026-11-20 08:48",
+   "entidad": "CAIXABANK, S.A.",
+   "nif": "A08663619",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información relativa a la ejecución de su Programa de recompra de acciones propias.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b8f56ce33-c864-4a91-8bea-aae5f15abbf6%7d",
+   "ticker": "CABK",
+   "temas": []
+  },
+  {
+   "id": "48945c3f-add2-4f5b-a1b9-c8e2edccc57f",
+   "tipo": "OIR",
+   "fecha": "2026-11-19 17:55",
+   "entidad": "BANCO DE SABADELL, S.A.",
+   "nif": "A08000143",
+   "categoria": "Sobre instrumentos financieros",
+   "titulo": "Banco Sabadell informa que va a proceder a la amortización total anticipada de la emisión de Cédulas Hipotecarias 3/2021 con código ISIN ES0413860786.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b48945c3f-add2-4f5b-a1b9-c8e2edccc57f%7d",
+   "ticker": "SAB",
+   "temas": []
+  },
   {
    "id": "671b6261-0552-4930-8d0a-9c632a160635",
    "tipo": "OIR",
