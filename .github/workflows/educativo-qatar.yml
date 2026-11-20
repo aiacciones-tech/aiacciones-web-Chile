@@ -1,0 +1,44 @@
+# Serie educativa semanal «التحليل الفني ببساطة» de Qatar AI Stocks (qatar/educativo/): velas diarias de TradingView de cada lección.
+# Se lanza sola al subir qatar/educativo/lecciones/<carpeta>/video.json a una rama claude/** (o a mano con workflow_dispatch).
+# El contenedor de Claude no llega a TradingView; GitHub Actions sí. Deja <carpeta>/velas.json (se congela la primera vez; las cifras
+# dichas en el vídeo no cambian) en la rama datos-educativo-qatar. La voz es Piper y se genera en el render, no aquí.
+name: Datos de la serie educativa (Qatar)
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["qatar/educativo/lecciones/*/video.json"]
+  workflow_dispatch:
+    inputs:
+      carpetas:
+        description: "carpetas de qatar/educativo/lecciones separadas por comas; vacío = las que cambian respecto a main"
+        default: ""
+      refrescar:
+        description: "1 = volver a pedir las velas aunque ya haya velas.json"
+        default: ""
+permissions:
+  contents: write
+concurrency: datos-educativo-qatar
+jobs:
+  velas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Velas de TradingView
+        env:
+          REFRESCAR: ${{ inputs.refrescar }}
+        run: |
+          pip install -q websocket-client
+          C="${{ inputs.carpetas }}"
+          if [ -z "$C" ]; then
+            git fetch -q --depth 1 origin main
+            C=$(git diff --name-only origin/main HEAD -- 'qatar/educativo/lecciones/*/video.json' | cut -d/ -f4 | sort -u | paste -sd, -)
+          fi
+          test -n "$C" || { echo "ninguna lección cambiada"; exit 0; }
+          R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git clone -q --depth 1 -b datos-educativo-qatar "$R" /tmp/out 2>/dev/null || { mkdir -p /tmp/out && cd /tmp/out && git init -q -b datos-educativo-qatar && git remote add origin "$R" && cd -; }
+          for c in ${C//,/ }; do
+            echo "== $c"; python3 qatar/educativo/datos_leccion.py qatar/educativo/lecciones/$c/video.json /tmp/out/$c
+          done
+          cd /tmp/out && git add -A
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Serie educativa Qatar: velas $C" || exit 0
+          for i in 1 2 3; do git push -q origin HEAD:datos-educativo-qatar && break; sleep 5; git pull -q --rebase origin datos-educativo-qatar; done

@@ -19,3 +19,5 @@
   `eau/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Qatar AI Stocks, serie semanal de análisis fundamental (`qatar/fundamental/`):** un capítulo cada sábado (~18:00 Doha). Antes de cada capítulo lee
   `qatar/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Qatar AI Stocks, serie semanal de análisis técnico «التحليل الفني ببساطة» (`qatar/educativo/`):** empieza cuando termine la serie fundamental
+  (enero de 2027). Antes de cada lección lee `qatar/educativo/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
