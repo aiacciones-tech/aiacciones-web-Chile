@@ -4,7 +4,7 @@
 # barras (serie por años), kpis, formula, fin. Toda cifra de pantalla viene escrita en video.json desde datos.json (TradingView) o los informes oficiales.
 # Uso: AUD=<scratch> [VOZ_DIR=<wav por frase>] python3 make_capitulo.py <carpeta del capítulo> [preview]
 #   Escribe <base>-Nabd.mp4, subtitulos-<base>-Nabd.srt, times.json y guion-<base>-Nabd.md.
-import os, sys, json, textwrap, numpy as np
+import os, re, sys, json, textwrap, numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from comun_fund import *
 
@@ -240,8 +240,8 @@ def control():
         if e.get("tipo") not in TIPOS: err.append(f"escena {k}: tipo desconocido {e.get('tipo')}")
         if not e.get("voz"): err.append(f"escena {k} ({e.get('id')}): sin locución")
         if e.get("tipo") not in BIG and not (e.get("fuente") or VJ.get("fuente_general")): err.append(f"escena {k}: sin fuente")
-        for mal in ("اشتر", "بِع ", "سعر مستهدف", "رخيص", "فرصة شراء", "ننصح"):
-            if mal in e.get("voz", ""): err.append(f"escena {k}: palabra de recomendación «{mal}» en la locución")
+        for mal in (r"اشتر(?!اك)", "بِع ", "سعر مستهدف", "رخيص", "فرصة شراء", "ننصح"):   # «اشتراك» (suscripción) no cuenta
+            if re.search(mal, e.get("voz", "")): err.append(f"escena {k}: palabra de recomendación «{mal}» en la locución")
     if not any(e.get("tipo") == "fin" for e in ESC): err.append("falta la escena fin")
     if err: sys.exit("CONTROL DE CALIDAD:\n- " + "\n- ".join(err))
 
