@@ -1,0 +1,19 @@
+{
+ "serie": "التحليل الفني ببساطة",
+ "canal": "Bahrain AI Stocks (@BahrainAIStocks)",
+ "dia": "sábado, 18:00 de Manama (15:00 UTC). Bahrain Bourse cerrada (fin de semana vie-sáb): sin vídeo diario (dom-jue 14:07) y fuera de la temporada de resultados.",
+ "inicio": "Daniel (20-nov-2026): empieza al terminar la temporada de resultados 3T26 (plazo legal 14-nov-2026). Las 10 lecciones acaban el 30-ene-2027, antes de la temporada de resultados anuales FY26 (febrero).",
+ "nota": "Todas las acciones son empresas bahreiníes cotizadas en Bahrain Bourse (Daniel, 20-nov-2026); Kuwait Finance House no cuenta (es kuwaití, cotización cruzada). La acción sugerida es un punto de partida: al escribir la lección se elige entre las grandes la que mejor enseñe el concepto con su gráfico real. Al publicar: estado 'publicada', fecha e IDs. Al publicar la lección 10, avisar a Daniel (pidió aviso cuando quede publicado el último vídeo de la serie).",
+ "lecciones": [
+  {"folge": 1, "tema": "الدعم والمقاومة", "es": "Soportes y resistencias", "accion": "NBB بنك البحرين الوطني (la mayor capitalización bahreiní, 1.131 M BHD el 19-nov-2026)", "base": "ta-01-nbb", "fecha": "2026-11-28", "estado": "pendiente"},
+  {"folge": 2, "tema": "المتوسطات المتحركة", "es": "Medias móviles (50 y 200 sesiones)", "sugerida": "ALBH ألمنيوم البحرين (ألبا)", "fecha": "2026-12-05", "estado": "pendiente"},
+  {"folge": 3, "tema": "خطوط الاتجاه والقنوات السعرية", "es": "Líneas de tendencia y canales", "sugerida": "BBK بنك البحرين والكويت", "fecha": "2026-12-12", "estado": "pendiente"},
+  {"folge": 4, "tema": "حجم التداول", "es": "Volumen", "sugerida": "GFH (la más negociada de la bolsa)", "fecha": "2026-12-19", "estado": "pendiente"},
+  {"folge": 5, "tema": "مؤشر القوة النسبية RSI", "es": "RSI", "sugerida": "BEYON بيون", "fecha": "2026-12-26", "estado": "pendiente"},
+  {"folge": 6, "tema": "مؤشر الماكد MACD", "es": "MACD", "sugerida": "SALAM بنك السلام", "fecha": "2027-01-02", "estado": "pendiente"},
+  {"folge": 7, "tema": "الشموع اليابانية", "es": "Velas japonesas y sus patrones", "sugerida": "UGH المتحدة الخليجية القابضة", "fecha": "2027-01-09", "estado": "pendiente"},
+  {"folge": 8, "tema": "النماذج الفنية: الرأس والكتفين والقاع المزدوج", "es": "Figuras: hombro-cabeza-hombro, doble suelo", "sugerida": "la que tenga una figura clara en 2 años", "fecha": "2027-01-16", "estado": "pendiente"},
+  {"folge": 9, "tema": "الفجوات السعرية", "es": "Huecos (gaps)", "sugerida": "una de liquidez baja con huecos claros (BKIC, SEEF…) u otra", "fecha": "2027-01-23", "estado": "pendiente"},
+  {"folge": 10, "tema": "نطاقات بولينجر", "es": "Bandas de Bollinger", "sugerida": "ALBH u otra", "fecha": "2027-01-30", "estado": "pendiente", "ultima": true}
+ ]
+}
