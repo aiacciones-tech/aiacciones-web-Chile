@@ -39,7 +39,8 @@ Plan de 10 temas en `plan-espana.json` (marca cada capítulo publicado). Modelo:
 1. Mira `plan-espana.json`: el primer capítulo `pendiente` (o con guion de muestra). Copia la estructura de `lecciones/at-01-inditex/video.json`.
 2. Escribe `lecciones/<base>/video.json` con `ultima_vela` = viernes anterior, sube a `claude/espana-educativo-<fecha>` (pide las velas, ~1 min),
    `git clone -q --depth 1 -b voz-espana-educativo <repo> <scratch>/voz`, mira los datos (indicadores y `niveles.py`) y escribe el guion:
-   **~900 palabras ≈ 6 min** (calibrado en el capítulo 1); el Short ~110. Preview de los dos: mira TODOS los PNG.
+   **~1.050 palabras ≈ 6 min** (calibrado: 1.046 palabras dieron 5:58 con la voz neuronal); el Short ~110 (dio 42 s).
+   Ojo: las velas del capítulo 1 de muestra están congeladas al 19-nov-2026; para publicarlo, `gh workflow run educativo-espana.yml --ref <rama> -f carpetas=at-01-inditex -f refrescar=1` y rehaz las cifras del guion. Preview de los dos: mira TODOS los PNG.
 3. Sube `video.json` otra vez (genera la voz, 1-3 min); `git pull` del clon; render con `VOZ_DIR=<scratch>/voz/<base>` y
    `VELAS=<scratch>/voz/<base>/velas.json` (la línea `voz neuronal` lo confirma; si sale `piper`, dilo en el resumen); `meta_leccion.py`.
 4. `SCRATCH=<scratch con clon de youtube-cola> bash encolar.sh <carpeta>`; copia mp4, Short, miniatura, metadatos, guion y posts a
