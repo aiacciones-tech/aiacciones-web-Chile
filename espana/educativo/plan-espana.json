@@ -1,0 +1,88 @@
+{
+ "serie": "Análisis técnico, explicado fácil",
+ "accion": "Inditex (BME:ITX), la mayor empresa del IBEX 35 por capitalización (Daniel, 20-nov-2026: una sola acción, la más importante)",
+ "dia": "domingo (sin vídeo diario ni rutina de resultados ese día salvo la de las 00:00); publicación hacia las 11:00 de Madrid",
+ "nota": "Plan aprobado el 20-nov-2026. Un capítulo por semana. Al publicar, poner estado 'publicada' con los IDs de YouTube.",
+ "lecciones": [
+  {
+   "capitulo": 1,
+   "tema": "Las medias móviles",
+   "contenido": "Medias de 50 y 200 sesiones, cruce dorado y cruce de la muerte, fallos en lateral",
+   "base": "at-01-inditex",
+   "fecha": "2026-12-06",
+   "estado": "guion de muestra"
+  },
+  {
+   "capitulo": 2,
+   "tema": "El RSI",
+   "contenido": "Índice de fuerza relativa (14): sobrecompra 70, sobreventa 30, divergencias",
+   "base": "at-02-inditex",
+   "fecha": "2026-12-13",
+   "estado": "pendiente"
+  },
+  {
+   "capitulo": 3,
+   "tema": "El volumen",
+   "contenido": "Volumen frente a su media de 20 sesiones; qué confirma y qué no",
+   "base": "at-03-inditex",
+   "fecha": "2026-12-20",
+   "estado": "pendiente"
+  },
+  {
+   "capitulo": 4,
+   "tema": "Soportes y resistencias",
+   "contenido": "Zonas (no líneas), toques y cambio de papel",
+   "base": "at-04-inditex",
+   "fecha": "2026-12-27",
+   "estado": "pendiente"
+  },
+  {
+   "capitulo": 5,
+   "tema": "Líneas de tendencia y canales",
+   "contenido": "Cómo se trazan, cuándo se rompen",
+   "base": "at-05-inditex",
+   "fecha": "2027-01-03",
+   "estado": "pendiente"
+  },
+  {
+   "capitulo": 6,
+   "tema": "El MACD",
+   "contenido": "MACD (12, 26, 9): línea, señal, histograma y cruces",
+   "base": "at-06-inditex",
+   "fecha": "2027-01-10",
+   "estado": "pendiente"
+  },
+  {
+   "capitulo": 7,
+   "tema": "El estocástico",
+   "contenido": "Estocástico (14, 3, 3): %K, %D, zonas 20 y 80",
+   "base": "at-07-inditex",
+   "fecha": "2027-01-17",
+   "estado": "pendiente"
+  },
+  {
+   "capitulo": 8,
+   "tema": "Las bandas de Bollinger",
+   "contenido": "Bollinger (20, 2): estrechamiento y salidas de banda",
+   "base": "at-08-inditex",
+   "fecha": "2027-01-24",
+   "estado": "pendiente"
+  },
+  {
+   "capitulo": 9,
+   "tema": "Las velas japonesas",
+   "contenido": "Cómo leer una vela y patrones básicos (martillo, envolvente, doji)",
+   "base": "at-09-inditex",
+   "fecha": "2027-01-31",
+   "estado": "pendiente"
+  },
+  {
+   "capitulo": 10,
+   "tema": "Figuras chartistas y huecos",
+   "contenido": "Doble techo/suelo, hombro-cabeza-hombro y gaps (si el gráfico de Inditex no tiene una figura clara, esquema)",
+   "base": "at-10-inditex",
+   "fecha": "2027-02-07",
+   "estado": "pendiente"
+  }
+ ]
+}
