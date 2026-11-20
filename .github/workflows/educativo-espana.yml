@@ -1,0 +1,49 @@
+# Serie educativa semanal «Análisis técnico, explicado fácil» de AIAcciones España (espana/educativo/): datos y voz de cada lección.
+# Se lanza sola al subir espana/educativo/lecciones/<carpeta>/video.json a una rama claude/**:
+#  1) velas diarias de TradingView del "simbolo" de la lección (datos_leccion.py; Yahoo de respaldo), solo la primera vez (se congelan);
+#  2) voz neuronal es-ES-AlvaroNeural frase a frase (voz_edge_leccion.py, edge-tts, la misma voz que el vídeo diario), si ya hay locución.
+# Deja velas.json y un mp3 por frase en <carpeta>/ de la rama voz-espana-educativo.
+name: Datos y voz de la serie educativa (España)
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["espana/educativo/lecciones/*/video.json"]
+  workflow_dispatch:
+    inputs:
+      carpetas:
+        description: "carpetas de espana/educativo/lecciones separadas por comas; vacío = las que cambian respecto a main"
+        default: ""
+      refrescar:
+        description: "1 = volver a pedir las velas aunque ya estén congeladas"
+        default: ""
+permissions:
+  contents: write
+concurrency: voz-espana-educativo
+jobs:
+  leccion:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Datos y voz
+        env:
+          REFRESCAR: ${{ inputs.refrescar }}
+        run: |
+          pip install -q websocket-client
+          pip install -q -U edge-tts  # sin fijar versión: sigue los cambios del servicio de Microsoft (7.0.2 dio 403)
+          C="${{ inputs.carpetas }}"
+          if [ -z "$C" ]; then
+            git fetch -q --depth 1 origin main
+            C=$(git diff --name-only origin/main HEAD -- 'espana/educativo/lecciones/*/video.json' | cut -d/ -f4 | sort -u | paste -sd, -)
+          fi
+          test -n "$C" || { echo "ninguna lección cambiada"; exit 0; }
+          case "$C" in *[!A-Za-z0-9_,-]*) echo "carpetas no válidas"; exit 1;; esac
+          R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git clone -q --depth 1 -b voz-espana-educativo "$R" /tmp/out 2>/dev/null || { mkdir -p /tmp/out && cd /tmp/out && git init -q -b voz-espana-educativo && git remote add origin "$R" && cd -; }
+          for c in ${C//,/ }; do
+            echo "== $c"; D=espana/educativo/lecciones/$c
+            python3 espana/educativo/datos_leccion.py $D/video.json /tmp/out/$c
+            python3 espana/educativo/voz_edge_leccion.py $D /tmp/out/$c
+          done
+          cd /tmp/out && git add -A
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Serie educativa España: datos y voz $C" || exit 0
+          for i in 1 2 3; do git push -q origin HEAD:voz-espana-educativo && break; sleep 5; git pull -q --rebase origin voz-espana-educativo; done

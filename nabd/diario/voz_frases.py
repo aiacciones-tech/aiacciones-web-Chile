@@ -25,7 +25,8 @@ def clave(frase, voz="ar-SA-HamedNeural"):
 
 
 def textos(VJ):
-    """Todas las locuciones de un video.json (escenas fijas en "voz" y las cinco acciones en "acciones")."""
+    """Todas las locuciones de un video.json (escenas fijas en "voz", las cinco acciones en "acciones" y, en la serie fundamental, "escenas")."""
     T = [t for t in (VJ.get("voz") or {}).values() if t]
     T += [a["voz"] for a in VJ.get("acciones", []) if a.get("voz")]
+    T += [e["voz"] for e in VJ.get("escenas", []) if isinstance(e, dict) and e.get("voz")]   # serie fundamental (nabd/fundamental/)
     return T

@@ -1,0 +1,101 @@
+{
+ "serie": "التحليل الأساسي ببساطة",
+ "dia": "sábado; rutina 13:07 UTC, publicación hacia las 15:00-16:00 UTC (18:00-19:00 Riad)",
+ "capitulos": [
+  {
+   "n": 1,
+   "fecha": "2026-11-21",
+   "tema": "الإيرادات وصافي الربح",
+   "tema_es": "Ingresos y beneficio neto: cómo leer una cuenta de resultados",
+   "empresa": "أبل",
+   "simbolo": "NASDAQ:AAPL",
+   "base": "fundamental-01-aapl"
+  },
+  {
+   "n": 2,
+   "fecha": "2026-11-28",
+   "tema": "هوامش الربح",
+   "tema_es": "Márgenes: bruto, operativo y neto (cuánto queda de cada dólar)",
+   "empresa": "إنفيديا",
+   "simbolo": "NASDAQ:NVDA",
+   "base": "fundamental-02-nvda",
+   "nota": "contraste con los márgenes de Apple (cap. 1) y, en una frase, con los de un minorista como Walmart"
+  },
+  {
+   "n": 3,
+   "fecha": "2026-12-05",
+   "tema": "مكرر الربحية",
+   "tema_es": "PER: precio entre beneficio por acción (y PER adelantado)",
+   "empresa": "مايكروسوفت",
+   "simbolo": "NASDAQ:MSFT",
+   "base": "fundamental-03-msft"
+  },
+  {
+   "n": 4,
+   "fecha": "2026-12-12",
+   "tema": "الديون والرافعة المالية",
+   "tema_es": "Deuda: deuda neta, deuda/patrimonio, cobertura de intereses",
+   "empresa": "أوراكل",
+   "simbolo": "NYSE:ORCL",
+   "base": "fundamental-04-orcl",
+   "nota": "deuda para centros de datos de IA"
+  },
+  {
+   "n": 5,
+   "fecha": "2026-12-19",
+   "tema": "التدفق النقدي الحر",
+   "tema_es": "Flujo de caja: operativo, inversión (capex) y flujo de caja libre",
+   "empresa": "أمازون",
+   "simbolo": "NASDAQ:AMZN",
+   "base": "fundamental-05-amzn",
+   "nota": "beneficio frente a caja; capex de la nube"
+  },
+  {
+   "n": 6,
+   "fecha": "2026-12-26",
+   "tema": "توزيعات الأرباح",
+   "tema_es": "Dividendos: rentabilidad por dividendo, payout y años de subidas",
+   "empresa": "جونسون آند جونسون",
+   "simbolo": "NYSE:JNJ",
+   "base": "fundamental-06-jnj"
+  },
+  {
+   "n": 7,
+   "fecha": "2027-01-02",
+   "tema": "العائد على حقوق المساهمين",
+   "tema_es": "ROE (y ROA): rentabilidad sobre el patrimonio; caso banco",
+   "empresa": "جي بي مورغان",
+   "simbolo": "NYSE:JPM",
+   "base": "fundamental-07-jpm"
+  },
+  {
+   "n": 8,
+   "fecha": "2027-01-09",
+   "tema": "الميزانية العمومية",
+   "tema_es": "Balance: activos, pasivos, patrimonio y liquidez",
+   "empresa": "بيركشاير هاثاواي",
+   "simbolo": "NYSE:BRK.B",
+   "base": "fundamental-08-brk",
+   "nota": "la caja de Berkshire"
+  },
+  {
+   "n": 9,
+   "fecha": "2027-01-16",
+   "tema": "التقييم: القيمة الدفترية وقيمة المنشأة",
+   "tema_es": "Valoración: precio/ventas, precio/valor contable y EV/EBITDA",
+   "empresa": "ألفابت",
+   "simbolo": "NASDAQ:GOOGL",
+   "base": "fundamental-09-googl"
+  },
+  {
+   "n": 10,
+   "fecha": "2027-01-23",
+   "tema": "كل شيء معًا",
+   "tema_es": "Todo junto: leer las tres cuentas y las ratios de una empresa",
+   "empresa": "ميتا",
+   "simbolo": "NASDAQ:META",
+   "base": "fundamental-10-meta",
+   "nota": "repaso de los 9 conceptos"
+  }
+ ]
+}
