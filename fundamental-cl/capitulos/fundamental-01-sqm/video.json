@@ -1,0 +1,12 @@
+{
+ "base": "fundamental-01-sqm",
+ "capitulo_n": 1,
+ "simbolo": "BCS:SQM_B",
+ "simbolos_extra": ["NYSE:SQM"],
+ "documentos": [
+  {"id": "release-3t26", "url": "https://ir.sqm.com/system/files-encrypted/nasdaq_kms/assets/2026/11/17/18-57-21/6-K_3Q2026%20Earnings%20release_eng_VF.pdf"},
+  {"id": "eeff-3t26", "url": "https://ir.sqm.com/system/files-encrypted/nasdaq_kms/assets/2026/11/17/19-22-42/EEFF%20SQM%20S.A.%20Q3%202026.pdf.pdf"},
+  {"id": "release-4t25", "url": "https://ir.sqm.com/static-files/de05cbb3-8026-4dca-98e9-662c1c567efb"}
+ ],
+ "escenas": []
+}
