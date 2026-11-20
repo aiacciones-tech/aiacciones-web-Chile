@@ -1,0 +1,26 @@
+# Weekly Arabic technical-analysis lesson series of Bahrain AI Stocks (bahrain/educativo/): candles of each lesson's stock.
+# Runs on push of bahrain/educativo/** to a claude/** branch; leaves files on branch datos-bahrain-educativo.
+name: Educational series data (Bahrain)
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["bahrain/educativo/**", ".github/workflows/educativo-bahrain.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: datos-bahrain-educativo
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe
+        run: pip install -q websocket-client && python3 bahrain/educativo/probe-velas-bahrain.py
+      - name: Save
+        run: |
+          R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git clone -q --depth 1 -b datos-bahrain-educativo "$R" /tmp/out 2>/dev/null || { mkdir -p /tmp/out && cd /tmp/out && git init -q -b datos-bahrain-educativo && git remote add origin "$R" && cd -; }
+          cp /tmp/probe/*.json /tmp/out/
+          cd /tmp/out && git add -A
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Bahrain educational series: data" || exit 0
+          for i in 1 2 3; do git push -q origin HEAD:datos-bahrain-educativo && break; sleep 5; done
