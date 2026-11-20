@@ -1,0 +1,81 @@
+{
+ "out": "short-fundamental-01-sqm-2026-12-06.mp4",
+ "empresa": "Análisis fundamental",
+ "trimestre": "Cap. 1 · SQM",
+ "fuente": "Fuente: SQM, resultados 3T 2026. Cálculos propios.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Análisis fundamental en simple",
+   "titulo": "Ingresos",
+   "sub": "vs. utilidad, con SQM",
+   "big": "US$100",
+   "big_fs": 180,
+   "big_label": "facturados por SQM...",
+   "color": "acc",
+   "pregunta": "¿Cuánto queda al final?",
+   "voz": "Si una empresa factura cien dólares, ¿cuánto le queda al final? Veámoslo con las cifras reales de SQM."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Ingresos 3T 2026",
+   "big": "US$ 2.112 MM",
+   "delta": "+80% frente al 3T 2025",
+   "color": "acc",
+   "barras": [
+    [
+     "3T25",
+     1173
+    ],
+    [
+     "3T26",
+     2112
+    ]
+   ],
+   "fmt": "{:.0f}",
+   "voz": "Primera línea, los ingresos: dos mil ciento doce millones de dólares en el tercer trimestre, ochenta por ciento más que un año antes."
+  },
+  {
+   "tipo": "kpis",
+   "n": 2,
+   "label": "Lo que se resta",
+   "items": [
+    [
+     "−1.148",
+     "costo de ventas",
+     "neg"
+    ],
+    [
+     "−343",
+     "impuestos",
+     "neg"
+    ],
+    [
+     "−52",
+     "minoritarios",
+     "neg"
+    ]
+   ],
+   "nota": "US$ millones · 3T 2026",
+   "voz": "Luego se restan el costo de ventas, los gastos, los impuestos y la parte de los socios minoritarios."
+  },
+  {
+   "tipo": "cifra",
+   "n": 3,
+   "label": "Utilidad de los controladores",
+   "big": "US$ 544 MM",
+   "delta": "≈ 26 de cada 100 dólares",
+   "color": "acc2",
+   "nota": "Margen neto 25,8% (calculado)",
+   "voz": "Última línea: quinientos cuarenta y cuatro millones. De cada cien dólares facturados, quedaron unos veintiséis."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Capítulo 1 · SQM",
+   "titular": "Ingresos: cuánto vende.\nUtilidad: cuánto queda.",
+   "cta": "Capítulo completo en el canal",
+   "voz": "El capítulo completo está en nuestro canal. Contenido educativo, no es recomendación de inversión."
+  }
+ ]
+}

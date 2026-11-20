@@ -1,0 +1,14 @@
+📚 Análisis técnico, explicado fácil | Capítulo 1: Las medias móviles (con el gráfico de Inditex)
+
+Primer capítulo de «Análisis técnico, explicado fácil», la serie semanal de AIAcciones España: qué es una media móvil, cómo se calcula, cómo se leen las de 50 y 200 sesiones, qué son el cruce dorado y el cruce de la muerte y por qué fallan en mercados laterales. Todo sobre el gráfico real de Inditex (ITX), la mayor empresa del IBEX 35, con velas diarias hasta el cierre del 19 de noviembre de 2026.
+
+• Media móvil: el precio medio de las últimas N sesiones
+• 50 sesiones, medio plazo; 200 sesiones, largo plazo
+• Cruce dorado y cruce de la muerte: confirman tarde
+• En mercados laterales, las medias dan cruces falsos
+
+▶️ Capítulo completo (6 min): {youtube}
+
+Contenido educativo, no es una recomendación de inversión. El análisis técnico describe el pasado y no predice el futuro. AIAcciones España no tiene posiciones en Inditex.
+
+#AnálisisTécnico #MediasMóviles #Inditex #IBEX35 #Bolsa #AprenderBolsa

@@ -1,4 +1,4 @@
-# Metadatos de YouTube, posts (Telegram, X y TikTok) y miniatura de una lección de «Charttechnik einfach erklärt» (Wall Street auf Deutsch).
+# Metadatos de YouTube, posts (Telegram, X, LinkedIn y TikTok) y miniatura de una lección de «Charttechnik einfach erklärt» (Wall Street auf Deutsch).
 # Uso: python3 meta_leccion.py <carpeta de la lección>   (lee video.json y times.json de make_leccion.py)
 import json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, os.path.join(HERE, "..", "diario"))
@@ -38,6 +38,13 @@ tg = (f"📚 {SERIE} | Folge {VJ['folge']}: {VJ['tema']} (am Beispiel {VJ['nombr
       f"\n\n▶️ Die ganze Folge: {{youtube}}\nUnser YouTube-Kanal: {CANAL}\n\nKeine Anlageberatung. Nur Information und Bildung. Mit KI erstellt.")
 assert len(tg) <= 1000, len(tg)
 open(f"{D}/post-telegram-{BASE}-GE.txt", "w").write(tg)
+# LinkedIn (página del canal, vía Buffer, buffer-GE.yml; conectada el 20-nov-2026): con el enlace a la lección
+li = (f"{SERIE} | Folge {VJ['folge']}: {VJ['tema']} (am Beispiel {VJ['nombre']})\n\n{I['resumen']}\n\n" + "\n".join("• " + c for c in fin["claves"]) +
+      f"\n\n▶️ Die ganze Folge: {{youtube}}\n\nKeine Anlageberatung, nur Information und Bildung. {VJ['nombre']} dient nur als Beispiel. "
+      "Aktien sind mit Risiken bis zum Totalverlust verbunden.\nVideo von Wall Street auf Deutsch, mit KI erstellt (Text, Stimme und Grafiken).\n"
+      + " ".join(dict.fromkeys(f"#CharttechnikEinfachErklärt #Charttechnik #Börsenwissen {I['hashtags']}".split())))
+assert len(li) <= 3000, len(li)
+open(f"{D}/post-linkedin-{BASE}-GE.txt", "w").write(li)
 tk = (f"{SERIE}, Folge {VJ['folge']}: {VJ['tema']}\n\n{I['x']}\n\n" + "\n".join("• " + c for c in fin["claves"]) +
       f"\n\n▶️ Mehr auf YouTube: Wall Street auf Deutsch\n🤖 Mit KI erstellt (Text, Stimme und Grafiken).\n"
       f"Keine Anlageberatung, nur Information und Bildung. {VJ['nombre']} dient nur als Beispiel. Risiko bis zum Totalverlust.\n"

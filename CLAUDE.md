@@ -19,5 +19,11 @@
   `eau/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Qatar AI Stocks, serie semanal de análisis fundamental (`qatar/fundamental/`):** un capítulo cada sábado (~18:00 Doha). Antes de cada capítulo lee
   `qatar/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **AIAcciones Chile, serie semanal «Análisis fundamental en simple» (`fundamental-cl/`):** un capítulo cada domingo (~10:00 Santiago) desde el 6-dic-2026,
+  en español con la voz Lorenzo. Antes de cada capítulo lee `fundamental-cl/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Qatar AI Stocks, serie semanal de análisis técnico «التحليل الفني ببساطة» (`qatar/educativo/`):** empieza cuando termine la serie fundamental
+  (enero de 2027). Antes de cada lección lee `qatar/educativo/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Nabd Wall Street, serie semanal «التحليل الأساسي ببساطة» (sábados, `nabd/fundamental/`):** análisis fundamental con cifras reales de empresas de EE. UU.
+  Antes de cada capítulo lee `nabd/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Bahrain AI Stocks, serie educativa semanal «التحليل الفني ببساطة» (sábados, desde el 28-nov-2026):** instrucciones en `bahrain/educativo/CLAUDE.md`
   (prevalecen sobre el texto de su tarea programada). Plan de 10 temas en `bahrain/educativo/plan-lessons-bahrain.json`.
