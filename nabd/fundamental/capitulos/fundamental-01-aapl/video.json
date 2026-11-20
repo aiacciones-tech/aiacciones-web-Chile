@@ -1,0 +1,10 @@
+{
+ "base": "fundamental-01-aapl",
+ "capitulo_n": 1,
+ "simbolo": "NASDAQ:AAPL",
+ "documentos": [
+  {"id": "fy26-q4-estados", "url": "https://www.apple.com/newsroom/pdfs/fy2026q4/FY26_Q4_Consolidated_Financial_Statements.pdf"},
+  {"id": "fy26-q4-nota", "url": "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/"}
+ ],
+ "escenas": []
+}
