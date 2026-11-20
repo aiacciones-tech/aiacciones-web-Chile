@@ -1,0 +1,93 @@
+{
+ "cabecera": "Wall Street auf Deutsch · 20. November 2026",
+ "out": "short-bolsa-2026-11-20-GE.mp4",
+ "fuente": "Quellen: TradingView, Reuters (via TECHi)\nund Yahoo Finance (20. November 2026). Abstände: berechnet.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Wall Street · Sitzung vom",
+   "fecha": "Fr., 20. November 2026",
+   "indices": [
+    [
+     "S&P 500",
+     "−3,70 %",
+     "6.910,39",
+     "neg"
+    ],
+    [
+     "Nasdaq",
+     "−5,28 %",
+     "22.617,73",
+     "neg"
+    ]
+   ],
+   "pregunta": "Ausverkauf\nbei KI-Aktien",
+   "voz": "Wall Street, Freitag, 20. November. Ausverkauf bei KI-Aktien. Drei Punkte."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Nvidia",
+   "big": "−14,01 %",
+   "delta": "Schluss 125,53 $",
+   "color": "neg",
+   "nota": "Laut Reuters prüft die SEC die Bilanzierung.\nSiebter Wochenverlust in Folge (TECHi).",
+   "voz": "Eins. Nvidia fällt um 14 Prozent, nach einem Bericht über eine Prüfung durch die SEC."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "S&P 500",
+   "big": "−3,70 %",
+   "delta": "Woche −8,6 %",
+   "color": "neg",
+   "barras": [
+    [
+     "S&P 500",
+     -3.7
+    ],
+    [
+     "Nasdaq 100",
+     -5.61
+    ],
+    [
+     "Dow Jones",
+     -1.93
+    ]
+   ],
+   "nota": "S&P 500 11,9 % unter dem Rekord: Korrektur.\nVIX +26 % auf 35,9.",
+   "voz": "Zwei. Der S&P 500 fällt um 3,7 Prozent und ist in einer Korrektur."
+  },
+  {
+   "tipo": "kpis",
+   "n": 3,
+   "label": "Nasdaq 100",
+   "items": [
+    [
+     "−20,2 %",
+     "unter dem Rekordhoch",
+     "neg"
+    ],
+    [
+     "26,5",
+     "RSI 14",
+     "blue"
+    ],
+    [
+     "−10,4 %",
+     "in dieser Woche",
+     "neg"
+    ]
+   ],
+   "nota": "Mehr als 20 % unter dem Hoch vom Oktober.\nDas sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Der Nasdaq 100 liegt mehr als 20 Prozent unter seinem Rekord."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Kurze Woche:\nThanksgiving",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Nächste Woche ist Thanksgiving. Das ganze Video finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}

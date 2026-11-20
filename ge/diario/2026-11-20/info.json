@@ -1,0 +1,72 @@
+{
+ "fecha": "2026-11-20",
+ "fecha_txt": "Freitag, 20. November 2026",
+ "elaborado": "20. November 2026, 23:30 Uhr",
+ "titulo": "Wall Street heute (20. November 2026): S&P 500 −3,70 %, Nasdaq −5,28 % | Der Tagesbericht",
+ "titulo_short": "Wall Street am 20. November 2026: Nvidia −14 %, S&P 500 −3,7 % #Shorts",
+ "resumen": "Der S&P 500 schloss am Freitag, 20. November 2026, bei 6.910,39 Punkten (−3,70 %; −265,44 Punkte), der siebte Verlusttag in Folge. Der Dow Jones fiel um 1,93 % auf 48.147,33, der Nasdaq Composite um 5,28 % auf 22.617,73, der Nasdaq 100 um 5,61 % auf 25.028,98 und der Russell 2000 um 2,76 % auf 2.581,79.",
+ "claves": [
+  "Nvidia −14,01 % auf 125,53 Dollar: Laut Reuters prüft die SEC die Bilanzierung des Konzerns; Umfang unklar, die SEC äußerte sich nicht. Laut TECHi der siebte Wochenverlust in Folge.",
+  "Korrektur: Der S&P 500 liegt 11,9 % unter seinem Rekordhoch vom 6. Oktober, der Dow Jones 12,1 %; der Nasdaq 100 20,2 % (berechnet). In dieser Woche: S&P 500 −8,6 %, Nasdaq 100 −10,4 %.",
+  "Markt: VIX +26,28 % auf 35,90; Rendite 10-jähriger US-Anleihen 4,95 % (−10 Basispunkte); WTI 83,67 Dollar, Gold 3.532 Dollar (−2,57 %). DAX −2,60 %, Euro Stoxx 50 −2,81 %, Nikkei −5,06 %.",
+  "Aktien: 124 Werte im S&P 500 stiegen, 370 fielen (berechnet). Micron −13,89 %, Broadcom −12,19 %, Anthropic −8,5 % (weiter über dem Ausgabepreis von 83 Dollar), Intuit −12,77 % nach Quartalszahlen und Mailchimp-Verkauf.",
+  "Charttechnik S&P 500 (berechnet): 6,0 % unter der 200-Tage-Linie (7.349), RSI 14 bei 24,7; tiefster Schluss seit dem 13. April. Das sind Daten, keine Kauf- oder Verkaufssignale.",
+  "Termine: Montag, 23. November, nächste Sitzung; Donnerstag, 26. November, Thanksgiving (US-Börsen geschlossen); Freitag, 27. November, verkürzter Handel bis 13 Uhr New Yorker Zeit."
+ ],
+ "claves_cortas": [
+  "S&P 500 bei 6.910,39 (−3,70 %) · Nasdaq −5,28 %",
+  "Nvidia −14 % nach Bericht über SEC-Prüfung",
+  "S&P 500 und Dow in der Korrektur"
+ ],
+ "linkedin": {
+  "datos": [
+   "S&P 500 bei 6.910,39 (−3,70 %), Wochenminus 8,6 %; Nasdaq Composite −5,28 %",
+   "Nvidia −14,01 %: Laut Reuters prüft die SEC die Bilanzierung",
+   "S&P 500 und Dow Jones mehr als 10 % unter dem Rekord, Nasdaq 100 mehr als 20 % (berechnet)",
+   "VIX +26 % auf 35,9; Rendite 10-jähriger Anleihen 4,95 %"
+  ],
+  "conclusion": "Der Ausverkauf bei KI-Aktien hat sich zum Wochenschluss verschärft."
+ },
+ "fuentes": "TradingView; Reuters (zitiert von TECHi); Yahoo Finance; StockTitan; Federal Reserve; NYSE",
+ "x": "Wall Street am 20. November 2026:\nS&P 500 6.910,39 (−3,70 %)\nNasdaq −5,28 % · Dow −1,93 %\nNvidia −14,01 %",
+ "tiktok": "Wall Street am Freitag, 20. November 2026: Nvidia fällt um 14 Prozent, der S&P 500 um 3,7 Prozent und ist in einer Korrektur. Drei Punkte: Nvidia, S&P 500 und Nasdaq 100.",
+ "hashtags": "#WallStreet #Börse #Aktien #SP500 #Nasdaq #Nvidia #Börsennews",
+ "hashtags_short": "#WallStreet #Börse #Aktien #Nvidia #Shorts",
+ "tags": [
+  "Wall Street",
+  "US-Börse",
+  "Aktien",
+  "Börse heute",
+  "S&P 500",
+  "Nasdaq",
+  "Dow Jones",
+  "Nvidia",
+  "Nvidia SEC",
+  "Korrektur",
+  "KI-Aktien",
+  "Micron",
+  "Broadcom",
+  "Anthropic",
+  "Charttechnik",
+  "Börsennews",
+  "Wall Street auf Deutsch",
+  "Der Tagesbericht"
+ ],
+ "miniatura": {
+  "fecha": "Freitag, 20. November 2026",
+  "indices": [
+   [
+    "S&P 500",
+    "−3,70 %",
+    "neg"
+   ],
+   [
+    "Nasdaq",
+    "−5,28 %",
+    "neg"
+   ]
+  ],
+  "sub": "Nvidia −14 % · Korrektur",
+  "pie": "Der Tagesbericht · Wall Street auf Deutsch"
+ }
+}

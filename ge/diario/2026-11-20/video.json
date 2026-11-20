@@ -1,0 +1,166 @@
+{
+ "fecha": "2026-11-20",
+ "titular": "Ausverkauf bei KI-Aktien: S&P 500 −3,7 %, Nvidia −14 %",
+ "nombres": {
+  "ANT": "Anthropic"
+ },
+ "ticker": [
+  "S&P 500 −3,70 %, Nasdaq Composite −5,28 %",
+  "Nvidia −14,01 % nach Bericht über SEC-Prüfung (Reuters)",
+  "S&P 500 und Dow Jones mehr als 10 % unter dem Rekord",
+  "VIX +26,3 % auf 35,9",
+  "Anthropic −8,5 %, weiter über dem Ausgabepreis",
+  "DAX −2,60 %, Nikkei −5,06 %"
+ ],
+ "voz": {
+  "s_title": "Willkommen zum Tagesbericht von Wall Street auf Deutsch, für Freitag, den 20. November. Ein schwarzer Tag für die Technologiewerte. Der S&P 500 fiel um 3,70 Prozent auf rund 6.910 Punkte, der siebte Verlusttag in Folge. Der Nasdaq Composite brach um 5,28 Prozent ein. Auslöser war vor allem Nvidia: Die Aktie verlor 14 Prozent, nachdem Reuters über eine Prüfung der Bilanzierung durch die Börsenaufsicht SEC berichtet hatte.",
+  "s_indices": "Die großen Indizes im Überblick. Der S&P 500 schloss bei 6.910,39 Punkten, ein Minus von 265 Punkten. Der Nasdaq 100 verlor 5,61 Prozent, der Dow Jones 1,93 Prozent auf 48.147 Punkte, der Russell 2000 2,76 Prozent. Auf Wochensicht verlor der S&P 500 8,6 Prozent und der Nasdaq 100 10,4 Prozent. Der S&P 500 liegt jetzt 11,9 Prozent unter seinem Rekordhoch vom 6. Oktober, der Dow Jones 12,1 Prozent. Laut Yahoo Finance sind damit beide in einer Korrektur, also mehr als 10 Prozent unter dem Hoch. Der Nasdaq 100 liegt sogar 20,2 Prozent unter seinem Rekord, berechnet. Nach der gängigen Definition ist das ein Bärenmarkt. Im S&P 500 stiegen 124 Werte, 370 fielen.",
+  "s_grandes": "Wer hat die Indizes bewegt? Alle acht größten Werte im Nasdaq 100 fielen. Nvidia verlor 14 Prozent, Broadcom 12,2 Prozent, SpaceX 7,7 Prozent und Meta 5,9 Prozent. Apple hielt sich mit minus 1,9 Prozent am besten. Im Dow Jones kostete allein Goldman Sachs mit minus 6,7 Prozent rund 340 Punkte, berechnet aus den Tagesdaten. Dahinter folgten Caterpillar und Nvidia. Gestützt wurde der Dow von UnitedHealth mit plus 2,9 Prozent.",
+  "s_news": "Warum ist der Markt so stark gefallen? Erstens: Nvidia. Laut Reuters prüft die Börsenaufsicht SEC die Bilanzierung des Konzerns; die Agentur beruft sich auf zwei eingeweihte Personen. Worum es genau geht, ist laut Reuters unklar. Die SEC wollte sich nicht äußern, Nvidia hatte zunächst nicht geantwortet. Eine Prüfung ist kein Nachweis eines Fehlverhaltens. Zweitens: Der Abverkauf bei KI-Hardware weitete sich aus; laut TECHi verloren zehn große Werte der Branche in dieser Woche im Schnitt 19,5 Prozent. Drittens: Zinsen. Fed-Gouverneurin Lisa Cook warnte, wer Zinserhöhungen zu lange hinauszögere, riskiere, hinter die Entwicklung zurückzufallen. Laut CME FedWatch rechnet der Markt mit mehr als 90 Prozent Wahrscheinlichkeit mit einer Zinserhöhung im Dezember. Die Verbraucherstimmung der Universität Michigan stieg dagegen auf 51,5 Punkte, nach 48 im Oktober.",
+  "s_sectores": "Zu den Sektoren. Alle sechs Sektor-ETFs schlossen im Minus. Technologie brach um 7,3 Prozent ein und verlor in dieser Woche 14 Prozent. Industrie fiel um 3,1 Prozent, zyklischer Konsum um 3 Prozent. Am besten hielt sich Gesundheit mit nur minus 0,1 Prozent, gestützt von UnitedHealth. Energie verlor 0,6 Prozent.",
+  "s_macro": "Zu Zinsen, Dollar und Rohstoffen. Anleger suchten Sicherheit in Staatsanleihen: Die Rendite der 10-jährigen US-Staatsanleihe fiel um 10 Basispunkte auf 4,95 Prozent. Der Dollar-Index DXY blieb bei 103,9. Der Volatilitätsindex VIX sprang um 26 Prozent auf 35,9 Punkte. Der US-Ölpreis WTI stieg leicht auf 83,67 Dollar, Gold fiel dagegen um 2,6 Prozent auf rund 3.532 Dollar. Bitcoin verlor 4,7 Prozent. Und Europa? Der DAX schloss um 17:30 Uhr mit minus 2,60 Prozent bei 24.803 Punkten, der Euro Stoxx 50 mit minus 2,81 Prozent. In Tokio war der Nikkei bereits um 5,1 Prozent gefallen. Der Xetra-Handel beginnt am Montag um 9 Uhr.",
+  "s_tech_spx": "Zur Charttechnik. Der S&P 500 liegt jetzt 6 Prozent unter seiner 200-Tage-Linie und 7,8 Prozent unter der 20-Tage-Linie. Es ist der tiefste Schlusskurs seit dem 13. April, berechnet. Der RSI fiel auf 24,7 und damit unter die Marke von 30, ab der viele Analysten von einem überverkauften Markt sprechen. Das Volumen lag 51 Prozent über dem Schnitt der letzten zehn Tage. Der Index schloss nahe am Tagestief.",
+  "s_esc_spx": "Drei Szenarien für den S&P 500. Im positiven Szenario würde erst ein Schluss über der 200-Tage-Linie bei rund 7.349 Punkten die Lage entspannen; die nächste Marke wäre die 20-Tage-Linie bei rund 7.499. Im neutralen Szenario pendelt der Index zwischen dem heutigen Tief bei 6.883 und der 200-Tage-Linie. Im negativen Szenario würde ein Schluss unter 6.883 Punkten den Blick auf das 52-Wochen-Tief bei rund 6.317 Punkten lenken. Das sind Bedingungen, keine Prognosen.",
+  "s_tech_ndx": "Der Nasdaq 100 liegt 10,8 Prozent unter seiner 200-Tage-Linie. Der RSI liegt bei 26,5, ebenfalls unter 30. Es ist der tiefste Schluss seit dem 8. April, berechnet.",
+  "s_esc_ndx": "Für den Nasdaq 100 beginnt das positive Szenario erst über dem Hoch vom Donnerstag bei rund 27.749 Punkten, mehr als 10 Prozent über dem heutigen Schluss. Im neutralen Szenario bleibt der Index zwischen dem heutigen Tief bei 24.910 und diesem Hoch. Im negativen Szenario würde ein Schluss unter 24.910 Punkten den Weg in Richtung des 52-Wochen-Tiefs bei 22.841 Punkten öffnen.",
+  "s_agenda": "Was steht an? Die nächste Sitzung beginnt am Montag um 9:30 Uhr New Yorker Zeit, 15:30 Uhr bei uns. In der kommenden Woche ist die Wall Street am Donnerstag wegen Thanksgiving geschlossen, am Freitag endet der Handel schon um 13 Uhr New Yorker Zeit. Bei Nvidia richtet sich der Blick laut TECHi auf eine Befragung durch Ausschüsse des Repräsentantenhauses am 1. Dezember.",
+  "s_fin": "Unser Fazit: Der Ausverkauf bei KI-Aktien hat sich verschärft. Der S&P 500 und der Dow Jones sind in einer Korrektur, der Nasdaq 100 liegt mehr als 20 Prozent unter seinem Rekord, und der VIX steigt auf fast 36. Folgen Sie uns kostenlos auf Telegram, der Link steht in der Videobeschreibung. Wichtiger Hinweis: Das ist keine Anlageberatung, sondern nur Information. Text, Stimme und Grafiken sind mit KI erstellt. Wir sehen uns am Montag, auf Wiedersehen."
+ },
+ "indices": {
+  "titulo": "S&P 500 und Dow in der Korrektur, Nasdaq 100 −20 % vom Hoch"
+ },
+ "grandes": {
+  "titulo": "Nvidia −14 %, Goldman Sachs kostet den Dow 340 Punkte"
+ },
+ "noticias": {
+  "titulo": "Bericht über SEC-Prüfung bei Nvidia verschärft den KI-Ausverkauf",
+  "fuente": "Quellen: Reuters (zitiert von TECHi und Coinpaper); TECHi; Yahoo Finance; StockTitan; Federal Reserve (20. November 2026).",
+  "items": [
+   [
+    "Nvidia",
+    "Reuters: SEC prüft die Bilanzierung · Umfang unklar · SEC ohne Kommentar"
+   ],
+   [
+    "KI-Hardware",
+    "Zehn Branchenwerte im Wochenschnitt −19,5 % (TECHi)"
+   ],
+   [
+    "Zinsen",
+    "Fed-Gouverneurin Cook warnt vor zu spätem Zinsschritt · Dezember-Erhöhung eingepreist"
+   ],
+   [
+    "Konjunktur",
+    "Verbraucherstimmung Uni Michigan 51,5 nach 48,0 im Oktober"
+   ]
+  ]
+ },
+ "sectores": {
+  "titulo": "Technologie −7,3 % · Gesundheit fast unverändert",
+  "items": [
+   [
+    "Gesundheit und Energie stabiler",
+    "Gesundheit −0,12 %; Energie −0,62 %",
+    "teal"
+   ],
+   [
+    "Technologie bricht ein",
+    "Technologie −7,27 % (Woche −14,2 %); Industrie −3,09 %; Konsum −2,95 %",
+    "neg"
+   ]
+  ]
+ },
+ "acciones": [
+  {
+   "ticker": "NVDA",
+   "noticia": "Reuters: Die SEC prüft die Bilanzierung von Nvidia; Umfang unklar, SEC ohne Kommentar, Nvidia ohne Antwort (TECHi).",
+   "lectura": "77 Mrd. $ Umsatz; 7. Wochenverlust in Folge.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Reuters, zitiert von TECHi (20. November 2026).",
+   "voz": "Die erste Aktie: Nvidia. Die Aktie fiel um 14,01 Prozent auf 125,53 Dollar, bei einem Handelsumsatz von 77 Milliarden Dollar. Laut Reuters prüft die Börsenaufsicht SEC die Bilanzierung des Konzerns. Laut TECHi ist es der siebte Wochenverlust in Folge. Nvidia kostete den Dow Jones rund 122 Punkte, berechnet. Die Zahlen von Nvidia zum dritten Quartal haben wir in einer eigenen Folge unserer Serie «Die Wall-Street-Giganten» analysiert."
+  },
+  {
+   "ticker": "MU",
+   "noticia": "Keine eigene Meldung; laut TECHi Teil des Ausverkaufs bei KI-Hardware, Wochenminus 23,6 %.",
+   "lectura": "35 Mrd. $ Umsatz, 1,75-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Einordnung: TECHi (20. November 2026).",
+   "voz": "Die zweite Aktie: Micron Technology, ein Hersteller von Speicherchips. Die Aktie fiel um 13,89 Prozent auf 594,51 Dollar, bei 1,75-fachem Volumen. Eine eigene Meldung zu Micron gab es nicht. Laut TECHi gehörte Micron zu den größten Verlierern unter den KI-Hardware-Werten und verlor in dieser Woche 23,6 Prozent."
+  },
+  {
+   "ticker": "AVGO",
+   "noticia": "Keine konkrete Meldung in der Presse; Quartalszahlen laut TradingView am 9. Dezember.",
+   "lectura": "1,7-faches Volumen.",
+   "fuente": "Kurs, Volumen und Termin: TradingView (20. November 2026).",
+   "voz": "Die dritte Aktie: Broadcom, ein Chipkonzern, der unter anderem Spezialchips für Rechenzentren entwickelt. Die Aktie fiel um 12,19 Prozent auf 304,41 Dollar. Eine konkrete Meldung zu Broadcom fanden wir nicht; die Aktie fiel mit der gesamten Branche. Laut TradingView legt Broadcom am 9. Dezember Quartalszahlen vor."
+  },
+  {
+   "ticker": "ANT",
+   "noticia": "Zweiter Handelstag nach dem Börsengang; Seaport Research startet die Beobachtung (StockTitan).",
+   "lectura": "Weiter über dem Ausgabepreis von 83 $.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: StockTitan; Yahoo Finance (20. November 2026).",
+   "voz": "Die vierte Aktie: Anthropic, der KI-Entwickler, der am Donnerstag an die Börse ging. Am zweiten Handelstag fiel die Aktie um 8,5 Prozent auf 88,91 Dollar. Sie liegt damit weiter über dem Ausgabepreis von 83 Dollar. Laut CNBC, zitiert von StockTitan, belastete der Rückgang den gesamten KI-Handel."
+  },
+  {
+   "ticker": "INTU",
+   "noticia": "Quartalsumsatz +12 % auf 4,4 Mrd. $; Verkauf von Mailchimp für rund 3,68 Mrd. $ (StockTitan).",
+   "lectura": "Rund dreifaches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: StockTitan (20. November 2026).",
+   "voz": "Die fünfte Aktie: Intuit, der Anbieter von Steuer- und Buchhaltungssoftware. Die Aktie fiel um 12,77 Prozent auf 270,44 Dollar, bei rund dreifachem Volumen. Laut StockTitan stieg der Umsatz im ersten Geschäftsquartal um 12 Prozent auf 4,4 Milliarden Dollar. Intuit verkauft seine Marketing-Plattform Mailchimp für rund 3,68 Milliarden Dollar an Bending Spoons und bestätigte die Prognosen für Gewinn je Aktie und operatives Ergebnis."
+  }
+ ],
+ "macro": {
+  "titulo": "VIX bei 35,9 · Anleihen gefragt, Gold −2,6 %",
+  "items": {
+   "TVC:US10Y": "Flucht in Staatsanleihen: Rendite sinkt",
+   "TVC:DXY": "Dollar unverändert",
+   "TVC:VIX": "Höchste Nervosität seit Monaten",
+   "TVC:USOIL": "Ölpreis kaum bewegt",
+   "TVC:GOLD": "Gold fällt trotz Ausverkauf"
+  },
+  "europa": "DAX −2,60 % und Euro Stoxx 50 −2,81 %: Europa folgt dem Ausverkauf, Nikkei −5,06 %."
+ },
+ "tecnico": {
+  "spx": {
+   "titulo": "Tiefster Schluss seit April, RSI 24,7",
+   "rsi_txt": "überverkauft",
+   "leyenda": "lower left"
+  },
+  "ndx": {
+   "titulo": "10,8 % unter der 200-Tage-Linie, RSI 26,5",
+   "rsi_txt": "überverkauft",
+   "leyenda": "lower left"
+  }
+ },
+ "agenda": {
+  "titulo": "Kurze Woche: Thanksgiving am Donnerstag",
+  "fuente": "Quellen: NYSE-Handelskalender; TECHi (20. November 2026). Deutsche Zeit aus der New Yorker Zeit berechnet.",
+  "filas": [
+   [
+    "2026-11-23",
+    "Nächste Sitzung an der Wall Street",
+    "09:30",
+    "geplant"
+   ],
+   [
+    "2026-11-26",
+    "Thanksgiving: US-Börsen geschlossen",
+    "",
+    "geplant"
+   ],
+   [
+    "2026-11-27",
+    "Verkürzter Handel bis 13 Uhr",
+    "13:00",
+    "geplant"
+   ],
+   [
+    "2026-12-01",
+    "Nvidia: Befragung durch Ausschüsse des Repräsentantenhauses (TECHi)",
+    "",
+    "geplant"
+   ]
+  ]
+ },
+ "fin": {
+  "titular": "S&P 500 −3,7 % und in der Korrektur, Nvidia −14 %",
+  "fuentes": "TradingView, Reuters, Yahoo Finance, TECHi, StockTitan"
+ }
+}
