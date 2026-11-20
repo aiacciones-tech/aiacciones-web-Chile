@@ -1,0 +1,41 @@
+# Weekly Arabic technical-analysis lesson series «التحليل الفني ببساطة» of Bahrain AI Stocks (bahrain/educativo/): candles of each lesson.
+# Runs on push of bahrain/educativo/lessons/<folder>/video-bahrain.json to a claude/** branch (or by hand with the folders):
+# lesson-data-bahrain.py downloads the daily candles of the lesson's stock from Mubasher (blocked from Claude's container) once,
+# and leaves <folder>/velas-bahrain.json on branch datos-bahrain-educativo. The voice (Piper, the channel's voice) is made in the container.
+name: Educational series data (Bahrain)
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["bahrain/educativo/lessons/*/video-bahrain.json", "bahrain/educativo/lesson-data-bahrain.py"]
+  workflow_dispatch:
+    inputs:
+      carpetas:
+        description: "folders of bahrain/educativo/lessons separated by commas; empty = those that differ from main"
+        default: ""
+      refrescar:
+        description: "1 = download the candles again even if they are frozen"
+        default: ""
+permissions:
+  contents: write
+concurrency: datos-bahrain-educativo
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Candles
+        env:
+          REFRESCAR: ${{ inputs.refrescar }}
+        run: |
+          C="${{ inputs.carpetas }}"
+          if [ -z "$C" ]; then
+            git fetch -q --depth 1 origin main
+            C=$(git diff --name-only origin/main HEAD -- 'bahrain/educativo/lessons/*/video-bahrain.json' | cut -d/ -f4 | sort -u | paste -sd, -)
+          fi
+          test -n "$C" || { echo "no lesson changed"; exit 0; }
+          R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git clone -q --depth 1 -b datos-bahrain-educativo "$R" /tmp/out 2>/dev/null || { mkdir -p /tmp/out && cd /tmp/out && git init -q -b datos-bahrain-educativo && git remote add origin "$R" && cd -; }
+          for c in ${C//,/ }; do echo "== $c"; python3 bahrain/educativo/lesson-data-bahrain.py bahrain/educativo/lessons/$c/video-bahrain.json /tmp/out/$c; done
+          cd /tmp/out && git rm -q --ignore-unmatch probe-*.json *.png && git add -A
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Bahrain educational series: candles $C" || exit 0
+          for i in 1 2 3; do git push -q origin HEAD:datos-bahrain-educativo && break; sleep 5; done

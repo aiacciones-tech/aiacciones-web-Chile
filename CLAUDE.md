@@ -25,3 +25,5 @@
   (enero de 2027). Antes de cada lección lee `qatar/educativo/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Nabd Wall Street, serie semanal «التحليل الأساسي ببساطة» (sábados, `nabd/fundamental/`):** análisis fundamental con cifras reales de empresas de EE. UU.
   Antes de cada capítulo lee `nabd/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Bahrain AI Stocks, serie educativa semanal «التحليل الفني ببساطة» (sábados, desde el 28-nov-2026):** instrucciones en `bahrain/educativo/CLAUDE.md`
+  (prevalecen sobre el texto de su tarea programada). Plan de 10 temas en `bahrain/educativo/plan-lessons-bahrain.json`.
