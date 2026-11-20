@@ -1,27 +1,21 @@
-"""Temporary probe (2): find the public daily price history of a Bahrain Bourse stock (NBB) that the Mubasher stock page and the
-Bahrain Bourse website show, by loading both pages in a browser and recording the responses that carry dated prices."""
-import json, os, re
-from playwright.sync_api import sync_playwright
+"""Temporary probe (3): the Mubasher stock list for Bahrain carries a chartFileUrl per stock; fetch NBB's and ALBH's chart files."""
+import json, os, urllib.request
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+get = lambda u: urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=40).read().decode("utf-8", "replace")
 out = {}
-with sync_playwright() as p:
-    br = p.chromium.launch()
-    for k, u in {"mubasher": "https://english.mubasher.info/markets/BB/stocks/NBB", "bourse": "https://www.bahrainbourse.com/en/market-data/historical-data"}.items():
-        pg = br.new_page(viewport={"width": 1400, "height": 2400}); hits = []
-        def resp(r, hits=hits):
+try:
+    L = json.loads(get("https://english.mubasher.info/api/v1/stock-prices/daily?countryCode=bh&sort=turnover&desc=true&page=0&size=200"))["data"]["content"]
+    out["lista"] = [{k: x.get(k) for k in ("exchange", "name", "code", "value", "chartFileUrl", "updatedAt", "url")} for x in L]
+except Exception as e:
+    out["lista_error"] = str(e)[:300]
+for x in out.get("lista", []):
+    if x["code"] in ("NBB", "ALBH") and x.get("chartFileUrl"):
+        u = x["chartFileUrl"]; u = u if u.startswith("http") else "https://static.mubasher.info/" + u.lstrip("/")
+        for d in (u, u.replace("Delay_Stock_Intraday", "Historical_Stock").replace("Intraday", "Historical")):
             try:
-                ct = r.headers.get("content-type", "")
-                if any(s in ct for s in ("json", "csv", "text/plain")):
-                    t = r.text()
-                    if len(re.findall(r"20(?:24|25|26)[-/]\d\d[-/]\d\d|1[67]\d{8}", t)) > 30: hits.append({"url": r.url, "len": len(t), "head": t[:600]})
-            except Exception: pass
-        pg.on("response", resp)
-        try:
-            pg.goto(u, wait_until="networkidle", timeout=60000)
-            for _ in range(3): pg.mouse.wheel(0, 600); pg.wait_for_timeout(3000)
-            pg.screenshot(path=f"/tmp/probe/{k}.png")
-        except Exception as e:
-            hits.append({"error": str(e)[:300]})
-        out[k] = hits; pg.close()
-    br.close()
+                b = get(d); out["csv_" + x["code"] + "_" + d[-60:]] = {"url": d, "len": len(b), "head": b[:300], "tail": b[-300:]}
+            except Exception as e:
+                out["csv_" + x["code"] + "_" + d[-60:]] = {"url": d, "error": str(e)[:200]}
+os.makedirs("/tmp/probe", exist_ok=True)
 json.dump(out, open("/tmp/probe/probe-velas-bahrain.json", "w"), ensure_ascii=False, indent=1)
-print({k: len(v) for k, v in out.items()})
+print(json.dumps({k: v if k != "lista" else len(v) for k, v in out.items()}, ensure_ascii=False)[:3000])
