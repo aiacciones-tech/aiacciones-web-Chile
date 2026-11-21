@@ -1,7 +1,11 @@
 # Serie «عمالقة وول ستريت» de Nabd Wall Street: instrucciones de la rutina diaria (Daniel, 13-nov-2026)
 
 Un episodio en árabe por empresa **después de cada informe de resultados**, a partir del trimestre en curso (eventos desde el 1-oct-2026),
-de las 20 empresas: NVDA, MSFT, AAPL, GOOGL, AMZN, META, AVGO, TSLA, BRK, JPM, LLY, WMT, ORCL, V, MA, XOM, NFLX, COST, JNJ, PLTR.
+de las 22 empresas: NVDA, MSFT, AAPL, GOOGL, AMZN, META, AVGO, TSLA, BRK, JPM, LLY, WMT, ORCL, V, MA, XOM, NFLX, COST, JNJ, PLTR,
+**SPCX (SpaceX) y ANT (Anthropic)**, estas dos añadidas por Daniel el 21-nov-2026 (ambas en Nasdaq: SpaceX salió a bolsa el 12-jun-2026 y
+Anthropic el 18-nov-2026). SpaceX publicó su tercer trimestre de 2026 a finales de octubre, así que su episodio entra como pendiente; Anthropic
+aún no ha publicado resultados como cotizada: su primer episodio saldrá solo cuando TradingView registre su primer informe.
+Al ser recién cotizadas, tienen pocos trimestres de historial: los gráficos muestran los que haya.
 Reglas de Daniel: **máximo 4 minutos** por vídeo; **máximo 3 vídeos de la serie al día** (si coinciden más, pasan a los días siguientes;
 `plan.py` lo reparte); sin pasos manuales; todo lo que se entrega termina en `-Nabd`. Presentación de la serie: https://www.youtube.com/watch?v=hU3GozeSL_U
 El vídeo diario (nabd/diario/, 8-10 min) es otra cosa y no cambia.

@@ -21,7 +21,7 @@ AVISO = """إخلاء مسؤولية مهم
 I = VJ["info"]
 titulo = I["titulo"]
 desc = (f"{I['resumen']}\n\n{tg_linea}\n\n" + "\n".join("• " + c for c in VJ["claves"]) + f"\n\nالفصول\n{cap}\n\n"
-        f"المصادر: {I['fuentes']}\n\nسلسلة «{SERIE}»: حلقة عن كل شركة من أكبر 20 شركة أمريكية بعد إعلان نتائجها.\n\n{AVISO}\n\n"
+        f"المصادر: {I['fuentes']}\n\nسلسلة «{SERIE}»: حلقة عن كل شركة من كبرى الشركات الأمريكية بعد إعلان نتائجها.\n\n{AVISO}\n\n"
         f"#عمالقة_وول_ستريت #نبض_وول_ستريت {I['hashtags']}\n\nاشترك في القناة: {CANAL}\n{tg_linea}")
 assert len(titulo) <= 100 and "<" not in desc and ">" not in desc and len(desc) < 5000, (len(titulo), len(desc))
 tags = ["عمالقة وول ستريت", "نبض وول ستريت", "Nabd Wall Street", VJ["ar"], VJ["en"], VJ["ticker"], "نتائج الشركات", "القوائم المالية",
