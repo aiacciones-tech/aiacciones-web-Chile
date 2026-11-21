@@ -1,4 +1,4 @@
-"""Datos de la serie «عمالقة وول ستريت» (Nabd Wall Street): para cada una de las 20 empresas, la fecha de su último informe de resultados,
+"""Datos de la serie «عمالقة وول ستريت» (Nabd Wall Street): para cada una de las 22 empresas (20 iniciales + SpaceX y Anthropic, 21-nov-2026), la fecha de su último informe de resultados,
 el trimestre publicado, sus cifras (ingresos, beneficio, BPA, flujo de caja, balance), el historial trimestral, las estimaciones de los
 analistas y la sorpresa frente a ellas, y la próxima fecha de resultados. Fuente: escáner de TradingView (la misma del vídeo diario;
 la SEC bloquea las descargas automáticas desde GitHub Actions con 403 «Undeclared Automated Tool», 13-nov-2026).
@@ -12,7 +12,8 @@ NY = ZoneInfo("America/New_York")
 EMPRESAS = [("NVDA", "NASDAQ:NVDA"), ("MSFT", "NASDAQ:MSFT"), ("AAPL", "NASDAQ:AAPL"), ("GOOGL", "NASDAQ:GOOGL"), ("AMZN", "NASDAQ:AMZN"),
             ("META", "NASDAQ:META"), ("AVGO", "NASDAQ:AVGO"), ("TSLA", "NASDAQ:TSLA"), ("BRK", "NYSE:BRK.A"), ("JPM", "NYSE:JPM"),
             ("LLY", "NYSE:LLY"), ("WMT", "NASDAQ:WMT"), ("ORCL", "NYSE:ORCL"), ("V", "NYSE:V"), ("MA", "NYSE:MA"), ("XOM", "NYSE:XOM"),
-            ("NFLX", "NASDAQ:NFLX"), ("COST", "NASDAQ:COST"), ("JNJ", "NYSE:JNJ"), ("PLTR", "NASDAQ:PLTR")]
+            ("NFLX", "NASDAQ:NFLX"), ("COST", "NASDAQ:COST"), ("JNJ", "NYSE:JNJ"), ("PLTR", "NASDAQ:PLTR"),
+            ("SPCX", "NASDAQ:SPCX"), ("ANT", "NASDAQ:ANT")]   # SpaceX y Anthropic: añadidas por Daniel el 21-nov-2026
 COLS = """description close market_cap_basic earnings_release_date earnings_release_next_date fiscal_period_current fiscal_period_end_fq
 total_revenue_fq total_revenue_ttm net_income_fq net_income_ttm earnings_per_share_diluted_fq gross_profit_fq oper_income_fq
 total_revenue_yoy_growth_fq net_income_yoy_growth_fq earnings_per_share_diluted_yoy_growth_fq
