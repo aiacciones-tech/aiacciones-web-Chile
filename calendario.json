@@ -1,0 +1,35 @@
+{
+ "generado": "2026-11-21T07:27:49+00:00",
+ "inicio": "2026-10-01",
+ "fuente": "TradingView",
+ "empresas": [
+  {
+   "ticker": "ANT",
+   "simbolo": "NASDAQ:ANT",
+   "cap": 1175358373313.5957,
+   "evento": {
+    "fecha": "2026-11-02",
+    "hora_utc": "2026-11-02T12:00+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-02-24T12:00+00:00",
+   "proxima_ny": "2027-02-24"
+  },
+  {
+   "ticker": "SPCX",
+   "simbolo": "NASDAQ:SPCX",
+   "cap": 1735524103514.8901,
+   "evento": {
+    "fecha": "2026-10-20",
+    "hora_utc": "2026-10-20T20:05+00:00",
+    "periodo": "2026-Q3",
+    "fin_periodo": "2026-09-30",
+    "datos_listos": true
+   },
+   "proxima": "2027-02-25T12:00+00:00",
+   "proxima_ny": "2027-02-25"
+  }
+ ]
+}
