@@ -31,6 +31,7 @@ cp $B/$BASE-GE.mp4 $C/video.mp4; cp $B/meta-youtube-$BASE-GE.json $C/meta.json; 
 cp $B/post-telegram-$BASE-GE.txt $C/post-telegram.txt; cp $B/post-x-$BASE-GE.txt $C/post-x.txt
 [ -s $B/post-tiktok-$BASE-GE.txt ] && cp $B/post-tiktok-$BASE-GE.txt $C/post-tiktok.txt   # TikTok vía buffer-GE.yml
 [ -s $B/post-linkedin-$BASE-GE.txt ] && cp $B/post-linkedin-$BASE-GE.txt $C/post-linkedin.txt   # LinkedIn vía buffer-GE.yml
+[ -s $B/post-instagram-$BASE-GE.txt ] && cp $B/post-instagram-$BASE-GE.txt $C/post-instagram.txt   # Instagram (Reel) vía buffer-GE.yml
 TZ=Europe/Berlin date +%F' '%H:%M > $C/encolado.txt
 git add $C; git commit -qm "Cola GE: serie 20 acciones, $BASE"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done

@@ -16,7 +16,7 @@ Valen todas las reglas de `ge/diario/CLAUDE.md` (Keine Anlageberatung, transpare
 - `plan.py <datos> <cola-ge> [<datos-ge>]`: episodios de hoy (0-3, día de Berlín) y pendientes, de las dos ramas de datos; cada episodio dice en `datos` de qué carpeta copiar `datos.json`.
 - `make_episodio.py <carpeta> [preview]`: 7 escenas (Einstieg, Das Quartal in Zahlen, Umsatz und Marge, Bilanz, Cashflow, Erwartungen, Fazit),
   1920x1080, 120-240 s, control de calidad. Las cifras de pantalla salen solas de `datos.json`.
-- `meta_episodio.py <carpeta>`: meta de YouTube (`language: de`), posts de Telegram, X, LinkedIn (página del canal, con enlace al episodio) y TikTok (el episodio entero), los tres últimos vía Buffer, miniatura.
+- `meta_episodio.py <carpeta>`: meta de YouTube (`language: de`), posts de Telegram, X, LinkedIn (página del canal, con enlace al episodio), TikTok e Instagram (el episodio entero, como Reel), los cuatro últimos vía Buffer, miniatura.
 - `encolar.sh <carpeta>`: `cola-ge/serie20-<ticker>-<fecha>/` en `youtube-cola`; `youtube-GE.yml` sube y `telegram-GE.yml` publica.
 - Voz: `.github/workflows/serie20-voz-GE.yml` (Azure de-DE-ConradNeural, mismo recurso que el diario), rama `voz-ge-serie20` (aparte de `voz-ge`).
 - Ejemplo de `video.json`: `episodios/serie20-nvda-2026-11-17/`. Claves: ticker, nombre, sector, sector_tipo («banco» para JPM, BRK no),

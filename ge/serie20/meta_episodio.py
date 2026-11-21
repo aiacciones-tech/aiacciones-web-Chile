@@ -54,6 +54,8 @@ tk = (f"{SERIE}: {VJ['nombre']} ({VJ['ticker']}) · {VJ['trimestre']}\n\n{I['x']
       + " ".join(dict.fromkeys(f"#WallStreetAufDeutsch #WallStreetGiganten #Quartalszahlen #Aktien #Börse {I['hashtags']}".split())))
 assert len(tk) <= 2200 and "{youtube}" not in tk, len(tk)
 open(f"{D}/post-tiktok-{BASE}-GE.txt", "w").write(tk)
+# Instagram (Reel, vía la segunda cuenta de Buffer; conectado el 21-nov-2026): el mismo texto que TikTok
+open(f"{D}/post-instagram-{BASE}-GE.txt", "w").write(tk)
 
 # Miniatura 1280x720
 th = VJ["miniatura"]; f = fig(1280, 720)
