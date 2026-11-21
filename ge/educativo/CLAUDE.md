@@ -27,7 +27,7 @@ Plan de temas (orden propuesto): 1 Unterstützung und Widerstand (NVDA) · 2 Gle
   y genera la voz Azure de-DE-ConradNeural (mismo recurso y secretos que el diario) en `<base>/` de la rama `voz-ge-educativo`.
 - `niveles.py <velas.json> [ventana] [tolerancia %] [sesiones]`: pivotes y zonas candidatas con toques y fechas, para escribir el guion.
 - `make_leccion.py <carpeta> [preview]` (con `AUD`, `VELAS`, `VOZ_DIR`): 4-9 min, control de calidad, escribe mp4, times.json y guion.
-- `meta_leccion.py <carpeta>`: meta de YouTube (language de), posts de Telegram, X, LinkedIn y TikTok, miniatura (gráfico de la escena `miniatura.grafico`).
+- `meta_leccion.py <carpeta>`: meta de YouTube (language de), posts de Telegram, X, LinkedIn, TikTok e Instagram (Reel), miniatura (gráfico de la escena `miniatura.grafico`).
 - `encolar.sh <carpeta>`: `cola-ge/<base>/` en `youtube-cola`; `youtube-GE.yml` sube, `telegram-GE.yml` y `buffer-GE.yml` publican.
 
 ## Pasos

@@ -3,7 +3,7 @@
 # y el post-tiktok.txt del Short (cuenta de TikTok, el Short subido como video). Una red sin conectar en Buffer espera sin error.
 # Instagram: el post-instagram.txt del Short sale como Reel desde una segunda cuenta de Buffer (la primera ya tiene 3 canales).
 # Claves: Settings > Secrets and variables > Actions > Secrets > BUFFER_API_KEY_GE (LinkedIn, X y TikTok)
-# y BUFFER_API_KEY_IG_GE (Instagram; opcional: sin ella los Reels esperan).
+# y BUFFER2_API_KEY_GE o BUFFER_API_KEY_IG_GE (segunda cuenta, Instagram; sin ella los Reels esperan).
 # "Run workflow": modo=verificar solo prueba la clave y muestra los canales; programar manda lo pendiente;
 # lanzamiento publica una sola vez los posts de estreno de ge/*/cola-ge/ (LinkedIn, X e Instagram; los ya mandados no se repiten).
 name: Mandar posts a Buffer (Wall Street auf Deutsch)
@@ -27,7 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BUFFER_API_KEY_GE: ${{ secrets.BUFFER_API_KEY_GE }}
-      BUFFER_API_KEY_IG_GE: ${{ secrets.BUFFER_API_KEY_IG_GE }}
+      # la segunda cuenta de Buffer (Instagram) la guardó Daniel como BUFFER2_API_KEY_GE (21-nov-2026); vale cualquiera de los dos nombres
+      BUFFER_API_KEY_IG_GE: ${{ secrets.BUFFER_API_KEY_IG_GE || secrets.BUFFER2_API_KEY_GE }}
       BUFFER_MODO: ${{ vars.BUFFER_MODO_GE }}
       BUFFER_CANAL_LINKEDIN_GE: ${{ vars.BUFFER_CANAL_LINKEDIN_GE }}
       COLA_RAMA: ${{ (github.event_name == 'workflow_run' || (github.event_name == 'push' && github.ref_name == 'youtube-cola') || (github.event_name == 'workflow_dispatch' && inputs.modo == 'programar')) && 'si' || 'no' }}

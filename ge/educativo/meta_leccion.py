@@ -51,6 +51,8 @@ tk = (f"{SERIE}, Folge {VJ['folge']}: {VJ['tema']}\n\n{I['x']}\n\n" + "\n".join(
       + " ".join(dict.fromkeys(f"#WallStreetAufDeutsch #ChartTechnik #Aktien #Börse #Börsenwissen {I['hashtags']}".split())))
 assert len(tk) <= 2200 and "{youtube}" not in tk, len(tk)
 open(f"{D}/post-tiktok-{BASE}-GE.txt", "w").write(tk)
+# Instagram (Reel, vía la segunda cuenta de Buffer; conectado el 21-nov-2026): el mismo texto que TikTok
+open(f"{D}/post-instagram-{BASE}-GE.txt", "w").write(tk)
 
 # Miniatura 1280x720: título de la lección y un recorte del gráfico real con las zonas
 th = VJ["miniatura"]; VEL = json.load(open(os.environ.get("VELAS", f"{D}/velas.json")))["series"][VJ["simbolo"]]["velas"]
