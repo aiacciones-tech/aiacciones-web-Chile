@@ -3,15 +3,90 @@
  "dia": "sábado (Tadawul cerrado; sin vídeo diario ni informe de estadísticas)",
  "nota": "Plan de Daniel (18-nov-2026): 10 temas, uno por semana. La acción de cada lección se elige al escribirla entre las 25 grandes de TASI, la que mejor enseñe el concepto con su gráfico real; la sugerida es solo un punto de partida. Al publicar, poner estado 'publicada' con fecha y IDs de YouTube.",
  "lecciones": [
-  {"folge": 1, "tema": "الدعم والمقاومة", "es": "Soportes y resistencias", "accion": "1120 مصرف الراجحي", "base": "ta-01-alrajhi", "fecha": "2026-11-21", "estado": "lista"},
-  {"folge": 2, "tema": "المتوسطات المتحركة", "es": "Medias móviles (50 y 200 sesiones)", "sugerida": "2222 أرامكو السعودية", "fecha": "2026-11-28", "estado": "pendiente"},
-  {"folge": 3, "tema": "خطوط الاتجاه والقنوات السعرية", "es": "Líneas de tendencia y canales", "sugerida": "2010 سابك", "fecha": "2026-12-05", "estado": "pendiente"},
-  {"folge": 4, "tema": "حجم التداول", "es": "Volumen", "sugerida": "7010 إس تي سي", "fecha": "2026-12-12", "estado": "pendiente"},
-  {"folge": 5, "tema": "مؤشر القوة النسبية RSI", "es": "RSI", "sugerida": "1180 البنك الأهلي السعودي", "fecha": "2026-12-19", "estado": "pendiente"},
-  {"folge": 6, "tema": "مؤشر الماكد MACD", "es": "MACD", "sugerida": "1211 معادن", "fecha": "2026-12-26", "estado": "pendiente"},
-  {"folge": 7, "tema": "الشموع اليابانية", "es": "Velas japonesas y sus patrones", "sugerida": "2280 المراعي", "fecha": "2027-01-02", "estado": "pendiente"},
-  {"folge": 8, "tema": "النماذج الفنية: الرأس والكتفين والقاع المزدوج", "es": "Figuras: hombro-cabeza-hombro, doble suelo", "sugerida": "la que tenga una figura clara en 2 años", "fecha": "2027-01-09", "estado": "pendiente"},
-  {"folge": 9, "tema": "الفجوات السعرية", "es": "Huecos (gaps)", "sugerida": "1120 الراجحي (huecos de sep-2025 y mar-2026) u otra", "fecha": "2027-01-16", "estado": "pendiente"},
-  {"folge": 10, "tema": "نطاقات بولينجر", "es": "Bandas de Bollinger", "sugerida": "2222 أرامكو السعودية u otra", "fecha": "2027-01-23", "estado": "pendiente"}
+  {
+   "folge": 1,
+   "tema": "الدعم والمقاومة",
+   "es": "Soportes y resistencias",
+   "accion": "1120 مصرف الراجحي",
+   "base": "ta-01-alrajhi",
+   "fecha": "2026-11-21",
+   "estado": "publicada",
+   "publicada": "2026-11-21",
+   "youtube": "8TtoTYBJrDg",
+   "short": "2rCZrSDOqS0",
+   "ultima_vela": "2026-11-19"
+  },
+  {
+   "folge": 2,
+   "tema": "المتوسطات المتحركة",
+   "es": "Medias móviles (50 y 200 sesiones)",
+   "sugerida": "2222 أرامكو السعودية",
+   "fecha": "2026-11-28",
+   "estado": "pendiente"
+  },
+  {
+   "folge": 3,
+   "tema": "خطوط الاتجاه والقنوات السعرية",
+   "es": "Líneas de tendencia y canales",
+   "sugerida": "2010 سابك",
+   "fecha": "2026-12-05",
+   "estado": "pendiente"
+  },
+  {
+   "folge": 4,
+   "tema": "حجم التداول",
+   "es": "Volumen",
+   "sugerida": "7010 إس تي سي",
+   "fecha": "2026-12-12",
+   "estado": "pendiente"
+  },
+  {
+   "folge": 5,
+   "tema": "مؤشر القوة النسبية RSI",
+   "es": "RSI",
+   "sugerida": "1180 البنك الأهلي السعودي",
+   "fecha": "2026-12-19",
+   "estado": "pendiente"
+  },
+  {
+   "folge": 6,
+   "tema": "مؤشر الماكد MACD",
+   "es": "MACD",
+   "sugerida": "1211 معادن",
+   "fecha": "2026-12-26",
+   "estado": "pendiente"
+  },
+  {
+   "folge": 7,
+   "tema": "الشموع اليابانية",
+   "es": "Velas japonesas y sus patrones",
+   "sugerida": "2280 المراعي",
+   "fecha": "2027-01-02",
+   "estado": "pendiente"
+  },
+  {
+   "folge": 8,
+   "tema": "النماذج الفنية: الرأس والكتفين والقاع المزدوج",
+   "es": "Figuras: hombro-cabeza-hombro, doble suelo",
+   "sugerida": "la que tenga una figura clara en 2 años",
+   "fecha": "2027-01-09",
+   "estado": "pendiente"
+  },
+  {
+   "folge": 9,
+   "tema": "الفجوات السعرية",
+   "es": "Huecos (gaps)",
+   "sugerida": "1120 الراجحي (huecos de sep-2025 y mar-2026) u otra",
+   "fecha": "2027-01-16",
+   "estado": "pendiente"
+  },
+  {
+   "folge": 10,
+   "tema": "نطاقات بولينجر",
+   "es": "Bandas de Bollinger",
+   "sugerida": "2222 أرامكو السعودية u otra",
+   "fecha": "2027-01-23",
+   "estado": "pendiente"
+  }
  ]
 }
