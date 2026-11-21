@@ -22,7 +22,7 @@ fecha_de = lambda d: f"{d.day}. {MESES_L[d.month - 1]} {d.year}"
 SER = VEL["series"][VJ["simbolo"]]
 # solo sesiones cerradas hasta "ultima_vela" (la vela del día en curso de velas.json puede ser intradía)
 VELAS = [v for v in SER["velas"] if not VJ.get("ultima_vela") or fecha_v(v["t"]).isoformat() <= VJ["ultima_vela"]]; ULT = fecha_v(VELAS[-1]["t"])
-FUENTE = f"Kursdaten: TradingView (Tageskerzen {VJ['simbolo']}, Stand {fecha_de(ULT)}). Zonen und Markierungen berechnet bzw. eingezeichnet."
+FUENTE = f"Kursdaten: TradingView (Tageskerzen, Stand Schlusskurs {fecha_de(ULT)}). Gleitende Durchschnitte, Zonen und Markierungen berechnet bzw. eingezeichnet."
 LG = load_logo(130); LGB = load_logo(230)
 CAP = [e.get("capitulo") for e in ESC if e.get("capitulo")]
 CAP_IDX = [sum(1 for x in ESC[:i + 1] if x.get("capitulo")) for i in range(len(ESC))]
@@ -64,7 +64,7 @@ def s_portada(i, e, t):
 
 
 def s_puntos(i, e, t):
-    f = base(i, e["kicker"], e["titulo"]); P = e["puntos"][:5]; hh = min(0.12, 0.6 / len(P))
+    f = base(i, e["kicker"], e["titulo"]); P = e["puntos"][:5]; hh = min(0.12, 0.52 / len(P))
     for k, (tit, txt) in enumerate(P):
         b = ease((t - k * 0.1) / 0.4); y = 0.68 - (k + 1) * hh
         rect(f, 0.06, y, 0.88, hh - 0.014, NAVY, b); rect(f, 0.06, y, 0.005, hh - 0.014, e.get("colores", [GOLD] * 5)[k], b)
@@ -114,9 +114,29 @@ def s_esquema(i, e, t):
     return to_arr(f)
 
 
-def _rango(e):
+def _serie(e):
+    """Velas cerradas del símbolo de la escena ("simbolo" en la escena para otra acción de velas.json; por defecto el de la lección)."""
+    s = e.get("simbolo", VJ["simbolo"])
+    return VELAS if s == VJ["simbolo"] else [v for v in VEL["series"][s]["velas"] if fecha_v(v["t"]) <= ULT]
+
+
+def _rango(e, con_previas=False):
     d0 = dt.date.fromisoformat(e["desde"]) if e.get("desde") else None; d1 = dt.date.fromisoformat(e["hasta"]) if e.get("hasta") else ULT
-    return [v for v in VELAS if (d0 is None or fecha_v(v["t"]) >= d0) and fecha_v(v["t"]) <= d1]
+    S = _serie(e); idx = [k for k, v in enumerate(S) if (d0 is None or fecha_v(v["t"]) >= d0) and fecha_v(v["t"]) <= d1]
+    return (S, idx[0], idx[-1] + 1) if con_previas else S[idx[0]:idx[-1] + 1]
+
+
+COL_MA = {20: BLUE, 50: GOLD, 200: "#C084FC"}   # GD 20 azul, GD 50 dorada, GD 200 violeta
+
+
+def medias(e):
+    """Medias móviles simples de cierre (berechnet) para el rango de la escena, con las sesiones previas para que empiecen completas."""
+    S, a, b = _rango(e, True); c = np.array([v["c"] for v in S], float); out = {}
+    for m in e.get("medias", []):
+        ma = np.full(len(c), np.nan)
+        if len(c) >= m: cs = np.cumsum(np.insert(c, 0, 0)); ma[m - 1:] = (cs[m:] - cs[:-m]) / m
+        out[m] = ma[a:b]
+    return out
 
 
 def s_grafico(i, e, t):
@@ -128,11 +148,20 @@ def s_grafico(i, e, t):
     up = c >= o; xs = np.arange(n); wd = 0.65 if n < 160 else 0.75
     ymin, ymax = lo.min(), hi.max(); pad = (ymax - ymin) * 0.08
     for z in e.get("zonas", []): ymin = min(ymin, z["de"]); ymax = max(ymax, z["a"])
+    for ma in medias(e).values(): ymin = min(ymin, np.nanmin(ma)); ymax = max(ymax, np.nanmax(ma))
     ax.set_ylim(ymin - pad * 2.0, ymax + pad * 1.8); ax.set_xlim(-1, n + (n * 0.25))
     ax.vlines(xs[:rev], lo[:rev], hi[:rev], color=[TEAL if u else NEG for u in up[:rev]], lw=1.1 if n > 160 else 1.6)
     ax.bar(xs[:rev], np.maximum(np.abs(c - o), (ymax - ymin) * 0.002)[:rev], bottom=np.minimum(o, c)[:rev], width=wd,
            color=[TEAL if u else NEG for u in up[:rev]])
     za = ease((t - 0.25) / 0.35)
+    etq = []
+    for k, (m, ma) in enumerate(medias(e).items()):
+        a = ease((t - 0.2 - k * 0.15) / 0.35); r = max(2, int(rev * a)) if e.get("animar_velas") else max(2, int(n * a))
+        ax.plot(xs[:r], ma[:r], color=col(COL_MA.get(m, FG)), lw=3 if m == 200 else 2.4, alpha=0.95 * min(1, a * 3))
+        if a > 0.95 and not np.isnan(ma[-1]): etq.append([ma[-1], m])
+    gap = (ymax - ymin) * 0.06; etq.sort()   # etiquetas GD sin solaparse, a la derecha de la etiqueta del precio
+    for k in range(1, len(etq)): etq[k][0] = max(etq[k][0], etq[k - 1][0] + gap)
+    for y, m in etq: ax.text(n + n * 0.085, y, f"GD {m}", color=col(COL_MA.get(m, FG)), fontsize=15, weight="bold", va="center")
     for k, z in enumerate(e.get("zonas", [])):
         a = ease((t - 0.25 - k * 0.12) / 0.35); cc = col(z.get("color", "gold"))
         ax.axhspan(z["de"], z["a"], color=cc, alpha=0.22 * a, lw=0)
@@ -168,7 +197,8 @@ def s_grafico(i, e, t):
         av.set_xlim(ax.get_xlim()); av.set_yticks([]); av.set_ylim(0, vv.max() * 1.1)
         av.set_xticks([p[0] for p in tk[::step]], [p[1] for p in tk[::step]]); av.tick_params(labelsize=15)
         T(f, 0.86, 0.318, "Handelsvolumen", MUTED, 14, ha="right")
-    T(f, 0.06, 0.785, f"{VJ['nombre']} ({VJ['ticker']}) · Tageskerzen · US-Dollar", MUTED, 18, "bold")
+    T(f, 0.06, 0.785, f"{e.get('nombre', VJ['nombre'])} ({e.get('ticker', VJ['ticker'])}) · Tageskerzen · US-Dollar" +
+      ("".join(f" · GD {m}" for m in e.get("medias", [])) + " (gleitende Durchschnitte, berechnet)" if e.get("medias") else ""), MUTED, 18, "bold")
     if e.get("nota"):
         b = ease((t - 0.5) / 0.4); T(f, 0.94, 0.785, e["nota"], GOLD, 20, "bold", ha="right", alpha=b)
     fuente(f, FUENTE)
@@ -185,8 +215,8 @@ def s_fin(i, e, t):
     if e.get("siguiente"): T(f, 0.06, 0.47, "Nächste Folge: " + e["siguiente"], GOLD, 26, "bold", alpha=b)
     T(f, 0.06, 0.42, "Unser Telegram-Kanal: " + TELEGRAM.replace("https://", "") + " · Kanal abonnieren", BLUE, 24, "bold", alpha=b)
     aviso = ("Wichtiger Hinweis: Nur Information und Bildung. Keine Anlageberatung und keine Kauf- oder Verkaufsempfehlung für ein Wertpapier. "
-             f"{VJ['nombre']} dient nur als Beispiel. Charttechnik beschreibt vergangene Kursverläufe und sagt keine Kurse voraus. Kursdaten: TradingView; "
-             "Zonen eigene Berechnung. Wir halten keine Positionen in der genannten Aktie. Aktien sind mit Risiken bis zum Totalverlust verbunden. "
+             "Die genannten Aktien dienen nur als Beispiel. Charttechnik beschreibt vergangene Kursverläufe und sagt keine Kurse voraus. Kursdaten: TradingView; "
+             "Linien und Zonen eigene Berechnung. Wir halten keine Positionen in den genannten Aktien. Aktien sind mit Risiken bis zum Totalverlust verbunden. "
              "Text, Stimme (synthetische Stimme) und Grafiken mit KI erstellt.")
     T(f, 0.06, 0.33, "\n".join(textwrap.wrap(aviso, 140)), MUTED, 15, linespacing=1.5, alpha=a, va="top")
     return with_logo(to_arr(f), LGB, x=W - 340, y=70)
@@ -232,6 +262,9 @@ def control():
         if not e.get("voz"): err.append(f"escena {k} ({e.get('id')}): sin locución")
         if e.get("tipo") == "grafico":
             V = _rango(e)
+            if e.get("simbolo") and (e["simbolo"] not in VEL["series"] or not e.get("nombre")): err.append(f"escena {k}: simbolo sin velas o sin nombre")
+            for m, ma in medias(e).items():
+                if np.isnan(ma[0]): err.append(f"escena {k}: no hay sesiones previas suficientes para la GD {m}")
             if len(V) < 20: err.append(f"escena {k}: menos de 20 velas en el rango")
             fechas = {fecha_v(v["t"]).isoformat() for v in V}
             for m in e.get("marcas", []):
