@@ -2,7 +2,9 @@
 Regla de Daniel (13 y 18-nov-2026): un episodio por empresa de las 20 mayores de EE. UU. tras cada informe de resultados, como máximo
 3 vídeos de la serie al día; si coinciden más, pasan a los días siguientes (el más antiguo primero y, a igual fecha, la empresa más grande).
 Lee los datos de la rama datos-serie20-nabd (los escribe serie20-datos-Nabd.yml; aquí solo se leen).
-uso: python3 plan.py <rama datos-serie20-nabd> <carpeta cola-ge de youtube-cola>
+Además lee, si se pasa, la rama datos-serie20-ge (empresas extra del canal alemán: ANT y SPCX, Daniel 21-nov-2026; serie20-datos-GE.yml).
+uso: python3 plan.py <rama datos-serie20-nabd> <carpeta cola-ge de youtube-cola> [<rama datos-serie20-ge>]
+Cada episodio lleva "datos": la carpeta de datos de la que copiar <TICKER>/datos.json.
 Imprime el calendario y, en la última línea, JSON con "hoy": [{ticker, fecha, carpeta}] (0 a 3) y "pendientes"."""
 import json, os, sys, datetime as dt
 from zoneinfo import ZoneInfo
@@ -14,6 +16,11 @@ BERLIN = ZoneInfo("Europe/Berlin")
 
 def main():
     datos, cola = sys.argv[1], sys.argv[2]; cal = json.load(open(os.path.join(datos, "calendario.json")))
+    for e in cal["empresas"]: e["_datos"] = datos
+    if len(sys.argv) > 3 and os.path.exists(os.path.join(sys.argv[3], "calendario.json")):
+        extra = json.load(open(os.path.join(sys.argv[3], "calendario.json")))
+        for e in extra["empresas"]: e["_datos"] = sys.argv[3]
+        cal["empresas"] += extra["empresas"]
     hoy = dt.datetime.now(BERLIN).date().isoformat()
     hechos, hoy_n = set(), 0
     for d in sorted(os.listdir(cola)) if os.path.isdir(cola) else []:
@@ -27,7 +34,7 @@ def main():
         if not ev or not ev.get("datos_listos") or ev["fecha"] < INICIO: continue   # sin cifras en TradingView todavía, o anterior al inicio
         carpeta = f"serie20-{e['ticker'].lower()}-{ev['fecha']}"
         if carpeta in hechos: continue
-        pend.append({"ticker": e["ticker"], "fecha": ev["fecha"], "periodo": ev.get("periodo"), "carpeta": carpeta, "cap": e.get("cap") or 0})
+        pend.append({"ticker": e["ticker"], "fecha": ev["fecha"], "periodo": ev.get("periodo"), "carpeta": carpeta, "cap": e.get("cap") or 0, "datos": e["_datos"]})
     pend.sort(key=lambda x: (x["fecha"], -x["cap"]))
     libres = max(0, MAX_DIA - hoy_n)
     print(f"datos de {cal['generado']} · ya encolados hoy ({hoy}, Berlín): {hoy_n} · huecos hoy: {libres} · desde {INICIO}")
