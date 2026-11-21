@@ -1,0 +1,12 @@
+{
+ "base": "charttechnik-02-aapl",
+ "folge": 2,
+ "simbolo": "NASDAQ:AAPL",
+ "simbolos_extra": ["NASDAQ:MSFT", "NASDAQ:TSLA", "NASDAQ:AMZN"],
+ "velas_n": 700,
+ "ticker": "AAPL",
+ "nombre": "Apple",
+ "tema": "Gleitende Durchschnitte",
+ "voz": {},
+ "escenas": []
+}
