@@ -72,7 +72,13 @@ cc = [TEAL if a >= b else NEG for a, b in zip(c, o)]
 ax.vlines(xs, l, h, color=cc, lw=1.6); ax.bar(xs, np.maximum(abs(c - o), 0.3), bottom=np.minimum(o, c), color=cc, width=0.7)
 for z in g.get("zonas", []):
     ax.axhspan(z["de"], z["a"], color=col(z.get("color", "gold")), alpha=0.35, lw=0)
-ax.set_xlim(-1, len(V)); ax.set_ylim(min(l.min(), *[z["de"] for z in g["zonas"]]) * 0.98, max(h.max(), *[z["a"] for z in g["zonas"]]) * 1.01)
+lo_, hi_ = min([l.min()] + [z["de"] for z in g.get("zonas", [])]), max([h.max()] + [z["a"] for z in g.get("zonas", [])])
+if g.get("medias"):   # medias móviles (berechnet) en la miniatura, con las sesiones previas
+    VA = [v for v in VEL if fv(v["t"]) <= g.get("hasta", VJ.get("ultima_vela", "9"))]; ca = np.array([v["c"] for v in VA]); i0 = len(VA) - len(V)
+    for m in g["medias"]:
+        ma = np.convolve(ca, np.ones(m) / m, "valid")[i0 - m + 1:]
+        ax.plot(xs, ma, color={20: BLUE, 50: GOLD, 200: "#C084FC"}.get(m, FG), lw=3.5); lo_, hi_ = min(lo_, ma.min()), max(hi_, ma.max())
+ax.set_xlim(-1, len(V)); ax.set_ylim(lo_ * 0.98, hi_ * 1.01)
 p = f"{D}/miniatura-{BASE}-GE.png"; f.savefig(p, dpi=100, facecolor=BG); plt.close(f)
 im = Image.open(p).convert("RGBA"); lg = Image.open(LOGO).convert("RGBA").resize((150, 150), Image.LANCZOS); im.alpha_composite(lg, (1280 - 170, 4)); im.convert("RGB").save(p)
 print("ok", BASE, "desc", len(desc), "tg", len(tg), "titulo", len(titulo))
