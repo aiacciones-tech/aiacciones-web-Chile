@@ -49,6 +49,5 @@ La más importante = la de mayor capitalización. El aviso «محتوى إعلا
 8. Commit de `video.json`, meta, posts y guion (no el mp4 ni el png) en tu rama, PR a main y **fusiónalo tú** (regla de Daniel, 20-nov-2026).
 9. Resumen corto en español: enlace del Short, duración, voz, empresas incluidas y cualquier dato que se quitara por no estar verificado.
 
-Redes: YouTube Short (youtube-Nabd.yml), Telegram con la portada (telegram-Nabd.yml), y por Buffer X, LinkedIn, TikTok, Instagram (Reel),
-Facebook y Threads (buffer-Nabd.yml). Facebook y Threads no estaban conectados en Buffer el 22-nov-2026: sus posts esperan sin error y
-salen solos cuando Daniel los conecte en la cuenta de Buffer de Instagram (BUFFER_API_KEY_NABD_IG, que tiene sitio).
+Redes: YouTube Short (youtube-Nabd.yml), Telegram con la portada (telegram-Nabd.yml), y por Buffer X, LinkedIn, TikTok e Instagram (Reel)
+(buffer-Nabd.yml). **Facebook y Threads quedan fuera hasta nuevo aviso (Daniel, 22-nov-2026):** no generes ni encoles sus textos.

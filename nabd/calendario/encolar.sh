@@ -3,10 +3,10 @@
 # Sale el domingo entre las 19:00 y las 21:00 de Riad (16:00-18:00 UTC): si se llama antes de las 16:00 UTC, espera hasta esa hora
 # (NO_ESPERAR=1 para saltarlo). Después, sin pasos a mano: youtube-Nabd.yml sube el Short; telegram-Nabd.yml publica post-telegram.txt
 # con la portada (miniatura.png); buffer-Nabd.yml manda post-x.txt (X), post-linkedin.txt (LinkedIn, con el vídeo), post-tiktok.txt (TikTok),
-# post-instagram.txt (Reel), post-facebook.txt (Facebook) y post-threads.txt (Threads, con la portada). Una red sin conectar en Buffer espera sin error.
+# y post-instagram.txt (Reel). Facebook y Threads: fuera hasta nuevo aviso (Daniel, 22-nov-2026).
 set -e
 B=$(cd "$1" && pwd); BASE=$(python3 -c "import json;print(json.load(open('$B/video.json'))['base'])"); S=${SCRATCH:-/tmp/nabd-scratch}; mkdir -p $S
-POSTS="x telegram linkedin tiktok instagram facebook threads"
+POSTS="x telegram linkedin tiktok instagram"  # Facebook y Threads fuera hasta nuevo aviso (Daniel, 22-nov-2026)
 for f in $BASE-Nabd.mp4 meta-short-$BASE-Nabd.json miniatura-$BASE-Nabd.png $(for p in $POSTS; do echo post-$p-$BASE-Nabd.txt; done); do
   test -s "$B/$f" || { echo "falta $B/$f"; exit 1; }
 done
