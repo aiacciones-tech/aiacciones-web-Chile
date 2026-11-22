@@ -23,42 +23,43 @@
 ## Fichas de empresas (resultados 2T 2026)
 
 - [AES ANDES](https://aiacciones.cl/acciones/aes-andes/): Ficha de AES Andes: resultados 2T 2026, valoración y claves. Ex AES Gener.
-- [AFPCAPITAL](https://aiacciones.cl/acciones/afpcapital/): Ficha de AFP Capital: resultados 2T 2026, valoración y claves. Administradora de fondos de pensiones controlada por SURA Asset Management (grupo colombiano Sura) desde 2011.
+- [AFPCAPITAL](https://aiacciones.cl/acciones/afpcapital/): Ficha de AFP Capital: resultados 3T 2026, valoración de referencia y claves. Administradora de fondos de pensiones controlada por SURA Asset Management (grupo colombiano Sura) desde 2011.
 - [AGUAS-A](https://aiacciones.cl/acciones/aguas-a/): Ficha de Aguas Andinas: resultados 2T 2026, valoración y claves.
-- [ANDINA-A](https://aiacciones.cl/acciones/andina-a/): Ficha de Embotelladora Andina (Serie A): resultados 2T 2026, valoración y claves. Embotelladora de Coca-Cola en Chile, Argentina, Brasil y Paraguay.
-- [BCI](https://aiacciones.cl/acciones/bci/): Ficha de Bci (Banco de Crédito e Inversiones): resultados 2T 2026, valoración y claves.
-- [BESALCO](https://aiacciones.cl/acciones/besalco/): Ficha de Besalco S.A.: resultados 2T 2026, valoración y claves. Grupo de ingeniería y construcción con obras civiles, montaje industrial, arriendo de maquinaria, desarrollo inmobiliario y concesiones.
-- [BSANTANDER](https://aiacciones.cl/acciones/bsantander/): Ficha de Banco Santander Chile: resultados 2T 2026, valoración y claves.
+- [ANDINA-A](https://aiacciones.cl/acciones/andina-a/): Ficha de Embotelladora Andina (Serie A): resultados 3T 2026, valoración y claves. Embotelladora de Coca-Cola en Chile, Argentina, Brasil y Paraguay.
+- [BCI](https://aiacciones.cl/acciones/bci/): Ficha de Bci (Banco de Crédito e Inversiones): resultados 3T 2026, valoración y claves.
+- [BESALCO](https://aiacciones.cl/acciones/besalco/): Ficha de Besalco S.A.: resultados 3T 2026, valoración y claves. Grupo de ingeniería y construcción con obras civiles, montaje industrial, arriendo de maquinaria, desarrollo inmobiliario y concesiones.
+- [BSANTANDER](https://aiacciones.cl/acciones/bsantander/): Ficha de Banco Santander Chile: resultados 3T 2026, valoración y claves.
 - [CAP S.A.](https://aiacciones.cl/acciones/cap/): Ficha de CAP S.A. (CAP): resultados 3T 2026, valoración y claves.
-- [CCU](https://aiacciones.cl/acciones/ccu/): Ficha de Compañía Cervecerías Unidas: resultados 2T 2026, valoración y claves.
+- [CCU](https://aiacciones.cl/acciones/ccu/): Ficha de Compañía Cervecerías Unidas: resultados 3T 2026, valoración y claves.
 - [CENCOMALLS](https://aiacciones.cl/acciones/cencomalls/): Ficha de Cencosud Shopping: resultados 2T 2026, valoración y claves.
-- [CENCOSUD](https://aiacciones.cl/acciones/cencosud/): Ficha de Cencosud: resultados 2T 2026, valoración y claves.
+- [CENCOSUD](https://aiacciones.cl/acciones/cencosud/): Ficha de Cencosud: resultados 3T 2026, valoración y claves.
 - [CGE](https://aiacciones.cl/acciones/cge/): Ficha de CGE: resultados 2T 2026, valoración y claves.
-- [CHILE](https://aiacciones.cl/acciones/chile/): Ficha de Banco de Chile: resultados 2T 2026, valoración y claves. Uno de los dos bancos privados más grandes del país, controlado por Quiñenco (grupo Luksic) junto a Citigroup.
-- [CMPC](https://aiacciones.cl/acciones/cmpc/): Ficha de Empresas CMPC: resultados 2T 2026, valoración y claves.
-- [COLBUN](https://aiacciones.cl/acciones/colbun/): Ficha de Colbún: resultados 2T 2026, valoración y claves.
-- [CONCHATORO](https://aiacciones.cl/acciones/conchatoro/): Ficha de Viña Concha y Toro: resultados 2T 2026, valoración y claves. La mayor viña de Chile y la tercera del mundo en ventas en 2025: marcas como Casillero del Diablo, Don Melchor, Diablo y Bonterra.
-- [COPEC](https://aiacciones.cl/acciones/copec/): Ficha de Empresas Copec: resultados 2T 2026, valoración y claves.
-- [ECL](https://aiacciones.cl/acciones/ecl/): Ficha de Engie Energía Chile: resultados 2T 2026, valoración y claves. Generadora y transmisora eléctrica del grupo francés Engie, con foco en el norte de Chile y clientes mineros.
-- [ENELCHILE](https://aiacciones.cl/acciones/enelchile/): Ficha de Enel Chile: resultados 2T 2026, valoración y claves. Holding eléctrico del grupo italiano Enel: controla Enel Generación Chile (~93,6%) y Enel Distribución, que abastece Santiago.
-- [ENELGXCH](https://aiacciones.cl/acciones/enelgxch/): Ficha de Enel Generación Chile: resultados 2T 2026, valoración y claves. Generadora eléctrica filial de Enel Chile (~93,6%), del grupo italiano Enel.
-- [FALABELLA](https://aiacciones.cl/acciones/falabella/): Ficha de Falabella: resultados 2T 2026, valoración y claves.
-- [HABITAT](https://aiacciones.cl/acciones/habitat/): Ficha de AFP Habitat: resultados 2T 2026, valoración y claves. Administradora de fondos de pensiones controlada en partes iguales por la Cámara Chilena de la Construcción y Prudential Financial.
+- [CHILE](https://aiacciones.cl/acciones/chile/): Ficha de Banco de Chile: resultados 3T 2026, valoración y claves. Uno de los dos bancos privados más grandes del país, controlado por Quiñenco (grupo Luksic) junto a Citigroup.
+- [CMPC](https://aiacciones.cl/acciones/cmpc/): Ficha de Empresas CMPC: resultados 3T 2026, valoración y claves.
+- [COLBUN](https://aiacciones.cl/acciones/colbun/): Ficha de Colbún: resultados 3T 2026, valoración y claves.
+- [CONCHATORO](https://aiacciones.cl/acciones/conchatoro/): Ficha de Viña Concha y Toro: resultados 3T 2026, valoración y claves. La mayor viña de Chile y la tercera del mundo en ventas en 2025: marcas como Casillero del Diablo, Don Melchor, Diablo y Bonterra.
+- [COPEC](https://aiacciones.cl/acciones/copec/): Ficha de Empresas Copec: resultados 3T 2026, valoración y claves.
+- [ECL](https://aiacciones.cl/acciones/ecl/): Ficha de Engie Energía Chile: resultados 3T 2026, valoración y claves. Generadora y transmisora eléctrica del grupo francés Engie, con foco en el norte de Chile y clientes mineros.
+- [ENELCHILE](https://aiacciones.cl/acciones/enelchile/): Ficha de Enel Chile: resultados 3T 2026, valoración y claves. Holding eléctrico del grupo italiano Enel: controla Enel Generación Chile (~93,6%) y Enel Distribución, que abastece Santiago.
+- [ENELGXCH](https://aiacciones.cl/acciones/enelgxch/): Ficha de Enel Generación Chile: resultados 3T 2026, valoración y claves. Generadora eléctrica filial de Enel Chile (~93,6%), del grupo italiano Enel.
+- [ENTEL](https://aiacciones.cl/acciones/entel/): Ficha de AFP Capital: resultados 3T 2026, valoración de referencia y claves.
+- [FALABELLA](https://aiacciones.cl/acciones/falabella/): Ficha de Falabella: resultados 3T 2026, valoración y claves.
+- [HABITAT](https://aiacciones.cl/acciones/habitat/): Ficha de AFP Habitat: resultados 3T 2026, valoración y claves. Administradora de fondos de pensiones controlada en partes iguales por la Cámara Chilena de la Construcción y Prudential Financial.
 - [IAM](https://aiacciones.cl/acciones/iam/): Ficha de Inversiones Aguas Metropolitanas: resultados 2T 2026, valoración y claves. Holding que controla el 50,1% de Aguas Andinas, la sanitaria que abastece a Santiago.
-- [ITAUCL](https://aiacciones.cl/acciones/itau/): Ficha de Banco Itaú Chile: resultados 2T 2026, valoración y claves. El quinto banco privado de Chile, controlado por Itaú Unibanco (Brasil).
-- [LTM](https://aiacciones.cl/acciones/ltm/): Ficha de LATAM Airlines Group: resultados 2T 2026, valoración y claves.
-- [MALLPLAZA](https://aiacciones.cl/acciones/mallplaza/): Ficha de Mallplaza: resultados 2T 2026, valoración y claves. Plaza S.A., el mayor operador de centros comerciales de Chile, con malls en Perú y Colombia; Falabella es su controlador.
+- [ITAUCL](https://aiacciones.cl/acciones/itau/): Ficha de Banco Itaú Chile: resultados 3T 2026, valoración y claves. El quinto banco privado de Chile, controlado por Itaú Unibanco (Brasil).
+- [LTM](https://aiacciones.cl/acciones/ltm/): Ficha de LATAM Airlines Group: resultados 3T 2026, valoración y claves.
+- [MALLPLAZA](https://aiacciones.cl/acciones/mallplaza/): Ficha de Mallplaza: resultados 3T 2026, valoración y claves. Plaza S.A., el mayor operador de centros comerciales de Chile, con malls en Perú y Colombia; Falabella es su controlador.
 - [NTGCLGAS](https://aiacciones.cl/acciones/ntgclgas/): Ficha de Naturgy Chile: resultados 3T 2026, valoración y claves.
-- [PARAUCO](https://aiacciones.cl/acciones/parauco/): Ficha de Parque Arauco: resultados 2T 2026, valoración y claves. Operador de centros comerciales en Chile, Perú y Colombia (Parque Arauco Kennedy, Kennedy Oriente, MegaPlaza y Minka, entre otros).
+- [PARAUCO](https://aiacciones.cl/acciones/parauco/): Ficha de Parque Arauco: resultados 3T 2026, valoración y claves. Operador de centros comerciales en Chile, Perú y Colombia (Parque Arauco Kennedy, Kennedy Oriente, MegaPlaza y Minka, entre otros).
 - [PEHUENCHE](https://aiacciones.cl/acciones/pehuenche/): Ficha de Empresa Eléctrica Pehuenche: resultados 2T 2026, valoración y claves. Dueña de tres centrales hidroeléctricas en la cuenca del río Maule (Pehuenche, Curillinque y Loma Alta, 699 MW).
-- [PLANVITAL](https://aiacciones.cl/acciones/planvital/): Ficha de AFP PlanVital: resultados 2T 2026, valoración y claves. AFP controlada por la italiana Generali.
-- [PROVIDA](https://aiacciones.cl/acciones/provida/): Ficha de AFP Provida: resultados 2T 2026, valoración y claves. La AFP con más afiliados del sistema (2,49 millones), controlada por la estadounidense MetLife.
+- [PLANVITAL](https://aiacciones.cl/acciones/planvital/): Ficha de AFP PlanVital: resultados 3T 2026, valoración y claves. AFP controlada por la italiana Generali.
+- [PROVIDA](https://aiacciones.cl/acciones/provida/): Ficha de AFP Provida: resultados 3T 2026, valoración y claves. La AFP con más afiliados del sistema (2,49 millones), controlada por la estadounidense MetLife.
 - [QUINENCO](https://aiacciones.cl/acciones/quinenco/): Ficha de Quiñenco: resultados 2T 2026, valoración y claves. Holding con participaciones en Banco de Chile (vía LQIF), Enex (combustibles), CCU, CSAV, SM SAAM y Nexans.
-- [RIPLEY](https://aiacciones.cl/acciones/ripley/): Ficha de Ripley Corp: resultados 2T 2026, valoración y claves. Tiendas por departamento, Banco Ripley y centros comerciales en Chile y Perú (Mall Aventura).
+- [RIPLEY](https://aiacciones.cl/acciones/ripley/): Ficha de Ripley Corp: resultados 3T 2026, valoración y claves. Tiendas por departamento, Banco Ripley y centros comerciales en Chile y Perú (Mall Aventura).
 - [SK](https://aiacciones.cl/acciones/sk/): Ficha de Sigdo Koppers: resultados 2T 2026, valoración y claves.
-- [SMU](https://aiacciones.cl/acciones/smu/): Ficha de SMU: resultados 2T 2026, valoración y claves. Segunda cadena de supermercados de Chile: Unimarc, los formatos de precio bajo Alvi y Super10, y Maxiahorro y Mayorsa en Perú.
-- [SQM-B](https://aiacciones.cl/acciones/sqm-b/): Ficha de SQM: resultados 2T 2026, valoración y claves.
-- [VAPORES](https://aiacciones.cl/acciones/vapores/): Ficha de CSAV (Vapores): resultados 2T 2026, valoración y claves.
+- [SMU](https://aiacciones.cl/acciones/smu/): Ficha de SMU: resultados 3T 2026, valoración y claves. Segunda cadena de supermercados de Chile: Unimarc, los formatos de precio bajo Alvi y Super10, y Maxiahorro y Mayorsa en Perú.
+- [SQM-B](https://aiacciones.cl/acciones/sqm-b/): Ficha de SQM: resultados 3T 2026, valoración y claves.
+- [VAPORES](https://aiacciones.cl/acciones/vapores/): Ficha de CSAV (Vapores): resultados 3T 2026, valoración y claves.
 
 ## Comparadores por sector
 
