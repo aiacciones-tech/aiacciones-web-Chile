@@ -1,4 +1,4 @@
-# Textos del Short «تقويم النتائج الأسبوعي» (nabd/calendario/): meta de YouTube, posts de X, Telegram, TikTok, Instagram, Facebook, Threads y LinkedIn,
+# Textos del Short «تقويم النتائج الأسبوعي» (nabd/calendario/): meta de YouTube, posts de X, Telegram, TikTok, Instagram y LinkedIn (Facebook y Threads fuera hasta nuevo aviso),
 # y el guion legible (guion-<base>-Nabd.md). Todo sale de video.json; se escriben en la misma carpeta con nombres que terminan en -Nabd.
 # Uso: python3 meta_calendario.py <carpeta>/video.json
 import os, sys, json, datetime as dt
@@ -61,16 +61,13 @@ def main():
     out("post-telegram", f"{largo}\n\n▶️ الفيديو: {{youtube}}")
     out("post-tiktok", f"{cab}\n\n" + "\n".join(linea(e, True) for e in EM) + f"\n\n{AVISO}\nتابعنا لتحليل كل تقرير.\n#وول_ستريت #نتائج_الشركات #الأسهم_الأمريكية #تداول")
     out("post-instagram", f"{largo}\n\nتابعنا لتحليل كل تقرير.\n#وول_ستريت #نتائج_الشركات #الأسهم_الأمريكية #استثمار")
-    out("post-facebook", f"{largo}\n\n▶️ شاهد الفيديو: {{youtube}}\nتابع الصفحة لتحليل كل تقرير.")
-    th = f"{cab}\n\n" + "\n".join(linea(e, True) for e in EM) + f"\n\n▶️ {{youtube}}\n{AVISO}"
-    assert len(th) <= 470, len(th)
-    out("post-threads", th)
+    # Facebook y Threads: fuera hasta nuevo aviso (Daniel, 22-nov-2026); no se generan sus posts.
     out("post-linkedin", f"{largo}\n\n▶️ {{youtube}}\n#وول_ستريت #نتائج_الشركات")
     g = [f"# {TITULO} · {sem}\n", f"Modo: {S['modo']} · Base: {base}\n", "| Escena | Locución |", "|---|---|"]
     g += [f"| {e['tipo']}{' ' + e.get('ticker', '') if e['tipo'] == 'empresa' else ''} | {e['voz']} |" for e in S["escenas"]]
     g += ["", "## Datos", "", cuerpo, "", "## Fuentes", "", S["fuentes"]]
     open(os.path.join(B, f"guion-{base}-Nabd.md"), "w", encoding="utf-8").write("\n".join(g) + "\n")
-    print(titulo, "| X:", largo_x(x), "| Threads:", len(th))
+    print(titulo, "| X:", largo_x(x))
 
 
 if __name__ == "__main__":
