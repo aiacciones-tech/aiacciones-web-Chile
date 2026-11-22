@@ -29,3 +29,5 @@
   (prevalecen sobre el texto de su tarea programada). Plan de 10 temas en `bahrain/educativo/plan-lessons-bahrain.json`.
 - **Wall Street auf Deutsch, Short semanal «Wochenkalender der Quartalszahlen» (domingos 18:00-20:00 Berlín, `ge/calendario/`):** calendario de resultados
   de las 22 acciones del canal. Antes de cada Short lee `ge/calendario/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Nabd Wall Street, Short semanal «تقويم النتائج الأسبوعي» (domingos, 19:00-21:00 Riad, `nabd/calendario/`):** calendario de resultados de las 22 acciones
+  del canal. Antes de cada Short lee `nabd/calendario/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
