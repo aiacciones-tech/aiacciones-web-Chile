@@ -3,7 +3,7 @@ Lo usan make_short.py (render, con VOZ_DIR) y voz_azure.py (workflow voz-eau.yml
 import os, json, hashlib
 
 VOZ = os.environ.get("AZURE_VOZ", "ar-AE-HamdanNeural")
-RATE = os.environ.get("AZURE_RATE", "+5%")
+RATE = os.environ.get("AZURE_RATE", "+12%")
 
 
 def clave(texto):
