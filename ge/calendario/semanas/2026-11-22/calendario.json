@@ -27,7 +27,7 @@
     "Oracle",
     "JPMorgan"
    ],
-   "voz": "Thanksgiving-Woche: Keine unserer 22 Aktien legt Zahlen vor. Als Nächstes berichtet Broadcom, und drei weitere folgen."
+   "voz": "Thanksgiving-Woche: keine Zahlen von unseren 22 Aktien. Als Nächstes berichtet Broadcom, dann drei weitere."
   },
   {
    "tipo": "empresa",
@@ -41,7 +41,7 @@
    "eps": "3,45 $",
    "estado": "bestätigt",
    "nota": "Unternehmensprognose: rund 34,8 Mrd. $ Umsatz",
-   "voz": "Mittwoch, 9. Dezember, nach US-Börsenschluss: Broadcom. Erwartet werden rund 34,9 Milliarden Dollar Umsatz und 3,45 Dollar Gewinn je Aktie."
+   "voz": "Mittwoch, 9. Dezember, nach Börsenschluss: Broadcom. Konsens: 34,9 Milliarden Dollar Umsatz und 3,45 Dollar je Aktie."
   },
   {
    "tipo": "empresa",
@@ -54,7 +54,7 @@
    "umsatz": "74,44 Mrd. $",
    "eps": "4,89 $",
    "estado": "bestätigt",
-   "voz": "Donnerstag, 10. Dezember, ebenfalls nach Börsenschluss: Costco. Der Konsens: 74,4 Milliarden Dollar Umsatz und 4,89 Dollar je Aktie."
+   "voz": "Donnerstag, 10. Dezember, nach Börsenschluss: Costco. Konsens: 74,4 Milliarden Umsatz und 4,89 Dollar je Aktie."
   },
   {
    "tipo": "empresa",
@@ -67,7 +67,7 @@
    "umsatz": "21,31 Mrd. $",
    "eps": "1,57 $",
    "estado": "voraussichtlich",
-   "voz": "Voraussichtlich Montag, 14. Dezember, nach Börsenschluss: Oracle. Erwartet werden 21,3 Milliarden Dollar Umsatz und 1,57 Dollar je Aktie."
+   "voz": "Voraussichtlich Montag, 14. Dezember: Oracle. Konsens: 21,3 Milliarden Umsatz und 1,57 Dollar je Aktie."
   },
   {
    "tipo": "empresa",
@@ -80,7 +80,7 @@
    "umsatz": "51,1 Mrd. $",
    "eps": "5,96 $",
    "estado": "voraussichtlich",
-   "voz": "Mitte Januar eröffnet JPMorgan vor Börsenbeginn die neue Berichtssaison. Der Konsens: 51,1 Milliarden Dollar Umsatz und 5,96 Dollar je Aktie."
+   "voz": "Mitte Januar, vor Börsenbeginn: JPMorgan. Konsens: 51,1 Milliarden Umsatz und 5,96 Dollar je Aktie."
   },
   {
    "tipo": "fin",
