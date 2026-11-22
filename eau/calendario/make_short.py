@@ -127,8 +127,8 @@ if __name__ == "__main__":
         sys.exit()
     clips = [voz(e["voz"], os.path.join(AUD, f"cal_{i}.wav")) for i, e in enumerate(E)]; sr = clips[0][1]
     assert all(s == sr for _, s in clips), "frecuencias distintas: no mezclar Azure y Piper sin VOZ_DIR"
-    LEAD, TAIL = 0.10, 0.30
-    durs = [LEAD + len(a) / sr + TAIL for a, _ in clips]; durs[-1] += 1.0
+    LEAD, TAIL = 0.08, 0.22
+    durs = [LEAD + len(a) / sr + TAIL for a, _ in clips]; durs[-1] += 0.7
     print("duración prevista", round(sum(durs), 1), [round(d, 1) for d in durs], "voz:", ",".join(sorted(set(VOCES))))
     if sum(durs) > MAXDUR: sys.exit(f"Short demasiado largo: {sum(durs):.1f} s (máx {MAXDUR}). Acorta la voz.")
     if sum(durs) < MINDUR: print(f"aviso: Short corto ({sum(durs):.1f} s; el formato pide 45-60 s)")
