@@ -24,7 +24,7 @@ assert len(I["titulo_short"]) <= 100 and "<" not in desc and ">" not in desc and
 json.dump({"title": I["titulo_short"], "description": desc, "tags": I["tags"] + ["Shorts"], "privacy": "public"},
           open(f"{D}/meta-short-{F}-UAE.json", "w"), ensure_ascii=False, indent=1)
 
-x = f"📅 تقويم النتائج الأسبوعي ({I['semana_txt']})\n" + "\n".join(I["empresas_cortas"]) + f"\n\n▶️ {{youtube}}\n{CANAL}\n{AVISO}"
+x = f"📅 تقويم النتائج الأسبوعي ({I['semana_txt']})\n" + "\n".join(I["empresas_cortas"]) + f"\n\n▶️ {{youtube}}\n{CANAL}\n" + (f"وول ستريت بالعربية: {NABD}\n" if nabd else "") + AVISO
 assert largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")) <= 280, largo_x(x)
 w("post-x", x)
 L = I["linkedin"]; assert 3 <= len(L["datos"]) <= 4
