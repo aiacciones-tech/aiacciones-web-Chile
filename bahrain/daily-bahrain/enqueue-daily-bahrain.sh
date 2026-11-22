@@ -3,6 +3,7 @@
 # Then youtube-bahrain.yml uploads to YouTube (@BahrainAIStocks), buffer.yml posts to X, Threads and Facebook (long video)
 # and to TikTok, Instagram and LinkedIn (Short as video), and telegram-bahrain.yml posts to Telegram (post-telegram.txt).
 # REDES picks the networks besides YouTube: "todas" (default), "linkedin" (only the Short on LinkedIn, Daniel's rule of 8-nov-2026),
+# "linkedin,telegram" (LinkedIn plus the video post on Telegram, since 22-nov-2026),
 # or "ninguna". SOLO_YOUTUBE=1 is the old spelling of REDES=ninguna.
 set -e
 B=$(cd "$1" && pwd); F=$(python3 -c "import json;print(json.load(open('$B/info-bahrain.json'))['fecha'])"); S=${SCRATCH:-/tmp/bahrain-scratch}; mkdir -p $S
@@ -35,6 +36,7 @@ if [ "$REDES" = ninguna ]; then for i in $(seq 80); do git pull -q origin youtub
 else
 # Posts go in a second push, once the video is on the branch (Buffer takes the Short's video from GitHub).
 cp $B/post-linkedin-$F-bahrain.txt $CS/post-linkedin.txt
+case ",$REDES," in *,telegram,*) cp $B/post-telegram-$F-bahrain.txt $C/post-telegram.txt;; esac
 if [ "$REDES" = todas ]; then
 cp $B/post-x-$F-bahrain.txt $C/post-x.txt; cp $B/post-threads-$F-bahrain.txt $C/post-threads.txt; cp $B/post-facebook-$F-bahrain.txt $C/post-facebook.txt
 cp $B/post-telegram-$F-bahrain.txt $C/post-telegram.txt

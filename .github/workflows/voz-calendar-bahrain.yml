@@ -1,0 +1,42 @@
+# Azure neural voice (ar-BH-AliNeural) for the weekly results-calendar Short of @BahrainAIStocks (bahrain/calendar/).
+# Runs by itself when a session pushes bahrain/calendar/<week>-bahrain/short-*.json to a claude/** branch, or by hand ("Run workflow").
+# Leaves one wav per slide in <week>/ of branch voz-calendar-bahrain (no history). make-calendar-bahrain.py uses them with VOZ_DIR.
+# Key: AZURE_SPEECH_KEY_BAHRAIN if it exists, else Saudi's, else Nabd's (free F0 plan, 500,000 characters a month, shared;
+# one calendar Short uses about 1,000).
+name: Voz Azure del calendario semanal (Baréin)
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["bahrain/calendar/*-bahrain/short-*.json"]
+  workflow_dispatch:
+    inputs:
+      semana:
+        description: "week folder (e.g. 2026-11-22-bahrain); empty = the latest"
+        default: ""
+permissions:
+  contents: write
+concurrency: voz-calendar-bahrain
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_BAHRAIN || secrets.AZURE_SPEECH_KEY_SAUDI || secrets.AZURE_SPEECH_KEY_NABD }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_BAHRAIN || secrets.AZURE_SPEECH_REGION_SAUDI || secrets.AZURE_SPEECH_REGION_NABD || 'northeurope' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate the voice
+        run: |
+          test -n "$AZURE_SPEECH_KEY" || { echo "No Azure key: the Short will use the Piper voice."; exit 1; }
+          W="${{ inputs.semana }}"
+          if [ -z "$W" ]; then W=$(ls -d bahrain/calendar/20??-??-??-bahrain | sort | tail -1 | xargs basename); fi
+          echo "week $W"; mkdir -p /tmp/voz
+          if git fetch -q --depth 1 origin voz-calendar-bahrain 2>/dev/null; then
+            git archive FETCH_HEAD | tar -x -C /tmp/voz || true
+          fi
+          # keep only the last 8 weeks
+          ls -d /tmp/voz/20* 2>/dev/null | sort | head -n -8 | xargs -r rm -rf
+          python3 bahrain/calendar/voz_calendar_bahrain.py bahrain/calendar/$W /tmp/voz/$W
+          cd /tmp/voz && git init -q -b voz-calendar-bahrain && git add -A
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Voz Azure calendario Baréin $W"
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          for i in 1 2 3; do git push -qf origin voz-calendar-bahrain && break; sleep 5; done

@@ -1,0 +1,41 @@
+# «تقويم النتائج الأسبوعي» de Saudi Arabia AI Stocks (saudi/calendario/): voz del Short de cada semana.
+# Se lanza sola al subir saudi/calendario/semanas/<carpeta>/short.json a una rama claude/**: genera la voz Azure ar-SA-HamedNeural
+# frase a frase (voz_calendario.py; misma clave que el vídeo diario) y deja un wav por frase en <carpeta>/ de la rama voz-saudi-calendario.
+name: Voz del calendario semanal de resultados (Arabia Saudita)
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["saudi/calendario/semanas/*/short.json"]
+  workflow_dispatch:
+    inputs:
+      carpetas:
+        description: "carpetas de saudi/calendario/semanas separadas por comas; vacío = las que cambian respecto a main"
+        default: ""
+permissions:
+  contents: write
+concurrency: voz-saudi-calendario
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_SAUDI || secrets.AZURE_SPEECH_KEY_NABD }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_SAUDI || secrets.AZURE_SPEECH_REGION_NABD || 'northeurope' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Voz
+        run: |
+          test -n "$AZURE_SPEECH_KEY" || { echo "Falta la clave de Azure: sin voz (el render usará Piper)"; exit 0; }
+          C="${{ inputs.carpetas }}"
+          if [ -z "$C" ]; then
+            git fetch -q --depth 1 origin main
+            C=$(git diff --name-only origin/main HEAD -- 'saudi/calendario/semanas/*/short.json' | cut -d/ -f4 | sort -u | paste -sd, -)
+          fi
+          test -n "$C" || { echo "ninguna semana cambiada"; exit 0; }
+          R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git clone -q --depth 1 -b voz-saudi-calendario "$R" /tmp/out 2>/dev/null || { mkdir -p /tmp/out && cd /tmp/out && git init -q -b voz-saudi-calendario && git remote add origin "$R" && cd -; }
+          for c in ${C//,/ }; do
+            echo "== $c"; python3 saudi/calendario/voz_calendario.py saudi/calendario/semanas/$c /tmp/out/$c
+          done
+          cd /tmp/out && git add -A
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Calendario semanal Arabia Saudita: voz $C" || exit 0
+          for i in 1 2 3; do git push -q origin HEAD:voz-saudi-calendario && break; sleep 5; done

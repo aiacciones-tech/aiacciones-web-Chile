@@ -1,0 +1,186 @@
+{
+ "base": "earnings-week-2026-11-29",
+ "semana": "29 نوفمبر – 4 ديسمبر 2026",
+ "publicar": "2026-11-28",
+ "datos_al": "2026-11-22",
+ "escenas": [
+  {
+   "id": "gancho",
+   "tipo": "gancho",
+   "estrella": "كراودسترايك",
+   "otras": "وأربع شركات أمريكية أخرى",
+   "lista": [
+    "كراودسترايك",
+    "مارفل",
+    "سيلزفورس",
+    "كروغر",
+    "دولار جنرال"
+   ],
+   "voz": "هذا الأسبوع تعلن كراودسترايك نتائجها، وأربع شركات أمريكية أخرى."
+  },
+  {
+   "id": "tasi",
+   "tipo": "tasi",
+   "lineas": [
+    "لا نتائج مرتقبة هذا الأسبوع لكبرى الشركات التي نتابعها في تاسي",
+    "موسم نتائج التسعة أشهر انتهى",
+    "المهلة النظامية للنتائج السنوية 2026: حتى 31 مارس 2027"
+   ],
+   "voz": "في تداول، لا نتائج مرتقبة هذا الأسبوع لكبرى الشركات."
+  },
+  {
+   "id": "crwd",
+   "tipo": "empresa",
+   "nombre": "كراودسترايك",
+   "latino": "CrowdStrike",
+   "ticker": "CRWD",
+   "dia": "الثلاثاء 1 ديسمبر",
+   "hora": "بعد إغلاق السوق الأمريكية",
+   "eps": "0.31",
+   "ingresos": "1.53 مليار",
+   "voz": "الثلاثاء كراودسترايك: السوق تتوقع واحدًا وثلاثين سنتًا للسهم، وإيرادات واحد فاصل ثلاثة وخمسين مليار دولار."
+  },
+  {
+   "id": "mrvl",
+   "tipo": "empresa",
+   "nombre": "مارفل تكنولوجي",
+   "latino": "Marvell Technology",
+   "ticker": "MRVL",
+   "dia": "الثلاثاء 1 ديسمبر",
+   "hora": "بعد إغلاق السوق الأمريكية",
+   "eps": "1.10",
+   "ingresos": "3.15 مليار",
+   "voz": "ومارفل: دولار وعشرة سنتات، وثلاثة فاصل خمسة عشر مليارًا."
+  },
+  {
+   "id": "crm",
+   "tipo": "empresa",
+   "nombre": "سيلزفورس",
+   "latino": "Salesforce",
+   "ticker": "CRM",
+   "dia": "الأربعاء 2 ديسمبر",
+   "hora": "بعد إغلاق السوق الأمريكية",
+   "eps": "3.45",
+   "ingresos": "11.47 مليار",
+   "voz": "الأربعاء سيلزفورس: ثلاثة دولارات وخمسة وأربعون سنتًا، وأحد عشر فاصل سبعة وأربعين مليارًا."
+  },
+  {
+   "id": "kr",
+   "tipo": "empresa",
+   "nombre": "كروغر",
+   "latino": "Kroger",
+   "ticker": "KR",
+   "dia": "الخميس 3 ديسمبر",
+   "hora": "قبل افتتاح السوق الأمريكية",
+   "eps": "1.16",
+   "ingresos": "34.58 مليار",
+   "voz": "الخميس كروغر: دولار وستة عشر سنتًا، ونحو أربعة وثلاثين فاصل ستة مليار."
+  },
+  {
+   "id": "dg",
+   "tipo": "empresa",
+   "nombre": "دولار جنرال",
+   "latino": "Dollar General",
+   "ticker": "DG",
+   "dia": "الخميس 3 ديسمبر",
+   "hora": "قبل افتتاح السوق الأمريكية",
+   "eps": "1.40",
+   "voz": "ودولار جنرال: دولار وأربعون سنتًا للسهم."
+  },
+  {
+   "id": "fin",
+   "tipo": "fin",
+   "voz": "تابع القناة لتحليل كل تقرير، ولأخبار وول ستريت بالعربية: قناة نبض وول ستريت. محتوى إعلامي، وليس توصية استثمارية."
+  }
+ ],
+ "fuentes": [
+  {
+   "dato": "CrowdStrike: fecha 1-dic tras el cierre",
+   "fuente": "CrowdStrike IR (4-nov-2026)",
+   "url": "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-announces-date-fiscal-third-quarter-2027-financial"
+  },
+  {
+   "dato": "CrowdStrike: BPA 0.31 / ingresos 1.53 mil M",
+   "fuente": "MarketBeat (0.3115 / 1.53 mil M); StockAnalysis (0.311 / 1.528 mil M); guía de la empresa 0.31 y 1.52–1.53 mil M (CNBC, 26-ago-2026)",
+   "url": "https://www.marketbeat.com/earnings/reports/2026-12-1-crowdstrike-holdings-inc-stock/"
+  },
+  {
+   "dato": "Marvell: llamada 1-dic 13:30 PT, tras los resultados",
+   "fuente": "Marvell IR (6-nov-2026)",
+   "url": "https://investor.marvell.com/news-events/press-releases/detail/1041/marvell-technology-inc-announces-conference-call-to-review-third-quarter-of-fiscal-year-2027-financial-results"
+  },
+  {
+   "dato": "Marvell: BPA 1.10 / ingresos 3.15 mil M",
+   "fuente": "MarketBeat y TipRanks (1.10 / 3.15); StockAnalysis (1.101 / 3.152); guía 3.15 mil M reafirmada el 2-nov (TradingView)",
+   "url": "https://www.tipranks.com/stocks/mrvl/earnings"
+  },
+  {
+   "dato": "Salesforce: fecha 2-dic tras el cierre",
+   "fuente": "Salesforce IR (10-nov-2026)",
+   "url": "https://investor.salesforce.com/news/news-details/2026/Salesforce-Announces-Date-of-Third-Quarter-Fiscal-2027-Earnings-Release-and-Webcast/default.aspx"
+  },
+  {
+   "dato": "Salesforce: BPA 3.45 / ingresos 11.47 mil M",
+   "fuente": "TipRanks y Yahoo (3.45); MarketBeat (3.43 / 11.47); StockAnalysis (3.446 / 11.46); guía 3.42–3.44 y 11.42–11.50",
+   "url": "https://www.tipranks.com/stocks/crm/earnings"
+  },
+  {
+   "dato": "Kroger: llamada 3-dic 8:00 ET (antes de la apertura)",
+   "fuente": "Kroger, nota de prensa 5-nov-2026",
+   "url": "https://stockhouse.com/news/press-releases/2026/11/05/kroger-announces-third-quarter-conference-call-with-investors"
+  },
+  {
+   "dato": "Kroger: BPA 1.16 / ingresos 34.58 mil M",
+   "fuente": "Zacks (1.16 / 34.58); MarketBeat y Benzinga (34.57); Barchart (1.16); StockAnalysis (1.163 / 34.58)",
+   "url": "https://www.benzinga.com/quote/KR/earnings-forecasts"
+  },
+  {
+   "dato": "Dollar General: resultados 3-dic, llamada 9:00 ET",
+   "fuente": "Dollar General, nota de prensa",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dollar-general-corporation-announces-webcast-115500661.html"
+  },
+  {
+   "dato": "Dollar General: BPA 1.40",
+   "fuente": "Barchart (1.40); Zacks vía Nasdaq (1.40); StockAnalysis (1.409)",
+   "url": "https://api.nasdaq.com/api/calendar/earnings?date=2026-12-03"
+  },
+  {
+   "dato": "FUERA: ingresos de Dollar General",
+   "fuente": "solo una fuente (StockAnalysis 11.14 mil M)",
+   "url": ""
+  },
+  {
+   "dato": "FUERA: Snowflake (2-dic)",
+   "fuente": "consenso de BPA no coincide (0.42 Public/InvestorSignals vs 0.60 TipRanks/StockAnalysis)",
+   "url": "https://investors.snowflake.com/events-and-presentations/event-details/2026/Snowflake-Q3-FY27-Earnings/default.aspx"
+  },
+  {
+   "dato": "Tadawul: ninguna de las 25 de calendar-FY26-saudi.json reporta; plazo CMA 3 meses (31-mar-2027); 9M cerró el 11-nov",
+   "fuente": "Argaam; CMA",
+   "url": "https://www.argaam.com/en/market-daily-financial-report/3/62944"
+  }
+ ],
+ "info": {
+  "titulo": "تقويم النتائج الأسبوعي: كراودسترايك وسيلزفورس و3 شركات أخرى (29 نوفمبر – 4 ديسمبر) #Shorts",
+  "resumen": "من يعلن نتائجه هذا الأسبوع وماذا تنتظر السوق؟ في تداول لا نتائج مرتقبة لكبرى الشركات التي نتابعها (المهلة النظامية للنتائج السنوية حتى 31 مارس 2027). وفي وول ستريت: كراودسترايك ومارفل (الثلاثاء)، سيلزفورس (الأربعاء)، كروغر ودولار جنرال (الخميس).",
+  "lineas": [
+   "كراودسترايك (CRWD) – الثلاثاء 1 ديسمبر بعد الإغلاق: ربحية متوقعة 0.31 دولار، إيرادات 1.53 مليار دولار",
+   "مارفل (MRVL) – الثلاثاء 1 ديسمبر بعد الإغلاق: 1.10 دولار، إيرادات 3.15 مليار دولار",
+   "سيلزفورس (CRM) – الأربعاء 2 ديسمبر بعد الإغلاق: 3.45 دولار، إيرادات 11.47 مليار دولار",
+   "كروغر (KR) – الخميس 3 ديسمبر قبل الافتتاح: 1.16 دولار، إيرادات 34.58 مليار دولار",
+   "دولار جنرال (DG) – الخميس 3 ديسمبر قبل الافتتاح: 1.40 دولار"
+  ],
+  "x": "📅 تقويم النتائج الأسبوعي\nتداول: لا نتائج مرتقبة لكبرى الشركات\nوول ستريت: كراودسترايك ومارفل (الثلاثاء)، سيلزفورس (الأربعاء)، كروغر ودولار جنرال (الخميس)",
+  "linkedin": {
+   "titulo": "تقويم النتائج الأسبوعي | 29 نوفمبر – 4 ديسمبر 2026",
+   "datos": [
+    "تداول: لا نتائج مرتقبة هذا الأسبوع لكبرى الشركات التي نتابعها؛ المهلة النظامية للنتائج السنوية حتى 31 مارس 2027",
+    "الثلاثاء 1 ديسمبر: كراودسترايك (ربحية متوقعة 0.31 دولار، إيرادات 1.53 مليار) ومارفل (1.10 دولار، 3.15 مليار)",
+    "الأربعاء 2 ديسمبر: سيلزفورس (3.45 دولار، إيرادات 11.47 مليار دولار)",
+    "الخميس 3 ديسمبر: كروغر (1.16 دولار، 34.58 مليار) ودولار جنرال (1.40 دولار)"
+   ],
+   "conclusion": "أسبوع تقوده التقنية الأمريكية والأمن السيبراني والرقائق، بينما تبقى السوق السعودية في هدوء ما بين موسمين."
+  },
+  "hashtags": "#تقويم_النتائج #وول_ستريت #تداول #أسهم_السعودية #كراودسترايك #سيلزفورس #Shorts"
+ }
+}

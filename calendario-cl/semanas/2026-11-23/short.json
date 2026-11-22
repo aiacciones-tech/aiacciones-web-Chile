@@ -1,0 +1,33 @@
+{
+ "semana": "23 al 27 de noviembre de 2026",
+ "rango": "23-27 NOV",
+ "out": "calendario-resultados-2026-11-23.mp4",
+ "fuente": "Fechas y consenso: TheStreet, TipRanks, Opening Bell,\nMarketScreener, Investing.com, Quartr (22-nov-2026).",
+ "escenas": [
+  {"tipo": "gancho", "top": "Dell", "n_mas": 6,
+   "voz": "Esta semana reporta Dell… y seis empresas más que mueven el mercado."},
+  {"tipo": "empresa", "dia": "Martes 24", "hora": "Antes de la apertura", "nombre": "Analog Devices", "ticker": "ADI · Nasdaq", "pais": "EE. UU.",
+   "bpa": "US$3,89", "ingresos": "US$4.320 M", "src": "TheStreet, TipRanks",
+   "voz": "Martes, antes de la apertura: Analog Devices. Se esperan tres coma ochenta y nueve dólares por acción e ingresos de cuatro mil trescientos veinte millones."},
+  {"tipo": "empresa", "dia": "Martes 24", "hora": "Antes de la apertura", "nombre": "Medtronic", "ticker": "MDT · NYSE", "pais": "EE. UU.",
+   "bpa": "US$1,33", "ingresos": "US$9.480 M", "src": "TheStreet, TipRanks",
+   "voz": "También el martes temprano, Medtronic: uno coma treinta y tres dólares por acción y nueve mil cuatrocientos ochenta millones en ventas."},
+  {"tipo": "empresa", "dia": "Martes 24", "hora": "Después del cierre", "nombre": "Dell Technologies", "ticker": "DELL · NYSE", "pais": "EE. UU.",
+   "bpa": "US$6,62", "ingresos": "US$49.320 M", "src": "TheStreet, TipRanks",
+   "voz": "Martes, después del cierre: Dell. Se esperan seis coma sesenta y dos dólares por acción e ingresos de cuarenta y nueve mil trescientos millones."},
+  {"tipo": "empresa", "dia": "Miércoles 25", "hora": "Antes de la apertura", "nombre": "Deere & Company", "ticker": "DE · NYSE", "pais": "EE. UU.",
+   "bpa": "US$4,03", "ingresos": "US$10.380 M", "src": "TheStreet, TipRanks",
+   "voz": "Miércoles, antes de la apertura: Deere. Cuatro coma cero tres dólares por acción e ingresos de diez mil trescientos ochenta millones."},
+  {"tipo": "empresa", "dia": "Jueves 26", "hora": "Hora no informada", "nombre": "Aguas Andinas", "ticker": "AGUAS-A · IPSA", "pais": "Chile",
+   "bpa": "$3,52", "ingresos": "$162.962 M", "src": "MarketScreener",
+   "voz": "Jueves, en Chile: Aguas Andinas. Tres coma cincuenta y dos pesos por acción y ventas de ciento sesenta y tres mil millones de pesos."},
+  {"tipo": "empresa", "dia": "Jueves 26", "hora": "Hora no informada", "nombre": "IAM", "ticker": "IAM · IPSA", "pais": "Chile",
+   "bpa": "$10,43", "ingresos": "$166.990 M", "src": "Investing.com",
+   "voz": "El mismo día, su controladora IAM: diez coma cuarenta y tres pesos por acción e ingresos de ciento sesenta y siete mil millones."},
+  {"tipo": "empresa", "dia": "Viernes 27", "hora": "Hora no informada", "nombre": "Quiñenco", "ticker": "QUINENCO · IPSA", "pais": "Chile",
+   "src": "Quartr", "nota": "Holding del grupo Luksic\n(Banco de Chile, CCU, CSAV, Enex)",
+   "voz": "Y el viernes cierra Quiñenco, el holding del grupo Luksic."},
+  {"tipo": "fin",
+   "voz": "Sigue el canal para el análisis de cada reporte."}
+ ]
+}

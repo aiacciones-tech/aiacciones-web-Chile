@@ -1,0 +1,91 @@
+{
+ "fecha": "2026-11-22",
+ "semana": [
+  "2026-11-23",
+  "2026-11-27"
+ ],
+ "modo": "proximos",
+ "out": "calendario-2026-11-22-GE.mp4",
+ "cabecera": "Wochenkalender der Quartalszahlen",
+ "rango": "23.–27. November 2026",
+ "fuente": "Quellen: Broadcom (Mitteilung vom 9.11.2026),\nEarnings Whispers, Wall Street Horizon,\nTradingView (Stand 22.11.2026).",
+ "verificacion": {
+  "sin_reportes": "Ninguna de las 22 acciones (20 grandes + ANT + SPCX) reporta del 23 al 27-nov: próximas fechas de TradingView (rama datos-serie20-nabd, 22-nov 03:24 UTC) a partir del 9-dic.",
+  "AVGO": "Fecha y hora: nota de Broadcom del 9-nov-2026 (investors.broadcom.com), 9-dic tras el cierre, llamada 17:00 ET. Consenso: Earnings Whispers (BPA 3,45 $, ingresos 34,87 mil M$); guía de la empresa ~34,8 mil M$ (nota del T3 del 2-sep-2026).",
+  "COST": "10-dic tras el cierre, 16:15 ET, «confirmed» en Earnings Whispers y Wall Street Horizon. Consenso Earnings Whispers: BPA 4,89 $, ingresos 74,44 mil M$.",
+  "ORCL": "14-dic tras el cierre: estimación (Earnings Whispers «expected», TradingView 14-dic); Oracle aún no ha anunciado la fecha. Consenso Earnings Whispers: BPA 1,57 $, ingresos 21,31 mil M$.",
+  "JPM": "Fecha no confirmada: Earnings Whispers 12-ene-2027 antes de la apertura, TradingView 14-ene: se dice «Mitte Januar». Consenso Earnings Whispers: BPA 5,96 $, ingresos 51,1 mil M$."
+ },
+ "escenas": [
+  {
+   "tipo": "gancho",
+   "titulo": "Diese Woche:\nkeine Zahlen",
+   "sub": "Thanksgiving-Woche:\nkeine unserer 22 Aktien berichtet.\nDie nächsten Termine:",
+   "lista": [
+    "Broadcom",
+    "Costco",
+    "Oracle",
+    "JPMorgan"
+   ],
+   "voz": "Thanksgiving-Woche: keine Zahlen von unseren 22 Aktien. Als Nächstes berichtet Broadcom, dann drei weitere."
+  },
+  {
+   "tipo": "empresa",
+   "n": 1,
+   "nombre": "Broadcom",
+   "ticker": "AVGO",
+   "dia": "Mi., 9. Dezember",
+   "momento": "nach US-Börsenschluss",
+   "hora": "ab 22 Uhr deutscher Zeit",
+   "umsatz": "34,87 Mrd. $",
+   "eps": "3,45 $",
+   "estado": "bestätigt",
+   "nota": "Unternehmensprognose: rund 34,8 Mrd. $ Umsatz",
+   "voz": "Mittwoch, 9. Dezember, nach Börsenschluss: Broadcom. Konsens: 34,9 Milliarden Dollar Umsatz und 3,45 Dollar je Aktie."
+  },
+  {
+   "tipo": "empresa",
+   "n": 2,
+   "nombre": "Costco",
+   "ticker": "COST",
+   "dia": "Do., 10. Dezember",
+   "momento": "nach US-Börsenschluss",
+   "hora": "ab 22:15 Uhr deutscher Zeit",
+   "umsatz": "74,44 Mrd. $",
+   "eps": "4,89 $",
+   "estado": "bestätigt",
+   "voz": "Donnerstag, 10. Dezember, nach Börsenschluss: Costco. Konsens: 74,4 Milliarden Umsatz und 4,89 Dollar je Aktie."
+  },
+  {
+   "tipo": "empresa",
+   "n": 3,
+   "nombre": "Oracle",
+   "ticker": "ORCL",
+   "dia": "Mo., 14. Dezember",
+   "momento": "nach US-Börsenschluss",
+   "hora": "Termin noch nicht bestätigt",
+   "umsatz": "21,31 Mrd. $",
+   "eps": "1,57 $",
+   "estado": "voraussichtlich",
+   "voz": "Voraussichtlich Montag, 14. Dezember: Oracle. Konsens: 21,3 Milliarden Umsatz und 1,57 Dollar je Aktie."
+  },
+  {
+   "tipo": "empresa",
+   "n": 4,
+   "nombre": "JPMorgan",
+   "ticker": "JPM",
+   "dia": "Mitte Januar",
+   "momento": "vor US-Börsenbeginn",
+   "hora": "Termin noch nicht bestätigt",
+   "umsatz": "51,1 Mrd. $",
+   "eps": "5,96 $",
+   "estado": "voraussichtlich",
+   "voz": "Mitte Januar, vor Börsenbeginn: JPMorgan. Konsens: 51,1 Milliarden Umsatz und 5,96 Dollar je Aktie."
+  },
+  {
+   "tipo": "fin",
+   "titular": "Folge dem Kanal für die Analyse\njeder Zahlenvorlage.",
+   "voz": "Folge dem Kanal für die Analyse jeder Zahlenvorlage. Keine Anlageberatung. Nur zu Informationszwecken."
+  }
+ ]
+}
