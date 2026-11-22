@@ -117,7 +117,7 @@ def s_cierre(e, t):
     T(f, 0.5, 0.645, MARCA_EN + " · " + MARCA, BLUE, 34, "bold", ha="center", alpha=a)
     f.patches.append(plt.Rectangle((0.04, 0.545), 0.92, 0.065, transform=f.transFigure, color=DIM, alpha=a, figure=f))
     T(f, 0.5, 0.578, "محتوى إعلامي، وليس توصية استثمارية.", FG, 34, "bold", ha="center", va="center", alpha=a)
-    T(f, XR, 0.50, S["fuentes"] + f"\nأُعدّ في {fecha_ar(dt.datetime.now(RIAD).date(), True, True)}. المواعيد والتوقعات قد تتغير.",
+    T(f, XR, 0.50, S["fuentes"] + f"\nأُعدّ يوم {fecha_ar(dt.datetime.now(RIAD).date(), True, True)}. المواعيد والتوقعات قد تتغير.",
       MUTED, 24, linespacing=1.6, va="top", alpha=ease((t - 0.2) / 0.5), ancho=50)
     return with_logo(to_arr(f), LGB, x=(W - 260) // 2, y=150)
 
