@@ -1,0 +1,41 @@
+# Voz neuronal de Azure (ar-AE-HamdanNeural) del Short semanal «تقويم النتائج الأسبوعي» de @AIStocksUAE (eau/calendario/).
+# Se lanza sola cuando la sesión del domingo sube eau/calendario/<fecha>/short.json a una rama claude/**, o a mano con "Run workflow".
+# Deja un wav por escena en <fecha>/ de la rama voz-eau (sin historial); make_short.py los usa con VOZ_DIR.
+# Clave: AZURE_SPEECH_KEY_EAU si existe; si no, la de Nabd (plan F0 de 500.000 caracteres al mes, compartido con Nabd y Arabia
+# Saudita; este Short gasta ~1.000 por semana). Sin clave, o si Azure falla, el Short sale con la voz Piper del canal.
+name: Voz Azure del calendario semanal (EAU)
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["eau/calendario/20*/short.json"]
+  workflow_dispatch:
+    inputs:
+      fecha:
+        description: "carpeta de la semana (AAAA-MM-DD); vacío = la más reciente"
+        default: ""
+permissions:
+  contents: write
+concurrency: voz-eau
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_EAU || secrets.AZURE_SPEECH_KEY_NABD }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_EAU || secrets.AZURE_SPEECH_REGION_NABD || 'northeurope' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generar la voz de la semana
+        run: |
+          if [ -z "$AZURE_SPEECH_KEY" ]; then echo "Falta la clave de Azure: el Short saldrá con la voz Piper."; exit 1; fi
+          F="${{ inputs.fecha }}"
+          if [ -z "$F" ]; then F=$(ls -d eau/calendario/20??-??-?? | sort | tail -1 | xargs basename); fi
+          echo "semana $F"; mkdir -p /tmp/voz
+          if git fetch -q --depth 1 origin voz-eau 2>/dev/null; then git archive FETCH_HEAD | tar -x -C /tmp/voz; fi
+          # carpetas de más de 60 días fuera
+          for d in /tmp/voz/20??-??-??; do [ -d "$d" ] || continue; b=$(basename $d)
+            python3 -c "import sys,datetime as dt;sys.exit(0 if dt.date.today()-dt.date.fromisoformat(sys.argv[1])>dt.timedelta(days=60) else 1)" "$b" && rm -rf "$d"; done
+          python3 eau/calendario/voz_azure.py eau/calendario/$F /tmp/voz/$F
+          cd /tmp/voz && git init -q -b voz-eau && git add -A
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Voz Azure del calendario semanal EAU $F"
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          for i in 1 2 3; do git push -qf origin voz-eau && break; sleep 5; done
