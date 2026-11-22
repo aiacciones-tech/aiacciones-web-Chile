@@ -27,3 +27,5 @@
   Antes de cada capítulo lee `nabd/fundamental/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Bahrain AI Stocks, serie educativa semanal «التحليل الفني ببساطة» (sábados, desde el 28-nov-2026):** instrucciones en `bahrain/educativo/CLAUDE.md`
   (prevalecen sobre el texto de su tarea programada). Plan de 10 temas en `bahrain/educativo/plan-lessons-bahrain.json`.
+- **Qatar AI Stocks, Short semanal «تقويم النتائج الأسبوعي» (`qatar/calendario/`):** cada sábado entre las 20:00 y las 21:00 de Doha.
+  Antes de cada Short lee `qatar/calendario/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
