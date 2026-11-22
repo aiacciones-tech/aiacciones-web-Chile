@@ -30,6 +30,9 @@ dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=d
 assert 45 <= dur <= 60, f"Short lasts {dur:.1f} s (45-60)"
 print("checks ok, Short", round(dur, 1), "s")
 EOF
+# Daniel: it goes out on Saturday between 20:00 and 21:00 Manama. If it is earlier than 20:00 Manama, wait (at most 2 h).
+W=$(python3 -c "import datetime as d,zoneinfo as z;n=d.datetime.now(z.ZoneInfo('Asia/Bahrain'));print(max(0,min(7200,int((n.replace(hour=20,minute=2,second=0)-n).total_seconds()))))")
+[ "${NOW:-0}" = 1 ] || { [ "$W" -gt 0 ] && echo "waiting $W s for 20:02 Manama" && sleep $W; }
 [ -d $S/cola ] || git clone -q --depth 1 -b youtube-cola --filter=blob:none --sparse https://github.com/aiacciones-tech/aiacciones-web-Chile.git $S/cola
 cd $S/cola; git sparse-checkout set cola-bahrain >/dev/null 2>&1 || true; git pull -q origin youtube-cola 2>/dev/null || true
 git config user.name "aiacciones-bot"; git config user.email "aiacciones-bot@users.noreply.github.com"
