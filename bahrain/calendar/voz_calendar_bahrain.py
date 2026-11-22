@@ -6,7 +6,7 @@ with VOZ_DIR=<folder>. A wav already in the out folder is not requested again.""
 import glob, hashlib, html, json, os, sys, time, urllib.request
 
 VOZ = os.environ.get("AZURE_VOZ_BH", "ar-BH-AliNeural")
-RATE = os.environ.get("AZURE_RATE_BH", "+0%")
+RATE = os.environ.get("AZURE_RATE_BH", "+15%")
 
 
 def clave(texto):

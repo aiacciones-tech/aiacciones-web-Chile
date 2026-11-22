@@ -20,7 +20,7 @@ PIPE = "/mnt/project-files/bahrain-pipeline"
 FONTS = os.environ.get("FONTS_BH", os.path.join(PIPE, "fonts"))
 PIPER_VOICE = os.path.join(PIPE, "voice", "ar_JO-kareem-medium.onnx")
 DISCLAIMER = "محتوى إعلامي، وليس توصية استثمارية"
-PAUSE, FPS, W, H = 0.45, 30, 1080, 1920
+PAUSE, FPS, W, H = 0.35, 30, 1080, 1920
 
 CSS = """
 @font-face { font-family: T; src: url('file://@FONTS@/Tajawal-Regular.ttf'); font-weight: 400; }
