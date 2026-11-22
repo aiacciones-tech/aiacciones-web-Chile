@@ -74,6 +74,7 @@ def s_gancho(e, t):
         T(f, XR, 0.60, "لا نتائج من قائمتنا هذا الأسبوع", FG, 46, "bold", alpha=b)
         if S.get("nota_semana"): T(f, XR, 0.57, S["nota_semana"], MUTED, 28, alpha=b, va="top", linespacing=1.5, ancho=56)
         y0, lab = 0.49, "المواعيد القادمة بالترتيب الزمني:"
+    if len(EM) > 4: return with_logo(to_arr(f), LG, x=90, y=150)  # más de 4: sin lista (no cabe; cada una tiene su escena)
     T(f, XR, y0, lab, BLUE, 36, "bold", alpha=ease((t - 0.3) / 0.5))
     for i, x in enumerate(EM):
         c = ease((t - 0.35 - i * 0.12) / 0.5); y = y0 - 0.065 - i * (0.075 if len(EM) <= 4 else 0.055)
@@ -129,7 +130,7 @@ def frame(e, t): return RX[e["tipo"]](e, t)
 if __name__ == "__main__":
     P = os.path.abspath(sys.argv[1]); B = os.path.dirname(P); S = json.load(open(P)); E = S["escenas"]; os.makedirs(AUD, exist_ok=True)
     EM = [x for x in E if x["tipo"] == "empresa"]
-    assert S["modo"] in ("semana", "proximos") and E[0]["tipo"] == "gancho" and E[-1]["tipo"] == "cierre" and EM, "estructura: gancho, empresas, cierre"
+    assert S["modo"] in ("semana", "proximos") and E[0]["tipo"] == "gancho" and E[-1]["tipo"] == "cierre" and 1 <= len(EM) <= 8, "estructura: gancho, 1-8 empresas, cierre"
     orden = [x.get("fecha_et") or "9999" for x in EM]; assert orden == sorted(orden), "las empresas van en orden cronológico"
     Image.fromarray(frame(E[0], 1.0)).save(os.path.join(B, f"miniatura-{S['base']}-Nabd.png"))
     if len(sys.argv) > 2 and sys.argv[2] == "preview":
