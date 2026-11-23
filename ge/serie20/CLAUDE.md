@@ -13,6 +13,7 @@ Valen todas las reglas de `ge/diario/CLAUDE.md` (Keine Anlageberatung, transpare
   `calendario.json` y `<TICKER>/datos.json` (TradingView). `datos_listos=false` significa que TradingView aún no tiene el trimestre: se espera.
 - Datos de ANT y SPCX: rama `datos-serie20-ge` (la escribe `serie20-datos-GE.yml` a las 11:10 y 23:40 UTC con `ge/serie20/datos_extra.py`,
   que reutiliza `nabd/serie20/datos_tv.py` sin tocarlo; mismo formato). Este workflow sí es del canal y se puede lanzar a mano.
+  Desde el 21-nov Nabd también tiene ANT y SPCX en `datos-serie20-nabd`; `plan.py` usa esa y la rama `-ge` queda de respaldo (sin duplicados).
 - `plan.py <datos> <cola-ge> [<datos-ge>]`: episodios de hoy (0-3, día de Berlín) y pendientes, de las dos ramas de datos; cada episodio dice en `datos` de qué carpeta copiar `datos.json`.
 - `make_episodio.py <carpeta> [preview]`: 7 escenas (Einstieg, Das Quartal in Zahlen, Umsatz und Marge, Bilanz, Cashflow, Erwartungen, Fazit),
   1920x1080, 120-240 s, control de calidad. Las cifras de pantalla salen solas de `datos.json`.
