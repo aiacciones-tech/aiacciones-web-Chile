@@ -5,11 +5,16 @@ Formato pedido por Daniel el 22-nov-2026. Estas instrucciones prevalecen sobre e
 ## Formato
 - Short vertical 9:16, **45 a 60 s**, voz `es-ES-AlvaroNeural` (la del canal), marca y colores del vídeo diario.
 - Sale **cada domingo entre las 18:00 y las 20:00 (Madrid)** con las empresas que reportan de lunes a viernes de la semana siguiente.
-- **5 a 7 empresas**, las más relevantes: primero las del IBEX 35, luego otras españolas y europeas grandes, y después las
-  grandes de EE. UU. (por capitalización y por interés para el inversor español). Unos 6-8 s por empresa.
+- **Solo empresas españolas** (Daniel, 23-nov-2026: «solo acciones españolas»): primero las del IBEX 35 y, después, las del
+  Mercado Continuo más relevantes, hasta 5-7. Nada de empresas extranjeras (ni europeas ni de EE. UU.). Unos 6-8 s por empresa.
+- Semanas con pocas: si hay de 1 a 4 españolas, el Short sale con esas (puede durar menos de 45 s; se puede añadir en la escena
+  una línea de agenda española verificada, p. ej. un dividendo o una junta, pero nunca empresas extranjeras). Si no reporta
+  ninguna española, **no se publica**: avisa a Daniel en el hilo con lo que comprobaste.
 - Por empresa: nombre y ticker, bolsa, día y momento (antes de la apertura / tras el cierre / hora de Madrid) y lo que espera el
-  mercado: **BPA e ingresos de consenso**.
-- Guion: 1) gancho (3 s): «Esta semana reporta [la más importante]… y [N] empresas más que mueven el mercado.»
+  mercado: **consenso de analistas** (BPA e ingresos; en España se publica a menudo beneficio neto, ebitda o ingresos: campos
+  `bpa`, `beneficio`, `ebitda`, `ingresos`, se muestran como máximo dos). Fuentes: Europa Press/Expansión/Cinco Días (consenso de
+  FactSet, Bloomberg o LSEG), Bolsamanía, Investing.es, Estrategias de Inversión.
+- Guion: 1) gancho (3 s): «Esta semana reporta [la más importante]… y [N] empresas más que mueven el mercado.» (con una sola: «Esta semana reporta [X].»)
   2) las empresas en orden cronológico; 3) cierre: «Sigue el canal para el análisis de cada reporte.» + aviso
   «Contenido informativo, no es recomendación de inversión.»
 
@@ -21,7 +26,8 @@ Formato pedido por Daniel el 22-nov-2026. Estas instrucciones prevalecen sobre e
   (p. ej. GAAP frente a ajustado), descarta la empresa o el dato.
 - **Si falta un dato, sácalo del guion** (no se dice ni se pone «n. d.»): la escena muestra solo lo que hay
   (`sin_consenso` = una línea descriptiva verificable de la empresa).
-- Comprueba festivos (p. ej. Acción de Gracias en EE. UU.) y dilo en `nota_semana` (va en la descripción y en Telegram).
+- Comprueba festivos de la Bolsa española y dilo en `nota_semana` (va en la descripción y en Telegram).
+- La edición del 23-nov-2026 (`ejemplo-2026-11-23/`) mezcló empresas extranjeras: úsala solo como plantilla de formato.
 - Calendario del IBEX: `espana/datos/calendario-*.json`; hechos de la CNMV: `espana/datos/hechos.json`.
 - El contenedor no llega a cnmv.es ni a algunas webs: usa el navegador integrado del ordenador de Daniel si está conectado,
   o un agente web-fetch.
