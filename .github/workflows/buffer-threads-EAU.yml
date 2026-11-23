@@ -1,0 +1,69 @@
+# Manda a Threads (@uaeaistocks, conectado en la cuenta de Buffer EAU2) cada video nuevo de AI Stocks UAE de cola-eau/
+# (rama youtube-cola): vídeo diario de bolsa, serie fundamental y videos de resultados (Daniel, 23-nov-2026).
+# El texto es el post-x.txt del video largo, con la miniatura adjunta y el enlace al canal de YouTube (buffer.py lo
+# agrega si falta). Las carpetas con su propio post-threads.txt (p. ej. el calendario semanal) las manda buffer.yml.
+# Solo videos subidos a YouTube desde BUFFER_DESDE (abajo), para no repetir en Threads los videos viejos.
+# Corre cuando termina "Mandar posts de X a Buffer" (que corre tras cada subida a YouTube) y a mano:
+# "Run workflow" con modo=verificar muestra los canales de EAU; programar manda lo pendiente.
+name: Mandar posts a Threads (EAU)
+concurrency: buffer-threads-eau
+on:
+  workflow_run:
+    workflows: ["Mandar posts de X a Buffer"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "verificar (solo las claves y los canales) o programar (desde la rama youtube-cola)"
+        default: verificar
+permissions:
+  contents: write
+jobs:
+  threads:
+    runs-on: ubuntu-latest
+    env:
+      BUFFER_API_KEY_EAU: ${{ secrets.BUFFER_ACCESS_TOKEN_EAU }}
+      BUFFER_API_KEY_EAU2: ${{ secrets.BUFFER_ACCESS_TOKEN_EAU2 }}
+      BUFFER_CANAL_THREADS_EAU: ${{ vars.BUFFER_CANAL_THREADS_EAU }}
+      BUFFER_REDES: threads
+      BUFFER_SOLO_ALTERNO: si
+      BUFFER_DESDE: "2026-11-23"
+      COLA_RAMA: ${{ (github.event_name == 'workflow_run' || inputs.modo == 'programar') && 'si' || 'no' }}
+    steps:
+      - name: Comprobar secreto
+        id: s
+        run: |
+          if [ -z "$BUFFER_API_KEY_EAU" ]; then
+            echo "Falta el secreto BUFFER_ACCESS_TOKEN_EAU: no se manda nada."; echo "ok=no" >> $GITHUB_OUTPUT
+            [ "${{ github.event_name }}" != workflow_dispatch ] || exit 1
+          else echo "ok=si" >> $GITHUB_OUTPUT; fi
+      - uses: actions/checkout@v4
+        if: steps.s.outputs.ok == 'si'
+        with:
+          ref: ${{ env.COLA_RAMA == 'si' && 'youtube-cola' || github.ref }}
+      - name: Scripts del workflow (no los de youtube-cola)
+        # la rama youtube-cola guarda su propia copia (vieja) de scripts/buffer.py: el script sale del commit del workflow (main)
+        if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'si'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          path: _src
+          sparse-checkout: scripts
+      - name: Verificar claves
+        if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'no'
+        run: python3 scripts/buffer.py verificar eau
+      - name: Mandar posts pendientes
+        if: steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'si'
+        run: |
+          if [ -d cola-eau ]; then python3 _src/scripts/buffer.py programar cola-eau; else echo "No hay cola-eau/."; fi
+      - name: Guardar IDs de Buffer
+        if: always() && steps.s.outputs.ok == 'si' && env.COLA_RAMA == 'si'
+        run: |
+          [ -d cola-eau ] || exit 0
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add cola-eau
+          git diff --cached --quiet && exit 0
+          git commit -m "IDs de Buffer (Threads EAU) $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
+          exit 1

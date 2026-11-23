@@ -53,6 +53,12 @@ Nabd Wall Street (نبض وول ستريت, en árabe): `programar cola-nabd` co
 BUFFER_API_KEY_NABD: LinkedIn, X y TikTok) y una segunda para Instagram (BUFFER_API_KEY_NABD_IG, por el límite de
 3 canales del plan gratis); variables con sufijo _NABD. `verificar nabd` prueba solo esas cuentas.
 Threads: <cola>/<slug>/post-threads.txt (máximo 500 caracteres), con imagen.png o miniatura.png adjunta si hay.
+EAU (Daniel, 23-nov-2026): en cola-eau/, sin post-threads.txt, Threads usa el post-x.txt del video largo (diario,
+fundamental, resultados). Lo manda .github/workflows/buffer-threads-EAU.yml con estas variables de entorno:
+  BUFFER_REDES=threads        solo esas redes (separadas por comas)
+  BUFFER_SOLO_ALTERNO=si      solo carpetas sin el archivo propio de la red (post-threads.txt lo manda buffer.yml)
+  BUFFER_DESDE=AAAA-MM-DD     solo videos subidos a YouTube desde ese día (resultado.json "subido"), para no
+                              repetir en Threads los videos viejos
 Solo usa la biblioteca estándar de Python.
 """
 import json, os, re, subprocess, sys, unicodedata, urllib.request
@@ -127,16 +133,43 @@ REDES = {
     # Threads (hoy solo Baréin): post-threads.txt, máximo 500 caracteres
     "threads": {"nombre": "Threads", "archivo": "post-threads.txt", "registro": "buffer-threads.json",
                 "servicios": ("threads",), "variable": "BUFFER_CANAL_THREADS", "limite": 500,
-                "largo": len, "obligatoria": False, "imagen": True},
+                "largo": len, "obligatoria": False, "imagen": True, "alterno_pais": {"eau": "post-x.txt"}},
 }
 
 
 def archivo_post(carpeta, r, pais):
     """El archivo de texto del post de esa red en la carpeta, o None si no hay."""
-    for nombre in (r["archivo"], r.get("alterno_eau") if pais in ("eau", "qatar", "saudi", "bahrain") else None):
+    solo_alterno = (os.environ.get("BUFFER_SOLO_ALTERNO") or "").strip().lower() == "si"
+    # alterno_pais solo vale con BUFFER_SOLO_ALTERNO=si: así una corrida normal nunca manda los videos viejos a Threads
+    alternos = (r.get("alterno_eau") if pais in ("eau", "qatar", "saudi", "bahrain") else None,
+                r.get("alterno_pais", {}).get(pais) if solo_alterno else None)
+    for nombre in ((() if solo_alterno else (r["archivo"],)) + alternos):
         if nombre and os.path.isfile(os.path.join(carpeta, nombre)):
+            if solo_alterno and os.path.isfile(os.path.join(carpeta, r["archivo"])):
+                return None  # esa carpeta tiene su propio archivo: la manda el otro workflow
             return nombre
     return None
+
+
+def redes_activas():
+    """Las redes de BUFFER_REDES (p. ej. threads), o todas."""
+    pedidas = [x.strip().lower() for x in (os.environ.get("BUFFER_REDES") or "").split(",") if x.strip()]
+    return {red: r for red, r in REDES.items() if not pedidas or red in pedidas}
+
+
+def subido_antes(carpeta):
+    """Con BUFFER_DESDE (AAAA-MM-DD): True si la carpeta no tiene video subido a YouTube desde ese día.
+    Sin resultado.json todavía no cuenta (espera la subida; p. ej. calendario-3T26 es solo imagen y nunca sale)."""
+    desde = (os.environ.get("BUFFER_DESDE") or "").strip()
+    if not desde:
+        return False
+    res = os.path.join(carpeta, "resultado.json")
+    if not os.path.isfile(res):
+        return True
+    subido = json.load(open(res, encoding="utf-8")).get("subido") or ""
+    return not subido or subido[:10] < desde
+
+
 CANAL_CL = "youtube.com/@aiaccioneschile"  # canal de YouTube de Chile
 CLAVES_ES = ("BUFFER_API_KEY_ES", "BUFFER_API_KEY_ES2")  # cuentas de Buffer solo de España
 CLAVES_EAU = ("BUFFER_API_KEY_EAU", "BUFFER_API_KEY_EAU2")  # cuentas de Buffer solo de EAU (@AIStocksUAE)
@@ -356,9 +389,10 @@ def programar(base):
     modo = (os.environ.get("BUFFER_MODO") or "ahora").strip().lower()
     if modo not in MODOS:
         sys.exit(f"BUFFER_MODO debe ser ahora, cola o borrador, no {modo!r}.")
-    pendientes = sorted((d, red) for d in os.listdir(base) for red, r in REDES.items()
+    pendientes = sorted((d, red) for d in os.listdir(base) for red, r in redes_activas().items()
                         if archivo_post(os.path.join(base, d), r, pais)
-                        and not os.path.exists(os.path.join(base, d, r["registro"])))
+                        and not os.path.exists(os.path.join(base, d, r["registro"]))
+                        and not subido_antes(os.path.join(base, d)))
     if not pendientes:
         print("No hay posts pendientes.")
         return
