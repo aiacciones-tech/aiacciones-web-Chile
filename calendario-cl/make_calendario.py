@@ -45,8 +45,11 @@ def s_gancho(e, t):
     f.text(0.07, 0.675, f"Semana del {S['semana']}", color=ACC2, fontsize=34, weight="bold", alpha=a)
     f.text(0.07, 0.56, "Esta semana reporta", color=FG, fontsize=54, alpha=a)
     f.text(0.07, 0.465, e["top"], color=FG, fontsize=150, weight="bold", alpha=b)
-    f.text(0.07, 0.395, f"… y {e['n_mas']} empresas más", color=NEG, fontsize=56, weight="bold", alpha=ease((t - 0.45) / 0.4))
-    f.text(0.07, 0.345, "que mueven el mercado", color=MUTED, fontsize=44, alpha=ease((t - 0.45) / 0.4))
+    n = e.get("n_mas", 0)
+    if n:  # con una sola empresa no hay «y N más»
+        mas = "… y una empresa más" if n == 1 else f"… y {n} empresas más"
+        f.text(0.07, 0.395, mas, color=NEG, fontsize=56, weight="bold", alpha=ease((t - 0.45) / 0.4))
+        f.text(0.07, 0.345, "que mueven el mercado", color=MUTED, fontsize=44, alpha=ease((t - 0.45) / 0.4))
     return with_logo(to_arr(f), LGB, y=150)
 
 def s_empresa(e, t):
