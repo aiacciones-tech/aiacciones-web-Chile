@@ -1,6 +1,42 @@
 {
- "actualizado": "2026-11-20T13:52Z",
+ "actualizado": "2026-11-23T15:44Z",
  "items": [
+  {
+   "id": "47aa8fd6-8443-4011-bf83-e77a88e6f807",
+   "tipo": "OIR",
+   "fecha": "2026-11-23 15:38",
+   "entidad": "FLUIDRA, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Operaciones realizadas bajo el programa de recompra el 16 de noviembre de 2026",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b47aa8fd6-8443-4011-bf83-e77a88e6f807%7d",
+   "ticker": "FDR",
+   "temas": []
+  },
+  {
+   "id": "d286dbf0-4462-475f-84db-fcc7dd42b4b2",
+   "tipo": "OIR",
+   "fecha": "2026-11-23 11:58",
+   "entidad": "ARCELORMITTAL, S.A.",
+   "nif": "N0181056C",
+   "categoria": "Otra información relevante",
+   "titulo": "Relación de operaciones con acciones propias efectuadas entre el 16 y el 20 de noviembre de 2026, en el marco del programa de recompra de acciones anunciado el 30 de junio de 2026.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bd286dbf0-4462-475f-84db-fcc7dd42b4b2%7d",
+   "ticker": "MTS",
+   "temas": []
+  },
+  {
+   "id": "6f1620e9-ce8f-410a-b782-848b7166a8a1",
+   "tipo": "OIR",
+   "fecha": "2026-11-23 11:01",
+   "entidad": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+   "nif": "A48265169",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad comunica información relativa a la ejecución del programa de recompra de acciones.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b6f1620e9-ce8f-410a-b782-848b7166a8a1%7d",
+   "ticker": "BBVA",
+   "temas": []
+  },
   {
    "id": "8f56ce33-c864-4a91-8bea-aae5f15abbf6",
    "tipo": "OIR",
