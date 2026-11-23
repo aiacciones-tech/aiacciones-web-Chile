@@ -1,0 +1,164 @@
+{
+ "fecha": "2026-11-23",
+ "titular": "Huang kehrt zurück: Nvidia +31 %, S&P 500 +4,7 %",
+ "nombres": {},
+ "ticker": [
+  "S&P 500 +4,73 %, Nasdaq Composite +6,51 %",
+  "Nvidia +31,48 %: Jensen Huang wieder Vorstandschef",
+  "Dow Jones +1.448 Punkte",
+  "VIX −25,9 % auf 26,6",
+  "CrowdStrike −8,92 % nach Angebot für Zscaler",
+  "DAX +2,15 %, Euro Stoxx 50 +2,23 %"
+ ],
+ "voz": {
+  "s_title": "Willkommen zum Tagesbericht von Wall Street auf Deutsch, für Montag, den 23. November. Nach der schwarzen Vorwoche folgte eine kräftige Erholung. Der S&P 500 stieg um 4,73 Prozent auf rund 7.237 Punkte und beendete damit eine Serie von sieben Verlusttagen. Der Nasdaq Composite legte um 6,51 Prozent zu. Auslöser war Nvidia: Der Konzern holte Jensen Huang als Vorstandschef zurück, die Aktie sprang um mehr als 31 Prozent.",
+  "s_indices": "Die großen Indizes im Überblick. Der S&P 500 schloss bei 7.237,17 Punkten, ein Plus von 327 Punkten. Der Nasdaq 100 stieg um 6,86 Prozent, der Dow Jones um 3,01 Prozent auf 49.595 Punkte, ein Plus von 1.448 Punkten. Der Russell 2000 legte um 3,4 Prozent zu. Laut Yahoo Finance war es für die großen Indizes der beste Tag seit April 2025. Die Breite war sehr stark: Im S&P 500 stiegen 415 Werte, nur 82 fielen, berechnet. Der S&P 500 liegt jetzt 7,7 Prozent unter seinem Rekordhoch vom 6. Oktober und damit nicht mehr in der Korrektur. Der Nasdaq 100 liegt noch 14,7 Prozent unter seinem Rekord.",
+  "s_grandes": "Wer hat die Indizes bewegt? Alle acht größten Werte im Nasdaq 100 stiegen. Nvidia sprang um 31,5 Prozent, Tesla um 11,5 Prozent, Meta und Alphabet um gut 6 Prozent. Microsoft und Apple legten knapp 2 Prozent zu. Im Dow Jones brachte Nvidia allein rund 236 Punkte, berechnet aus den Tagesdaten. Dahinter folgten Caterpillar mit 218 und Goldman Sachs mit 197 Punkten. Am stärksten bremste UnitedHealth mit minus 23 Punkten.",
+  "s_news": "Warum hat sich der Markt bewegt? Erstens: Nvidia. Vor Börsenbeginn teilte der Konzern mit, dass Jensen Huang wieder Präsident, Vorstandschef und Mitglied des Verwaltungsrats ist. Huang war am 12. November zurückgetreten. Laut der von ABC News zitierten Mitteilung stimmte der Verwaltungsrat einstimmig zu. Er habe Rückmeldungen von hochrangigen Stellen der US-Regierung erhalten und sei überzeugt, dass die Rückkehr kein Risiko für die nationale Sicherheit darstelle. Laut Yahoo Finance begrüßte Präsident Trump die Entscheidung. Zweitens: Die Erholung erfasste den gesamten Chipsektor und andere KI-Werte, die in der Vorwoche stark gefallen waren. Laut Reuters hatte der Nasdaq in der Vorwoche 10 Prozent verloren, so viel wie seit März 2020 nicht mehr. Drittens: Laut Reuters stieg der Dollar-Index auf ein 19-Monats-Hoch, weil Anleger mit einer strafferen Geldpolitik der Fed rechnen.",
+  "s_sectores": "Zu den Sektoren. Fünf von sechs Sektor-ETFs stiegen. Technologie sprang um 9 Prozent, der stärkste Tagesgewinn in dieser Auswahl. Zyklischer Konsum und Industrie legten jeweils fast 4 Prozent zu, Finanzen 2 Prozent, Gesundheit 1,2 Prozent. Nur Energie fiel, um 1,1 Prozent, mit dem schwächeren Ölpreis.",
+  "s_macro": "Zu Zinsen, Dollar und Rohstoffen. Die Rendite der 10-jährigen US-Staatsanleihe lag fast unverändert bei 4,94 Prozent. Der Dollar-Index DXY stieg um 0,5 Prozent auf 104,3. Der Volatilitätsindex VIX fiel um fast 26 Prozent auf 26,6 Punkte. In der Vorwoche war er laut Reuters erstmals seit April 2025 über 40 gestiegen. Der US-Ölpreis WTI verlor 3,9 Prozent auf 80,37 Dollar; laut Reuters wegen höherer Lieferungen aus dem Nahen Osten. Gold stieg um 2,6 Prozent auf rund 3.631 Dollar. Und Europa? Der DAX schloss um 17:30 Uhr mit plus 2,15 Prozent bei 25.337 Punkten, der Euro Stoxx 50 mit plus 2,23 Prozent. Der Xetra-Handel beginnt morgen um 9 Uhr.",
+  "s_tech_spx": "Zur Charttechnik. Der S&P 500 liegt nach der Erholung noch 1,5 Prozent unter seiner 200-Tage-Linie bei rund 7.350 Punkten. Zur 20-Tage-Linie fehlen 3,2 Prozent, zur 50-Tage-Linie 5 Prozent. Der RSI stieg von knapp 25 auf 41 und hat die überverkaufte Zone damit verlassen. Das Volumen lag 30 Prozent über dem Schnitt der letzten zehn Tage.",
+  "s_esc_spx": "Drei Szenarien für den S&P 500. Im positiven Szenario würde ein Schluss über der 200-Tage-Linie bei rund 7.350 Punkten die Erholung bestätigen; die nächste Marke wäre das Hoch vom 19. November bei rund 7.416. Im neutralen Szenario pendelt der Index zwischen dem Tief vom Freitag bei 6.883 und der 200-Tage-Linie. Im negativen Szenario würde ein Schluss unter 6.883 Punkten die Erholung in Frage stellen; dann rückte das 52-Wochen-Tief bei rund 6.317 in den Blick. Das sind Bedingungen, keine Prognosen.",
+  "s_tech_ndx": "Der Nasdaq 100 liegt noch 4,8 Prozent unter seiner 200-Tage-Linie und 8,3 Prozent unter der 50-Tage-Linie. Der RSI stieg auf 42. Das Volumen lag 40 Prozent über dem Zehn-Tage-Schnitt.",
+  "s_esc_ndx": "Für den Nasdaq 100 beginnt das positive Szenario über dem Hoch vom 19. November bei rund 27.749 Punkten; darüber wäre die 200-Tage-Linie bei rund 28.082 die nächste Marke. Im neutralen Szenario bleibt der Index zwischen dem Tief vom Freitag bei 24.910 und diesem Hoch. Im negativen Szenario würde ein Schluss unter 24.910 Punkten den Blick auf das 52-Wochen-Tief bei 22.841 lenken.",
+  "s_agenda": "Was steht an? Die nächste Sitzung beginnt am Dienstag um 9:30 Uhr New Yorker Zeit, 15:30 Uhr bei uns. Am Donnerstag bleibt die Wall Street wegen Thanksgiving geschlossen, am Freitag endet der Handel bereits um 13 Uhr New Yorker Zeit, 19 Uhr bei uns. Bei der Fed richtet sich der Blick auf die Zinsentscheidung am 9. Dezember; laut Polymarket rechnen die Anleger mit rund 91 Prozent Wahrscheinlichkeit mit einer Zinserhöhung.",
+  "s_fin": "Unser Fazit: Mit der Rückkehr von Jensen Huang erholte sich die Wall Street kräftig. Der S&P 500 stieg fast 5 Prozent und ist nicht mehr in der Korrektur, der VIX fiel deutlich. Ob die Erholung hält, zeigt sich an der 200-Tage-Linie. Folgen Sie uns kostenlos auf Telegram, der Link steht in der Videobeschreibung. Wichtiger Hinweis: Das ist keine Anlageberatung, sondern nur Information. Text, Stimme und Grafiken sind mit KI erstellt. Wir sehen uns morgen, auf Wiedersehen."
+ },
+ "indices": {
+  "titulo": "Bester Tag seit April 2025: S&P 500 +4,7 %, Nasdaq 100 +6,9 %"
+ },
+ "grandes": {
+  "titulo": "Nvidia +31 % bringt dem Dow rund 236 Punkte"
+ },
+ "noticias": {
+  "titulo": "Jensen Huang kehrt an die Spitze von Nvidia zurück",
+  "fuente": "Quellen: Mitteilung von Nvidia, zitiert von ABC News; Yahoo Finance; Reuters (23. November 2026).",
+  "items": [
+   [
+    "Nvidia",
+    "Huang wieder Vorstandschef · Verwaltungsrat einstimmig"
+   ],
+   [
+    "Regierung",
+    "Verwaltungsrat: Rückmeldung der US-Regierung, kein Sicherheitsrisiko"
+   ],
+   [
+    "KI-Werte",
+    "Erholung bei Chips und KI-Aktien nach dem Ausverkauf der Vorwoche"
+   ],
+   [
+    "Dollar",
+    "Dollar-Index auf 19-Monats-Hoch (Reuters)"
+   ]
+  ]
+ },
+ "sectores": {
+  "titulo": "Technologie +9 % · nur Energie im Minus",
+  "items": [
+   [
+    "Technologie vorn",
+    "Technologie +8,97 %; Konsum +3,97 %; Industrie +3,90 %",
+    "teal"
+   ],
+   [
+    "Energie schwächer",
+    "Energie −1,06 % mit fallendem Ölpreis",
+    "neg"
+   ]
+  ]
+ },
+ "acciones": [
+  {
+   "ticker": "NVDA",
+   "noticia": "Jensen Huang wieder Präsident, Vorstandschef und Verwaltungsratsmitglied; Rücktritt vom 12. November rückgängig (Nvidia).",
+   "lectura": "128 Mrd. $ Umsatz, 1,65-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Mitteilung von Nvidia, zitiert von ABC News (23. November 2026).",
+   "voz": "Die erste Aktie: Nvidia. Die Aktie stieg um 31,48 Prozent auf 165,05 Dollar, bei einem Handelsumsatz von 128 Milliarden Dollar. Grund war die Rückkehr von Jensen Huang an die Spitze des Konzerns. Laut ABC News machte die Aktie damit fast alle Verluste seit seinem Rücktritt am 12. November wett. Die Quartalszahlen von Nvidia finden Sie in unserer Serie «Die Wall-Street-Giganten»."
+  },
+  {
+   "ticker": "MU",
+   "noticia": "Keine eigene Meldung; Erholung der Chipwerte nach dem Ausverkauf der Vorwoche.",
+   "lectura": "35 Mrd. $ Umsatz.",
+   "fuente": "Kurs und Volumen: TradingView (23. November 2026).",
+   "voz": "Die zweite Aktie: Micron Technology, der Speicherchip-Hersteller. Die Aktie stieg um 19,04 Prozent auf 707,70 Dollar, bei 35 Milliarden Dollar Handelsumsatz. Eine eigene Meldung zu Micron gab es nicht. Die Aktie hatte in der Vorwoche fast ein Viertel verloren und erholte sich nun mit dem gesamten Chipsektor."
+  },
+  {
+   "ticker": "DELL",
+   "noticia": "Keine konkrete Meldung in der Presse.",
+   "lectura": "1,7-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView (23. November 2026).",
+   "voz": "Die dritte Aktie: Dell Technologies, ein Hersteller von Computern und Servern, auch für KI-Rechenzentren. Die Aktie stieg um 20,46 Prozent auf 334,91 Dollar, bei 1,7-fachem Volumen. Eine konkrete Meldung zu Dell fanden wir nicht; die Aktie stieg mit den anderen Anbietern von KI-Hardware."
+  },
+  {
+   "ticker": "CRWD",
+   "noticia": "CrowdStrike bietet laut Yahoo Finance rund 43,9 Mrd. $ für Zscaler; die Zscaler-Aktie stieg um 13 %.",
+   "lectura": "3,5-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Yahoo Finance (23. November 2026).",
+   "voz": "Die vierte Aktie: CrowdStrike, ein Anbieter von Cybersicherheit. Gegen den Markt fiel die Aktie um 8,92 Prozent auf 208,97 Dollar, bei 3,5-fachem Volumen. Laut Yahoo Finance hat CrowdStrike ein Angebot über rund 43,9 Milliarden Dollar für den Konkurrenten Zscaler vorgelegt. Die Zscaler-Aktie stieg daraufhin um 13 Prozent."
+  },
+  {
+   "ticker": "TSLA",
+   "noticia": "Keine konkrete Meldung in der Presse.",
+   "lectura": "17,7 Mrd. $ Umsatz, 1,5-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView (23. November 2026).",
+   "voz": "Die fünfte Aktie: Tesla. Die Aktie stieg um 11,46 Prozent auf 385,46 Dollar, bei fast 18 Milliarden Dollar Handelsumsatz. Eine konkrete Meldung zu Tesla fanden wir nicht; die Aktie stieg mit den anderen großen Technologiewerten."
+  }
+ ],
+ "macro": {
+  "titulo": "VIX fällt auf 26,6 · Dollar auf 19-Monats-Hoch",
+  "items": {
+   "TVC:US10Y": "Rendite kaum verändert",
+   "TVC:DXY": "Höchster Stand seit 19 Monaten (Reuters)",
+   "TVC:VIX": "Nervosität lässt nach",
+   "TVC:USOIL": "Mehr Angebot aus Nahost (Reuters)",
+   "TVC:GOLD": "Gold erholt sich"
+  },
+  "europa": "DAX +2,15 % und Euro Stoxx 50 +2,23 %: Europa erholt sich ebenfalls."
+ },
+ "tecnico": {
+  "spx": {
+   "titulo": "1,5 % unter der 200-Tage-Linie, RSI 41",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  },
+  "ndx": {
+   "titulo": "4,8 % unter der 200-Tage-Linie, RSI 42",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  }
+ },
+ "agenda": {
+  "titulo": "Kurze Woche: Thanksgiving am Donnerstag",
+  "fuente": "Quellen: NYSE-Handelskalender; Polymarket, zitiert von Yahoo Finance (23. November 2026). Deutsche Zeit berechnet.",
+  "filas": [
+   [
+    "2026-11-24",
+    "Nächste Sitzung an der Wall Street",
+    "09:30",
+    "geplant"
+   ],
+   [
+    "2026-11-26",
+    "Thanksgiving: US-Börsen geschlossen",
+    "",
+    "geplant"
+   ],
+   [
+    "2026-11-27",
+    "Verkürzter Handel bis 13 Uhr",
+    "13:00",
+    "geplant"
+   ],
+   [
+    "2026-12-09",
+    "Fed-Zinsentscheid",
+    "",
+    "geplant"
+   ]
+  ]
+ },
+ "fin": {
+  "titular": "Huang zurück: Nvidia +31 %, S&P 500 +4,7 %",
+  "fuentes": "TradingView, Nvidia, ABC News, Yahoo Finance, Reuters"
+ }
+}

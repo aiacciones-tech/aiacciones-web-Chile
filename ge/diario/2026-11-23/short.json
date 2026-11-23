@@ -1,0 +1,93 @@
+{
+ "cabecera": "Wall Street auf Deutsch · 23. November 2026",
+ "out": "short-bolsa-2026-11-23-GE.mp4",
+ "fuente": "Quellen: TradingView, Nvidia (via ABC News)\nund Yahoo Finance (23. November 2026).",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Wall Street · Sitzung vom",
+   "fecha": "Mo., 23. November 2026",
+   "indices": [
+    [
+     "S&P 500",
+     "+4,73 %",
+     "7.237,17",
+     "teal"
+    ],
+    [
+     "Nasdaq",
+     "+6,51 %",
+     "24.089,56",
+     "teal"
+    ]
+   ],
+   "pregunta": "Huang ist zurück",
+   "voz": "Wall Street, Montag, 23. November. Jensen Huang ist zurück. Drei Punkte."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Nvidia",
+   "big": "+31,48 %",
+   "delta": "Schluss 165,05 $",
+   "color": "teal",
+   "nota": "Jensen Huang wieder Vorstandschef.\nRücktritt vom 12. November rückgängig.",
+   "voz": "Eins. Nvidia steigt um 31 Prozent: Jensen Huang ist wieder Vorstandschef."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "S&P 500",
+   "big": "+4,73 %",
+   "delta": "Ende von sieben Verlusttagen",
+   "color": "teal",
+   "barras": [
+    [
+     "S&P 500",
+     4.73
+    ],
+    [
+     "Nasdaq 100",
+     6.86
+    ],
+    [
+     "Dow Jones",
+     3.01
+    ]
+   ],
+   "nota": "415 Werte im S&P 500 stiegen, 82 fielen.\nVIX −25,9 % auf 26,6.",
+   "voz": "Zwei. Der S&P 500 steigt um 4,7 Prozent, der beste Tag seit April 2025."
+  },
+  {
+   "tipo": "kpis",
+   "n": 3,
+   "label": "Charttechnik S&P 500",
+   "items": [
+    [
+     "41",
+     "RSI 14",
+     "blue"
+    ],
+    [
+     "−1,5 %",
+     "unter der 200-Tage-Linie",
+     "neg"
+    ],
+    [
+     "−7,7 %",
+     "unter dem Rekordhoch",
+     "neg"
+    ]
+   ],
+   "nota": "Nicht mehr in der Korrektur.\nDas sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Der S&P 500 liegt nur noch 1,5 Prozent unter der 200-Tage-Linie."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Donnerstag:\nThanksgiving",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Am Donnerstag ist Thanksgiving. Das ganze Video finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}
