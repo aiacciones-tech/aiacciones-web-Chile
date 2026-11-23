@@ -4,12 +4,15 @@ Formato pedido por Daniel el 22-nov-2026. Short vertical 9:16 de 45-60 s, voz Az
 Sale los domingos entre las 18:00 y las 20:00 de Chile, con las empresas que reportan de lunes a viernes de la semana siguiente.
 
 ## Contenido
-- 5 a 7 empresas: primero las del IPSA que reporten (las que más mueven el mercado), y se completa con las grandes de Wall Street.
+- Solo acciones chilenas (Daniel, 23-nov-2026): nada de Wall Street ni de otras bolsas. 5 a 7 empresas que coticen en la Bolsa de Santiago:
+  primero las del IPSA que reporten (las que más mueven el mercado) y se completa con otras chilenas listadas de peso (p. ej. IAM, Quiñenco,
+  Sigdo Koppers, Hites). Si no llegan a 5, el Short sale con las que haya (el cierre se alarga hasta 45 s); con 0 no se publica y se avisa a Daniel.
 - Por empresa (6-8 s): nombre y ticker, día, antes de la apertura o después del cierre, y consenso de BPA e ingresos.
-- Cada fecha y cada consenso se verifican en la web (al menos dos fuentes para EE. UU.: TheStreet, TipRanks, StockTitan, Opening Bell;
-  Chile: calendario de `fuente/calendario.py`, MarketScreener, Investing.com, Quartr). Si falta un dato o las fuentes no coinciden, se saca del guion
+- Cada fecha y cada consenso se verifican en la web (calendario de `fuente/calendario.py`, CMF, MarketScreener, Investing.com, Quartr,
+  sitios de inversionistas de cada empresa). Si falta un dato o las fuentes no coinciden, se saca del guion
   (sin consenso: la empresa sale sin cifras; sin hora: "Hora no informada"). Nunca se inventa.
-- Guion: 1) gancho "Esta semana reporta [la más importante]… y [N] empresas más que mueven el mercado." 2) empresas en orden cronológico.
+- Guion: 1) gancho "Esta semana reporta [la más importante]… y [N] empresas más que mueven el mercado." (con N=1, "y una empresa más";
+  con una sola empresa, solo "Esta semana reporta [X]."; en `short.json`, `n_mas` 1 o 0) 2) empresas en orden cronológico.
   3) "Sigue el canal para el análisis de cada reporte."
 
 ## Pasos
