@@ -22,7 +22,7 @@ y los Shorts extra del diario a las 12:15 y 15:05: el DAX de la tarde no choca c
 3. `cifra` 2 «Gewinner und Verlierer»: `big` = la mayor subida o bajada relevante, `barras` con 2 ganadoras y 2 perdedoras, y en la nota
    la amplitud («16 von 40 DAX-Werten im Plus»). Para la mayor, motivo si hay noticia; si no, solo la cifra.
 4. `kpis` 3 «Charttechnik DAX»: RSI 14, distancia a la 200-Tage-Linie y al Rekordhoch (de `dax.py`, «berechnet»). Nota: «Das sind Daten, keine Kauf- oder Verkaufssignale.»
-5. `fin`: `titular` breve (p. ej. «Morgen früh:\nWall Street») y `cta` «Der Tagesbericht morgen früh vor Börsenstart». Voz: «Den Tagesbericht zur Wall Street
+5. `fin`: `titular` breve (p. ej. «Morgen früh:\nWall Street») y `cta` «Tagesbericht vor Börsenstart» (máx. ~28 caracteres o se corta; notas de 40 caracteres por línea como mucho). Voz: «Den Tagesbericht zur Wall Street
    gibt es morgen früh auf unserem Kanal. Keine Anlageberatung.» (Viernes: «am Samstagmorgen».)
 Unas 95-115 palabras de voz en total (Azure ≈ 128 palabras/min más pausas). `make_short.py` corta si pasa de 59 s.
 Campos extra de `short.json` para `meta_dax.py`: `fecha` (ISO), `titulo_yt` (≤ 90 caracteres, p. ej. «DAX schließt 0,9 % tiefer: Rheinmetall vorn, SAP schwach»),
