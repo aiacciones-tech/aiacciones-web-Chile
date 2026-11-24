@@ -18,5 +18,5 @@ Pedido de Daniel el 24-nov-2026: playlists por empresa y por sector, más una po
   consumo y real estate.
 - **Nuevo formato o empresa:** añade la empresa a `empresas` (id = prefijo de su carpeta en cola-sa) o un formato a `formatos`
   y su regla en `clasificar()` del script.
-- **Cuota de la API:** crear playlist o añadir video = 50 unidades. Cada pasada gasta como mucho `--presupuesto` (2500 por defecto)
+- **Cuota de la API:** crear playlist o añadir video = 50 unidades. Cada pasada gasta como mucho `--presupuesto` (1500 por defecto)
   y si YouTube responde quotaExceeded se para sin error; lo que falta entra en la próxima pasada.

@@ -19,7 +19,7 @@ on:
         default: ""
       presupuesto:
         description: "solo con modo=playlists: unidades de cuota de la API que puede gastar (50 por alta)"
-        default: "2500"
+        default: "1500"
 permissions:
   contents: write
 jobs:
@@ -59,7 +59,7 @@ jobs:
             git show FETCH_HEAD:saudi/playlists/playlists-saudi.json > "$RUNNER_TEMP/playlists.json" ||
             { echo "playlists-saudi.py todavía no está en $REF"; exit 0; }
           python3 "$RUNNER_TEMP/playlists.py" cola-sa "$RUNNER_TEMP/playlists.json" playlists-saudi.json \
-            --presupuesto "${{ inputs.presupuesto || '2500' }}"
+            --presupuesto "${{ inputs.presupuesto || '1500' }}"
       - name: Guardar IDs de YouTube
         if: github.event_name == 'push' || inputs.modo == 'subir' || inputs.modo == 'miniaturas' || inputs.modo == 'playlists'
         run: |

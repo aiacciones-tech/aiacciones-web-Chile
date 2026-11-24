@@ -1,6 +1,6 @@
 """Playlists del canal Saudi Arabia AI Stocks (@SaudiArabiaAIStocks): las crea y les añade los videos de cola-sa/.
 
-  python3 scripts/playlists-saudi.py <cola-sa> <config.json> <estado.json> [--presupuesto 2500] [--simular]
+  python3 scripts/playlists-saudi.py <cola-sa> <config.json> <estado.json> [--presupuesto 1500] [--simular]
 
 - <config.json>: saudi/playlists/playlists-saudi.json (títulos y descripciones en árabe, empresas y sectores).
 - <estado.json>: playlists-saudi.json en la raíz de la rama youtube-cola. Guarda el ID de cada playlist y los videos
@@ -131,7 +131,7 @@ def definiciones(cfg):
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     simular = "--simular" in sys.argv
-    presupuesto = 2500
+    presupuesto = 1500
     if "--presupuesto" in sys.argv:
         presupuesto = int(sys.argv[sys.argv.index("--presupuesto") + 1])
         args.remove(str(presupuesto))
