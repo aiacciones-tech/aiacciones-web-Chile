@@ -120,7 +120,7 @@ def s_barras(i, e, t):
     ax.set_xlim(min(0, min(vals)) * 1.3, m * 1.3)
     fmt = e.get("formato", "{:.1f}")
     if t >= 0.5:
-        for y_, v in zip(ys, vals): ax.text(v * a + m * 0.02, y_, fmt.format(v).replace(",", "X").replace(".", ",").replace("X", "."), va="center", color=FG, fontsize=20, weight="bold")
+        for y_, v in zip(ys, vals): ax.text(max(v * a, 0) + m * 0.02, y_, fmt.format(v).replace(",", "X").replace(".", ",").replace("X", "."), va="center", color=FG, fontsize=20, weight="bold")
     if e.get("nota"): T(f, XL, 0.16, wrap(e["nota"], 150), NEG, 19, "bold", alpha=ease((t - 0.4) / 0.4))
     if e.get("fuente"): fuente(f, e["fuente"])
     return to_arr(f)

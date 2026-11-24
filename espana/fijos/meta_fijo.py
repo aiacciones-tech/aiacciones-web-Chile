@@ -32,7 +32,7 @@ json.dump({"title": I["titulo_short"], "description": sd, "tags": tags[:8] + ["S
           open(f"{D}/meta-short-{BASE}.json", "w"), ensure_ascii=False, indent=1)
 largo_x = lambda s: len(re.sub(r"https?://\S+|\{youtube\}", "x" * 23, s))
 x = f"{I['x']}\n\n▶️ {{youtube}}\n\nInformativo, no es recomendación. Sin posiciones."
-assert largo_x(x) <= 280, largo_x(x)
+assert largo_x(x) <= 268, largo_x(x)  # Buffer cuenta algunos signos (▶️, €) doble: margen
 open(f"{D}/post-x-{BASE}.txt", "w").write(x)
 MIN = max(1, round(T_["_total"] / 60))
 tg = (f"📚 {VJ['tema']}\n\n{I['resumen']}\n\n" + "\n".join("• " + c for c in fin["claves"]) +
