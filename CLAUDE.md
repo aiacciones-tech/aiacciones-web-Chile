@@ -4,7 +4,7 @@
   diaria, lee `nabd/diario/CLAUDE.md`: sus instrucciones sustituyen a las del texto de la tarea programada donde difieran
   (ya no valen "~230 palabras / máx. 180 s" ni `ejemplo-2026-11-06/` como plantilla; la plantilla es `nabd/diario/ejemplo-2026-11-09/`).
 - **Wall Street auf Deutsch (canal alemán, código `ge`), vídeo diario:** las instrucciones vigentes están en `ge/diario/CLAUDE.md` y prevalecen
-  sobre el texto de su tarea programada. Ese canal solo toca `ge/`, sus workflows `*-GE.yml` y `cola-ge/`; lee los datos de `datos-diario-nabd`
+  sobre el texto de su tarea programada. Desde el 25-nov-2026 sale por la mañana (Berlín) con la sesión de la noche anterior, más 2 Shorts extra a las 12:15 y 15:05. Ese canal solo toca `ge/`, sus workflows `*-GE.yml` y `cola-ge/`; lee los datos de `datos-diario-nabd`
   sin modificarlos. Sus secretos de GitHub terminan en `_GE`.
 - **Arabia Saudita (@SaudiArabiaAIStocks, `saudi/diario/`), vídeo diario:** desde el 18-nov-2026 la voz es Azure `ar-SA-HamedNeural` (workflow `voz-saudi.yml`,
   rama `voz-saudi`, `VOZ_DIR`). Antes de empezar, lee `saudi/diario/CLAUDE.md`: prevalece sobre el texto de la tarea programada donde difieran.
@@ -41,3 +41,6 @@
   Antes de cada Short lee `ge/dax/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Arabia Saudita, directos en momentos clave (Fed, OPEP+, presupuesto, resultados anuales; `saudi/directos/`):** directo automático emitido desde
   GitHub Actions (`directo-saudi.yml`). Antes de cada directo lee `saudi/directos/CLAUDE.md`: prevalece sobre el texto de su tarea programada.
+- **Arabia Saudita, pruebas A/B de miniatura y título (desde el 24-nov-2026):** los videos largos del diario y de la serie educativa llevan una variante B
+  (`ab.json` + `miniatura-b.png` en su carpeta de `cola-sa/`). `scripts/ab-saudi.py` (workflow `ab-saudi.yml`, 08:10 UTC) las alterna por días y deja
+  la ganadora; el estado está en `cola-sa/<slug>/ab-estado.json` de `youtube-cola`. Detalles en `saudi/ab-saudi.md`.

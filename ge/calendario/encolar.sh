@@ -4,11 +4,14 @@
 # buffer-GE.yml manda post-tiktok.txt (vídeo), post-instagram.txt (Reel) y post-threads.txt (con miniatura.png; espera sin error si Threads
 # no está conectado en Buffer). Se encola entre las 18:00 y las 20:00 de Berlín (Daniel, 22-nov-2026).
 set -e
+CUPO=$(cd "$(dirname "$0")/.." && pwd)/cupo.py   # cupo de subidas a YouTube (regla de Daniel, 24-nov-2026: nunca pasar el límite)
 B=$(cd "$1" && pwd); F=$(python3 -c "import json;print(json.load(open('$B/calendario.json'))['fecha'])"); S=${SCRATCH:-/tmp/ge-scratch}; mkdir -p $S
 for f in calendario-$F-GE.mp4 miniatura-calendario-$F-GE.png meta-youtube-calendario-$F-GE.json; do test -s "$B/$f" || { echo "falta $B/$f"; exit 1; }; done
 grep -q UC23KiHTq_lULliZwAM3dEpA $B/meta-youtube-calendario-$F-GE.json || { echo "falta el enlace del canal"; exit 1; }
 [ -d $S/cola ] || git clone -q --depth 1 -b youtube-cola https://github.com/aiacciones-tech/aiacciones-web-Chile.git $S/cola; cd $S/cola; git pull -q origin youtube-cola 2>/dev/null
 git config user.name "aiacciones-bot"; git config user.email "aiacciones-bot@users.noreply.github.com"
+# prioridad media: si no cabe sin pasar el límite diario (ge/cupo.py), hoy no se publica
+python3 $CUPO media 1 || { echo "sin cupo de YouTube (prioridad media): hoy no se publica"; exit 1; }
 C=cola-ge/calendario-$F
 [ -f $C/resultado.json ] && { echo "ya subido: $C"; exit 1; }
 mkdir -p $C
