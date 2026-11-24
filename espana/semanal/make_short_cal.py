@@ -15,7 +15,7 @@ BG = "#0B1E3A"; FG = "#FFFFFF"; MUTED = "#9FB3CC"; ACC = "#2FB7A3"; ACC2 = "#4C8
 LOGO = os.environ.get("LOGO", "/mnt/project-files/espana/marca/logo-aiacciones-espana.png")
 VOICE = os.environ.get("VOICE", "/mnt/project-files/espana/voz/vits-piper-es_ES-davefx-medium/es_ES-davefx-medium.onnx")
 AUD = os.environ.get("AUD", "aud")
-MINDUR, MAXDUR = 45.0, 60.0
+MINDUR, MAXDUR = 45.0, 60.0  # con pocas empresas españolas en la semana puede quedar por debajo de 45 s (solo aviso)
 CTA_HASTA = "2026-11-22"  # campaña «comenta y suscríbete» (Daniel, 8-nov-2026)
 
 
@@ -65,7 +65,8 @@ def s_empresa(e, t):
     f.text(0.07, 0.565, nombre, color=FG, fontsize=fs, weight="bold", alpha=b)
     f.text(0.07, 0.530, f"{e['ticker']} · {e['bolsa']}", color=ACC2, fontsize=36, weight="bold", alpha=b)
     if e.get("periodo"): f.text(0.07, 0.497, e["periodo"], color=MUTED, fontsize=30, alpha=b)
-    kp = [k for k in (("BPA esperado", e.get("bpa")), ("Ingresos esperados", e.get("ingresos"))) if k[1]]
+    kp = [k for k in (("BPA esperado", e.get("bpa")), ("Beneficio neto esperado", e.get("beneficio")), ("Ebitda esperado", e.get("ebitda")),
+                      ("Ingresos esperados", e.get("ingresos"))) if k[1]][:2]
     for i, (lab, val) in enumerate(kp):
         c = ease((t - 0.25 - i * 0.12) / 0.4); y = 0.37 - i * 0.107
         box(f, 0.07, y, 0.86, 0.095, CARD, c)
@@ -103,7 +104,7 @@ def frame(e, t): return R[e["tipo"]](e, t)
 if __name__ == "__main__":
     src = os.path.abspath(sys.argv[1]); D = os.path.dirname(src)
     S = json.load(open(src)); E = escenas(S); out = os.path.join(D, S["out"]); os.makedirs(AUD, exist_ok=True)
-    assert 5 <= len(S["empresas"]) <= 7, "el formato pide de 5 a 7 empresas"
+    assert 1 <= len(S["empresas"]) <= 7, "de 1 a 7 empresas (solo españolas; Daniel, 23-nov-2026)"
     if len(sys.argv) > 2 and sys.argv[2] == "preview":
         for i, e in enumerate(E): Image.fromarray(frame(e, 1.0)).save(os.path.join(AUD, f"cal_prev_{i}.png"))
         print("preview en", AUD); sys.exit()

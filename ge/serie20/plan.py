@@ -19,8 +19,9 @@ def main():
     for e in cal["empresas"]: e["_datos"] = datos
     if len(sys.argv) > 3 and os.path.exists(os.path.join(sys.argv[3], "calendario.json")):
         extra = json.load(open(os.path.join(sys.argv[3], "calendario.json")))
+        ya = {e["ticker"] for e in cal["empresas"]}   # desde el 21-nov Nabd también incluye ANT y SPCX: sin duplicados, manda la rama de Nabd
         for e in extra["empresas"]: e["_datos"] = sys.argv[3]
-        cal["empresas"] += extra["empresas"]
+        cal["empresas"] += [e for e in extra["empresas"] if e["ticker"] not in ya]
     hoy = dt.datetime.now(BERLIN).date().isoformat()
     hechos, hoy_n = set(), 0
     for d in sorted(os.listdir(cola)) if os.path.isdir(cola) else []:

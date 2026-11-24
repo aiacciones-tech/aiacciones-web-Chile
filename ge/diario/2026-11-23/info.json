@@ -1,0 +1,72 @@
+{
+ "fecha": "2026-11-23",
+ "fecha_txt": "Montag, 23. November 2026",
+ "elaborado": "23. November 2026, 23:30 Uhr",
+ "titulo": "Wall Street heute (23. November 2026): S&P 500 +4,73 %, Nasdaq +6,51 % | Der Tagesbericht",
+ "titulo_short": "Wall Street am 23. November 2026: Nvidia +31 %, S&P 500 +4,7 % #Shorts",
+ "resumen": "Der S&P 500 schloss am Montag, 23. November 2026, bei 7.237,17 Punkten (+4,73 %; +326,78 Punkte) und beendete eine Serie von sieben Verlusttagen. Der Dow Jones stieg um 3,01 % auf 49.595,31, der Nasdaq Composite um 6,51 % auf 24.089,56, der Nasdaq 100 um 6,86 % auf 26.746,10 und der Russell 2000 um 3,40 % auf 2.669,66.",
+ "claves": [
+  "Nvidia +31,48 % auf 165,05 Dollar: Der Konzern holte Jensen Huang als Präsidenten und Vorstandschef zurück; Huang war am 12. November zurückgetreten. Laut der Mitteilung (zitiert von ABC News) sieht der Verwaltungsrat kein Risiko für die nationale Sicherheit.",
+  "Laut Yahoo Finance der beste Tag der großen Indizes seit April 2025. Der S&P 500 liegt 7,7 % unter seinem Rekordhoch (berechnet) und ist damit nicht mehr in der Korrektur.",
+  "Markt: VIX −25,88 % auf 26,61; Rendite 10-jähriger US-Anleihen 4,94 %; Dollar-Index 104,33 (laut Reuters 19-Monats-Hoch); WTI 80,37 Dollar (−3,88 %), Gold 3.631 Dollar (+2,62 %). DAX +2,15 %, Euro Stoxx 50 +2,23 %.",
+  "Aktien: 415 Werte im S&P 500 stiegen, 82 fielen (berechnet). Micron +19,04 %, Dell +20,46 %, Tesla +11,46 %; CrowdStrike −8,92 % nach einem Angebot von rund 43,9 Mrd. Dollar für Zscaler (Yahoo Finance).",
+  "Charttechnik S&P 500 (berechnet): 1,5 % unter der 200-Tage-Linie (7.350), RSI 14 bei 41,3. Das sind Daten, keine Kauf- oder Verkaufssignale.",
+  "Termine: Donnerstag, 26. November, Thanksgiving (US-Börsen geschlossen); Freitag, 27. November, verkürzter Handel bis 13 Uhr New Yorker Zeit; Fed-Zinsentscheid am 9. Dezember."
+ ],
+ "claves_cortas": [
+  "S&P 500 bei 7.237,17 (+4,73 %) · Nasdaq +6,51 %",
+  "Nvidia +31 %: Jensen Huang zurück",
+  "VIX fällt um 26 %"
+ ],
+ "linkedin": {
+  "datos": [
+   "S&P 500 bei 7.237,17 (+4,73 %), Ende von sieben Verlusttagen; Nasdaq Composite +6,51 %",
+   "Nvidia +31,48 %: Jensen Huang wieder Vorstandschef",
+   "415 Werte im S&P 500 stiegen, 82 fielen (berechnet)",
+   "CrowdStrike −8,92 % nach Angebot für Zscaler"
+  ],
+  "conclusion": "Kräftige Erholung nach der schwächsten Woche seit Jahren; entscheidend bleibt die 200-Tage-Linie."
+ },
+ "fuentes": "TradingView; Nvidia (zitiert von ABC News); Yahoo Finance; Reuters; NYSE",
+ "x": "Wall Street am 23. November 2026:\nS&P 500 7.237,17 (+4,73 %)\nNasdaq +6,51 % · Dow +3,01 %\nNvidia +31,48 %: Huang zurück",
+ "tiktok": "Wall Street am Montag, 23. November 2026: Jensen Huang kehrt zu Nvidia zurück, die Aktie springt um 31 Prozent, der S&P 500 um 4,7 Prozent. Drei Punkte: Nvidia, S&P 500 und Charttechnik.",
+ "hashtags": "#WallStreet #Börse #Aktien #SP500 #Nasdaq #Nvidia #Börsennews",
+ "hashtags_short": "#WallStreet #Börse #Aktien #Nvidia #Shorts",
+ "tags": [
+  "Wall Street",
+  "US-Börse",
+  "Aktien",
+  "Börse heute",
+  "S&P 500",
+  "Nasdaq",
+  "Dow Jones",
+  "Nvidia",
+  "Jensen Huang",
+  "Micron",
+  "Dell",
+  "CrowdStrike",
+  "Zscaler",
+  "Tesla",
+  "Charttechnik",
+  "Börsennews",
+  "Wall Street auf Deutsch",
+  "Der Tagesbericht"
+ ],
+ "miniatura": {
+  "fecha": "Montag, 23. November 2026",
+  "indices": [
+   [
+    "S&P 500",
+    "+4,73 %",
+    "teal"
+   ],
+   [
+    "Nasdaq",
+    "+6,51 %",
+    "teal"
+   ]
+  ],
+  "sub": "Nvidia +31 % · Huang zurück",
+  "pie": "Der Tagesbericht · Wall Street auf Deutsch"
+ }
+}
