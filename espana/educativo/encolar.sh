@@ -4,6 +4,7 @@
 # youtube-espana.yml sube a YouTube; buffer.yml publica en X (vídeo largo) y en LinkedIn (Short como vídeo nativo), TikTok e Instagram (Reel);
 # telegram-espana.yml lo publica en Telegram. Usa SCRATCH con un clon de youtube-cola ya hecho si lo hay (la rama es enorme).
 set -e
+ENL=$(cd "$(dirname "$0")/.." && pwd)/enlaces_cola.py
 B=$(cd "$1" && pwd); BASE=$(python3 -c "import json;print(json.load(open('$B/video.json'))['base'])"); S=${SCRATCH:-/tmp/es-scratch}; mkdir -p $S
 for f in leccion-$BASE.mp4 short-$BASE.mp4 meta-youtube-$BASE.json meta-short-$BASE.json miniatura-$BASE.png \
          post-x-$BASE.txt post-linkedin-$BASE.txt post-tiktok-$BASE.txt post-instagram-$BASE.txt post-telegram-$BASE.txt; do
@@ -36,6 +37,9 @@ cp $B/post-x-$BASE.txt $C/post-x.txt; cp $B/post-telegram-$BASE.txt $C/post-tele
 cp $B/short-$BASE.mp4 $CS/video.mp4; cp $B/meta-short-$BASE.json $CS/meta.json
 cp $B/post-tiktok-$BASE.txt $CS/post-tiktok.txt; cp $B/post-instagram-$BASE.txt $CS/post-instagram.txt
 cp $B/post-linkedin-$BASE.txt $CS/post-linkedin.txt   # LinkedIn: el Short como vídeo, no como enlace (Daniel, 8-nov-2026)
+[ -f $B/ab-$BASE.json ] && cp $B/ab-$BASE.json $C/ab.json   # prueba A/B del título (ab-espana.yml)
+# Enlaces al capítulo anterior y a las listas del canal (sustituyen a las pantallas finales, que la API no permite)
+python3 $ENL $C/meta.json cola-es curso-$BASE; python3 $ENL $CS/meta.json cola-es curso-$BASE-short
 git add $C $CS; git commit -qm "Cola España: serie educativa de análisis técnico, $BASE (vídeo, Short y posts)"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done
 for i in $(seq 80); do git pull -q origin youtube-cola 2>/dev/null; [ -f $C/resultado.json ] && [ -f $CS/resultado.json ] && [ -f $C/buffer.json ] && [ -f $CS/buffer-linkedin.json ] && break; sleep 15; done

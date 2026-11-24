@@ -35,6 +35,9 @@
   de las 22 acciones del canal. Antes de cada Short lee `ge/calendario/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Nabd Wall Street, Short semanal «تقويم النتائج الأسبوعي» (domingos, 19:00-21:00 Riad, `nabd/calendario/`):** calendario de resultados de las 22 acciones
   del canal. Antes de cada Short lee `nabd/calendario/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **AIAcciones España, crecimiento del canal de YouTube (desde el 24-nov-2026):** cifra clave en títulos y miniaturas con prueba A/B
+  (`ab-espana.yml`), conclusión en los primeros 15 s, segundo Short del diario programado (`canal-espana.yml`), listas de reproducción y
+  enlaces al siguiente vídeo. Lee `espana/crecimiento-youtube.md` antes de cualquier vídeo de España: prevalece sobre las tareas programadas.
 - **AIAcciones España, Short semanal «Calendario semanal de resultados» (domingos 18:00-20:00 Madrid, `espana/semanal/`):** antes de cada
   edición lee `espana/semanal/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Wall Street auf Deutsch, Short diario «DAX am Abend» (prueba desde el 24-nov-2026, `ge/dax/`):** L-V tras el cierre de Xetra (18:30-20:00 Berlín).

@@ -1,0 +1,99 @@
+{
+ "empresa": "IBEX 35",
+ "trimestre": "9 nov 2026",
+ "out": "short2-bolsa-espana-2026-11-09.mp4",
+ "fuente": "Fuentes: TradingView y Yahoo Finance (cierre 9-nov-2026).\nMedias, RSI y estocástico: calculados.",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "IBEX 35 · El gráfico",
+   "titulo": "9 nov 2026",
+   "sub": "Lo que dice el análisis técnico",
+   "big": "19.762",
+   "big_fs": 165,
+   "big_label": "Zona de máximos de septiembre",
+   "color": "acc2",
+   "pregunta": "Cierre: 19.742,5 puntos",
+   "voz": "El IBEX treinta y cinco cierra a solo veinte puntos de los máximos de septiembre, y con el estocástico en sobrecompra. Así está el gráfico."
+  },
+  {
+   "tipo": "kpis",
+   "n": 1,
+   "label": "Medias móviles",
+   "items": [
+    [
+     "19.394",
+     "Media 50 sesiones",
+     "acc"
+    ],
+    [
+     "18.730",
+     "Media 200 sesiones",
+     "acc2"
+    ],
+    [
+     "+1,8%",
+     "Sobre la media 50",
+     "fg"
+    ]
+   ],
+   "nota": "Recupera la media de 50 sesiones.\nCálculo propio con cierres de TradingView.",
+   "voz": "Uno. Recupera la media de cincuenta sesiones y cierra casi un dos por ciento por encima. La de doscientas queda un cinco por ciento por debajo."
+  },
+  {
+   "tipo": "kpis",
+   "n": 2,
+   "label": "Osciladores",
+   "items": [
+    [
+     "60",
+     "RSI 14 (neutral)",
+     "acc2"
+    ],
+    [
+     "82",
+     "Estocástico",
+     "neg"
+    ],
+    [
+     "-13%",
+     "Volumen vs. media",
+     "fg"
+    ]
+   ],
+   "nota": "Estocástico por encima de 80: sobrecompra.\nSon datos, no señales de compra o venta.",
+   "voz": "Dos. El RSI está en sesenta, zona neutral, y el estocástico en ochenta y dos, en sobrecompra. Todo con un volumen un trece por ciento menor que su media."
+  },
+  {
+   "tipo": "kpis",
+   "n": 3,
+   "label": "Niveles",
+   "items": [
+    [
+     "20.356",
+     "Máximo de agosto",
+     "fg"
+    ],
+    [
+     "19.762",
+     "Resistencia",
+     "acc"
+    ],
+    [
+     "19.357",
+     "Soporte (mínimo)",
+     "neg"
+    ]
+   ],
+   "nota": "Niveles calculados con datos públicos de cierre.\nDescriben el pasado; no predicen el futuro.",
+   "voz": "Tres. La resistencia más cercana, diecinueve mil setecientos sesenta y dos. Después, el máximo anual de agosto. El soporte, el mínimo de hoy."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "IBEX 35 · 9 nov",
+   "titular": "Cerca de máximos de\nseptiembre, en sobrecompra.",
+   "cta": "Análisis completo en el canal",
+   "voz": "El vídeo completo de la sesión, en nuestro canal. Contenido informativo, no es una recomendación de inversión."
+  }
+ ]
+}
