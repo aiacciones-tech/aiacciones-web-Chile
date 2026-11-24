@@ -308,11 +308,22 @@ def seccion(yt, imp, antes, vistas_sem):
                 d0 = date.fromisoformat(str(e["inicio"])[:10])
                 cb, _ = ctr(a["ctr"], d0 - timedelta(days=14), d0 - timedelta(days=1), {vid})
                 cd, _ = ctr(a["ctr"], d0, fin, {vid})
-            ganadora = e.get("ganador") or e.get("ganadora") or "—"
-            res = e.get("resultado")
-            if isinstance(res, dict) and ganadora != "—":
-                ganadora += " (" + ", ".join(f"{k}: {_n(v, 3) if isinstance(v, float) else v}" for k, v in res.items()) + ")"
-            estado = "cerrada" if e.get("ganador") or e.get("ganadora") else f"día {len(e.get('dias', []))}"
+            g = e.get("ganador") or e.get("ganadora")
+            ganadora = g or "—"
+            res, ana = e.get("resultado") or {}, e.get("analytics") or {}
+            if g:
+                partes = []
+                for k in ("A", "B"):
+                    r, x = res.get(k) or {}, ana.get(k) or {}
+                    if x.get("ctr") is not None:
+                        c = x["ctr"] / 100 if x["ctr"] > 1 else x["ctr"]
+                        partes.append(f"{k}: CTR {_pct(c)}")
+                    elif isinstance(r, dict) and r.get("vistas") is not None:
+                        partes.append(f"{k}: {_n(r['vistas'])} vistas en {r.get('dias', '?')} días")
+                if partes:
+                    ganadora += " (" + ", ".join(partes) + ")"
+            estado = ("cerrada " + str(e.get("cerrado", ""))[:10]).strip() if g else (
+                "en pausa" if e.get("pausado") else f"día {len(e.get('dias', []))}")
             L.append(f"| [{t}](https://youtu.be/{vid}) | {str(e.get('inicio', ''))[:10]} | {e.get('que', '—')} | {estado} | "
                      f"{ganadora} | {_pct(cb)} | {_pct(cd)} |")
         cerradas = [e for e in imp["ab"] if e.get("ganador") or e.get("ganadora")]
