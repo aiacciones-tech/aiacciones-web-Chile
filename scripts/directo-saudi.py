@@ -71,7 +71,7 @@ def verificar():
                 "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False}, "contentDetails": {}}, part="snippet,status,contentDetails")
     except SystemExit as e:
         msg = str(e)
-        if "liveStreamingNotEnabled" in msg or "insufficientLivePermissions" in msg:
+        if any(k in msg for k in ("liveStreamingNotEnabled", "insufficientLivePermissions", "livePermissionBlocked")):
             sys.exit("El token sirve, pero el canal todavía NO tiene los directos activados (YouTube Studio > Crear > Emitir en directo; tarda hasta 24 h).\n" + msg)
         raise
     api(t, "DELETE", "liveBroadcasts", id=b["id"])

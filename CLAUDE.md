@@ -39,3 +39,5 @@
   edición lee `espana/semanal/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Wall Street auf Deutsch, Short diario «DAX am Abend» (prueba desde el 24-nov-2026, `ge/dax/`):** L-V tras el cierre de Xetra (18:30-20:00 Berlín).
   Antes de cada Short lee `ge/dax/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Arabia Saudita, directos en momentos clave (Fed, OPEP+, presupuesto, resultados anuales; `saudi/directos/`):** directo automático emitido desde
+  GitHub Actions (`directo-saudi.yml`). Antes de cada directo lee `saudi/directos/CLAUDE.md`: prevalece sobre el texto de su tarea programada.

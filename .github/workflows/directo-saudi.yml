@@ -29,6 +29,7 @@ jobs:
       YT_CLIENT_SECRET: ${{ secrets.YT_SAUDI_CLIENT_SECRET || secrets.YT_CLIENT_SECRET }}
       YT_REFRESH_TOKEN: ${{ secrets.YT_SAUDI_LIVE_REFRESH_TOKEN || secrets.YT_SAUDI_REFRESH_TOKEN }}
       GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
     steps:
       - uses: actions/checkout@v4
       - name: Modo
@@ -46,7 +47,10 @@ jobs:
         run: |
           # el script es el de esta rama; la cola, la de youtube-cola
           cp scripts/directo-saudi.py scripts/youtube.py "$RUNNER_TEMP/"
-          git fetch -q --depth 1 origin youtube-cola && git checkout -q -B youtube-cola FETCH_HEAD
+          # youtube-cola pesa mucho (vídeos de todos los canales): clon parcial con solo las carpetas cola-sa/directo-*
+          R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git clone -q --depth 1 --filter=blob:none --no-checkout -b youtube-cola "$R" "$RUNNER_TEMP/cola" && cd "$RUNNER_TEMP/cola"
+          git sparse-checkout set --no-cone '/cola-sa/directo-*/' && git checkout -q youtube-cola
           ls -d cola-sa/directo-*/ >/dev/null 2>&1 || { echo "sin directos en cola-sa"; exit 0; }
           git config user.name "aiacciones-bot"; git config user.email "aiacciones-bot@users.noreply.github.com"
           subir() { git add cola-sa; git diff --cached --quiet && return 0; git commit -qm "$1"; for i in 1 2 3 4; do git pull --rebase -q origin youtube-cola && git push -q origin HEAD:youtube-cola && return 0; sleep 5; done; return 1; }
