@@ -119,6 +119,8 @@ def claves(slug):
         out += [] if corto else ["diario"]
     elif base.startswith("curso-"):
         out += [] if corto else ["curso"]
+    elif base.startswith("fijo-"):
+        out += ["guias"]
     elif base.startswith("calendario-"):
         out += ["calendario"]
     else:
@@ -136,6 +138,8 @@ def titulo_lista(k, nombres):
                    "Los Shorts de AIAcciones España: el IBEX 35 del día, resultados de empresas y calendario semanal."),
         "curso": ("Análisis técnico, explicado fácil (curso)",
                   "Curso semanal de análisis técnico con el gráfico real de Inditex: un concepto por capítulo."),
+        "guias": ("Guías de la bolsa española: dividendos, IBEX 35 y empresas",
+                  "Vídeos de referencia sobre lo que más se busca de la bolsa española: dividendos, cómo funciona el IBEX 35, bancos y cómo leer resultados."),
         "calendario": ("Calendario semanal de resultados (IBEX 35)",
                        "Cada domingo, qué empresas españolas presentan resultados la semana siguiente y qué espera el mercado."),
     }
