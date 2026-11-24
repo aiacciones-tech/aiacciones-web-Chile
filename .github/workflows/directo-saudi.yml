@@ -1,0 +1,69 @@
+# Directos en momentos clave de Saudi Arabia AI Stocks (Fed, OPEP+, presupuesto, resultados anuales grandes). Ver saudi/directos/CLAUDE.md.
+# 1) Al subir cola-sa/directo-<base>/directo.json a la rama youtube-cola: crea la emisión programada en YouTube (página "Próximamente",
+#    chat, miniatura) y escribe resultado.json, así Buffer y Telegram anuncian el directo con su enlace (se lanzan desde aquí).
+# 2) Si el directo empieza en menos de 5,5 h (o cuando el cron lo encuentre dentro de esa ventana), espera a la hora y lo emite con ffmpeg.
+# "Run workflow" con modo=verificar prueba el permiso del token y si el canal ya puede emitir en directo.
+# Un push a una rama claude/directo-saudi* que toque este archivo también corre verificar (para probar antes de unir a main).
+name: Directos (Arabia Saudita)
+concurrency: directo-saudi
+on:
+  push:
+    branches: [youtube-cola, "claude/directo-saudi*"]
+    paths: ['cola-sa/directo-*/directo.json', '.github/workflows/directo-saudi.yml', 'scripts/directo-saudi.py']
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "verificar (permisos y directos activados) o ciclo (programa y emite lo pendiente de youtube-cola)"
+        default: verificar
+permissions:
+  contents: write
+  actions: write
+jobs:
+  directo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_SAUDI_CLIENT_ID || secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_SAUDI_CLIENT_SECRET || secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_SAUDI_LIVE_REFRESH_TOKEN || secrets.YT_SAUDI_REFRESH_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Modo
+        id: m
+        run: |
+          if [ "${{ github.event_name }}" = workflow_dispatch ]; then M="${{ inputs.modo }}";
+          elif [ "${{ github.event_name }}" = push ] && [ "${{ github.ref_name }}" != youtube-cola ]; then M=verificar;
+          else M=ciclo; fi
+          echo "modo=$M" >> "$GITHUB_OUTPUT"; echo "modo: $M"
+      - name: Verificar
+        if: steps.m.outputs.modo == 'verificar'
+        run: python3 scripts/directo-saudi.py verificar
+      - name: Programar y emitir
+        if: steps.m.outputs.modo == 'ciclo'
+        run: |
+          # el script es el de esta rama; la cola, la de youtube-cola
+          cp scripts/directo-saudi.py scripts/youtube.py "$RUNNER_TEMP/"
+          git fetch -q --depth 1 origin youtube-cola && git checkout -q -B youtube-cola FETCH_HEAD
+          ls -d cola-sa/directo-*/ >/dev/null 2>&1 || { echo "sin directos en cola-sa"; exit 0; }
+          git config user.name "aiacciones-bot"; git config user.email "aiacciones-bot@users.noreply.github.com"
+          subir() { git add cola-sa; git diff --cached --quiet && return 0; git commit -qm "$1"; for i in 1 2 3 4; do git pull --rebase -q origin youtube-cola && git push -q origin HEAD:youtube-cola && return 0; sleep 5; done; return 1; }
+          python3 "$RUNNER_TEMP/directo-saudi.py" programar cola-sa
+          if ! git diff --quiet -- cola-sa || [ -n "$(git ls-files -o --exclude-standard cola-sa)" ]; then
+            subir "Directos Arabia Saudita: programados $(date -u +%FT%H:%M)"
+            # anunciar el directo en las redes (buffer y telegram leen resultado.json)
+            gh workflow run buffer.yml --ref youtube-cola -f modo=programar || true
+            gh workflow run telegram-saudi.yml --ref youtube-cola -f modo=publicar || true
+          fi
+          C=$(python3 "$RUNNER_TEMP/directo-saudi.py" siguiente cola-sa)
+          [ -n "$C" ] || { echo "ningún directo en las próximas 5,5 h"; exit 0; }
+          # reservar la carpeta antes de esperar, para que otro run no la emita dos veces
+          python3 - "$C" <<'EOF'
+          import json, sys; p = sys.argv[1] + "/estado.json"; e = json.load(open(p)); e["estado"] = "emitiendo"; json.dump(e, open(p, "w"), ensure_ascii=False, indent=1)
+          EOF
+          subir "Directo Arabia Saudita: emitiendo $(basename $C)"
+          set +e; python3 "$RUNNER_TEMP/directo-saudi.py" emitir "$C"; R=$?; set -e
+          subir "Directo Arabia Saudita: fin $(basename $C)"
+          exit $R
