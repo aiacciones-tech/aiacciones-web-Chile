@@ -35,12 +35,17 @@
   de las 22 acciones del canal. Antes de cada Short lee `ge/calendario/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Nabd Wall Street, Short semanal «تقويم النتائج الأسبوعي» (domingos, 19:00-21:00 Riad, `nabd/calendario/`):** calendario de resultados de las 22 acciones
   del canal. Antes de cada Short lee `nabd/calendario/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **AIAcciones España, crecimiento del canal de YouTube (desde el 24-nov-2026):** cifra clave en títulos y miniaturas con prueba A/B
+  (`ab-espana.yml`), conclusión en los primeros 15 s, segundo Short del diario programado (`canal-espana.yml`), listas de reproducción y
+  enlaces al siguiente vídeo. Lee `espana/crecimiento-youtube.md` antes de cualquier vídeo de España: prevalece sobre las tareas programadas.
 - **AIAcciones España, Short semanal «Calendario semanal de resultados» (domingos 18:00-20:00 Madrid, `espana/semanal/`):** antes de cada
   edición lee `espana/semanal/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Wall Street auf Deutsch, Short diario «DAX am Abend» (prueba desde el 24-nov-2026, `ge/dax/`):** L-V tras el cierre de Xetra (18:30-20:00 Berlín).
   Antes de cada Short lee `ge/dax/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Arabia Saudita, playlists de YouTube (por empresa, sector y formato):** se crean y rellenan solas tras cada subida (`scripts/playlists-saudi.py`,
   paso de `youtube-saudi.yml`). Detalles en `saudi/playlists/CLAUDE.md`; las carpetas nuevas de `cola-sa/` deben seguir los nombres que allí se listan.
+- **Arabia Saudita, directos en momentos clave (Fed, OPEP+, presupuesto, resultados anuales; `saudi/directos/`):** directo automático emitido desde
+  GitHub Actions (`directo-saudi.yml`). Antes de cada directo lee `saudi/directos/CLAUDE.md`: prevalece sobre el texto de su tarea programada.
 - **Arabia Saudita, pruebas A/B de miniatura y título (desde el 24-nov-2026):** los videos largos del diario y de la serie educativa llevan una variante B
   (`ab.json` + `miniatura-b.png` en su carpeta de `cola-sa/`). `scripts/ab-saudi.py` (workflow `ab-saudi.yml`, 08:10 UTC) las alterna por días y deja
   la ganadora; el estado está en `cola-sa/<slug>/ab-estado.json` de `youtube-cola`. Detalles en `saudi/ab-saudi.md`.

@@ -69,7 +69,8 @@
   "der": "Noticias,\nfundamental\ny técnico",
   "der2": "RSI 60 · Estocástico 82",
   "pie": "Petróleo a la baja  |  Banca  |  Solaria +4,4%  |  Repsol -1,8%",
-  "fecha": "LUNES 9 NOV 2026"
+  "fecha": "LUNES 9 NOV 2026",
+  "gancho": "La banca tira"
  },
  "linkedin": {
   "datos": [
@@ -79,5 +80,8 @@
    "Técnico: recupera la media de 50 sesiones (19.394); el estocástico entra en sobrecompra (82) y el volumen fue un 13% inferior a su media."
   ],
   "conclusion": "Conclusión: rebote amplio con petróleo más barato y banca fuerte; el índice llega a la zona de máximos de septiembre (19.762) con menos volumen del habitual."
- }
+ },
+ "titulo_b": "IBEX 35 +1,93%: la banca tira y el petróleo cae | Bolsa española hoy (9-nov-2026)",
+ "titulo_short2": "IBEX 35 en el gráfico (9-nov): media de 50, máximos de septiembre y estocástico #Shorts",
+ "resumen_short2": "El IBEX 35 en el gráfico tras la sesión del 9 de noviembre: recupera la media de 50 sesiones, llega a la zona de máximos de septiembre (19.762) y el estocástico entra en sobrecompra (82). Datos, no señales."
 }

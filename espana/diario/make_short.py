@@ -80,7 +80,7 @@ def s_kpis(e,t):
     for i,(big,lab,c) in enumerate(e["items"]):
         b=ease((t-i*0.15)/0.4); y=0.58-i*0.12
         f.text(0.07,y,big,color=col(c),fontsize=96,weight="bold",alpha=b)
-        f.text(0.50,y+0.012,lab,color=FG,fontsize=36,alpha=b)
+        f.text(0.54,y+0.012,lab,color=FG,fontsize=36,alpha=b)
     if e.get("nota"): f.text(0.07,0.245,e["nota"],color=MUTED,fontsize=30,alpha=ease((t-0.4)/0.5),wrap=True)
     return with_logo(to_arr(f))
 
@@ -103,10 +103,10 @@ if __name__=="__main__":
         sys.exit()
     TTS=["--length-scale",str(S.get("length_scale",0.95)),"--noise-scale","0.55","--noise-w-scale","0.6","--sentence-silence","0.1"]
     LEAD,TAIL=0.10,0.35
-    clips=[]
+    clips=[]; PRE=os.path.splitext(os.path.basename(sys.argv[1]))[0]  # "short" o "short2" (segundo Short del día)
     for i,e in enumerate(E):
-        p=os.path.join(AUD,f"short_{i}.wav")
-        mp=os.path.join(os.path.dirname(os.path.abspath(sys.argv[1])),"voz",f"short_{i}.mp3")  # voz neuronal (voz.sh); si falta, Piper
+        p=os.path.join(AUD,f"{PRE}_{i}.wav")
+        mp=os.path.join(os.path.dirname(os.path.abspath(sys.argv[1])),"voz",f"{PRE}_{i}.mp3")  # voz neuronal (voz.sh); si falta, Piper
         if os.path.exists(mp): subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(),"-y","-loglevel","error","-i",mp,"-ac","1","-ar","24000","-c:a","pcm_s16le",p],check=True)
         else:
             print("AVISO: sin voz neuronal para la escena",i,"-> Piper",flush=True)

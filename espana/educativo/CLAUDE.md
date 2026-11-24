@@ -19,6 +19,14 @@ Plan de 10 temas en `plan-espana.json` (marca cada capítulo publicado). Modelo:
 - LinkedIn (regla permanente, 8-nov-2026): Short como vídeo nativo, 3-4 datos + conclusión, «Vídeo elaborado por AIAcciones España
   (@AIAccionesEspaña)» y el enlace al canal al final. La llamada a comentar solo se añade si `publicacion` ≤ 22-nov-2026 (ya no aplica).
 
+## Crecimiento del canal (Daniel, 24-nov-2026; detalles en `espana/crecimiento-youtube.md`)
+- **Primeros 15 segundos:** la portada responde ya a la pregunta del capítulo (qué es y para qué sirve, con el dato de Inditex) en la
+  primera frase; después se explica. Nada de introducciones largas ni «en este vídeo veremos».
+- **Título con la promesa o la cifra delante**, y `info.titulo_b` (título B distinto, p. ej. en forma de pregunta): `meta_leccion.py`
+  escribe `ab-<base>.json` y `ab-espana.yml` alterna los dos títulos por días.
+- Las descripciones llevan enlaces al capítulo anterior y a las listas (`{ultimo:curso-at-}`, `{lista:curso}`, `{lista:diario}`);
+  `encolar.sh` los resuelve. La lista «Análisis técnico, explicado fácil» se llena sola (`canal-espana.yml`).
+
 ## Piezas (espana/educativo/)
 - `lecciones/<base>/video.json`: base (`at-NN-inditex`), capitulo_n, simbolo `BME:ITX`, ticker, nombre, tema, ultima_vela, publicacion, escenas, short, info, miniatura.
   Escenas (`tipo`): `portada`, `esquema` (modo media / cruces / sr / cambio_rol / cambio_rol_baja / falsa_ruptura), `puntos` (≤5 [título, texto]),

@@ -1,0 +1,41 @@
+# Directos en momentos clave de Saudi Arabia AI Stocks (saudi/directos/): voz de cada directo.
+# Se lanza sola al subir saudi/directos/eventos/<carpeta>/video.json a una rama claude/**: genera la voz Azure ar-SA-HamedNeural
+# frase a frase (voz_directo.py; misma clave que el vídeo diario) y deja un wav por frase en <carpeta>/ de la rama voz-saudi-directo.
+name: Voz de los directos (Arabia Saudita)
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["saudi/directos/eventos/*/video.json"]
+  workflow_dispatch:
+    inputs:
+      carpetas:
+        description: "carpetas de saudi/directos/eventos separadas por comas; vacío = las que cambian respecto a main"
+        default: ""
+permissions:
+  contents: write
+concurrency: voz-saudi-directo
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_SAUDI || secrets.AZURE_SPEECH_KEY_NABD }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_SAUDI || secrets.AZURE_SPEECH_REGION_NABD || 'northeurope' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Voz
+        run: |
+          test -n "$AZURE_SPEECH_KEY" || { echo "Falta la clave de Azure: sin voz (el render usará Piper)"; exit 0; }
+          C="${{ inputs.carpetas }}"
+          if [ -z "$C" ]; then
+            git fetch -q --depth 1 origin main
+            C=$(git diff --name-only origin/main HEAD -- 'saudi/directos/eventos/*/video.json' | cut -d/ -f4 | sort -u | paste -sd, -)
+          fi
+          test -n "$C" || { echo "ningún directo cambiado"; exit 0; }
+          R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git clone -q --depth 1 -b voz-saudi-directo "$R" /tmp/out 2>/dev/null || { mkdir -p /tmp/out && cd /tmp/out && git init -q -b voz-saudi-directo && git remote add origin "$R" && cd -; }
+          for c in ${C//,/ }; do
+            echo "== $c"; python3 saudi/directos/voz_directo.py saudi/directos/eventos/$c /tmp/out/$c
+          done
+          cd /tmp/out && git add -A
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Directos Arabia Saudita: voz $C" || exit 0
+          for i in 1 2 3; do git push -q origin HEAD:voz-saudi-directo && break; sleep 5; done

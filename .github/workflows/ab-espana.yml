@@ -1,0 +1,58 @@
+# Pruebas A/B de miniatura y título en los vídeos largos de @AIAccionesEspaña (Daniel, 24-nov-2026). Mismo sistema que Arabia Saudita
+# (scripts/ab-saudi.py, que sirve para cualquier cola): alterna por días la variante A y la B de cada vídeo de cola-es/ con ab.json
+# (hoy, el vídeo diario), guarda las vistas de cada día y el día 5 deja la que gana. Corre a las 08:14 UTC (después de la medianoche del Pacífico).
+# El estado queda en cola-es/<slug>/ab-estado.json de la rama youtube-cola; "Run workflow" con modo=resumen muestra la tabla.
+# CTR e impresiones: solo si existe el secreto YT_ES_STATS_REFRESH_TOKEN con permiso yt-analytics.readonly; si no, se mide con vistas.
+# Detalles: espana/crecimiento-youtube.md.
+name: Pruebas A/B de miniaturas y títulos (España)
+concurrency: ab-espana
+on:
+  schedule:
+    - cron: '14 8 * * *'
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "rotar (lo mismo que la ejecución diaria) o resumen (solo muestra la tabla)"
+        default: resumen
+permissions:
+  contents: write
+jobs:
+  ab:
+    runs-on: ubuntu-latest
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_ES_CLIENT_ID || secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_ES_CLIENT_SECRET || secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_ES_REFRESH_TOKEN }}
+      YT_STATS_REFRESH_TOKEN: ${{ secrets.YT_ES_STATS_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts
+      # Solo los json y png de cola-es/ (sin bajar los mp4).
+      - uses: actions/checkout@v4
+        with:
+          ref: youtube-cola
+          path: cola
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            cola-es/*/*.json
+            cola-es/*/*.png
+      - name: Rotar variantes y cerrar pruebas
+        if: github.event_name == 'schedule' || inputs.modo == 'rotar'
+        working-directory: cola
+        run: python3 ../scripts/ab-saudi.py rotar cola-es
+      - name: Guardar el estado en youtube-cola
+        if: github.event_name == 'schedule' || inputs.modo == 'rotar'
+        working-directory: cola
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add cola-es/*/ab-estado.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Pruebas A/B España $(date -u +%F)"
+          for i in 1 2 3 4; do git pull --rebase -q origin youtube-cola && git push origin HEAD:youtube-cola && exit 0; sleep $((5 * i)); done; exit 1
+      - name: Resumen
+        if: always()
+        working-directory: cola
+        run: python3 ../scripts/ab-saudi.py resumen cola-es | tee -a "$GITHUB_STEP_SUMMARY"
