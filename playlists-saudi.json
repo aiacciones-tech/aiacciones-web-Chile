@@ -4,7 +4,96 @@
   "calendario": {
    "id": "PLaxHaP2tgOg4",
    "titulo": "تقويم نتائج الشركات السعودية | متى تعلن الشركات أرباحها؟",
-   "videos": []
+   "videos": [
+    "Cx7u0vVkexA",
+    "VPCU2U_HVvc"
+   ]
+  },
+  "resultados": {
+   "id": "PLP4ycZREp24g",
+   "titulo": "نتائج الشركات السعودية | أرباح أكبر 25 سهماً في تاسي",
+   "videos": [
+    "xDi62NSYZfI",
+    "gKhnhEzoYig",
+    "oxP2QR2k8Xs",
+    "26iRDbt5MCM",
+    "3_q5cBoQq7Q",
+    "JAEvhPnTLo4",
+    "63cOKiKbhxk"
+   ]
+  },
+  "empresa-alrajhi": {
+   "id": "PLW0AdpBosVT4",
+   "titulo": "سهم مصرف الراجحي (1120) | النتائج المالية والتحليل",
+   "videos": [
+    "xDi62NSYZfI",
+    "KHmzNA2_KVM"
+   ]
+  },
+  "sector-bancos": {
+   "id": "PLCZ_ehKr_lG8",
+   "titulo": "البنوك السعودية | نتائج وتحليل أسهم البنوك في تداول",
+   "videos": [
+    "xDi62NSYZfI",
+    "gKhnhEzoYig",
+    "oxP2QR2k8Xs",
+    "26iRDbt5MCM",
+    "3_q5cBoQq7Q"
+   ]
+  },
+  "empresa-snb": {
+   "id": "PLA9h9xW20gzU",
+   "titulo": "سهم البنك الأهلي السعودي (1180) | النتائج المالية والتحليل",
+   "videos": [
+    "gKhnhEzoYig",
+    "ENRb4Qw1Iqg"
+   ]
+  },
+  "empresa-alinma": {
+   "id": "PLHGyteKQEl60",
+   "titulo": "سهم مصرف الإنماء (1150) | النتائج المالية والتحليل",
+   "videos": [
+    "oxP2QR2k8Xs",
+    "4b294BcUujE"
+   ]
+  },
+  "empresa-sab": {
+   "id": "PLfTvOMoy_Elo",
+   "titulo": "سهم البنك السعودي الأول (1060) | النتائج المالية والتحليل",
+   "videos": [
+    "26iRDbt5MCM",
+    "zz5_GAg-U3U"
+   ]
+  },
+  "empresa-bsf": {
+   "id": "PLeGbKUQQD38U",
+   "titulo": "سهم البنك السعودي الفرنسي (1050) | النتائج المالية والتحليل",
+   "videos": [
+    "3_q5cBoQq7Q",
+    "IdNJKxXf92E"
+   ]
+  },
+  "empresa-almarai": {
+   "id": "PLJlbRKHrvNAM",
+   "titulo": "سهم المراعي (2280) | النتائج المالية والتحليل",
+   "videos": [
+    "JAEvhPnTLo4",
+    "P8vp5HbjsJ8"
+   ]
+  },
+  "sector-consumo": {
+   "id": "PLely2h_DRX-Q",
+   "titulo": "الاستهلاك والتجزئة والعقار | المراعي وجرير ودار الأركان",
+   "videos": [
+    "JAEvhPnTLo4"
+   ]
+  },
+  "empresa-sabic": {
+   "id": "PLIs-Ea0BFCSc",
+   "titulo": "سهم سابك (2010) | النتائج المالية والتحليل",
+   "videos": [
+    "63cOKiKbhxk"
+   ]
   }
  }
 }
