@@ -23,7 +23,8 @@ Valen todas las reglas de `ge/diario/CLAUDE.md` (Keine Anlageberatung, transpare
 - Ejemplo de `video.json`: `episodios/serie20-nvda-2026-11-17/`. Claves: ticker, nombre, sector, sector_tipo («banco» para JPM, BRK no),
   trimestre (el del año fiscal de la empresa según su nota, p. ej. «3. Quartal GJ 2027» para Nvidia; los gráficos usan la etiqueta de TradingView, que es el trimestre natural en que acaba), fecha_resultados, titular,
   expectativas {items [[título, texto]] 0-2, fuente}, claves (3), voz (7 escenas), info {titulo ≤ 100, resumen, fuentes, hashtags, x ≤ 200, tags},
-  miniatura {etiqueta, cifra («57,0 Mrd. $»), sub, color}.
+  miniatura {cifra, gancho, color?, chips?} (diseño «cifra grande + logo» de `ge/diario/miniatura.py`, desde el 24-nov-2026: ver «Títulos y miniaturas»
+  en `ge/diario/CLAUDE.md`; `LOGOS_DIR=<clon de datos-extra-ge>/logos python3 meta_episodio.py <carpeta>`). Sin `gancho` sale el diseño anterior {etiqueta, cifra, sub, color}.
 
 ## Pasos
 1. Clona `datos-serie20-nabd` (`git clone -q --depth 1 -b datos-serie20-nabd ...`) y `cola-ge` de `youtube-cola` (sparse, como `encolar.sh`).

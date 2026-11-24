@@ -20,7 +20,7 @@ La sesión del lunes sale el martes por la mañana; la del viernes, el sábado p
   um 15:30 Uhr unserer Zeit». Los sábados: «am Montag».
 - Se pueden citar resultados y noticias publicados **después del cierre** (after hours, p. ej. resultados tras la campana) con su fuente y hora;
   no hay datos de futuros ni de premarket en `mercado.json`: no inventes cifras de futuros.
-- Títulos: no «Wall Street heute (…)», sino p. ej. «Wall Street über Nacht: S&P 500 +4,7 %, Nvidia +31 % | Der Tagesbericht (23. November 2026)». Se publica automáticamente y en público, sin revisión previa, como Nabd.
+- Títulos: nunca «Wall Street heute (…)»; gancho y cifra primero (ver «Títulos y miniaturas»), p. ej. «Nvidia +31 %: Huang ist zurück – S&P 500 +4,7 % | Wall Street über Nacht (23.11.)». Se publica automáticamente y en público, sin revisión previa, como Nabd.
 El nombre del programa no puede ser «Wall Street Daily» (marca existente).
 Antes de publicar el primer vídeo, el canal debe estar verificado por teléfono (si no, las miniaturas fallan).
 
@@ -77,7 +77,8 @@ las 8 grandes del Nasdaq 100 y las candidatas.
   `/mnt/project-files/ge-pipeline/voice/`. Nunca se mezclan las dos voces en un vídeo.
 
 ## Pasos de cada día
-1. Datos de `datos-diario-nabd` (si faltan, lanzar `datos-diario-Nabd.yml` y esperar).
+1. Datos de `datos-diario-nabd` (si faltan, lanzar `datos-diario-Nabd.yml` y esperar). Además, de la rama `datos-extra-ge`
+   (`git fetch origin +datos-extra-ge:datos-extra-ge`): `fx/fx-<fecha>.json` → `<dir>/fx.json` y la carpeta `logos/` → `LOGOS_DIR` (ver «Deutscher Blick» y «Títulos y miniaturas»).
 2. `python3 tecnico.py` y noticias del día: Yahoo Finance (live blog), CNBC, Reuters, The Closing Print, StockTitan; en alemán
    como contraste: Handelsblatt, Börse Online, finanzen.net, boerse.de, Reuters Deutschland. Fuentes oficiales (Fed, BLS, BEA,
    Tesoro, SEC EDGAR, notas de resultados) cuando las haya. Solo lo publicado ese día.
@@ -86,7 +87,7 @@ las 8 grandes del Nasdaq 100 y las candidatas.
 4. Subir `video.json` a `claude/ge-diario-<fecha>`: `voz-GE.yml` genera la voz (2-4 min); clonar la rama `voz-ge`.
 5. `AUD=<scratch> python3 make_video.py <dir> preview` (mirar TODOS los PNG), luego `AUD=<scratch> VOZ_DIR=<voz>/<fecha> python3 make_video.py <dir>`.
 6. `AUD=<scratch> VOZ_DIR=<voz>/<fecha> python3 make_short.py <dir>/<x>.json` para `short.json`, `short-2.json` y `short-3.json` (preview primero),
-   y `python3 gen_meta.py <dir>`.
+   y `LOGOS_DIR=<clon de datos-extra-ge>/logos python3 gen_meta.py <dir>` (mira la miniatura: logo correcto y cifra legible).
 7. `SCRATCH=<scratch> bash encolar.sh <dir>`: encola en `cola-ge/bolsa-<fecha>` y `-short` de `youtube-cola`; `youtube-GE.yml`
    los sube (si una miniatura falla, `youtube-GE.yml` modo=miniaturas la reintenta); `telegram-GE.yml` publica el post de Telegram y `buffer-GE.yml` los de LinkedIn, X, TikTok e Instagram.
    Los Shorts 2 y 3 quedan en `cola-ge-espera/` y salen solos a su hora (ver «Shorts extra»).
@@ -124,3 +125,42 @@ Plantilla con ejemplo real: `ejemplo-shorts-extra/` (`short-2.json`, `short-3.js
 
 ## Serie de resultados de las 20 grandes
 Además del diario, un vídeo corto (2-4 min) por cada informe de resultados de las 20 mayores empresas de EE. UU.: `ge/serie20/CLAUDE.md`.
+
+## Títulos y miniaturas (desde el 24-nov-2026, aprobado por Daniel)
+Objetivo: más clics desde la portada y las sugerencias (comparar el CTR semana a semana en YouTube Studio). La primera mitad del título y la miniatura
+deben decir **qué pasó y cuánto** en un vistazo.
+- **Miniatura** (`miniatura.py`, la usan `gen_meta.py` y `ge/serie20/meta_episodio.py`): una cifra enorme + el logo de la empresa protagonista.
+  En `info.json` → `miniatura`: `{"nombre": "Nvidia", "cifra": "+31 %", "logo": "NVDA", "gancho": "Huang ist zurück",
+  "indices": [["S&P 500", "+4,7 %", null], ["Nasdaq", "+6,5 %", null]]}`. Color automático por el signo (verde/rojo); `"color": "gold"` para cifras
+  sin signo. `cifra` redondeada (`miniatura.corto()`: sin decimales desde 10 %, uno por debajo). `gancho` de 2-5 palabras, distinto del título.
+  Protagonista: la acción que más llama la atención del día (mayor movimiento con noticia entre las conocidas en Alemania). Si el día lo
+  define un índice (p. ej. S&P 500 −3,7 % sin una acción clara), `nombre` «S&P 500», `logo` null (sale la insignia «S&P»), y `insignia` no hace falta.
+  Logos: rama `datos-extra-ge` (`datos-extra-GE.yml`, cada domingo; ~900 de EE. UU.); si falta, sale una insignia con el ticker (no es un error).
+  Nada de caras de personas (derechos de imagen; y nada de rostros hechos con IA).
+- **Título del vídeo** (≤ 100 caracteres; lo importante en los primeros ~50): `<Empresa o índice> <cifra>: <gancho> – <segundo dato> | Wall Street über Nacht (<d.m.>)` (nunca «heute»: el vídeo sale a la mañana siguiente).
+  Ej.: «Nvidia +31 %: Huang ist zurück – S&P 500 +4,7 % | Wall Street über Nacht (23.11.)». Días sin protagonista: «S&P 500 −3,7 %: Chip-Ausverkauf trifft den Nasdaq | Wall Street über Nacht (20.11.)».
+- **Título del Short**: gancho + cifra + pregunta o contraste, ≤ 70 caracteres más «#Shorts». Ej.: «Nvidia +31 % an einem Tag – was steckt dahinter? #Shorts».
+- **Serie de resultados**: `video.json` → `miniatura` con `cifra` (lo más llamativo: crecimiento o reacción de la acción), `gancho` («188,8 Mrd. $ Umsatz · Prognose angehoben»)
+  y `chips` opcionales; título «Walmart: Umsatz +5,2 %, Prognose angehoben | Quartalszahlen erklärt».
+- Límites (MAR/WpHG y honestidad): cada cifra del título y la miniatura sale tal cual en el vídeo; nada de «Jetzt kaufen?», «Kursziel», «Geheimtipp»,
+  «Rakete», ni «Crash» salvo que un índice caiga más de un 7 % en el día. Exageraciones no; claridad sí.
+
+## Deutscher Blick (ángulo alemán, desde el 24-nov-2026, aprobado por Daniel)
+Lo que nos diferencia de los canales que traducen contenido de EE. UU.: cada vídeo responde «¿y para mí, que invierto en euros?». Todo es **información
+general**, nunca asesoría (ni de inversión ni fiscal), y todo cálculo propio va con «berechnet».
+- **Euros cada día (automático con `fx.json`)**: `make_video.py` pone «≈ 142,14 €» junto al precio de cada acción y, en la franja «Und Europa?» de `s_macro`,
+  EUR/USD y «S&P 500 in Euro» (= (1 + r_USD) / (1 + r_EURUSD) − 1). `python3 tecnico.py <mercado.json> <fx.json>` imprime esas cifras (`deutscher_blick`).
+  Sin `fx.json` de la sesión, el vídeo sale como antes (avisa en stderr).
+- **En la voz**: (1) en la primera acción, el precio también en euros («165 Dollar, umgerechnet rund 142 Euro»); (2) una frase en `s_macro`:
+  «Für Anleger im Euroraum: Der Euro legte 0,5 Prozent zu, deshalb gewann der S&P 500 in Euro gerechnet nur 4,3 Prozent.» (o «… zusätzlich gewann», si el euro cae).
+  Unas 40 palabras más: recorta en otra sección para seguir en 1.100-1.250 palabras.
+- **Impuestos y brókers, solo cuando encaje** (dividendos, splits, recompras, un ETF, una OPI, la serie de resultados con dividendo), como máximo una vez por vídeo
+  y con «Allgemeine Information, keine Steuerberatung.». Datos permitidos (comprueba si cambian por ley):
+  · Deutschland: Abgeltungsteuer 25 % + Solidaritätszuschlag (5,5 % davon) = 26,375 %, ggf. Kirchensteuer; Sparerpauschbetrag 1.000 € (2.000 € bei Zusammenveranlagung).
+  · US-Dividenden: 15 % US-Quellensteuer (mit Formular W-8BEN, das deutsche Broker meist automatisch einreichen), in Deutschland auf die Abgeltungsteuer anrechenbar.
+  · Österreich: KESt 27,5 %. Schweiz: keine Kapitalgewinnsteuer für Privatanleger, Dividenden sind Einkommen (Verrechnungssteuer gilt für Schweizer Titel).
+  · Handel in Deutschland: US-Aktien laufen auch an deutschen Handelsplätzen wie Tradegate, gettex oder LS Exchange, in Euro und teils bis 22 oder 23 Uhr;
+    darüber handeln Neobroker wie Trade Republic oder Scalable Capital. Außerhalb der US-Handelszeiten können die Spannen (Spreads) größer sein.
+  Nunca comparar costes de brókers, recomendar uno, ni poner enlaces de afiliado. Nombrarlos solo como ejemplo de dónde cotiza el valor.
+- **Agenda**: si hay dato o evento europeo relevante (BCE, Ifo, ZEW, IPC alemán), va en `s_agenda` con su hora alemana.
+

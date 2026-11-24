@@ -1,0 +1,49 @@
+# Datos extra de Wall Street auf Deutsch (ge/diario/datos_extra.py), en la rama datos-extra-ge (no en main):
+# - fx: EUR/USD y EUR/CHF al cierre de Nueva York, L-V 21:20 UTC (después del cierre de 21:00 UTC en invierno; 20:00 en verano).
+#   Para el «Deutscher Blick» del Tagesbericht (precios en euros, S&P 500 en euros, berechnet). Listo mucho antes de la producción de la mañana.
+# - logos: logos de empresas (EE. UU. y Xetra) para las miniaturas, cada domingo 03:00 UTC.
+# workflow_dispatch con modo=fx|logos, o un push a claude/** que cambie el script (ejecuta los dos).
+name: Datos extra (Wall Street auf Deutsch)
+on:
+  schedule:
+    - cron: "20 21 * * 1-5"
+    - cron: "0 3 * * 0"
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "fx o logos"
+        default: "fx"
+  push:
+    branches: ["claude/**"]
+    paths: ["ge/diario/datos_extra.py", ".github/workflows/datos-extra-GE.yml"]
+permissions:
+  contents: write
+concurrency: datos-extra-ge
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar
+        run: |
+          M="${{ github.event.inputs.modo }}"
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            if [ "${{ github.event.schedule }}" = "0 3 * * 0" ]; then M=logos; else M=fx; fi
+          fi
+          [ -z "$M" ] && M="fx logos"
+          for m in $M; do
+            if [ "$m" = logos ]; then pip install -q cairosvg; fi
+            python3 ge/diario/datos_extra.py $m
+          done
+      - name: Guardar en la rama datos-extra-ge
+        run: |
+          [ -d ge/diario/extra ] || exit 0
+          mkdir -p /tmp/out && cp -r ge/diario/extra/. /tmp/out/
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          if git fetch -q origin datos-extra-ge; then git checkout -q -B datos-extra-ge origin/datos-extra-ge; else git checkout -q --orphan datos-extra-ge && git rm -rfq . ; fi
+          cp -r /tmp/out/. .
+          git add fx logos 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -qm "Datos extra GE $(date -u +%F)"
+          for i in 1 2 3; do git push -q origin datos-extra-ge && break; sleep 5; git pull -q --rebase origin datos-extra-ge; done
