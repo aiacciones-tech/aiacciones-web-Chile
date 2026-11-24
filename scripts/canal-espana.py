@@ -16,7 +16,7 @@
 
 Credenciales: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN (las de youtube-espana.yml). Solo biblioteca estándar.
 """
-import importlib.util, json, os, re, sys, urllib.parse, urllib.request
+import importlib.util, json, os, re, sys, time, urllib.parse, urllib.request
 from datetime import datetime, timedelta, timezone
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -163,47 +163,82 @@ def token_con_permisos():
     return r["access_token"], set(r.get("scope", "").split())
 
 
-def listas(raiz, maximo=40):
+def leer_api(t, ruta):
+    """GET paginado de la Data API (1 unidad de cuota por página)."""
+    items, tok = [], ""
+    while True:
+        _, _, r = yt.pedir(f"{API}/{ruta}&maxResults=50" + (f"&pageToken={tok}" if tok else ""),
+                           headers={"Authorization": f"Bearer {t}"})
+        r = json.loads(r); items += r.get("items", []); tok = r.get("nextPageToken")
+        if not tok:
+            return items
+
+
+def sincronizar(t, est, subidos, nombres):
+    """Reconstruye el estado desde YouTube: qué listas existen (por título) y qué vídeos tienen ya.
+    Así un estado perdido o una ejecución cortada nunca duplica listas ni vídeos."""
+    por_titulo = {}
+    for p in leer_api(t, "playlists?part=snippet&mine=true"):
+        por_titulo.setdefault(p["snippet"]["title"], p["id"])
+    for k in {k for slug in subidos for k in claves(slug)}:
+        tit = titulo_lista(k, nombres)[0]
+        if tit in por_titulo:
+            est["listas"][k] = {"id": por_titulo[tit], "titulo": tit}
+    por_video = {}
+    for slug, (_, vid) in subidos.items():
+        por_video.setdefault(vid, []).append(slug)
+    for k, l in est["listas"].items():
+        for it in leer_api(t, f"playlistItems?part=contentDetails&playlistId={l['id']}"):
+            for slug in por_video.get(it["contentDetails"]["videoId"], []):
+                if k not in est["añadidos"].setdefault(slug, []):
+                    est["añadidos"][slug].append(k)
+
+
+def listas(raiz, maximo=40, max_nuevas=8):
     cola = os.path.join(raiz, "cola-es"); est_p = os.path.join(cola, "listas.json")
     est = leer(est_p, {"listas": {}, "añadidos": {}}); est.setdefault("listas", {}); est.setdefault("añadidos", {})
-    pend = []
+    subidos = {}
     for slug in sorted(os.listdir(cola)):
         r = leer(os.path.join(cola, slug, "resultado.json"))
-        if not r or not r.get("videoId"):
-            continue
-        hechas = set(est["añadidos"].get(slug, []))
-        for k in claves(slug):
-            if k not in hechas:
-                pend.append((r.get("subido", ""), slug, r["videoId"], k))
-    pend = [x[1:] for x in sorted(pend)]  # por fecha de subida: con "position": 0 el más nuevo queda arriba
-    if not pend:
-        print("Listas al día."); return
+        if r and r.get("videoId"):
+            subidos[slug] = (r.get("subido", ""), r["videoId"])
     t, permisos = token_con_permisos()
     if not permisos & PERMISOS:
         print("AVISO: el token de YouTube España (YT_ES_REFRESH_TOKEN) solo tiene permiso de subida "
               f"({' '.join(sorted(permisos))}). Para crear listas hace falta el permiso «youtube»: ver espana/crecimiento-youtube.md.")
         return
-    nombres = nombres_empresas(); ops = 0
+    nombres = nombres_empresas()
+    sincronizar(t, est, subidos, nombres)
+    guardar(est_p, est)
+    pend = sorted((sub, slug, vid, k) for slug, (sub, vid) in subidos.items() for k in claves(slug)
+                  if k not in est["añadidos"].get(slug, []))
+    pend = [x[1:] for x in pend]  # por fecha de subida: con "position": 0 el más nuevo queda arriba
+    print(f"{len(est['listas'])} listas, {len(pend)} vídeos pendientes de añadir.")
+    ops = nuevas = 0
     for slug, vid, k in pend:
         if ops >= maximo:
-            print(f"Tope de {maximo} operaciones por día (cuota de la API): quedan {len(pend)} pendientes para mañana."); break
+            print(f"Tope de {maximo} operaciones por ejecución (cuota de la API): quedan pendientes para la próxima."); break
+        if k not in est["listas"] and nuevas >= max_nuevas:
+            continue  # YouTube limita crear muchas listas seguidas: el resto, mañana
         try:
             if k not in est["listas"]:
                 titulo, desc = titulo_lista(k, nombres)
                 r = api(t, "playlists?part=snippet,status", {"snippet": {"title": titulo[:150], "description": f"{desc}\n\n{AVISO}",
                         "defaultLanguage": "es"}, "status": {"privacyStatus": "public"}})
-                est["listas"][k] = {"id": r["id"], "titulo": titulo}; ops += 1
+                est["listas"][k] = {"id": r["id"], "titulo": titulo}; ops += 1; nuevas += 1
                 print(f"Lista creada: {titulo} ({r['id']})")
+                time.sleep(2)
             api(t, "playlistItems?part=snippet", {"snippet": {"playlistId": est["listas"][k]["id"], "position": 0,
                     "resourceId": {"kind": "youtube#video", "videoId": vid}}})
             ops += 1
             est["añadidos"].setdefault(slug, []).append(k)
             print(f"{slug} -> {k}")
+            time.sleep(1)
         except SystemExit as e:  # yt.pedir sale con el error HTTP
-            print(f"{slug} -> {k}: {e}")
-            if "quota" in str(e).lower() or "429" in str(e):
-                break
-            if "videoNotFound" in str(e) or "404" in str(e):
+            print(f"{slug} -> {k}: {str(e)[:300]}")
+            if "quota" in str(e).lower() or "HTTP 429" in str(e):
+                print("Límite de YouTube: se sigue en la próxima ejecución."); break
+            if "videoNotFound" in str(e) or "HTTP 404" in str(e):
                 est["añadidos"].setdefault(slug, []).append(k)  # vídeo borrado: no reintentar
         finally:
             guardar(est_p, est)

@@ -39,6 +39,7 @@ jobs:
           filter: blob:none
           sparse-checkout-cone-mode: false
           sparse-checkout: |
+            cola-es/*.json
             cola-es/*/*.json
             cola-es-programado/
       - name: Shorts programados
@@ -53,7 +54,7 @@ jobs:
         run: |
           git config user.name "aiacciones-bot"
           git config user.email "aiacciones-bot@users.noreply.github.com"
-          git add -A cola-es cola-es-programado 2>/dev/null || git add -A cola-es
+          git add --sparse -A cola-es cola-es-programado 2>/dev/null || git add --sparse -A cola-es
           git diff --cached --quiet && exit 0
           git commit -m "Canal YouTube España: programados y listas $(date -u +%F)"
           for i in 1 2 3 4; do git pull --rebase -q origin youtube-cola && git push origin HEAD:youtube-cola && exit 0; sleep $((5 * i)); done; exit 1
