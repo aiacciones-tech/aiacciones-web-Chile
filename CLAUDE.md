@@ -38,6 +38,8 @@
 - **AIAcciones España, crecimiento del canal de YouTube (desde el 24-nov-2026):** cifra clave en títulos y miniaturas con prueba A/B
   (`ab-espana.yml`), conclusión en los primeros 15 s, segundo Short del diario programado (`canal-espana.yml`), listas de reproducción y
   enlaces al siguiente vídeo. Lee `espana/crecimiento-youtube.md` antes de cualquier vídeo de España: prevalece sobre las tareas programadas.
+- **AIAcciones España, directo «El IBEX de la semana, en directo» (viernes 17:45 Madrid, lo emite Daniel):** diapositivas y guion con
+  `espana/directo/make_slides.py`. Antes de cada viernes lee `espana/directo/CLAUDE.md`: prevalece sobre el texto de su tarea programada.
 - **AIAcciones España, Short semanal «Calendario semanal de resultados» (domingos 18:00-20:00 Madrid, `espana/semanal/`):** antes de cada
   edición lee `espana/semanal/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Wall Street auf Deutsch, Short diario «DAX am Abend» (prueba desde el 24-nov-2026, `ge/dax/`):** L-V tras el cierre de Xetra (18:30-20:00 Berlín).
