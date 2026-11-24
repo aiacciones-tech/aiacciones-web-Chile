@@ -37,3 +37,5 @@
   del canal. Antes de cada Short lee `nabd/calendario/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **AIAcciones España, Short semanal «Calendario semanal de resultados» (domingos 18:00-20:00 Madrid, `espana/semanal/`):** antes de cada
   edición lee `espana/semanal/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Wall Street auf Deutsch, Short diario «DAX am Abend» (prueba desde el 24-nov-2026, `ge/dax/`):** L-V tras el cierre de Xetra (18:30-20:00 Berlín).
+  Antes de cada Short lee `ge/dax/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
