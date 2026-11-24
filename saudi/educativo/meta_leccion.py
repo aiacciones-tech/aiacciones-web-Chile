@@ -90,4 +90,24 @@ for z in g.get("zonas", []):
 ax.set_xlim(-1, len(V)); ax.set_ylim(min(l.min(), *[z["de"] for z in g["zonas"]]) * 0.985, max(h.max(), *[z["a"] for z in g["zonas"]]) * 1.02)
 p = f"{D}/thumbnail-{BASE}-saudi.png"; f.savefig(p, dpi=100, facecolor=BG); plt.close(f)
 im = Image.open(p).convert("RGBA"); lg = Image.open(LOGO).convert("RGBA").resize((170, 170), Image.LANCZOS); im.alpha_composite(lg, (20, 150)); im.convert("RGB").save(p)
+
+# Prueba A/B (Daniel, 24-nov-2026): variante B de miniatura, estilo «pregunta» (una pregunta grande sobre el gráfico a pantalla completa).
+# Título B: I["titulo_b"] si la sesión lo escribe (entonces se prueban miniatura y título juntos); si no, solo la miniatura.
+# scripts/ab-saudi.py alterna A y B por días y deja la que gana.
+pregunta = th.get("gancho") or f"كيف تقرأ {th['titulo']}؟"
+f = fig(1280, 720)
+ax = f.add_axes([0.0, 0.0, 1.0, 0.62]); clean(ax); ax.set_xticks([]); ax.set_yticks([])
+ax.vlines(xs, l, h, color=cc, lw=2.2); ax.bar(xs, np.maximum(abs(c - o), (h.max() - l.min()) * 0.004), bottom=np.minimum(o, c), color=cc, width=0.7)
+for z in g.get("zonas", []):
+    ax.axhspan(z["de"], z["a"], color=col(z.get("color", "gold")), alpha=0.35, lw=0)
+ax.set_xlim(-1, len(V)); ax.set_ylim(min(l.min(), *[z["de"] for z in g["zonas"]]) * 0.985, max(h.max(), *[z["a"] for z in g["zonas"]]) * 1.02)
+f.text(0.96, 0.81, ar(pregunta, 22), color=GOLD, fontsize=64 if len(pregunta) <= 22 else 50, weight="bold", va="center", ha="right", linespacing=1.0)
+f.text(0.155, 0.90, ar(f"{SERIE} · {VJ['folge']}"), color=MUTED, fontsize=24, weight="bold", va="center", ha="left")
+pb = f"{D}/thumbnail-b-{BASE}-saudi.png"; f.savefig(pb, dpi=100, facecolor=BG); plt.close(f)
+im = Image.open(pb).convert("RGBA"); lg = Image.open(LOGO).convert("RGBA").resize((150, 150), Image.LANCZOS); im.alpha_composite(lg, (25, 0)); im.convert("RGB").save(pb)
+ab = {"que": "ambos" if I.get("titulo_b") else "miniatura", "B": {"miniatura": "miniatura-b.png"}, "estilos": {"A": "serie", "B": "pregunta"}}
+if I.get("titulo_b"):
+    assert len(I["titulo_b"]) <= 100 and "<" not in I["titulo_b"] and ">" not in I["titulo_b"], len(I["titulo_b"])
+    ab["B"]["title"] = I["titulo_b"]
+json.dump(ab, open(f"{D}/ab-{BASE}-saudi.json", "w"), ensure_ascii=False, indent=1)
 print("ok", BASE, "desc", len(desc), "fb", len(fb), "tg", len(tg), "x", largo_x(x.replace("{youtube}", URL)), "titulo", len(I["titulo"]))
