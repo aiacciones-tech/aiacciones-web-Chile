@@ -1,0 +1,91 @@
+{
+ "serie": "دليل المستثمر في السوق السعودية",
+ "calendario": "martes y viernes (Daniel, 24-nov-2026)",
+ "excluidos": "zakat y «الأسهم النقية» (cuestiones religiosas), tutoriales de apps de bancos concretos",
+ "guias": [
+  {
+   "numero": 1,
+   "base": "eg-01-how-to-invest",
+   "tema": "كيف تستثمر في الأسهم السعودية من الصفر",
+   "palabra_clave": "كيف استثمر في الاسهم السعوديه / الاسهم للمبتدئين من الصفر / كيف افتح محفظة",
+   "estado": "muestra"
+  },
+  {
+   "numero": 2,
+   "base": "eg-02-what-is-tadawul",
+   "tema": "ما هي تداول وكيف يعمل السوق السعودي؟",
+   "palabra_clave": "سوق الاسهم السعودي للمبتدئين / تداول الاسهم",
+   "estado": "pendiente"
+  },
+  {
+   "numero": 3,
+   "base": "eg-03-dividend-stocks",
+   "tema": "أكبر أسهم توزيعات الأرباح في تاسي بالأرقام",
+   "palabra_clave": "اسهم توزيعات / افضل سهم توزيع ارباح",
+   "estado": "pendiente"
+  },
+  {
+   "numero": 4,
+   "base": "eg-04-dividend-eligibility",
+   "tema": "أحقية توزيع الأرباح: متى يجب أن تملك السهم؟",
+   "palabra_clave": "أحقية التوزيع / تاريخ الاستحقاق",
+   "estado": "pendiente"
+  },
+  {
+   "numero": 5,
+   "base": "eg-05-main-vs-nomu",
+   "tema": "الفرق بين السوق الرئيسية ونمو (السوق الموازية)",
+   "palabra_clave": "الفرق بين السوق الموازي والرئيسي",
+   "estado": "pendiente"
+  },
+  {
+   "numero": 6,
+   "base": "eg-06-tasi-index",
+   "tema": "ما هو مؤشر تاسي وكيف يُحسب؟",
+   "palabra_clave": "مؤشر تاسي / مؤشر السوق السعودي",
+   "estado": "pendiente"
+  },
+  {
+   "numero": 7,
+   "base": "eg-07-pe-ratio",
+   "tema": "مكرر الربحية بأمثلة من شركات سعودية",
+   "palabra_clave": "مكرر الربحية / مكرر ربحية السهم",
+   "estado": "pendiente"
+  },
+  {
+   "numero": 8,
+   "base": "eg-08-ipo",
+   "tema": "كيف تكتتب في الاكتتابات السعودية وكيف يتم التخصيص؟",
+   "palabra_clave": "الاكتتاب / الاكتتابات الجديده / الاكتتاب في الاسهم",
+   "estado": "pendiente"
+  },
+  {
+   "numero": 9,
+   "base": "eg-09-saudi-etfs",
+   "tema": "صناديق المؤشرات المتداولة السعودية",
+   "palabra_clave": "صناديق المؤشرات المتداولة السعودية / الاستثمار في صناديق المؤشرات",
+   "estado": "pendiente"
+  },
+  {
+   "numero": 10,
+   "base": "eg-10-order-types",
+   "tema": "أنواع أوامر البيع والشراء في تداول",
+   "palabra_clave": "انواع اوامر البيع والشراء / اوامر البيع والشراء في الاسهم",
+   "estado": "pendiente"
+  },
+  {
+   "numero": 11,
+   "base": "eg-11-invest-vs-speculate",
+   "tema": "الفرق بين الاستثمار والمضاربة",
+   "palabra_clave": "الفرق بين الاستثمار والمضاربة / المضاربة في السوق السعودي",
+   "estado": "pendiente"
+  },
+  {
+   "numero": 12,
+   "base": "eg-12-aramco",
+   "tema": "سهم أرامكو بالأرقام: التوزيعات والبيانات الأساسية",
+   "palabra_clave": "سهم ارامكو / توزيعات ارامكو",
+   "estado": "pendiente"
+  }
+ ]
+}
