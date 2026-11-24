@@ -1,0 +1,279 @@
+{
+ "_nota": "Playlists del canal Saudi Arabia AI Stocks. Lo usa scripts/playlists-saudi.py (ver saudi/playlists/CLAUDE.md). Los IDs creados se guardan en playlists-saudi.json de la rama youtube-cola. Cambiar un título aquí NO renombra una playlist ya creada (hazlo en YouTube Studio).",
+ "canal": "https://www.youtube.com/@SaudiArabiaAIStocks",
+ "aviso": "محتوى تعليمي وإعلامي فقط ولا يُعد نصيحة استثمارية.",
+ "empresa": {
+  "titulo": "سهم {nombre_ar} ({ticker}) | النتائج المالية والتحليل",
+  "descripcion": "كل فيديوهات سهم {nombre_ar} (رمز {ticker} في تداول) في مكان واحد: نتائج الأرباح الفصلية والسنوية بأهم الأرقام، وما الذي تغيّر، ودروس التحليل الفني على الرسم البياني الحقيقي للسهم. بالعربية، بمساعدة الذكاء الاصطناعي.\n\nالقطاع: {sector_ar}\nقائمة القطاع الكاملة في القناة: {canal}/playlists\n\n{aviso}\n\nاشترك في القناة: {canal}\n\n#{hashtag} #الأسهم_السعودية #تداول #تاسي"
+ },
+ "sectores": [
+  {
+   "clave": "bancos",
+   "titulo": "البنوك السعودية | نتائج وتحليل أسهم البنوك في تداول",
+   "nombre_ar": "البنوك",
+   "descripcion": "نتائج وتحليل أكبر البنوك المدرجة في السوق السعودية: مصرف الراجحي، البنك الأهلي السعودي، مصرف الإنماء، بنك الرياض، البنك السعودي الأول، البنك السعودي الفرنسي. صافي الربح، دخل العمليات، التمويل والودائع، وربحية السهم في كل فصل.",
+   "hashtags": "#البنوك_السعودية #أسهم_البنوك"
+  },
+  {
+   "clave": "energia",
+   "titulo": "الطاقة والمرافق في السعودية | أرامكو والكهرباء وأكوا باور",
+   "nombre_ar": "الطاقة والمرافق",
+   "descripcion": "نتائج وتحليل أسهم الطاقة والمرافق في تداول: أرامكو السعودية، لوبريف، أكوا باور، الكهرباء السعودية. الأرباح، التدفقات النقدية، التوزيعات وأثر أسعار النفط.",
+   "hashtags": "#أرامكو #أسهم_الطاقة"
+  },
+  {
+   "clave": "materiales",
+   "titulo": "البتروكيماويات والتعدين والإسمنت | سابك ومعادن",
+   "nombre_ar": "البتروكيماويات والمواد الأساسية",
+   "descripcion": "نتائج وتحليل أسهم المواد الأساسية في السوق السعودية: سابك، سابك للمغذيات الزراعية، معادن، الإسمنت السعودية. الهوامش، الأسعار العالمية، والأرباح في كل فصل.",
+   "hashtags": "#البتروكيماويات #سابك #معادن"
+  },
+  {
+   "clave": "telecom",
+   "titulo": "الاتصالات والتقنية في السعودية | إس تي سي وموبايلي وزين وعلم",
+   "nombre_ar": "الاتصالات والتقنية",
+   "descripcion": "نتائج وتحليل أسهم الاتصالات والتقنية في تداول: إس تي سي، موبايلي، زين السعودية، علم. الإيرادات، الأرباح، والتوزيعات في كل فصل.",
+   "hashtags": "#أسهم_الاتصالات #stc"
+  },
+  {
+   "clave": "salud",
+   "titulo": "الرعاية الصحية في السعودية | سليمان الحبيب والمواساة",
+   "nombre_ar": "الرعاية الصحية",
+   "descripcion": "نتائج وتحليل أسهم المستشفيات في السوق السعودية: مجموعة د. سليمان الحبيب والمواساة للخدمات الطبية. الإيرادات، الهوامش، والنمو في كل فصل.",
+   "hashtags": "#الرعاية_الصحية #سليمان_الحبيب"
+  },
+  {
+   "clave": "seguros",
+   "titulo": "التأمين في السعودية | بوبا العربية والتعاونية",
+   "nombre_ar": "التأمين",
+   "descripcion": "نتائج وتحليل أكبر شركات التأمين في تداول: بوبا العربية والتعاونية. الأقساط، نتيجة الاكتتاب، وصافي الربح في كل فصل.",
+   "hashtags": "#التأمين #بوبا"
+  },
+  {
+   "clave": "consumo",
+   "titulo": "الاستهلاك والتجزئة والعقار | المراعي وجرير ودار الأركان",
+   "nombre_ar": "الاستهلاك والتجزئة والعقار",
+   "descripcion": "نتائج وتحليل أسهم الاستهلاك والتجزئة والعقار في السوق السعودية: المراعي، جرير، دار الأركان. المبيعات، الهوامش، والأرباح في كل فصل.",
+   "hashtags": "#المراعي #جرير #دار_الأركان"
+  }
+ ],
+ "formatos": [
+  {
+   "clave": "diario",
+   "tipos": [
+    "diario"
+   ],
+   "shorts": false,
+   "titulo": "ملخص السوق السعودية اليومي | تاسي ونمو بعد الإغلاق",
+   "descripcion": "ملخص يومي لسوق الأسهم السعودية بعد إغلاق تداول (من الأحد إلى الخميس): أداء مؤشر تاسي ونمو، أبرز الأخبار بمصادرها، أكثر الأسهم ارتفاعاً وانخفاضاً مع السبب، التحليل الفني للمؤشر، وأجندة الجلسة القادمة.",
+   "hashtags": "#تاسي #سوق_الأسهم_السعودية #تداول_اليوم"
+  },
+  {
+   "clave": "resultados",
+   "tipos": [
+    "resultados"
+   ],
+   "shorts": false,
+   "titulo": "نتائج الشركات السعودية | أرباح أكبر 25 سهماً في تاسي",
+   "descripcion": "نتائج الأرباح الفصلية والسنوية لأكبر 25 شركة في السوق السعودية: أرامكو، الراجحي، الأهلي، سابك، إس تي سي وغيرها. أهم الأرقام وما الذي تغيّر مقارنة بالعام السابق، مع المصادر.",
+   "hashtags": "#نتائج_الشركات #أرباح_الشركات_السعودية"
+  },
+  {
+   "clave": "tecnico",
+   "tipos": [
+    "tecnico"
+   ],
+   "shorts": false,
+   "titulo": "التحليل الفني ببساطة | دروس على الأسهم السعودية",
+   "descripcion": "سلسلة أسبوعية (كل سبت) تشرح التحليل الفني خطوة بخطوة على الرسوم البيانية الحقيقية لأسهم تاسي: الدعم والمقاومة، المتوسطات المتحركة، خطوط الاتجاه، حجم التداول، مؤشر القوة النسبية وغيرها. للمبتدئين وبالعربية.",
+   "hashtags": "#التحليل_الفني #تعلم_التداول"
+  },
+  {
+   "clave": "calendario",
+   "tipos": [
+    "calendario"
+   ],
+   "shorts": true,
+   "titulo": "تقويم نتائج الشركات السعودية | متى تعلن الشركات أرباحها؟",
+   "descripcion": "متى تعلن الشركات المدرجة في تداول نتائجها المالية؟ تقويم أسبوعي (كل سبت) لمواعيد إعلان النتائج لأكبر الشركات السعودية، مع المهل النظامية لهيئة السوق المالية.",
+   "hashtags": "#تقويم_النتائج #مواعيد_النتائج"
+  }
+ ],
+ "empresas": [
+  {
+   "id": "aramco",
+   "ticker": 2222,
+   "nombre": "Saudi Aramco",
+   "nombre_ar": "أرامكو السعودية",
+   "sector": "energia"
+  },
+  {
+   "id": "alrajhi",
+   "ticker": 1120,
+   "nombre": "Al Rajhi Bank",
+   "nombre_ar": "مصرف الراجحي",
+   "sector": "bancos"
+  },
+  {
+   "id": "snb",
+   "ticker": 1180,
+   "nombre": "Saudi National Bank",
+   "nombre_ar": "البنك الأهلي السعودي",
+   "sector": "bancos"
+  },
+  {
+   "id": "sabic",
+   "ticker": 2010,
+   "nombre": "SABIC",
+   "nombre_ar": "سابك",
+   "sector": "materiales"
+  },
+  {
+   "id": "stc",
+   "ticker": 7010,
+   "nombre": "stc",
+   "nombre_ar": "إس تي سي",
+   "sector": "telecom"
+  },
+  {
+   "id": "maaden",
+   "ticker": 1211,
+   "nombre": "Ma'aden",
+   "nombre_ar": "معادن",
+   "sector": "materiales"
+  },
+  {
+   "id": "acwa",
+   "ticker": 2082,
+   "nombre": "ACWA Power",
+   "nombre_ar": "أكوا باور",
+   "sector": "energia"
+  },
+  {
+   "id": "alinma",
+   "ticker": 1150,
+   "nombre": "Alinma Bank",
+   "nombre_ar": "مصرف الإنماء",
+   "sector": "bancos"
+  },
+  {
+   "id": "riyadbank",
+   "ticker": 1010,
+   "nombre": "Riyad Bank",
+   "nombre_ar": "بنك الرياض",
+   "sector": "bancos"
+  },
+  {
+   "id": "sab",
+   "ticker": 1060,
+   "nombre": "SAB",
+   "nombre_ar": "البنك السعودي الأول",
+   "sector": "bancos"
+  },
+  {
+   "id": "bsf",
+   "ticker": 1050,
+   "nombre": "Banque Saudi Fransi",
+   "nombre_ar": "البنك السعودي الفرنسي",
+   "sector": "bancos"
+  },
+  {
+   "id": "elm",
+   "ticker": 7203,
+   "nombre": "Elm",
+   "nombre_ar": "علم",
+   "sector": "telecom"
+  },
+  {
+   "id": "almarai",
+   "ticker": 2280,
+   "nombre": "Almarai",
+   "nombre_ar": "المراعي",
+   "sector": "consumo"
+  },
+  {
+   "id": "habib",
+   "ticker": 4013,
+   "nombre": "Dr. Sulaiman Al Habib",
+   "nombre_ar": "سليمان الحبيب",
+   "sector": "salud"
+  },
+  {
+   "id": "mouwasat",
+   "ticker": 4002,
+   "nombre": "Mouwasat",
+   "nombre_ar": "المواساة",
+   "sector": "salud"
+  },
+  {
+   "id": "sabicagri",
+   "ticker": 2020,
+   "nombre": "SABIC Agri-Nutrients",
+   "nombre_ar": "سابك للمغذيات الزراعية",
+   "sector": "materiales"
+  },
+  {
+   "id": "sec",
+   "ticker": 5110,
+   "nombre": "Saudi Electricity",
+   "nombre_ar": "الكهرباء السعودية",
+   "sector": "energia"
+  },
+  {
+   "id": "bupa",
+   "ticker": 8210,
+   "nombre": "Bupa Arabia",
+   "nombre_ar": "بوبا العربية",
+   "sector": "seguros"
+  },
+  {
+   "id": "tawuniya",
+   "ticker": 8010,
+   "nombre": "Tawuniya",
+   "nombre_ar": "التعاونية",
+   "sector": "seguros"
+  },
+  {
+   "id": "jarir",
+   "ticker": 4190,
+   "nombre": "Jarir",
+   "nombre_ar": "جرير",
+   "sector": "consumo"
+  },
+  {
+   "id": "mobily",
+   "ticker": 7020,
+   "nombre": "Mobily",
+   "nombre_ar": "موبايلي",
+   "sector": "telecom"
+  },
+  {
+   "id": "zain",
+   "ticker": 7030,
+   "nombre": "Zain KSA",
+   "nombre_ar": "زين السعودية",
+   "sector": "telecom"
+  },
+  {
+   "id": "luberef",
+   "ticker": 2223,
+   "nombre": "Luberef",
+   "nombre_ar": "لوبريف",
+   "sector": "energia"
+  },
+  {
+   "id": "daralarkan",
+   "ticker": 4300,
+   "nombre": "Dar Al Arkan",
+   "nombre_ar": "دار الأركان",
+   "sector": "consumo"
+  },
+  {
+   "id": "saudicement",
+   "ticker": 3030,
+   "nombre": "Saudi Cement",
+   "nombre_ar": "الإسمنت السعودية",
+   "sector": "materiales"
+  }
+ ]
+}

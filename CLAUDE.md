@@ -42,6 +42,8 @@
   edición lee `espana/semanal/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Wall Street auf Deutsch, Short diario «DAX am Abend» (prueba desde el 24-nov-2026, `ge/dax/`):** L-V tras el cierre de Xetra (18:30-20:00 Berlín).
   Antes de cada Short lee `ge/dax/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Arabia Saudita, playlists de YouTube (por empresa, sector y formato):** se crean y rellenan solas tras cada subida (`scripts/playlists-saudi.py`,
+  paso de `youtube-saudi.yml`). Detalles en `saudi/playlists/CLAUDE.md`; las carpetas nuevas de `cola-sa/` deben seguir los nombres que allí se listan.
 - **Arabia Saudita, directos en momentos clave (Fed, OPEP+, presupuesto, resultados anuales; `saudi/directos/`):** directo automático emitido desde
   GitHub Actions (`directo-saudi.yml`). Antes de cada directo lee `saudi/directos/CLAUDE.md`: prevalece sobre el texto de su tarea programada.
 - **Arabia Saudita, pruebas A/B de miniatura y título (desde el 24-nov-2026):** los videos largos del diario y de la serie educativa llevan una variante B
