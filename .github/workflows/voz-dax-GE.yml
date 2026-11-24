@@ -1,0 +1,36 @@
+# Voz neuronal de Azure en alemán (de-DE-ConradNeural) del Short diario «DAX am Abend» (ge/dax/).
+# Se lanza sola al subir ge/dax/dias/<fecha>/short.json a una rama claude/ge-dax-*, o a mano con "Run workflow".
+# Deja un wav por frase en <fecha>/ de la rama voz-ge-dax (se reescribe cada vez, sin historial; aparte de voz-ge del Tagesbericht).
+# make_short.py (de ge/diario/) los usa con VOZ_DIR. Mismo recurso de Azure que el diario: AZURE_SPEECH_KEY_GE y AZURE_SPEECH_REGION_GE.
+name: Voz Azure del Short DAX (Wall Street auf Deutsch)
+on:
+  push:
+    branches: ["claude/ge-dax-**"]
+    paths: ["ge/dax/dias/*/short.json"]
+  workflow_dispatch:
+    inputs:
+      fecha:
+        description: "carpeta de ge/dax/dias (AAAA-MM-DD); vacío = la más reciente"
+        default: ""
+permissions:
+  contents: write
+concurrency: voz-ge-dax
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_GE }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_GE || 'germanywestcentral' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generar la voz
+        run: |
+          if [ -z "$AZURE_SPEECH_KEY" ]; then echo "Falta AZURE_SPEECH_KEY_GE: el Short saldrá con Piper."; exit 0; fi
+          F="${{ inputs.fecha }}"
+          if [ -z "$F" ]; then F=$(ls -d ge/dax/dias/20??-??-?? | sort | tail -1 | xargs basename); fi
+          echo "día $F"
+          python3 ge/diario/voz_azure.py ge/dax/dias/$F/short.json /tmp/voz/$F
+          cd /tmp/voz && git init -q -b voz-ge-dax && git add .
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Voz Azure del Short DAX $F"
+          git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          for i in 1 2 3; do git push -qf origin voz-ge-dax && break; sleep 5; done
