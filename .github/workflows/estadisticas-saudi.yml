@@ -86,6 +86,6 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if [ "${{ inputs.prueba }}" = "true" ]; then cat informe.md >> "$GITHUB_STEP_SUMMARY"; exit 0; fi
+          if [ "${{ inputs.prueba }}" = "true" ]; then cat informe.md | tee -a "$GITHUB_STEP_SUMMARY"; exit 0; fi
           gh issue create --repo "$GITHUB_REPOSITORY" --title "Informe semanal Arabia Saudita $(date -u +%F)" --body-file informe.md
           cat informe.md >> "$GITHUB_STEP_SUMMARY"
