@@ -9,6 +9,7 @@
 # El de Instagram (post-instagram-<fecha>-GE.txt) va como post-instagram.txt del Short: buffer-GE.yml lo publica como Reel.
 # El resto se queda en la carpeta del día.
 set -e
+CUPO=$(cd "$(dirname "$0")/.." && pwd)/cupo.py   # cupo de subidas a YouTube (regla de Daniel, 24-nov-2026: nunca pasar el límite)
 B=$(cd "$1" && pwd); F=$(python3 -c "import json;print(json.load(open('$B/info.json'))['fecha'])"); S=${SCRATCH:-/tmp/ge-scratch}; mkdir -p $S
 for f in video-bolsa-$F-GE.mp4 short-bolsa-$F-GE.mp4 meta-youtube-$F-GE.json meta-short-$F-GE.json miniatura-$F-GE.png; do
   test -s "$B/$f" || { echo "falta $B/$f"; exit 1; }
@@ -17,15 +18,8 @@ ID=UC23KiHTq_lULliZwAM3dEpA
 grep -q "$ID" $B/meta-youtube-$F-GE.json && grep -q "$ID" $B/meta-short-$F-GE.json || { echo "falta el enlace del canal en los metadatos"; exit 1; }
 [ -d $S/cola ] || git clone -q --depth 1 -b youtube-cola https://github.com/aiacciones-tech/aiacciones-web-Chile.git $S/cola; cd $S/cola; git pull -q origin youtube-cola 2>/dev/null
 git config user.name "aiacciones-bot"; git config user.email "aiacciones-bot@users.noreply.github.com"
-python3 - <<PY
-import json,glob,datetime as dt
-now=dt.datetime.now(dt.timezone.utc); n=0
-for p in glob.glob('cola-ge/*/resultado.json'):
-    try: s=dt.datetime.fromisoformat(json.load(open(p))['subido'].replace('Z','+00:00'))
-    except Exception: continue
-    if now-s<dt.timedelta(hours=24): n+=1
-print('subidas a YouTube (GE) en 24 h:',n); assert n<=8, 'límite de YouTube (~10/24 h por canal): espera antes de encolar'
-PY
+# prioridad alta: espera (hasta 3 h) a que quepan 2 subida(s) sin pasar el límite diario (ge/cupo.py)
+for i in $(seq 18); do git pull -q origin youtube-cola 2>/dev/null; python3 $CUPO alta 2 && break; [ $i = 18 ] && { echo "sin cupo de YouTube tras 3 h: no se encola"; exit 1; }; sleep 600; done
 C=cola-ge/bolsa-$F; CS=cola-ge/bolsa-$F-short
 [ -f $C/resultado.json ] && { echo "ya subido: $C"; exit 1; }
 mkdir -p $C $CS

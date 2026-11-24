@@ -3,7 +3,8 @@
 # Este workflow, cada 20 min de 09 a 16 UTC, pasa a cola-ge/ los que ya tocan y lanza youtube-GE.yml (modo=subir);
 # al terminar la subida, buffer-GE.yml (workflow_run) manda sus posts de TikTok e Instagram.
 # Un push con GITHUB_TOKEN no dispara otros workflows: por eso se lanza youtube-GE.yml con workflow_dispatch.
-# Un Short con más de 8 h de retraso no se publica (caducado.txt). Si ya hay 9 subidas en 24 h, espera a la siguiente vuelta.
+# Un Short con más de 8 h de retraso no se publica (caducado.txt). Prioridad baja en el cupo de YouTube (ge/cupo.py, regla de Daniel del 24-nov-2026:
+# nunca pasar el límite): solo sale si deja sitio a la serie de resultados, al DAX y al Tagesbericht; si no, espera y acaba caducando.
 name: Shorts extra a su hora (Wall Street auf Deutsch)
 on:
   schedule:
@@ -24,14 +25,12 @@ jobs:
         id: m
         run: |
           [ -d cola-ge-espera ] || { echo "No hay cola-ge-espera/."; echo "n=0" >> $GITHUB_OUTPUT; exit 0; }
-          python3 - <<'PY' > /tmp/mover.txt
-          import json, glob, os, datetime as dt
+          git fetch -q --depth 1 origin main && git show origin/main:ge/cupo.py > "$RUNNER_TEMP/cupo.py"
+          CUPO_DIR="$RUNNER_TEMP" python3 - <<'PY' > /tmp/mover.txt
+          import glob, os, sys, datetime as dt
+          sys.path.insert(0, os.environ['CUPO_DIR']); import cupo
           ahora = dt.datetime.now(dt.timezone.utc)
-          n24 = 0
-          for p in glob.glob('cola-ge/*/resultado.json'):
-              try: s = dt.datetime.fromisoformat(json.load(open(p))['subido'].replace('Z', '+00:00'))
-              except Exception: continue
-              n24 += ahora - s < dt.timedelta(hours=24)
+          libres = cupo.libres('baja')
           for d in sorted(glob.glob('cola-ge-espera/*/publicar.txt')):
               c = os.path.dirname(d); slug = os.path.basename(c)
               if os.path.exists(os.path.join(c, 'caducado.txt')) or os.path.exists(os.path.join('cola-ge', slug)): continue
@@ -39,9 +38,9 @@ jobs:
               if ahora < t: continue
               if ahora - t > dt.timedelta(hours=8):
                   open(os.path.join(c, 'caducado.txt'), 'w').write(ahora.isoformat(timespec='minutes')); print('CAD', slug); continue
-              if n24 >= 9:
-                  print('ESPERA', slug, f'({n24} subidas en 24 h)'); continue
-              n24 += 1; print('MOVER', slug)
+              if libres < 1:
+                  print('ESPERA', slug, f'(sin cupo: {cupo.usadas()} subidas en 24 h)'); continue
+              libres -= 1; print('MOVER', slug)
           PY
           cat /tmp/mover.txt
           n=0
