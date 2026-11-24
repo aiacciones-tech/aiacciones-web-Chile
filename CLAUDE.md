@@ -39,3 +39,5 @@
   edición lee `espana/semanal/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Wall Street auf Deutsch, Short diario «DAX am Abend» (prueba desde el 24-nov-2026, `ge/dax/`):** L-V tras el cierre de Xetra (18:30-20:00 Berlín).
   Antes de cada Short lee `ge/dax/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Arabia Saudita, vídeos evergreen de búsqueda «دليل المستثمر في السوق السعودية» (martes y viernes, `saudi/evergreen/`):** instrucciones en
+  `saudi/evergreen/CLAUDE.md` (prevalecen sobre el texto de su tarea programada). Plan de 12 temas en `saudi/evergreen/plan-saudi.json`.
