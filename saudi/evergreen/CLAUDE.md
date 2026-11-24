@@ -2,7 +2,8 @@
 
 Vídeos en árabe que responden a lo que la gente busca en YouTube sobre la bolsa saudí (cómo invertir, dividendos, Nomu, OPVs, TASI...),
 para atraer tráfico de búsqueda durante meses. **Dos por semana: martes y viernes** (elección de Daniel). Plan de 12 temas en `plan-saudi.json`
-(temas y palabras clave sacados de las sugerencias de búsqueda de YouTube con gl=SA). Valen las reglas del canal: archivos entregados en
+(temas y palabras clave sacados de las sugerencias de búsqueda de YouTube con gl=SA). Tarea programada trig_01M5aTXESZzQDWNaguZV2kQ9,
+martes y viernes 12:41 Riad; Daniel aprobó la guía 1 (publicada el 24-nov-2026: YouTube RFEq1z8Kv2A, Short iBQeYG2sBI0) y la publicación automática. Valen las reglas del canal: archivos entregados en
 inglés y terminados en `-saudi`; contenido en árabe; cada post enlaza https://www.youtube.com/@SaudiArabiaAIStocks; LinkedIn lleva el Short
 como vídeo nativo con 3-4 datos + conclusión y «فيديو من إعداد قناة Saudi Arabia AI Stocks»; Facebook con el enlace al canal; Instagram como Reel.
 
@@ -17,14 +18,15 @@ como vídeo nativo con 3-4 datos + conclusión y «فيديو من إعداد ق
 
 ## Piezas (saudi/evergreen/, reutiliza voz y render de saudi/educativo/)
 - `guias/<base>/video.json`: base (`eg-NN-<tema>`), numero, tema, tema_corto, palabra_clave, simbolo opcional (p. ej. `TADAWUL:TASI` con
-  velas_n 6000 = desde 2002), ultima_vela, escenas, short, info, miniatura. Ejemplo completo: `guias/eg-01-how-to-invest/`.
+  velas_n 6000 = desde 2002), ultima_vela, escenas, short, info (con `titulo_b` para la prueba A/B), miniatura (con `gancho` para la miniatura B). Ejemplo completo: `guias/eg-01-how-to-invest/`.
   Escenas: `portada` (etiqueta, sub, indice ≤5), `puntos` (≤5 [título, texto], fuente), `tabla` (columnas, anchos, filas ≤7, resaltar, fuente),
   `historico` (línea semanal de muchos años con marcas {fecha, campo h|l|c, texto, dx, dy}), `grafico` (velas diarias), `fin` (claves ≤4, siguiente).
   Short: `titulo` (pregunta), `tarjeta` (titulo, lineas ≤5), `historico` (grafico: id de la escena larga), `fin`; < 59 s (~75-90 palabras).
 - `.github/workflows/evergreen-saudi.yml`: al subir `video.json` a una rama `claude/**`, velas (si hay simbolo) y voz Azure frase a frase
   en `<base>/` de la rama `voz-saudi-evergreen`.
 - `make_guia.py <carpeta> [preview]`, `make_short_guia.py <carpeta> [preview]` (con `AUD`, `VELAS`, `VOZ_DIR`), `meta_guia.py <carpeta>`.
-- `encolar.sh <carpeta>`: `cola-sa/guide-<base>/` y `-short/` en `youtube-cola`; desde ahí todo se publica solo.
+- `encolar.sh <carpeta>`: `cola-sa/guide-<base>/` y `-short/` en `youtube-cola` (con `ab.json` + `miniatura-b.png` para la prueba A/B de
+  `saudi/ab-saudi.md`); desde ahí todo se publica solo y el vídeo entra en la playlist «دليل المستثمر في السوق السعودية» (`saudi/playlists/`).
 
 ## Pasos de cada guía (martes y viernes)
 1. Primera guía `pendiente` de `plan-saudi.json`. Verifica los datos en la web (fuentes oficiales) y escribe `guias/<base>/video.json`
