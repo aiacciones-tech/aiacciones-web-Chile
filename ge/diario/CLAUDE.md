@@ -6,8 +6,21 @@ todo lo que ve o escucha el público va en **alemán** (Hochdeutsch, trato de «
 
 Cada día de sesión en Nueva York (lunes a viernes; cierre a las 16:00 ET = **22:00 en Berlín** casi todo el año; 21:00 en las
 semanas de marzo y de octubre/noviembre en que EE. UU. y Europa cambian de hora en fechas distintas; sin vídeo en festivos de EE. UU.):
-un vídeo de **8 a 10 minutos** («Der Tagesbericht») y su Short para el canal Wall Street auf Deutsch (https://www.youtube.com/channel/UC23KiHTq_lULliZwAM3dEpA).
-Público: Alemania, Austria y Suiza (DACH). Se publica automáticamente y en público, sin revisión previa, como Nabd.
+un vídeo de **8 a 10 minutos** («Der Tagesbericht») y **tres Shorts** para el canal Wall Street auf Deutsch (https://www.youtube.com/channel/UC23KiHTq_lULliZwAM3dEpA).
+Público: Alemania, Austria y Suiza (DACH).
+
+**Horario (desde el 25-nov-2026, Daniel aprobó el 24-nov):** el Tagesbericht ya **no sale de noche** sino **a la mañana siguiente, antes de la apertura
+europea**, como «lo que pasó anoche en Wall Street». La tarea programada arranca **martes a sábado a las 05:17 de Berlín** y publica hacia las 06:30-07:00.
+La sesión del lunes sale el martes por la mañana; la del viernes, el sábado por la mañana. Los Shorts extra salen solos a las 12:15 y 15:05 de Berlín
+(ver «Shorts extra»); el Short del DAX («DAX am Abend», `ge/dax/`) va a las 18:30-20:00, sin choques.
+- **Fecha de la sesión** = la de la última vela de `datos/mercado-<fecha>.json` más reciente (normalmente la de ayer en Berlín). Si `cola-ge/bolsa-<fecha>/`
+  ya tiene `resultado.json` (p. ej. el viernes tras Thanksgiving, cuando la última vela es del miércoles), no se publica nada.
+- **Tiempo verbal:** la sesión es «gestern» / «in der Nacht» para el espectador: «Die Wall Street hat gestern …», «Am Montagabend schloss der S&P 500 …».
+  Nunca «heute» para la sesión. «Heute» es la sesión que viene: agenda «Was heute ansteht», «Xetra öffnet heute um 9:00 Uhr», «New York öffnet heute
+  um 15:30 Uhr unserer Zeit». Los sábados: «am Montag».
+- Se pueden citar resultados y noticias publicados **después del cierre** (after hours, p. ej. resultados tras la campana) con su fuente y hora;
+  no hay datos de futuros ni de premarket en `mercado.json`: no inventes cifras de futuros.
+- Títulos: no «Wall Street heute (…)», sino p. ej. «Wall Street über Nacht: S&P 500 +4,7 %, Nvidia +31 % | Der Tagesbericht (23. November 2026)». Se publica automáticamente y en público, sin revisión previa, como Nabd.
 El nombre del programa no puede ser «Wall Street Daily» (marca existente).
 Antes de publicar el primer vídeo, el canal debe estar verificado por teléfono (si no, las miniaturas fallan).
 
@@ -20,9 +33,9 @@ Las claves de escena son las mismas que en Nabd; solo cambia el idioma y la secc
 | 2 | **Die großen Indizes** | `s_indices`, `s_grandes`, `s_news` | ~90 s | Tabla de S&P 500, Nasdaq 100, Dow Jones y Russell 2000 (Schluss, Tag, Woche, Abstand zum Allzeithoch, Abstand zur 200-Tage-Linie, Trend); las 8 mayores del Nasdaq 100 y la aportación en puntos al Dow (calculada); por qué se movió el mercado (noticias con fuente). |
 | 3 | **Sektoren** | `s_sectores` | ~60 s | XLK, XLF, XLE, XLV, XLY, XLI: los dos mejores y los dos peores y sus posibles razones. |
 | 4 | **Fünf Aktien des Tages** | `s_accion_1`…`5` | ~120 s | Elegidas de `candidatas` (tecnico.py) por relevancia (resultados, noticia, volumen inusual), no solo por el %. Nombre, ticker, precio, %, volumen y volumen frente a su media, noticia y lectura, velas de 3 meses. Sin noticia publicada: «Keine konkrete Meldung in der Presse». Nunca se inventa. Prioriza, a igualdad, valores conocidos en Alemania (Apple, Nvidia, Tesla, Microsoft…) o con negocio en Europa. |
-| 5 | **Zinsen, Dollar, Rohstoffe** | `s_macro` | ~60 s | Bono a 10 años, DXY, VIX, WTI y oro con su línea de 15 sesiones. En vez de «el petróleo y el Golfo» de Nabd: **qué significa para Europa**: DAX (`XETR:DAX`) y Euro Stoxx 50 (`TVC:SX5E`), ya presentes en los datos, y EUR/USD (añadir `FX:EURUSD` a los datos, ver la parte 7, «Datos»). Mencionar que la sesión alemana ya cerró a las 17:30 y que el Xetra de mañana abre a las 9:00. |
+| 5 | **Zinsen, Dollar, Rohstoffe** | `s_macro` | ~60 s | Bono a 10 años, DXY, VIX, WTI y oro con su línea de 15 sesiones. En vez de «el petróleo y el Golfo» de Nabd: **qué significa para Europa**: DAX (`XETR:DAX`) y Euro Stoxx 50 (`TVC:SX5E`), ya presentes en los datos, y EUR/USD (añadir `FX:EURUSD` a los datos, ver la parte 7, «Datos»). Mencionar que el Xetra abre **hoy** a las 9:00 (el vídeo sale antes). |
 | 6 | **Charttechnik** | `s_tech_spx`, `s_tech_ndx`, `s_esc_spx`, `s_esc_ndx` | ~120 s | Velas de 6 meses, GD 20/50/200 (gleitende Durchschnitte), volumen, RSI 14, soportes/resistencias; tres escenarios (positiv, neutral, negativ) con niveles de `tecnico.escenarios`. |
-| 7 | **Was morgen ansteht** | `s_agenda` | ~60 s | Filas `[fecha ISO, evento, hora de Nueva York "HH:MM" o "", estado]`; la hora de Berlín (MEZ/MESZ) se calcula sola. |
+| 7 | **Was heute ansteht** | `s_agenda` | ~60 s | Filas `[fecha ISO, evento, hora de Nueva York "HH:MM" o "", estado]`; la hora de Berlín (MEZ/MESZ) se calcula sola. |
 | 8 | **Fazit und Telegram** | `s_fin` | ~30 s | Resumen, invitación a t.me/WallStreetAufDeutsch, aviso legal y aviso de IA. |
 
 En todas: ticker inferior (índices, macro, sectores y titulares de `video.json` → `ticker`) y subtítulos alemanes frase a frase.
@@ -45,7 +58,7 @@ sectores y macro presentes, las 5 acciones en los datos y con noticia/lectura/vo
 
 ## Datos
 Se **reutilizan los datos de Nabd** (mismos índices de EE. UU.): `datos/mercado-<fecha>.json` de la rama `datos-diario-nabd`,
-que escribe `datos-diario-Nabd.yml` a las 21:40 UTC. Si a la hora de la tarea no está, lanzar `datos-diario-Nabd.yml`
+que escribe `datos-diario-Nabd.yml` a las 21:40 UTC (por la mañana ya está). Si a la hora de la tarea no está, lanzar `datos-diario-Nabd.yml`
 (workflow_dispatch en main) y esperar; no se duplica el workflow. Si la última vela no es de hoy (festivo), no se publica nada.
 `python3 tecnico.py <mercado.json>` imprime cierres, medias, RSI, niveles, escenarios, sectores, macro, aportación al Dow,
 las 8 grandes del Nasdaq 100 y las candidatas.
@@ -72,9 +85,30 @@ las 8 grandes del Nasdaq 100 y las candidatas.
    `ge/diario/<fecha>/`, poner el `mercado.json` y reescribir `video.json`, `info.json` y `short.json` (< 59 s; fecha en la primera escena).
 4. Subir `video.json` a `claude/ge-diario-<fecha>`: `voz-GE.yml` genera la voz (2-4 min); clonar la rama `voz-ge`.
 5. `AUD=<scratch> python3 make_video.py <dir> preview` (mirar TODOS los PNG), luego `AUD=<scratch> VOZ_DIR=<voz>/<fecha> python3 make_video.py <dir>`.
-6. `AUD=<scratch> python3 make_short.py <dir>/short.json` y `python3 gen_meta.py <dir>`.
+6. `AUD=<scratch> VOZ_DIR=<voz>/<fecha> python3 make_short.py <dir>/<x>.json` para `short.json`, `short-2.json` y `short-3.json` (preview primero),
+   y `python3 gen_meta.py <dir>`.
 7. `SCRATCH=<scratch> bash encolar.sh <dir>`: encola en `cola-ge/bolsa-<fecha>` y `-short` de `youtube-cola`; `youtube-GE.yml`
    los sube (si una miniatura falla, `youtube-GE.yml` modo=miniaturas la reintenta); `telegram-GE.yml` publica el post de Telegram y `buffer-GE.yml` los de LinkedIn, X, TikTok e Instagram.
+   Los Shorts 2 y 3 quedan en `cola-ge-espera/` y salen solos a su hora (ver «Shorts extra»).
+
+## Shorts extra (desde el 24-nov-2026, Daniel aprobó 2-3 Shorts diarios del mismo guion)
+Del mismo guion y los mismos datos salen tres Shorts (< 59 s cada uno, con `make_short.py`, mismas escenas `titulo`/`cifra`/`kpis`/`fin`).
+Plantilla con ejemplo real: `ejemplo-shorts-extra/` (`short-2.json`, `short-3.json` y el bloque `shorts_extra` de `info.json`).
+
+| Short | Archivo | Sale | Contenido |
+|---|---|---|---|
+| 1 «Wall Street über Nacht» | `short.json` → `short-bolsa-<fecha>-GE.mp4` | con el vídeo (~07:00) | El de siempre: índices y tres puntos. YouTube, TikTok, Instagram y LinkedIn. |
+| 2 «Aktie des Tages» | `short-2.json` → `short-2-bolsa-<fecha>-GE.mp4` | 12:15 Berlín | La acción más llamativa de las 5 del vídeo (no repetir la del Short 1 si hay otra con noticia): qué pasó, cifras, fuente. |
+| 3 «Die Marken für heute» | `short-3.json` → `short-3-bolsa-<fecha>-GE.mp4` | 15:05 Berlín (antes de la apertura de NY, 15:30) | Resistencia, 200-Tage-Linie (o GD 50) y soporte del S&P 500 o del Nasdaq 100 de `tecnico.py`, «berechnet»; escenarios solo como condiciones («Schließt der S&P 500 über …, dann liegt er …»), nunca previsiones. Sábados: «für Montag». |
+
+- `info.json` → `shorts_extra`: `[{"n": 2, "titulo": "… #Shorts" (≤ 100), "resumen", "tiktok", "hashtags", "tags"}, {"n": 3, …}]`.
+  `gen_meta.py` escribe `meta-short<n>-<fecha>-GE.json` y `post-tiktok/instagram-short<n>-<fecha>-GE.txt` (enlazan al vídeo largo).
+- La voz: `voz-GE.yml` genera con Azure las frases de `short*.json` (sube los tres JSON a la rama `claude/ge-diario-<fecha>` junto con `video.json`).
+- `encolar.sh` deja los Shorts 2 y 3 en `cola-ge-espera/bolsa-<fecha>-short<n>/` (rama `youtube-cola`) con `publicar.txt` (hora UTC).
+  `cola-espera-GE.yml` (cada 20 min de 09 a 16 UTC) los pasa a `cola-ge/` a su hora, lanza `youtube-GE.yml` y luego `buffer-GE.yml`
+  (TikTok e Instagram; sin LinkedIn ni X para no saturar). Con más de 8 h de retraso no se publican (`caducado.txt`).
+- Límite de YouTube (~10 subidas/24 h): el diario usa 4 (vídeo + 3 Shorts), el DAX 1 y la serie de las 20 grandes hasta 3.
+  Si un día no cabe, `cola-espera-GE.yml` espera; si hace falta recortar, se omite el Short 3 (no hagas `short-3.json`).
 
 ## Reglas (Alemania / UE)
 - Nada de comprar/vender, precio objetivo ni «günstig/teuer». Análisis técnico como datos. Cada cifra con fuente; cálculos propios «(berechnet)».
