@@ -32,7 +32,7 @@
     ],
     [
      "Fecha de pago",
-     "El día en que el dinero llega a la cuenta: en España, normalmente dos días hábiles después de la fecha ex."
+     "Cuando llega el dinero: en España, normalmente dos días hábiles después de la fecha ex."
     ],
     [
      "A cuenta y complementario",
@@ -44,7 +44,7 @@
     ],
     [
      "Retención",
-     "A los residentes en España se les retiene un 19 % del dividendo, a cuenta del IRPF."
+     "A los residentes en España se les retiene un 19 % (IRPF)."
     ]
    ],
    "voz": "Antes del calendario, cinco ideas. La fecha ex es el día desde el que la acción cotiza sin el derecho a ese dividendo: para cobrarlo hay que ser accionista al cierre de la sesión anterior. La fecha de pago es cuando el dinero llega a la cuenta; en España, normalmente dos días hábiles después de la fecha ex. Muchas empresas adelantan parte del dividendo del año, el dividendo a cuenta, y pagan el resto tras la junta, el complementario. Algunas, como Iberdrola, dejan elegir entre efectivo o acciones nuevas. Y a los residentes en España se les retiene un 19 % a cuenta del IRPF."
@@ -63,11 +63,11 @@
     "Qué es"
    ],
    "anchos": [
-    0.16,
-    0.18,
+    0.14,
+    0.17,
     0.13,
     0.12,
-    0.41
+    0.44
    ],
    "filas": [
     [
@@ -107,7 +107,7 @@
     ]
    ],
    "nota": "* Fecha ex calculada por AIAcciones (dos días hábiles antes del pago): la empresa no la publicó",
-   "fuente": "Fuentes: Grifols (CNMV y SEC, 2-nov-2026), IAG (CNMV, 5-nov-2026), Fluidra (junta del 6-may-2026), Unicaja (resultados 9M, 30-oct-2026), Banco Sabadell (resultados 9M, 29-oct-2026)",
+   "fuente": "Fuentes: Grifols (CNMV, 2-nov), IAG (CNMV, 5-nov), Fluidra (junta 6-may), Unicaja (30-oct) y Sabadell (29-oct), 2026",
    "voz": "Diciembre trae cinco. Grifols paga 0,15 euros por acción a cuenta de 2026, con fecha ex el 2 de diciembre y pago el 4. IAG, 0,053 euros, un 10 % más que el anterior a cuenta, con fecha ex el 3 y pago el 7. Fluidra, 0,33 euros, el segundo pago con cargo a 2025, que se cobra el 10 de diciembre. Unicaja, 0,0642 euros, el segundo a cuenta de 2026, que se paga el 17. Y Sabadell, 0,07 euros a cuenta de 2026, con pago el 29 de diciembre. Ojo: en Grifols, Fluidra, Unicaja y Sabadell la empresa solo publicó el día de pago, así que la fecha ex que ves es un cálculo nuestro."
   },
   {
@@ -124,11 +124,11 @@
     "Qué es"
    ],
    "anchos": [
-    0.16,
-    0.18,
-    0.13,
     0.14,
-    0.39
+    0.17,
+    0.12,
+    0.11,
+    0.46
    ],
    "filas": [
     [
@@ -143,7 +143,7 @@
      "0,275 €",
      "12-ene",
      "1-feb",
-     "A cuenta de 2026 (+8,7 %): efectivo o acciones"
+     "A cuenta de 2026 (+8,7 %), elegible en acciones"
     ],
     [
      "Sacyr",
@@ -168,7 +168,7 @@
     ]
    ],
    "nota": "* Fecha ex calculada por AIAcciones. «Sin fijar»: la empresa solo dio el mes",
-   "fuente": "Fuentes: Redeia (CNMV, 28-oct-2026), Iberdrola (CNMV, 21-oct-2026), Sacyr (junta del 4-jun-2026), Repsol (resultados 3T, 29-oct-2026), Telefónica (resultados 3T, 12-nov-2026)",
+   "fuente": "Fuentes: Redeia (CNMV, 28-oct), Iberdrola (CNMV, 21-oct), Sacyr (junta 4-jun), Repsol (29-oct) y Telefónica (12-nov), 2026",
    "voz": "Y en 2027, otros cinco. Redeia paga 0,204 euros a cuenta de 2026, un 2 % más, el 7 de enero. Iberdrola, 0,275 euros, un 8,7 % más, con fecha ex el 12 de enero y pago el 1 de febrero, y deja elegir entre efectivo y acciones nuevas. Sacyr pagará 0,05 euros en enero. Repsol, 0,56 euros en enero: 0,53 de reservas y 0,03 a cuenta de 2026. Y Telefónica, 0,15 euros en junio de 2027. En estos tres últimos, la empresa solo ha dado el mes."
   },
   {
@@ -221,7 +221,7 @@
    ],
    "formato": "{:.2f} %",
    "color": "acc2",
-   "nota": "Cálculo: importe del pago entre el cierre del 23-nov-2026 (calculado). Es un solo pago, no el dividendo de todo el año",
+   "nota": "Importe del pago entre el cierre del 23-nov-2026 (calculado). Un solo pago, no el dividendo anual",
    "fuente": "Cotizaciones: TradingView (cierre del 23-nov-2026) · importes: comunicaciones de cada empresa · porcentajes: calculado",
    "voz": "¿Cuánto supone cada pago frente al precio de la acción? Lo hemos calculado dividiendo el importe entre el cierre del 23 de noviembre. Telefónica, 4,52 %; Repsol, 2,01 %; Unicaja, 1,95 %, y Sabadell, 1,94 %. En el otro extremo, IAG, con un 0,98 %. Importante: es un solo pago, no el dividendo de todo el año, y la cotización cambia cada día, así que el porcentaje también."
   },
@@ -291,7 +291,7 @@
    "puntos": [
     "7-ene: Redeia, 0,204 €",
     "12-ene: Iberdrola, 0,275 €",
-    "Enero: Repsol 0,56 € y Sacyr 0,05 €",
+    "Enero: Repsol y Sacyr",
     "Junio: Telefónica, 0,15 €"
    ],
    "voz": "En 2027: Redeia, 0,204 euros, que se paga el 7 de enero; Iberdrola, 0,275 euros, con fecha ex el 12; Repsol y Sacyr, en enero, y Telefónica, en junio."
@@ -328,7 +328,7 @@
    "dividendo Telefónica",
    "dividendo Sabadell"
   ],
-  "x": "Dividendos del IBEX 35 anunciados, con fecha ex por delante:\n• Dic: Grifols 0,15 €, IAG 0,053 €, Fluidra 0,33 €, Unicaja 0,0642 €, Sabadell 0,07 €\n• 2027: Redeia 0,204 €, Iberdrola 0,275 €, Sacyr 0,05 €, Repsol 0,56 €, Telefónica 0,15 €",
+  "x": "10 dividendos del IBEX 35 ya anunciados:\n• Dic: Grifols 0,15 €, IAG 0,053 €, Fluidra 0,33 €, Unicaja, Sabadell\n• 2027: Redeia 0,204 €, Iberdrola 0,275 €, Repsol 0,56 €, Sacyr, Telefónica 0,15 €",
   "tiktok": "Los dividendos del IBEX 35 ya anunciados de aquí a junio de 2027: Grifols, IAG, Fluidra, Unicaja y Sabadell en diciembre; Redeia, Iberdrola, Repsol y Sacyr en enero, y Telefónica en junio. Con importes y fechas.",
   "linkedin": {
    "datos": [

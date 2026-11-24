@@ -66,7 +66,7 @@ f.text(0.04, 0.90, th["etiqueta"].upper(), color=BG, fontsize=30, weight="bold",
 tl = textwrap.wrap(th["titulo"], 18)[:2]
 f.text(0.04, 0.60, "\n".join(tl), color=FG, fontsize=60 if max(map(len, tl)) <= 14 else 50, weight="bold", va="center", linespacing=1.05)
 f.text(0.04, 0.10, th["cifra"], color=col(th.get("color", "acc")), fontsize=150 if len(th["cifra"]) <= 7 else 110, weight="bold")
-if th.get("sub"): f.text(0.04, 0.40, th["sub"], color=MUTED, fontsize=34, weight="bold")
+if th.get("sub"): f.text(0.04, 0.40 if len(tl) == 1 else 0.355, th["sub"], color=MUTED, fontsize=34, weight="bold")
 p = f"{D}/miniatura-{BASE}.png"; f.savefig(p, dpi=100, facecolor=BG); plt.close(f); con_logo(p)
 if th.get("gancho_b"):
     f = fig(1280, 720)

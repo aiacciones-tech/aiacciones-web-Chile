@@ -1,0 +1,439 @@
+{
+ "base": "bancos-ibex-9m-2026",
+ "formato": "fijo",
+ "etiqueta": "Guías de bolsa española",
+ "simbolo": "BME:IBC",
+ "ticker": "IBEX 35",
+ "nombre": "IBEX 35",
+ "tema": "Los bancos del IBEX 35",
+ "velas_n": 300,
+ "ultima_vela": "2026-11-23",
+ "decimales": 1,
+ "escenas": [
+  {
+   "id": "intro",
+   "tipo": "portada",
+   "capitulo": "La respuesta corta",
+   "kicker": "Comparados con sus resultados hasta septiembre de 2026",
+   "respuesta": "Santander, el que más gana (12.405 M€); BBVA, el más rentable (ROTE del 22 %)",
+   "sub": "Santander, BBVA, CaixaBank, Sabadell, Bankinter y Unicaja",
+   "voz": "De los seis bancos del IBEX 35, Santander es el que más gana: 12.405 millones de euros hasta septiembre de 2026. Pero el más rentable sobre su capital es BBVA, con un ROTE del 22 %. Comparamos los seis, con las cifras de sus resultados de nueve meses: beneficio, rentabilidad, eficiencia, morosidad, capital, dividendo y bolsa. Es contenido informativo, no una recomendación de inversión."
+  },
+  {
+   "id": "beneficio",
+   "tipo": "tabla",
+   "capitulo": "Cuánto ganan",
+   "kicker": "Beneficio de enero a septiembre de 2026",
+   "titulo": "Cuánto ganó cada banco en nueve meses",
+   "columnas": [
+    "Banco",
+    "Beneficio 9M 2026",
+    "Variación",
+    "A tener en cuenta"
+   ],
+   "anchos": [
+    0.16,
+    0.2,
+    0.13,
+    0.51
+   ],
+   "filas": [
+    [
+     "Santander",
+     "12.405 M€",
+     "+20 %",
+     "Contable; el ordinario, 11.176 M€ (+16 %)"
+    ],
+    [
+     "BBVA",
+     "9.066 M€",
+     "+13,6 %",
+     "Récord; +11,4 % a tipos de cambio constantes"
+    ],
+    [
+     "CaixaBank",
+     "4.962 M€",
+     "+12,9 %",
+     "Tercer trimestre: 1.759 M€ (+21,7 %)"
+    ],
+    [
+     "Sabadell",
+     "1.376 M€",
+     "−1 %",
+     "Por la venta de TSB; sin TSB, +13 %"
+    ],
+    [
+     "Bankinter",
+     "901 M€",
+     "+11 %",
+     "Margen de intereses récord"
+    ],
+    [
+     "Unicaja",
+     "543 M€",
+     "+8,1 %",
+     "Tercer trimestre: 182 M€ (+10,3 %)"
+    ]
+   ],
+   "destacar": 0,
+   "fuente": "Fuentes: notas de resultados de 9M 2026 de cada banco (Santander 28-oct, BBVA 29-oct, CaixaBank 30-oct, Sabadell 29-oct, Bankinter 22-oct, Unicaja 30-oct) y prensa",
+   "voz": "Empecemos por el beneficio de enero a septiembre. Santander ganó 12.405 millones, un 20 % más, aunque esa cifra incluye la plusvalía por la venta de su filial polaca: su beneficio ordinario fue de 11.176 millones, un 16 % más. BBVA ganó 9.066 millones, un 13,6 % más, récord. CaixaBank, 4.962 millones, un 12,9 % más. Sabadell, 1.376 millones, un 1 % menos por la venta de TSB; sin TSB, habría crecido un 13 %. Bankinter ganó 901 millones, un 11 % más, y Unicaja, 543, un 8,1 % más."
+  },
+  {
+   "id": "rote",
+   "tipo": "barras",
+   "capitulo": "Rentabilidad: el ROTE",
+   "kicker": "Rentabilidad sobre fondos propios tangibles (ROTE), 9M 2026",
+   "titulo": "BBVA y Bankinter, por encima del 20 %",
+   "barras": [
+    [
+     "BBVA",
+     22.0
+    ],
+    [
+     "Bankinter",
+     20.4
+    ],
+    [
+     "CaixaBank",
+     18.8
+    ],
+    [
+     "Santander",
+     16.0
+    ],
+    [
+     "Sabadell",
+     14.2
+    ],
+    [
+     "Unicaja",
+     10.3
+    ]
+   ],
+   "formato": "{:.1f} %",
+   "color": "acc2",
+   "destacar": "BBVA",
+   "color_destacado": "acc",
+   "nota": "Santander: ROTE ordinario · Sabadell: ROTE recurrente · Unicaja: 12,2 % ajustado por exceso de capital",
+   "fuente": "Fuentes: notas de resultados de 9M 2026 de cada banco (Santander 28-oct, BBVA 29-oct, CaixaBank 30-oct, Sabadell 29-oct, Bankinter 22-oct, Unicaja 30-oct) y prensa",
+   "voz": "La primera medida de calidad es el ROTE: el beneficio frente a los fondos propios tangibles, es decir, cuánto gana el banco por cada euro de capital de los accionistas. BBVA lidera con un 22 %, seguido de Bankinter, con un 20,4 %, y CaixaBank, con un 18,8 %. Santander tiene un ROTE ordinario del 16 %; Sabadell, un recurrente del 14,2 %, y Unicaja, del 10,3 %, que sube al 12,2 % si se ajusta por su exceso de capital."
+  },
+  {
+   "id": "eficiencia",
+   "tipo": "barras",
+   "capitulo": "Eficiencia",
+   "kicker": "Ratio de eficiencia, 9M 2026 (gastos entre ingresos: cuanto más bajo, mejor)",
+   "titulo": "Bankinter, el más eficiente",
+   "barras": [
+    [
+     "Bankinter",
+     34.8
+    ],
+    [
+     "BBVA",
+     37.9
+    ],
+    [
+     "CaixaBank",
+     39.4
+    ],
+    [
+     "Santander",
+     42.6
+    ],
+    [
+     "Unicaja",
+     45.8
+    ],
+    [
+     "Sabadell",
+     47.6
+    ]
+   ],
+   "formato": "{:.1f} %",
+   "color": "acc2",
+   "destacar": "Bankinter",
+   "color_destacado": "acc",
+   "nota": "Sabadell: cálculo propio (calculado), sin TSB",
+   "fuente": "Fuentes: notas de resultados de 9M 2026 de cada banco (Santander 28-oct, BBVA 29-oct, CaixaBank 30-oct, Sabadell 29-oct, Bankinter 22-oct, Unicaja 30-oct) y prensa",
+   "voz": "La segunda es la eficiencia: los gastos divididos entre los ingresos. Aquí, cuanto más bajo, mejor. Bankinter es el más eficiente: gasta 34,8 euros por cada 100 que ingresa. Le siguen BBVA, con un 37,9 %, y CaixaBank, con un 39,4 %. Santander está en el 42,6 % y Unicaja en el 45,8 %. Sabadell, en torno al 47,6 %, según nuestro cálculo sin TSB."
+  },
+  {
+   "id": "riesgo",
+   "tipo": "tabla",
+   "capitulo": "Morosidad y capital",
+   "kicker": "Riesgo y solvencia a septiembre de 2026",
+   "titulo": "Morosidad, cobertura y capital",
+   "columnas": [
+    "Banco",
+    "Morosidad",
+    "Cobertura",
+    "Capital CET1"
+   ],
+   "anchos": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+   ],
+   "filas": [
+    [
+     "Santander",
+     "2,90 %",
+     "64 %",
+     "12,7 %"
+    ],
+    [
+     "BBVA",
+     "2,6 %",
+     "84 %",
+     "12,21 %"
+    ],
+    [
+     "CaixaBank",
+     "1,76 %",
+     "82 %",
+     "12,5 %"
+    ],
+    [
+     "Sabadell",
+     "2,40 %",
+     "70,1 %",
+     "13,12 %"
+    ],
+    [
+     "Bankinter",
+     "1,84 %",
+     "66,8 %",
+     "13,2 %"
+    ],
+    [
+     "Unicaja",
+     "1,8 %",
+     "84,6 %",
+     "15,4 % (fully loaded)"
+    ]
+   ],
+   "fuente": "Fuentes: notas de resultados de 9M 2026 de cada banco (Santander 28-oct, BBVA 29-oct, CaixaBank 30-oct, Sabadell 29-oct, Bankinter 22-oct, Unicaja 30-oct) y prensa",
+   "voz": "Ahora, el riesgo. La morosidad es el porcentaje de préstamos que no se están pagando: la más baja es la de CaixaBank, un 1,76 %, seguida de Unicaja y Bankinter, en torno al 1,8 %. La más alta, la de Santander, un 2,90 %, por su negocio fuera de España. La cobertura indica qué parte de esa morosidad ya está provisionada: Unicaja, BBVA y CaixaBank superan el 80 %. Y el CET1 mide el capital de máxima calidad: va del 12,21 % de BBVA al 15,4 % de Unicaja."
+  },
+  {
+   "id": "dividendo",
+   "tipo": "tabla",
+   "capitulo": "Dividendos",
+   "kicker": "Último dividendo a cuenta anunciado",
+   "titulo": "Lo que han repartido a cuenta de 2026",
+   "columnas": [
+    "Banco",
+    "Dividendo a cuenta",
+    "Pago",
+    "Además"
+   ],
+   "anchos": [
+    0.18,
+    0.24,
+    0.18,
+    0.4
+   ],
+   "filas": [
+    [
+     "Santander",
+     "0,127 € (+10 %)",
+     "2-nov-2026",
+     "Recompra de unos 1.800 M€"
+    ],
+    [
+     "BBVA",
+     "0,37 € (+16 %)",
+     "15-oct-2026",
+     "Recompra de 2.000 M€ en dos tramos"
+    ],
+    [
+     "CaixaBank",
+     "0,1844 €",
+     "6-nov-2026",
+     "Recompra de 500 M€"
+    ],
+    [
+     "Sabadell",
+     "0,07 €",
+     "29-dic-2026",
+     "325 M€ en total"
+    ],
+    [
+     "Unicaja",
+     "0,0642 € (2.º)",
+     "17-dic-2026",
+     "0,1486 € a cuenta en 2026"
+    ]
+   ],
+   "nota": "Bankinter: sin dato de su próximo dividendo en nuestras fuentes de resultados",
+   "fuente": "Fuentes: notas de resultados de 9M 2026 de cada banco (Santander 28-oct, BBVA 29-oct, CaixaBank 30-oct, Sabadell 29-oct, Bankinter 22-oct, Unicaja 30-oct) y prensa",
+   "voz": "En dividendos, Santander pagó el 2 de noviembre 0,127 euros a cuenta, un 10 % más, y tiene una recompra de unos 1.800 millones. BBVA pagó 0,37 euros el 15 de octubre, un 16 % más, con una recompra de 2.000 millones en dos tramos. CaixaBank, 0,1844 euros el 6 de noviembre. Sabadell pagará 0,07 euros el 29 de diciembre, y Unicaja, su segundo a cuenta de 0,0642 euros el 17 de diciembre. De Bankinter no tenemos todavía el dato de su próximo pago."
+  },
+  {
+   "id": "bolsa",
+   "tipo": "barras",
+   "capitulo": "En bolsa en 2026",
+   "kicker": "Variación en bolsa en 2026, hasta el cierre del 23 de noviembre",
+   "titulo": "Unicaja, la que más sube en el año",
+   "barras": [
+    [
+     "Unicaja",
+     19.06
+    ],
+    [
+     "BBVA",
+     12.78
+    ],
+    [
+     "CaixaBank",
+     11.25
+    ],
+    [
+     "IBEX 35",
+     10.89
+    ],
+    [
+     "Sabadell",
+     7.25
+    ],
+    [
+     "Santander",
+     5.21
+    ],
+    [
+     "Bankinter",
+     -1.73
+    ]
+   ],
+   "formato": "{:.1f} %",
+   "color": "acc2",
+   "destacar": "IBEX 35",
+   "color_destacado": "neg",
+   "nota": "Variación del precio, sin dividendos",
+   "fuente": "Fuente: TradingView (variación en el año hasta el cierre del 23-nov-2026)",
+   "voz": "¿Y en bolsa? En lo que va de 2026, hasta el 23 de noviembre, Unicaja sube un 19,1 %, BBVA un 12,8 % y CaixaBank un 11,2 %, por encima del 10,9 % del IBEX 35. Sabadell sube un 7,3 % y Santander un 5,2 %, mientras que Bankinter cae un 1,7 %. Es la variación del precio, sin contar los dividendos, y el pasado no anticipa lo que pasará."
+  },
+  {
+   "id": "fin",
+   "tipo": "fin",
+   "capitulo": "Resumen",
+   "claves": [
+    "Más beneficio: Santander, 12.405 M€ en nueve meses",
+    "Más rentable: BBVA, ROTE del 22 %",
+    "Más eficiente: Bankinter, 34,8 %",
+    "Menos morosidad: CaixaBank, 1,76 %"
+   ],
+   "voz": "En resumen: Santander es el que más gana, BBVA el más rentable sobre su capital, Bankinter el más eficiente y CaixaBank el de menor morosidad. Cada banco tiene su perfil, y ninguna cifra sola cuenta toda la historia. Los resultados anuales están previstos entre finales de enero y principios de febrero de 2027. Suscríbete para seguir el IBEX 35 cada día de bolsa."
+  }
+ ],
+ "short": [
+  {
+   "id": "s_titulo",
+   "tipo": "titulo",
+   "pregunta": "¿Cuál gana más?",
+   "sub": "Los 6 bancos del IBEX 35",
+   "voz": "Los seis bancos del IBEX 35, comparados en menos de un minuto, con sus resultados hasta septiembre."
+  },
+  {
+   "id": "s_cifras",
+   "tipo": "cifras",
+   "titulo": "Los récords de nueve meses",
+   "cifras": [
+    [
+     "12.405 M€",
+     "Santander, el que más gana",
+     "acc"
+    ],
+    [
+     "22 %",
+     "BBVA, el ROTE más alto",
+     "acc2"
+    ],
+    [
+     "34,8 %",
+     "Bankinter, el más eficiente",
+     "neg"
+    ]
+   ],
+   "voz": "Santander es el que más gana: 12.405 millones hasta septiembre. BBVA, el más rentable sobre su capital, con un ROTE del 22 %. Y Bankinter, el más eficiente: gasta 34,8 euros por cada 100 que ingresa."
+  },
+  {
+   "id": "s_mas",
+   "tipo": "puntos",
+   "titulo": "Y además",
+   "puntos": [
+    "Menos morosidad: CaixaBank, 1,76 %",
+    "Más capital: Unicaja, CET1 15,4 %",
+    "Más subida en 2026: Unicaja, +19,1 %"
+   ],
+   "voz": "CaixaBank tiene la morosidad más baja, un 1,76 %. Unicaja, el mayor colchón de capital y la mayor subida en bolsa en 2026, un 19,1 % hasta el 23 de noviembre."
+  },
+  {
+   "id": "s_fin",
+   "tipo": "fin",
+   "voz": "La comparativa completa, con dividendos, en el vídeo de nuestro canal. Contenido informativo, no es una recomendación."
+  }
+ ],
+ "info": {
+  "titulo": "Los 6 bancos del IBEX 35 comparados: beneficio, ROTE, eficiencia, morosidad y dividendo (9M 2026)",
+  "titulo_b": "¿Qué banco del IBEX 35 gana más y cuál es más rentable? Santander, BBVA, CaixaBank y más",
+  "titulo_short": "Los bancos del IBEX 35 comparados en 1 minuto #Shorts",
+  "resumen": "Comparamos los seis bancos del IBEX 35 (Santander, BBVA, CaixaBank, Sabadell, Bankinter y Unicaja) con sus resultados de enero a septiembre de 2026: beneficio y crecimiento, rentabilidad sobre fondos propios tangibles (ROTE), eficiencia, morosidad, cobertura, capital CET1, último dividendo a cuenta y evolución en bolsa en 2026. Con explicación de cada ratio y la fuente de cada cifra.",
+  "elaborado": "24 de noviembre de 2026",
+  "fuentes": "notas de resultados de nueve meses de 2026 de Banco Santander (28-oct), BBVA (29-oct), CaixaBank (30-oct), Banco Sabadell (29-oct), Bankinter (22-oct) y Unicaja (30-oct), contrastadas con prensa (Europa Press, EFE, Infobae, Bolsamanía, Reuters, Investing.com); bolsa: TradingView hasta el cierre del 23-nov-2026; eficiencia de Sabadell: calculado",
+  "enlaces": [
+   [
+    "Ficha de Santander",
+    "https://aiacciones.es/empresas/santander/"
+   ],
+   [
+    "Ficha de Sabadell",
+    "https://aiacciones.es/empresas/sabadell/"
+   ],
+   [
+    "Ficha de Bankinter",
+    "https://aiacciones.es/empresas/bankinter/"
+   ],
+   [
+    "Calendario de dividendos",
+    "https://aiacciones.es/dividendos/"
+   ]
+  ],
+  "hashtags": "#Bancos #IBEX35 #Santander #BBVA #CaixaBank #BolsaEspañola",
+  "hashtags_short": "#Bancos #IBEX35 #Santander #BBVA #Shorts",
+  "tags": [
+   "bancos IBEX 35",
+   "bancos españoles comparativa",
+   "Santander BBVA CaixaBank",
+   "ROTE bancos",
+   "eficiencia bancos",
+   "morosidad bancos",
+   "Sabadell",
+   "Bankinter",
+   "Unicaja",
+   "resultados bancos 2026"
+  ],
+  "x": "Los 6 bancos del IBEX 35, hasta septiembre de 2026:\n• Más beneficio: Santander, 12.405 M€\n• Más rentable: BBVA, ROTE 22 %\n• Más eficiente: Bankinter, 34,8 %\n• Menos morosidad: CaixaBank, 1,76 %",
+  "tiktok": "Los seis bancos del IBEX 35 comparados con sus resultados hasta septiembre de 2026: quién gana más, quién es más rentable, el más eficiente, el de menor morosidad y el que más sube en bolsa en 2026.",
+  "linkedin": {
+   "datos": [
+    "Beneficio de enero a septiembre de 2026: Santander 12.405 M€ (+20 %; ordinario 11.176 M€), BBVA 9.066 M€ (+13,6 %), CaixaBank 4.962 M€ (+12,9 %), Sabadell 1.376 M€ (−1 %, por la venta de TSB), Bankinter 901 M€ (+11 %) y Unicaja 543 M€ (+8,1 %).",
+    "Rentabilidad (ROTE): BBVA 22 %, Bankinter 20,4 %, CaixaBank 18,8 %, Santander 16 % (ordinario), Sabadell 14,2 % (recurrente) y Unicaja 10,3 %.",
+    "Eficiencia: Bankinter 34,8 %, BBVA 37,9 % y CaixaBank 39,4 %. Morosidad más baja: CaixaBank, 1,76 %. Mayor capital CET1: Unicaja, 15,4 %.",
+    "En bolsa en 2026 (hasta el 23-nov, TradingView): Unicaja +19,1 %, BBVA +12,8 %, CaixaBank +11,2 %, IBEX 35 +10,9 %, Sabadell +7,3 %, Santander +5,2 % y Bankinter −1,7 %."
+   ],
+   "conclusion": "Cada banco destaca en algo distinto: Santander por tamaño, BBVA por rentabilidad, Bankinter por eficiencia y CaixaBank por calidad del crédito. Los resultados anuales están previstos entre finales de enero y principios de febrero de 2027 (fechas estimadas)."
+  }
+ },
+ "miniatura": {
+  "etiqueta": "Comparativa",
+  "titulo": "Los bancos del IBEX 35",
+  "cifra": "ROTE 22 %",
+  "color": "acc",
+  "sub": "BBVA, el más rentable · 9M 2026",
+  "gancho_b": "¿Qué banco gana más?"
+ }
+}
