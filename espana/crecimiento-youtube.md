@@ -72,3 +72,11 @@ Si sale `redirect_uri_mismatch`, añade `https://developers.google.com/oauthplay
 
 ## Revisión semanal (recomendación 12, aún no activada)
 Meta: CTR > 5 % y buena retención en los primeros 30 s. Con el token de Analytics se puede automatizar como en Arabia Saudita.
+
+## Vídeos fijos (4) y directo semanal (7): cómo se hacen (24-nov-2026)
+- **Vídeos fijos** (`espana/fijos/<base>/video.json`, `"formato": "fijo"`): las mismas herramientas de la serie educativa
+  (`make_leccion.py`, `make_short_leccion.py`, con escenas nuevas `cifras`, `tabla` y `barras`), después `espana/fijos/meta_fijo.py <carpeta>`
+  y `SCRATCH=… bash espana/fijos/encolar_fijo.sh <carpeta>` (cola `cola-es/fijo-<base>`; lista «Guías de la bolsa española»).
+  Toda cifra con fuente en pantalla; los cálculos propios, «calculado». Ejemplo: `espana/fijos/inditex-resultados-9m-2026/`.
+- **Directo de los viernes 17:45** («El IBEX de la semana, en directo»): lo emite Daniel; diapositivas y guion con `espana/directo/`
+  (instrucciones en `espana/directo/CLAUDE.md`).
