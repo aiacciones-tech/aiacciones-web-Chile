@@ -29,6 +29,7 @@ for p in x threads facebook telegram; do cp $B/post-$p-$BASE-saudi.txt $CS/post-
 cp $B/directo-$BASE-saudi.json $CS/directo.json
 git add cola-sa; git commit -qm "Cola Arabia Saudita: directo $BASE"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done
+gh workflow run directo-saudi.yml --repo aiacciones-tech/aiacciones-web-Chile --ref main -f modo=ciclo || echo "no se pudo lanzar el workflow: lo recoge el cron (cada 30 min)"
 for i in $(seq 40); do git pull -q origin youtube-cola 2>/dev/null; [ -f $CS/resultado.json ] && break; sleep 15; done
 test -f $CS/resultado.json || { echo "la emisión todavía no está creada: mira el run de 'Directos (Arabia Saudita)' en Actions"; exit 1; }
 V=$(python3 -c "import json;print(json.load(open('$CS/resultado.json'))['videoId'])")

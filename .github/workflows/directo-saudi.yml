@@ -1,5 +1,5 @@
 # Directos en momentos clave de Saudi Arabia AI Stocks (Fed, OPEP+, presupuesto, resultados anuales grandes). Ver saudi/directos/CLAUDE.md.
-# 1) Al subir cola-sa/directo-<base>/directo.json a la rama youtube-cola: crea la emisión programada en YouTube (página "Próximamente",
+# 1) Al encolar cola-sa/directo-<base>/ en youtube-cola (encolar.sh lanza este workflow) o en el cron: crea la emisión programada en YouTube (página "Próximamente",
 #    chat, miniatura) y escribe resultado.json, así Buffer y Telegram anuncian el directo con su enlace (se lanzan desde aquí).
 # 2) Si el directo empieza en menos de 5,5 h (o cuando el cron lo encuentre dentro de esa ventana), espera a la hora y lo emite con ffmpeg.
 # "Run workflow" con modo=verificar prueba el permiso del token y si el canal ya puede emitir en directo.
@@ -8,8 +8,10 @@ name: Directos (Arabia Saudita)
 concurrency: directo-saudi
 on:
   push:
-    branches: [youtube-cola, "claude/directo-saudi*"]
-    paths: ['cola-sa/directo-*/directo.json', '.github/workflows/directo-saudi.yml', 'scripts/directo-saudi.py']
+    # solo para probar cambios del propio workflow (corre verificar); youtube-cola no tiene copia de este archivo,
+    # así que encolar.sh lanza el ciclo a mano (gh workflow run directo-saudi.yml --ref main -f modo=ciclo) y el cron lo repite cada 30 min
+    branches: ["claude/directo-saudi*"]
+    paths: ['.github/workflows/directo-saudi.yml', 'scripts/directo-saudi.py']
   schedule:
     - cron: "7,37 * * * *"
   workflow_dispatch:
