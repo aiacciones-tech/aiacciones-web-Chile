@@ -9,6 +9,7 @@ Junta lo que se puede leer de cada red y escribe un informe en español (Markdow
             (impresiones, me gusta, comentarios, compartidos, vistas...) si el plan de Buffer las da.
   Telegram  suscriptores del canal (el bot tiene que ser administrador).
 Guarda una foto de los números (snapshot-saudi.json) para comparar con la semana anterior.
+Incluye la sección "Impacto de las mejoras" (A/B, playlists, evergreen, directos), que está en scripts/impacto_saudi.py.
 
   python3 scripts/estadisticas-saudi.py <carpeta-salida>
 
@@ -18,11 +19,14 @@ Variables de entorno (todas opcionales; lo que falte sale como "sin acceso" en e
   TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL                bot y canal de Telegram
   YT_CANAL_SA   ID del canal (UC...), para el feed público si el token no puede leer el canal
   DIAS          días que cubre el informe (por defecto 7)
+  AB_DIR        carpeta con cola-sa/<slug>/ab-estado.json de la rama youtube-cola (pruebas A/B)
 Solo usa la biblioteca estándar de Python.
 """
 import json, os, re, sys, urllib.parse, urllib.request
 from datetime import datetime, timedelta, timezone
 from xml.etree import ElementTree
+
+import impacto_saudi
 
 CANAL_HANDLE = "@SaudiArabiaAIStocks"
 CANAL_ID = os.environ.get("YT_CANAL_SA") or "UC96vi2MiZS7PND6f7zQb0ow"
@@ -104,7 +108,7 @@ def youtube_api(t):
             break
     videos = []
     for i in range(0, len(ids), 50):
-        r = pedir_json(f"{api}/videos?part=snippet,statistics,contentDetails,status&id={','.join(ids[i:i+50])}",
+        r = pedir_json(f"{api}/videos?part=snippet,statistics,contentDetails,status,liveStreamingDetails&id={','.join(ids[i:i+50])}",
                        headers=cab)
         for v in r.get("items", []):
             s = v.get("statistics", {})
@@ -112,6 +116,7 @@ def youtube_api(t):
                            "fecha": v["snippet"]["publishedAt"],
                            "short": duracion(v["contentDetails"].get("duration")) <= 180,
                            "privacidad": v.get("status", {}).get("privacyStatus"),
+                           "directo": "liveStreamingDetails" in v,
                            "vistas": int(s.get("viewCount", 0)), "megusta": int(s.get("likeCount", 0)),
                            "comentarios": int(s.get("commentCount", 0))})
     return {"fuente": "api", "canal_id": canal["id"], "nombre": canal["snippet"]["title"],
@@ -198,6 +203,7 @@ def youtube():
                      "suscriptores ganados por semana.")
     datos["permisos"] = sorted(p.rsplit("/", 1)[-1] for p in permisos)
     datos["notas"] = notas
+    datos["_token"], datos["_permisos"] = t, permisos
     return datos
 
 
@@ -287,7 +293,7 @@ def telegram():
 
 # ---------- Informe ----------
 
-def informe(yt, bf, tg, antes):
+def informe(yt, bf, tg, antes, imp=None):
     fecha = AHORA.date().isoformat()
     a_yt = antes.get("youtube", {})
     vistas_antes = a_yt.get("videos", {})
@@ -310,6 +316,16 @@ def informe(yt, bf, tg, antes):
         L.append(f"| {red} | — | {len(r['posts'])} posts" + (f" · {extra}" if extra else "") + " |")
     L.append(f"| Telegram | {num(tg['suscriptores'])}{delta(tg['suscriptores'], antes.get('telegram'))} | — |")
     L.append("")
+
+    # Impacto de las mejoras (scripts/impacto_saudi.py)
+    fila = None
+    if imp is not None:
+        try:
+            lineas, fila = impacto_saudi.seccion(yt, imp, antes, vistas_sem)
+            L += lineas
+        except Exception as e:  # que un fallo aquí no tumbe el resto del informe
+            L += ["## Impacto de las mejoras", "", f"> No se pudo armar esta sección: {e}", ""]
+    informe.fila_impacto = fila
 
     # YouTube
     L += ["## YouTube", ""]
@@ -382,12 +398,22 @@ def main():
     foto = os.path.join(salida, "snapshot-saudi.json")
     antes = json.load(open(foto, encoding="utf-8")) if os.path.exists(foto) else {}
     yt, bf, tg = youtube(), buffer(), telegram()
-    texto = informe(yt, bf, tg, antes)
+    try:
+        imp = impacto_saudi.recoger(yt, yt.get("_token"), yt.get("_permisos") or set(), pedir, pedir_json, AHORA, DIAS)
+    except Exception as e:
+        imp = None
+        print(f"Impacto: {e}", file=sys.stderr)
+    texto = informe(yt, bf, tg, antes, imp)
+    hist = [h for h in antes.get("historial_impacto", []) if h.get("fecha") != (informe.fila_impacto or {}).get("fecha")]
+    if informe.fila_impacto:
+        hist.append(informe.fila_impacto)
     nombre = os.path.join(salida, f"informe-{AHORA.date().isoformat()}-saudi.md")
     open(nombre, "w", encoding="utf-8").write(texto)
     json.dump({"fecha": AHORA.date().isoformat(),
                "youtube": {"suscriptores": yt["suscriptores"], "vistas": yt["vistas"],
-                           "videos": {v["id"]: v["vistas"] for v in yt["videos"]}},
+                           "videos": {v["id"]: v["vistas"] for v in yt["videos"]},
+                           "titulos": {v["id"]: v["titulo"] for v in yt["videos"]}},
+               "historial_impacto": hist[-52:],
                "telegram": tg["suscriptores"],
                "buffer": {red: {"posts": len(r["posts"]), **r["totales"]} for red, r in bf["redes"].items()}},
               open(foto, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
