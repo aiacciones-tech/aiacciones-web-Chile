@@ -9,8 +9,9 @@ solo se toca `ge/`, `*-GE.yml` y `cola-ge/`).
 ## Cuándo
 Cada día de sesión de **Xetra** (lunes a viernes salvo festivos de la Bolsa de Fráncfort: 24, 25, 26 y 31 de diciembre, 1 de enero,
 Viernes Santo, Lunes de Pascua, 1 de mayo). Cierre 17:30 de Berlín. `datos-dax-GE.yml` corre a las 17:05 UTC (18:05 Berlín en invierno)
-y deja `datos/dax-<fecha>.json` en la rama `datos-dax-ge`. El Short se publica **entre las 18:30 y las 20:00 de Berlín**, antes del Tagesbericht
-(que sale tras el cierre de Nueva York, 22:00). Si la última vela no es de hoy (festivo alemán), no se publica nada.
+y deja `datos/dax-<fecha>.json` en la rama `datos-dax-ge`. El Short se publica **entre las 18:30 y las 20:00 de Berlín**.
+Desde el 25-nov-2026 el Tagesbericht de Wall Street sale **por la mañana** (hacia las 07:00 de Berlín, con la sesión de la noche anterior),
+y los Shorts extra del diario a las 12:15 y 15:05: el DAX de la tarde no choca con ninguno. Si la última vela no es de hoy (festivo alemán), no se publica nada.
 
 ## Contenido (45-58 s, `short.json` con el `make_short.py` del diario)
 1. `titulo`: kicker «DAX · Handelstag vom», fecha corta, DAX y otro índice (MDAX o Euro Stoxx 50) con % y cierre, y un gancho de 2-4 palabras.
@@ -21,8 +22,8 @@ y deja `datos/dax-<fecha>.json` en la rama `datos-dax-ge`. El Short se publica *
 3. `cifra` 2 «Gewinner und Verlierer»: `big` = la mayor subida o bajada relevante, `barras` con 2 ganadoras y 2 perdedoras, y en la nota
    la amplitud («16 von 40 DAX-Werten im Plus»). Para la mayor, motivo si hay noticia; si no, solo la cifra.
 4. `kpis` 3 «Charttechnik DAX»: RSI 14, distancia a la 200-Tage-Linie y al Rekordhoch (de `dax.py`, «berechnet»). Nota: «Das sind Daten, keine Kauf- oder Verkaufssignale.»
-5. `fin`: `titular` breve (p. ej. «Heute Abend:\nWall Street») y `cta` «Der Tagesbericht nach US-Börsenschluss» (sin hora: el Tagesbericht sale hacia las 23:30). Voz: «Den Tagesbericht zur Wall Street
-   gibt es heute Abend auf unserem Kanal. Keine Anlageberatung.»
+5. `fin`: `titular` breve (p. ej. «Morgen früh:\nWall Street») y `cta` «Der Tagesbericht morgen früh vor Börsenstart». Voz: «Den Tagesbericht zur Wall Street
+   gibt es morgen früh auf unserem Kanal. Keine Anlageberatung.» (Viernes: «am Samstagmorgen».)
 Unas 95-115 palabras de voz en total (Azure ≈ 128 palabras/min más pausas). `make_short.py` corta si pasa de 59 s.
 Campos extra de `short.json` para `meta_dax.py`: `fecha` (ISO), `titulo_yt` (≤ 90 caracteres, p. ej. «DAX schließt 0,9 % tiefer: Rheinmetall vorn, SAP schwach»),
 `resumen`, `claves` (3-4), `tags` (empresas citadas) y `fuente`.

@@ -20,7 +20,7 @@ R, A = calc(M, VJ.get("nombres")); NYZ = ZoneInfo("America/New_York"); FECHA = d
 # «Deutscher Blick» (24-nov-2026): EUR/USD al cierre de Nueva York (<día>/fx.json de la rama datos-extra-ge). Sin él, el vídeo sale como antes.
 FX = cargar_fx(DIR, R["fecha"])
 OUT = f"{DIR}/video-bolsa-{R['fecha']}-GE.mp4"
-SECS = ["Einstieg", "Die großen Indizes", "Sektoren", "Aktien des Tages", "Makro", "Charttechnik", "Was morgen ansteht", "Fazit"]; NS = len(SECS)
+SECS = ["Einstieg", "Die großen Indizes", "Sektoren", "Aktien des Tages", "Makro", "Charttechnik", "Was heute ansteht", "Fazit"]; NS = len(SECS)
 LG = load_logo(130); LGS = load_logo(95); LGB = load_logo(230)
 NB = 126  # unos 6 meses de sesiones
 TV_TXT = "TradingView"
@@ -360,7 +360,7 @@ def s_esc(k, t):
     return to_arr(f)
 
 
-# ---------- 7. Was morgen ansteht ----------
+# ---------- 7. Was heute ansteht (el Tagesbericht sale por la mañana en Alemania: la próxima sesión es la de hoy) ----------
 def s_agenda(t):
     G = VJ["agenda"]; f = base_fig(7, "Was steht in der nächsten Sitzung an?", G["titulo"], G["fuente"])
     for x, h, ha in ((0.06, "Datum", "left"), (0.21, "Termin", "left"), (0.82, "New York", "center"), (0.92, "Deutschland", "center")):
