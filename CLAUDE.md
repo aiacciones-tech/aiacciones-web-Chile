@@ -39,3 +39,6 @@
   edición lee `espana/semanal/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Wall Street auf Deutsch, Short diario «DAX am Abend» (prueba desde el 24-nov-2026, `ge/dax/`):** L-V tras el cierre de Xetra (18:30-20:00 Berlín).
   Antes de cada Short lee `ge/dax/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Arabia Saudita, pruebas A/B de miniatura y título (desde el 24-nov-2026):** los videos largos del diario y de la serie educativa llevan una variante B
+  (`ab.json` + `miniatura-b.png` en su carpeta de `cola-sa/`). `scripts/ab-saudi.py` (workflow `ab-saudi.yml`, 08:10 UTC) las alterna por días y deja
+  la ganadora; el estado está en `cola-sa/<slug>/ab-estado.json` de `youtube-cola`. Detalles en `saudi/ab-saudi.md`.

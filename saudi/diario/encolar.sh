@@ -25,6 +25,8 @@ C=cola-sa/bolsa-$F; CS=cola-sa/bolsa-$F-short
 [ -f $C/resultado.json ] && { echo "ya subido: $C"; exit 1; }
 mkdir -p $C $CS
 cp $B/video-bolsa-$F-SA.mp4 $C/video.mp4; cp $B/meta-youtube-$F-SA.json $C/meta.json; cp $B/miniatura-$F-SA.png $C/miniatura.png
+# Prueba A/B de miniatura y título (24-nov-2026): la variante B va junto al video; scripts/ab-saudi.py la alterna con la A y deja la ganadora.
+[ -s $B/ab-$F-SA.json ] && [ -s $B/miniatura-b-$F-SA.png ] && { cp $B/ab-$F-SA.json $C/ab.json; cp $B/miniatura-b-$F-SA.png $C/miniatura-b.png; }
 cp $B/short-bolsa-$F-SA.mp4 $CS/video.mp4; cp $B/meta-short-$F-SA.json $CS/meta.json
 git add cola-sa; git commit -qm "Cola Arabia Saudita: video diario de la bolsa $F (video y Short)"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done
