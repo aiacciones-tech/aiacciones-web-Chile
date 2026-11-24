@@ -1,0 +1,58 @@
+{
+ "cabecera": "Aktie des Tages · 23. November 2026",
+ "out": "short-2-bolsa-2026-11-23-GE.mp4",
+ "fuente": "Quellen: TradingView, Nvidia (via ABC News)\nund Yahoo Finance (23. November 2026).",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Aktie des Tages · Wall Street",
+   "fecha": "Mo., 23. November 2026",
+   "indices": [
+    [
+     "Nvidia",
+     "+31,48 %",
+     "165,05 $",
+     "teal"
+    ]
+   ],
+   "pregunta": "Huang ist zurück",
+   "voz": "Die Aktie des Tages an der Wall Street, Montag, 23. November: Nvidia."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Was ist passiert?",
+   "big": "+31,48 %",
+   "delta": "Schluss 165,05 $",
+   "color": "teal",
+   "nota": "Jensen Huang wieder Vorstandschef.\nRücktritt vom 12. November rückgängig.",
+   "voz": "Eins. Jensen Huang ist wieder Vorstandschef. Seinen Rücktritt vom 12. November hat er rückgängig gemacht."
+  },
+  {
+   "tipo": "kpis",
+   "n": 2,
+   "label": "Die Zahlen",
+   "items": [
+    [
+     "+31,48 %",
+     "Tagesplus, Schluss 165,05 $",
+     "teal"
+    ],
+    [
+     "4,73 %",
+     "Plus im S&P 500 am selben Tag",
+     "teal"
+    ]
+   ],
+   "nota": "Das sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Zwei. Die Aktie schließt bei 165 Dollar. Der S&P 500 steigt am selben Tag um 4,7 Prozent."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Jeden Morgen:\nDer Tagesbericht",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Den ganzen Tagesbericht finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+# Publica a su hora los Shorts extra del Tagesbericht de Wall Street auf Deutsch (desde el 24-nov-2026).
+# encolar.sh deja cada Short extra en cola-ge-espera/<slug>/ de la rama youtube-cola con publicar.txt (hora UTC ISO).
+# Este workflow, cada 20 min de 09 a 16 UTC, pasa a cola-ge/ los que ya tocan y lanza youtube-GE.yml (modo=subir);
+# al terminar la subida, buffer-GE.yml (workflow_run) manda sus posts de TikTok e Instagram.
+# Un push con GITHUB_TOKEN no dispara otros workflows: por eso se lanza youtube-GE.yml con workflow_dispatch.
+# Un Short con más de 8 h de retraso no se publica (caducado.txt). Si ya hay 9 subidas en 24 h, espera a la siguiente vuelta.
+name: Shorts extra a su hora (Wall Street auf Deutsch)
+on:
+  schedule:
+    - cron: "7,27,47 9-16 * * 1-6"
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency: cola-espera-ge
+jobs:
+  mover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: youtube-cola
+      - name: Pasar a cola-ge/ los Shorts que ya tocan
+        id: m
+        run: |
+          [ -d cola-ge-espera ] || { echo "No hay cola-ge-espera/."; echo "n=0" >> $GITHUB_OUTPUT; exit 0; }
+          python3 - <<'PY' > /tmp/mover.txt
+          import json, glob, os, datetime as dt
+          ahora = dt.datetime.now(dt.timezone.utc)
+          n24 = 0
+          for p in glob.glob('cola-ge/*/resultado.json'):
+              try: s = dt.datetime.fromisoformat(json.load(open(p))['subido'].replace('Z', '+00:00'))
+              except Exception: continue
+              n24 += ahora - s < dt.timedelta(hours=24)
+          for d in sorted(glob.glob('cola-ge-espera/*/publicar.txt')):
+              c = os.path.dirname(d); slug = os.path.basename(c)
+              if os.path.exists(os.path.join(c, 'caducado.txt')) or os.path.exists(os.path.join('cola-ge', slug)): continue
+              t = dt.datetime.fromisoformat(open(d).read().strip())
+              if ahora < t: continue
+              if ahora - t > dt.timedelta(hours=8):
+                  open(os.path.join(c, 'caducado.txt'), 'w').write(ahora.isoformat(timespec='minutes')); print('CAD', slug); continue
+              if n24 >= 9:
+                  print('ESPERA', slug, f'({n24} subidas en 24 h)'); continue
+              n24 += 1; print('MOVER', slug)
+          PY
+          cat /tmp/mover.txt
+          n=0
+          for s in $(awk '$1=="MOVER"{print $2}' /tmp/mover.txt); do mkdir -p cola-ge; git mv cola-ge-espera/$s cola-ge/$s; n=$((n+1)); done
+          echo "n=$n" >> $GITHUB_OUTPUT
+          git config user.name "aiacciones-bot"; git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add -A cola-ge-espera cola-ge
+          git diff --cached --quiet && exit 0
+          git commit -qm "Cola GE: Shorts extra a su hora $(date -u +%FT%H:%M)"
+          for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola && git push -q origin HEAD:youtube-cola && exit 0; sleep $((2**i)); done
+          exit 1
+      - name: Lanzar la subida a YouTube
+        if: steps.m.outputs.n != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run youtube-GE.yml --repo "$GITHUB_REPOSITORY" --ref main -f modo=subir
+          sleep 20
+          id=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow youtube-GE.yml --event workflow_dispatch --limit 1 --json databaseId -q '.[0].databaseId')
+          gh run watch "$id" --repo "$GITHUB_REPOSITORY" --exit-status --interval 30 > /dev/null
+      - name: Mandar TikTok e Instagram (por si el workflow_run de buffer-GE.yml no salta tras una subida lanzada por el bot)
+        if: steps.m.outputs.n != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run buffer-GE.yml --repo "$GITHUB_REPOSITORY" --ref main -f modo=programar

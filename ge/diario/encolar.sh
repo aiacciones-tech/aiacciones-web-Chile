@@ -39,5 +39,24 @@ cp $B/short-bolsa-$F-GE.mp4 $CS/video.mp4; cp $B/meta-short-$F-GE.json $CS/meta.
 git add cola-ge; git commit -qm "Cola GE: video diario de Wall Street $F (video y Short)"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done
 for i in $(seq 80); do git pull -q origin youtube-cola 2>/dev/null; [ -f $C/resultado.json ] && [ -f $CS/resultado.json ] && break; sleep 15; done
+# Shorts extra del mismo guion (short-2 / short-3, desde el 24-nov-2026): no van a cola-ge/ (se subirían ya), sino a cola-ge-espera/
+# con publicar.txt (hora UTC); cola-espera-GE.yml los pasa a cola-ge/ a su hora y lanza youtube-GE.yml (y después buffer-GE.yml: TikTok e Instagram).
+# Horas de Berlín del día en que se encola: Short 2 a las 12:15, Short 3 a las 15:05 (antes de la apertura de Nueva York a las 15:30). El DAX va a las 18:30-20:00.
+EXTRA=0
+for k in 2 3; do
+  [ -s $B/short-$k-bolsa-$F-GE.mp4 ] && [ -s $B/meta-short$k-$F-GE.json ] || continue
+  grep -q "$ID" $B/meta-short$k-$F-GE.json || { echo "falta el enlace del canal en meta-short$k"; continue; }
+  E=cola-ge-espera/bolsa-$F-short$k; [ -d $E ] || [ -d cola-ge/bolsa-$F-short$k ] && { echo "ya encolado: bolsa-$F-short$k"; continue; }
+  mkdir -p $E; cp $B/short-$k-bolsa-$F-GE.mp4 $E/video.mp4; cp $B/meta-short$k-$F-GE.json $E/meta.json
+  [ -s $B/post-tiktok-short$k-$F-GE.txt ] && cp $B/post-tiktok-short$k-$F-GE.txt $E/post-tiktok.txt
+  [ -s $B/post-instagram-short$k-$F-GE.txt ] && cp $B/post-instagram-short$k-$F-GE.txt $E/post-instagram.txt
+  H=$([ $k = 2 ] && echo "12:15" || echo "15:05")
+  python3 -c "import datetime as d,zoneinfo as z;b=z.ZoneInfo('Europe/Berlin');h,m=map(int,'$H'.split(':'));print(d.datetime.combine(d.datetime.now(b).date(),d.time(h,m),b).astimezone(d.timezone.utc).isoformat(timespec='minutes'))" > $E/publicar.txt
+  echo "Short $k en espera hasta $(cat $E/publicar.txt) (UTC)"; EXTRA=1
+done
+if [ $EXTRA = 1 ]; then
+  git add cola-ge-espera; git commit -qm "Cola GE: Shorts extra del $F (en espera)"
+  for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done
+fi
 V=$(python3 -c "import json;print(json.load(open('$C/resultado.json'))['videoId'])"); SH=$(python3 -c "import json;print(json.load(open('$CS/resultado.json'))['videoId'])")
 echo "diario GE $F: YouTube $V, Short $SH" | tee -a $B/ids.txt
