@@ -24,9 +24,11 @@ cta_desc = ("💬 ¿Qué concepto quieres que expliquemos? Déjanos tu comentari
             "🔔 Suscríbete a @AIAccionesEspaña para no perderte ningún capítulo.\n\n") if CTA else ""
 serie = (f"«{SERIE}»: cada domingo, un concepto de análisis técnico explicado sobre el gráfico real de {VJ['nombre']}, la mayor empresa del IBEX 35."
          + (f" Próximo capítulo: {fin['siguiente']}." if fin.get("siguiente") else ""))
-desc = (f"{I['resumen']}\n\n{cta_desc}" + "\n".join("• " + c for c in fin["claves"]) + f"\n\nCapítulos\n{cap}\n\n{serie}\n\n" +
+# Enlaces al siguiente vídeo (Daniel, 24-nov-2026; la API no permite pantallas finales): encolar.sh los resuelve o borra la línea.
+sigue = "▶️ Capítulo anterior: {ultimo:curso-at-}\n📺 Curso completo: {lista:curso}\n📈 La bolsa española cada día: {lista:diario}\n\n"
+desc = (f"{I['resumen']}\n\n{sigue}{cta_desc}" + "\n".join("• " + c for c in fin["claves"]) + f"\n\nCapítulos\n{cap}\n\n{serie}\n\n" +
         (f"📊 Ficha de {VJ['nombre']}: {I['ficha']}\n" if I.get("ficha") else "") + f"📚 Aprende bolsa en la web: https://aiacciones.es/educacion/\n\n{AVISO}\n\n{I['hashtags']}\n\nSuscríbete: {CANAL}")
-assert len(I["titulo"]) <= 100 and "<" not in desc and ">" not in desc and len(desc.encode()) < 5000, (len(I["titulo"]), len(desc.encode()))
+assert len(I["titulo"]) <= 100 and "<" not in desc and ">" not in desc and len(desc.encode()) + 180 < 5000, (len(I["titulo"]), len(desc.encode()))
 tags = list(dict.fromkeys(I.get("tags", []) + [SERIE, "AIAcciones España", "análisis técnico", VJ["nombre"], "IBEX 35"]))
 json.dump({"title": I["titulo"], "description": desc, "tags": tags, "privacy": "public", "language": "es", "categoryId": "27"},
           open(f"{D}/meta-youtube-{BASE}.json", "w"), ensure_ascii=False, indent=1)
@@ -37,6 +39,12 @@ sd = (f"{I['tiktok']}\n" + ("💬 Déjanos tu comentario y 🔔 suscríbete al c
 assert len(I["titulo_short"]) <= 100 and len(sd) < 5000
 json.dump({"title": I["titulo_short"], "description": sd, "tags": tags[:8] + ["Shorts"], "privacy": "public", "language": "es", "categoryId": "27"},
           open(f"{D}/meta-short-{BASE}.json", "w"), ensure_ascii=False, indent=1)
+# Prueba A/B (Daniel, 24-nov-2026): título B en info.titulo_b (otra promesa: pregunta o resultado, la cifra clave delante).
+# Solo título: la miniatura B de la serie aún no existe. ab-espana.yml alterna los títulos por días y deja el ganador.
+if I.get("titulo_b"):
+    assert len(I["titulo_b"]) <= 100 and I["titulo_b"] != I["titulo"]
+    json.dump({"que": "titulo", "B": {"title": I["titulo_b"]}, "estilos": {"A": "serie", "B": "pregunta"}},
+              open(f"{D}/ab-{BASE}.json", "w"), ensure_ascii=False, indent=1)
 # X (máx. 280, los enlaces cuentan 23)
 largo_x = lambda s: len(re.sub(r"https?://\S+|\{youtube\}", "x" * 23, s))
 x = f"{I['x']}\n\n▶️ {{youtube}}\n\nEducativo, no es recomendación. Sin posiciones."

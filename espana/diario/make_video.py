@@ -25,6 +25,12 @@ CTA_HASTA="2026-11-22"
 CTA=R["fecha"]<=CTA_HASTA
 CTA_VOZ=" Déjanos en los comentarios qué te ha parecido y qué te gustaría ver, y suscríbete al canal para no perderte el resumen de cada día."
 if CTA and "comentarios" not in VJ["voz"]["s_fin"]: VJ["voz"]["s_fin"]+=CTA_VOZ
+# La conclusión en los primeros 15 segundos (Daniel, 24-nov-2026): la apertura dice qué pasó, por qué y el dato técnico clave,
+# en 45 palabras como mucho (~15 s con la voz del canal) y sin «veamos por qué» (la respuesta va ya en la apertura).
+_AP=VJ["voz"]["s_title"]; _NP=len(_AP.split())
+if not PREVIEW and (_NP>45 or "veamos" in _AP.lower()):
+    sys.exit(f"Apertura (s_title) con {_NP} palabras: deja la conclusión del día en ≤45 palabras y sin «veamos» (ver README, «Primeros 15 segundos»).")
+FIN_MIN=20.0  # la última escena dura al menos 20 s: hueco para la pantalla final de YouTube (fuera del límite de MAXDUR)
 OUT=f"{DIR}/youtube-bolsa-espana-{R['fecha']}.mp4"
 FECHA_TXT=VJ["fecha_txt"].upper()
 SECS=["Noticias","Por qué se movió","Valores","Técnico","Agenda"]; NS=len(SECS)
@@ -272,6 +278,7 @@ if __name__=="__main__":
         f_in,f_out=int(0.015*sr),int(0.06*sr); a[:f_in]*=np.linspace(0,1,f_in); a[-f_out:]*=np.linspace(1,0,f_out); clips.append(a)
     durs=[LEAD+len(a)/sr+TAIL for a in clips]; durs[0]+=0.4; durs[-1]+=1.5
     if sum(durs)>MAXDUR: sys.exit(f"Vídeo demasiado largo: {sum(durs):.1f} s (máx. {MAXDUR}). Acorta la locución.")
+    durs[-1]=max(durs[-1],FIN_MIN)  # pantalla final (se añade después de comprobar el límite)
     ANIM=30; XF=8; ff=imageio_ffmpeg.get_ffmpeg_exe()
     proc=subprocess.Popen([ff,"-y","-f","rawvideo","-pix_fmt","rgb24","-s",f"{W}x{H}","-r",str(FPS),"-i","-","-c:v","libx264","-pix_fmt","yuv420p","-crf","20","-preset","medium",SILENT],stdin=subprocess.PIPE,stderr=subprocess.DEVNULL)
     t0=0; times=[]; audio=[]

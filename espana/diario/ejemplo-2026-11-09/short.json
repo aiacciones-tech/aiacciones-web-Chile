@@ -14,7 +14,7 @@
    "big_label": "Cierre: 19.742,5 puntos",
    "color": "acc",
    "pregunta": "33 valores al alza",
-   "voz": "El IBEX treinta y cinco sube casi un dos por ciento el lunes, con treinta y tres valores al alza. Tres claves."
+   "voz": "El IBEX treinta y cinco sube casi un dos por ciento, con treinta y tres valores al alza, por la banca y el petróleo a la baja. Tres claves."
   },
   {
    "tipo": "cifra",
@@ -98,8 +98,8 @@
    "tipo": "fin",
    "nombre": "IBEX 35 · 9 nov",
    "titular": "Sube con la banca y\nel petróleo a la baja.",
-   "cta": "Déjanos tu comentario y suscríbete al canal",
-   "voz": "El análisis completo, en nuestro canal. Déjanos tu comentario y suscríbete. Contenido informativo, no es una recomendación de inversión."
+   "cta": "Análisis completo en el canal",
+   "voz": "El análisis completo, en nuestro canal. Contenido informativo, no es una recomendación de inversión."
   }
  ],
  "length_scale": 0.95

@@ -31,6 +31,7 @@ API = "https://www.googleapis.com"
 PT = ZoneInfo("America/Los_Angeles")
 DIAS_PRUEBA = 4          # días 1..4
 DIA_ANALYTICS = 8        # desde este día se piden impresiones y CTR
+PUEDE_TITULO = True       # False si el token solo tiene permiso de subida (youtube.upload): entonces solo se prueba la miniatura
 HORA_CONTADOR = 3        # el contador del día se guarda solo si en el Pacífico son menos de las 03:00
 
 
@@ -112,7 +113,7 @@ def aplicar(t, carpeta, ab, est, v):
     que = ab.get("que", "ambos")
     if que in ("ambos", "miniatura") and os.path.exists(png):
         poner_miniatura(t, est["videoId"], png)
-    if que in ("ambos", "titulo") and titulo:
+    if que in ("ambos", "titulo") and titulo and PUEDE_TITULO:
         poner_titulo(t, est["videoId"], titulo)
     est["mostrada"] = v
     est.setdefault("cambios", []).append({"variante": v, "utc": ahora_utc()})
@@ -160,7 +161,11 @@ def rotar(base):
         print("No hay videos con prueba A/B.")
         return
     n_previas = sum(1 for c in carpetas if os.path.exists(os.path.join(c, "ab-estado.json")))
-    t, _ = token(os.environ["YT_REFRESH_TOKEN"])
+    global PUEDE_TITULO
+    t, permisos_t = token(os.environ["YT_REFRESH_TOKEN"])
+    if permisos_t and not permisos_t & {"https://www.googleapis.com/auth/youtube", "https://www.googleapis.com/auth/youtube.force-ssl"}:
+        PUEDE_TITULO = False
+        print("El token de subida no tiene permiso para editar títulos (solo youtube.upload): se prueba solo la miniatura.")
     ts = None
     if os.environ.get("YT_STATS_REFRESH_TOKEN"):
         try:

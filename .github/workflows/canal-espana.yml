@@ -1,0 +1,59 @@
+# Crecimiento del canal @AIAccionesEspaña (Daniel, 24-nov-2026). Cada día a las 07:31 UTC (08:31 en Madrid en invierno):
+#  1) sube los vídeos programados de cola-es-programado/ (el segundo Short del vídeo diario de la víspera), solo a YouTube;
+#  2) mete los vídeos nuevos en sus listas de reproducción (por serie y por empresa), con tope diario por la cuota de la API.
+# Usa scripts/canal-espana.py de main y la rama youtube-cola sin bajar los mp4 de cola-es/. Detalles: espana/crecimiento-youtube.md.
+name: Canal YouTube España (Shorts programados y listas)
+concurrency: youtube-espana
+on:
+  schedule:
+    - cron: '31 7 * * *'
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "todo, programados o listas"
+        default: todo
+      maximo:
+        description: "máximo de operaciones de listas en esta ejecución (50 unidades de cuota cada una)"
+        default: "40"
+permissions:
+  contents: write
+jobs:
+  canal:
+    runs-on: ubuntu-latest
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_ES_CLIENT_ID || secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_ES_CLIENT_SECRET || secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_ES_REFRESH_TOKEN }}
+      MODO: ${{ inputs.modo || 'todo' }}
+      MAXIMO: ${{ inputs.maximo || '40' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts
+            espana
+      - uses: actions/checkout@v4
+        with:
+          ref: youtube-cola
+          path: cola
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            cola-es/*/*.json
+            cola-es-programado/
+      - name: Shorts programados
+        if: env.MODO == 'todo' || env.MODO == 'programados'
+        run: python3 scripts/canal-espana.py programados cola
+      - name: Listas de reproducción
+        if: env.MODO == 'todo' || env.MODO == 'listas'
+        run: python3 scripts/canal-espana.py listas cola "$MAXIMO" | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Guardar en youtube-cola
+        if: always()
+        working-directory: cola
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add -A cola-es cola-es-programado 2>/dev/null || git add -A cola-es
+          git diff --cached --quiet && exit 0
+          git commit -m "Canal YouTube España: programados y listas $(date -u +%F)"
+          for i in 1 2 3 4; do git pull --rebase -q origin youtube-cola && git push origin HEAD:youtube-cola && exit 0; sleep $((5 * i)); done; exit 1
