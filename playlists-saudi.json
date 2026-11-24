@@ -1,0 +1,10 @@
+{
+ "_nota": "Lo escribe scripts/playlists-saudi.py: ID de cada playlist del canal saudí y videos ya añadidos.",
+ "playlists": {
+  "calendario": {
+   "id": "PLaxHaP2tgOg4",
+   "titulo": "تقويم نتائج الشركات السعودية | متى تعلن الشركات أرباحها؟",
+   "videos": []
+  }
+ }
+}
