@@ -1,0 +1,146 @@
+{
+ "listas": {
+  "empresa-unicaja": {
+   "id": "PLc-RyRnsvk-o",
+   "titulo": "Unicaja: resultados y análisis en vídeo"
+  },
+  "resultados-1S26": {
+   "id": "PLYM75lMgfk-c",
+   "titulo": "Resultados 1S 2026 del IBEX 35"
+  },
+  "empresa-endesa": {
+   "id": "PLJSlNNjoCSmo",
+   "titulo": "Endesa: resultados y análisis en vídeo"
+  },
+  "empresa-santander": {
+   "id": "PLAkm8K6FL9O8",
+   "titulo": "Banco Santander: resultados y análisis en vídeo"
+  },
+  "empresa-redeia": {
+   "id": "PLF2bla5qtIdE",
+   "titulo": "Redeia: resultados y análisis en vídeo"
+  },
+  "empresa-sabadell": {
+   "id": "PLXdQfvJbWO7E",
+   "titulo": "Banco Sabadell: resultados y análisis en vídeo"
+  },
+  "shorts": {
+   "id": "PLTxVAGsXvGhk",
+   "titulo": "La bolsa española en 1 minuto (Shorts)"
+  },
+  "empresa-iberdrola": {
+   "id": "PLNqyVS2Rmoss",
+   "titulo": "Iberdrola: resultados y análisis en vídeo"
+  },
+  "empresa-bbva": {
+   "id": "PLIO7LLpOM0nA",
+   "titulo": "BBVA: resultados y análisis en vídeo"
+  },
+  "empresa-caixabank": {
+   "id": "PLcDwuI3GxY90",
+   "titulo": "CaixaBank: resultados y análisis en vídeo"
+  },
+  "empresa-bankinter": {
+   "id": "PLV91sr1eGmO0",
+   "titulo": "Bankinter: resultados y análisis en vídeo"
+  },
+  "empresa-telefonica": {
+   "id": "PLZPjPBfgjE4E",
+   "titulo": "Telefónica: resultados y análisis en vídeo"
+  },
+  "empresa-repsol": {
+   "id": "PLJzu8bSBb8dQ",
+   "titulo": "Repsol: resultados y análisis en vídeo"
+  }
+ },
+ "añadidos": {
+  "unicaja-1S26-short": [
+   "empresa-unicaja",
+   "shorts"
+  ],
+  "endesa-1S26": [
+   "resultados-1S26",
+   "empresa-endesa"
+  ],
+  "caixabank-1S26": [
+   "resultados-1S26",
+   "empresa-caixabank"
+  ],
+  "sabadell-1S26": [
+   "resultados-1S26",
+   "empresa-sabadell"
+  ],
+  "santander-1S26": [
+   "resultados-1S26",
+   "empresa-santander"
+  ],
+  "bbva-1S26": [
+   "resultados-1S26",
+   "empresa-bbva"
+  ],
+  "unicaja-1S26": [
+   "resultados-1S26",
+   "empresa-unicaja"
+  ],
+  "bankinter-1S26": [
+   "resultados-1S26",
+   "empresa-bankinter"
+  ],
+  "redeia-1S26": [
+   "resultados-1S26",
+   "empresa-redeia"
+  ],
+  "endesa-1S26-short": [
+   "empresa-endesa",
+   "shorts"
+  ],
+  "santander-1S26-short": [
+   "empresa-santander",
+   "shorts"
+  ],
+  "redeia-1S26-short": [
+   "empresa-redeia",
+   "shorts"
+  ],
+  "sabadell-1S26-short": [
+   "empresa-sabadell",
+   "shorts"
+  ],
+  "caixabank-1S26-short": [
+   "shorts",
+   "empresa-caixabank"
+  ],
+  "bbva-1S26-short": [
+   "shorts",
+   "empresa-bbva"
+  ],
+  "bankinter-1S26-short": [
+   "shorts",
+   "empresa-bankinter"
+  ],
+  "iberdrola-1S26-short": [
+   "shorts",
+   "empresa-iberdrola"
+  ],
+  "iberdrola-1S26": [
+   "empresa-iberdrola",
+   "resultados-1S26"
+  ],
+  "telefonica-1S26": [
+   "empresa-telefonica",
+   "resultados-1S26"
+  ],
+  "telefonica-1S26-short": [
+   "empresa-telefonica",
+   "shorts"
+  ],
+  "repsol-1S26": [
+   "empresa-repsol",
+   "resultados-1S26"
+  ],
+  "repsol-1S26-short": [
+   "empresa-repsol",
+   "shorts"
+  ]
+ }
+}
