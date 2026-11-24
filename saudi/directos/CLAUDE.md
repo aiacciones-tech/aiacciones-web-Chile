@@ -6,7 +6,7 @@ como **directo real** de YouTube a la hora fijada (YouTube no permite crear Estr
 terminados en `-saudi`, cada post enlaza https://www.youtube.com/@SaudiArabiaAIStocks, nada inventado (dato sin fuente = fuera).
 
 ## Eventos (eventos-saudi.json)
-- **Fed** (decisión 14:00 Washington = 22:00 Riad): directo a las 23:00 Riad.
+- **Fed** (decisión 14:00 Washington = 22:00 Riad): directo a las 23:30 Riad (da tiempo a la voz y el render).
 - **OPEP+** (reunión ministerial; el comunicado sale a media tarde): directo ~2 h después del comunicado.
 - **Presupuesto saudí** (diciembre; día por confirmar en mof.gov.sa): directo la misma noche.
 - **Resultados anuales** de Aramco, Al Rajhi, SNB, SABIC, stc y Ma'aden (ene-mar; fechas en `calendar-FY26-saudi.json` de
