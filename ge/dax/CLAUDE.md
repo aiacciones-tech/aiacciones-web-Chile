@@ -1,7 +1,7 @@
 # «DAX am Abend»: Short diario del DAX en Wall Street auf Deutsch (prueba de 4-6 semanas desde el 24-nov-2026)
 
 Daniel (24-nov-2026) preguntó por un canal alemán de acciones alemanas. Se acordó **probar primero dentro del canal actual**: un Short diario
-del DAX, sin tocar el Tagesbericht. Si en 4-6 semanas (revisión hacia el **5-ene-2027**) los Shorts del DAX rinden igual o mejor que los de Wall Street
+del DAX, sin tocar el Tagesbericht. Daniel recibe un reporte por correo el **22-dic-2026** (asunto «RESULTADO DAX», otra tarea programada). Si los Shorts del DAX rinden igual o mejor que los de Wall Street
 (vistas, % de visualización, suscriptores ganados en YouTube Studio), se plantea un canal propio. Instrucciones en español; lo que ve y oye el público, en alemán («Sie»).
 Valen todas las reglas de `ge/diario/CLAUDE.md` (Keine Anlageberatung, transparencia IA, nunca inventar, archivos `-GE`, secretos `_GE`;
 solo se toca `ge/`, `*-GE.yml` y `cola-ge/`).
