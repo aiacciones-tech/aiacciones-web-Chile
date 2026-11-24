@@ -31,6 +31,10 @@ class SinCuota(Exception):
     pass
 
 
+class LimiteCrear(Exception):
+    """YouTube limita cuántas playlists se crean seguidas (429 RATE_LIMIT_EXCEEDED); se sigue añadiendo a las que ya existen."""
+
+
 class Cliente:
     def __init__(self, presupuesto, simular):
         self.presupuesto, self.simular, self.gastado, self.t = presupuesto, simular, 0, None
@@ -65,6 +69,10 @@ class Cliente:
                 txt = e.read().decode("utf-8", "replace")
                 if e.code == 403 and ("quotaExceeded" in txt or "rateLimitExceeded" in txt):
                     raise SinCuota("YouTube dice que se acabó la cuota diaria de la API")
+                if e.code == 429 and tipo == "crear":
+                    raise LimiteCrear()
+                if e.code == 429:
+                    raise SinCuota("YouTube pide bajar el ritmo (429)")
                 if e.code in (409, 500, 503) and espera:
                     time.sleep(espera)
                     continue
@@ -158,7 +166,7 @@ def main():
         return
 
     cli = Cliente(presupuesto, simular)
-    hechas, creadas, errores = 0, 0, 0
+    hechas, creadas, errores, sin_crear = 0, 0, 0, False
     existentes = {}
     try:
         # Playlists que ya existen en el canal (por si el estado se perdió): se reconocen por el título.
@@ -177,10 +185,17 @@ def main():
                 titulo, desc = defs[clave]
                 if titulo in existentes:
                     pid = existentes[titulo]
+                elif sin_crear:
+                    continue
                 else:
-                    r = cli.pedir("crear", "playlists?part=snippet,status", {
-                        "snippet": {"title": titulo[:150], "description": desc[:5000], "defaultLanguage": "ar"},
-                        "status": {"privacyStatus": "public"}})
+                    try:
+                        r = cli.pedir("crear", "playlists?part=snippet,status", {
+                            "snippet": {"title": titulo[:150], "description": desc[:5000], "defaultLanguage": "ar"},
+                            "status": {"privacyStatus": "public"}})
+                    except LimiteCrear:
+                        sin_crear = True
+                        print("YouTube no deja crear más playlists por ahora (429); las que faltan se crean en otra pasada.")
+                        continue
                     pid = r["id"]
                     creadas += 1
                     time.sleep(5)  # dar tiempo a YouTube antes de añadirle videos
