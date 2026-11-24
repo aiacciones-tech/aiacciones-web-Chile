@@ -38,10 +38,20 @@ jobs:
       - name: Poner en público los videos que meta.json pide públicos
         if: github.event_name == 'push' || inputs.modo == 'subir' || inputs.modo == 'publicar'
         run: python3 scripts/youtube.py publicar cola-sa
+      - name: Añadir los videos a sus playlists (empresa, sector y formato)
+        if: github.event_name == 'push' || inputs.modo == 'subir' || inputs.modo == 'publicar'
+        # Script y config salen de main (ver saudi/playlists/CLAUDE.md). No debe frenar la subida.
+        continue-on-error: true
+        run: |
+          git fetch -q --depth 1 origin main
+          git show FETCH_HEAD:scripts/playlists-saudi.py > "$RUNNER_TEMP/playlists.py" &&
+            git show FETCH_HEAD:saudi/playlists/playlists-saudi.json > "$RUNNER_TEMP/playlists.json" ||
+            { echo "playlists-saudi.py todavía no está en main"; exit 0; }
+          python3 "$RUNNER_TEMP/playlists.py" cola-sa "$RUNNER_TEMP/playlists.json" playlists-saudi.json
       - name: Guardar IDs de YouTube
         if: github.event_name == 'push' || inputs.modo == 'subir' || inputs.modo == 'publicar'
         run: |
           git config user.name "aiacciones-bot"
           git config user.email "aiacciones-bot@users.noreply.github.com"
-          git add cola-sa
+          git add cola-sa; [ -f playlists-saudi.json ] && git add playlists-saudi.json
           git diff --cached --quiet || { git commit -m "IDs de YouTube Arabia Saudita $(date -u +%F)" && for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done; exit 1; }
