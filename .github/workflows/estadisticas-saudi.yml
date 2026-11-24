@@ -7,7 +7,10 @@
 # YouTube: usa YT_SAUDI_STATS_REFRESH_TOKEN si existe (token con youtube.readonly + yt-analytics.readonly);
 # si no, el token de subida YT_SAUDI_REFRESH_TOKEN; y si ese no puede leer, el feed público del canal.
 # Buffer: BUFFER_ACCESS_TOKEN_SAUDI y BUFFER_ACCESS_TOKEN_SAUDI2. Telegram: TELEGRAM_BOT_TOKEN_SAUDI y TELEGRAM_CHANNEL_SAUDI.
-# "Run workflow" lo genera en el momento (con dias=N cubre otro período).
+# Incluye la sección "Impacto de las mejoras" (scripts/impacto_saudi.py): lee las pruebas A/B de la rama youtube-cola
+# (cola-sa/*/ab-estado.json) y el registro saudi/crecimiento/mejoras-saudi.json.
+# "Run workflow" lo genera en el momento (con dias=N cubre otro período). Con prueba=true solo lo muestra en el resumen
+# de la ejecución: no guarda nada en la rama ni abre issue.
 name: Informe semanal de estadísticas (Arabia Saudita)
 concurrency: estadisticas-saudi
 on:
@@ -18,6 +21,10 @@ on:
       dias:
         description: "Días que cubre el informe"
         default: "7"
+      prueba:
+        description: "Solo mostrarlo (sin guardar ni abrir issue)"
+        type: boolean
+        default: false
 permissions:
   contents: write
   issues: write
@@ -43,9 +50,30 @@ jobs:
           else
             git worktree add --orphan -b estadisticas-saudi informes
           fi
+      - name: Traer las pruebas A/B (rama youtube-cola)
+        # Solo los ab-estado.json, por la API (la rama tiene los mp4 de la cola y no hace falta bajarlos)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "AB_DIR=$PWD/ab" >> "$GITHUB_ENV"
+          gh api "repos/$GITHUB_REPOSITORY/git/trees/youtube-cola?recursive=1" \
+            --jq '.tree[] | select(.path | test("^cola-sa/[^/]+/ab-estado\\.json$")) | .path' > ab.txt || true
+          while read -r f; do
+            mkdir -p "ab/$(basename "$(dirname "$f")")"
+            gh api -H "Accept: application/vnd.github.raw" "repos/$GITHUB_REPOSITORY/contents/$f?ref=youtube-cola" \
+              > "ab/$(basename "$(dirname "$f")")/ab-estado.json" || true
+          done < ab.txt
+          echo "Pruebas A/B encontradas: $(wc -l < ab.txt)"
       - name: Generar el informe
-        run: python3 scripts/estadisticas-saudi.py informes/informes-saudi > informe.md
+        run: |
+          if [ "${{ inputs.prueba }}" = "true" ]; then
+            cp -r informes/informes-saudi prueba-saudi 2>/dev/null || mkdir prueba-saudi
+            python3 scripts/estadisticas-saudi.py prueba-saudi > informe.md
+          else
+            python3 scripts/estadisticas-saudi.py informes/informes-saudi > informe.md
+          fi
       - name: Guardar en la rama estadisticas-saudi
+        if: ${{ !inputs.prueba }}
         run: |
           cd informes
           git config user.name "aiacciones-bot"
@@ -58,5 +86,6 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          if [ "${{ inputs.prueba }}" = "true" ]; then cat informe.md >> "$GITHUB_STEP_SUMMARY"; exit 0; fi
           gh issue create --repo "$GITHUB_REPOSITORY" --title "Informe semanal Arabia Saudita $(date -u +%F)" --body-file informe.md
           cat informe.md >> "$GITHUB_STEP_SUMMARY"
