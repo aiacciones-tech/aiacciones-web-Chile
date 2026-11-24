@@ -107,8 +107,10 @@ Plantilla con ejemplo real: `ejemplo-shorts-extra/` (`short-2.json`, `short-3.js
 - `encolar.sh` deja los Shorts 2 y 3 en `cola-ge-espera/bolsa-<fecha>-short<n>/` (rama `youtube-cola`) con `publicar.txt` (hora UTC).
   `cola-espera-GE.yml` (cada 20 min de 09 a 16 UTC) los pasa a `cola-ge/` a su hora, lanza `youtube-GE.yml` y luego `buffer-GE.yml`
   (TikTok e Instagram; sin LinkedIn ni X para no saturar). Con más de 8 h de retraso no se publican (`caducado.txt`).
-- Límite de YouTube (~10 subidas/24 h): el diario usa 4 (vídeo + 3 Shorts), el DAX 1 y la serie de las 20 grandes hasta 3.
-  Si un día no cabe, `cola-espera-GE.yml` espera; si hace falta recortar, se omite el Short 3 (no hagas `short-3.json`).
+- **Límite de YouTube: nunca se pasa** (regla de Daniel, 24-nov-2026). `ge/cupo.py` cuenta las subidas del canal en 24 h (subidas + encoladas)
+  con tope 9 y prioridades: **alta** (Tagesbericht + Short 1, serie de las 20 grandes) hasta 9, esperando hasta 3 h si no caben;
+  **media** (DAX, Charttechnik, calendario) hasta 7, y si no cabe ese día no se publica; **baja** (Shorts 2 y 3) hasta 5, y si no caben esperan
+  y caducan a las 8 h. Todos los `encolar.sh` de `ge/` y `cola-espera-GE.yml` lo usan: no quites esa comprobación.
 
 ## Reglas (Alemania / UE)
 - Nada de comprar/vender, precio objetivo ni «günstig/teuer». Análisis técnico como datos. Cada cifra con fuente; cálculos propios «(berechnet)».

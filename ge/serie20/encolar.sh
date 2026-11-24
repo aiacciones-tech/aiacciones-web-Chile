@@ -3,6 +3,7 @@
 # youtube-GE.yml lo sube; telegram-GE.yml publica post-telegram.txt y buffer-GE.yml manda post-x.txt a X. Sin Short (máx. 3 vídeos de la serie al día).
 # encolado.txt guarda la hora: plan.py cuenta los del día para no pasar de 3.
 set -e
+CUPO=$(cd "$(dirname "$0")/.." && pwd)/cupo.py   # cupo de subidas a YouTube (regla de Daniel, 24-nov-2026: nunca pasar el límite)
 B=$(cd "$1" && pwd); BASE=$(python3 -c "import json;v=json.load(open('$B/video.json'));print(f\"serie20-{v['ticker'].lower()}-{v['fecha_resultados']}\")")
 S=${SCRATCH:-/tmp/ge-scratch}; mkdir -p $S
 for f in $BASE-GE.mp4 meta-youtube-$BASE-GE.json miniatura-$BASE-GE.png post-telegram-$BASE-GE.txt post-x-$BASE-GE.txt; do
@@ -15,15 +16,8 @@ if [ ! -d $S/cola ]; then
 fi
 cd $S/cola; git pull -q origin youtube-cola 2>/dev/null || true
 git config user.name "aiacciones-bot"; git config user.email "aiacciones-bot@users.noreply.github.com"
-python3 - <<PY
-import json,glob,datetime as dt
-now=dt.datetime.now(dt.timezone.utc); n=0
-for p in glob.glob('cola-ge/*/resultado.json'):
-    try: s=dt.datetime.fromisoformat(json.load(open(p))['subido'].replace('Z','+00:00'))
-    except Exception: continue
-    if now-s<dt.timedelta(hours=24): n+=1
-print('subidas a YouTube (GE) en 24 h:',n); assert n<=7, 'límite de YouTube (~10/24 h por canal): espera antes de encolar'
-PY
+# prioridad alta: espera (hasta 3 h) a que quepan 1 subida(s) sin pasar el límite diario (ge/cupo.py)
+for i in $(seq 18); do git pull -q origin youtube-cola 2>/dev/null; python3 $CUPO alta 1 && break; [ $i = 18 ] && { echo "sin cupo de YouTube tras 3 h: no se encola"; exit 1; }; sleep 600; done
 C=cola-ge/$BASE
 [ -e $C ] && { echo "ya encolado: $C"; exit 1; }
 mkdir -p $C
