@@ -19,7 +19,25 @@
     "26iRDbt5MCM",
     "3_q5cBoQq7Q",
     "JAEvhPnTLo4",
-    "63cOKiKbhxk"
+    "63cOKiKbhxk",
+    "e3nOlBtcf7k",
+    "kN9OXEeHMfw",
+    "_QiEOG8aKtg",
+    "J8HdkUpnEg4",
+    "yAEDmE_96Ik",
+    "LYGPVYFVAdE",
+    "Wwg54HiB6WA",
+    "N4PPonnO8-Y",
+    "b91y5w0X2iM",
+    "1eEP4T2Zx5w",
+    "eVUX0sy2mAM",
+    "8O0AASw-uRk",
+    "49nuHJ-iGwU",
+    "eDsDKEpfqDU",
+    "Ajf-Ih_6Kj8",
+    "aqE1PyHJY08",
+    "vSCNxtXnJz8",
+    "DJWcHsvRKYQ"
    ]
   },
   "empresa-alrajhi": {
@@ -27,7 +45,9 @@
    "titulo": "سهم مصرف الراجحي (1120) | النتائج المالية والتحليل",
    "videos": [
     "xDi62NSYZfI",
-    "KHmzNA2_KVM"
+    "KHmzNA2_KVM",
+    "8TtoTYBJrDg",
+    "2rCZrSDOqS0"
    ]
   },
   "sector-bancos": {
@@ -38,7 +58,9 @@
     "gKhnhEzoYig",
     "oxP2QR2k8Xs",
     "26iRDbt5MCM",
-    "3_q5cBoQq7Q"
+    "3_q5cBoQq7Q",
+    "8O0AASw-uRk",
+    "8TtoTYBJrDg"
    ]
   },
   "empresa-snb": {
@@ -85,14 +107,35 @@
    "id": "PLely2h_DRX-Q",
    "titulo": "الاستهلاك والتجزئة والعقار | المراعي وجرير ودار الأركان",
    "videos": [
-    "JAEvhPnTLo4"
+    "JAEvhPnTLo4",
+    "1eEP4T2Zx5w",
+    "eDsDKEpfqDU"
    ]
   },
   "empresa-sabic": {
    "id": "PLIs-Ea0BFCSc",
    "titulo": "سهم سابك (2010) | النتائج المالية والتحليل",
    "videos": [
-    "63cOKiKbhxk"
+    "63cOKiKbhxk",
+    "GJ4y2emqEZw"
+   ]
+  },
+  "sector-materiales": {
+   "id": "PLKcvwGFat2dQ",
+   "titulo": "البتروكيماويات والتعدين والإسمنت | سابك ومعادن",
+   "videos": [
+    "63cOKiKbhxk",
+    "kN9OXEeHMfw",
+    "Ajf-Ih_6Kj8",
+    "vSCNxtXnJz8"
+   ]
+  },
+  "empresa-stc": {
+   "id": "PLNnJe_fWAVhA",
+   "titulo": "سهم إس تي سي (7010) | النتائج المالية والتحليل",
+   "videos": [
+    "e3nOlBtcf7k",
+    "ry6ssGUcr38"
    ]
   }
  }
