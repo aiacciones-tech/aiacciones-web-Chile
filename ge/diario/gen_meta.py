@@ -80,8 +80,18 @@ tg = (f"📊 Wall Street auf Deutsch | {I['fecha_txt']}\n\n{I['resumen']}\n\n" +
       f"\n\n▶️ Das ganze Video: {{youtube}}\n{cta_post}{canal_linea}\n\nKeine Anlageberatung. Keine Positionen in den genannten Aktien. Mit KI erstellt.")
 open(f"{D}/post-telegram-{F}-GE.txt", "w").write(tg)
 
-# Miniatura 1280x720 (de izquierda a derecha): la fecha de la sesión en destacado y dos índices; logo arriba a la derecha
-th = I["miniatura"]; f = fig(1280, 720)
+# Miniatura 1280x720. Desde el 24-nov-2026 (Daniel): «cifra grande + logo» (miniatura.py) cuando info.json → miniatura trae `cifra`:
+# {"nombre": "Nvidia", "cifra": "+31 %", "logo": "NVDA", "gancho": "Huang ist zurück", "indices": [["S&P 500", "+4,7 %", "teal"], ...]}
+# (logos con LOGOS_DIR=<clon de datos-extra-ge>/logos; sin logo sale una insignia con el ticker). Sin `cifra`, el diseño anterior.
+th = I["miniatura"]
+if th.get("cifra"):
+    import miniatura as MN
+    y_, m_, d_ = I["fecha"].split("-")
+    p = MN.miniatura(f"{D}/miniatura-{F}-GE.png", th.get("etiqueta", f"DER TAGESBERICHT · {d_}.{m_}.{y_}"), th["nombre"], th["cifra"],
+                     th.get("color"), th.get("gancho", ""), th.get("logo"), [tuple(x) for x in th.get("indices", [])])
+    print("ok", slug, "desc", len(desc), "li", len(li), "x", largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")), "logo", MN.buscar_logo(th.get("logo")))
+    sys.exit(0)
+f = fig(1280, 720)
 TT = lambda x, y, s, c, fs, w="bold", ha="left", **k: f.text(x, y, ar(s), color=c, fontsize=fs, weight=w, ha=ha, **k)
 f.patches.append(plt.Rectangle((0, 0.70), 1.0, 0.30, transform=f.transFigure, color=GOLD, figure=f))
 TT(0.045, 0.905, "Wall Street · Sitzung vom", BG, 26, va="center")

@@ -7,7 +7,7 @@ uso: python3 ge/diario/datos_extra.py fx      -> ge/diario/extra/fx/fx-<fecha NY
 - fx: EUR/USD (y EUR/CHF para Suiza) al cierre de Nueva York, para el «Deutscher Blick» del Tagesbericht
   (precios también en euros y el S&P 500 medido en euros, «berechnet»).
 - logos: logos de las ~900 mayores empresas de EE. UU. y las ~200 mayores de Xetra (los de TradingView, los mismos que ve cualquiera en su web),
-  en PNG de 256 px para las miniaturas (ge/diario/miniatura.py). Se refresca cada semana.
+  en PNG de 512 px para las miniaturas (ge/diario/miniatura.py). Se refresca cada semana.
 El workflow guarda la carpeta extra/ en la rama datos-extra-ge (no en main)."""
 import json, os, sys, datetime, urllib.request
 from zoneinfo import ZoneInfo
@@ -44,7 +44,7 @@ def logos():
     import cairosvg
     os.makedirs(f"{OUT}/logos", exist_ok=True)
     idx, hechos, fallos = {}, {}, 0
-    for mercado, n, sub in (("america", 900, "us"), ("germany", 200, "de")):
+    for mercado, n, sub in (("america", 900, "us"), ("germany", 600, "de")):
         os.makedirs(f"{OUT}/logos/{sub}", exist_ok=True)
         for sym, d in scan(mercado, n):
             lid = d.get("logoid")
@@ -59,7 +59,7 @@ def logos():
                 if lid not in hechos:
                     svg = urllib.request.urlopen(urllib.request.Request(f"https://s3-symbol-logo.tradingview.com/{lid}--big.svg",
                                                                         headers={"User-Agent": UA}), timeout=30).read()
-                    hechos[lid] = cairosvg.svg2png(bytestring=svg, output_width=256, output_height=256)
+                    hechos[lid] = cairosvg.svg2png(bytestring=svg, output_width=512, output_height=512)
                 open(f"{OUT}/logos/{rel}", "wb").write(hechos[lid])
                 idx[sym] = rel
             except Exception as e:  # un logo que falta no para el resto: la miniatura usa la insignia con el ticker
