@@ -89,4 +89,22 @@ if th.get("grafico") and VJ.get("simbolo"):
     ax.set_xlim(0, len(ys)); ax.set_ylim(ys.min() * 0.8, ys.max() * 1.05)
 p = f"{D}/thumbnail-{BASE}-saudi.png"; f.savefig(p, dpi=100, facecolor=BG); plt.close(f)
 im = Image.open(p).convert("RGBA"); lg = Image.open(LOGO).convert("RGBA").resize((170, 170), Image.LANCZOS); im.alpha_composite(lg, (20, 150)); im.convert("RGB").save(p)
+
+# Prueba A/B (Daniel, 24-nov-2026, saudi/ab-saudi.md): variante B estilo «gancho» (una frase grande sobre el gráfico a pantalla completa),
+# con título B si video.json trae info.titulo_b. scripts/ab-saudi.py alterna A y B por días y deja la que gana.
+gancho = th.get("gancho") or VJ["tema"]
+f = fig(1280, 720)
+if th.get("grafico") and VJ.get("simbolo"):
+    ax = f.add_axes([0.0, 0.0, 1.0, 0.58]); clean(ax); ax.set_xticks([]); ax.set_yticks([])
+    ax.fill_between(range(len(ys)), ys, ys.min() * 0.8, color=TEAL, alpha=0.22, lw=0); ax.plot(ys, color=TEAL, lw=4.5)
+    ax.set_xlim(0, len(ys)); ax.set_ylim(ys.min() * 0.8, ys.max() * 1.05)
+f.text(0.96, 0.78, ar(gancho, 20), color=GOLD, fontsize=66 if len(gancho) <= 20 else 52, weight="bold", va="center", ha="right", linespacing=1.05)
+f.text(0.155, 0.93, ar(SERIE), color=MUTED, fontsize=24, weight="bold", va="center", ha="left")
+pb = f"{D}/thumbnail-b-{BASE}-saudi.png"; f.savefig(pb, dpi=100, facecolor=BG); plt.close(f)
+im = Image.open(pb).convert("RGBA"); lg = Image.open(LOGO).convert("RGBA").resize((150, 150), Image.LANCZOS); im.alpha_composite(lg, (25, 0)); im.convert("RGB").save(pb)
+ab = {"que": "ambos" if I.get("titulo_b") else "miniatura", "B": {"miniatura": "miniatura-b.png"}, "estilos": {"A": "guia", "B": "gancho"}}
+if I.get("titulo_b"):
+    assert len(I["titulo_b"]) <= 100 and "<" not in I["titulo_b"] and ">" not in I["titulo_b"], len(I["titulo_b"])
+    ab["B"]["title"] = I["titulo_b"]
+json.dump(ab, open(f"{D}/ab-{BASE}-saudi.json", "w"), ensure_ascii=False, indent=1)
 print("ok", BASE, "desc", len(desc), "fb", len(fb), "tg", len(tg), "x", largo_x(x.replace("{youtube}", URL)), "titulo", len(I["titulo"]))

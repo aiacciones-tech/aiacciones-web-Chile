@@ -31,6 +31,7 @@ C=cola-sa/guide-$BASE; CS=cola-sa/guide-$BASE-short
 [ -e $C ] && { echo "ya encolado: $C"; exit 1; }
 mkdir -p $C $CS
 cp $B/guide-$BASE-saudi.mp4 $C/video.mp4; cp $B/meta-youtube-$BASE-saudi.json $C/meta.json; cp $B/thumbnail-$BASE-saudi.png $C/miniatura.png
+[ -s $B/ab-$BASE-saudi.json ] && [ -s $B/thumbnail-b-$BASE-saudi.png ] && { cp $B/ab-$BASE-saudi.json $C/ab.json; cp $B/thumbnail-b-$BASE-saudi.png $C/miniatura-b.png; }
 cp $B/short-$BASE-saudi.mp4 $CS/video.mp4; cp $B/meta-short-$BASE-saudi.json $CS/meta.json
 git add cola-sa; git commit -qm "Cola Arabia Saudita: evergreen, $BASE (video y Short)"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done
