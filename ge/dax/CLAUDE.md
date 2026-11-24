@@ -21,7 +21,7 @@ y deja `datos/dax-<fecha>.json` en la rama `datos-dax-ge`. El Short se publica *
 3. `cifra` 2 «Gewinner und Verlierer»: `big` = la mayor subida o bajada relevante, `barras` con 2 ganadoras y 2 perdedoras, y en la nota
    la amplitud («16 von 40 DAX-Werten im Plus»). Para la mayor, motivo si hay noticia; si no, solo la cifra.
 4. `kpis` 3 «Charttechnik DAX»: RSI 14, distancia a la 200-Tage-Linie y al Rekordhoch (de `dax.py`, «berechnet»). Nota: «Das sind Daten, keine Kauf- oder Verkaufssignale.»
-5. `fin`: `titular` breve (p. ej. «Heute 22 Uhr:\nWall Street») y `cta` «Der Tagesbericht ab 22:30 Uhr». Voz: «Den Tagesbericht zur Wall Street
+5. `fin`: `titular` breve (p. ej. «Heute Abend:\nWall Street») y `cta` «Der Tagesbericht nach US-Börsenschluss» (sin hora: el Tagesbericht sale hacia las 23:30). Voz: «Den Tagesbericht zur Wall Street
    gibt es heute Abend auf unserem Kanal. Keine Anlageberatung.»
 Unas 95-115 palabras de voz en total (Azure ≈ 128 palabras/min más pausas). `make_short.py` corta si pasa de 59 s.
 Campos extra de `short.json` para `meta_dax.py`: `fecha` (ISO), `titulo_yt` (≤ 90 caracteres, p. ej. «DAX schließt 0,9 % tiefer: Rheinmetall vorn, SAP schwach»),
