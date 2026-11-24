@@ -85,7 +85,7 @@ def s_cifras(i, e, t):
     for k, (v, lab, c) in enumerate(C):
         b = ease((t - k * 0.12) / 0.4); x = XL + k * w
         rect(f, x, 0.36, w - 0.02, 0.36, PANEL, b)
-        T(f, x + 0.02, 0.58, v, c, 64 if len(v) <= 8 else 48, "bold", alpha=b)
+        T(f, x + 0.02, 0.58, v, c, (64 if len(v) <= 8 else 48) if len(C) < 4 else (50 if len(v) <= 7 else 40), "bold", alpha=b)
         T(f, x + 0.02, 0.50, wrap(lab, int(w * 120)), FG, 22, alpha=b, va="top", linespacing=1.3)
     if e.get("nota"): T(f, XL, 0.28, wrap(e["nota"], 120), NEG, 22, "bold", alpha=ease((t - 0.4) / 0.4), va="top")
     if e.get("fuente"): fuente(f, e["fuente"])
