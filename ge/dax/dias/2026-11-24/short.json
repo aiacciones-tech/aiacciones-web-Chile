@@ -1,0 +1,112 @@
+{
+ "fecha": "2026-11-24",
+ "cabecera": "DAX am Abend · 24. November 2026",
+ "out": "dax-2026-11-24-GE.mp4",
+ "fuente": "Quellen: TradingView (Xetra-Schlusskurse), dpa-AFX\nüber finanzen.at und finanzen.net (24. November 2026).",
+ "titulo_yt": "DAX fällt 1,3 %: Tech-Rally verpufft – Infineon −9,7 %, SAP und Telekom im Plus",
+ "resumen": "Der DAX schließt am Dienstag, 24. November, 1,26 % tiefer bei 25.017,81 Punkten. Nach der Nvidia-Euphorie vom Montag geben Technologiewerte nach; dazu kommen Sorgen vor neuen US-Importzöllen (dpa-AFX).",
+ "claves": [
+  "Infineon −9,68 %, Siemens Energy −6,78 %: Chipwerte nach UBS-Abstufung von Aixtron belastet",
+  "Deutsche Telekom +2,17 %, SAP +2,01 %; 17 von 40 DAX-Werten im Plus",
+  "MDAX −1,72 %, Euro Stoxx 50 −1,16 %",
+  "DAX 0,1 % über der 200-Tage-Linie, 7,3 % unter dem Rekordhoch vom 12. November (berechnet)"
+ ],
+ "tags": [
+  "Infineon",
+  "Siemens Energy",
+  "SAP",
+  "Deutsche Telekom"
+ ],
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "DAX · Handelstag vom",
+   "fecha": "Di., 24. November 2026",
+   "indices": [
+    [
+     "DAX",
+     "−1,26 %",
+     "25.017,81",
+     "neg"
+    ],
+    [
+     "MDAX",
+     "−1,72 %",
+     "28.791,63",
+     "neg"
+    ]
+   ],
+   "pregunta": "Die Tech-Rally verpufft",
+   "voz": "DAX, Dienstag, 24. November. Die Tech-Rally verpufft. Drei Punkte."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Das Wichtigste",
+   "big": "−1,26 %",
+   "delta": "DAX schließt bei 25.018 Punkten",
+   "color": "neg",
+   "nota": "Nach der Nvidia-Euphorie vom Montag geben\nTech-Werte nach. Dazu Sorgen vor neuen\nUS-Importzöllen (dpa-AFX).",
+   "voz": "Eins. Der DAX verliert 1,3 Prozent auf 25.018 Punkte. Nach der Nvidia-Euphorie vom Montag geben Technologiewerte wieder nach. Dazu kommen Sorgen vor neuen US-Importzöllen."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Gewinner und Verlierer",
+   "big": "−9,68 %",
+   "delta": "Infineon größter Verlierer",
+   "color": "neg",
+   "barras": [
+    [
+     "Telekom",
+     2.17
+    ],
+    [
+     "SAP",
+     2.01
+    ],
+    [
+     "Siemens Energy",
+     -6.78
+    ],
+    [
+     "Infineon",
+     -9.68
+    ]
+   ],
+   "nota": "17 von 40 DAX-Werten im Plus.\nChipwerte belastet nach\nUBS-Abstufung von Aixtron.",
+   "voz": "Zwei. Infineon fällt um 9,7 Prozent, Siemens Energy um 6,8 Prozent. Eine Abstufung von Aixtron durch die UBS belastet die Chipwerte. Deutsche Telekom und SAP steigen um rund 2 Prozent."
+  },
+  {
+   "tipo": "kpis",
+   "n": 3,
+   "label": "Charttechnik DAX",
+   "items": [
+    [
+     "40",
+     "RSI 14",
+     "blue"
+    ],
+    [
+     "+0,1 %",
+     "über der 200-Tage-Linie (berechnet)",
+     "teal"
+    ],
+    [
+     "−7,3 %",
+     "unter dem Rekordhoch vom 12. November",
+     "neg"
+    ]
+   ],
+   "nota": "Das sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Der DAX liegt nur noch 0,1 Prozent über seiner 200-Tage-Linie und 7,3 Prozent unter dem Rekordhoch vom 12. November."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Morgen früh:\nWall Street",
+   "cta": "Tagesbericht vor Börsenstart",
+   "voz": "Den Tagesbericht zur Wall Street gibt es morgen früh auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}
