@@ -1,6 +1,30 @@
 {
- "actualizado": "2026-11-23T15:44Z",
+ "actualizado": "2026-11-24T02:47Z",
  "items": [
+  {
+   "id": "4d7fa3c6-2f37-46e5-a467-7bc8e6c8f354",
+   "tipo": "OIR",
+   "fecha": "2026-11-23 18:19",
+   "entidad": "INTERNATIONAL CONSOLIDATED AIRLINES GROUP, S.A.",
+   "nif": "A85845535",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "La Sociedad remite información sobre las operaciones efectuadas al amparo de su programa de recompra de acciones",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b4d7fa3c6-2f37-46e5-a467-7bc8e6c8f354%7d",
+   "ticker": "IAG",
+   "temas": []
+  },
+  {
+   "id": "fade2afb-10ed-434f-8814-68eba8a82f07",
+   "tipo": "OIR",
+   "fecha": "2026-11-23 17:51",
+   "entidad": "BANCO DE SABADELL, S.A.",
+   "nif": "A08000143",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Banco Sabadell informa de la finalización del programa de recompra y de las operaciones sobre acciones propias realizadas entre 16 y 20 de noviembre de 2026 bajo dicho programa.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bfade2afb-10ed-434f-8814-68eba8a82f07%7d",
+   "ticker": "SAB",
+   "temas": []
+  },
   {
    "id": "47aa8fd6-8443-4011-bf83-e77a88e6f807",
    "tipo": "OIR",
