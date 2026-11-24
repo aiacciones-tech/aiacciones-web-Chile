@@ -10,15 +10,17 @@ from zoneinfo import ZoneInfo
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from comun import *
 from comun import _de
-from tecnico import calc, accion, INDICE, INDICE_CORTO, MESES, DIAS, TZ, BERLIN, EUROPA, fecha_de
+from tecnico import calc, accion, INDICE, INDICE_CORTO, MESES, DIAS, TZ, BERLIN, EUROPA, fecha_de, cargar_fx, en_euro, pct_en_euro
 DIR = os.path.abspath(sys.argv[1]); PREVIEW = len(sys.argv) > 2 and sys.argv[2] == "preview"
 W, H, FPS = 1920, 1080, 30
 AUD = os.environ.get("AUD", "aud")
 MIN_S, MAX_S = 450, 630   # duración: entre 7:30 y 10:30 (objetivo 8-10 minutos)
 M = json.load(open(f"{DIR}/mercado.json")); VJ = json.load(open(f"{DIR}/video.json"))
 R, A = calc(M, VJ.get("nombres")); NYZ = ZoneInfo("America/New_York"); FECHA = dt.date.fromisoformat(R["fecha"]); FECHA_TXT = fecha_de(FECHA)
+# «Deutscher Blick» (24-nov-2026): EUR/USD al cierre de Nueva York (<día>/fx.json de la rama datos-extra-ge). Sin él, el vídeo sale como antes.
+FX = cargar_fx(DIR, R["fecha"])
 OUT = f"{DIR}/video-bolsa-{R['fecha']}-GE.mp4"
-SECS = ["Einstieg", "Die großen Indizes", "Sektoren", "Aktien des Tages", "Makro", "Charttechnik", "Was morgen ansteht", "Fazit"]; NS = len(SECS)
+SECS = ["Einstieg", "Die großen Indizes", "Sektoren", "Aktien des Tages", "Makro", "Charttechnik", "Was heute ansteht", "Fazit"]; NS = len(SECS)
 LG = load_logo(130); LGS = load_logo(95); LGB = load_logo(230)
 NB = 126  # unos 6 meses de sesiones
 TV_TXT = "TradingView"
@@ -191,10 +193,14 @@ def s_sectores(t):
 def s_accion(i, t):
     J = VJ["acciones"][i]; a = accion(M, J["ticker"], VJ.get("nombres")); e = ease(t / 0.8)
     f = base_fig(4, f"Aktien des Tages · {i + 1}/5", f"{a['nombre']} ({a['ticker']})",
-                 J.get("fuente", f"Kurs und Volumen: {TV_TXT} (Schluss {fiso(R['fecha'])}). Volumen im Vergleich zum 10-Tage-Schnitt: berechnet. Meldung: genannte Quellen."))
+                 J.get("fuente", f"Kurs und Volumen: {TV_TXT} (Schluss {fiso(R['fecha'])}). Volumen im Vergleich zum 10-Tage-Schnitt: berechnet. Meldung: genannte Quellen.")
+                 + (" Euro-Kurs: berechnet mit EUR/USD zum New Yorker Schluss." if FX else ""))
     cc = cc_(a["cambio"])
     if a["nombre_en"].lower() != a["nombre"].lower(): T(f, 0.06, 0.735, a["nombre_en"], MUTED, 22, "bold")
-    f.text(0.06, 0.655, num(a["cierre"]) + " $", color=FG, fontsize=60, weight="bold", ha="left")
+    tp = f.text(0.06, 0.655, num(a["cierre"]) + " $", color=FG, fontsize=60, weight="bold", ha="left")
+    if FX:   # precio en euros al lado (berechnet con el EUR/USD del cierre de Nueva York)
+        x1 = f.transFigure.inverted().transform(tp.get_window_extent(f.canvas.get_renderer()))[1][0]
+        f.text(x1 + 0.02, 0.655, f"≈ {num(en_euro(a['cierre'], FX))} €", color=MUTED, fontsize=34, weight="bold", ha="left")
     f.text(0.06, 0.6, f"{pct(a['cambio'])}   ({pts(a['cambio_abs'])} $)", color=cc, fontsize=32, weight="bold", ha="left")
     fil = [("Handelsvolumen", millones(a["volumen"]) + " Aktien"), ("vs. 10-Tage-Schnitt", f"×{num(a['vol_rel'], 1)}" if a.get("vol_rel") else "—"),
            ("Umsatz", millones(a["valor_usd"]) + " $")]
@@ -234,7 +240,7 @@ def s_macro(t):
     J = VJ.get("macro", {}); X = R.get("macro") or []
     f = base_fig(5, "Zinsen, Dollar, Rohstoffe", J.get("titulo", "Anleihen, Dollar, Volatilität, Öl und Gold"),
                  J.get("fuente", f"{TV_TXT}: Rendite 10-jähriger US-Staatsanleihen (TVC:US10Y, Veränderung in Basispunkten), DXY, VIX, US-Öl WTI (TVC:USOIL), Gold"
-                       + (", EUR/USD" if any(x["simbolo"] == "FX:EURUSD" for x in X) else "") + ", DAX (XETR:DAX) und Euro Stoxx 50 (TVC:SX5E). "
+                       + (", EUR/USD" if FX or any(x["simbolo"] == "FX:EURUSD" for x in X) else "") + ", DAX (XETR:DAX) und Euro Stoxx 50 (TVC:SX5E). "
                        f"Letzter Schluss bis {fiso(R['fecha'])}; Linie: letzte 15 Handelstage."))
     w = 0.88 / max(len(X), 1)
     for i, x in enumerate(X):
@@ -256,9 +262,11 @@ def s_macro(t):
     # Europa: DAX, Euro Stoxx 50 (y EUR/USD si está) de los datos de Nabd, más el texto del día
     C = R.get("contexto") or {}
     eu = [f"{n} {num(C[s]['close'], 4 if s == 'FX:EURUSD' else 0)} ({pct(C[s]['change'])})" for s, n in EUROPA if s in C and s != "FX:EURUSD"]
+    if FX and not any(x["simbolo"] == "FX:EURUSD" for x in X):   # Deutscher Blick: EUR/USD y el S&P 500 medido en euros (berechnet)
+        eu += [f"EUR/USD {num(FX['eurusd'], 4)} ({pct(FX['eurusd_pct'])})", f"S&P 500 in Euro {pct(pct_en_euro(R['spx']['var_pct'], FX))}*"]
     if eu or J.get("europa"):
         c2 = ease((t - 0.5) / 0.4); rect(f, 0.06, 0.235, 0.88, 0.085, GOLD, 0.15 * c2)
-        T(f, 0.075, 0.293, "Und Europa?  " + "  ·  ".join(eu) + "   (Xetra-Schluss 17:30 Uhr)", GOLD, 20, "bold", va="center", alpha=c2)
+        T(f, 0.075, 0.293, "Und Europa?  " + "  ·  ".join(eu) + ("   (*berechnet)" if FX else "   (Xetra-Schluss 17:30 Uhr)"), GOLD, 20 if not FX else 17, "bold", va="center", alpha=c2)
         if J.get("europa"): T(f, 0.075, 0.255, J["europa"], FG, 18 if len(J["europa"]) < 120 else 15, va="center", alpha=c2)
     return to_arr(f)
 
@@ -352,7 +360,7 @@ def s_esc(k, t):
     return to_arr(f)
 
 
-# ---------- 7. Was morgen ansteht ----------
+# ---------- 7. Was heute ansteht (el Tagesbericht sale por la mañana en Alemania: la próxima sesión es la de hoy) ----------
 def s_agenda(t):
     G = VJ["agenda"]; f = base_fig(7, "Was steht in der nächsten Sitzung an?", G["titulo"], G["fuente"])
     for x, h, ha in ((0.06, "Datum", "left"), (0.21, "Termin", "left"), (0.82, "New York", "center"), (0.92, "Deutschland", "center")):

@@ -1,7 +1,7 @@
 """Indicadores de Wall Street (S&P 500 como índice principal; Nasdaq Composite, Dow Jones y Russell 2000 como acompañantes)
 a partir de datos/mercado-<fecha>.json. Lo usan make_video.py, make_short.py y gen_meta.py, y sirve para escribir el guion.
 uso: python3 tecnico.py <mercado.json>  -> imprime JSON con cierres, medias, RSI, estocástico, niveles, volumen, valores y contexto."""
-import json, re, sys, datetime as dt, numpy as np
+import json, os, re, sys, datetime as dt, numpy as np
 from zoneinfo import ZoneInfo
 
 NY = ZoneInfo("America/New_York")
@@ -299,6 +299,40 @@ def grandes_ndx(D, extra=None, n=8):
     return out
 
 
-if __name__ == "__main__":
-    r, _ = calc(json.load(open(sys.argv[1])))
+def cargar_fx(dir_=None, fecha=None):
+    """EUR/USD al cierre de Nueva York (datos-extra-GE.yml → rama datos-extra-ge, fx/fx-<fecha>.json; copiarlo como <día>/fx.json
+    o pasar FX_JSON). Devuelve {"eurusd", "eurusd_pct", "eurchf", "fecha"} o None si falta o no es de la sesión `fecha`."""
+    p = os.environ.get("FX_JSON") or (os.path.join(dir_, "fx.json") if dir_ else "")
+    if not p or not os.path.exists(p): return None
+    j = json.load(open(p)); e = j["fx"].get("FX:EURUSD") or {}
+    if fecha and j.get("fecha") != fecha:
+        print(f"aviso: fx.json es del {j.get('fecha')}, no de la sesión {fecha}: sin Deutscher Blick", file=sys.stderr); return None
+    if not e.get("close"): return None
+    c = j["fx"].get("FX_IDC:EURCHF") or {}
+    return {"eurusd": e["close"], "eurusd_pct": e.get("change") or 0.0, "eurchf": c.get("close"), "fecha": j.get("fecha")}
+
+
+def en_euro(usd, fx):
+    """Precio en dólares → euros (berechnet) con el EUR/USD del cierre de Nueva York."""
+    return usd / fx["eurusd"] if fx else None
+
+
+def pct_en_euro(pct_usd, fx):
+    """Rentabilidad en euros (berechnet) = (1 + r_USD) / (1 + r_EURUSD) − 1, en %. Si el euro sube, la ganancia en euros es menor."""
+    return ((1 + pct_usd / 100) / (1 + fx["eurusd_pct"] / 100) - 1) * 100 if fx else None
+
+
+def deutscher_blick(D, R, fx, extra=None):
+    """Cifras del «Deutscher Blick» (todas berechnet): EUR/USD, índices en euros y precio en euros de las candidatas."""
+    if not fx: return None
+    out = {"eurusd": round(fx["eurusd"], 4), "eurusd_pct": round(fx["eurusd_pct"], 2),
+           "indices_en_euro_pct": {k: round(pct_en_euro(R[k]["var_pct"], fx), 2) for k in ("spx", "ndx", "dji") if k in R},
+           "acciones_en_euro": {c["ticker"]: round(en_euro(c["cierre"], fx), 2) for c in candidatas(D, extra)}}
+    return out
+
+
+if __name__ == "__main__":   # python3 tecnico.py <mercado.json> [fx.json]  (con fx.json añade "deutscher_blick")
+    D_ = json.load(open(sys.argv[1])); r, _ = calc(D_)
+    if len(sys.argv) > 2:
+        os.environ["FX_JSON"] = sys.argv[2]; r["deutscher_blick"] = deutscher_blick(D_, r, cargar_fx(fecha=r.get("fecha")))
     print(json.dumps(r, ensure_ascii=False, indent=1))

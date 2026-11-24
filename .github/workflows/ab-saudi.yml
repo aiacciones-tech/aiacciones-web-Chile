@@ -1,0 +1,58 @@
+# Pruebas A/B de miniatura y título en los videos largos de Saudi Arabia AI Stocks (Daniel, 24-nov-2026).
+# YouTube no ofrece "Test & Compare" por API: scripts/ab-saudi.py alterna por días la variante A y la B de cada video
+# de cola-sa/ que tenga ab.json (vídeo diario y serie educativa), guarda las vistas de cada día y el día 5 deja la que gana.
+# Corre cada día a las 08:10 UTC (justo después de la medianoche del Pacífico, que es como YouTube cuenta los días).
+# El estado queda en cola-sa/<slug>/ab-estado.json de la rama youtube-cola; "Run workflow" con modo=resumen muestra la tabla.
+# CTR e impresiones: solo si existe el secreto YT_SAUDI_STATS_REFRESH_TOKEN con permiso yt-analytics.readonly; si no, se mide con vistas.
+name: Pruebas A/B de miniaturas y títulos (Arabia Saudita)
+concurrency: ab-saudi
+on:
+  schedule:
+    - cron: '10 8 * * *'
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "rotar (lo mismo que la ejecución diaria) o resumen (solo muestra la tabla)"
+        default: resumen
+permissions:
+  contents: write
+jobs:
+  ab:
+    runs-on: ubuntu-latest
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_SAUDI_CLIENT_ID || secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_SAUDI_CLIENT_SECRET || secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_SAUDI_REFRESH_TOKEN }}
+      YT_STATS_REFRESH_TOKEN: ${{ secrets.YT_SAUDI_STATS_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts
+      # Solo los json y png de cola-sa/ (sin bajar los mp4).
+      - uses: actions/checkout@v4
+        with:
+          ref: youtube-cola
+          path: cola
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            cola-sa/*/*.json
+            cola-sa/*/*.png
+      - name: Rotar variantes y cerrar pruebas
+        if: github.event_name == 'schedule' || inputs.modo == 'rotar'
+        working-directory: cola
+        run: python3 ../scripts/ab-saudi.py rotar cola-sa
+      - name: Guardar el estado en youtube-cola
+        if: github.event_name == 'schedule' || inputs.modo == 'rotar'
+        working-directory: cola
+        run: |
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          git add cola-sa/*/ab-estado.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Pruebas A/B Arabia Saudita $(date -u +%F)"
+          for i in 1 2 3 4; do git pull --rebase -q origin youtube-cola && git push origin HEAD:youtube-cola && exit 0; sleep $((5 * i)); done; exit 1
+      - name: Resumen
+        if: always()
+        working-directory: cola
+        run: python3 ../scripts/ab-saudi.py resumen cola-sa | tee -a "$GITHUB_STEP_SUMMARY"

@@ -14,3 +14,12 @@
 
 La clave es el plan gratuito de Azure compartido con Nabd Wall Street (500.000 caracteres/mes; este canal gasta ~3.200 por sesión).
 No regeneres la voz sin necesidad.
+
+## Prueba A/B de miniatura y título (desde el 24-nov-2026, pedido de Daniel)
+Cada video largo lleva una variante B que `scripts/ab-saudi.py` (workflow `ab-saudi.yml`) alterna por días con la A y luego deja la ganadora.
+En `info.json` escribe también:
+- `titulo_b` (≤100 caracteres): estilo «gancho», el titular del día primero y la fecha al final,
+  p. ej. «تاسي يعكس اتجاهه بعد 10,000 وجرير -8% | الأسهم السعودية اليوم 23 نوفمبر 2026». Mismos datos que el título A, nada inventado.
+- `miniatura.gancho` (≤26 caracteres si es posible): la frase grande de la miniatura B (la variación de TASI va debajo, enorme).
+Si faltan, `gen_meta.py` los saca de `miniatura.sub`. `gen_meta.py` escribe `miniatura-b-<fecha>-SA.png` y `ab-<fecha>-SA.json`;
+`encolar.sh` los copia a la cola (`miniatura-b.png`, `ab.json`). Mira también la miniatura B antes de encolar.

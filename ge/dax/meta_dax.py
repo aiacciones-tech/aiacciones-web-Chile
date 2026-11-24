@@ -2,7 +2,7 @@
 uso: python3 ge/dax/meta_dax.py <carpeta del día>
 Lee de short.json, además de las escenas: "titulo_yt" (≤ 90 caracteres, sin #Shorts), "resumen" (2-3 frases con las cifras del día),
 "claves" (3-4 viñetas cortas) y "fuente". Escribe meta-youtube-dax-<fecha>-GE.json y post-{tiktok,instagram}-dax-<fecha>-GE.txt.
-Llevan el aviso legal y el de IA (Reglamento de IA de la UE, art. 50) y una invitación al Tagesbericht de Wall Street de la noche."""
+Llevan el aviso legal y el de IA (Reglamento de IA de la UE, art. 50) y una invitación al Tagesbericht de Wall Street de la mañana siguiente (desde el 25-nov-2026 sale por la mañana)."""
 import json, os, sys
 
 CANAL = "https://www.youtube.com/channel/UC23KiHTq_lULliZwAM3dEpA"
@@ -19,7 +19,7 @@ def main():
     titulo = t + " #Shorts"
     fuente = S["fuente"].replace("\n", " ")
     claves = "\n".join("• " + c for c in S["claves"])
-    desc = (f"{S['resumen']}\n\n{claves}\n\n{fuente}\nHeute Abend nach US-Börsenschluss: Der Tagesbericht zur Wall Street auf unserem Kanal.\n\n"
+    desc = (f"{S['resumen']}\n\n{claves}\n\n{fuente}\nMorgen früh vor Börsenstart: Der Tagesbericht zur Wall Street auf unserem Kanal.\n\n"
             f"{AVISO}\n{KI}\n\nKanal abonnieren: {CANAL}\n#Shorts {HASH}")
     assert len(desc) < 5000 and "<" not in desc and ">" not in desc
     tags = ["DAX", "DAX 40", "Börse", "Aktien", "Xetra", "Deutsche Aktien", "Börse Frankfurt", "Shorts"] + S.get("tags", [])

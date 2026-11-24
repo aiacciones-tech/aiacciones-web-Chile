@@ -42,3 +42,10 @@ cada post enlaza https://www.youtube.com/@SaudiArabiaAIStocks; LinkedIn lleva el
    Si Azure falla, Piper (`pip install piper-tts`) y dilo en el resumen.
 5. `SCRATCH=<scratch> bash encolar.sh <carpeta>`; copia mp4, Short, miniatura, metadatos, guion y posts a `/mnt/project-files/saudi-educativo/<base>/`.
 6. Actualiza `plan-saudi.json` (estado `publicada`, IDs) y abre o actualiza el PR de la rama para que quede en main.
+
+## Prueba A/B de miniatura (y título) (desde el 24-nov-2026, pedido de Daniel)
+`meta_leccion.py` hace también una miniatura B estilo «pregunta» (`thumbnail-b-<base>-saudi.png`: pregunta grande sobre el gráfico a pantalla completa)
+y `ab-<base>-saudi.json`; `encolar.sh` los copia a la cola y `scripts/ab-saudi.py` (workflow `ab-saudi.yml`) alterna A y B por días y deja la ganadora.
+En `video.json` escribe `miniatura.gancho` (la pregunta, p. ej. «كيف تجد الدعم والمقاومة؟»; si falta: «كيف تقرأ <titulo>؟») y
+`info.titulo_b` (≤100 caracteres, estilo pregunta, p. ej. «كيف تحدد الدعم والمقاومة؟ شرح عملي على سهم الراجحي»). Sin `titulo_b` solo se prueba la miniatura.
+Mira la miniatura B antes de encolar.

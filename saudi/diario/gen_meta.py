@@ -80,4 +80,23 @@ TT(0.955, 0.17, th["sub"], FG, 28)
 TT(0.955, 0.05, th["pie"], BLUE, 22)
 p = f"{D}/miniatura-{F}-SA.png"; f.savefig(p, dpi=100, facecolor=BG); plt.close(f)
 im = Image.open(p).convert("RGBA"); lg = Image.open(LOGO).convert("RGBA").resize((190, 190), Image.LANCZOS); im.alpha_composite(lg, (25, 12)); im.convert("RGB").save(p)
+
+# Prueba A/B (Daniel, 24-nov-2026): variante B de miniatura y título, estilo «gancho» (el titular del día primero, la fecha después).
+# A = miniatura de arriba + I["titulo"] (estilo «fecha»). scripts/ab-saudi.py las alterna por días y deja la que gana.
+# I["titulo_b"] y I["miniatura"]["gancho"] los escribe la sesión diaria; si faltan, salen de I["miniatura"]["sub"].
+gancho = th.get("gancho") or th["sub"]
+fecha_corta = re.search(r"\d+ \S+ \d{4}", I["fecha_txt"]).group(0)  # «23 نوفمبر 2026»
+titulo_b = I.get("titulo_b") or f"{gancho} | الأسهم السعودية اليوم {fecha_corta}"
+assert len(titulo_b) <= 100 and "<" not in titulo_b and ">" not in titulo_b, len(titulo_b)
+nom0, big0, c0 = th["indices"][0]
+f = fig(1280, 720)
+f.patches.append(plt.Rectangle((0, 0), 0.022, 1.0, transform=f.transFigure, color=col(c0), figure=f))  # franja del color del día
+f.text(0.955, 0.81, ar(gancho, 26), color=FG, fontsize=54 if len(gancho) <= 26 else 46, weight="bold", ha="right", va="center", linespacing=1.0)
+TT(0.955, 0.58, nom0, GOLD, 34, va="center")
+f.text(0.955, 0.33, big0, color=col(c0), fontsize=150, weight="bold", ha="right", va="center")
+TT(0.955, 0.07, f"جلسة {th['fecha']}", MUTED, 26, va="center")
+pb = f"{D}/miniatura-b-{F}-SA.png"; f.savefig(pb, dpi=100, facecolor=BG); plt.close(f)
+im = Image.open(pb).convert("RGBA"); lg = Image.open(LOGO).convert("RGBA").resize((170, 170), Image.LANCZOS); im.alpha_composite(lg, (40, 520)); im.convert("RGB").save(pb)
+json.dump({"que": "ambos", "B": {"title": titulo_b, "miniatura": "miniatura-b.png"}, "estilos": {"A": "fecha", "B": "gancho"}},
+          open(f"{D}/ab-{F}-SA.json", "w"), ensure_ascii=False, indent=1)
 print("ok", slug, "desc", len(desc), "li", len(li), "x", largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")))
