@@ -21,7 +21,7 @@
 Credenciales: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN (las del canal saudí, como en youtube-saudi.yml).
 Solo usa la biblioteca estándar de Python.
 """
-import json, os, re, sys, urllib.parse, urllib.request
+import json, os, re, sys, time, urllib.parse, urllib.request
 
 API = "https://www.googleapis.com/youtube/v3"
 COSTO = {"listar": 1, "crear": 50, "anadir": 50}
@@ -53,16 +53,22 @@ class Cliente:
         self.gastado += COSTO[tipo]
         self.t = self.t or self.token()
         data = json.dumps(cuerpo).encode() if cuerpo is not None else None
-        req = urllib.request.Request(f"{API}/{ruta}", data, {"Authorization": f"Bearer {self.t}",
-                                                            "Content-Type": "application/json; charset=UTF-8"})
-        try:
-            with urllib.request.urlopen(req, timeout=120) as r:
-                return json.loads(r.read() or b"{}")
-        except urllib.error.HTTPError as e:
-            txt = e.read().decode("utf-8", "replace")
-            if e.code == 403 and ("quotaExceeded" in txt or "rateLimitExceeded" in txt):
-                raise SinCuota("YouTube dice que se acabó la cuota diaria de la API")
-            raise RuntimeError(f"HTTP {e.code} en {ruta.split('?')[0]}: {txt[:600]}")
+        # YouTube da 409 SERVICE_UNAVAILABLE si se añade muy rápido (sobre todo a una playlist recién creada): se reintenta.
+        for espera in (3, 10, 30, None):
+            req = urllib.request.Request(f"{API}/{ruta}", data, {"Authorization": f"Bearer {self.t}",
+                                                                "Content-Type": "application/json; charset=UTF-8"})
+            try:
+                with urllib.request.urlopen(req, timeout=120) as r:
+                    time.sleep(1)
+                    return json.loads(r.read() or b"{}")
+            except urllib.error.HTTPError as e:
+                txt = e.read().decode("utf-8", "replace")
+                if e.code == 403 and ("quotaExceeded" in txt or "rateLimitExceeded" in txt):
+                    raise SinCuota("YouTube dice que se acabó la cuota diaria de la API")
+                if e.code in (409, 500, 503) and espera:
+                    time.sleep(espera)
+                    continue
+                raise RuntimeError(f"HTTP {e.code} en {ruta.split('?')[0]}: {txt[:600]}")
 
 
 def clasificar(slug, empresas):
@@ -152,7 +158,7 @@ def main():
         return
 
     cli = Cliente(presupuesto, simular)
-    hechas, creadas = 0, 0
+    hechas, creadas, errores = 0, 0, 0
     existentes = {}
     try:
         # Playlists que ya existen en el canal (por si el estado se perdió): se reconocen por el título.
@@ -177,11 +183,17 @@ def main():
                         "status": {"privacyStatus": "public"}})
                     pid = r["id"]
                     creadas += 1
+                    time.sleep(5)  # dar tiempo a YouTube antes de añadirle videos
                     print(f"Creada: {titulo} -> https://www.youtube.com/playlist?list={pid}")
                 pl = estado["playlists"][clave] = {"id": pid, "titulo": titulo, "videos": []}
                 json.dump(estado, open(est_p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-            cli.pedir("anadir", "playlistItems?part=snippet", {"snippet": {
-                "playlistId": pl["id"], "position": 0, "resourceId": {"kind": "youtube#video", "videoId": vid}}})
+            try:
+                cli.pedir("anadir", "playlistItems?part=snippet", {"snippet": {
+                    "playlistId": pl["id"], "position": 0, "resourceId": {"kind": "youtube#video", "videoId": vid}}})
+            except RuntimeError as e:
+                errores += 1
+                print(f"  {d} -> {pl['titulo']}: {e} (se reintenta en la próxima pasada)")
+                continue
             pl["videos"].append(vid)
             hechas += 1
             print(f"  {d} -> {pl['titulo']}")
@@ -191,6 +203,8 @@ def main():
     json.dump(estado, open(est_p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"Listo: {creadas} playlists creadas, {hechas} videos añadidos, ~{cli.gastado} unidades de cuota; "
           f"quedan {len(pendientes) - hechas} altas.")
+    if errores:
+        sys.exit(f"{errores} altas fallaron (no por cuota).")
 
 
 if __name__ == "__main__":
