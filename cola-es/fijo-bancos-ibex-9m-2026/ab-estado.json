@@ -1,0 +1,26 @@
+{
+ "slug": "fijo-bancos-ibex-9m-2026",
+ "videoId": "mDWvaYwqiM8",
+ "que": "ambos",
+ "variantes": {
+  "A": {
+   "estilo": "fijo-titulo",
+   "titulo": "Los 6 bancos del IBEX 35 comparados: beneficio, ROTE, eficiencia, morosidad y dividendo (9M 2026)"
+  },
+  "B": {
+   "estilo": "fijo-gancho",
+   "titulo": "¿Qué banco del IBEX 35 gana más y cuál es más rentable? Santander, BBVA, CaixaBank y más"
+  }
+ },
+ "orden": "AB",
+ "inicio": "2026-11-25",
+ "mostrada": "A",
+ "contadores": {},
+ "cambios": [
+  {
+   "variante": "A",
+   "utc": "2026-11-25T09:35:39+00:00"
+  }
+ ],
+ "dias": []
+}

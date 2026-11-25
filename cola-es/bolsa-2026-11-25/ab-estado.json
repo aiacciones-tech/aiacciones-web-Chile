@@ -1,0 +1,26 @@
+{
+ "slug": "bolsa-2026-11-25",
+ "videoId": "S9NZ1aIBg-w",
+ "que": "ambos",
+ "variantes": {
+  "A": {
+   "estilo": "fecha",
+   "titulo": "IBEX 35 hoy (25-nov-2026): -2,00%; aranceles, inflación y mínimos de junio | Técnico y fundamental"
+  },
+  "B": {
+   "estilo": "gancho",
+   "titulo": "IBEX 35 -2,00%: pierde la media de 200 y cae a mínimos de junio | Bolsa española hoy (25-nov-2026)"
+  }
+ },
+ "orden": "BA",
+ "inicio": "2026-11-25",
+ "mostrada": "A",
+ "contadores": {},
+ "cambios": [
+  {
+   "variante": "A",
+   "utc": "2026-11-25T17:22:32+00:00"
+  }
+ ],
+ "dias": []
+}

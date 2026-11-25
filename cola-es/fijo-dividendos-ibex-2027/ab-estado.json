@@ -1,0 +1,36 @@
+{
+ "slug": "fijo-dividendos-ibex-2027",
+ "videoId": "EZd45ZGeqOE",
+ "que": "ambos",
+ "variantes": {
+  "A": {
+   "estilo": "fijo-titulo",
+   "titulo": "Dividendos del IBEX 35: calendario de pagos de diciembre de 2026 a junio de 2027"
+  },
+  "B": {
+   "estilo": "fijo-gancho",
+   "titulo": "10 dividendos anunciados del IBEX 35: fechas e importes hasta junio de 2027"
+  }
+ },
+ "orden": "BA",
+ "inicio": "2026-11-24",
+ "mostrada": "B",
+ "contadores": {},
+ "cambios": [
+  {
+   "variante": "A",
+   "utc": "2026-11-24T14:35:08+00:00"
+  },
+  {
+   "variante": "B",
+   "utc": "2026-11-25T18:37:49+00:00"
+  }
+ ],
+ "dias": [
+  {
+   "fecha": "2026-11-25",
+   "variante": "B",
+   "vistas": null
+  }
+ ]
+}

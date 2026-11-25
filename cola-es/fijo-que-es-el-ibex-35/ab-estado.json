@@ -1,0 +1,26 @@
+{
+ "slug": "fijo-que-es-el-ibex-35",
+ "videoId": "z2zw3rtOARc",
+ "que": "ambos",
+ "variantes": {
+  "A": {
+   "estilo": "fijo-titulo",
+   "titulo": "Qué es el IBEX 35 y cómo se calcula: las 35 empresas, el capital flotante y quién decide"
+  },
+  "B": {
+   "estilo": "fijo-gancho",
+   "titulo": "¿Cómo se calcula el IBEX 35? Explicado fácil, con sus reglas oficiales"
+  }
+ },
+ "orden": "BA",
+ "inicio": "2026-11-25",
+ "mostrada": "A",
+ "contadores": {},
+ "cambios": [
+  {
+   "variante": "A",
+   "utc": "2026-11-25T14:45:23+00:00"
+  }
+ ],
+ "dias": []
+}

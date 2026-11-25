@@ -1,0 +1,32 @@
+{
+ "slug": "fijo-inditex-resultados-9m-2026",
+ "videoId": "XMJEmG7wWhU",
+ "que": "ambos",
+ "variantes": {
+  "A": {
+   "estilo": "fijo-titulo",
+   "titulo": "Inditex gana 2.980 millones en el semestre: cifras clave antes de sus resultados del 2 de diciembre"
+  },
+  "B": {
+   "estilo": "fijo-gancho",
+   "titulo": "¿Cómo llega Inditex a sus resultados del 2-dic? Beneficio, ventas, margen y dividendo"
+  }
+ },
+ "orden": "AB",
+ "inicio": "2026-11-24",
+ "mostrada": "A",
+ "contadores": {},
+ "cambios": [
+  {
+   "variante": "A",
+   "utc": "2026-11-24T14:13:32+00:00"
+  }
+ ],
+ "dias": [
+  {
+   "fecha": "2026-11-25",
+   "variante": "A",
+   "vistas": null
+  }
+ ]
+}

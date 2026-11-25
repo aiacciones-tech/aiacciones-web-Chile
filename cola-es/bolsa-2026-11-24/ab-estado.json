@@ -1,0 +1,32 @@
+{
+ "slug": "bolsa-2026-11-24",
+ "videoId": "xQdkfuvs18w",
+ "que": "ambos",
+ "variantes": {
+  "A": {
+   "estilo": "fecha",
+   "titulo": "IBEX 35 hoy (24-nov-2026): -0,86%; recogida de beneficios y el acero cae | Técnico y fundamental"
+  },
+  "B": {
+   "estilo": "gancho",
+   "titulo": "IBEX 35 -0,86%: recogida de beneficios y el acero se hunde | Bolsa española hoy (24-nov-2026)"
+  }
+ },
+ "orden": "AB",
+ "inicio": "2026-11-24",
+ "mostrada": "A",
+ "contadores": {},
+ "cambios": [
+  {
+   "variante": "A",
+   "utc": "2026-11-24T17:26:24+00:00"
+  }
+ ],
+ "dias": [
+  {
+   "fecha": "2026-11-25",
+   "variante": "A",
+   "vistas": null
+  }
+ ]
+}
