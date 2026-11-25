@@ -92,7 +92,7 @@ def calc(D):
                 max_52s=round(float(hi[i_hi]), 1), max_52s_fecha=dates[i_hi].isoformat(), min_52s=round(float(lo[i_lo]), 1), min_52s_fecha=dates[i_lo].isoformat(),
                 monto_mm=round(hoy / 1e9, 1) if hoy else None, volumen_vs_media10_pct=round(hoy / med * 100 - 100, 1) if hoy and med else None,
                 niveles=niveles, suben=sum(1 for x, _ in vals if x > 0), bajan=sum(1 for x, _ in vals if x < 0), sin_cambio=sum(1 for x, _ in vals if x == 0),
-                mejores=[(NOMBRES.get(k, k), k, round(x, 2)) for x, k in vals[::-1][:5]], peores=[(NOMBRES.get(k, k), k, round(x, 2)) for x, k in vals[:5]],
+                mejores=[(NOMBRES.get(k, k), k, round(x, 2)) for x, k in vals[::-1][:5] if x > 0], peores=[(NOMBRES.get(k, k), k, round(x, 2)) for x, k in vals[:5] if x < 0],
                 todos={k: round(x, 2) for x, k in vals},
                 sectores=sectores, acciones_tec=acciones_tec,
                 macd=round(float(MACD[-1]), 1), macd_senal=round(float(SIG[-1]), 1), macd_hist=round(float(HIST[-1]), 1),
