@@ -169,7 +169,9 @@
    "titulo": "الطاقة والمرافق في السعودية | أرامكو والكهرباء وأكوا باور",
    "videos": [
     "_QiEOG8aKtg",
-    "yAEDmE_96Ik"
+    "yAEDmE_96Ik",
+    "eVUX0sy2mAM",
+    "DJWcHsvRKYQ"
    ]
   },
   "empresa-mobily": {
@@ -200,7 +202,8 @@
    "id": "PLNuYfXbEBCbA",
    "titulo": "الرعاية الصحية في السعودية | سليمان الحبيب والمواساة",
    "videos": [
-    "LYGPVYFVAdE"
+    "LYGPVYFVAdE",
+    "49nuHJ-iGwU"
    ]
   },
   "empresa-zain": {
@@ -215,7 +218,21 @@
    "id": "PLaVfNct6zuP8",
    "titulo": "ملخص السوق السعودية اليومي | تاسي ونمو بعد الإغلاق",
    "videos": [
-    "LFQlCwY8ePU"
+    "LFQlCwY8ePU",
+    "_Jpu2c721ds",
+    "pKydCCHf020",
+    "D9o4nC58k80",
+    "lUZptLrOTyA",
+    "uEynki65E9A",
+    "Macdk1ltT7A",
+    "XWKUjchzVXY",
+    "eM00OrDRdco",
+    "cX4XrAzSGBk",
+    "--yJqHlD6GA",
+    "o-Y1MMV4r8c",
+    "PgMOuv7nxdA",
+    "EbnnTdZey-4",
+    "pEuSiBJ5SRE"
    ]
   },
   "empresa-elm": {
@@ -229,7 +246,34 @@
   "empresa-bupa": {
    "id": "PLP7llWSxbFjQ",
    "titulo": "سهم بوبا العربية (8210) | النتائج المالية والتحليل",
-   "videos": []
+   "videos": [
+    "b91y5w0X2iM",
+    "lzkRI5yHCtU"
+   ]
+  },
+  "sector-seguros": {
+   "id": "PLZqR_9Ku7SVs",
+   "titulo": "التأمين في السعودية | بوبا العربية والتعاونية",
+   "videos": [
+    "b91y5w0X2iM",
+    "aqE1PyHJY08"
+   ]
+  },
+  "empresa-jarir": {
+   "id": "PLHxsv6rcMsCY",
+   "titulo": "سهم جرير (4190) | النتائج المالية والتحليل",
+   "videos": [
+    "1eEP4T2Zx5w",
+    "t7O_L-3N-EY"
+   ]
+  },
+  "empresa-luberef": {
+   "id": "PLCzSB-TPYQsE",
+   "titulo": "سهم لوبريف (2223) | النتائج المالية والتحليل",
+   "videos": [
+    "eVUX0sy2mAM",
+    "2QGxd4vSUrA"
+   ]
   }
  }
 }
