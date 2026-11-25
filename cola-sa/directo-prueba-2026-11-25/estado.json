@@ -1,7 +1,11 @@
 {
- "estado": "emitiendo",
+ "estado": "emitido",
  "broadcast": "hmzo7We2yR4",
  "stream": "96vi2MiZS7PND6f7zQb0ow1795612281812125",
  "inicio": "2026-11-25T13:41:55Z",
- "programado": "2026-11-25T13:11:26Z"
+ "programado": "2026-11-25T13:11:26Z",
+ "emision_inicio": "2026-11-25T13:41:10Z",
+ "ffmpeg": 0,
+ "emision_fin": "2026-11-25T13:43:51Z",
+ "youtube": "complete"
 }
