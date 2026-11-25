@@ -32,7 +32,7 @@ json.dump({"title": I["titulo_short"], "description": sd, "tags": tags[:8] + ["S
           open(f"{D}/meta-short-{BASE}.json", "w"), ensure_ascii=False, indent=1)
 largo_x = lambda s: len(re.sub(r"https?://\S+|\{youtube\}", "x" * 23, s))
 x = f"{I['x']}\n\n▶️ {{youtube}}\n\nInformativo, no es recomendación. Sin posiciones."
-assert largo_x(x) <= 280, largo_x(x)
+assert largo_x(x) <= 268, largo_x(x)  # Buffer cuenta algunos signos (▶️, €) doble: margen
 open(f"{D}/post-x-{BASE}.txt", "w").write(x)
 MIN = max(1, round(T_["_total"] / 60))
 tg = (f"📚 {VJ['tema']}\n\n{I['resumen']}\n\n" + "\n".join("• " + c for c in fin["claves"]) +
@@ -66,7 +66,7 @@ f.text(0.04, 0.90, th["etiqueta"].upper(), color=BG, fontsize=30, weight="bold",
 tl = textwrap.wrap(th["titulo"], 18)[:2]
 f.text(0.04, 0.60, "\n".join(tl), color=FG, fontsize=60 if max(map(len, tl)) <= 14 else 50, weight="bold", va="center", linespacing=1.05)
 f.text(0.04, 0.10, th["cifra"], color=col(th.get("color", "acc")), fontsize=150 if len(th["cifra"]) <= 7 else 110, weight="bold")
-if th.get("sub"): f.text(0.04, 0.40, th["sub"], color=MUTED, fontsize=34, weight="bold")
+if th.get("sub"): f.text(0.04, 0.40 if len(tl) == 1 else 0.355, th["sub"], color=MUTED, fontsize=34, weight="bold")
 p = f"{D}/miniatura-{BASE}.png"; f.savefig(p, dpi=100, facecolor=BG); plt.close(f); con_logo(p)
 if th.get("gancho_b"):
     f = fig(1280, 720)

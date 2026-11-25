@@ -120,7 +120,7 @@ def s_barras(i, e, t):
     ax.set_xlim(min(0, min(vals)) * 1.3, m * 1.3)
     fmt = e.get("formato", "{:.1f}")
     if t >= 0.5:
-        for y_, v in zip(ys, vals): ax.text(v * a + m * 0.02, y_, fmt.format(v).replace(",", "X").replace(".", ",").replace("X", "."), va="center", color=FG, fontsize=20, weight="bold")
+        for y_, v in zip(ys, vals): ax.text(max(v * a, 0) + m * 0.02, y_, fmt.format(v).replace(",", "X").replace(".", ",").replace("X", "."), va="center", color=FG, fontsize=20, weight="bold")
     if e.get("nota"): T(f, XL, 0.16, wrap(e["nota"], 150), NEG, 19, "bold", alpha=ease((t - 0.4) / 0.4))
     if e.get("fuente"): fuente(f, e["fuente"])
     return to_arr(f)
@@ -302,7 +302,7 @@ def s_grafico(i, e, t):
             av.set_ylim(0, 100); av.set_yticks([20, 80]); nombre = "Estocástico (14, 3, 3): %K y %D"
         av.set_xticks([p[0] for p in tk[::step]], [p[1] for p in tk[::step]]); av.tick_params(labelsize=15)
         T(f, XL, 0.347, nombre, MUTED, 15)
-    T(f, XL, 0.785, f"{VJ['nombre']} ({VJ['ticker']}) · velas diarias · euros por acción", MUTED, 19, "bold")
+    T(f, XL, 0.785, (f"{VJ['nombre']} · velas diarias · {VJ['unidad']}" if VJ.get('unidad') else f"{VJ['nombre']} ({VJ['ticker']}) · velas diarias · euros por acción"), MUTED, 19, "bold")
     if e.get("nota"):
         b = ease((t - 0.5) / 0.4); T(f, 0.94, 0.785, e["nota"], NEG, 21, "bold", ha="right", alpha=b)
     fuente(f, FUENTE)

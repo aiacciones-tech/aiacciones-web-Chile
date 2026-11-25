@@ -1,0 +1,11 @@
+{
+ "que": "ambos",
+ "B": {
+  "title": "¿Qué banco del IBEX 35 gana más y cuál es más rentable? Santander, BBVA, CaixaBank y más",
+  "miniatura": "miniatura-b.png"
+ },
+ "estilos": {
+  "A": "fijo-titulo",
+  "B": "fijo-gancho"
+ }
+}
