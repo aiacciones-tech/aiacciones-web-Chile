@@ -1,0 +1,59 @@
+{
+ "cabecera": "Die Marken für heute · 25. November 2026",
+ "out": "short-3-bolsa-2026-11-24-GE.mp4",
+ "fuente": "Quellen: TradingView, eigene Berechnungen\n(Schlusskurse bis 24. November 2026).",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Vor dem US-Handelsstart · S&P 500",
+   "fecha": "Mi., 25. November 2026",
+   "indices": [
+    [
+     "S&P 500 (Schluss Di.)",
+     "7.201,09",
+     "−0,50 %",
+     "neg"
+    ]
+   ],
+   "pregunta": "Drei Marken für heute",
+   "voz": "Vor dem Handelsstart in New York um 15:30 Uhr: drei Marken im S&P 500."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Widerstand",
+   "big": "7.415,64",
+   "delta": "Hoch vom 19. November",
+   "color": "neg",
+   "nota": "Schließt der S&P 500 darüber,\nliegt er über dem Hoch vom 19. November.",
+   "voz": "Eins. Der Widerstand liegt bei 7.415 Punkten, dem Hoch vom 19. November."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "200-Tage-Linie",
+   "big": "7.351,29",
+   "delta": "2,09 % über dem Schluss (berechnet)",
+   "color": "blue",
+   "nota": "Der Index liegt darunter.",
+   "voz": "Zwei. Die 200-Tage-Linie verläuft bei 7.351 Punkten, 2,1 Prozent über dem Schlusskurs."
+  },
+  {
+   "tipo": "cifra",
+   "n": 3,
+   "label": "Unterstützung",
+   "big": "6.882,66",
+   "delta": "Tief vom 20. November",
+   "color": "teal",
+   "nota": "Das sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Die Unterstützung liegt bei 6.882 Punkten, dem Tief vom 20. November."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Morgen:\nThanksgiving",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Morgen bleibt die Wall Street wegen Thanksgiving geschlossen. Mehr im Tagesbericht auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}
