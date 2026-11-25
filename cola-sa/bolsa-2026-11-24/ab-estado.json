@@ -1,0 +1,32 @@
+{
+ "slug": "bolsa-2026-11-24",
+ "videoId": "EbnnTdZey-4",
+ "que": "ambos",
+ "variantes": {
+  "A": {
+   "estilo": "fecha",
+   "titulo": "الأسهم السعودية اليوم (24 نوفمبر 2026): تاسي +0.40% إلى 9,977 نقطة | تحليل فني موسع"
+  },
+  "B": {
+   "estilo": "gancho",
+   "titulo": "تاسي يرتفع مع انتعاش وول ستريت | الأسهم السعودية اليوم 24 نوفمبر 2026"
+  }
+ },
+ "orden": "AB",
+ "inicio": "2026-11-24",
+ "mostrada": "A",
+ "contadores": {},
+ "cambios": [
+  {
+   "variante": "A",
+   "utc": "2026-11-24T13:33:13+00:00"
+  }
+ ],
+ "dias": [
+  {
+   "fecha": "2026-11-25",
+   "variante": "A",
+   "vistas": null
+  }
+ ]
+}

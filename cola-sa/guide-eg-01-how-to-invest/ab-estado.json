@@ -1,0 +1,32 @@
+{
+ "slug": "guide-eg-01-how-to-invest",
+ "videoId": "RFEq1z8Kv2A",
+ "que": "ambos",
+ "variantes": {
+  "A": {
+   "estilo": "guia",
+   "titulo": "كيف تستثمر في الأسهم السعودية من الصفر؟ دليل المبتدئين خطوة بخطوة"
+  },
+  "B": {
+   "estilo": "gancho",
+   "titulo": "الأسهم السعودية للمبتدئين: 4 خطوات قبل أول صفقة (ودرس من انهيار 2006)"
+  }
+ },
+ "orden": "AB",
+ "inicio": "2026-11-24",
+ "mostrada": "A",
+ "contadores": {},
+ "cambios": [
+  {
+   "variante": "A",
+   "utc": "2026-11-24T15:40:52+00:00"
+  }
+ ],
+ "dias": [
+  {
+   "fecha": "2026-11-25",
+   "variante": "A",
+   "vistas": null
+  }
+ ]
+}
