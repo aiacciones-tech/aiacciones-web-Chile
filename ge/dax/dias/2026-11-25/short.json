@@ -1,0 +1,32 @@
+{
+ "fecha": "2026-11-25",
+ "cabecera": "DAX am Abend · 25. November 2026",
+ "out": "dax-2026-11-25-GE.mp4",
+ "fuente": "Quellen: TradingView (Xetra-Schlusskurse), dpa-AFX\nüber finanzen.net (25. November 2026).",
+ "titulo_yt": "DAX unter der 200-Tage-Linie: −1,3 %, Flucht aus KI-Aktien – VW und BMW vorn",
+ "resumen": "Der DAX schließt am Mittwoch, 25. November, 1,26 % tiefer bei 24.702,13 Punkten, dem tiefsten Stand seit Juli. Anleger flüchten aus KI-Aktien; dazu kündigt die US-Regierung neue Importzölle auf Einfuhren aus der EU an (dpa-AFX).",
+ "claves": ["Infineon −6,49 %, Siemens Energy −4,60 %: KI-Werte unter Druck",
+            "Autowerte erholen sich: Volkswagen +4,62 %, BMW +3,72 %; 17 von 40 DAX-Werten im Plus",
+            "Euro Stoxx 50 −1,82 %, MDAX −0,68 %",
+            "DAX 1,2 % unter der 200-Tage-Linie, RSI 37 (berechnet)"],
+ "tags": ["Infineon", "Siemens Energy", "Volkswagen", "BMW", "US-Zölle"],
+ "escenas": [
+  {"tipo": "titulo", "kicker": "DAX · Handelstag vom", "fecha": "Mi., 25. November 2026",
+   "indices": [["DAX", "−1,26 %", "24.702,13", "neg"], ["Euro Stoxx 50", "−1,82 %", "5.894,46", "neg"]],
+   "pregunta": "Unter der 200-Tage-Linie",
+   "voz": "DAX, Mittwoch, 25. November. Unter der 200-Tage-Linie. Drei Punkte."},
+  {"tipo": "cifra", "n": 1, "label": "Das Wichtigste", "big": "−1,26 %", "delta": "Tiefster Stand seit Juli", "color": "neg",
+   "nota": "Anleger flüchten aus KI-Aktien.\nDazu neue US-Importzölle\nauf Einfuhren aus der EU (dpa-AFX).",
+   "voz": "Eins. Der DAX verliert erneut 1,3 Prozent auf 24.702 Punkte, den tiefsten Stand seit Juli. Anleger flüchten aus KI-Aktien. Dazu kündigt die US-Regierung neue Importzölle auf Einfuhren aus der EU an."},
+  {"tipo": "cifra", "n": 2, "label": "Gewinner und Verlierer", "big": "+4,62 %", "delta": "Volkswagen vorn", "color": "teal",
+   "barras": [["Volkswagen", 4.62], ["BMW", 3.72], ["Siemens Energy", -4.6], ["Infineon", -6.49]],
+   "nota": "17 von 40 DAX-Werten im Plus.\nAutowerte erholen sich nach\ndem Tief seit über sechs Jahren.",
+   "voz": "Zwei. Infineon fällt um 6,5 Prozent, Siemens Energy um 4,6 Prozent. Autowerte erholen sich: Volkswagen steigt um 4,6 Prozent, BMW um 3,7 Prozent."},
+  {"tipo": "kpis", "n": 3, "label": "Charttechnik DAX",
+   "items": [["37", "RSI 14", "blue"], ["−1,2 %", "unter der 200-Tage-Linie (berechnet)", "neg"], ["−8,5 %", "unter dem Rekordhoch vom 12. November", "neg"]],
+   "nota": "Das sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Der DAX schließt 1,2 Prozent unter seiner 200-Tage-Linie. Der RSI liegt bei 37, der Abstand zum Rekordhoch bei 8,5 Prozent."},
+  {"tipo": "fin", "nombre": "Wall Street auf Deutsch", "titular": "Morgen früh:\nWall Street", "cta": "Tagesbericht vor Börsenstart",
+   "voz": "Den Tagesbericht zur Wall Street gibt es morgen früh auf unserem Kanal. Keine Anlageberatung."}
+ ]
+}
