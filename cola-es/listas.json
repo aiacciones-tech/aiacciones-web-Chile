@@ -51,6 +51,34 @@
   "empresa-repsol": {
    "id": "PLJzu8bSBb8dQ",
    "titulo": "Repsol: resultados y análisis en vídeo"
+  },
+  "empresa-enagas": {
+   "id": "PLHU4aF8nyF54",
+   "titulo": "Enagás: resultados y análisis en vídeo"
+  },
+  "empresa-aena": {
+   "id": "PLFCV5oEUiHsY",
+   "titulo": "Aena: resultados y análisis en vídeo"
+  },
+  "empresa-ferrovial": {
+   "id": "PLas3zflecRG4",
+   "titulo": "Ferrovial: resultados y análisis en vídeo"
+  },
+  "empresa-puig": {
+   "id": "PLaOphuOxVrfY",
+   "titulo": "Puig: resultados y análisis en vídeo"
+  },
+  "empresa-fluidra": {
+   "id": "PLYATxnN84HCs",
+   "titulo": "Fluidra: resultados y análisis en vídeo"
+  },
+  "empresa-naturgy": {
+   "id": "PLfXG5mha_KwY",
+   "titulo": "Naturgy: resultados y análisis en vídeo"
+  },
+  "resultados-3T26": {
+   "id": "PLGeOFR9pEcFQ",
+   "titulo": "Resultados 3T 2026 del IBEX 35"
   }
  },
  "añadidos": {
@@ -141,6 +169,73 @@
   "repsol-1S26-short": [
    "empresa-repsol",
    "shorts"
+  ],
+  "enagas-1S26": [
+   "empresa-enagas",
+   "resultados-1S26"
+  ],
+  "enagas-1S26-short": [
+   "empresa-enagas",
+   "shorts"
+  ],
+  "aena-1S26": [
+   "empresa-aena",
+   "resultados-1S26"
+  ],
+  "aena-1S26-short": [
+   "empresa-aena",
+   "shorts"
+  ],
+  "ferrovial-1S26": [
+   "empresa-ferrovial",
+   "resultados-1S26"
+  ],
+  "ferrovial-1S26-short": [
+   "empresa-ferrovial",
+   "shorts"
+  ],
+  "puig-1S26": [
+   "empresa-puig",
+   "resultados-1S26"
+  ],
+  "puig-1S26-short": [
+   "empresa-puig",
+   "shorts"
+  ],
+  "fluidra-1S26": [
+   "empresa-fluidra",
+   "resultados-1S26"
+  ],
+  "fluidra-1S26-short": [
+   "empresa-fluidra",
+   "shorts"
+  ],
+  "naturgy-1S26": [
+   "empresa-naturgy",
+   "resultados-1S26"
+  ],
+  "naturgy-1S26-short": [
+   "empresa-naturgy",
+   "shorts"
+  ],
+  "enagas-3T26": [
+   "empresa-enagas",
+   "resultados-3T26"
+  ],
+  "enagas-3T26-short": [
+   "empresa-enagas",
+   "shorts"
+  ],
+  "iberdrola-3T26": [
+   "empresa-iberdrola",
+   "resultados-3T26"
+  ],
+  "iberdrola-3T26-short": [
+   "empresa-iberdrola",
+   "shorts"
+  ],
+  "puig-3T26": [
+   "empresa-puig"
   ]
  }
 }
