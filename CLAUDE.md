@@ -4,7 +4,7 @@
   diaria, lee `nabd/diario/CLAUDE.md`: sus instrucciones sustituyen a las del texto de la tarea programada donde difieran
   (ya no valen "~230 palabras / máx. 180 s" ni `ejemplo-2026-11-06/` como plantilla; la plantilla es `nabd/diario/ejemplo-2026-11-09/`).
 - **Wall Street auf Deutsch (canal alemán, código `ge`), vídeo diario:** las instrucciones vigentes están en `ge/diario/CLAUDE.md` y prevalecen
-  sobre el texto de su tarea programada. Ese canal solo toca `ge/`, sus workflows `*-GE.yml` y `cola-ge/`; lee los datos de `datos-diario-nabd`
+  sobre el texto de su tarea programada. Desde el 25-nov-2026 sale por la mañana (Berlín) con la sesión de la noche anterior, más 2 Shorts extra a las 12:15 y 15:05. Ese canal solo toca `ge/`, sus workflows `*-GE.yml` y `cola-ge/`; lee los datos de `datos-diario-nabd`
   sin modificarlos. Sus secretos de GitHub terminan en `_GE`.
 - **Arabia Saudita (@SaudiArabiaAIStocks, `saudi/diario/`), vídeo diario:** desde el 18-nov-2026 la voz es Azure `ar-SA-HamedNeural` (workflow `voz-saudi.yml`,
   rama `voz-saudi`, `VOZ_DIR`). Antes de empezar, lee `saudi/diario/CLAUDE.md`: prevalece sobre el texto de la tarea programada donde difieran.
@@ -35,5 +35,19 @@
   de las 22 acciones del canal. Antes de cada Short lee `ge/calendario/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
 - **Nabd Wall Street, Short semanal «تقويم النتائج الأسبوعي» (domingos, 19:00-21:00 Riad, `nabd/calendario/`):** calendario de resultados de las 22 acciones
   del canal. Antes de cada Short lee `nabd/calendario/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **AIAcciones España, crecimiento del canal de YouTube (desde el 24-nov-2026):** cifra clave en títulos y miniaturas con prueba A/B
+  (`ab-espana.yml`), conclusión en los primeros 15 s, segundo Short del diario programado (`canal-espana.yml`), listas de reproducción y
+  enlaces al siguiente vídeo. Lee `espana/crecimiento-youtube.md` antes de cualquier vídeo de España: prevalece sobre las tareas programadas.
+- **AIAcciones España, directo «El IBEX de la semana, en directo» (viernes 17:45 Madrid, lo emite Daniel):** diapositivas y guion con
+  `espana/directo/make_slides.py`. Antes de cada viernes lee `espana/directo/CLAUDE.md`: prevalece sobre el texto de su tarea programada.
 - **AIAcciones España, Short semanal «Calendario semanal de resultados» (domingos 18:00-20:00 Madrid, `espana/semanal/`):** antes de cada
   edición lee `espana/semanal/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Wall Street auf Deutsch, Short diario «DAX am Abend» (prueba desde el 24-nov-2026, `ge/dax/`):** L-V tras el cierre de Xetra (18:30-20:00 Berlín).
+  Antes de cada Short lee `ge/dax/CLAUDE.md`: prevalece sobre el texto de su tarea programada donde difieran.
+- **Arabia Saudita, playlists de YouTube (por empresa, sector y formato):** se crean y rellenan solas tras cada subida (`scripts/playlists-saudi.py`,
+  paso de `youtube-saudi.yml`). Detalles en `saudi/playlists/CLAUDE.md`; las carpetas nuevas de `cola-sa/` deben seguir los nombres que allí se listan.
+- **Arabia Saudita, directos en momentos clave (Fed, OPEP+, presupuesto, resultados anuales; `saudi/directos/`):** directo automático emitido desde
+  GitHub Actions (`directo-saudi.yml`). Antes de cada directo lee `saudi/directos/CLAUDE.md`: prevalece sobre el texto de su tarea programada.
+- **Arabia Saudita, pruebas A/B de miniatura y título (desde el 24-nov-2026):** los videos largos del diario y de la serie educativa llevan una variante B
+  (`ab.json` + `miniatura-b.png` en su carpeta de `cola-sa/`). `scripts/ab-saudi.py` (workflow `ab-saudi.yml`, 08:10 UTC) las alterna por días y deja
+  la ganadora; el estado está en `cola-sa/<slug>/ab-estado.json` de `youtube-cola`. Detalles en `saudi/ab-saudi.md`.

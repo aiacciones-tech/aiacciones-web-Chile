@@ -1,0 +1,93 @@
+{
+ "cabecera": "Wall Street über Nacht · 24. November 2026",
+ "out": "short-bolsa-2026-11-24-GE.mp4",
+ "fuente": "Quellen: TradingView, Sell The News\nund Analog Devices (24. November 2026).",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Wall Street · Sitzung vom",
+   "fecha": "Di., 24. November 2026",
+   "indices": [
+    [
+     "S&P 500",
+     "−0,50 %",
+     "7.201,09",
+     "neg"
+    ],
+    [
+     "Nasdaq",
+     "−1,48 %",
+     "23.733,54",
+     "neg"
+    ]
+   ],
+   "pregunta": "Technik schwach, Dow stark",
+   "voz": "Wall Street, Dienstag, 24. November. Technik schwach, Dow stark. Drei Punkte."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Analog Devices",
+   "big": "−17,37 %",
+   "delta": "Schluss 312,95 $",
+   "color": "neg",
+   "nota": "Rekordumsatz 4,37 Mrd. $ (+42 %).\nTrotzdem größter Verlierer im S&P 500.",
+   "voz": "Eins. Analog Devices meldet einen Rekordumsatz, und die Aktie fällt trotzdem um 17 Prozent."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Dow Jones",
+   "big": "50.018,70",
+   "delta": "+0,85 % · Nasdaq 100 −1,99 %",
+   "color": "teal",
+   "barras": [
+    [
+     "S&P 500",
+     -0.5
+    ],
+    [
+     "Nasdaq 100",
+     -1.99
+    ],
+    [
+     "Dow Jones",
+     0.85
+    ]
+   ],
+   "nota": "Gesundheit +2,95 %, Technologie −3,26 %.\nChip-ETF SMH −6,87 % (Sell The News).",
+   "voz": "Zwei. Der Dow Jones schließt wieder über 50.000 Punkten, der Nasdaq 100 fällt um 2 Prozent."
+  },
+  {
+   "tipo": "kpis",
+   "n": 3,
+   "label": "Charttechnik S&P 500",
+   "items": [
+    [
+     "40",
+     "RSI 14",
+     "blue"
+    ],
+    [
+     "−2,0 %",
+     "unter der 200-Tage-Linie",
+     "neg"
+    ],
+    [
+     "−8,2 %",
+     "unter dem Rekordhoch",
+     "neg"
+    ]
+   ],
+   "nota": "Das sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Der S&P 500 liegt 2 Prozent unter der 200-Tage-Linie."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Heute 14:30 Uhr:\nInflation und BIP",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Heute um 14:30 Uhr kommen Inflation und Wachstum. Das ganze Video finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}

@@ -2,8 +2,8 @@
  "fecha": "2026-11-09",
  "fecha_txt": "Montag, 9. November 2026",
  "elaborado": "9. November 2026, 23:30 Uhr",
- "titulo": "Wall Street heute (9. November 2026): S&P 500 +2,35 %, Nasdaq +2,74 % | Der Tagesbericht",
- "titulo_short": "Wall Street am 9. November 2026: Chipwerte treiben die Erholung, Nvidia fällt #Shorts",
+ "titulo": "Nvidia −4,3 % gegen den Chip-Trend – S&P 500 +2,35 % | Wall Street über Nacht (9.11.)",
+ "titulo_short": "Chips steigen, Nvidia fällt 4 % – warum? #Shorts",
  "resumen": "Der S&P 500 schloss am Montag, 9. November 2026, bei 7.549,94 Punkten (+2,35 %; +173,08 Punkte). Der Nasdaq Composite stieg um 2,74 % auf 25.253,14, der Dow Jones um 2,15 % auf 52.389,75 und der Russell 2000 um 3,15 % auf 2.840,81.",
  "claves": [
   "Nachrichten: Chipwerte führten die Erholung an (AMD +13,26 % nach Kurszielanhebung durch Oppenheimer, Broadcom +8,78 %); Nvidia fiel um 4,27 %, nachdem der Verwaltungsrat eine unabhängige Untersuchung zu Vorstandschef Jensen Huang angekündigt hatte; Alphabet stellte neue TPU-Chips vor; US-Öl WTI −4,41 % auf 86,37 Dollar.",
@@ -46,20 +46,21 @@
   "Der Tagesbericht"
  ],
  "miniatura": {
-  "fecha": "Montag, 9. November 2026",
+  "nombre": "Nvidia",
+  "cifra": "−4,3 %",
+  "logo": "NVDA",
+  "gancho": "Gegen den Chip-Trend",
   "indices": [
    [
     "S&P 500",
     "+2,35 %",
-    "teal"
+    null
    ],
    [
     "Nasdaq",
     "+2,74 %",
-    "teal"
+    null
    ]
-  ],
-  "sub": "Chipwerte treiben die Erholung · Nvidia −4,27 %",
-  "pie": "Der Tagesbericht · Wall Street auf Deutsch"
+  ]
  }
 }

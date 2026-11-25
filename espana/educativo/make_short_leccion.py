@@ -12,7 +12,9 @@ DIR = os.path.abspath(sys.argv[1]); PREVIEW = len(sys.argv) > 2 and sys.argv[2] 
 AUD = os.environ.get("AUD", "aud"); os.makedirs(AUD, exist_ok=True)
 VJ = json.load(open(f"{DIR}/video.json")); VEL = json.load(open(os.environ.get("VELAS", f"{DIR}/velas.json")))
 W, H, FPS, MAXDUR = 1080, 1920, 30, 59.0
-BASE = VJ["base"]; OUT = f"{DIR}/short-{BASE}.mp4"; CTA = cta(VJ); N = VJ["capitulo_n"]
+FIJO = VJ.get("formato") == "fijo"   # vídeos fijos (espana/fijos/): otra cabecera y escenas cifras/puntos
+ETIQ = VJ.get("etiqueta", "Guías de bolsa española") if FIJO else SERIE
+BASE = VJ["base"]; OUT = f"{DIR}/short-{BASE}.mp4"; CTA = cta(VJ); N = VJ.get("capitulo_n", 0)
 ESC = [dict(e) for e in VJ["short"]]
 if CTA: ESC[-1]["voz"] = CTA_VOZ_CORTA + " " + ESC[-1]["voz"]
 LARGAS = {e["id"]: e for e in VJ["escenas"]}
@@ -29,20 +31,20 @@ def T(f, x, y, s, c=FG, fs=30, w="normal", ha="left", **k):
 
 
 def top(f, n):
-    T(f, XL, 0.86, f"{SERIE.upper()} · CAP. {N}", ACC, 28, "bold")
-    tot = sum(1 for e in ESC if e["tipo"] == "grafico")
+    T(f, XL, 0.86, ETIQ.upper() if FIJO else f"{SERIE.upper()} · CAP. {N}", ACC, 28, "bold")
+    tot = sum(1 for e in ESC if e["tipo"] in ("grafico", "cifras", "puntos"))
     for i in range(tot):
         f.patches.append(plt.Rectangle((XL + i * 0.12, 0.845), 0.105, 0.006, transform=f.transFigure, color=ACC if i < n else DIM, figure=f))
 
 
 def s_titulo(e, t):
     f = fig(W, H); a = ease(t / 0.5)
-    T(f, XL, 0.80, f"{SERIE.upper()} · CAP. {N}", ACC, 30, "bold", alpha=a)
+    T(f, XL, 0.80, ETIQ.upper() if FIJO else f"{SERIE.upper()} · CAP. {N}", ACC, 30, "bold", alpha=a)
     f.patches.append(plt.Rectangle((0, 0.64), 1.0, 0.13, transform=f.transFigure, color=ACC, alpha=a, figure=f))
     T(f, XL, 0.705, VJ["tema"], BG, 80 if len(VJ["tema"]) <= 14 else 62, "bold", va="center", alpha=a)
-    T(f, XL, 0.575, f"Con el gráfico real de {VJ['nombre']}", FG, 44, "bold", alpha=ease((t - 0.15) / 0.5))
+    T(f, XL, 0.575, e.get("sub", "") if FIJO else f"Con el gráfico real de {VJ['nombre']}", FG, 44, "bold", alpha=ease((t - 0.15) / 0.5))
     if e.get("pregunta"): T(f, XL, 0.48, e["pregunta"], ACC2, 50, "bold", alpha=ease((t - 0.3) / 0.5))
-    T(f, XL, 0.39, "Contenido educativo, no es recomendación", MUTED, 32, "bold", alpha=ease((t - 0.4) / 0.5))
+    T(f, XL, 0.39, "Contenido informativo, no es recomendación" if FIJO else "Contenido educativo, no es recomendación", MUTED, 32, "bold", alpha=ease((t - 0.4) / 0.5))
     return with_logo(to_arr(f), LG, x=(W - 420) // 2, y=170)
 
 
@@ -86,17 +88,43 @@ def s_grafico(e, t):
 
 def s_fin(e, t):
     f = fig(W, H); a = ease(t / 0.5)
-    T(f, XL, 0.78, "El capítulo completo,", ACC, 48, "bold", alpha=a)
+    T(f, XL, 0.78, "El vídeo completo," if FIJO else "El capítulo completo,", ACC, 48, "bold", alpha=a)
     T(f, XL, 0.735, "en nuestro canal de YouTube", ACC, 48, "bold", alpha=a)
     T(f, XL, 0.66, "@AIAccionesEspaña", FG, 58, "bold", alpha=a)
-    T(f, XL, 0.60, "Un capítulo nuevo cada domingo", MUTED, 36, "bold", alpha=a)
+    T(f, XL, 0.60, "El IBEX 35, cada día de bolsa" if FIJO else "Un capítulo nuevo cada domingo", MUTED, 36, "bold", alpha=a)
     if CTA: T(f, XL, 0.54, "Déjanos tu comentario y suscríbete", ACC2, 36, "bold", alpha=ease((t - 0.2) / 0.5))
-    T(f, XL, 0.48, "\n".join(partir("Contenido educativo, no es una recomendación de inversión. El análisis técnico describe el pasado "
-                                    "y no predice el futuro. Hecho con herramientas de inteligencia artificial.", 46)), MUTED, 26, alpha=a, linespacing=1.5, va="top")
+    av = ("Contenido informativo, no es una recomendación de inversión. Cifras de las fuentes citadas en el vídeo completo. "
+          "Hecho con herramientas de inteligencia artificial.") if FIJO else ("Contenido educativo, no es una recomendación de inversión. "
+          "El análisis técnico describe el pasado y no predice el futuro. Hecho con herramientas de inteligencia artificial.")
+    T(f, XL, 0.48, "\n".join(partir(av, 46)), MUTED, 26, alpha=a, linespacing=1.5, va="top")
     return with_logo(to_arr(f), LG, x=(W - 420) // 2, y=170)
 
 
-TIPOS = {"titulo": s_titulo, "grafico": s_grafico, "fin": s_fin}
+def _n(e):
+    return 1 + [x["id"] for x in ESC if x["tipo"] in ("grafico", "cifras", "puntos")].index(e["id"])
+
+
+def s_cifras(e, t):
+    """Hasta 3 cifras grandes [valor, etiqueta, color], una debajo de otra."""
+    f = fig(W, H); top(f, _n(e)); a = ease(t / 0.4)
+    T(f, XL, 0.815, "\n".join(partir(e["titulo"], 30)), FG, 44, "bold", alpha=a, linespacing=1.1, va="top")
+    for k, (v, lab, c) in enumerate(e["cifras"][:3]):
+        b = ease((t - k * 0.15) / 0.4); y = 0.645 - k * 0.10
+        T(f, XL, y, v, c, 84 if len(v) <= 9 else 64, "bold", alpha=b)
+        T(f, XL, y - 0.03, lab, MUTED, 30, "bold", alpha=b)
+    return with_logo(to_arr(f), load_logo(300), x=(W - 300) // 2, y=55)
+
+
+def s_puntos(e, t):
+    f = fig(W, H); top(f, _n(e)); a = ease(t / 0.4)
+    T(f, XL, 0.815, "\n".join(partir(e["titulo"], 30)), FG, 44, "bold", alpha=a, linespacing=1.1, va="top")
+    for k, p in enumerate(e["puntos"][:4]):
+        b = ease((t - k * 0.12) / 0.4)
+        T(f, XL, 0.66 - k * 0.085, "\n".join(partir("• " + p, 36)), FG, 36, "bold", alpha=b, va="top", linespacing=1.2)
+    return with_logo(to_arr(f), load_logo(300), x=(W - 300) // 2, y=55)
+
+
+TIPOS = {"titulo": s_titulo, "grafico": s_grafico, "fin": s_fin, "cifras": s_cifras, "puntos": s_puntos}
 SUB = {}
 
 

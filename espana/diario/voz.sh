@@ -14,6 +14,10 @@ python3 - "$S/t_video.json" "$D/short.json" "$W/voz/$ID/textos.json" <<'PY'
 import json,sys
 T=json.load(open(sys.argv[1])); S=json.load(open(sys.argv[2]))
 for i,e in enumerate(S["escenas"]): T[f"short_{i}"]=e["voz"]
+import os
+s2=os.path.join(os.path.dirname(sys.argv[2]),"short2.json")  # segundo Short (opcional)
+if os.path.exists(s2):
+    for i,e in enumerate(json.load(open(s2))["escenas"]): T[f"short2_{i}"]=e["voz"]
 json.dump(T,open(sys.argv[3],"w"),ensure_ascii=False,indent=1)
 PY
 cd "$W"; git add voz; git -c user.name=aiacciones-bot -c user.email=aiacciones-bot@users.noreply.github.com commit -qm "Textos de voz $ID"

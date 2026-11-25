@@ -1,0 +1,170 @@
+{
+ "fecha": "2026-11-24",
+ "titular": "KI-Zweifel: Nasdaq −1,5 %, Dow über 50.000",
+ "nombres": {},
+ "ticker": [
+  "S&P 500 −0,50 %, Nasdaq Composite −1,48 %",
+  "Dow Jones +0,85 % auf 50.018,70",
+  "Analog Devices −17,37 % trotz Rekordumsatz",
+  "Dell nachbörslich: Umsatz 54,9 Mrd. $ (+103 %)",
+  "Nvidia −5,86 % nach dem Sprung vom Montag",
+  "DAX −1,26 %, Euro Stoxx 50 −1,16 %"
+ ],
+ "voz": {
+  "s_title": "Willkommen zum Tagesbericht von Wall Street auf Deutsch, an diesem Mittwoch, dem 25. November. Die Wall Street hat gestern, am Dienstag, ein gespaltenes Bild gezeigt. Technologiewerte gaben einen Teil ihrer Erholung wieder ab: Der Nasdaq Composite fiel um 1,48 Prozent, der S&P 500 um 0,5 Prozent auf rund 7.201 Punkte. Der Dow Jones dagegen stieg um 0,85 Prozent und schloss wieder über 50.000 Punkten. Die Nachricht des Tages: Analog Devices meldete einen Rekordumsatz, und trotzdem brach die Aktie um mehr als 17 Prozent ein.",
+  "s_indices": "Die großen Indizes im Überblick. Der S&P 500 schloss am Dienstagabend bei 7.201,09 Punkten, ein Minus von 36 Punkten. Der Nasdaq 100 fiel um fast 2 Prozent auf 26.214 Punkte. Der Dow Jones legte um 423 Punkte zu, auf 50.018,70 Punkte, und der Russell 2000 der kleineren Unternehmen stieg um 0,57 Prozent. Die Breite war besser, als die Indizes vermuten lassen: Im S&P 500 stiegen 342 Werte, 155 fielen, berechnet. Bis zum Rekordhoch vom 6. Oktober fehlen ihm 8,2 Prozent, dem Nasdaq 100 sogar 16,4 Prozent.",
+  "s_grandes": "Wer hat die Indizes bewegt? Bei den acht größten Werten im Nasdaq 100 fiel Nvidia um 5,9 Prozent, nach dem Sprung von 31 Prozent am Montag. SpaceX verlor 5,7 Prozent, Meta, Amazon und Alphabet jeweils gut 1 Prozent. Apple stieg dagegen um 1,4 Prozent, Microsoft um 0,7 Prozent. Im Dow Jones brachte Amgen allein rund 148 Punkte, berechnet aus den Tagesdaten. Am stärksten bremsten Goldman Sachs mit minus 105 Punkten und Nvidia mit minus 58 Punkten.",
+  "s_news": "Warum hat sich der Markt so bewegt? Erstens: Laut dem Marktbericht von Sell The News drückten neue Zweifel an der Rendite der hohen Ausgaben für künstliche Intelligenz auf die Technologiewerte. Die Begeisterung über die Rückkehr von Jensen Huang an die Spitze von Nvidia ließ nach. Der Chip-ETF SMH verlor 6,87 Prozent. Zweitens: Laut demselben Bericht sorgten neue Zollpläne von Präsident Trump gegen 16 Handelspartner für Unruhe. Drittens: Gewinne bei Amgen, Nike und Salesforce stützten den Dow. Nach Börsenschluss legte Dell starke Quartalszahlen vor. Laut Sell The News belastete dagegen ein schwacher Ausblick des Chipentwicklers Ambarella den Sektor nachbörslich zusätzlich.",
+  "s_sectores": "Zu den Sektoren. Vier von sechs Sektor-ETFs stiegen. Gesundheit lag mit 2,95 Prozent vorn, getragen von Pharmawerten wie Amgen. Energie gewann knapp 1 Prozent, Finanzen 0,8 Prozent. Am Ende stand Technologie mit minus 3,26 Prozent; im Monatsvergleich liegt dieser Sektor jetzt 13,6 Prozent im Minus. Auch Industrie gab leicht nach, um 0,53 Prozent.",
+  "s_macro": "Zu Zinsen, Dollar und Rohstoffen. Die Rendite der 10-jährigen US-Staatsanleihe sank leicht auf 4,93 Prozent. Der Dollar-Index DXY gab um 0,47 Prozent auf 103,8 nach. Der Volatilitätsindex VIX blieb mit 26,4 Punkten erhöht. Der US-Ölpreis WTI stieg um 1,7 Prozent auf 81,63 Dollar, Gold fiel um 2,2 Prozent auf rund 3.554 Dollar. Für Anleger im Euroraum: Der Euro gab 0,18 Prozent auf 1,0945 Dollar nach, deshalb verlor der S&P 500 in Euro gerechnet nur 0,32 Prozent, berechnet. Und Europa? Der DAX schloss am Dienstag mit minus 1,26 Prozent bei 25.018 Punkten, der Euro Stoxx 50 mit minus 1,16 Prozent. Der Xetra-Handel beginnt heute um 9 Uhr.",
+  "s_tech_spx": "Zur Charttechnik. Der S&P 500 liegt 2 Prozent unter seiner 200-Tage-Linie bei rund 7.351 Punkten. Zur 20-Tage-Linie fehlen 3,4 Prozent, zur 50-Tage-Linie 5,4 Prozent. Der RSI liegt bei 40, also im neutralen Bereich. Das Volumen entsprach etwa dem Schnitt der letzten zehn Tage.",
+  "s_esc_spx": "Drei Szenarien für den S&P 500. Im positiven Szenario würde ein Schluss über der 200-Tage-Linie bei rund 7.351 Punkten die Erholung bestätigen; die nächste Marke wäre das Hoch vom 19. November bei rund 7.416. Im neutralen Szenario pendelt der Index zwischen dem Tief vom 20. November bei 6.883 und der 200-Tage-Linie. Im negativen Szenario würde ein Schluss unter 6.883 Punkten die Erholung in Frage stellen; dann rückte das 52-Wochen-Tief bei rund 6.317 in den Blick. Das sind Bedingungen, keine Prognosen.",
+  "s_tech_ndx": "Der Nasdaq 100 liegt 6,7 Prozent unter seiner 200-Tage-Linie und 10 Prozent unter der 50-Tage-Linie. Der RSI liegt bei 39. Das Volumen lag 6 Prozent unter dem Zehn-Tage-Schnitt.",
+  "s_esc_ndx": "Für den Nasdaq 100 beginnt das positive Szenario über der 20-Tage-Linie bei rund 27.595 Punkten; darüber wäre das Hoch vom 19. November bei rund 27.749 die nächste Marke. Im neutralen Szenario bleibt der Index zwischen dem Tief vom 20. November bei 24.910 und der 20-Tage-Linie. Im negativen Szenario würde ein Schluss unter 24.910 Punkten den Blick auf das 52-Wochen-Tief bei 22.841 lenken.",
+  "s_agenda": "Was steht heute an? Um 8:30 Uhr New Yorker Zeit, 14:30 Uhr bei uns, kommt eine ganze Reihe von Daten: das Wachstum der US-Wirtschaft, der PCE-Preisindex, also das von der Fed bevorzugte Inflationsmaß, die Aufträge für langlebige Güter und die Erstanträge auf Arbeitslosenhilfe. Um 10 Uhr New Yorker Zeit folgen die Verkäufe neuer Häuser, um 14 Uhr das Beige Book der Fed. Der Handel in New York beginnt um 15:30 Uhr bei uns. Morgen, an Thanksgiving, bleibt die Wall Street geschlossen, am Freitag endet der Handel bereits um 13 Uhr New Yorker Zeit, 19 Uhr bei uns.",
+  "s_fin": "Unser Fazit: Nach dem kräftigen Sprung vom Montag gaben Technologiewerte gestern wieder nach, während der Dow über 50.000 Punkte stieg. Rekordzahlen allein reichten bei Analog Devices nicht. Heute richtet sich der Blick auf Inflation und Wachstum vor dem Feiertag. Folgen Sie uns kostenlos auf Telegram, der Link steht in der Videobeschreibung. Wichtiger Hinweis: Das ist keine Anlageberatung, sondern nur Information. Text, Stimme und Grafiken sind mit KI erstellt. Wir sehen uns am Freitag wieder, auf Wiedersehen."
+ },
+ "indices": {
+  "titulo": "Technik schwach, Dow stark: Nasdaq 100 −2,0 %, Dow +0,85 %"
+ },
+ "grandes": {
+  "titulo": "Amgen bringt dem Dow rund 148 Punkte, Nvidia −5,9 %"
+ },
+ "noticias": {
+  "titulo": "KI-Zweifel drücken die Technologiewerte",
+  "fuente": "Quellen: Sell The News (Marktbericht), Motley Fool, SEC-Mitteilung von Analog Devices, Stocktwits via Yahoo Finance (24. November 2026).",
+  "items": [
+   [
+    "KI-Werte",
+    "Zweifel an der Rendite der KI-Ausgaben · Chip-ETF SMH −6,87 %"
+   ],
+   [
+    "Nvidia",
+    "Begeisterung über Huangs Rückkehr lässt nach"
+   ],
+   [
+    "Zölle",
+    "Neue Zollpläne gegen 16 Handelspartner"
+   ],
+   [
+    "Dow",
+    "Amgen, Nike und Salesforce stützen den Index"
+   ]
+  ]
+ },
+ "sectores": {
+  "titulo": "Gesundheit +2,95 % · Technologie −3,26 %",
+  "items": [
+   [
+    "Gesundheit vorn",
+    "Gesundheit +2,95 %; Energie +0,97 %; Finanzen +0,83 %",
+    "teal"
+   ],
+   [
+    "Technologie schwach",
+    "Technologie −3,26 %; im Monat −13,6 %",
+    "neg"
+   ]
+  ]
+ },
+ "acciones": [
+  {
+   "ticker": "ADI",
+   "noticia": "Rekordumsatz 4,37 Mrd. $ (+42 %), bereinigt 4,06 $ je Aktie; Ausblick: 4,4 Mrd. $ (± 150 Mio.).",
+   "lectura": "Größter Verlierer im S&P 500, 2,2-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Zahlen: Mitteilung von Analog Devices (SEC, 24. November 2026).",
+   "voz": "Die erste Aktie: Analog Devices, ein Hersteller von Analog- und Mischsignalchips, etwa für Industrie und Autos. Die Aktie fiel um 17,37 Prozent auf 312,95 Dollar, umgerechnet rund 286 Euro, bei 2,2-fachem Volumen. Vor Börsenbeginn meldete der Konzern einen Rekordumsatz von 4,37 Milliarden Dollar, 42 Prozent mehr als vor einem Jahr. Für das nächste Quartal erwartet er rund 4,4 Milliarden Dollar. Laut Investing.com lagen die Zahlen über den Schätzungen. Einen eigenen Grund für den Kurssturz nannte das Unternehmen nicht; die Aktie fiel mit dem gesamten Chipsektor."
+  },
+  {
+   "ticker": "DELL",
+   "noticia": "Nachbörslich: Umsatz 54,9 Mrd. $ (+103 %), KI-Server 22 Mrd. $; Jahresprognose auf 202 Mrd. $ angehoben.",
+   "lectura": "1,8-faches Volumen vor den Zahlen.",
+   "fuente": "Kurs und Volumen: TradingView. Zahlen: Stocktwits via Yahoo Finance (24. November 2026).",
+   "voz": "Die zweite Aktie: Dell Technologies. Im regulären Handel fiel die Aktie um 11,83 Prozent auf 295,28 Dollar, mit den anderen Anbietern von KI-Hardware. Nach Börsenschluss legte Dell Quartalszahlen vor. Laut Stocktwits, zitiert von Yahoo Finance, verdoppelte sich der Umsatz auf 54,9 Milliarden Dollar, mit KI-Servern für 22 Milliarden. Dell hob die Jahresprognose auf 202 Milliarden Dollar an. Nachbörslich stieg die Aktie um rund 2 Prozent."
+  },
+  {
+   "ticker": "NVDA",
+   "noticia": "Laut Sell The News ließ die Begeisterung über Huangs Rückkehr nach; Chipwerte unter Druck.",
+   "lectura": "59 Mrd. $ Handelsumsatz.",
+   "fuente": "Kurs und Volumen: TradingView. Einordnung: Sell The News (24. November 2026).",
+   "voz": "Die dritte Aktie: Nvidia. Nach dem Sprung von 31 Prozent am Montag fiel die Aktie um 5,86 Prozent auf 155,38 Dollar, bei 59 Milliarden Dollar Handelsumsatz. Laut Sell The News ließ die Begeisterung über die Rückkehr von Jensen Huang nach. Die letzten Quartalszahlen von Nvidia erklären wir in unserer Serie «Die Wall-Street-Giganten»."
+  },
+  {
+   "ticker": "AMD",
+   "noticia": "Registrierung von rund 337 Mio. Aktien zum möglichen Weiterverkauf, laut Motley Fool kein sofortiger Verkauf.",
+   "lectura": "19 Mrd. $ Handelsumsatz.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Motley Fool (24. November 2026).",
+   "voz": "Die vierte Aktie: AMD. Die Aktie fiel um 8,86 Prozent auf 413,27 Dollar. Laut Motley Fool hat AMD rund 337 Millionen Aktien für einen möglichen Weiterverkauf registriert. Das wirft Fragen nach einer Verwässerung auf, bedeutet aber keinen sofortigen Verkauf."
+  },
+  {
+   "ticker": "DLTR",
+   "noticia": "Bereinigt 1,16 $ je Aktie (erwartet 0,91 $), Umsatz 5,1 Mrd. $; Gewinnprognose angehoben.",
+   "lectura": "Bester Wert im S&P 500, 2,5-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Zahlen: Investing.com (24. November 2026).",
+   "voz": "Die fünfte Aktie: Dollar Tree, eine Discount-Kette. Die Aktie stieg um 11,18 Prozent auf 154,65 Dollar, der beste Wert im S&P 500. Laut Investing.com verdiente Dollar Tree bereinigt 1,16 Dollar je Aktie, erwartet waren 0,91 Dollar. Der Umsatz stieg um 6,9 Prozent auf 5,1 Milliarden Dollar, und der Konzern hob seine Gewinnprognose an."
+  }
+ ],
+ "macro": {
+  "titulo": "Gold −2,2 % · Öl +1,7 % · Euro bei 1,0945 $",
+  "items": {
+   "TVC:US10Y": "Rendite leicht gesunken",
+   "TVC:DXY": "Dollar etwas schwächer",
+   "TVC:VIX": "Nervosität bleibt erhöht",
+   "TVC:USOIL": "Ölpreis zieht wieder an",
+   "TVC:GOLD": "Gold gibt nach"
+  },
+  "europa": "DAX −1,26 % und Euro Stoxx 50 −1,16 %: Xetra öffnet heute um 9:00 Uhr."
+ },
+ "tecnico": {
+  "spx": {
+   "titulo": "2,0 % unter der 200-Tage-Linie, RSI 40",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  },
+  "ndx": {
+   "titulo": "6,7 % unter der 200-Tage-Linie, RSI 39",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  }
+ },
+ "agenda": {
+  "titulo": "Vor Thanksgiving: Inflation und Wachstum",
+  "fuente": "Quellen: Investing.com (Termine), NYSE-Handelskalender (24. November 2026). Deutsche Zeit berechnet.",
+  "filas": [
+   [
+    "2026-11-25",
+    "US-Wachstum (BIP), PCE-Preise, Aufträge",
+    "08:30",
+    "geplant"
+   ],
+   [
+    "2026-11-25",
+    "Verkäufe neuer Häuser",
+    "10:00",
+    "geplant"
+   ],
+   [
+    "2026-11-25",
+    "Beige Book der Fed",
+    "14:00",
+    "geplant"
+   ],
+   [
+    "2026-11-26",
+    "Thanksgiving: US-Börsen geschlossen",
+    "",
+    "geplant"
+   ],
+   [
+    "2026-11-27",
+    "Verkürzter Handel bis 13 Uhr",
+    "13:00",
+    "geplant"
+   ]
+  ]
+ },
+ "fin": {
+  "titular": "KI-Zweifel: Nasdaq −1,5 %, Dow über 50.000",
+  "fuentes": "TradingView, Sell The News, Motley Fool, Analog Devices (SEC), Yahoo Finance, Investing.com"
+ }
+}

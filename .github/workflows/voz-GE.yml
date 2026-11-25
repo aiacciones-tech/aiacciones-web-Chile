@@ -8,7 +8,7 @@ name: Voz Azure del video diario (Wall Street auf Deutsch)
 on:
   push:
     branches: ["claude/ge-diario-**"]
-    paths: ["ge/diario/*/video.json", "ge/diario/*/short.json"]
+    paths: ["ge/diario/*/video.json", "ge/diario/*/short*.json"]
   workflow_dispatch:
     inputs:
       modo:
@@ -42,7 +42,8 @@ jobs:
           echo "fecha $F"
           python3 ge/diario/voz_azure.py ge/diario/$F/video.json /tmp/voz/$F
           # el Short también con Azure (misma carpeta; make_short.py usa VOZ_DIR si están todas sus frases)
-          if [ -f ge/diario/$F/short.json ]; then python3 ge/diario/voz_azure.py ge/diario/$F/short.json /tmp/voz/$F; fi
+          # y los Shorts extra del mismo guion (short-2.json, short-3.json; desde el 24-nov-2026)
+          for S in ge/diario/$F/short.json ge/diario/$F/short-*.json; do [ -f "$S" ] && python3 ge/diario/voz_azure.py "$S" /tmp/voz/$F; done
           cd /tmp/voz && git init -q -b voz-ge && git add .
           git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Voz Azure del video diario GE $F"
           git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"

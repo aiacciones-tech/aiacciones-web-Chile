@@ -1,0 +1,36 @@
+# Datos de Xetra (DAX y sus 40 acciones) para el Short diario «DAX am Abend» de Wall Street auf Deutsch (ge/dax/, prueba desde el 24-nov-2026).
+# Lunes a viernes a las 17:05 UTC: 18:05 en Berlín en invierno y 19:05 en verano, después del cierre de Xetra (17:30) y de los 15 min de retraso de TradingView.
+# Guarda ge/dax/datos/dax-<fecha>.json en la rama datos-dax-ge (no en main). En la ejecución programada no guarda nada si Xetra no abrió hoy.
+# Un push a una rama claude/** que cambie el script (prueba) también guarda, igual que datos-diario-Nabd.yml.
+name: Datos del Short DAX (Wall Street auf Deutsch)
+on:
+  schedule:
+    - cron: "5 17 * * 1-5"
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths: ["ge/dax/datos_dax.py", ".github/workflows/datos-dax-GE.yml"]
+permissions:
+  contents: write
+concurrency: datos-dax-ge
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar datos
+        env:
+          SOLO_DIA_DE_SESION: ${{ github.event_name == 'schedule' && '1' || '0' }}
+        run: pip install -q websocket-client && python3 ge/dax/datos_dax.py
+      - name: Guardar en la rama datos-dax-ge
+        run: |
+          ls ge/dax/datos/dax-*.json >/dev/null 2>&1 || exit 0
+          mkdir -p /tmp/out && cp ge/dax/datos/dax-*.json /tmp/out/
+          git config user.name "aiacciones-bot"
+          git config user.email "aiacciones-bot@users.noreply.github.com"
+          if git fetch -q origin datos-dax-ge; then git checkout -q -B datos-dax-ge origin/datos-dax-ge; else git checkout -q --orphan datos-dax-ge && git rm -rfq . ; fi
+          mkdir -p datos && cp /tmp/out/*.json datos/
+          git add datos
+          git diff --cached --quiet && exit 0
+          git commit -qm "Datos del Short DAX $(date -u +%F)"
+          for i in 1 2 3; do git push -q origin datos-dax-ge && break; sleep 5; git pull -q --rebase origin datos-dax-ge; done

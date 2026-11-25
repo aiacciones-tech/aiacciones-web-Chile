@@ -18,7 +18,7 @@ IMPRESSUM = os.environ.get("IMPRESSUM_URL", "")   # § 5 DDG: enlace al Impressu
 mmss = lambda s: f"{int(s) // 60}:{int(s) % 60:02d}"
 imp = I.get("impressum") or IMPRESSUM
 AVISO = f"""Wichtiger Hinweis / Haftungsausschluss
-• Erstellt von Wall Street auf Deutsch am {I['elaborado']} (deutsche Zeit) mit Daten der Sitzung vom {I['fecha_txt']}; erscheint nach jedem Handelsschluss an der Wall Street.
+• Erstellt von Wall Street auf Deutsch am {I['elaborado']} (deutsche Zeit) mit Daten der Sitzung vom {I['fecha_txt']}; erscheint am Morgen nach jeder Sitzung an der Wall Street, vor dem Handelsstart in Europa.
 • Nur Information und Bildung auf Basis öffentlicher Informationen. Keine Anlageberatung, keine Anlageempfehlung und keine Aufforderung zum Kauf oder Verkauf von Wertpapieren. Die Inhalte berücksichtigen weder Ihre persönliche Situation noch Ihre Ziele oder Ihre Risikobereitschaft.
 • Fakten und Meinungen sind getrennt. Die Zahlen stammen aus Unternehmensveröffentlichungen bei der US-Börsenaufsicht SEC und den genannten Marktquellen ({I['fuentes']}). Eigene Berechnungen sind mit «berechnet» gekennzeichnet. Wir nennen keine Kursziele und bewerten Aktien nicht als günstig oder teuer.
 • Charttechnik: Gleitende Durchschnitte, RSI, Stochastik sowie Unterstützungen und Widerstände sind aus öffentlichen Schlusskursen berechnet. Sie beschreiben die vergangene Kursentwicklung, sind keine Kauf- oder Verkaufssignale und sagen die Zukunft nicht voraus.
@@ -28,7 +28,7 @@ AVISO = f"""Wichtiger Hinweis / Haftungsausschluss
 # Capítulos: los del info.json si todos existen en times.json; si no, los de las 8 secciones del vídeo largo
 CAPS = [("s_title", "Einstieg"), ("s_indices", "Die großen Indizes"), ("s_news", "Warum sich der Markt bewegt hat"), ("s_sectores", "Sektoren"),
         ("s_accion_1", "Aktien des Tages"), ("s_macro", "Zinsen, Dollar, Rohstoffe und Europa"), ("s_tech_spx", "Charttechnik: S&P 500"),
-        ("s_tech_ndx", "Charttechnik: Nasdaq 100"), ("s_agenda", "Was morgen ansteht"), ("s_fin", "Fazit und Telegram")]
+        ("s_tech_ndx", "Charttechnik: Nasdaq 100"), ("s_agenda", "Was heute ansteht"), ("s_fin", "Fazit und Telegram")]
 caps = I.get("capitulos") if I.get("capitulos") and all(k in T for k, _ in I["capitulos"]) else [c for c in CAPS if c[0] in T]
 cap = "\n".join(f"{mmss(T[k]) if i else '0:00'} {t}" for i, (k, t) in enumerate(caps))
 MIN = max(1, round(T.get("_total", 180) / 60))
@@ -80,8 +80,38 @@ tg = (f"📊 Wall Street auf Deutsch | {I['fecha_txt']}\n\n{I['resumen']}\n\n" +
       f"\n\n▶️ Das ganze Video: {{youtube}}\n{cta_post}{canal_linea}\n\nKeine Anlageberatung. Keine Positionen in den genannten Aktien. Mit KI erstellt.")
 open(f"{D}/post-telegram-{F}-GE.txt", "w").write(tg)
 
-# Miniatura 1280x720 (de izquierda a derecha): la fecha de la sesión en destacado y dos índices; logo arriba a la derecha
-th = I["miniatura"]; f = fig(1280, 720)
+# Shorts extra del mismo guion (desde el 24-nov-2026): short-2.json («Aktie des Tages», 12:15 Berlín) y short-3.json («Die Marken für heute», 15:05 Berlín).
+# info.json → "shorts_extra": [{"n": 2, "titulo": "... #Shorts", "resumen": "...", "tiktok": "...", "hashtags": "#... #Shorts", "tags": [...]}, ...]
+# Salen meta-short<n>-<fecha>-GE.json y post-tiktok/instagram-short<n>-<fecha>-GE.txt; encolar.sh los deja en cola-ge-espera/ y cola-espera-GE.yml los publica a su hora.
+for X in I.get("shorts_extra", []):
+    n = X["n"]; assert n in (2, 3) and len(X["titulo"]) <= 100, X.get("titulo")
+    sx = (f"{X['resumen']}\nDas ganze Video zur Sitzung (Nachrichten, Fundamentales und Charttechnik): {{video:{slug}}}\n"
+          f"Quellen: {I['fuentes']}. Erstellt von Wall Street auf Deutsch am {I['elaborado']} (deutsche Zeit). Keine Anlageberatung, nur Information und Bildung. "
+          f"Charttechnik sind Daten, keine Kauf- oder Verkaufssignale. Keine Positionen in den genannten Aktien. Risiko bis zum Totalverlust. Text, Stimme und Grafiken mit KI erstellt.\n"
+          f"{cta_post}Kanal abonnieren: {CANAL}{imp_linea}\n{X.get('hashtags', '#Shorts #WallStreet #Börse #Aktien')}")
+    assert len(sx) < 5000 and "<" not in sx and ">" not in sx
+    json.dump({"title": X["titulo"], "description": sx, "tags": (X.get("tags") or I["tags"])[:8] + ["Shorts"], "privacy": "public", "language": "de", "categoryId": "27"},
+              open(f"{D}/meta-short{n}-{F}-GE.json", "w"), ensure_ascii=False, indent=1)
+    tx = " ".join(t for t in X.get("hashtags", I["hashtags_short"]).split() if t.lower() != "#shorts")
+    tx = ("#WallStreetAufDeutsch " + tx).strip() if "#wallstreetaufdeutsch" not in tx.lower() else tx
+    tkx = (f"{X['tiktok']}\n{cta_post}{canal_linea}\n🤖 Mit KI erstellt (Text, Stimme und Grafiken).\n"
+           f"Keine Anlageberatung, nur Information und Bildung. Keine Positionen in den genannten Aktien. Risiko bis zum Totalverlust.\n{tx}")
+    assert len(tkx) <= 2200, len(tkx)
+    open(f"{D}/post-tiktok-short{n}-{F}-GE.txt", "w").write(tkx); open(f"{D}/post-instagram-short{n}-{F}-GE.txt", "w").write(tkx)
+    print("short extra", n, X["titulo"])
+
+# Miniatura 1280x720. Desde el 24-nov-2026 (Daniel): «cifra grande + logo» (miniatura.py) cuando info.json → miniatura trae `cifra`:
+# {"nombre": "Nvidia", "cifra": "+31 %", "logo": "NVDA", "gancho": "Huang ist zurück", "indices": [["S&P 500", "+4,7 %", "teal"], ...]}
+# (logos con LOGOS_DIR=<clon de datos-extra-ge>/logos; sin logo sale una insignia con el ticker). Sin `cifra`, el diseño anterior.
+th = I["miniatura"]
+if th.get("cifra"):
+    import miniatura as MN
+    y_, m_, d_ = I["fecha"].split("-")
+    p = MN.miniatura(f"{D}/miniatura-{F}-GE.png", th.get("etiqueta", f"DER TAGESBERICHT · {d_}.{m_}.{y_}"), th["nombre"], th["cifra"],
+                     th.get("color"), th.get("gancho", ""), th.get("logo"), [tuple(x) for x in th.get("indices", [])])
+    print("ok", slug, "desc", len(desc), "li", len(li), "x", largo_x(x.replace("{youtube}", "https://youtu.be/XXXXXXXXXXX")), "logo", MN.buscar_logo(th.get("logo")))
+    sys.exit(0)
+f = fig(1280, 720)
 TT = lambda x, y, s, c, fs, w="bold", ha="left", **k: f.text(x, y, ar(s), color=c, fontsize=fs, weight=w, ha=ha, **k)
 f.patches.append(plt.Rectangle((0, 0.70), 1.0, 0.30, transform=f.transFigure, color=GOLD, figure=f))
 TT(0.045, 0.905, "Wall Street · Sitzung vom", BG, 26, va="center")

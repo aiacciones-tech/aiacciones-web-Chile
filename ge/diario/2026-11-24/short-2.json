@@ -1,0 +1,63 @@
+{
+ "cabecera": "Aktie des Tages · 24. November 2026",
+ "out": "short-2-bolsa-2026-11-24-GE.mp4",
+ "fuente": "Quellen: TradingView, Stocktwits\nvia Yahoo Finance (24. November 2026).",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Aktie des Tages · Wall Street",
+   "fecha": "Di., 24. November 2026",
+   "indices": [
+    [
+     "Dell",
+     "−11,83 %",
+     "295,28 $",
+     "neg"
+    ]
+   ],
+   "pregunta": "Rekordzahlen nach Börsenschluss",
+   "voz": "Die Aktie des Tages an der Wall Street, Dienstag, 24. November: Dell."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Im Handel",
+   "big": "−11,83 %",
+   "delta": "Schluss 295,28 $",
+   "color": "neg",
+   "nota": "Verkauf bei KI-Hardware vor den Zahlen.\nNachbörslich rund +2 % (Stocktwits).",
+   "voz": "Eins. Im regulären Handel fällt Dell um fast 12 Prozent, mit den anderen KI-Hardware-Werten."
+  },
+  {
+   "tipo": "kpis",
+   "n": 2,
+   "label": "Die Zahlen nach Börsenschluss",
+   "items": [
+    [
+     "54,9 Mrd. $",
+     "Umsatz im Quartal, +103 %",
+     "teal"
+    ],
+    [
+     "22 Mrd. $",
+     "KI-Server, +291 %",
+     "teal"
+    ],
+    [
+     "202 Mrd. $",
+     "neue Jahresprognose",
+     "teal"
+    ]
+   ],
+   "nota": "Laut Stocktwits via Yahoo Finance.\nDas sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Zwei. Nach Börsenschluss verdoppelt sich der Umsatz auf 54,9 Milliarden Dollar, und Dell hebt die Jahresprognose auf 202 Milliarden an."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Jeden Morgen:\nDer Tagesbericht",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Den ganzen Tagesbericht finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}

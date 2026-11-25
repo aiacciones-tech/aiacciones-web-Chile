@@ -1,6 +1,20 @@
 {
- "actualizado": "2026-11-24T02:47Z",
+ "actualizado": "2026-11-25T00:06Z",
  "items": [
+  {
+   "id": "75e89320-dd9b-4e74-baee-a194d9c3b917",
+   "tipo": "OIR",
+   "fecha": "2026-11-24 18:18",
+   "entidad": "ENDESA, S.A.",
+   "nif": "A",
+   "categoria": "Sobre negocio y situación financiera",
+   "titulo": "DIVIDENDO A CUENTA",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b75e89320-dd9b-4e74-baee-a194d9c3b917%7d",
+   "ticker": "ELE",
+   "temas": [
+    "dividendos"
+   ]
+  },
   {
    "id": "4d7fa3c6-2f37-46e5-a467-7bc8e6c8f354",
    "tipo": "OIR",

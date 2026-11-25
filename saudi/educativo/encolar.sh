@@ -31,6 +31,8 @@ C=cola-sa/lesson-$BASE; CS=cola-sa/lesson-$BASE-short
 [ -e $C ] && { echo "ya encolado: $C"; exit 1; }
 mkdir -p $C $CS
 cp $B/lesson-$BASE-saudi.mp4 $C/video.mp4; cp $B/meta-youtube-$BASE-saudi.json $C/meta.json; cp $B/thumbnail-$BASE-saudi.png $C/miniatura.png
+# Prueba A/B de miniatura (y título si hay titulo_b), 24-nov-2026: scripts/ab-saudi.py alterna A y B y deja la ganadora.
+[ -s $B/ab-$BASE-saudi.json ] && [ -s $B/thumbnail-b-$BASE-saudi.png ] && { cp $B/ab-$BASE-saudi.json $C/ab.json; cp $B/thumbnail-b-$BASE-saudi.png $C/miniatura-b.png; }
 cp $B/short-$BASE-saudi.mp4 $CS/video.mp4; cp $B/meta-short-$BASE-saudi.json $CS/meta.json
 git add cola-sa; git commit -qm "Cola Arabia Saudita: serie educativa, $BASE (video y Short)"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done

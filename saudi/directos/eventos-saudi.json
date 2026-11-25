@@ -1,0 +1,47 @@
+{
+  "nota": "Calendario de directos en momentos clave (Saudi Arabia AI Stocks). Horas en Riad (UTC+3). Fecha confirmada con fuente; las de estado 'por_confirmar' se fijan cuando haya fuente oficial. Creado 2026-11-24.",
+  "duracion_objetivo_min": "8-12",
+  "eventos": [
+    {
+      "id": "opec-2026-11-29",
+      "tipo": "opep",
+      "titulo_ar": "بث مباشر: قرار أوبك+ لعام 2027 وأثره على أرامكو وتاسي",
+      "fecha_evento": "2026-11-29",
+      "hora_directo": "por_confirmar (2 h tras el comunicado)",
+      "estado": "confirmado",
+      "fuente": ["https://opec.org/pr-detail/2033620-1-november-2026.html", "https://www.cnbc.com/2026/10/31/opec-oil-output-targets-december.html"],
+      "nota": "Reunion de los 21 miembros; se esperan cuotas 2027. Depende de que Daniel tenga los directos activados (24 h)."
+    },
+    {
+      "id": "fed-2026-12-09",
+      "tipo": "fed",
+      "titulo_ar": "بث مباشر: قرار الفيدرالي الأمريكي وما يعنيه للسوق السعودي",
+      "fecha_evento": "2026-12-09",
+      "hora_decision": "22:00",
+      "hora_directo": "23:30",
+      "estado": "confirmado",
+      "fuente": ["https://www.federalreserve.gov/newsevents/2026-december.htm"],
+      "nota": "Reunion con proyecciones (SEP). El riyal esta anclado al dolar: SAMA suele mover tipos el mismo dia."
+    },
+    {
+      "id": "presupuesto-2027",
+      "tipo": "presupuesto",
+      "titulo_ar": "بث مباشر: الميزانية السعودية 2027 بالأرقام",
+      "fecha_evento": "diciembre 2026",
+      "hora_directo": "por_confirmar",
+      "estado": "por_confirmar",
+      "fuente": ["https://www.jadwa.com/en/node/28681"],
+      "nota": "Preliminar (30-sep): gasto 1.392 bn SAR, ingresos 1.202 bn, deficit 3,6% PIB. Fecha exacta sin publicar."
+    },
+    {
+      "id": "resultados-fy26",
+      "tipo": "resultados",
+      "titulo_ar": "بث مباشر: نتائج {empresa} السنوية 2026",
+      "fecha_evento": "ene-mar 2027",
+      "empresas": ["aramco", "alrajhi", "snb", "sabic", "stc", "maaden"],
+      "estado": "por_confirmar",
+      "fuente": ["/mnt/project-files/saudi-pipeline/calendar-FY26-saudi.json"],
+      "nota": "Se toma fecha_informe del calendario FY26 cuando la rutina de resultados la confirme."
+    }
+  ]
+}

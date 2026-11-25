@@ -1,0 +1,4 @@
+{
+ "_info": "Registro de las mejoras de crecimiento del canal saudí (desde el 24-nov-2026), para la sección 'Impacto de las mejoras' del informe semanal (scripts/impacto_saudi.py). Añade una entrada por vídeo evergreen: {\"tipo\": \"evergreen\", \"video\": \"<videoId>\" o \"titulo\": \"<título exacto>\", \"desde\": \"AAAA-MM-DD\", \"nota\": \"tema / búsqueda objetivo\"}. Las pruebas A/B se leen de cola-sa/*/ab-estado.json (rama youtube-cola); los directos/estrenos y las playlists se detectan solos. También valen entradas 'ab', 'directo' y 'playlist' para anotar algo a mano.",
+ "mejoras": []
+}

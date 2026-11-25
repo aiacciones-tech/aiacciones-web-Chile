@@ -1,0 +1,438 @@
+{
+ "base": "inditex-resultados-9m-2026",
+ "formato": "fijo",
+ "etiqueta": "Guías de bolsa española",
+ "simbolo": "BME:ITX",
+ "ticker": "ITX",
+ "nombre": "Inditex",
+ "tema": "Inditex en cifras",
+ "velas_n": 300,
+ "ultima_vela": "2026-11-23",
+ "decimales": 2,
+ "escenas": [
+  {
+   "id": "intro",
+   "tipo": "portada",
+   "capitulo": "La respuesta corta",
+   "kicker": "Antes de sus resultados de nueve meses",
+   "respuesta": "Beneficio del primer semestre de 2026: 2.980 M€ (+6,8 %)",
+   "sub": "Resultados de nueve meses previstos para el 2 de diciembre de 2026",
+   "voz": "Inditex llega a sus resultados de nueve meses con el beneficio al alza: en el primer semestre de 2026 ganó 2.980 millones de euros, un 6,8 % más, con unas ventas de 19.755 millones, un 7,6 % más. Esos resultados de nueve meses están previstos para el 2 de diciembre. Repasamos las cifras clave y con qué se compararán. Es contenido informativo, no una recomendación de inversión."
+  },
+  {
+   "id": "anual",
+   "tipo": "cifras",
+   "capitulo": "El último ejercicio completo",
+   "kicker": "Ejercicio 2025 (febrero de 2025 a enero de 2026)",
+   "titulo": "Casi 40.000 millones de ventas y 6.220 de beneficio",
+   "cifras": [
+    [
+     "39.864 M€",
+     "Ventas: +3,2 % (+7 % a tipo de cambio constante)",
+     "acc"
+    ],
+    [
+     "6.220 M€",
+     "Beneficio neto: +6 %",
+     "acc2"
+    ],
+    [
+     "58,3 %",
+     "Margen bruto sobre ventas",
+     "neg"
+    ],
+    [
+     "10.958 M€",
+     "Caja neta (más caja que deuda financiera)",
+     "pur"
+    ]
+   ],
+   "fuente": "Fuente: cuentas del ejercicio 2025 de Inditex (cerrado el 31-ene-2026), publicadas el 11-mar-2026, según El Cronista",
+   "voz": "Primero, el último ejercicio completo. El año fiscal de Inditex va de febrero a enero. En su ejercicio 2025, cerrado el 31 de enero de 2026, ingresó 39.864 millones de euros por ventas, un 3,2 % más, y un 7 % más a tipo de cambio constante, es decir, sin el efecto de las divisas. Ganó 6.220 millones, un 6 % más. Su margen bruto fue del 58,3 %: de cada 100 euros de ventas, 58,3 quedan después de pagar el coste de los productos. Y cerró el año con una caja neta de 10.958 millones: tiene más dinero en caja que deuda financiera."
+  },
+  {
+   "id": "semestre",
+   "tipo": "tabla",
+   "capitulo": "El primer semestre de 2026",
+   "kicker": "Primer semestre de 2026 (febrero a julio)",
+   "titulo": "Ventas, márgenes y beneficio, al alza",
+   "columnas": [
+    "Partida",
+    "Primer semestre 2026",
+    "Variación anual"
+   ],
+   "anchos": [
+    0.28,
+    0.32,
+    0.4
+   ],
+   "filas": [
+    [
+     "Ventas",
+     "19.755 M€",
+     "+7,6 % (+9,2 % a tipo constante)"
+    ],
+    [
+     "Margen bruto",
+     "11.596 M€ (58,7 % de las ventas)",
+     "+8,3 % (+0,4 puntos)"
+    ],
+    [
+     "Ebitda",
+     "5.513 M€",
+     "+7,8 %"
+    ],
+    [
+     "Ebit",
+     "3.843 M€",
+     "+7,6 %"
+    ],
+    [
+     "Beneficio neto",
+     "2.980 M€",
+     "+6,8 %"
+    ],
+    [
+     "Caja neta",
+     "10.398 M€",
+     "+4 %"
+    ]
+   ],
+   "destacar": 4,
+   "fuente": "Fuente: resultados del primer semestre de Inditex (9-sep-2026), según hiretail.es, The Objective y pcbolsa",
+   "voz": "Ahora, el primer semestre de 2026, de febrero a julio. Las ventas sumaron 19.755 millones, un 7,6 % más, y un 9,2 % más a tipo constante. El margen bruto subió al 58,7 % de las ventas, cuatro décimas más que un año antes. El ebitda, el resultado antes de amortizaciones, creció un 7,8 %, hasta 5.513 millones, y el ebit, el resultado de explotación, un 7,6 %. El beneficio neto fue de 2.980 millones, un 6,8 % más. Y la caja neta, de 10.398 millones, un 4 % más que un año antes."
+  },
+  {
+   "id": "cadenas",
+   "tipo": "barras",
+   "capitulo": "De dónde vienen las ventas",
+   "kicker": "Ventas por cadena, primer semestre de 2026",
+   "titulo": "Zara aporta 7 de cada 10 euros de ventas",
+   "barras": [
+    [
+     "Zara (con Zara Home y Lefties)",
+     13783
+    ],
+    [
+     "Bershka",
+     1678
+    ],
+    [
+     "Stradivarius",
+     1573
+    ],
+    [
+     "Pull&Bear",
+     1261
+    ],
+    [
+     "Massimo Dutti",
+     988
+    ],
+    [
+     "Oysho",
+     472
+    ]
+   ],
+   "formato": "{:,.0f} M€",
+   "destacar": "Zara (con Zara Home y Lefties)",
+   "color": "acc2",
+   "color_destacado": "acc",
+   "nota": "Zara, Zara Home y Lefties: 69,8 % de las ventas del semestre (calculado)",
+   "fuente": "Fuente: resultados del primer semestre de Inditex (9-sep-2026), según hiretail.es y pcbolsa · porcentaje: calculado",
+   "voz": "¿De dónde salen esas ventas? Zara, que Inditex presenta junto a Zara Home y Lefties, aportó 13.783 millones en el semestre: según nuestro cálculo, el 69,8 % del total, casi 7 de cada 10 euros. Le siguen Bershka, con 1.678 millones, Stradivarius, con 1.573, Pull and Bear, con 1.261, Massimo Dutti, con 988, y Oysho, con 472."
+  },
+  {
+   "id": "regiones",
+   "tipo": "barras",
+   "kicker": "Ventas por región, primer semestre de 2026",
+   "titulo": "Más de la mitad, en Europa fuera de España",
+   "barras": [
+    [
+     "Europa sin España",
+     51.5
+    ],
+    [
+     "América",
+     17.9
+    ],
+    [
+     "España",
+     15.6
+    ],
+    [
+     "Asia y resto del mundo",
+     15.0
+    ]
+   ],
+   "formato": "{:.1f} %",
+   "destacar": "España",
+   "color": "acc2",
+   "color_destacado": "neg",
+   "fuente": "Fuente: resultados del primer semestre de Inditex (9-sep-2026), según hiretail.es y pcbolsa",
+   "voz": "Por regiones, el 51,5 % de las ventas se hizo en Europa fuera de España; el 17,9 %, en América; el 15,6 %, en España, y el 15 %, en Asia y el resto del mundo. Por eso las divisas importan: parte de las ventas se cobra en monedas distintas del euro, y eso explica la diferencia entre el crecimiento en euros y a tipo constante. Al cierre del semestre tenía 5.444 tiendas."
+  },
+  {
+   "id": "dividendo",
+   "tipo": "cifras",
+   "capitulo": "El dividendo",
+   "kicker": "Dividendo con cargo al ejercicio 2025",
+   "titulo": "1,75 euros por acción, pagados en dos mitades",
+   "cifras": [
+    [
+     "1,75 €",
+     "Dividendo total por acción",
+     "acc"
+    ],
+    [
+     "1,20 €",
+     "Parte ordinaria",
+     "acc2"
+    ],
+    [
+     "0,55 €",
+     "Parte extraordinaria",
+     "neg"
+    ],
+    [
+     "2 × 0,875 €",
+     "Pagados el 4-may y el 2-nov-2026",
+     "pur"
+    ]
+   ],
+   "fuente": "Fuente: dividendo aprobado por Inditex con cargo al ejercicio 2025, según Finect, hiretail.es y pcbolsa",
+   "voz": "Vamos con el dividendo. Con cargo al ejercicio 2025, Inditex reparte 1,75 euros por acción: 1,20 euros de dividendo ordinario y 0,55 euros de extraordinario. Lo paga en dos mitades de 0,875 euros: la primera, el 4 de mayo de 2026, y la segunda, el 2 de noviembre. El dividendo con cargo al ejercicio 2026 se conocerá con las cuentas anuales, en marzo."
+  },
+  {
+   "id": "comparar",
+   "tipo": "tabla",
+   "capitulo": "Con qué se compara el 2 de diciembre",
+   "kicker": "La referencia: nueve meses de 2025 (febrero a octubre)",
+   "titulo": "El 2 de diciembre se compara con estas cifras",
+   "columnas": [
+    "Partida",
+    "Nueve meses 2025",
+    "Variación entonces"
+   ],
+   "anchos": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "filas": [
+    [
+     "Ventas",
+     "28.171 M€",
+     "+2,7 % (+6,2 % a tipo constante)"
+    ],
+    [
+     "Ventas del tercer trimestre",
+     "9.814 M€",
+     "+4,9 % (+8,4 % a tipo constante)"
+    ],
+    [
+     "Margen bruto",
+     "59,7 % de las ventas",
+     "+0,27 puntos"
+    ],
+    [
+     "Ebitda",
+     "8.303 M€",
+     "+4,2 %"
+    ],
+    [
+     "Beneficio neto",
+     "4.622 M€",
+     "+3,9 %"
+    ],
+    [
+     "Inicio del 4.º trimestre",
+     "1-nov a 1-dic-2025",
+     "+10,6 % a tipo constante"
+    ]
+   ],
+   "destacar": 4,
+   "fuente": "Fuente: resultados de nueve meses de Inditex (3-dic-2025), según merca2, Modaes y XTB",
+   "voz": "¿Con qué se compararán los resultados del 2 de diciembre? Con los nueve primeros meses de 2025. Entonces, las ventas fueron de 28.171 millones, un 2,7 % más, y un 6,2 % más a tipo constante. Solo el tercer trimestre aportó 9.814 millones, un 4,9 % más. El margen bruto fue del 59,7 %, el ebitda de 8.303 millones y el beneficio neto de 4.622 millones, un 3,9 % más. Y las ventas del arranque del cuarto trimestre, del 1 de noviembre al 1 de diciembre, crecieron un 10,6 % a tipo constante."
+  },
+  {
+   "id": "claves",
+   "tipo": "puntos",
+   "capitulo": "Qué mirar el 2 de diciembre",
+   "kicker": "Para seguir los resultados",
+   "titulo": "Cuatro cifras que conviene mirar el 2 de diciembre",
+   "puntos": [
+    [
+     "Ventas del 3.er trimestre",
+     "Del 1-ago al 7-sep crecieron un 9 % a tipo constante. ¿Se mantuvo el ritmo hasta octubre?"
+    ],
+    [
+     "Margen bruto",
+     "Inditex prevé un margen estable en 2026, con 50 puntos básicos arriba o abajo."
+    ],
+    [
+     "Inventarios",
+     "3.789 M€ a 31 de julio, un 9,3 % más, frente a unas ventas que crecieron un 7,6 %."
+    ],
+    [
+     "Inicio del 4.º trimestre",
+     "Hace un año, las ventas de noviembre crecieron un 10,6 % a tipo constante."
+    ]
+   ],
+   "voz": "Con todo esto, cuatro cifras que conviene mirar el 2 de diciembre. Uno, las ventas del tercer trimestre: del 1 de agosto al 7 de septiembre crecieron un 9 % a tipo constante; la pregunta es si ese ritmo se mantuvo hasta octubre, y cuánto restan las divisas, que en el semestre dejaron el crecimiento en euros en un 7,6 %. Dos, el margen bruto: la propia Inditex prevé que se mantenga estable en 2026, con medio punto arriba o abajo. Tres, los inventarios: a 31 de julio sumaban 3.789 millones, un 9,3 % más, algo por encima del crecimiento de las ventas. Y cuatro, el arranque del cuarto trimestre, que hace un año fue de un 10,6 %."
+  },
+  {
+   "id": "bolsa",
+   "tipo": "grafico",
+   "capitulo": "La acción en bolsa",
+   "kicker": "La acción, en datos",
+   "titulo": "Un 26,1 % más que hace un año, cerca de su máximo",
+   "desde": "2025-11-24",
+   "panel": "",
+   "lineas": [],
+   "voz": "En bolsa, Inditex cerró el 23 de noviembre en 58,68 euros. Un año antes, el 21 de noviembre de 2025, cerraba en 46,54: según nuestro cálculo, un 26,1 % más. El 16 de noviembre marcó un máximo de 60,80 euros. Los días de resultados han movido la acción: el 3 de diciembre de 2025, con las cuentas de nueve meses, cerró con una subida del 8,9 %, y el 9 de septiembre de 2026, con las del semestre, con una caída del 3,6 %. Son datos del pasado y no anticipan qué pasará esta vez. Con el dividendo de 1,75 euros, la rentabilidad por dividendo sobre el cierre del 23 de noviembre es del 3 %, también calculada.",
+   "marcas": [
+    {
+     "fecha": "2025-12-03",
+     "tipo": "cruce",
+     "texto": "Resultados 9M 2025\n+8,9 % ese día",
+     "arriba": false
+    },
+    {
+     "fecha": "2026-09-09",
+     "tipo": "cruce",
+     "texto": "Resultados 1S 2026\n−3,6 % ese día",
+     "arriba": false
+    },
+    {
+     "fecha": "2026-11-16",
+     "tipo": "techo",
+     "texto": "Máximo 60,80\n16 nov"
+    }
+   ],
+   "nota": "Variaciones: calculado"
+  },
+  {
+   "id": "fin",
+   "tipo": "fin",
+   "capitulo": "Resumen",
+   "claves": [
+    "Primer semestre de 2026: beneficio de 2.980 M€ (+6,8 %)",
+    "Ventas de 19.755 M€ (+7,6 %; +9,2 % a tipo constante)",
+    "Referencia: 4.622 M€ de beneficio en nueve meses de 2025",
+    "Resultados de nueve meses previstos el 2-dic-2026"
+   ],
+   "voz": "En resumen: Inditex ganó 2.980 millones en el primer semestre de 2026, un 6,8 % más, con ventas de 19.755 millones. El 2 de diciembre, si se confirma la fecha, sus resultados de nueve meses se compararán con un beneficio de 4.622 millones un año antes. Te dejamos las fuentes en la descripción. Suscríbete para seguir el IBEX 35 cada día de bolsa."
+  }
+ ],
+ "short": [
+  {
+   "id": "s_titulo",
+   "tipo": "titulo",
+   "pregunta": "¿Cómo llega a resultados?",
+   "sub": "Cifras clave antes de resultados",
+   "voz": "¿Cómo llega Inditex a sus resultados del 2 de diciembre? Estas son sus cifras clave, en menos de un minuto."
+  },
+  {
+   "id": "s_cifras",
+   "tipo": "cifras",
+   "titulo": "Primer semestre de 2026",
+   "cifras": [
+    [
+     "2.980 M€",
+     "Beneficio neto: +6,8 %",
+     "acc"
+    ],
+    [
+     "19.755 M€",
+     "Ventas: +7,6 %",
+     "acc2"
+    ],
+    [
+     "58,7 %",
+     "Margen bruto",
+     "neg"
+    ]
+   ],
+   "voz": "En el primer semestre de 2026 ganó 2.980 millones de euros, un 6,8 % más. Sus ventas fueron de 19.755 millones, un 7,6 % más, y el margen bruto subió al 58,7 %."
+  },
+  {
+   "id": "s_mirar",
+   "tipo": "puntos",
+   "titulo": "Qué mirar el 2 de diciembre",
+   "puntos": [
+    "Ventas del 3.er trimestre: arrancó con +9 %",
+    "Margen bruto: previsión estable",
+    "Referencia: 4.622 M€ de beneficio en 9 meses de 2025"
+   ],
+   "voz": "El 2 de diciembre, tres cosas: si las ventas mantuvieron el 9 % de crecimiento con el que arrancó el trimestre, si el margen sigue estable, y cómo se compara el beneficio con los 4.622 millones de hace un año."
+  },
+  {
+   "id": "s_fin",
+   "tipo": "fin",
+   "voz": "El vídeo completo, con el dividendo y la tabla comparativa, en nuestro canal. Contenido informativo, no es una recomendación."
+  }
+ ],
+ "info": {
+  "titulo": "Inditex gana 2.980 millones en el semestre: cifras clave antes de sus resultados del 2 de diciembre",
+  "titulo_b": "¿Cómo llega Inditex a sus resultados del 2-dic? Beneficio, ventas, margen y dividendo",
+  "titulo_short": "Inditex antes del 2 de diciembre: 2.980 M€ de beneficio en el semestre #Shorts",
+  "resumen": "Inditex presenta sus resultados de nueve meses, previstos para el 2 de diciembre de 2026. Repasamos sus cifras clave con fuentes: el ejercicio 2025 (39.864 M€ de ventas y 6.220 M€ de beneficio), el primer semestre de 2026 (2.980 M€ de beneficio, +6,8 %, y 19.755 M€ de ventas, +7,6 %), las ventas por cadena y región, el dividendo de 1,75 € por acción, las cifras de nueve meses de 2025 con las que se comparará y la evolución de la acción hasta el cierre del 23 de noviembre de 2026.",
+  "elaborado": "24 de noviembre de 2026",
+  "fuentes": "resultados de Inditex del ejercicio 2025 (El Cronista), del primer semestre de 2026 (hiretail.es, The Objective, pcbolsa, OCU) y de nueve meses de 2025 (merca2, Modaes, XTB); dividendo: Finect, hiretail.es y pcbolsa; fecha del 2-dic-2026: DailyForex, pendiente de confirmación oficial; cotización: TradingView (BME:ITX, hasta el cierre del 23-nov-2026)",
+  "enlaces": [
+   [
+    "Resultados del primer semestre de 2026 (hiretail.es)",
+    "https://hiretail.es/investment/inditex-eleva-un-68-su-beneficio-neto-hasta-los-2-980me-en-el-primer-semestre-de-2026/"
+   ],
+   [
+    "Primer semestre de 2026 (pcbolsa)",
+    "https://pcbolsa.com/Noticia/14037/Inditex-eleva-un-68-su-beneficio-semestral-hasta-2980-millones-y-mantiene-el-impulso-de-ventas"
+   ],
+   [
+    "Nueve meses de 2025 (merca2)",
+    "https://www.merca2.es/2025/12/03/inditex-gana-ventas-alza-2329981/"
+   ],
+   [
+    "Nueve meses de 2025 (Modaes)",
+    "https://www.modaes.com/empresas/inditex-eleva-el-ritmo-crece-un-27-en-los-nueve-primeros-meses-y-gana-un-39-mas"
+   ],
+   [
+    "Fecha de resultados (DailyForex)",
+    "https://es.dailyforex.com/stock-market-today/2026/11/inditex-afronta-noviembre-2026-tras-dividendo-y-antes-de-los-resultados/251392"
+   ]
+  ],
+  "hashtags": "#Inditex #Zara #IBEX35 #Resultados #Dividendos #BolsaEspañola",
+  "hashtags_short": "#Inditex #Zara #IBEX35 #Shorts",
+  "tags": [
+   "Inditex",
+   "resultados Inditex",
+   "Inditex resultados 2 diciembre",
+   "Inditex dividendo",
+   "Zara",
+   "ITX",
+   "acciones Inditex",
+   "beneficio Inditex",
+   "Inditex nueve meses 2026"
+  ],
+  "x": "Inditex antes de sus resultados de 9 meses (2-dic):\n• 1S 2026: beneficio 2.980 M€ (+6,8 %), ventas 19.755 M€ (+7,6 %)\n• Referencia 9M 2025: 4.622 M€\n• Dividendo 2025: 1,75 €/acción",
+  "tiktok": "Inditex antes de sus resultados del 2 de diciembre: 2.980 millones de beneficio en el primer semestre de 2026 (+6,8 %), ventas de 19.755 millones (+7,6 %) y la cifra con la que se comparará: 4.622 millones en nueve meses de 2025.",
+  "linkedin": {
+   "datos": [
+    "Primer semestre de 2026 (feb-jul): beneficio neto de 2.980 M€ (+6,8 %) y ventas de 19.755 M€ (+7,6 %; +9,2 % a tipo constante). Margen bruto: 58,7 % (+0,4 puntos).",
+    "Zara, con Zara Home y Lefties, aportó 13.783 M€: el 69,8 % de las ventas del semestre (calculado).",
+    "La referencia para el 2 de diciembre: en los nueve meses de 2025, beneficio de 4.622 M€ (+3,9 %) y ventas de 28.171 M€ (+2,7 %).",
+    "Dividendo con cargo a 2025: 1,75 € por acción (1,20 ordinario y 0,55 extraordinario), pagado en dos mitades en mayo y noviembre de 2026."
+   ],
+   "conclusion": "El 2 de diciembre se verá si las ventas mantienen el +9 % a tipo constante con el que arrancó el tercer trimestre y si el margen bruto sigue estable, como prevé la propia compañía."
+  }
+ },
+ "miniatura": {
+  "etiqueta": "Antes de resultados",
+  "titulo": "Inditex en cifras",
+  "cifra": "2.980 M€",
+  "color": "acc",
+  "sub": "Beneficio 1S 2026 · +6,8 %",
+  "gancho_b": "¿Qué mirar el 2 de diciembre?"
+ }
+}

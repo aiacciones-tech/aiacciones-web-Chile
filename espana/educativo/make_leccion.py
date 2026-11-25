@@ -14,7 +14,12 @@ AUD = os.environ.get("AUD", "aud"); os.makedirs(AUD, exist_ok=True)
 VJ = json.load(open(f"{DIR}/video.json")); VEL = json.load(open(os.environ.get("VELAS", f"{DIR}/velas.json")))
 W, H = 1920, 1080
 MIN_S, MAX_S = 300, 450   # ~6 minutos (5 a 7,5)
-BASE = VJ["base"]; OUT = f"{DIR}/leccion-{BASE}.mp4"; N = VJ["capitulo_n"]
+# Vídeos fijos para búsquedas habituales (Daniel, 24-nov-2026; espana/fijos/): "formato": "fijo" en video.json.
+# Misma marca, voz y subtítulos; otra cabecera, sin capítulo, 3-9 minutos, y escenas extra cifras/tabla/barras.
+FIJO = VJ.get("formato") == "fijo"
+if FIJO: MIN_S, MAX_S = 180, 540
+ETIQ = VJ.get("etiqueta", "Guías de bolsa española") if FIJO else SERIE
+BASE = VJ["base"]; OUT = f"{DIR}/{'fijo' if FIJO else 'leccion'}-{BASE}.mp4"; N = VJ.get("capitulo_n", 0)
 CTA = cta(VJ)
 ESC = [dict(e) for e in VJ["escenas"]]
 if CTA: ESC[-1]["voz"] = ESC[-1]["voz"] + " " + CTA_VOZ   # llamada a comentar (solo hasta el 22-nov-2026)
@@ -50,7 +55,7 @@ def base(i, kicker, title):
     f = fig(W, H)
     T(f, XL, 0.905, kicker.upper(), ACC, 24, "bold")
     T(f, XL, 0.825, title, FG, 42 if len(title) <= 58 else 34, "bold")
-    T(f, 0.94, 0.925, f"{SERIE.upper()} · CAPÍTULO {N}", MUTED, 17, "bold", ha="right")
+    T(f, 0.94, 0.925, f"{ETIQ.upper()} · {MARCA.upper()}" if FIJO else f"{SERIE.upper()} · CAPÍTULO {N}", MUTED, 17, "bold", ha="right")
     T(f, 0.94, 0.89, VJ["tema"], DIM, 16, "bold", ha="right")
     n = max(len(CAP), 1); w = 0.88 / n
     for k in range(n):  # barra de progreso por capítulos
@@ -62,7 +67,67 @@ def fuente(f, s): T(f, XL, 0.115, wrap(s, 170), MUTED, 14, style="italic", lines
 
 
 # ---------- escenas ----------
+def s_portada_fijo(i, e, t):
+    f = fig(W, H); a = ease(t / 0.6)
+    T(f, XL, 0.86, f"{MARCA.upper()} · {ETIQ.upper()}", ACC, 26, "bold", alpha=a)
+    rect(f, 0, 0.60, 1.0, 0.21, ACC, a)
+    T(f, XL, 0.755, e.get("kicker", "").upper(), BG, 32, "bold", va="center", alpha=a)
+    T(f, XL, 0.66, VJ["tema"], BG, 72 if len(VJ["tema"]) <= 30 else 54, "bold", va="center", alpha=a)
+    if e.get("respuesta"): T(f, XL, 0.50, wrap(e["respuesta"], 80), FG, 32, "bold", alpha=ease((t - 0.15) / 0.5), va="top", linespacing=1.3)
+    if e.get("sub"): T(f, XL, 0.37, e["sub"], MUTED, 28, alpha=ease((t - 0.25) / 0.5))
+    T(f, XL, 0.28, "Contenido informativo y educativo · no es una recomendación de inversión", ACC2, 28, "bold", alpha=ease((t - 0.35) / 0.5))
+    return with_logo(to_arr(f), LGB, x=W - 440 - 90, y=50)
+
+
+def s_cifras(i, e, t):
+    """Hasta 4 cifras grandes: [valor, etiqueta, color], con nota y fuente."""
+    f = base(i, e["kicker"], e["titulo"]); C = e["cifras"][:4]; w = 0.88 / len(C)
+    for k, (v, lab, c) in enumerate(C):
+        b = ease((t - k * 0.12) / 0.4); x = XL + k * w
+        rect(f, x, 0.36, w - 0.02, 0.36, PANEL, b)
+        T(f, x + 0.02, 0.58, v, c, (64 if len(v) <= 8 else 48) if len(C) < 4 else (50 if len(v) <= 7 else 40), "bold", alpha=b)
+        T(f, x + 0.02, 0.50, wrap(lab, int(w * 120)), FG, 22, alpha=b, va="top", linespacing=1.3)
+    if e.get("nota"): T(f, XL, 0.28, wrap(e["nota"], 120), NEG, 22, "bold", alpha=ease((t - 0.4) / 0.4), va="top")
+    if e.get("fuente"): fuente(f, e["fuente"])
+    return to_arr(f)
+
+
+def s_tabla(i, e, t):
+    """Tabla: "columnas" (cabecera) y "filas" (listas de textos). "destacar": índice de fila; "anchos": fracciones."""
+    f = base(i, e["kicker"], e["titulo"]); cols = e["columnas"]; F = e["filas"][:9]
+    an = e.get("anchos") or [1 / len(cols)] * len(cols); xs = [XL + 0.88 * sum(an[:k]) for k in range(len(cols))]
+    hh = min(0.065, 0.56 / (len(F) + 1)); y = 0.74 - hh
+    rect(f, XL, y, 0.88, hh - 0.006, ACC)
+    for x, c in zip(xs, cols): T(f, x + 0.008, y + hh / 2 - 0.003, c, BG, 21, "bold", va="center")
+    for r, fila in enumerate(F):
+        b = ease((t - r * 0.06) / 0.35); y -= hh
+        rect(f, XL, y, 0.88, hh - 0.006, ACC2 if e.get("destacar") == r else PANEL, 0.35 * b if e.get("destacar") == r else b)
+        for k, (x, v) in enumerate(zip(xs, fila)):
+            T(f, x + 0.008, y + hh / 2 - 0.003, str(v), FG if k == 0 else MUTED, 21, "bold" if k == 0 else "normal", va="center", alpha=b)
+    if e.get("nota"): T(f, XL, y - 0.05, wrap(e["nota"], 150), NEG, 19, "bold", alpha=ease((t - 0.4) / 0.4), va="top")
+    if e.get("fuente"): fuente(f, e["fuente"])
+    return to_arr(f)
+
+
+def s_barras(i, e, t):
+    """Barras horizontales: "barras" [[etiqueta, valor]], "formato" (p. ej. "{:.1f} %"), "destacar" (etiqueta)."""
+    f = base(i, e["kicker"], e["titulo"]); B = e["barras"][:10]
+    ax = f.add_axes([XL + 0.2, 0.2, 0.62, 0.53]); clean(ax); ax.set_xticks([])
+    vals = [v for _, v in B]; ys = np.arange(len(B))[::-1]; a = ease(t / 0.6); m = max(abs(v) for v in vals) or 1
+    colores = [col(e.get("color_destacado", "neg")) if lab == e.get("destacar") else col(e.get("color", "acc")) for lab, _ in B]
+    ax.barh(ys, [v * a for v in vals], color=colores, height=0.62)
+    ax.set_yticks(ys, [lab for lab, _ in B]); ax.tick_params(colors=FG, labelsize=21, length=0)
+    ax.set_xlim(min(0, min(vals)) * 1.3, m * 1.3)
+    fmt = e.get("formato", "{:.1f}")
+    if t >= 0.5:
+        for y_, v in zip(ys, vals): ax.text(max(v * a, 0) + m * 0.02, y_, fmt.format(v).replace(",", "X").replace(".", ",").replace("X", "."), va="center", color=FG, fontsize=20, weight="bold")
+    if e.get("nota"): T(f, XL, 0.16, wrap(e["nota"], 150), NEG, 19, "bold", alpha=ease((t - 0.4) / 0.4))
+    if e.get("fuente"): fuente(f, e["fuente"])
+    return to_arr(f)
+
+
 def s_portada(i, e, t):
+    if FIJO: return s_portada_fijo(i, e, t)
     f = fig(W, H); a = ease(t / 0.6)
     T(f, XL, 0.86, f"{MARCA.upper()} · NUEVA SERIE CADA DOMINGO", ACC, 26, "bold", alpha=a)
     rect(f, 0, 0.60, 1.0, 0.21, ACC, a)
@@ -237,7 +302,7 @@ def s_grafico(i, e, t):
             av.set_ylim(0, 100); av.set_yticks([20, 80]); nombre = "Estocástico (14, 3, 3): %K y %D"
         av.set_xticks([p[0] for p in tk[::step]], [p[1] for p in tk[::step]]); av.tick_params(labelsize=15)
         T(f, XL, 0.347, nombre, MUTED, 15)
-    T(f, XL, 0.785, f"{VJ['nombre']} ({VJ['ticker']}) · velas diarias · euros por acción", MUTED, 19, "bold")
+    T(f, XL, 0.785, (f"{VJ['nombre']} · velas diarias · {VJ['unidad']}" if VJ.get('unidad') else f"{VJ['nombre']} ({VJ['ticker']}) · velas diarias · euros por acción"), MUTED, 19, "bold")
     if e.get("nota"):
         b = ease((t - 0.5) / 0.4); T(f, 0.94, 0.785, e["nota"], NEG, 21, "bold", ha="right", alpha=b)
     fuente(f, FUENTE)
@@ -246,15 +311,19 @@ def s_grafico(i, e, t):
 
 def s_fin(i, e, t):
     f = fig(W, H); a = ease(t / 0.5)
-    T(f, XL, 0.86, f"Capítulo {N}: {VJ['tema']}", FG, 44, "bold", alpha=a)
+    T(f, XL, 0.86, VJ["tema"] if FIJO else f"Capítulo {N}: {VJ['tema']}", FG, 44, "bold", alpha=a)
     T(f, XL, 0.795, "LO ESENCIAL", ACC, 30, "bold", alpha=a)
     for k, c in enumerate(e["claves"][:4]):
         T(f, XL, 0.725 - k * 0.062, "• " + c, FG, 26, alpha=ease((t - 0.1 - k * 0.1) / 0.4))
     b = ease((t - 0.3) / 0.5)
     if e.get("siguiente"): T(f, XL, 0.45, "Próximo capítulo: " + e["siguiente"], ACC2, 28, "bold", alpha=b)
     if CTA: T(f, XL, 0.395, "💬 Déjanos tu comentario · 🔔 suscríbete al canal".replace("💬 ", "").replace("🔔 ", ""), NEG, 25, "bold", alpha=b)
-    else: T(f, XL, 0.395, "Suscríbete al canal · un capítulo nuevo cada domingo", NEG, 25, "bold", alpha=b)
-    aviso = ("AVISO: contenido educativo e informativo. No es una recomendación de inversión, ni una invitación a comprar o vender valores, "
+    else: T(f, XL, 0.395, "Suscríbete al canal · el IBEX 35 cada día de bolsa" if FIJO else "Suscríbete al canal · un capítulo nuevo cada domingo", NEG, 25, "bold", alpha=b)
+    aviso = ("AVISO: contenido informativo y educativo. No es una recomendación de inversión, ni una invitación a comprar o vender valores, "
+             "ni asesoramiento personalizado. Las cifras proceden de las fuentes citadas en pantalla; los cálculos propios están marcados como "
+             "calculado. Las rentabilidades pasadas no garantizan las futuras. AIAcciones España no tiene posiciones en los valores citados. "
+             "Invertir conlleva riesgo de pérdida, incluso de todo el capital. "
+             "Guion, gráficos y locución (voz sintética) generados con herramientas de inteligencia artificial.") if FIJO else ("AVISO: contenido educativo e informativo. No es una recomendación de inversión, ni una invitación a comprar o vender valores, "
              f"ni asesoramiento personalizado. {VJ['nombre']} es solo un ejemplo. El análisis técnico describe el comportamiento pasado del precio y no "
              f"predice el futuro; las zonas dibujadas no son precios objetivo. Datos: {FUENTE_DATOS}; medias, indicadores y zonas: calculado. "
              "AIAcciones España no tiene posiciones en el valor citado. Invertir conlleva riesgo de pérdida, incluso de todo el capital. "
@@ -263,13 +332,14 @@ def s_fin(i, e, t):
     return with_logo(to_arr(f), LGB, x=W - 440 - 90, y=50)
 
 
-TIPOS = {"portada": s_portada, "puntos": s_puntos, "esquema": s_esquema, "grafico": s_grafico, "fin": s_fin}
+TIPOS = {"portada": s_portada, "puntos": s_puntos, "esquema": s_esquema, "grafico": s_grafico, "fin": s_fin,
+         "cifras": s_cifras, "tabla": s_tabla, "barras": s_barras}
 BIG = {"portada", "fin"}
 SUB = {}
 
 
 def overlay(marcas, leads):
-    pie = tira_texto(f"{MARCA} · «{SERIE}» · contenido educativo, no es una recomendación de inversión", MUTED, 17, 44, "normal")
+    pie = tira_texto(f"{MARCA} · {ETIQ if FIJO else '«' + SERIE + '»'} · contenido {'informativo' if FIJO else 'educativo'}, no es una recomendación de inversión", MUTED, 17, 44, "normal")
     band = np.array(BANDA, np.float32)
 
     def sub(s):
@@ -301,7 +371,7 @@ NEGADAS = r"no (es )?(una )?recomendación( de inversión)?|ni una invitación a
 
 def control():
     err = []
-    for k in ("base", "capitulo_n", "simbolo", "ticker", "nombre", "tema", "escenas", "info", "miniatura", "short", "ultima_vela"):
+    for k in ("base", "simbolo", "tema", "escenas", "info", "miniatura", "short", "ultima_vela") + (() if FIJO else ("capitulo_n", "ticker", "nombre")):
         if not VJ.get(k): err.append(f"falta {k} en video.json")
     for k, e in enumerate(ESC):
         if e.get("tipo") not in TIPOS: err.append(f"escena {k}: tipo desconocido {e.get('tipo')}")
@@ -340,6 +410,7 @@ if __name__ == "__main__":
                        os.path.join(AUD, "lec-silent.mp4"), os.path.join(AUD, "lec.wav"), overlay=overlay([v[2] for v in VV], leads))
     json.dump([(e.get("id", str(j)), tt) for j, (e, tt) in enumerate(zip(ESC, times))] + [("_total", round(t0, 2)), ("_voz", motor)], open(f"{DIR}/times.json", "w"))
     with open(f"{DIR}/guion-{BASE}.md", "w") as g:
-        g.write(f"# {SERIE} · Capítulo {N}: {VJ['tema']} ({VJ['nombre']}, {VJ['ticker']})\n\nVoz: {motor} · Duración {t0:.0f} s\n\n| Tiempo | Escena | Texto |\n|---|---|---|\n")
+        g.write(f"# {VJ['tema']} ({ETIQ})" if FIJO else f"# {SERIE} · Capítulo {N}: {VJ['tema']} ({VJ['nombre']}, {VJ['ticker']})")
+        g.write(f"\n\nVoz: {motor} · Duración {t0:.0f} s\n\n| Tiempo | Escena | Texto |\n|---|---|---|\n")
         for e, tt in zip(ESC, times): g.write(f"| {int(tt) // 60}:{int(tt) % 60:02d} | {e.get('id', e['tipo'])} | {e['voz']} |\n")
     print("listo", round(t0, 1), "s", OUT)

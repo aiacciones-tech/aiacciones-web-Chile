@@ -57,8 +57,17 @@ open(f"{D}/post-tiktok-{BASE}-GE.txt", "w").write(tk)
 # Instagram (Reel, vía la segunda cuenta de Buffer; conectado el 21-nov-2026): el mismo texto que TikTok
 open(f"{D}/post-instagram-{BASE}-GE.txt", "w").write(tk)
 
-# Miniatura 1280x720
-th = VJ["miniatura"]; f = fig(1280, 720)
+# Miniatura 1280x720. Desde el 24-nov-2026: «cifra grande + logo» (ge/diario/miniatura.py) si video.json → miniatura trae `gancho`:
+# {"cifra": "+103 %", "gancho": "Umsatz-Rekord: 115,8 Mrd. $", "chips": [["Aktie nachbörslich", "+4,1 %", null]]}; logo por el ticker (LOGOS_DIR).
+th = VJ["miniatura"]
+if th.get("gancho"):
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "diario"))
+    import miniatura as MN
+    MN.miniatura(f"{D}/miniatura-{BASE}-GE.png", th.get("etiqueta_nueva", f"WALL-STREET-GIGANTEN · {VJ['trimestre']}".upper()), VJ["nombre"], th["cifra"],
+                 th.get("color"), th["gancho"], VJ["ticker"], [tuple(x) for x in th.get("chips", [])])
+    print("ok", BASE, "desc", len(desc), "tg", len(tg), "titulo", len(titulo), "logo", MN.buscar_logo(VJ["ticker"]))
+    sys.exit(0)
+f = fig(1280, 720)
 TT = lambda x, y, s, c, fs, w="bold", ha="left", **k: f.text(x, y, ar(s), color=c, fontsize=fs, weight=w, ha=ha, **k)
 f.patches.append(plt.Rectangle((0, 0.70), 1.0, 0.30, transform=f.transFigure, color=GOLD, figure=f))
 TT(0.045, 0.905, f"{SERIE} · {VJ['trimestre']}", BG, 24, va="center")
