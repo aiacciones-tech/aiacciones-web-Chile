@@ -302,7 +302,7 @@ def s_grafico(i, e, t):
             av.set_ylim(0, 100); av.set_yticks([20, 80]); nombre = "Estocástico (14, 3, 3): %K y %D"
         av.set_xticks([p[0] for p in tk[::step]], [p[1] for p in tk[::step]]); av.tick_params(labelsize=15)
         T(f, XL, 0.347, nombre, MUTED, 15)
-    T(f, XL, 0.785, f"{VJ['nombre']} ({VJ['ticker']}) · velas diarias · euros por acción", MUTED, 19, "bold")
+    T(f, XL, 0.785, (f"{VJ['nombre']} · velas diarias · {VJ['unidad']}" if VJ.get('unidad') else f"{VJ['nombre']} ({VJ['ticker']}) · velas diarias · euros por acción"), MUTED, 19, "bold")
     if e.get("nota"):
         b = ease((t - 0.5) / 0.4); T(f, 0.94, 0.785, e["nota"], NEG, 21, "bold", ha="right", alpha=b)
     fuente(f, FUENTE)

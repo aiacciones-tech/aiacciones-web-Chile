@@ -15,7 +15,7 @@
    "tipo": "portada",
    "capitulo": "La respuesta corta",
    "kicker": "El índice de referencia de la bolsa española",
-   "respuesta": "Las 35 empresas más líquidas de la bolsa española, pesadas por su capitalización en bolsa ajustada por el capital flotante",
+   "respuesta": "Las 35 empresas más líquidas de la bolsa, pesadas por capitalización",
    "sub": "Base: 3.000 puntos el 29-dic-1989 · cierre del 23-nov-2026: 19.181,1 puntos",
    "voz": "El IBEX 35 es el índice de referencia de la bolsa española: reúne a 35 empresas cotizadas, elegidas por su liquidez y su tamaño, y cada una pesa según su capitalización en bolsa, ajustada por la parte de sus acciones que de verdad se negocia, el capital flotante. Empezó en 3.000 puntos el 29 de diciembre de 1989 y el 23 de noviembre de 2026 cerró en 19.181,1. Te explicamos cómo se calcula, quién entra y quién decide. Contenido informativo, no una recomendación de inversión."
   },
@@ -33,10 +33,6 @@
     [
      "Capital flotante",
      "Solo cuenta la parte que se negocia: se descuentan las participaciones del 3 % o más y las de los consejeros."
-    ],
-    [
-     "Ajuste",
-     "Un factor corrige el índice cuando hay ampliaciones de capital y otras operaciones, para que no salte."
     ],
     [
      "Sin dividendos",
@@ -323,7 +319,7 @@
    "aprender bolsa",
    "bolsa española"
   ],
-  "x": "Qué es el IBEX 35, con sus reglas oficiales:\n• 35 empresas, por liquidez y tamaño\n• Pesan por capitalización ajustada por capital flotante\n• Tope del 20 % por valor; sin dividendos\n• Base: 3.000 puntos (1989)",
+  "x": "Qué es el IBEX 35, con sus reglas oficiales:\n• 35 empresas, por liquidez y tamaño\n• Pesan por capitalización y capital flotante\n• Tope del 20 % por valor; sin dividendos",
   "tiktok": "El IBEX 35 en un minuto: 35 empresas elegidas por liquidez y tamaño, que pesan según su capitalización ajustada por el capital flotante, con un tope del 20 % por valor y sin contar los dividendos.",
   "linkedin": {
    "datos": [
@@ -342,5 +338,6 @@
   "color": "acc",
   "sub": "Cómo se calcula y quién decide",
   "gancho_b": "¿Cómo se calcula el IBEX 35?"
- }
+ },
+ "unidad": "puntos"
 }
