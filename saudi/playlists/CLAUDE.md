@@ -13,6 +13,7 @@ Pedido de Daniel el 24-nov-2026: playlists por empresa y por sector, más una po
   - `<empresa>-<periodo>` (3T26, FY26…) → نتائج الشركات + playlist de la empresa + playlist del sector
   - `lesson-ta-NN-<empresa>` → التحليل الفني ببساطة + empresa + sector
   - `calendar-*` / `earnings-calendar*` → تقويم النتائج (también los Shorts)
+  - `guide-eg-NN-<tema>` → دليل المستثمر في السوق السعودية (vídeos evergreen, solo el largo)
   - Los `-short` solo entran en la playlist de la empresa y en la del calendario.
 - **Sectores (7):** bancos, energía y utilities, materiales (petroquímica, minería, cemento), telecom y tecnología, salud, seguros,
   consumo y real estate.

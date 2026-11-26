@@ -1,0 +1,45 @@
+# Vídeos evergreen de búsqueda «دليل المستثمر في السوق السعودية» de Saudi Arabia AI Stocks (saudi/evergreen/): datos y voz de cada guía.
+# Se lanza sola al subir saudi/evergreen/guias/<carpeta>/video.json a una rama claude/**:
+#  1) velas diarias de TradingView del "simbolo" de la guía, si tiene (saudi/educativo/datos_leccion.py), solo la primera vez;
+#  2) voz Azure ar-SA-HamedNeural frase a frase (saudi/educativo/voz_azure_leccion.py; misma clave que el vídeo diario).
+# Deja velas.json y un wav por frase en <carpeta>/ de la rama voz-saudi-evergreen.
+name: Datos y voz de los videos evergreen (Arabia Saudita)
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["saudi/evergreen/guias/*/video.json"]
+  workflow_dispatch:
+    inputs:
+      carpetas:
+        description: "carpetas de saudi/evergreen/guias separadas por comas; vacío = las que cambian respecto a main"
+        default: ""
+permissions:
+  contents: write
+concurrency: voz-saudi-evergreen
+jobs:
+  leccion:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY_SAUDI || secrets.AZURE_SPEECH_KEY_NABD }}
+      AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION_SAUDI || secrets.AZURE_SPEECH_REGION_NABD || 'northeurope' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Datos y voz
+        run: |
+          pip install -q websocket-client
+          C="${{ inputs.carpetas }}"
+          if [ -z "$C" ]; then
+            git fetch -q --depth 1 origin main
+            C=$(git diff --name-only origin/main HEAD -- 'saudi/evergreen/guias/*/video.json' | cut -d/ -f4 | sort -u | paste -sd, -)
+          fi
+          test -n "$C" || { echo "ninguna lección cambiada"; exit 0; }
+          R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git clone -q --depth 1 -b voz-saudi-evergreen "$R" /tmp/out 2>/dev/null || { mkdir -p /tmp/out && cd /tmp/out && git init -q -b voz-saudi-evergreen && git remote add origin "$R" && cd -; }
+          for c in ${C//,/ }; do
+            echo "== $c"; D=saudi/evergreen/guias/$c
+            if grep -q '"simbolo"' $D/video.json; then python3 saudi/educativo/datos_leccion.py $D/video.json /tmp/out/$c; fi
+            if [ -n "$AZURE_SPEECH_KEY" ]; then python3 saudi/educativo/voz_azure_leccion.py $D /tmp/out/$c; else echo "Falta la clave de Azure: sin voz (el render usará Piper)"; fi
+          done
+          cd /tmp/out && git add -A
+          git -c user.name="aiacciones-bot" -c user.email="aiacciones-bot@users.noreply.github.com" commit -qm "Evergreen Arabia Saudita: datos y voz $C" || exit 0
+          for i in 1 2 3; do git push -q origin HEAD:voz-saudi-evergreen && break; sleep 5; done

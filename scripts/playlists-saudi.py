@@ -88,6 +88,8 @@ def clasificar(slug, empresas):
         return "diario", None, short
     if base.startswith("lesson-"):
         return "tecnico", partes[-1] if partes[-1] in empresas else None, short
+    if base.startswith("guide-"):
+        return "guia", None, short
     if base.startswith("calendar-") or base.startswith("earnings-calendar"):
         return "calendario", None, short
     if partes[0] in empresas and len(partes) > 1:

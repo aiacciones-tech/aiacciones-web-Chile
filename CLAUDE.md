@@ -51,3 +51,5 @@
 - **Arabia Saudita, pruebas A/B de miniatura y título (desde el 24-nov-2026):** los videos largos del diario y de la serie educativa llevan una variante B
   (`ab.json` + `miniatura-b.png` en su carpeta de `cola-sa/`). `scripts/ab-saudi.py` (workflow `ab-saudi.yml`, 08:10 UTC) las alterna por días y deja
   la ganadora; el estado está en `cola-sa/<slug>/ab-estado.json` de `youtube-cola`. Detalles en `saudi/ab-saudi.md`.
+- **Arabia Saudita, vídeos evergreen de búsqueda «دليل المستثمر في السوق السعودية» (martes y viernes, `saudi/evergreen/`):** instrucciones en
+  `saudi/evergreen/CLAUDE.md` (prevalecen sobre el texto de su tarea programada). Plan de 12 temas en `saudi/evergreen/plan-saudi.json`.
