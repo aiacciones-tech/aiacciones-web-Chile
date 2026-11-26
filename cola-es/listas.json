@@ -79,6 +79,18 @@
   "resultados-3T26": {
    "id": "PLGeOFR9pEcFQ",
    "titulo": "Resultados 3T 2026 del IBEX 35"
+  },
+  "empresa-mapfre": {
+   "id": "PLPXHQ--zQ-OY",
+   "titulo": "Mapfre: resultados y análisis en vídeo"
+  },
+  "empresa-iag": {
+   "id": "PLVjkJjoTwb34",
+   "titulo": "IAG: resultados y análisis en vídeo"
+  },
+  "empresa-acerinox": {
+   "id": "PLAARHVgPYQaM",
+   "titulo": "Acerinox: resultados y análisis en vídeo"
   }
  },
  "añadidos": {
@@ -235,7 +247,44 @@
    "shorts"
   ],
   "puig-3T26": [
-   "empresa-puig"
+   "empresa-puig",
+   "resultados-3T26"
+  ],
+  "puig-3T26-short": [
+   "empresa-puig",
+   "shorts"
+  ],
+  "bankinter-3T26": [
+   "empresa-bankinter",
+   "resultados-3T26"
+  ],
+  "bankinter-3T26-short": [
+   "empresa-bankinter",
+   "shorts"
+  ],
+  "mapfre-1S26": [
+   "empresa-mapfre",
+   "resultados-1S26"
+  ],
+  "mapfre-1S26-short": [
+   "empresa-mapfre",
+   "shorts"
+  ],
+  "iag-1S26": [
+   "empresa-iag",
+   "resultados-1S26"
+  ],
+  "iag-1S26-short": [
+   "empresa-iag",
+   "shorts"
+  ],
+  "acerinox-1S26": [
+   "empresa-acerinox",
+   "resultados-1S26"
+  ],
+  "acerinox-1S26-short": [
+   "empresa-acerinox",
+   "shorts"
   ]
  }
 }
