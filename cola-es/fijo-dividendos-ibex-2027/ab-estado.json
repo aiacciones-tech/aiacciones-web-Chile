@@ -14,7 +14,7 @@
  },
  "orden": "BA",
  "inicio": "2026-11-24",
- "mostrada": "B",
+ "mostrada": "A",
  "contadores": {},
  "cambios": [
   {
@@ -24,12 +24,21 @@
   {
    "variante": "B",
    "utc": "2026-11-25T18:37:49+00:00"
+  },
+  {
+   "variante": "A",
+   "utc": "2026-11-26T18:23:10+00:00"
   }
  ],
  "dias": [
   {
    "fecha": "2026-11-25",
    "variante": "B",
+   "vistas": null
+  },
+  {
+   "fecha": "2026-11-26",
+   "variante": "A",
    "vistas": null
   }
  ]

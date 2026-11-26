@@ -1,0 +1,26 @@
+{
+ "slug": "fijo-leer-informe-resultados",
+ "videoId": "Y36QXW8_D2k",
+ "que": "ambos",
+ "variantes": {
+  "A": {
+   "estilo": "fijo-titulo",
+   "titulo": "Cómo leer un informe de resultados en 5 minutos: 6 cifras, con el ejemplo real de Iberdrola"
+  },
+  "B": {
+   "estilo": "fijo-gancho",
+   "titulo": "¿Cómo se lee un informe de resultados? Las 6 cifras que importan"
+  }
+ },
+ "orden": "BA",
+ "inicio": "2026-11-26",
+ "mostrada": "A",
+ "contadores": {},
+ "cambios": [
+  {
+   "variante": "A",
+   "utc": "2026-11-26T09:25:02+00:00"
+  }
+ ],
+ "dias": []
+}

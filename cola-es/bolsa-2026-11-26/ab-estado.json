@@ -1,0 +1,26 @@
+{
+ "slug": "bolsa-2026-11-26",
+ "videoId": "743tAFlotDQ",
+ "que": "ambos",
+ "variantes": {
+  "A": {
+   "estilo": "fecha",
+   "titulo": "IBEX 35 hoy (26-nov-2026): +2,26%; rebote técnico y recupera los 19.000 | Técnico y fundamental"
+  },
+  "B": {
+   "estilo": "gancho",
+   "titulo": "IBEX 35 +2,26%: rebote sin Wall Street y recupera la media de 200 | Bolsa hoy (26-nov-2026)"
+  }
+ },
+ "orden": "AB",
+ "inicio": "2026-11-26",
+ "mostrada": "A",
+ "contadores": {},
+ "cambios": [
+  {
+   "variante": "A",
+   "utc": "2026-11-26T17:22:15+00:00"
+  }
+ ],
+ "dias": []
+}
