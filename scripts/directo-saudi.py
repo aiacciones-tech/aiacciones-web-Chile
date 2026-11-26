@@ -132,6 +132,14 @@ def siguiente(base):
     print(mejor[1] if mejor else "")
 
 
+def ffmpeg():
+    """ffmpeg del sistema o, si el runner no lo trae (ubuntu-latest 24.04 no lo trae), el de imageio-ffmpeg (pip)."""
+    import shutil
+    if shutil.which("ffmpeg"): return "ffmpeg"
+    import imageio_ffmpeg
+    return imageio_ffmpeg.get_ffmpeg_exe()
+
+
 def emitir(c):
     """Llamar después de marcar estado "emitiendo" y subirlo (así otro job no la emite dos veces)."""
     e = leer(c, "estado.json"); ini = datetime.fromisoformat(e["inicio"].replace("Z", "+00:00"))
@@ -143,11 +151,14 @@ def emitir(c):
     s = api(t, "GET", "liveStreams", part="cdn", id=e["stream"])["items"][0]["cdn"]["ingestionInfo"]
     print(f"::add-mask::{s['streamName']}"); sys.stdout.flush()
     destino = f"{s['ingestionAddress']}/{s['streamName']}"
-    cmd = ["ffmpeg", "-hide_banner", "-loglevel", "warning", "-re", "-i", video, "-c:v", "libx264", "-preset", "veryfast",
+    cmd = [ffmpeg(), "-hide_banner", "-loglevel", "warning", "-re", "-i", video, "-c:v", "libx264", "-preset", "veryfast",
            "-b:v", "4500k", "-maxrate", "4500k", "-bufsize", "9000k", "-pix_fmt", "yuv420p", "-r", "30", "-g", "60", "-keyint_min", "60",
            "-sc_threshold", "0", "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-f", "flv", destino]
     e.update({"emision_inicio": iso(ahora())}); guardar(c, "estado.json", e)
-    r = subprocess.run(cmd).returncode
+    try:
+        r = subprocess.run(cmd).returncode
+    except Exception as x:
+        print("error al lanzar ffmpeg:", x); r = 127
     time.sleep(20)
     t, _ = token_y_permisos()
     b = api(t, "GET", "liveBroadcasts", part="status", id=e["broadcast"])["items"][0]["status"]

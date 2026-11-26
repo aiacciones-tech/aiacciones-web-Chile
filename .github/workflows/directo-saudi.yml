@@ -48,6 +48,7 @@ jobs:
         if: steps.m.outputs.modo == 'ciclo'
         run: |
           # el script es el de esta rama; la cola, la de youtube-cola
+          pip install -q imageio-ffmpeg   # ubuntu-latest no trae ffmpeg
           cp scripts/directo-saudi.py scripts/youtube.py "$RUNNER_TEMP/"
           # youtube-cola pesa mucho (vídeos de todos los canales): clon parcial con solo las carpetas cola-sa/directo-*
           R="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
