@@ -1,0 +1,389 @@
+{
+ "base": "leer-informe-resultados",
+ "formato": "fijo",
+ "etiqueta": "Guías de bolsa española",
+ "simbolo": "BME:IBC",
+ "ticker": "IBEX 35",
+ "nombre": "IBEX 35",
+ "tema": "Cómo leer un informe de resultados",
+ "velas_n": 300,
+ "ultima_vela": "2026-11-23",
+ "decimales": 1,
+ "escenas": [
+  {
+   "id": "intro",
+   "tipo": "portada",
+   "capitulo": "La respuesta corta",
+   "kicker": "Con un ejemplo real: Iberdrola, nueve meses de 2026",
+   "respuesta": "Seis cifras, en orden: ventas, EBITDA, beneficio, caja, deuda y guía",
+   "sub": "Y siempre la misma pregunta: ¿frente a qué se compara cada cifra?",
+   "voz": "¿Cómo se lee un informe de resultados en cinco minutos? Con seis cifras, siempre en el mismo orden: ventas, ebitda, beneficio, caja, deuda y la guía de la propia empresa. Y con una pregunta para cada una: ¿frente a qué se compara? Lo vemos con un ejemplo real, el informe de Iberdrola de los nueve primeros meses de 2026. Contenido informativo y educativo, no una recomendación de inversión."
+  },
+  {
+   "id": "donde",
+   "tipo": "puntos",
+   "capitulo": "Dónde encontrarlo",
+   "kicker": "Antes de empezar",
+   "titulo": "Tres documentos, el mismo día",
+   "puntos": [
+    [
+     "CNMV",
+     "Las cotizadas lo publican como información privilegiada u otra información relevante, con fecha y hora."
+    ],
+    [
+     "Informe",
+     "El documento completo, con las tablas y las notas: la fuente buena para las cifras."
+    ],
+    [
+     "Presentación",
+     "Las diapositivas para analistas: resume y destaca lo que la empresa quiere contar."
+    ],
+    [
+     "Nota de prensa",
+     "El titular de la empresa. Útil, pero conviene contrastarlo con el informe."
+    ]
+   ],
+   "fuente": "Fuente: Iberdrola, informe de resultados de los nueve meses de 2026 (CNMV, 21-oct-2026), presentación y nota de prensa",
+   "voz": "Primero, dónde está. Las empresas cotizadas publican sus resultados en la CNMV, con fecha y hora: Iberdrola lo hizo el 21 de octubre de 2026 a las 8:19. Suelen salir tres documentos: el informe completo, con las tablas y las notas, que es la fuente buena para las cifras; la presentación para analistas, que resume y destaca lo que la empresa quiere contar; y la nota de prensa, con su titular. Lee el titular, pero contrasta las cifras en el informe."
+  },
+  {
+   "id": "tabla",
+   "tipo": "tabla",
+   "capitulo": "Las cifras del ejemplo",
+   "kicker": "Iberdrola, enero-septiembre de 2026",
+   "titulo": "Las seis cifras del informe, en millones de euros",
+   "columnas": [
+    "Partida",
+    "9M 2026",
+    "9M 2025",
+    "Variación"
+   ],
+   "anchos": [
+    0.4,
+    0.2,
+    0.2,
+    0.2
+   ],
+   "filas": [
+    [
+     "Ventas",
+     "34.405",
+     "32.400",
+     "+6,2 %"
+    ],
+    [
+     "EBITDA ajustado",
+     "11.891",
+     "11.064",
+     "+7,5 %"
+    ],
+    [
+     "Beneficio neto",
+     "5.816",
+     "5.307",
+     "+9,6 %"
+    ],
+    [
+     "Beneficio neto ajustado",
+     "5.141",
+     "4.727",
+     "+8,8 %"
+    ],
+    [
+     "Inversión",
+     "10.087",
+     "—",
+     "+13 %"
+    ],
+    [
+     "Deuda neta ajustada",
+     "54.561",
+     "50.182 (dic-25)",
+     "+8,7 %"
+    ]
+   ],
+   "destacar": 3,
+   "fuente": "Fuente: Iberdrola, informe de resultados de los nueve meses de 2026 (CNMV, 21-oct-2026), presentación y nota de prensa; deuda: variación calculada",
+   "voz": "Estas son las cifras del ejemplo, en millones de euros. Ventas: 34.405, un 6,2 % más. Ebitda ajustado: 11.891, un 7,5 % más. Beneficio neto: 5.816, un 9,6 % más. Beneficio neto ajustado: 5.141, un 8,8 % más. Inversión: 10.087, un 13 % más. Y deuda neta ajustada: 54.561, frente a 50.182 en diciembre. Vamos una a una."
+  },
+  {
+   "id": "ventas",
+   "tipo": "puntos",
+   "capitulo": "Ventas y EBITDA",
+   "kicker": "Las dos primeras cifras",
+   "titulo": "Cuánto factura y cuánto gana con su negocio",
+   "puntos": [
+    [
+     "Ventas",
+     "Lo que factura. Iberdrola: 34.405 M€, un 6,2 % más; un 8,0 % frente a 2025 ajustado."
+    ],
+    [
+     "EBITDA",
+     "Resultado antes de intereses, impuestos y amortizaciones: el negocio puro."
+    ],
+    [
+     "Reportado y ajustado",
+     "Reportado: 11.891 M€, un 0,7 % menos. Ajustado: un 7,5 % más."
+    ],
+    [
+     "Por qué difieren",
+     "2025 incluía partidas puntuales; la empresa explica el ajuste en el informe."
+    ]
+   ],
+   "fuente": "Fuente: Iberdrola, informe de resultados de los nueve meses de 2026 (CNMV, 21-oct-2026), presentación y nota de prensa",
+   "voz": "Las ventas son lo que la empresa factura: Iberdrola, 34.405 millones, un 6,2 % más. El ebitda es el resultado antes de intereses, impuestos y amortizaciones: mide el negocio en sí. Y aquí está la primera trampa: el ebitda reportado bajó un 0,7 %, pero frente a las cifras de 2025 ajustadas subió un 7,5 %. ¿Por qué? Porque 2025 incluía partidas puntuales que la empresa saca de la comparación. Cuando veas reportado y ajustado, busca en el informe qué se ha ajustado y por qué."
+  },
+  {
+   "id": "beneficio",
+   "tipo": "puntos",
+   "capitulo": "Beneficio neto",
+   "kicker": "La tercera cifra",
+   "titulo": "Beneficio neto y beneficio ajustado no son lo mismo",
+   "puntos": [
+    [
+     "Beneficio neto",
+     "Lo que queda para el accionista tras todo: 5.816 M€, un 9,6 % más."
+    ],
+    [
+     "Partidas puntuales",
+     "Incluye 953 M€ de plusvalía neta por la venta del negocio en México."
+    ],
+    [
+     "Ajustado",
+     "Sin esas partidas: 5.141 M€, un 8,8 % más. Mejor para comparar años."
+    ],
+    [
+     "Por acción (BPA)",
+     "Beneficio entre el número de acciones: 0,834 €, un 5,8 % más."
+    ]
+   ],
+   "fuente": "Fuente: Iberdrola, informe de resultados de los nueve meses de 2026 (CNMV, 21-oct-2026), presentación y nota de prensa; plusvalía: Europa Press (21-oct-2026)",
+   "voz": "El beneficio neto es lo que queda para el accionista después de todo: Iberdrola ganó 5.816 millones, un 9,6 % más. Pero esa cifra incluye 953 millones de plusvalía neta por la venta de su negocio en México, algo que no se repite. Por eso la empresa da también el beneficio ajustado, sin partidas puntuales: 5.141 millones, un 8,8 % más. Para comparar un año con otro, mira el ajustado y lee qué excluye. Y fíjate en el beneficio por acción: 0,834 euros, un 5,8 % más, menos que el beneficio total, porque hay más acciones."
+  },
+  {
+   "id": "caja",
+   "tipo": "puntos",
+   "capitulo": "Caja y deuda",
+   "kicker": "La cuarta y la quinta cifra",
+   "titulo": "El beneficio no es caja",
+   "puntos": [
+    [
+     "Flujo de caja",
+     "El dinero que genera el negocio. Iberdrola: 1,38 € por acción ajustado (1,41 € en 2025)."
+    ],
+    [
+     "Inversión",
+     "Lo que gasta en crecer: 10.087 M€, un 13 % más, 6.277 M€ en redes."
+    ],
+    [
+     "Deuda neta",
+     "Deuda menos caja: 54.561 M€ ajustada, 4.379 M€ más que en diciembre (calculado)."
+    ],
+    [
+     "Coste de la deuda",
+     "4,93 %, frente al 4,71 %: el resultado financiero pasa de −1.163 a −1.687 M€."
+    ]
+   ],
+   "fuente": "Fuente: Iberdrola, informe de resultados de los nueve meses de 2026 (CNMV, 21-oct-2026), presentación y nota de prensa",
+   "voz": "El beneficio no es dinero en la caja. El flujo de caja mide el dinero que genera de verdad el negocio: en Iberdrola, el flujo de caja operativo ajustado fue de 1,38 euros por acción, frente a 1,41 un año antes. Mira también cuánto invierte: 10.087 millones, un 13 % más, de ellos 6.277 en redes. Si invierte más de lo que genera, la diferencia suele salir de la deuda: la deuda neta ajustada, que es la deuda menos la caja, subió 4.379 millones desde diciembre, según nuestro cálculo, hasta 54.561. Y su coste medio pasó del 4,71 al 4,93 %."
+  },
+  {
+   "id": "divisas",
+   "tipo": "puntos",
+   "capitulo": "Comparar bien",
+   "kicker": "Antes de sacar conclusiones",
+   "titulo": "¿Frente a qué se compara cada cifra?",
+   "puntos": [
+    [
+     "Mismo periodo",
+     "Nueve meses frente a nueve meses del año anterior; o el trimestre aislado."
+    ],
+    [
+     "Divisas",
+     "Iberdrola: las divisas restaron 186 M€ al beneficio ajustado; sin ellas, un 12,7 % más."
+    ],
+    [
+     "Trimestre aislado",
+     "9M menos 1S: beneficio ajustado del 3T, 1.576 M€, un 11,0 % más (calculado)."
+    ],
+    [
+     "Estimaciones",
+     "Prensa y analistas comparan con lo esperado: indica la fuente de esa previsión."
+    ]
+   ],
+   "fuente": "Fuente: Iberdrola, informe de resultados de los nueve meses de 2026 (CNMV, 21-oct-2026), presentación y nota de prensa; trimestre aislado: calculado",
+   "voz": "Para comparar bien, compara siempre el mismo periodo: nueve meses con nueve meses, o el trimestre aislado, que se calcula restando el semestre a los nueve meses. Así, el beneficio ajustado del tercer trimestre de Iberdrola fue de 1.576 millones, un 11 % más, según nuestro cálculo. Mira el efecto de las divisas: a Iberdrola le restaron 186 millones de beneficio ajustado; sin ellas habría crecido un 12,7 %. Y si lees que una empresa supera o no las estimaciones, mira de quién son esas estimaciones."
+  },
+  {
+   "id": "guia",
+   "tipo": "puntos",
+   "capitulo": "La guía",
+   "kicker": "La sexta cifra",
+   "titulo": "Lo que la empresa dice de sí misma",
+   "puntos": [
+    [
+     "Qué es",
+     "El objetivo que la propia empresa publica para el año: no es un dato, es su previsión."
+    ],
+    [
+     "Iberdrola",
+     "Beneficio neto ajustado de 2026: un 10 % más o superior; antes decía más del 8 %."
+    ],
+    [
+     "Qué mirar",
+     "Si la mantiene, la sube o la baja frente al informe anterior."
+    ],
+    [
+     "Dividendo",
+     "Suele anunciarse con los resultados: a cuenta de 0,275 €, un 8,7 % más."
+    ]
+   ],
+   "fuente": "Fuente: Iberdrola, informe de resultados de los nueve meses de 2026 (CNMV, 21-oct-2026), presentación y nota de prensa",
+   "voz": "La sexta cifra es la guía: el objetivo que la propia empresa publica para el año. No es un dato, es su previsión, y lo importante es si la mantiene, la sube o la baja. Iberdrola la subió: ahora habla de un beneficio neto ajustado en 2026 un 10 % superior o más, cuando antes decía más del 8 %. Con los resultados también se suele anunciar el dividendo: Iberdrola, un dividendo a cuenta de 0,275 euros por acción, un 8,7 % más."
+  },
+  {
+   "id": "lista",
+   "tipo": "tabla",
+   "capitulo": "La lista de 5 minutos",
+   "kicker": "Para cualquier informe",
+   "titulo": "Seis preguntas, en este orden",
+   "columnas": [
+    "Cifra",
+    "La pregunta"
+   ],
+   "anchos": [
+    0.28,
+    0.72
+   ],
+   "filas": [
+    [
+     "Ventas",
+     "¿Crecen? ¿Cuánto es por divisas o por adquisiciones?"
+    ],
+    [
+     "EBITDA",
+     "¿Reportado o ajustado? ¿Qué se ha ajustado?"
+    ],
+    [
+     "Beneficio",
+     "¿Hay partidas puntuales? ¿Y el beneficio por acción?"
+    ],
+    [
+     "Caja",
+     "¿Genera dinero o solo beneficio contable?"
+    ],
+    [
+     "Deuda",
+     "¿Sube o baja? ¿Y su coste?"
+    ],
+    [
+     "Guía",
+     "¿La mantiene, la sube o la baja?"
+    ]
+   ],
+   "fuente": "Fuente: AIAcciones España, a partir del ejemplo de Iberdrola",
+   "voz": "Resumido en una lista para cualquier informe. Ventas: ¿crecen, y cuánto es por divisas o por adquisiciones? Ebitda: ¿reportado o ajustado, y qué se ha ajustado? Beneficio: ¿hay partidas puntuales, y cómo va el beneficio por acción? Caja: ¿genera dinero o solo beneficio contable? Deuda: ¿sube o baja, y cuánto cuesta? Y guía: ¿la mantiene, la sube o la baja?"
+  },
+  {
+   "id": "fin",
+   "tipo": "fin",
+   "capitulo": "Resumen",
+   "claves": [
+    "Cifras en el informe completo, no solo en el titular",
+    "Reportado o ajustado: lee qué se excluye",
+    "El beneficio no es caja: mira deuda e inversión",
+    "Compara el mismo periodo y la guía anterior"
+   ],
+   "voz": "En resumen: saca las cifras del informe completo, no solo del titular; distingue reportado y ajustado y lee qué se excluye; recuerda que el beneficio no es caja, y mira la deuda y la inversión; y compara siempre con el mismo periodo y con la guía anterior. Te dejamos las fuentes en la descripción. Suscríbete al canal."
+  }
+ ],
+ "short": [
+  {
+   "id": "s_titulo",
+   "tipo": "titulo",
+   "pregunta": "¿Cómo se lee?",
+   "sub": "Un informe de resultados",
+   "voz": "¿Cómo se lee un informe de resultados? Seis cifras, en un minuto."
+  },
+  {
+   "id": "s_cifras",
+   "tipo": "puntos",
+   "titulo": "Seis cifras, en orden",
+   "puntos": [
+    "Ventas",
+    "EBITDA",
+    "Beneficio neto",
+    "Caja",
+    "Deuda",
+    "Guía"
+   ],
+   "voz": "Ventas, ebitda, beneficio neto, caja, deuda y la guía de la propia empresa. Siempre en ese orden."
+  },
+  {
+   "id": "s_trampa",
+   "tipo": "puntos",
+   "titulo": "El ejemplo: Iberdrola",
+   "puntos": [
+    "Beneficio neto: 5.816 M€, un 9,6 % más",
+    "Incluye 953 M€ por la venta de México",
+    "Ajustado: 5.141 M€, un 8,8 % más"
+   ],
+   "voz": "Ejemplo: Iberdrola ganó 5.816 millones hasta septiembre, pero 953 eran por la venta de su negocio en México. Sin eso, el beneficio ajustado fue de 5.141 millones, un 8,8 % más."
+  },
+  {
+   "id": "s_fin",
+   "tipo": "fin",
+   "voz": "La lista completa, en el vídeo de nuestro canal. Contenido informativo, no es una recomendación."
+  }
+ ],
+ "info": {
+  "titulo": "Cómo leer un informe de resultados en 5 minutos: 6 cifras, con el ejemplo real de Iberdrola",
+  "titulo_b": "¿Cómo se lee un informe de resultados? Las 6 cifras que importan",
+  "titulo_short": "Cómo leer un informe de resultados en 1 minuto #Shorts",
+  "resumen": "Cómo leer el informe de resultados de una empresa cotizada en cinco minutos, con un ejemplo real: Iberdrola, nueve meses de 2026. Las seis cifras en orden (ventas, EBITDA, beneficio neto, caja, deuda y guía), la diferencia entre reportado y ajustado, por qué el beneficio no es caja, cómo comparar bien (mismo periodo, trimestre aislado, divisas) y una lista de seis preguntas para cualquier informe.",
+  "elaborado": "26 de noviembre de 2026",
+  "fuentes": "Iberdrola, informe de resultados de los nueve meses de 2026, presentación y nota de prensa (CNMV e iberdrola.com, 21-oct-2026); Europa Press (21-oct-2026), plusvalía por la venta de México; cálculos propios marcados como calculado",
+  "enlaces": [
+   [
+    "Informe de resultados 9M 2026 de Iberdrola",
+    "https://www.iberdrola.com/documents/20125/6230700/informe-269M.pdf"
+   ],
+   [
+    "Registro de información relevante (CNMV)",
+    "https://www.cnmv.es/portal/Consultas/BusquedaPorEntidad"
+   ]
+  ],
+  "hashtags": "#ResultadosEmpresariales #AprenderBolsa #IBEX35 #Iberdrola #Bolsa #Educación",
+  "hashtags_short": "#AprenderBolsa #Resultados #Bolsa #Shorts",
+  "tags": [
+   "cómo leer un informe de resultados",
+   "resultados empresariales",
+   "qué es el EBITDA",
+   "beneficio neto ajustado",
+   "flujo de caja",
+   "deuda neta",
+   "guía de resultados",
+   "aprender bolsa",
+   "Iberdrola resultados"
+  ],
+  "x": "Cómo leer un informe de resultados en 5 minutos:\n• Ventas, EBITDA, beneficio, caja, deuda y guía\n• Reportado o ajustado\n• El beneficio no es caja\n• Ejemplo: Iberdrola 9M 2026",
+  "tiktok": "Cómo leer un informe de resultados: seis cifras en orden (ventas, EBITDA, beneficio neto, caja, deuda y guía), con el ejemplo real de Iberdrola.",
+  "linkedin": {
+   "datos": [
+    "Seis cifras, en orden: ventas, EBITDA, beneficio neto, caja, deuda y guía. Ejemplo: Iberdrola, nueve meses de 2026 (informe en la CNMV, 21-oct-2026).",
+    "Reportado frente a ajustado: el EBITDA de Iberdrola bajó un 0,7 % reportado, pero subió un 7,5 % frente a 2025 ajustado (11.891 M€).",
+    "Partidas puntuales: el beneficio neto, 5.816 M€ (+9,6 %), incluye 953 M€ de plusvalía por la venta de México; el ajustado fue de 5.141 M€ (+8,8 %).",
+    "El beneficio no es caja: inversión de 10.087 M€ (+13 %) y deuda neta ajustada de 54.561 M€, 4.379 M€ más que en diciembre (calculado)."
+   ],
+   "conclusion": "La guía es la previsión de la propia empresa: lo útil es ver si la mantiene, la sube o la baja. Iberdrola la subió a un beneficio neto ajustado un 10 % superior o más en 2026."
+  }
+ },
+ "miniatura": {
+  "etiqueta": "Explicado fácil",
+  "titulo": "Leer un informe de resultados",
+  "cifra": "6 cifras",
+  "color": "acc",
+  "sub": "En 5 minutos, con el ejemplo de Iberdrola",
+  "gancho_b": "¿Cómo se lee un informe de resultados?"
+ }
+}
