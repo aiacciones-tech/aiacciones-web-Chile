@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-11-25T00:06Z",
+ "actualizado": "2026-11-25T23:47Z",
  "items": [
+  {
+   "id": "c2915287-3aef-4e7f-b67d-c9f5a0c74dd3",
+   "tipo": "OIR",
+   "fecha": "2026-11-25 18:41",
+   "entidad": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+   "nif": "A48265169",
+   "categoria": "Sobre suspensiones, levantamientos y exclusiones de negociación",
+   "titulo": "La Sociedad comunica su intención de solicitar la exclusión de cotización y negociación de sus acciones en la Bolsa de Londres.",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bc2915287-3aef-4e7f-b67d-c9f5a0c74dd3%7d",
+   "ticker": "BBVA",
+   "temas": []
+  },
   {
    "id": "75e89320-dd9b-4e74-baee-a194d9c3b917",
    "tipo": "OIR",
