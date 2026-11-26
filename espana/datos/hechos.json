@@ -1,6 +1,20 @@
 {
- "actualizado": "2026-11-25T23:47Z",
+ "actualizado": "2026-11-26T14:47Z",
  "items": [
+  {
+   "id": "d0d95900-dfcc-47ba-8ad2-86885ce5387f",
+   "tipo": "OIR",
+   "fecha": "2026-11-26 08:22",
+   "entidad": "GRIFOLS, S.A.",
+   "nif": "A58389123",
+   "categoria": "Otra información relevante",
+   "titulo": "Pago de dividendo a cuenta",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7bd0d95900-dfcc-47ba-8ad2-86885ce5387f%7d",
+   "ticker": "GRF",
+   "temas": [
+    "dividendos"
+   ]
+  },
   {
    "id": "c2915287-3aef-4e7f-b67d-c9f5a0c74dd3",
    "tipo": "OIR",
