@@ -1,0 +1,103 @@
+{
+ "fecha": "2026-11-25",
+ "fecha_txt": "Mittwoch, 25. November 2026",
+ "elaborado": "26. November 2026, 06:00 Uhr",
+ "titulo": "Dow dreht 1.100-Punkte-Minus ins Plus – Nvidia −3,9 %, HP +11 % | Wall Street über Nacht (25.11.)",
+ "titulo_short": "Dow −1.100 Punkte, dann im Plus – was ist passiert? #Shorts",
+ "resumen": "Der Dow Jones schloss am Mittwoch, 25. November 2026, bei 50.182,95 Punkten (+0,33 %), nachdem er zeitweise mehr als 1.100 Punkte im Minus lag (GSM Global News). Der S&P 500 fiel um 0,25 % auf 7.182,78, der Nasdaq Composite um 0,62 % auf 23.585,80, der Nasdaq 100 um 0,64 % auf 26.046,90. Der Russell 2000 stieg um 0,71 % auf 2.704,06.",
+ "claves": [
+  "Aufholjagd: Laut GSM Global News lag der S&P 500 im Tagesverlauf bis zu 3,2 % im Minus, der Nasdaq Composite bis zu 4,6 %. Laut CNBC (via StockTitan) gab es keine einzelne Nachricht für die Wende.",
+  "Konjunktur (BEA): US-Wachstum im 3. Quartal 4,3 % (2. Schätzung, zuvor 3,4 %); Kern-PCE-Inflation Oktober 3,3 % im Jahresvergleich.",
+  "Aktien: HP +11,49 % nach Quartalszahlen (Umsatz 16,0 Mrd. Dollar, +9,3 %, laut StockTitan); Nvidia −3,91 % auf 149,30 Dollar (S&P Global prüft Herabstufung des Kreditratings, CNBC via StockTitan); Oracle −5,13 %; Meta +3,4 %; Dell +0,6 %.",
+  "Markt: Rendite 10-jähriger US-Anleihen 4,86 %; VIX 28,28 (+7,2 %); WTI 84,16 Dollar (+3,0 %); Gold 3.583 Dollar. EUR/USD 1,096 (−0,14 %); S&P 500 in Euro −0,11 % (berechnet). DAX −1,26 %, Euro Stoxx 50 −1,82 %.",
+  "Charttechnik S&P 500 (berechnet): 2,3 % unter der 200-Tage-Linie (7.352), RSI 14 bei 39,7. Das sind Daten, keine Kauf- oder Verkaufssignale.",
+  "Termine: Donnerstag, 26. November, Thanksgiving (US-Börsen geschlossen); Freitag, 27. November, verkürzter Handel bis 13 Uhr New Yorker Zeit (19 Uhr MEZ); Fed-Zinsentscheid am 9. Dezember."
+ ],
+ "claves_cortas": [
+  "Dow +0,33 % nach −1.100 Punkten",
+  "S&P 500 −0,25 % · Nasdaq −0,62 %",
+  "HP +11 %, Nvidia −3,9 %"
+ ],
+ "linkedin": {
+  "datos": [
+   "Dow Jones 50.182,95 (+0,33 %) nach zeitweise über 1.100 Punkten Minus",
+   "S&P 500 7.182,78 (−0,25 %); Nasdaq Composite −0,62 %",
+   "US-Wachstum Q3 4,3 %; Kern-PCE 3,3 % (BEA)",
+   "HP +11,49 % nach Quartalszahlen"
+  ],
+  "conclusion": "Große Schwankungen vor Thanksgiving: kräftiges Wachstum, hartnäckige Inflation, nervöser KI-Sektor."
+ },
+ "fuentes": "TradingView; BEA; GSM Global News; CNBC via StockTitan; Motley Fool; NYSE",
+ "x": "Wall Street über Nacht (25.11.):\nDow 50.182,95 (+0,33 %) nach −1.100 Pkt.\nS&P 500 −0,25 % · Nasdaq −0,62 %\nHP +11 %, Nvidia −3,9 %",
+ "tiktok": "Wall Street am Mittwoch, 25. November 2026: Der Dow liegt zeitweise über 1.100 Punkte im Minus und schließt im Plus. Drei Punkte: die Aufholjagd, Wachstum und Inflation, und die Aktien des Tages.",
+ "hashtags": "#WallStreet #Börse #Aktien #DowJones #SP500 #Nasdaq #Börsennews",
+ "hashtags_short": "#WallStreet #Börse #Aktien #DowJones #Shorts",
+ "tags": [
+  "Wall Street",
+  "US-Börse",
+  "Aktien",
+  "S&P 500",
+  "Nasdaq",
+  "Dow Jones",
+  "Nvidia",
+  "HP",
+  "Dell",
+  "Oracle",
+  "Meta",
+  "PCE",
+  "BIP",
+  "Thanksgiving",
+  "Charttechnik",
+  "Börsennews",
+  "Wall Street auf Deutsch",
+  "Der Tagesbericht",
+  "Wall Street über Nacht"
+ ],
+ "miniatura": {
+  "nombre": "Dow Jones",
+  "cifra": "−1.100",
+  "color": "gold",
+  "logo": null,
+  "gancho": "Aufholjagd ins Plus",
+  "indices": [
+   [
+    "Dow",
+    "+0,3 %",
+    null
+   ],
+   [
+    "Nasdaq",
+    "−0,6 %",
+    null
+   ]
+  ]
+ },
+ "shorts_extra": [
+  {
+   "n": 2,
+   "titulo": "Aktie des Tages: HP +11,5 % nach Quartalszahlen #Shorts",
+   "resumen": "Die Aktie des Tages an der Wall Street am 25. November 2026: HP steigt um 11,49 Prozent auf 31,15 Dollar nach Quartalszahlen (Umsatz 16,0 Mrd. Dollar, +9,3 %, laut StockTitan).",
+   "tiktok": "Aktie des Tages (Wall Street, 25. November 2026): HP +11,49 % auf 31,15 $. Quartalsumsatz 16,0 Mrd. $ (+9,3 %), laut StockTitan.",
+   "hashtags": "#HP #WallStreet #Aktien #Börse #Shorts",
+   "tags": [
+    "HP",
+    "HPQ",
+    "Quartalszahlen",
+    "Aktie des Tages"
+   ]
+  },
+  {
+   "n": 3,
+   "titulo": "S&P 500: die Marken für Freitag (27. November 2026) #Shorts",
+   "resumen": "Heute ist Thanksgiving. Für die nächste Sitzung am Freitag: Widerstand, 200-Tage-Linie und Unterstützung im S&P 500, berechnet aus den Schlusskursen bis zum 25. November 2026.",
+   "tiktok": "S&P 500 vor der Sitzung am Freitag: Widerstand 7.415, 200-Tage-Linie 7.352, Unterstützung 6.882 (berechnet, Schluss 25. November). Daten, keine Signale.",
+   "hashtags": "#SP500 #Charttechnik #WallStreet #Börse #Shorts",
+   "tags": [
+    "S&P 500",
+    "Charttechnik",
+    "Unterstützung",
+    "Widerstand"
+   ]
+  }
+ ]
+}

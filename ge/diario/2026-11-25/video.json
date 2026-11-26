@@ -1,0 +1,164 @@
+{
+ "fecha": "2026-11-25",
+ "titular": "Aufholjagd: Dow dreht 1.100-Punkte-Minus ins Plus",
+ "nombres": {},
+ "ticker": [
+  "S&P 500 −0,25 %, Nasdaq Composite −0,62 %",
+  "Dow Jones +0,33 % nach zeitweise über 1.100 Punkten Minus",
+  "US-Wachstum 3. Quartal: 4,3 % (BEA, 2. Schätzung)",
+  "Kern-PCE-Inflation 3,3 % im Jahresvergleich",
+  "HP +11,49 % nach Quartalszahlen",
+  "Heute Thanksgiving: US-Börsen geschlossen"
+ ],
+ "voz": {
+  "s_title": "Willkommen zum Tagesbericht von Wall Street auf Deutsch, an diesem Donnerstag, dem 26. November. Die Wall Street hat gestern eine dramatische Aufholjagd erlebt. Am Vormittag lag der Dow Jones zeitweise mehr als 1.100 Punkte im Minus, der Nasdaq Composite bis zu 4,6 Prozent. Am Ende schloss der Dow mit plus 0,33 Prozent bei 50.183 Punkten. Der S&P 500 verlor nur noch 0,25 Prozent auf rund 7.183 Punkte, der Nasdaq Composite 0,62 Prozent. Heute bleibt die Wall Street wegen Thanksgiving geschlossen.",
+  "s_indices": "Die großen Indizes im Überblick. Der S&P 500 schloss am Mittwochabend bei 7.182,78 Punkten, ein Minus von 18 Punkten. Laut GSM Global News lag er im Tagesverlauf bis zu 3,2 Prozent im Minus. Der Nasdaq 100 fiel um 0,64 Prozent auf 26.047 Punkte. Laut demselben Bericht lag er im Tief 20 Prozent unter seinem Oktober-Hoch, also kurz in einem Bärenmarkt. Der Dow Jones stieg um 164 Punkte, der Russell 2000 um 0,71 Prozent. Die Breite war gut: Im S&P 500 stiegen 369 Werte, 126 fielen, berechnet. Seit Freitag liegt der S&P 500 3,9 Prozent im Plus.",
+  "s_grandes": "Wer hat die Indizes bewegt? Bei den größten Werten im Nasdaq 100 fiel Nvidia um 3,9 Prozent, Amazon um 3,1 Prozent und Alphabet um 2,1 Prozent. Meta stieg dagegen um 3,4 Prozent, Apple um 0,4 Prozent. Im Dow Jones brachten Sherwin-Williams rund 50 Punkte und IBM rund 47 Punkte, berechnet aus den Tagesdaten. Am stärksten bremsten Amazon mit minus 47 Punkten sowie Microsoft und Nvidia mit jeweils minus 36 Punkten.",
+  "s_news": "Warum hat sich der Markt so bewegt? Erstens: Laut GSM Global News fielen KI-Werte den zweiten Tag in Folge und lösten den Einbruch am Morgen aus. Zweitens: Die Konjunkturdaten. Laut der US-Statistikbehörde BEA wuchs die Wirtschaft im dritten Quartal mit einer Jahresrate von 4,3 Prozent, statt der zuerst gemeldeten 3,4 Prozent. Die Kerninflation nach dem PCE-Index stieg im Oktober auf 3,3 Prozent, laut GSM Global News mehr als erwartet. Drittens: die Wende am Nachmittag. Laut dem Live-Ticker von CNBC, zitiert von StockTitan, gab es dafür keine einzelne Nachricht. Laut GSM Global News, mit Verweis auf das Wall Street Journal, erholten sich Technologiewerte nach Berichten über ein vertrauliches Briefing im US-Kongress zur Affäre um Jensen Huang.",
+  "s_sectores": "Zu den Sektoren. Drei von sechs Sektor-ETFs stiegen. Industrie legte um 0,83 Prozent zu, Energie um 0,74 Prozent mit dem höheren Ölpreis, Finanzen um 0,71 Prozent. Am schwächsten war erneut Technologie mit minus 0,83 Prozent; auf Monatssicht liegt der Sektor jetzt 15,4 Prozent im Minus. Gesundheit verlor 0,56 Prozent.",
+  "s_macro": "Zu Zinsen, Dollar und Rohstoffen. Die Rendite der 10-jährigen US-Staatsanleihe fiel um gut 6 Basispunkte auf 4,86 Prozent. Der Dollar-Index DXY gab leicht auf 103,7 nach. Der Volatilitätsindex VIX stieg um 7 Prozent auf 28,3 Punkte. Der US-Ölpreis WTI stieg um 3 Prozent auf 84,16 Dollar, Gold um 0,8 Prozent auf rund 3.583 Dollar. Für Anleger im Euroraum: Der Euro gab 0,14 Prozent auf 1,096 Dollar nach, deshalb verlor der S&P 500 in Euro gerechnet nur 0,11 Prozent, berechnet. Und Europa? Der DAX schloss am Mittwoch mit minus 1,26 Prozent bei 24.702 Punkten, der Euro Stoxx 50 mit minus 1,82 Prozent. Er hatte die Erholung in New York nicht mehr mitgemacht. Der Xetra-Handel beginnt heute wie gewohnt um 9 Uhr.",
+  "s_tech_spx": "Zur Charttechnik. Der S&P 500 liegt 2,3 Prozent unter seiner 200-Tage-Linie bei rund 7.352 Punkten. Zur 20-Tage-Linie fehlen 3,2 Prozent, zur 50-Tage-Linie 5,5 Prozent. Der RSI liegt bei knapp 40 und damit im neutralen Bereich. Das Volumen lag 3 Prozent über dem Schnitt der letzten zehn Tage.",
+  "s_esc_spx": "Drei Szenarien für den S&P 500. Im positiven Szenario würde ein Schluss über der 200-Tage-Linie bei rund 7.352 Punkten die Erholung bestätigen; die nächste Marke wäre das Hoch vom 19. November bei rund 7.416. Im neutralen Szenario pendelt der Index zwischen dem Tief vom 20. November bei 6.883 und der 200-Tage-Linie. Im negativen Szenario würde ein Schluss unter 6.883 Punkten die Erholung in Frage stellen; dann rückte das 52-Wochen-Tief bei rund 6.317 in den Blick. Das sind Bedingungen, keine Prognosen.",
+  "s_tech_ndx": "Der Nasdaq 100 liegt 7,3 Prozent unter seiner 200-Tage-Linie und 10,4 Prozent unter der 50-Tage-Linie. Der RSI liegt bei 38. Das Volumen lag knapp 5 Prozent über dem Zehn-Tage-Schnitt. Zum Rekordhoch vom 6. Oktober fehlen 17 Prozent.",
+  "s_esc_ndx": "Für den Nasdaq 100 beginnt das positive Szenario über der 20-Tage-Linie bei rund 27.407 Punkten; darüber wäre das Hoch vom 19. November bei rund 27.749 die nächste Marke. Im neutralen Szenario bleibt der Index zwischen dem Tief vom 20. November bei 24.910 und der 20-Tage-Linie. Im negativen Szenario würde ein Schluss unter 24.910 Punkten den Blick auf das 52-Wochen-Tief bei 22.841 lenken.",
+  "s_agenda": "Was steht heute an? Heute, an Thanksgiving, bleibt die Wall Street geschlossen. Der Xetra-Handel in Frankfurt läuft dagegen normal. Morgen, am Freitag, öffnet New York um 9:30 Uhr Ortszeit, 15:30 Uhr bei uns, und schließt bereits um 13 Uhr New Yorker Zeit, 19 Uhr bei uns. An solchen verkürzten Tagen ist das Handelsvolumen oft gering. Die nächste Zinsentscheidung der Fed folgt am 9. Dezember; laut GSM Global News rechnen Anleger mit einer Zinserhöhung.",
+  "s_fin": "Unser Fazit: Ein Tag mit großen Schwankungen. Nach einem Einbruch am Morgen holte die Wall Street fast alle Verluste auf, der Dow schloss sogar im Plus. Die Daten zeigen kräftiges Wachstum, aber auch hartnäckige Inflation. Folgen Sie uns kostenlos auf Telegram, der Link steht in der Videobeschreibung. Wichtiger Hinweis: Das ist keine Anlageberatung, sondern nur Information. Text, Stimme und Grafiken sind mit KI erstellt. Wir sehen uns am Samstag mit dem Bericht zur verkürzten Freitagssitzung, auf Wiedersehen."
+ },
+ "indices": {
+  "titulo": "Dow +0,33 % nach −1.100 Punkten · S&P 500 −0,25 %"
+ },
+ "grandes": {
+  "titulo": "Nvidia −3,9 %, Amazon −3,1 %, Meta +3,4 %"
+ },
+ "noticias": {
+  "titulo": "Einbruch am Morgen, Erholung am Nachmittag",
+  "fuente": "Quellen: GSM Global News, BEA, CNBC via StockTitan, Motley Fool (25. November 2026).",
+  "items": [
+   [
+    "KI-Werte",
+    "Zweiter Verlusttag in Folge · Einbruch am Morgen"
+   ],
+   [
+    "Wachstum",
+    "BIP 3. Quartal: 4,3 % (2. Schätzung, BEA)"
+   ],
+   [
+    "Inflation",
+    "Kern-PCE Oktober: 3,3 % im Jahresvergleich"
+   ],
+   [
+    "Wende",
+    "Laut WSJ (via GSM): Briefing im Kongress zur Huang-Affäre"
+   ]
+  ]
+ },
+ "sectores": {
+  "titulo": "Industrie +0,83 % · Technologie −0,83 %",
+  "items": [
+   [
+    "Industrie und Energie vorn",
+    "Industrie +0,83 %; Energie +0,74 %; Finanzen +0,71 %",
+    "teal"
+   ],
+   [
+    "Technologie schwach",
+    "Technologie −0,83 %; im Monat −15,4 %",
+    "neg"
+   ]
+  ]
+ },
+ "acciones": [
+  {
+   "ticker": "NVDA",
+   "noticia": "S&P Global Ratings prüft eine Herabstufung des Kreditratings (CNBC via StockTitan); im Tief über 9 % im Minus (GSM).",
+   "lectura": "54,7 Mrd. $ Handelsumsatz.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: CNBC via StockTitan; GSM Global News (25. November 2026).",
+   "voz": "Die erste Aktie: Nvidia. Die Aktie fiel um 3,91 Prozent auf 149,30 Dollar, umgerechnet rund 136 Euro. Laut GSM Global News lag sie zeitweise mehr als 9 Prozent im Minus. Laut CNBC, zitiert von StockTitan, prüft die Ratingagentur S&P Global eine Herabstufung der Kreditwürdigkeit und verweist auf Risiken bei Führung und Kontrolle des Konzerns. Die letzten Quartalszahlen erklären wir in unserer Serie «Die Wall-Street-Giganten»."
+  },
+  {
+   "ticker": "HPQ",
+   "noticia": "Quartalsumsatz 16,0 Mrd. $ (+9,3 %), Jahresumsatz 60,5 Mrd. $; Ausblick für 2027 (StockTitan, Motley Fool).",
+   "lectura": "Bester Wert im S&P 500, 2,5-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Zahlen: StockTitan, Motley Fool (25. November 2026).",
+   "voz": "Die zweite Aktie: HP, der Hersteller von PCs und Druckern. Die Aktie stieg um 11,49 Prozent auf 31,15 Dollar, der beste Wert im S&P 500. Laut StockTitan meldete HP am Dienstagabend einen Quartalsumsatz von 16 Milliarden Dollar, 9,3 Prozent mehr als vor einem Jahr. Laut Motley Fool überzeugten die Zahlen und ein ermutigender Ausblick für das Geschäftsjahr 2027."
+  },
+  {
+   "ticker": "DELL",
+   "noticia": "Nach Rekordzahlen am Vormittag im Minus (Motley Fool), am Ende leicht im Plus; Aktienrückkauf um 25 Mrd. $ erhöht.",
+   "lectura": "2,1-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Motley Fool, StockTitan (25. November 2026).",
+   "voz": "Die dritte Aktie: Dell Technologies. Nach den Rekordzahlen vom Dienstagabend lag die Aktie laut Motley Fool am Mittag fast 5 Prozent im Minus. Am Ende schloss sie mit plus 0,6 Prozent bei 297,06 Dollar, bei doppeltem Volumen. Laut Motley Fool erhöhte Dell zudem das Aktienrückkaufprogramm um 25 Milliarden Dollar. Laut Motley Fool fliehen Anleger derzeit generell aus dem KI-Handel."
+  },
+  {
+   "ticker": "ORCL",
+   "noticia": "Keine konkrete Meldung in der Presse; 52-Wochen-Tief bei 99,34 $ im Handelsverlauf (GSM).",
+   "lectura": "1,4-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Tief: GSM Global News (25. November 2026).",
+   "voz": "Die vierte Aktie: Oracle. Die Aktie fiel um 5,13 Prozent auf 103,88 Dollar. Laut GSM Global News erreichte sie im Handelsverlauf mit 99,34 Dollar ein 52-Wochen-Tief. Eine konkrete Meldung zu Oracle fanden wir nicht; die Aktie fiel mit den anderen KI-Werten. Oracle legt am 14. Dezember Quartalszahlen vor."
+  },
+  {
+   "ticker": "META",
+   "noticia": "Keine konkrete Meldung in der Presse.",
+   "lectura": "11,4 Mrd. $ Handelsumsatz, 1,2-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView (25. November 2026).",
+   "voz": "Die fünfte Aktie: Meta. Gegen den Trend der Technologiewerte stieg die Aktie um 3,4 Prozent auf 609,89 Dollar. Eine konkrete Meldung zu Meta fanden wir nicht."
+  }
+ ],
+ "macro": {
+  "titulo": "Rendite 4,86 % · Öl +3 % · VIX 28,3",
+  "items": {
+   "TVC:US10Y": "Rendite fällt um 6 Basispunkte",
+   "TVC:DXY": "Dollar kaum verändert",
+   "TVC:VIX": "Nervosität steigt",
+   "TVC:USOIL": "Ölpreis steigt kräftig",
+   "TVC:GOLD": "Gold etwas fester"
+  },
+  "europa": "DAX −1,26 % und Euro Stoxx 50 −1,82 %: Xetra öffnet heute um 9:00 Uhr."
+ },
+ "tecnico": {
+  "spx": {
+   "titulo": "2,3 % unter der 200-Tage-Linie, RSI 40",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  },
+  "ndx": {
+   "titulo": "7,3 % unter der 200-Tage-Linie, RSI 38",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  }
+ },
+ "agenda": {
+  "titulo": "Thanksgiving: heute keine Sitzung",
+  "fuente": "Quellen: NYSE-Handelskalender; GSM Global News (25. November 2026). Deutsche Zeit berechnet.",
+  "filas": [
+   [
+    "2026-11-26",
+    "Thanksgiving: US-Börsen geschlossen",
+    "",
+    "geplant"
+   ],
+   [
+    "2026-11-27",
+    "Handelsbeginn an der Wall Street",
+    "09:30",
+    "geplant"
+   ],
+   [
+    "2026-11-27",
+    "Verkürzter Handel bis 13 Uhr",
+    "13:00",
+    "geplant"
+   ],
+   [
+    "2026-12-09",
+    "Fed-Zinsentscheid",
+    "",
+    "geplant"
+   ]
+  ]
+ },
+ "fin": {
+  "titular": "Aufholjagd: Dow dreht ins Plus, Nasdaq −0,6 %",
+  "fuentes": "TradingView, BEA, GSM Global News, CNBC via StockTitan, Motley Fool"
+ }
+}
