@@ -44,15 +44,59 @@
 "sort": "2026-10-29"
 },
 {
+"n": "Cencosud Shopping",
+"t": "CENCOMALLS",
+"monto": "$40,00",
+"tipo": "Provisorio",
+"limite": "12 nov 2026",
+"pago": "18 nov 2026",
+"st": "C",
+"nota": "",
+"sort": "2026-11-18"
+},
+{
+"n": "Schwager",
+"t": "SCHWAGER",
+"monto": "$0,03",
+"tipo": "Provisorio",
+"limite": "14 nov 2026",
+"pago": "20 nov 2026",
+"st": "C",
+"nota": "",
+"sort": "2026-11-20"
+},
+{
 "n": "Besalco",
 "t": "BESALCO",
-"monto": "Ref. $10 (nov-2025)",
+"monto": "$10,00",
 "tipo": "Provisorio",
-"limite": "Por anunciar",
-"pago": "Noviembre",
-"st": "E",
+"limite": "19 nov 2026",
+"pago": "25 nov 2026",
+"st": "C",
+"nota": "",
+"sort": "2026-11-25"
+},
+{
+"n": "CCU",
+"t": "CCU",
+"monto": "$66,87",
+"tipo": "Provisorio",
+"limite": "20 nov 2026",
+"pago": "26 nov 2026",
+"st": "C",
 "nota": "",
 "sort": "2026-11-26"
+},
+{
+"n": "Entel",
+"t": "ENTEL",
+"monto": "$115,00",
+"tipo": "Provisorio",
+"limite": "26 nov 2026",
+"pago": "2 dic 2026",
+"st": "C",
+"nota": "",
+"sort": "2026-12-02"
 },
 {
 "n": "Aguas Andinas",
@@ -110,20 +154,9 @@
 "sort": "2026-12-12"
 },
 {
-"n": "Schwager",
-"t": "SCHWAGER",
-"monto": "Ref. $0,024 (dic-2025)",
-"tipo": "Provisorio",
-"limite": "Por anunciar",
-"pago": "Nov o dic",
-"st": "E",
-"nota": "",
-"sort": "2026-12-17"
-},
-{
-"n": "Quiñenco",
-"t": "QUINENCO",
-"monto": "Ref. $60,14 (dic-2025)",
+"n": "Empresas Copec",
+"t": "COPEC",
+"monto": "Ref. $66,93 (dic-2025)",
 "tipo": "Provisorio",
 "limite": "Por anunciar",
 "pago": "Diciembre",
@@ -132,9 +165,9 @@
 "sort": "2026-12-18"
 },
 {
-"n": "Empresas Copec",
-"t": "COPEC",
-"monto": "Ref. $66,93 (dic-2025)",
+"n": "Quiñenco",
+"t": "QUINENCO",
+"monto": "Ref. $60,14 (dic-2025)",
 "tipo": "Provisorio",
 "limite": "Por anunciar",
 "pago": "Diciembre",
@@ -178,23 +211,34 @@
 {
 "n": "Enel Generación Chile",
 "t": "ENELGXCH",
-"monto": "Ref. $6,31 (ene-2026)",
+"monto": "US$0,0069",
 "tipo": "Provisorio",
-"limite": "Por anunciar",
-"pago": "Enero 2027",
-"st": "E",
-"nota": "",
-"sort": "2027-01-16"
+"limite": "9 ene 2027",
+"pago": "15 ene 2027",
+"st": "C",
+"nota": "Monto en pesos por fijar.",
+"sort": "2027-01-15"
 },
 {
 "n": "Enel Chile",
 "t": "ENELCHILE",
-"monto": "Ref. $0,67 (ene-2026)",
+"monto": "US$0,00084",
 "tipo": "Provisorio",
-"limite": "Por anunciar",
-"pago": "Enero 2027",
-"st": "E",
-"nota": "",
-"sort": "2027-01-23"
+"limite": "16 ene 2027",
+"pago": "22 ene 2027",
+"st": "C",
+"nota": "Monto en pesos por fijar.",
+"sort": "2027-01-22"
+},
+{
+"n": "Enel Américas",
+"t": "ENELAM",
+"monto": "US$0,00138",
+"tipo": "Provisorio",
+"limite": "16 ene 2027",
+"pago": "22 ene 2027",
+"st": "C",
+"nota": "Monto en pesos por fijar.",
+"sort": "2027-01-22"
 }
 ]
