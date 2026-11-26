@@ -232,7 +232,8 @@
     "o-Y1MMV4r8c",
     "PgMOuv7nxdA",
     "EbnnTdZey-4",
-    "pEuSiBJ5SRE"
+    "pEuSiBJ5SRE",
+    "LSbhtAz1TVk"
    ]
   },
   "empresa-elm": {
@@ -273,6 +274,69 @@
    "videos": [
     "eVUX0sy2mAM",
     "2QGxd4vSUrA"
+   ]
+  },
+  "empresa-riyadbank": {
+   "id": "PLAtBoRJyRgp4",
+   "titulo": "سهم بنك الرياض (1010) | النتائج المالية والتحليل",
+   "videos": [
+    "8O0AASw-uRk",
+    "cxOc36APlgU"
+   ]
+  },
+  "empresa-mouwasat": {
+   "id": "PLEwAEaQP47I8",
+   "titulo": "سهم المواساة (4002) | النتائج المالية والتحليل",
+   "videos": [
+    "49nuHJ-iGwU",
+    "Hpd8PjKcyCA"
+   ]
+  },
+  "empresa-daralarkan": {
+   "id": "PLE8-67qp05PY",
+   "titulo": "سهم دار الأركان (4300) | النتائج المالية والتحليل",
+   "videos": [
+    "eDsDKEpfqDU",
+    "LyJN-AhESus"
+   ]
+  },
+  "empresa-saudicement": {
+   "id": "PLF1F6SvvEn2g",
+   "titulo": "سهم الإسمنت السعودية (3030) | النتائج المالية والتحليل",
+   "videos": [
+    "Ajf-Ih_6Kj8",
+    "iiIt1kUSAI4"
+   ]
+  },
+  "empresa-tawuniya": {
+   "id": "PLTZAlC-pdc44",
+   "titulo": "سهم التعاونية (8010) | النتائج المالية والتحليل",
+   "videos": [
+    "aqE1PyHJY08",
+    "alPlfYlQQVs"
+   ]
+  },
+  "empresa-maaden": {
+   "id": "PLI2h5iZ_LXGs",
+   "titulo": "سهم معادن (1211) | النتائج المالية والتحليل",
+   "videos": [
+    "vSCNxtXnJz8",
+    "oUMEDkumk7g"
+   ]
+  },
+  "empresa-sec": {
+   "id": "PLbJnDO8v7tCc",
+   "titulo": "سهم الكهرباء السعودية (5110) | النتائج المالية والتحليل",
+   "videos": [
+    "DJWcHsvRKYQ",
+    "NkpF2pDkSuk"
+   ]
+  },
+  "tecnico": {
+   "id": "PLT0hY06GVy9Q",
+   "titulo": "التحليل الفني ببساطة | دروس على الأسهم السعودية",
+   "videos": [
+    "8TtoTYBJrDg"
    ]
   }
  }
