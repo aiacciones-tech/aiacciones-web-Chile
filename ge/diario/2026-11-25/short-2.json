@@ -1,0 +1,58 @@
+{
+ "cabecera": "Aktie des Tages · 25. November 2026",
+ "out": "short-2-bolsa-2026-11-25-GE.mp4",
+ "fuente": "Quellen: TradingView, StockTitan\nund Motley Fool (25. November 2026).",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Aktie des Tages · Wall Street",
+   "fecha": "Mi., 25. November 2026",
+   "indices": [
+    [
+     "HP",
+     "+11,49 %",
+     "31,15 $",
+     "teal"
+    ]
+   ],
+   "pregunta": "Bester Wert im S&P 500",
+   "voz": "Die Aktie des Tages an der Wall Street, Mittwoch, 25. November: HP."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Was ist passiert?",
+   "big": "+11,49 %",
+   "delta": "Schluss 31,15 $",
+   "color": "teal",
+   "nota": "Quartalszahlen am Dienstagabend.\nAusblick für 2027 überzeugte (Motley Fool).",
+   "voz": "Eins. HP steigt um 11,5 Prozent, nach Quartalszahlen am Dienstagabend."
+  },
+  {
+   "tipo": "kpis",
+   "n": 2,
+   "label": "Die Zahlen",
+   "items": [
+    [
+     "16,0 Mrd. $",
+     "Umsatz im Quartal, +9,3 %",
+     "teal"
+    ],
+    [
+     "60,5 Mrd. $",
+     "Umsatz im Geschäftsjahr, +9,5 %",
+     "teal"
+    ]
+   ],
+   "nota": "Laut StockTitan.\nDas sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Zwei. Laut StockTitan setzt HP im Quartal 16 Milliarden Dollar um, 9,3 Prozent mehr als vor einem Jahr."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Jeden Morgen:\nDer Tagesbericht",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Den ganzen Tagesbericht finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}

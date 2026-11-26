@@ -1,0 +1,79 @@
+{
+ "cabecera": "Wall Street über Nacht · 25. November 2026",
+ "out": "short-bolsa-2026-11-25-GE.mp4",
+ "fuente": "Quellen: TradingView, GSM Global News\nund BEA (25. November 2026).",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Wall Street · Sitzung vom",
+   "fecha": "Mi., 25. November 2026",
+   "indices": [
+    [
+     "Dow Jones",
+     "+0,33 %",
+     "50.182,95",
+     "teal"
+    ],
+    [
+     "Nasdaq",
+     "−0,62 %",
+     "23.585,80",
+     "neg"
+    ]
+   ],
+   "pregunta": "Aufholjagd am Nachmittag",
+   "voz": "Wall Street, Mittwoch, 25. November. Eine Aufholjagd am Nachmittag. Drei Punkte."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Dow Jones",
+   "big": "−1.100",
+   "delta": "Punkte im Tief, am Ende +164",
+   "color": "neg",
+   "nota": "Zeitweise über 1.100 Punkte im Minus,\nSchluss mit +0,33 % (GSM Global News).",
+   "voz": "Eins. Der Dow liegt zeitweise mehr als 1.100 Punkte im Minus und schließt trotzdem im Plus."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Konjunktur",
+   "big": "4,3 %",
+   "delta": "US-Wachstum im 3. Quartal (BEA)",
+   "color": "blue",
+   "nota": "Kern-PCE-Inflation Oktober: 3,3 %.\nZweite Schätzung, zuvor 3,4 %.",
+   "voz": "Zwei. Die US-Wirtschaft wächst im dritten Quartal um 4,3 Prozent, die Kerninflation liegt bei 3,3 Prozent."
+  },
+  {
+   "tipo": "kpis",
+   "n": 3,
+   "label": "Aktien des Tages",
+   "items": [
+    [
+     "+11,49 %",
+     "HP nach Quartalszahlen",
+     "teal"
+    ],
+    [
+     "−3,91 %",
+     "Nvidia",
+     "neg"
+    ],
+    [
+     "−5,13 %",
+     "Oracle",
+     "neg"
+    ]
+   ],
+   "nota": "Das sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. HP steigt nach Zahlen um 11 Prozent, Nvidia und Oracle fallen."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Heute Thanksgiving:\nBörse geschlossen",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Heute bleibt die Wall Street wegen Thanksgiving geschlossen. Das ganze Video finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}
