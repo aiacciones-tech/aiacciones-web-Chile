@@ -1,0 +1,32 @@
+{
+ "fecha": "2026-11-26",
+ "cabecera": "DAX am Abend · 26. November 2026",
+ "out": "dax-2026-11-26-GE.mp4",
+ "fuente": "Quellen: TradingView (Xetra-Schlusskurse), dpa-AFX\nüber ariva.de (26. November 2026).",
+ "titulo_yt": "DAX +2,1 %: 39 von 40 Werten im Plus – Autos vorn, nur Commerzbank im Minus",
+ "resumen": "Der DAX schließt am Donnerstag, 26. November, 2,08 % höher bei 25.215,52 Punkten. Die Kehrtwende der US-Technologiewerte am Mittwoch stützt auch Europa; Auto- und Rohstoffwerte erholen sich. Die US-Börsen sind wegen Thanksgiving geschlossen (dpa-AFX).",
+ "claves": ["39 von 40 DAX-Werten im Plus: Porsche SE +4,70 %, Volkswagen +4,60 %, BMW +4,49 %",
+            "Rheinmetall +4,06 % zum Kapitalmarkttag",
+            "Einziger Verlierer: Commerzbank −2,55 % (Unicredit will Andrea Orcel an die Aufsichtsratsspitze setzen)",
+            "DAX wieder 0,9 % über der 200-Tage-Linie (berechnet)"],
+ "tags": ["Volkswagen", "BMW", "Porsche SE", "Rheinmetall", "Commerzbank"],
+ "escenas": [
+  {"tipo": "titulo", "kicker": "DAX · Handelstag vom", "fecha": "Do., 26. November 2026",
+   "indices": [["DAX", "+2,08 %", "25.215,52", "teal"], ["MDAX", "+2,34 %", "29.263,97", "teal"]],
+   "pregunta": "Erholung auf breiter Front",
+   "voz": "DAX, Donnerstag, 26. November. Erholung auf breiter Front. Drei Punkte."},
+  {"tipo": "cifra", "n": 1, "label": "Das Wichtigste", "big": "+2,08 %", "delta": "DAX schließt bei 25.216 Punkten", "color": "teal",
+   "nota": "US-Techwerte drehten am Vortag ins Plus.\nAuto- und Rohstoffwerte erholen sich.\nUS-Börsen zu Thanksgiving geschlossen.",
+   "voz": "Eins. Der DAX steigt um 2,1 Prozent auf 25.216 Punkte. Die Kehrtwende der US-Technologiewerte am Mittwoch hilft auch in Europa. Auto- und Rohstoffwerte erholen sich."},
+  {"tipo": "cifra", "n": 2, "label": "Gewinner und Verlierer", "big": "39 von 40", "delta": "DAX-Werte im Plus", "color": "teal",
+   "barras": [["Porsche SE", 4.7], ["Volkswagen", 4.6], ["BMW", 4.49], ["Commerzbank", -2.55]],
+   "nota": "Einziger Verlierer: Commerzbank.\nRheinmetall +4,06 % zum Kapitalmarkttag.",
+   "voz": "Zwei. 39 von 40 DAX-Werten steigen. Porsche SE, Volkswagen und BMW gewinnen rund 4,5 Prozent. Einziger Verlierer ist die Commerzbank: Unicredit will Andrea Orcel an die Spitze des Aufsichtsrats setzen."},
+  {"tipo": "kpis", "n": 3, "label": "Charttechnik DAX",
+   "items": [["44", "RSI 14", "blue"], ["+0,9 %", "über der 200-Tage-Linie (berechnet)", "teal"], ["−6,6 %", "unter dem Rekordhoch vom 12. November", "neg"]],
+   "nota": "Das sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Der DAX liegt wieder 0,9 Prozent über seiner 200-Tage-Linie und 6,6 Prozent unter dem Rekordhoch vom 12. November."},
+  {"tipo": "fin", "nombre": "Wall Street auf Deutsch", "titular": "Wall Street:\nThanksgiving-Pause", "cta": "Tagesbericht am Samstag",
+   "voz": "Wall Street ist heute wegen Thanksgiving geschlossen. Den nächsten Tagesbericht gibt es am Samstagmorgen auf unserem Kanal. Keine Anlageberatung."}
+ ]
+}
