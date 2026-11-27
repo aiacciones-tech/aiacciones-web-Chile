@@ -1,6 +1,6 @@
 #!/bin/bash
 # bash encolar.sh <carpeta del día>: encola el video diario en árabe y su Short en cola-eau/bolsa-<fecha>[-short]/ de la rama youtube-cola.
-# Después: youtube-eau.yml sube a YouTube (@AIStocksUAE), buffer.yml publica en X, LinkedIn, Facebook, TikTok e Instagram,
+# Después: youtube-eau.yml sube a YouTube (@AIStocksUAE), buffer.yml publica en X, Threads, LinkedIn, TikTok e Instagram (Facebook deshabilitado desde el 27-nov-2026),
 # y telegram-eau.yml en Telegram (post-telegram.txt).
 set -e
 B=$(cd "$1" && pwd); F=$(python3 -c "import json;print(json.load(open('$B/info.json'))['fecha'])"); S=${SCRATCH:-/tmp/eau-scratch}; mkdir -p $S
@@ -23,7 +23,9 @@ cp $B/short-bolsa-$F-UAE.mp4 $CS/video.mp4; cp $B/meta-short-$F-UAE.json $CS/met
 git add cola-eau; git commit -qm "Cola EAU: video diario de la bolsa $F (video y Short)"
 for i in 1 2 3 4; do git pull -q --rebase origin youtube-cola 2>/dev/null; git push -q origin HEAD:youtube-cola 2>/dev/null && break; sleep $((2**i)); done
 # Los posts van en un segundo push, cuando el video ya está en la rama (Buffer toma el video del Short desde GitHub).
-cp $B/post-x-$F-UAE.txt $C/post-x.txt; cp $B/post-facebook-$F-UAE.txt $C/post-facebook.txt; cp $B/post-telegram-$F-UAE.txt $C/post-telegram.txt
+cp $B/post-x-$F-UAE.txt $C/post-x.txt; cp $B/post-telegram-$F-UAE.txt $C/post-telegram.txt
+# Facebook deshabilitado (Daniel, 27-nov-2026): no se publica; se marca como omitido en las dos carpetas.
+echo '{"omitido": "Facebook deshabilitado (Daniel, 2026-11-27)"}' > $C/buffer-facebook.json
 # LinkedIn (Daniel, 8-nov-2026): el Short como video nativo -> post-linkedin.txt en la carpeta -short (buffer.py lo sube con el video.mp4).
 # En cola-eau, Facebook usaría post-linkedin.txt como texto alterno; en la carpeta -short se marca como hecho para que no se duplique.
 cp $B/post-linkedin-$F-UAE.txt $CS/post-linkedin.txt

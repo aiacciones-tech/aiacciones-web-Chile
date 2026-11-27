@@ -50,7 +50,7 @@ de YouTube. Se apaga sola para las sesiones posteriores al 22-nov-2026 (`CTA_HAS
 En LinkedIn va el Short subido como video (no como enlace): `encolar.sh` pone `post-linkedin.txt` en `cola-eau/bolsa-<fecha>-short/`.
 El texto (`info.json` → `linkedin`: `datos` con 3 o 4 cifras clave y qué cambió, y `conclusion`) es un resumen con valor, sin relleno,
 dice «فيديو من إعداد قناة AI Stocks UAE» y termina con el enlace al canal https://www.youtube.com/@AIStocksUAE.
-Facebook sigue con el texto largo y el enlace al video (`post-facebook.txt` en la carpeta del video largo).
+Facebook está deshabilitado desde el 27-nov-2026 (Daniel): `encolar.sh` ya no copia `post-facebook.txt` y deja `buffer-facebook.json` como omitido en las dos carpetas. `gen_meta.py` sigue generando el texto por si vuelve.
 
 ## Reglas
 Nada de comprar/vender, precio objetivo ni «barata/cara». El análisis técnico se presenta como datos. Cada cifra con fuente; cálculos propios marcados «محسوب».
