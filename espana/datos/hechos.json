@@ -1,6 +1,54 @@
 {
- "actualizado": "2026-11-26T14:47Z",
+ "actualizado": "2026-11-27T23:17Z",
  "items": [
+  {
+   "id": "9c5446b9-1089-497f-bc0b-c1c3977dad5c",
+   "tipo": "OIR",
+   "fecha": "2026-11-27 21:17",
+   "entidad": "ENDESA, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Programa de recompra de acciones Sexto Tramo",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b9c5446b9-1089-497f-bc0b-c1c3977dad5c%7d",
+   "ticker": "ELE",
+   "temas": []
+  },
+  {
+   "id": "56b05c46-6931-4f74-b7d5-846f777604dc",
+   "tipo": "OIR",
+   "fecha": "2026-11-27 17:58",
+   "entidad": "INDRA SISTEMAS, S.A.",
+   "nif": "A",
+   "categoria": "Programas de recompra de acciones, estabilización y autocartera",
+   "titulo": "Programa de recompra de acciones",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b56b05c46-6931-4f74-b7d5-846f777604dc%7d",
+   "ticker": "IDR",
+   "temas": []
+  },
+  {
+   "id": "884f5dea-dcc5-411b-9f62-130a792a1dcd",
+   "tipo": "OIR",
+   "fecha": "2026-11-27 17:50",
+   "entidad": "UNICAJA BANCO, S.A.",
+   "nif": "A93139053",
+   "categoria": "Sobre instrumentos financieros",
+   "titulo": "La Entidad comunica su decisión de amortizar la emisión de obligaciones subordinadas denominada “Euro 300.000.000 Fixed Rate Reset Subordinated Notes due 2032” (ISIN ES0280907025)",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b884f5dea-dcc5-411b-9f62-130a792a1dcd%7d",
+   "ticker": "UNI",
+   "temas": []
+  },
+  {
+   "id": "4c4475f0-072c-4faf-a05c-a78a150e755a",
+   "tipo": "OIR",
+   "fecha": "2026-11-27 17:46",
+   "entidad": "CELLNEX TELECOM, S.A.",
+   "nif": "A64907306",
+   "categoria": "Sobre instrumentos financieros",
+   "titulo": "Amortización anticipada de bonos convertibles",
+   "url": "https://www.cnmv.es/webservices/verdocumento/ver?t=%7b4c4475f0-072c-4faf-a05c-a78a150e755a%7d",
+   "ticker": "CLNX",
+   "temas": []
+  },
   {
    "id": "d0d95900-dfcc-47ba-8ad2-86885ce5387f",
    "tipo": "OIR",
