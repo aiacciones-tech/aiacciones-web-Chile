@@ -9,6 +9,18 @@ MAX_DIA = 3
 RIAD = dt.timezone(dt.timedelta(hours=3))
 
 
+def ya_hecho(ticker, fecha, hechos, dias=45):
+    """True si ya hay un episodio de la empresa a menos de 45 días de esta fecha: es el mismo informe trimestral con la fecha
+    corregida por TradingView (p. ej. ANT: 2-nov y luego 10-nov, ambos periodo 2026-Q3). Dos trimestres nunca salen tan juntos."""
+    f = dt.date.fromisoformat(fecha); pre = f"serie20-{ticker.lower()}-"
+    for h in hechos:
+        if h.startswith(pre):
+            try: g = dt.date.fromisoformat(h[len(pre):len(pre) + 10])
+            except ValueError: continue
+            if abs((f - g).days) < dias: return True
+    return False
+
+
 def main():
     datos, cola = sys.argv[1], sys.argv[2]; cal = json.load(open(os.path.join(datos, "calendario.json")))
     hoy = dt.datetime.now(RIAD).date().isoformat()
@@ -24,6 +36,7 @@ def main():
         if not ev or not ev.get("datos_listos"): continue   # sin cifras del trimestre en TradingView todavía: espera
         carpeta = f"serie20-{e['ticker'].lower()}-{ev['fecha']}"
         if carpeta in hechos: continue
+        if ya_hecho(e["ticker"], ev["fecha"], hechos): continue   # mismo trimestre con otra fecha (TradingView la cambió): no se repite
         pend.append({"ticker": e["ticker"], "fecha": ev["fecha"], "periodo": ev.get("periodo"), "carpeta": carpeta, "cap": e.get("cap") or 0})
     pend.sort(key=lambda x: (x["fecha"], -x["cap"]))
     libres = max(0, MAX_DIA - hoy_n)
