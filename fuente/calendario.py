@@ -14,7 +14,7 @@ CMF = "Fecha informada a la CMF"
 Q = [dict(
  key="q2026-3t", year=2026, q=3, label="3T 2026",
  intro="Resultados del tercer trimestre de 2026 (julio a septiembre), que las empresas publican entre octubre y noviembre, y los dividendos anunciados o esperados entre octubre de 2026 y enero de 2027.",
- updated="6 de noviembre de 2026",
+ updated="27 de noviembre de 2026",
  reports=[
   (D(2026,10,23),"Naturgy Chile","NTGCLGAS","Energía","C","Dueña de Metrogas y Gas Sur."),
   (D(2026,10,23),"Sonda","SONDA","Tecnología","C",""),
