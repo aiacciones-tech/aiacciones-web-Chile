@@ -101,24 +101,24 @@
 {
 "n": "Aguas Andinas",
 "t": "AGUAS-A",
-"monto": "Ref. $6,86 (dic-2025)",
+"monto": "$7,35",
 "tipo": "Provisorio",
-"limite": "Por anunciar",
-"pago": "Nov o dic",
-"st": "E",
+"limite": "4 dic 2026",
+"pago": "11 dic 2026",
+"st": "C",
 "nota": "",
-"sort": "2026-12-02"
+"sort": "2026-12-11"
 },
 {
 "n": "IAM",
 "t": "IAM",
-"monto": "Ref. $20,69 (dic-2025)",
+"monto": "$22,55",
 "tipo": "Provisorio",
-"limite": "Por anunciar",
-"pago": "Diciembre",
-"st": "E",
+"limite": "10 dic 2026",
+"pago": "16 dic 2026",
+"st": "C",
 "nota": "",
-"sort": "2026-12-05"
+"sort": "2026-12-16"
 },
 {
 "n": "Sigdo Koppers",
@@ -145,13 +145,13 @@
 {
 "n": "Colbún",
 "t": "COLBUN",
-"monto": "Ref. ≈$4,12 (dic-2025)",
+"monto": "US$0,00781",
 "tipo": "Provisorio",
-"limite": "Por anunciar",
-"pago": "Diciembre",
-"st": "E",
-"nota": "Se declara en dólares.",
-"sort": "2026-12-12"
+"limite": "4 dic 2026",
+"pago": "11 dic 2026",
+"st": "C",
+"nota": "Monto en pesos por fijar.",
+"sort": "2026-12-11"
 },
 {
 "n": "Empresas Copec",
@@ -240,5 +240,49 @@
 "st": "C",
 "nota": "Monto en pesos por fijar.",
 "sort": "2027-01-22"
+},
+{
+"n": "Naturgy Chile",
+"t": "NTGCLGAS",
+"monto": "$32,00",
+"tipo": "Provisorio",
+"limite": "10 dic 2026",
+"pago": "16 dic 2026",
+"st": "C",
+"nota": "",
+"sort": "2026-12-16"
+},
+{
+"n": "Naturgy Chile",
+"t": "NTGCLGAS",
+"monto": "$50,00",
+"tipo": "Eventual",
+"limite": "10 dic 2026",
+"pago": "16 dic 2026",
+"st": "C",
+"nota": "",
+"sort": "2026-12-16"
+},
+{
+"n": "Embotelladora Andina",
+"t": "ANDINA-B",
+"monto": "$56,10",
+"tipo": "Provisorio",
+"limite": "11 dic 2026",
+"pago": "17 dic 2026",
+"st": "C",
+"nota": "",
+"sort": "2026-12-17"
+},
+{
+"n": "Embotelladora Andina",
+"t": "ANDINA-A",
+"monto": "$51,00",
+"tipo": "Provisorio",
+"limite": "11 dic 2026",
+"pago": "17 dic 2026",
+"st": "C",
+"nota": "",
+"sort": "2026-12-17"
 }
 ]
