@@ -75,9 +75,9 @@ def s_portada(i, e, t):
 
 
 def s_puntos(i, e, t):
-    f = base(i, e["kicker"], e["titulo"]); P = e["puntos"][:5]; hh = min(0.12, 0.6 / len(P))
+    f = base(i, e["kicker"], e["titulo"]); P = e["puntos"][:5]; hh = min(0.12, 0.54 / len(P))
     for k, (tit, txt) in enumerate(P):
-        b = ease((t - k * 0.1) / 0.4); y = 0.68 - (k + 1) * hh; ym = y + (hh - 0.014) / 2
+        b = ease((t - k * 0.1) / 0.4); y = 0.70 - (k + 1) * hh; ym = y + (hh - 0.014) / 2
         rect(f, 0.06, y, 0.88, hh - 0.014, PANEL, b); rect(f, XR - 0.005, y, 0.005, hh - 0.014, e.get("colores", [GOLD] * 5)[k], b)
         T(f, 0.925, ym, f"{k + 1}", GOLD, 34, "bold", va="center", alpha=b)
         T(f, 0.895, ym, tit, FG, 26, "bold", va="center", alpha=b)
@@ -128,7 +128,7 @@ def s_historico(i, e, t):
     for j, (d, _) in enumerate(S): pos[d.isocalendar()[:2]] = j
     byd = {fecha_v(v["t"]).isoformat(): v for v in V}
     for k, m in enumerate(e.get("marcas", [])):
-        v = byd.get(m["fecha"]); a = ease((t - 0.5 - k * 0.12) / 0.3)
+        v = byd.get(m["fecha"]); a = ease((t - 0.4 - k * 0.06) / 0.25)  # todas visibles al final de la animación (t=1)
         if not v: continue
         j = pos[fecha_v(v["t"]).isocalendar()[:2]]; yv = ys[j]; arriba = m.get("campo") != "l"  # punto sobre la línea semanal; la cifra exacta va en el texto
         if j > rev: continue

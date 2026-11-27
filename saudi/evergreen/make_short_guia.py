@@ -66,14 +66,15 @@ def s_historico(e, t):
     ax.fill_between(xs[:rev], ys[:rev], ys.min() * 0.85, color=TEAL, alpha=0.12, lw=0); ax.plot(xs[:rev], ys[:rev], color=TEAL, lw=3)
     ax.set_ylim(ys.min() * 0.8, ys.max() * 1.25); ax.set_xlim(-n * 0.02, n * 1.03)
     pos = {d.isocalendar()[:2]: j for j, (d, _) in enumerate(S)}; byd = {fecha_v(v["t"]).isoformat(): v for v in V}
-    for k, m in enumerate(g.get("marcas", [])[:2]):
+    for k, m in enumerate([g.get("marcas", [])[x] for x in e.get("marcas", [0, 1]) if x < len(g.get("marcas", []))]):  # "marcas": índices de las marcas de la escena larga
         v = byd.get(m["fecha"]); b = ease((t - 0.5 - k * 0.12) / 0.3)
         if not v: continue
         j = pos[fecha_v(v["t"]).isocalendar()[:2]]
         if j > rev: continue
         ax.plot([j], [ys[j]], "o", color=GOLD, ms=14, alpha=b)
-        ax.text(j + n * 0.03, ys[j] * (1.08 if m.get("campo") != "l" else 0.9), ar(m["texto"].split("\n")[-1]), color=GOLD, fontsize=28, weight="bold",
-                ha="left", va="center", alpha=b, bbox=dict(boxstyle="round,pad=0.25", fc=BG, ec="none", alpha=0.85 * b))
+        der = j > n * 0.6  # cerca del borde derecho: la etiqueta va a la izquierda del punto
+        ax.text(j + n * (-0.03 if der else 0.03), ys[j] * (1.08 if m.get("campo") != "l" else 0.9), ar(m["texto"].split("\n")[-1]), color=GOLD, fontsize=28, weight="bold",
+                ha="right" if der else "left", va="center", alpha=b, bbox=dict(boxstyle="round,pad=0.25", fc=BG, ec="none", alpha=0.85 * b))
     ax.set_yticks(ax.get_yticks()[1:-1]); ax.set_yticklabels([num(y, 0) for y in ax.get_yticks()]); ax.tick_params(labelsize=20)
     ax.grid(axis="y", color=DIM, lw=0.6, alpha=0.6)
     tk = [(j, str(d.year)) for j, (d, _) in enumerate(S) if j == 0 or d.year != S[j - 1][0].year]
