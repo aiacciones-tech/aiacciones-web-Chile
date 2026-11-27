@@ -91,6 +91,10 @@
   "empresa-acerinox": {
    "id": "PLAARHVgPYQaM",
    "titulo": "Acerinox: resultados y análisis en vídeo"
+  },
+  "empresa-grifols": {
+   "id": "PLGUr9iOG2L20",
+   "titulo": "Grifols: resultados y análisis en vídeo"
   }
  },
  "añadidos": {
@@ -285,6 +289,85 @@
   "acerinox-1S26-short": [
    "empresa-acerinox",
    "shorts"
+  ],
+  "grifols-1S26": [
+   "empresa-grifols",
+   "resultados-1S26"
+  ],
+  "grifols-1S26-short": [
+   "empresa-grifols",
+   "shorts"
+  ],
+  "ferrovial-3T26": [
+   "empresa-ferrovial",
+   "resultados-3T26"
+  ],
+  "ferrovial-3T26-short": [
+   "empresa-ferrovial",
+   "shorts"
+  ],
+  "endesa-3T26": [
+   "empresa-endesa",
+   "resultados-3T26"
+  ],
+  "endesa-3T26-short": [
+   "empresa-endesa",
+   "shorts"
+  ],
+  "mapfre-3T26": [
+   "empresa-mapfre",
+   "resultados-3T26"
+  ],
+  "mapfre-3T26-short": [
+   "empresa-mapfre",
+   "shorts"
+  ],
+  "aena-3T26": [
+   "empresa-aena",
+   "resultados-3T26"
+  ],
+  "aena-3T26-short": [
+   "empresa-aena",
+   "shorts"
+  ],
+  "redeia-3T26": [
+   "empresa-redeia",
+   "resultados-3T26"
+  ],
+  "redeia-3T26-short": [
+   "empresa-redeia",
+   "shorts"
+  ],
+  "santander-3T26": [
+   "empresa-santander",
+   "resultados-3T26"
+  ],
+  "santander-3T26-short": [
+   "empresa-santander",
+   "shorts"
+  ],
+  "naturgy-3T26": [
+   "empresa-naturgy",
+   "resultados-3T26"
+  ],
+  "naturgy-3T26-short": [
+   "empresa-naturgy",
+   "shorts"
+  ],
+  "bbva-3T26": [
+   "empresa-bbva",
+   "resultados-3T26"
+  ],
+  "bbva-3T26-short": [
+   "empresa-bbva",
+   "shorts"
+  ],
+  "fluidra-3T26": [
+   "empresa-fluidra",
+   "resultados-3T26"
+  ],
+  "fluidra-3T26-short": [
+   "empresa-fluidra"
   ]
  }
 }
