@@ -1,0 +1,32 @@
+{
+ "fecha": "2026-11-27",
+ "cabecera": "DAX am Abend · 27. November 2026",
+ "out": "dax-2026-11-27-GE.mp4",
+ "fuente": "Quellen: TradingView (Xetra-Schlusskurse), dpa-AFX\nüber finanzen.net (27. November 2026).",
+ "titulo_yt": "DAX +0,9 %, Woche +2,6 %: Rheinmetall vorn nach Kapitalmarkttag, KI-Werte erholt",
+ "resumen": "Der DAX schließt am Freitag, 27. November, 0,90 % höher bei 25.441,24 Punkten; auf Wochensicht steht ein Plus von 2,6 %. Halbleiter- und KI-Werte sind gefragt, Rüstungstitel ebenfalls (dpa-AFX).",
+ "claves": ["Rheinmetall +3,32 % nach dem Kapitalmarkttag, Infineon +2,68 %, Siemens Energy +1,86 %",
+            "Commerzbank −1,89 %; 35 von 40 DAX-Werten im Plus",
+            "MDAX +1,51 %, Euro Stoxx 50 +1,24 %",
+            "DAX 1,7 % über der 200-Tage-Linie, 5,8 % unter dem Rekordhoch (berechnet)"],
+ "tags": ["Rheinmetall", "Infineon", "Siemens Energy", "Commerzbank"],
+ "escenas": [
+  {"tipo": "titulo", "kicker": "DAX · Handelstag vom", "fecha": "Fr., 27. November 2026",
+   "indices": [["DAX", "+0,90 %", "25.441,24", "teal"], ["MDAX", "+1,51 %", "29.705,60", "teal"]],
+   "pregunta": "Woche mit Plus beendet",
+   "voz": "DAX, Freitag, 27. November. Die Woche endet im Plus. Drei Punkte."},
+  {"tipo": "cifra", "n": 1, "label": "Das Wichtigste", "big": "+2,6 %", "delta": "DAX-Plus auf Wochensicht", "color": "teal",
+   "nota": "Heute +0,90 % auf 25.441 Punkte.\nHalbleiter- und KI-Werte gefragt,\nRüstungstitel ebenfalls (dpa-AFX).",
+   "voz": "Eins. Der DAX steigt heute um 0,9 Prozent auf 25.441 Punkte, in der Woche um 2,6 Prozent. Halbleiter- und KI-Werte sind gefragt, ebenso Rüstungstitel."},
+  {"tipo": "cifra", "n": 2, "label": "Gewinner und Verlierer", "big": "+3,32 %", "delta": "Rheinmetall vorn", "color": "teal",
+   "barras": [["Rheinmetall", 3.32], ["Infineon", 2.68], ["Beiersdorf", -0.96], ["Commerzbank", -1.89]],
+   "nota": "35 von 40 DAX-Werten im Plus.\nRheinmetall nach dem Kapitalmarkttag.",
+   "voz": "Zwei. Rheinmetall steigt nach dem Kapitalmarkttag um 3,3 Prozent, Infineon um 2,7 Prozent. Die Commerzbank verliert 1,9 Prozent."},
+  {"tipo": "kpis", "n": 3, "label": "Charttechnik DAX",
+   "items": [["47", "RSI 14", "blue"], ["+1,7 %", "über der 200-Tage-Linie (berechnet)", "teal"], ["−5,8 %", "unter dem Rekordhoch vom 12. November", "neg"]],
+   "nota": "Das sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Der DAX liegt 1,7 Prozent über seiner 200-Tage-Linie und 5,8 Prozent unter dem Rekordhoch vom 12. November."},
+  {"tipo": "fin", "nombre": "Wall Street auf Deutsch", "titular": "Samstag früh:\nWall Street", "cta": "Tagesbericht am Samstag",
+   "voz": "Den Tagesbericht zur Wall Street gibt es am Samstagmorgen auf unserem Kanal. Keine Anlageberatung."}
+ ]
+}
