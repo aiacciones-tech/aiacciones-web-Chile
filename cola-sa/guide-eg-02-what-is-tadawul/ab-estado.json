@@ -1,0 +1,26 @@
+{
+ "slug": "guide-eg-02-what-is-tadawul",
+ "videoId": "VnTkQrNx1mU",
+ "que": "ambos",
+ "variantes": {
+  "A": {
+   "estilo": "guia",
+   "titulo": "ما هي تداول؟ كيف يعمل سوق الأسهم السعودي من الداخل (دليل المبتدئين)"
+  },
+  "B": {
+   "estilo": "gancho",
+   "titulo": "ماذا يحدث بعد أن تضغط زر الشراء في تداول؟ رحلة الصفقة خطوة بخطوة"
+  }
+ },
+ "orden": "AB",
+ "inicio": "2026-11-27",
+ "mostrada": "A",
+ "contadores": {},
+ "cambios": [
+  {
+   "variante": "A",
+   "utc": "2026-11-27T09:55:06+00:00"
+  }
+ ],
+ "dias": []
+}

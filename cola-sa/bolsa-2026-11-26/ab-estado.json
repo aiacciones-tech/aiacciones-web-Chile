@@ -14,13 +14,23 @@
  },
  "orden": "BA",
  "inicio": "2026-11-26",
- "mostrada": "A",
+ "mostrada": "B",
  "contadores": {},
  "cambios": [
   {
    "variante": "A",
    "utc": "2026-11-26T13:32:25+00:00"
+  },
+  {
+   "variante": "B",
+   "utc": "2026-11-27T18:06:03+00:00"
   }
  ],
- "dias": []
+ "dias": [
+  {
+   "fecha": "2026-11-27",
+   "variante": "B",
+   "vistas": null
+  }
+ ]
 }
