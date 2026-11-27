@@ -1,0 +1,26 @@
+{
+ "slug": "bolsa-2026-11-27",
+ "videoId": "9rBE48Ud3Io",
+ "que": "ambos",
+ "variantes": {
+  "A": {
+   "estilo": "fecha",
+   "titulo": "IBEX 35 hoy (27-nov-2026): +1,72%; la inflación baja al 4,1% y gana un 2,7% en la semana | Técnico"
+  },
+  "B": {
+   "estilo": "gancho",
+   "titulo": "IBEX 35 +1,72%: la inflación cae al 4,1% y recupera la media de 50 | Bolsa hoy (27-nov-2026)"
+  }
+ },
+ "orden": "AB",
+ "inicio": "2026-11-27",
+ "mostrada": "A",
+ "contadores": {},
+ "cambios": [
+  {
+   "variante": "A",
+   "utc": "2026-11-27T17:25:13+00:00"
+  }
+ ],
+ "dias": []
+}
