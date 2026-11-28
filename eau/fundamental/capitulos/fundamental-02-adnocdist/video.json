@@ -1,0 +1,15 @@
+{
+ "base": "fundamental-02-adnocdist",
+ "capitulo_n": 2,
+ "simbolo": "ADX:ADNOCDIST",
+ "simbolos_extra": ["DFM:EMAAR"],
+ "documentos": [
+  {"id": "mda-fy25", "url": "https://www.adnocdistribution.ae/-/media/adnoc-distribution/q4-results-2026/english/adnoc_distribution_q4-2025_mda-report_eng_aed_03022026.pdf"},
+  {"id": "fs-2025", "url": "https://www.adnocdistribution.ae/-/media/adnoc-distribution/q4-results-2026/english/adnoc-distribution-fy-2025-fs-english.pdf"},
+  {"id": "pr-fy25", "url": "https://www.adnocdistribution.ae/-/media/adnoc-distribution/q4-results-2026/english/adnoc-distributionfy-2025-results-press-releaseenglish03022026.pdf"},
+  {"id": "fs-9m26", "url": "https://apigateway.adx.ae/adx/cdn/1.0/content/download/5966282"},
+  {"id": "gn-9m26", "url": "https://gulfnews.com/business/adnoc-distribution-profit-surges-37-on-record-fuel-volumes-1.500740741"},
+  {"id": "ent-3q26", "url": "https://enterpriseam.com/uae/2026/11/10/adnoc-distributions-3q-profit-holds-flat-as-inventory-gains-dry-up-dtc-sees-softer-demand/"}
+ ],
+ "escenas": []
+}
