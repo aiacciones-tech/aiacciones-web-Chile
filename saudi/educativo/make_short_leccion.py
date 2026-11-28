@@ -57,7 +57,9 @@ def s_grafico(e, t):
     up = c >= o; xs = np.arange(n); rev = max(2, int(n * ease(t * 1.3)))
     ymin, ymax = lo.min(), hi.max()
     for z in g.get("zonas", []): ymin = min(ymin, z["de"]); ymax = max(ymax, z["a"])
-    pad = (ymax - ymin) * 0.08; ax.set_ylim(ymin - pad * 1.5, ymax + pad * 2.5); ax.set_xlim(-1, n + 1)
+    MED = medias_rango(VELAS, V, g.get("medias", []))
+    for m in MED: ymin = min(ymin, np.nanmin(m["y"])); ymax = max(ymax, np.nanmax(m["y"]))
+    pad = (ymax - ymin) * 0.08; ax.set_ylim(ymin - pad * 1.5, ymax + pad * (2.5 + 1.6 * len(MED))); ax.set_xlim(-1, n + 1)
     cc_ = [TEAL if u else NEG for u in up]
     ax.vlines(xs[:rev], lo[:rev], hi[:rev], color=cc_[:rev], lw=1.6); ax.bar(xs[:rev], np.maximum(np.abs(c - o), (ymax - ymin) * 0.003)[:rev], bottom=np.minimum(o, c)[:rev], width=0.7, color=cc_[:rev])
     for k, z in enumerate(g.get("zonas", [])):
@@ -65,13 +67,20 @@ def s_grafico(e, t):
         ax.axhspan(z["de"], z["a"], color=zc, alpha=0.25 * b, lw=0)
         ax.text(n * 0.99, z["a"] + pad * 0.25, ar(z["texto"]) + f"\n{num(z['de'], DEC)}–{num(z['a'], DEC)}", color=zc, fontsize=26, weight="bold", ha="right", va="bottom", alpha=b,
                 bbox=dict(boxstyle="round,pad=0.2", fc=BG, ec="none", alpha=0.8 * b))
+    ma = ease((t - 0.25) / 0.4)
+    for k, m in enumerate(MED):
+        ax.plot(xs[:rev], m["y"][:rev], color=m["color"], lw=3.4, alpha=0.95 * ma)
+        ax.text(n * 0.99, ymax + pad * (2.3 + 1.6 * k), ar(m["texto"]) + f"  ━━", color=m["color"], fontsize=26, weight="bold", ha="right", va="top", alpha=ma)
     idx = {fecha_v(v["t"]).isoformat(): j for j, v in enumerate(V)}
     for k, m in enumerate(g.get("marcas", [])):
         j = idx.get(m["fecha"]); b = ease((t - 0.5 - k * 0.06) / 0.3)
         if j is None: continue
+        if m.get("tipo") == "cruce" and MED:
+            ax.plot([j], [MED[0]["y"][j]], marker="o", ms=22, mfc="none", mec=FG, mew=3, alpha=b); continue
         arriba = m.get("tipo") == "techo"; off = (ymax - ymin) * (0.05 if arriba else -0.05)
         ax.plot([j], [(hi[j] if arriba else lo[j]) + off], marker="v" if arriba else "^", color=GOLD, ms=18, alpha=b)
-    ax.set_yticks(ax.get_yticks()[1:-1]); ax.set_yticklabels([num(y, 0) for y in ax.get_yticks()]); ax.tick_params(labelsize=22)
+    ax.set_yticks(ax.get_yticks()[1:-1]); tk_y = ax.get_yticks(); dy = 0 if all(abs(y - round(y)) < 1e-6 for y in tk_y) else (1 if all(abs(y * 10 - round(y * 10)) < 1e-6 for y in tk_y) else 2)
+    ax.set_yticklabels([num(y, dy) for y in tk_y]); ax.tick_params(labelsize=22)
     ax.grid(axis="y", color=DIM, lw=0.6, alpha=0.6)
     tk, prev = [], None
     for j, v in enumerate(V):

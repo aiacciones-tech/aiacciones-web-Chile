@@ -73,7 +73,11 @@ th = VJ["miniatura"]; VEL = json.load(open(os.environ.get("VELAS", f"{D}/velas.j
 import numpy as np
 fv = lambda t: dt.datetime.fromtimestamp(t, dt.timezone.utc).date().isoformat()
 g = next((e for e in VJ["escenas"] if e["id"] == th.get("grafico")), next(e for e in VJ["escenas"] if e["tipo"] == "grafico"))
+VEL = [v for v in VEL if fv(v["t"]) <= VJ.get("ultima_vela", "9")]
 V = [v for v in VEL if g.get("desde", "0") <= fv(v["t"]) <= g.get("hasta", VJ.get("ultima_vela", "9"))]
+MED = medias_rango(VEL, V, g.get("medias", []))
+Z = g.get("zonas", []); ylo = min([v["l"] for v in V] + [z["de"] for z in Z] + [np.nanmin(m["y"]) for m in MED]) * 0.985
+yhi = max([v["h"] for v in V] + [z["a"] for z in Z] + [np.nanmax(m["y"]) for m in MED]) * 1.02
 f = fig(1280, 720)
 f.patches.append(plt.Rectangle((0, 0.82), 1.0, 0.18, transform=f.transFigure, color=GOLD, figure=f))
 f.text(0.96, 0.91, ar(th["etiqueta"]), color=BG, fontsize=32, weight="bold", va="center", ha="right")
@@ -87,7 +91,8 @@ for z in g.get("zonas", []):
     ax.axhspan(z["de"], z["a"], color=col(z.get("color", "gold")), alpha=0.35, lw=0)
     abajo = (z["de"] + z["a"]) / 2 < np.median(c)  # etiqueta debajo de las zonas inferiores, encima de las superiores
     ax.text(len(V) * 0.995, z["de"] if abajo else z["a"], ar(z["texto"]), color=col(z.get("color", "gold")), fontsize=26, weight="bold", ha="right", va="top" if abajo else "bottom")
-ax.set_xlim(-1, len(V)); ax.set_ylim(min(l.min(), *[z["de"] for z in g["zonas"]]) * 0.985, max(h.max(), *[z["a"] for z in g["zonas"]]) * 1.02)
+for m in MED: ax.plot(xs, m["y"], color=m["color"], lw=3.5)
+ax.set_xlim(-1, len(V)); ax.set_ylim(ylo, yhi)
 p = f"{D}/thumbnail-{BASE}-saudi.png"; f.savefig(p, dpi=100, facecolor=BG); plt.close(f)
 im = Image.open(p).convert("RGBA"); lg = Image.open(LOGO).convert("RGBA").resize((170, 170), Image.LANCZOS); im.alpha_composite(lg, (20, 150)); im.convert("RGB").save(p)
 
@@ -100,7 +105,8 @@ ax = f.add_axes([0.0, 0.0, 1.0, 0.62]); clean(ax); ax.set_xticks([]); ax.set_yti
 ax.vlines(xs, l, h, color=cc, lw=2.2); ax.bar(xs, np.maximum(abs(c - o), (h.max() - l.min()) * 0.004), bottom=np.minimum(o, c), color=cc, width=0.7)
 for z in g.get("zonas", []):
     ax.axhspan(z["de"], z["a"], color=col(z.get("color", "gold")), alpha=0.35, lw=0)
-ax.set_xlim(-1, len(V)); ax.set_ylim(min(l.min(), *[z["de"] for z in g["zonas"]]) * 0.985, max(h.max(), *[z["a"] for z in g["zonas"]]) * 1.02)
+for m in MED: ax.plot(xs, m["y"], color=m["color"], lw=3.5)
+ax.set_xlim(-1, len(V)); ax.set_ylim(ylo, yhi)
 f.text(0.96, 0.81, ar(pregunta, 22), color=GOLD, fontsize=64 if len(pregunta) <= 22 else 50, weight="bold", va="center", ha="right", linespacing=1.0)
 f.text(0.155, 0.90, ar(f"{SERIE} · {VJ['folge']}"), color=MUTED, fontsize=24, weight="bold", va="center", ha="left")
 pb = f"{D}/thumbnail-b-{BASE}-saudi.png"; f.savefig(pb, dpi=100, facecolor=BG); plt.close(f)

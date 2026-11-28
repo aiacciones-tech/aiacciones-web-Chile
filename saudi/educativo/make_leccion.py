@@ -139,6 +139,8 @@ def s_grafico(i, e, t):
     up = c >= o; xs = np.arange(n); wd = 0.65 if n < 160 else 0.75
     ymin, ymax = lo.min(), hi.max()
     for z in e.get("zonas", []): ymin = min(ymin, z["de"]); ymax = max(ymax, z["a"])
+    MED = medias_rango(VELAS, V, e.get("medias", []))
+    for m in MED: ymin = min(ymin, np.nanmin(m["y"])); ymax = max(ymax, np.nanmax(m["y"]))
     pad = (ymax - ymin) * 0.08
     ax.set_ylim(ymin - pad * 2.0, ymax + pad * 1.8); ax.set_xlim(-1, n + (n * 0.25))
     ax.vlines(xs[:rev], lo[:rev], hi[:rev], color=[TEAL if u else NEG for u in up[:rev]], lw=1.1 if n > 160 else 1.6)
@@ -151,10 +153,27 @@ def s_grafico(i, e, t):
         ax.axhline((z["de"] + z["a"]) / 2, color=cc, lw=1.4, ls="--", alpha=0.8 * a)
         ax.text(n + n * 0.245, (z["de"] + z["a"]) / 2, ar(z["texto"]) + f"\n{num(z['de'], DEC)}–{num(z['a'], DEC)}", color=cc, fontsize=18, weight="bold",
                 ha="right", va="center", alpha=a, linespacing=1.15, bbox=dict(boxstyle="round,pad=0.25", fc=BG, ec="none", alpha=0.85 * a))
+    # medias móviles (lecciones de medias, cruces…): líneas calculadas sobre los cierres y su último valor en la columna de etiquetas
+    ma = ease((t - 0.2) / 0.4); ys_lab = []
+    for m in sorted(MED, key=lambda m: -(m["y"][rev - 1] if not np.isnan(m["y"][rev - 1]) else 0)):
+        ax.plot(xs[:rev], m["y"][:rev], color=m["color"], lw=2.6, alpha=0.95 * ma)
+        yl = m["y"][rev - 1]
+        if np.isnan(yl): continue
+        for y0 in ys_lab:  # etiquetas de dos líneas: separación mínima
+            if abs(yl - y0) < (ymax - ymin) * 0.26: yl = y0 - (ymax - ymin) * 0.26
+        ys_lab.append(yl)
+        ax.text(n + n * 0.245, yl, ar(m["texto"]) + f"\n{num(m['y'][rev - 1], DEC)}", color=m["color"], fontsize=17, weight="bold", ha="right", va="center",
+                alpha=ma, linespacing=1.15, bbox=dict(boxstyle="round,pad=0.25", fc=BG, ec="none", alpha=0.85 * ma))
     idx = {fecha_v(v["t"]).isoformat(): j for j, v in enumerate(V)}
     for k, m in enumerate(e.get("marcas", [])):
         j = idx.get(m["fecha"])
         if j is None: continue
+        if m.get("tipo") == "cruce" and MED:  # cruce de medias: círculo sobre la primera media
+            a = ease((t - 0.5 - k * 0.07) / 0.3); yv = MED[0]["y"][j]; off = (ymax - ymin) * 0.09 * (1 if m.get("arriba", True) else -1)
+            ax.plot([j], [yv], marker="o", ms=17, mfc="none", mec=FG, mew=2.6, alpha=a)
+            if m.get("texto"): ax.text(j, yv + off, ar(m["texto"]), color=FG, fontsize=16, weight="bold", ha="center", va="center", alpha=a,
+                                       bbox=dict(boxstyle="round,pad=0.2", fc=BG, ec="none", alpha=0.8 * a))
+            continue
         a = ease((t - 0.45 - k * 0.07) / 0.3); arriba = m.get("tipo") == "techo"
         yv = hi[j] if arriba else lo[j]; off = (ymax - ymin) * (0.07 if arriba else -0.07)
         ax.plot([j], [yv + off * 0.35], marker="v" if arriba else "^", color=GOLD, ms=15, alpha=a)
