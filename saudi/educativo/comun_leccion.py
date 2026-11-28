@@ -40,6 +40,27 @@ def voz_frases(texto, wav_dir, gap=0.28):
     return np.concatenate(out[:-1]), sr, marcas, motor
 
 
+def sma(cierres, n):
+    """Media móvil simple de n sesiones sobre los cierres (NaN mientras no hay n cierres). Cálculo propio, «محسوب»."""
+    c = np.asarray(cierres, dtype=float); o = np.full(len(c), np.nan)
+    if len(c) >= n: o[n - 1:] = np.convolve(c, np.ones(n) / n, "valid")
+    return o
+
+
+COL_MEDIAS = {20: "#C792EA", 50: "#6FB6F5", 100: "#F2A65A", 200: "#E3C45E"}
+
+
+def medias_rango(velas, V, medias):
+    """Para cada media de la escena ({n, texto?, color?}), sus valores en las velas V (subconjunto contiguo de velas)."""
+    i0 = next(k for k, v in enumerate(velas) if v["t"] == V[0]["t"]); c = [v["c"] for v in velas]
+    out = []
+    for m in medias:
+        n = m["n"] if isinstance(m, dict) else int(m); m = m if isinstance(m, dict) else {}
+        out.append({"n": n, "texto": m.get("texto", f"متوسط {n} جلسة"), "color": col(m.get("color", COL_MEDIAS.get(n, "#9DB5AA"))),
+                    "y": sma(c, n)[i0:i0 + len(V)]})
+    return out
+
+
 def tira_texto(s, color, fs, H, w="bold"):
     """Imagen RGBA de una línea de texto (árabe con letras unidas y RTL) recortada a su ancho, para los subtítulos."""
     W_ = max(400, int(len(str(s)) * fs * 1.2) + 160)
