@@ -1,0 +1,10 @@
+{
+ "base": "charttechnik-03",
+ "folge": 3,
+ "simbolo": "NASDAQ:MSFT",
+ "simbolos_extra": ["NASDAQ:GOOGL", "NASDAQ:AMZN", "NASDAQ:META", "NASDAQ:AVGO", "NASDAQ:NFLX", "NYSE:JPM", "NASDAQ:COST"],
+ "velas_n": 700,
+ "tema": "Trendlinien und Trendkanäle",
+ "voz": {},
+ "escenas": []
+}
