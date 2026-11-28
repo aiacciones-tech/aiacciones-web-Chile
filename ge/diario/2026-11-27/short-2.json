@@ -1,0 +1,58 @@
+{
+ "cabecera": "Aktie des Tages · 27. November 2026",
+ "out": "short-2-bolsa-2026-11-27-GE.mp4",
+ "fuente": "Quellen: TradingView, StockTitan\nund N Globe News (27. November 2026).",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Aktie des Tages · Wall Street",
+   "fecha": "Fr., 27. November 2026",
+   "indices": [
+    [
+     "Amazon",
+     "+3,96 %",
+     "254,12 $",
+     "teal"
+    ]
+   ],
+   "pregunta": "Black Friday",
+   "voz": "Die Aktie des Tages an der Wall Street, Freitag, 27. November: Amazon."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "Was ist passiert?",
+   "big": "+3,96 %",
+   "delta": "Schluss 254,12 $",
+   "color": "teal",
+   "nota": "Laut N Globe News half die starke\nNachfrage am Black Friday.",
+   "voz": "Eins. Amazon steigt um 4 Prozent. Laut N Globe News half die starke Nachfrage am Black Friday."
+  },
+  {
+   "tipo": "kpis",
+   "n": 2,
+   "label": "Die Zahlen",
+   "items": [
+    [
+     "12,9 Mrd. $",
+     "US-Online-Ausgaben am Black Friday (Prognose)",
+     "teal"
+    ],
+    [
+     "+9,2 %",
+     "zum Vorjahr",
+     "teal"
+    ]
+   ],
+   "nota": "Adobe Analytics, zitiert von N Globe News.\nDas sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Zwei. Adobe Analytics erwartete 12,9 Milliarden Dollar Online-Ausgaben in den USA, 9,2 Prozent mehr als im Vorjahr."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Jeden Morgen:\nDer Tagesbericht",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Den ganzen Tagesbericht finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}
