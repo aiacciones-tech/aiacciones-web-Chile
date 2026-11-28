@@ -1,0 +1,27 @@
+{
+ "generado": "2026-11-28T14:19:19+00:00",
+ "fecha": "2026-11-28",
+ "fuente": "TradingView",
+ "fx": {
+  "FX:EURUSD": {
+   "name": "EURUSD",
+   "description": "Euro vs. US Dollar",
+   "close": 1.09325,
+   "change": -0.33457316850817204,
+   "change_abs": -0.00366999999999984,
+   "Perf.W": -0.3118531554615316,
+   "Perf.1M": -1.9735308358588908,
+   "Perf.YTD": -6.865501260819187
+  },
+  "FX_IDC:EURCHF": {
+   "name": "EURCHF",
+   "description": "EURO / SWISS FRANC",
+   "close": 0.91418,
+   "change": -0.09616855725307541,
+   "change_abs": -0.0008799999999999919,
+   "Perf.W": -1.2017723981411454,
+   "Perf.1M": -0.968454805442419,
+   "Perf.YTD": -1.7897812728288436
+  }
+ }
+}
