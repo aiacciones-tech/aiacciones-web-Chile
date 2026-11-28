@@ -1,0 +1,11 @@
+{
+ "base": "fundamental-02-nvda",
+ "capitulo_n": 2,
+ "simbolo": "NASDAQ:NVDA",
+ "simbolos_extra": ["NASDAQ:AAPL", "NYSE:WMT"],
+ "documentos": [
+  {"id": "fy27-q3-nota", "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx"},
+  {"id": "fy26-q4-nota", "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2026/default.aspx"}
+ ],
+ "escenas": []
+}
