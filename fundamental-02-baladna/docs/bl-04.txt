@@ -1,0 +1,977 @@
+=== página 1
+Baladna Q.P.S.C.
+INTERIM CONDENSED CONSOLIDATED
+FINANCIAL STATEMENTS
+30 JUNE 2026
+=== página 2
+Baladna Q.P.S.C.
+INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+30 June 2026
+Contents Page (s)
+Independent auditor’s review report 1
+Interim consolidated statement of profit or loss 2
+Interim consolidated statement of other comprehensive income 3
+Interim consolidated statement of financial position 4 -5
+Interim consolidated statement of changes in equity 6
+Interim consolidated statement of cash flows 7 - 8
+Notes to the interim condensed consolidated financial statements 9 - 22
+=== página 3
+REPORT ON REVIEW OF INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS TO
+THE BOARD OF DIRECTORS OF BALADNA Q.P.S.C.
+Introduction
+We have reviewed the accompanying interim condensed consolidated financial statements of Baladna Q.P.S.C. (the
+‘Company’) and its subsidiaries (together referred as the “Group”) as at 30 June 2026, which comprise the interim
+consolidated statement of financial position as at 30 June 2026 and the related interim consolidated statement of
+profit or loss, interim consolidated statement of comprehensive income, interim consolidated statement of changes
+in equity and interim consolidated statement of cash flows for the six months period then ended and the related
+explanatory notes.
+The Board of Directors is responsible for the preparation and presentation of these interim condensed consolidated
+financial statements in accordance with IAS 34 Interim Financial Reporting (“IAS 34”). Our responsibility is to
+express a conclusion on these interim condensed consolidated financial information based on our review.
+Scope of review
+We conducted our review in accordance with International Standard on Review Engagements 2410, “Review of
+Interim Financial Information Performed by the Independent Auditor of the Entity”. A review of interim condensed
+consolidated financial information consists of making inquiries, primarily of persons responsible for financial and
+accounting matters, and applying analytical and other review procedures. A review is substantially less in scope
+than an audit conducted in accordance with International Standards on Auditing and consequently does not enable
+us to obtain assurance that we would become aware of all significant matters that might be identified in an audit.
+Accordingly, we do not express an audit opinion.
+Conclusion
+Based on our review, nothing has come to our attention that causes us to believe that the accompanying interim
+condensed consolidated financial statements are not prepared, in all material respects, in accordance with IAS 34.
+Ahmed Sayed
+of Ernst & Young
+Auditor's Registration No. 326
+Date: 29 July 2026
+Doha
+
+=== página 4
+Baladna Q.P.S.C.
+The attached notes from 1 to 25 are an integral part of these interim condensed consolidated financial statements.
+2
+INTERIM CONSOLIDATED STATEMENT OF PROFIT OR LOSS
+For the six- month period ended 30 June 2026
+For the six-month period ended
+Notes
+30 June
+2026
+(Reviewed)
+QR
+30 June
+2025
+(Reviewed)
+QR
+Revenue from contracts with customers 6  659,422,353 642,507,960
+Cost of revenue 7 (465,129,985) (475,956,064)
+GROSS PROFIT 194,292,368 166,551,896
+Other income 37,934,550 44,169,198
+Gain on investment in financial assets at fair value through profit
+or loss 254,453,948 242,328,057
+General and administrative expenses (37,856,672) (35,477,038)
+Selling and distribution expenses (50,688,137) (47,012,265)
+Operating profit for the period 398,136,057 370,559,848
+Finance costs (34,877,895) (38,653,691)
+Profit before income tax 363,258,162 331,906,157
+Income tax expense (1,335,262) (708,050)
+NET PROFIT FOR THE PERIOD 361,922,900 331,198,107
+Net profit for the period attributable to:
+Equity holders of the parent 364,614,040 331,010,557
+Non-controlling interest (2,691,140) 187,550
+361,922,900 331,198,107
+Earnings per share (EPS) attributable to equity holders of
+the Parent:
+Basic and diluted earnings per share (2025: restated) 20 0.170 0.154
+
+=== página 5
+Baladna Q.P.S.C.
+The attached notes from 1 to 25 are an integral part of these interim condensed consolidated financial statements.
+3
+INTERIM CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME
+For the six- month period ended 30 June 2026
+For the six-month period ended
+30 June
+2026
+(Reviewed)
+30 June
+2025
+(Reviewed)
+QR QR
+NET PROFIT FOR THE PERIOD 361,922,900 331,198,107
+Other comprehensive income
+Other comprehensive income that may be reclassified to profit or
+loss in subsequent periods (net of tax):
+Exchange difference on translation of foreign operation (18,654) -
+Total other comprehensive income for the period (18,654) -
+TOTAL COMPREHENSIVE INCOME FOR THE PERIOD 361,904,246 331,198,107
+Total comprehensive income attributable to:
+Equity holders of the parent 364,662,992 331,010,557
+Non-controlling interest (2,758,746) 187,550
+361,904,246 331,198,107
+
+=== página 6
+Baladna Q.P.S.C.
+The attached notes from 1 to 25 are an integral part of these interim condensed consolidated financial statements.
+4
+INTERIM CONSOLIDATED STATEMENT OF FINANCIAL POSITION
+As at 30 June 2026
+30 June
+2026
+31 December
+2025
+(Reviewed) (Audited)
+Notes QR QR
+ASSETS
+Non-current assets
+Property, plant and equipment 8  3,469,872,271 3,285,605,491
+Right of use assets 9  105,865,521 105,276,839
+Intangible assets  5,523,619 4,914,015
+Investment in financial assets at fair value through profit or loss 10  1,303,722,593 994,476,800
+Biological assets 11  195,679,758 193,661,272
+Goodwill  6,792,635 6,792,635
+Advances to suppliers 13  949,275,556 372,583,615
+Other non-current assets  5,354,104 3,524,427
+6,042,086,057 4,966,835,094
+Current assets
+Inventories 12  382,659,134 400,494,534
+Trade and other receivables 13 406,465,395 336,242,665
+Biological assets 11  305,400 446,200
+Due from related parties 18 30,781,575 29,457,007
+Cash and bank balances 14 284,196,244 374,789,122
+1,104,407,748 1,141,429,528
+TOTAL ASSETS 7,146,493,805 6,108,264,622
+EQUITY AND LIABILITIES
+Equity
+Share capital 15  2,143,984,962 2,143,984,962
+Legal reserve  120,595,369 120,595,369
+Acquisition reserve 16  201,123,011 201,123,011
+Retained earnings  829,183,971 464,569,931
+Translation reserves  (150,009) (198,961)
+Equity attributable to equity holders of the parent  3,294,737,304 2,930,074,312
+Non-controlling interests  530,619,054 390,288,880
+TOTAL EQUITY 3,825,356,358 3,320,363,192
+
+=== página 7
+
+=== página 8
+Baladna Q.P.S.C.
+The attached notes from 1 to 25 are an integral part of these interim condensed consolidated financial statements.
+6
+INTERIM CONSOLIDATED STATEMENT OF CHANGES IN EQUITY
+For the six month period ended 30 June 2026
+Attributable to equity holders of the parent
+Share
+capital
+Legal
+reserve
+Acquisition
+reserve
+Retained
+earnings
+Translation
+reserve Total
+Non-
+controlling
+interest
+Total
+equity
+QR QR QR QR QR QR QR QR
+As at 1 January 2026 2,143,984,962 120,595,369 201,123,011 464,569,931 (198,961) 2,930,074,312 390,288,880 3,320,363,192
+Additional capital contribution - - - - - - 143,088,920 143,088,920
+Profit for the period - - - 364,614,040 - 364,614,040 (2,691,140) 361,922,900
+Other comprehensive income - - - - 48,952 48,952 (67,606) (18,654)
+Total comprehensive income for the period - - - 364,614,040 48,952 364,662,992 (2,758,746) 361,904,246
+As at 30 June 2026 (Reviewed) 2,143,984,962 120,595,369 201,123,011 829,183,971 (150,009) 3,294,737,304 530,619,054 3,825,356,358
+Attributable to equity holders of the parent
+Share
+capital
+Legal
+reserve
+Acquisition
+reserve
+Retained
+earnings
+Translation
+reserve Total
+Non-
+controlling
+interest
+Total
+equity
+QR QR QR QR QR QR QR QR
+As at 1 January 2025 1,901,000,000 66,621,737 201,123,011 235,285,613 - 2,404,030,361 3,011,202 2,407,041,563
+Incorporation of a subsidiary - - - - - - 27,292,000 27,292,000
+Profit for the period - - - 331,010,557 - 331,010,557 187,550 331,198,107
+Other comprehensive income - - - - - - - -
+Total comprehensive income for the period - - - 331,010,557 - 331,010,557 187,550 331,198,107
+Bonus shares issued (Note 15 and Note 19) 100,052,631 - - (100,052,631) - - - -
+As at 30 June 2025 (Reviewed) 2,001,052,631 66,621,737 201,123,011 466,243,539 - 2,735,040,918 30,490,752 2,765,531,670
+
+=== página 9
+Baladna Q.P.S.C.
+The attached notes from 1 to 25 are an integral part of these interim condensed consolidated financial statements.
+7
+INTERIM CONSOLIDATED STATEMENT OF CASH FLOWS
+For the six month period ended 30 June 2026
+For the six-month period ended
+30 June 2026 30 June 2025
+(Reviewed) (Reviewed)
+Notes QR QR
+OPERATING ACTIVITIES
+Profit before tax for the period 363,258,162 331,906,157
+Adjustments for:
+Depreciation of property, plant and equipment 71,036,054 66,527,468
+Depreciation of right-of-use assets 6,843,687 5,460,361
+Amortization of intangible asset 1,605,613 1,614,845
+Provision for employees’ end of service benefits 3,006,272 2,430,856
+Impairment loss allowance on trade receivables 10,822 13,288
+Loss on disposal of property, plant and equipment 92,578 16,434
+Gain on investment in financial assets at fair value through
+profit or loss (254,453,948) (242,328,057)
+Dividend income (5,066,034) -
+Net fair value gain on biological assets 11 (23,652,169) (27,624,598)
+Provision for slow moving inventories 733,998 1,000,000
+Cost of sale, death slaughter, disposed and transfer of
+biological assets 7 21,774,483 35,380,661
+Finance cost 34,877,895 38,653,691
+Operating cash flows before working capital changes 220,067,413 213,051,106
+Changes in:
+Inventories 17,101,402 (2,090,087)
+Due from related parties (1,324,568) 3,232,048
+Trade and other receivables (70,233,552) 52,115,943
+Due to related parties (2,830,256) (439,922)
+Trade and other payables 67,512,537 (651,986)
+Cash generated from operating activities 230,292,976 265,217,102
+Employees’ end of service benefit paid (1,567,760) (779,082)
+Finance costs paid (25,535,319) (56,539,998)
+Finance cost on lease liabilities paid (131,952) -
+Income tax paid (1,481,404) -
+Net cash flows generated from operating activities 201,576,541 207,898,022
+INVESTING ACTIVITIES
+Purchase of property, plant and equipment (244,065,193) (73,444,304)
+Proceeds from disposal of property, plant and equipment 1,143,922 63,091
+Purchase of intangible assets (66,402) -
+Net movement in advance for investments (576,691,941) (28,246,330)
+Acquisition of financial assets at fair value through profit or loss (54,791,845) (52,299,693)
+Dividend received 5,066,034 -
+Purchase of biological assets - (34,581,698)
+Net movement in other non-current assets (1,829,677) (2,239,019)
+Net cash flows used in investing activities (871,235,102) (190,747,953)
+
+=== página 10
+Baladna Q.P.S.C.
+The attached notes from 1 to 25 are an integral part of these interim condensed consolidated financial statements.
+8
+INTERIM CONSOLIDATED STATEMENT OF CASH FLOWS (CONTINUED)
+For the six month period ended 30 June 2026
+For the six-month period ended
+30 June 2026 30 June 2025
+(Reviewed) (Reviewed)
+Notes QR QR
+FINANCING ACTIVITIES
+Proceeds from Islamic financing contracts 571,177,408 74,765,693
+Repayment of Islamic financing contracts (220,824,400) (78,242,123)
+Principal portion of lease payments (276,086) -
+Additional capital contribution by non-controlling interest 143,088,920 27,292,000
+Dividend paid (661,768) (593,036)
+Net movement in restricted bank balances 68,841,995 593,036
+Net cash flows from financing activities 561,346,069 23,815,570
+NET (DECREASE) / INCREASE IN CASH AND CASH
+EQUIVALENTS (108,312,492) 40,965,639
+Cash and cash equivalents at the beginning of the period 208,202,503 (92,941,383)
+Net foreign exchange differences 411,528 -
+CASH AND CASH EQUIVALENTS AT THE END OF THE
+PERIOD 14 100,301,539 (51,975,744)
+
+=== página 11
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+9
+1 CORPORATE INFORMATION
+Baladna Q.P.S.C. (the “Company” or the “Parent”) was established in the State of Qatar under commercial
+registration number 140310, as Qatari Public Shareholding Company. The Company finalized legal documentation
+for the process of establishment and issuance of the Commercial registration on 2 December 2019 (the
+“Establishment Date”), pursuant to the provisions of Qatar Commercial Companies Law. The Company’s registered
+office is located at P.O Box 3382, Um Alhawaya Farm, State of Qatar. The Company’s shares are traded in the
+Qatar Stock Exchange.
+The principal activities of the Company and its subsidiaries (together referred as the “Group”) are agricultural
+activities of production and sales of milk, juice, slaughter of animal and sale of meats and detergent. The Group is
+also engaged in the investment and management of agricultural projects, along with investments outside the State
+of Qatar.
+2 BASIS OF PREPARATION
+These interim condensed consolidated financial statements for the six months period ended 30 June 2026 have been
+prepared in accordance with International Accounting Standard 34 "Interim Financial Reporting".
+The interim condensed consolidated financial statements have been prepared on the historical cost basis except for
+investment in financial assets at fair value through profit or loss and biological assets which have been measured at
+fair value in accordance with IFRS Accounting Standards.
+The interim condensed consolidated financial statements have been prepared in Qatari Riyals (“QR”), which is the
+Company’s functional and presentation currency.
+These interim condensed consolidated financial statements do not include all the information required in the annual
+consolidated financial statements and should be read in conjunction with the Group consolidated financial
+statements as at 31 December 2025. In addition, results for the six month period ended 30 June 2026 are not
+necessarily indicative of the results that may be expected for the financial year ending 31 December 2026.
+These interim condensed consolidated financial statements were approved and authorized for issuance by the Board
+of Directors on 27 July 2026.
+3 MATERIAL ACCOUTING POLICY INFORMATION
+3.1 New and amended standards and interpretations adopted by Group
+The accounting policies adopted in the preparation of the interim condensed consolidated financial statements are
+consistent with those followed in the preparation of the Group’s annual consolidated financial statements for the
+year ended 31 December 2025, except for the adoption of the following amendment effective as of 1 January 2026.
+The following amendment applies for the first time in 2026, but did not have an impact on the interim condensed
+consolidated financial statements of the Group.
+Topics Effective date
+Annual Improvements to IFRS Accounting Standards – Volume 11 1 January 2026
+Amendments to IFRS 9 & IFRS 7 – Classification and Measurement of Financial Instruments 1 January 2026
+Contracts Referencing Nature - dependent Electricity – Amendments to IFRS 9 and IFRS 7 1 January 2026
+3.2 New standards, amendments issued but not yet effective
+Topics Effective date
+IFRS 18 - Presentation and Disclosure in Financial Statements 1 January 2027
+IFRS 19 - Subsidiaries without Public Accountability: Disclosures 1 January 2027
+Translation to a Hyperinflationary Presentation Currency – Amendments to IAS 21 1 January 2027
+Sale or Contribution of Assets between an Investor and its Associate or Joint Venture –
+Amendments to IFRS 10 and IAS 28
+Deferred
+indefinitely
+=== página 12
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+10
+3 MATERIAL ACCOUTING POLICY INFORMATION (CONTINUED)
+3.2 New standards, amendments issued but not yet effective (continued)
+IFRS 18 – Impact Analysis on Statement of Profit or Loss Presentation
+IFRS 18 requires income and expenses to be classified into defined categories, including Operating, Investing,
+Financing, Income Taxes and Discontinued Operations, and requires the presentation of defined subtotals such as
+Operating Profit and Profit before Financing and Income Taxes.  Based on the Group’s preliminary assessment, the
+adoption of IFRS 18 is not expected to impact recognition, measurement, net profit attributable to shareholders or
+earnings per share. However, the Group expects a presentation impact on certain profit or loss subtotals.
+The Group is currently evaluating the impact of these standards and amendments. The Group will adopt it when
+these become effective.
+3 MATERIAL ACCOUTING POLICY INFORMATION
+3.3 Basis of consolidation
+Subsidiaries are entities controlled by the Group. The financial statements of the subsidiaries are included in these
+interim condensed consolidated financial statements from the date that control commences until that date that
+control ceases. The Group consolidates all the entities where it has the power to govern the financial and operating
+policies. All balances and transactions between Group entities included in these interim condensed consolidated
+financial statements have been eliminated upon consolidation.
+Upon loss of control, the Group derecognises the assets and liabilities of the subsidiary, any non-controlling interest
+and the other components of equity related to the subsidiary. Any surplus or deficit recognised upon loss of control
+is recognised in the condensed consolidated interim statement of profit or loss. If the Group retains any interest in
+the previous subsidiary, such interest is measured at fair value as at the date control is lost. Subsequently it is
+accounted as an equity-accounted investee or as a financial asset under IFRS 9 depending on the level of influence
+retained.
+Non-controlling interests represent the portion of profit or loss and net assets not held by the Group and are presented
+separately in the interim consolidated interim statements of profit or loss and interim consolidated financial position
+separately from the Company shareholders’ interests.
+The interim condensed consolidated financial statements comprise the financial statements of the Company and its
+subsidiaries (together referred as the “Group”) as at 30 June 2026. The financial statements of the subsidiaries are
+prepared for the same reporting period as the Parent Company using consistent accounting policies. The interim
+condensed consolidated financial statements include the financial statements of the Parent and its subsidiaries listed
+in the following table:
+Subsidiary
+Country of
+incorporation
+Percentage of
+effective control
+30 June
+2026
+31 December
+2025
+Baladna Food Industries W.L.L. State of Qatar 100% 100%
+Baladna Food Trading W.L.L. State of Qatar 100% 100%
+Baladna Business and Trading L.L.C. Sultanate of Oman 100% 100%
+Awafi W.L.L. State of Qatar 100% 100%
+Baladna for Trading and Investment W.L.L. State of Qatar 100% 100%
+Agrocare Development S.R.L. Romania 100% 100%
+E-Life Detergent Factory W.L.L. State of Qatar 75% 75%
+Baladna for Trading and Investment L.L.C. State of Qatar 100% 100%
+Baladna Algeria S.P.A. Algeria 51% 51%
+Qatar Vision for Support and Services Egypt 100% 100%
+Baladna Food Industries L.L.C. Syria 100% 100%
+=== página 13
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+11
+4 ESTIMATES AND JUDGMENTS
+The preparation of these interim condensed consolidated financial statements requires management to make
+judgements, estimates and assumptions that affect the application of accounting policies and the reported amounts
+of assets, liabilities, income and expense. Actual results may differ from these estimates. The critical estimates and
+judgments used in the preparation of these interim condensed consolidated financial statements are consistent with
+those used in the Group’s consolidated financial statements for the year ended 31 December 2025.
+5 FINANCIAL RISK MANAGEMENT
+The Group’s financial risk management objectives and policies are consistent with those disclosed in the Group’s
+consolidated financial statements for the year ended 31 December 2025.
+6 REVENUE FROM CONTRACTS WITH CUSTOMERS
+Set out below is the disaggregation of the Group’s revenue from contracts with customers:
+For the six-month period ended
+30 June
+2026
+30 June
+2025
+(Reviewed) (Reviewed)
+QR QR
+Type of goods or services
+Dairy sales  598,854,961 577,517,565
+Juice sales  31,390,280 35,552,289
+Livestock sales  13,881,095 16,850,922
+Detergent sales  11,059,035 10,103,069
+Plastic sales  2,446,806 1,278,115
+Compost and manure sales  661,790 1,206,000
+Feed sales  1,128,386 -
+659,422,353 642,507,960
+Timing of satisfaction of performance obligation
+Goods transferred at a point in time 659,422,353 642,507,960
+Geographical location
+State of Qatar 654,861,806 634,738,170
+Outside of the State of Qatar 4,560,547 7,769,790
+659,422,353 642,507,960
+Type of customers
+External customers 644,112,947 625,697,517
+Related parties (Note 18) 15,309,406 16,810,443
+659,422,353 642,507,960
+=== página 14
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+12
+7 COST OF REVENUE
+For the six-month period ended
+30 June
+2026
+30 June
+2025
+(Reviewed) (Reviewed)
+QR QR
+Cost of dairy and juices 329,195,644 337,100,943
+Depreciation on property, plant and equipment and right of use assets 72,996,432 67,884,479
+Direct wages 44,469,313 41,035,526
+Cost of sale, death, slaughter, disposed and transfer of biological assets 21,774,483 35,380,661
+Others 20,346,282 22,179,053
+488,782,154 503,580,662
+Less: Net fair value gain on biological assets (23,652,169) (27,624,598)
+465,129,985 475,956,064
+8 PROPERTY, PLANT AND EQUIPMENT
+30 June
+2026
+31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Carrying value at the beginning of the period/year 3,285,605,491 3,188,264,216
+Additions 259,090,051 234,603,198
+Disposals (1,236,500) (584,931)
+Transfer to intangible assets (2,148,815) (208,396)
+Depreciation for the period / year (71,036,054) (136,468,596)
+Exchange difference (401,902) -
+Carrying value at the end of the period/year 3,469,872,271 3,285,605,491
+9 RIGHT OF USE ASSETS AND LEASE LIABILITIES
+Right of use assets
+30 June
+2026
+31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Carrying value at the beginning of the period/year 105,276,839 110,394,944
+Additions 7,332,592 -
+Remeasurement - 6,707,560
+Charge for the year (6,843,687) (11,825,665)
+Exchange difference 99,777 -
+Carrying value at the end of the period/year 105,865,521 105,276,839
+=== página 15
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+13
+9 RIGHT OF USE ASSETS AND LEASE LIABILITIES (CONTINUED)
+Lease liabilities
+30 June
+2026
+31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Carrying value at the beginning of the period/year 87,328,842 78,118,721
+Additions 7,332,592 -
+Remeasurement - 6,707,560
+Interest on lease liabilities 2,007,589 2,902,561
+Payments during the year (408,038) (400,000)
+Exchange difference 128,057 -
+Carrying value at the end of the period/year 96,389,042 87,328,842
+Non-current 96,287,984 87,245,526
+Current 101,058 83,316
+96,389,042 87,328,842
+10 INVESTMENT IN FINANCIAL ASSETS AT FAIR VALUE THROUGH PROFIT OR LOSS
+30 June
+2026
+31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Carrying value at the beginning of the period/year 994,476,800 523,694,449
+Additions 54,791,845 62,774,885
+Gain on investment in financial assets at fair value through profit or loss 254,453,948 408,007,466
+Carrying value at the end of the period/year 1,303,722,593 994,476,800
+As at 30 June 2026 and 31 December 2025, investment in financial assets at fair value through profit and loss
+represent equity shares quoted in the Qatar Stock Exchange and the Egyptian Exchange.
+11 BIOLOGICAL ASSETS
+30 June
+2026
+31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Carrying value at the beginning of the period / year 194,107,472 177,387,580
+Additions - 34,581,698
+Net fair value gain on biological assets 23,652,169 56,413,733
+Cost of sale, death, slaughter, disposed and transfer of biological assets (21,774,483) (74,275,539)
+Carrying value at the end of the period / year 195,985,158 194,107,472
+Non-current 195,679,758 193,661,272
+Current 305,400 446,200
+195,985,158 194,107,472
+=== página 16
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+14
+12 INVENTORIES
+30 June
+2026
+31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Packaging and raw material  173,002,569 195,577,664
+Feed inventories  71,711,880 85,854,572
+Spare parts  81,734,837 77,163,487
+Finished goods  32,156,548 22,498,836
+Others  25,286,760 20,446,898
+383,892,594 401,541,457
+Less: provision for slow moving inventories (1,233,460) (1,046,923)
+382,659,134 400,494,534
+Provision for slow moving inventories at 30 June 2026 is QR 1,233,460 (31 December 2025 is QR 1,046,923).
+30 June
+2026
+31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Balance at 1 January 1,046,923 3,626,432
+Provided during the period / year 733,998 1,000,000
+Write off during the period (547,461) (3,579,509)
+1,233,460 1,046,923
+13 TRADE AND OTHER RECEIVABLES
+30 June
+2026
+ 31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Trade receivables 154,493,857 133,871,323
+Prepayments, other advances and receivables (Note i) 123,082,611 90,921,125
+Advance to suppliers (Note ii) 86,938,690 23,175,372
+Government support (Note iii) 31,687,677 83,752,375
+Deferred expenses 3,493,628 4,055,111
+Staff receivables 1,816,056 31,065
+Other receivables 6,372,812 1,845,408
+407,885,331 337,651,779
+Less: Allowance for expected credit losses (1,419,936) (1,409,114)
+406,465,395 336,242,665
+Note i
+The Group benefits from a government subsidy on finance costs related to Islamic facilities obtained from certain
+local commercial banks, under which the government covers any interest exceeding 2.5%. For the period ended 30
+June 2026, a subsidy amount of QR 16,732,933 (2025: QR 21,100,654) was recognized in the interim consolidated
+statement of profit or loss by offsetting it against finance costs. Other receivable in respect of this subsidy as at 30
+June 2026 amounted to QR 3,142,779 (31 December 2025: QR 5,511,312).
+=== página 17
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+15
+13 TRADE AND OTHER RECEIVABLES (CONTINUED)
+Note ii
+Advances to suppliers presented in the interim consolidated statement of financial position as follows:
+30 June
+2026
+ 31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Current 86,938,690 23,175,372
+Non-current* 949,275,556 372,583,615
+1,036,214,246 395,758,987
+* These are the capital advances paid to various contractors mainly relating to the construction of plants in
+subsidiaries located in Algeria and Syria and includes QR 324,852,240 and QR 119,096,317 respectively (2025:
+QR 71,200,547 and QR nil respectively) paid to Urbacon Trading and Contracting W.L.L., a related party of the
+Group.
+Note iii
+The Group has been receiving a fixed annual government grant since 2018, under an agreement that remains in
+effect through 2027. For the period ended 30 June 2026, the Group recognized government grant income of QR
+31,687,677 (2025: QR 41,876,190), which was recorded under other income in the interim consolidated statement
+of profit and loss. The grant receivable as at the reporting date was QR 31,687,677 (31 December 2025: QR
+83,752,375).
+14 CASH AND CASH EQUIVALENTS
+30 June
+2026
+30 June
+2025
+ 31 December
+2025
+(Reviewed) (Reviewed) (Audited)
+QR QR QR
+Cash on hand 362,030 301,518 415,367
+Cash in transit 718,667 96,818 674,653
+Bank balances 283,115,547 71,203,148 373,699,102
+Cash and bank balances 284,196,244 71,601,484 374,789,122
+Bank overdrafts (107,172,959) (108,451,811) (21,022,878)
+Restricted bank balances (76,721,746) (15,125,417) (145,563,741)
+Cash and cash equivalents 100,301,539 (51,975,744) 208,202,503
+15 SHARE CAPITAL
+30 June
+2026
+ 31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Authorised, issued and paid-up ordinary and special shares
+(QR 1 per each share):
+At the beginning of the period/year 2,143,984,962 1,901,000,000
+Bonus share issued (1:19) (Note 19) - 100,052,631
+Bonus share issued (1:14) (Note 19) - 142,932,331
+At the end of the period/year 2,143,984,962 2,143,984,962
+=== página 18
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+16
+15 SHARE CAPITAL (CONTINUED)
+The Group’s authorized, issued and paid-up share capital amounting to QR 2,143,984,962 (2025: QR
+2,143,984,962) is divided into 2,143,984,961 (2025: 2,143,984,961) ordinary shares and one special share (2025:
+one special share), the nominal value is QR 1 of each share.
+During the year ended 2024, the bonus shares were issued by capitalizing an equivalent amount from retained
+earnings (Note 19). As a result of issuance of bonus shares in 2024, there was no impact on the total retained earnings
+attributable to shareholders, however, the number of shares used in EPS calculation increased, resulting in a
+proportionate decrease in EPS (Note 20).
+Special share
+The State of Qatar, represented by the Ministry of Commerce and Industry, has allotted one Special Share, and the
+Special Share will have specific rights to appoint certain Directors, veto particular decisions of the Company, and
+other rights. The Special Shareholder, as holder of the Special Share, has the rights set out in Article 28 of Baladna
+Q.P.S.C.’s Article of Association.
+16 ACQUISITION RESERVE
+This balance represents the issuance of shares to the founders against the transfer of ownership in capital of Baladna
+Food Industries W.L.L. in prior years and settling of their contribution account. The reserve is recognized directly
+in equity and is not subject to subsequent remeasurement.
+17 ISLAMIC FINANCING CONTRACTS
+30 June
+2026
+ 31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Islamic financing contracts 2,816,669,837 2,447,343,738
+Presented in the interim consolidated statements of financial position are as follows:
+30 June
+2026
+ 31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Non-current 2,473,017,798 1,939,005,167
+Current 343,652,039 508,338,571
+2,816,669,837 2,447,343,738
+As at the reporting dates, the Group has no collateral pledged against its finance contracts. All facilities are
+unsecured except for the marginal facility which is obtained for the investment in financial assets at fair value
+through profit or loss.
+18 RELATED PARTY DISCLOSURES
+Related parties include key shareholders, , key management personnel, directors and entities which are controlled
+directly or indirectly by the key shareholders or directors or over which they exercise significant management
+influence. Transactions with related parties were entered into on terms as agreed by the management.
+Related party balances
+Balances with related parties included in the interim consolidated statement of financial position are as follows:
+=== página 19
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+17
+18 RELATED PARTY DISCLOSURES (CONTINUED)
+Due from related parties:
+30 June
+2026
+ 31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Affiliates
+Eleganica Steel Trading W.L.L. 13,055,624 7,050,000
+Yemek Doha Catering Services W.L.L. 8,440,676 5,952,405
+Aura Hospitality and Food Services W.L.L. 6,466,638 10,028,939
+Elegancia Group W.L.L. 1,261,213 1,089,985
+Distri Mart L.L.C 582,996 872,992
+Elegancia Landscape W.L.L. 364,920 364,920
+Elegancia Facility Management W.L.L. 313,845 151,091
+Golden Bay Trading and Contracting W.L.L. 169,280 1,505,000
+Aura Lifestyle W.L.L. 89,631 179,262
+Al Maha Island W.L.L. 33,752 69,516
+Aura Entertainment W.L.L. 3,000 -
+Urbacon Trading and Contracting W.L.L. - 1,315,776
+Power International Holding W.L.L. - 547,911
+Assets Real Estate Development Co. W.L.L. - 275,243
+Printshop for Printing Services W.L.L. - 46,057
+Others - 7,910
+30,781,575 29,457,007
+Due to related parties:
+30 June
+2026
+31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Affiliates
+Elegancia Electro Mechanical Services W.L.L. 3,099,164 2,546,290
+Power International Holding W.L.L. 790,400 1,190,000
+Newrest Gulf L.L.C. 643,217 640,276
+Stark Security W.L.L. 199,820 29,200
+Elegancia Water Solutions W.L.L. (previously Watermaster Qatar W.L.L.) 118,372 118,371
+Urbacon Plant, Machinery and Vehicles (A Branch of Urbacon Trading and
+Contracting Company W.L.L.) 107,485 43,950
+Aura International for Hospitality Services W.L.L. 67,735 458,178
+Joury Tour & Travels W.L.L. 52,570 227,555
+Urbacon Trading and Contracting W.L.L. 49,726 -
+Aura Entertainment W.L.L. - 2,523,349
+Gemini-X Trading L.L.C. - 117,950
+The Zone Gym W.L.L. - 50,000
+Credo Trading Company W.L.L. - 43,788
+Others 38,646 8,484
+5,167,135 7,997,391
+=== página 20
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+18
+18 RELATED PARTY DISCLOSURES (CONTINUED)
+Related party transactions
+Transactions with related parties included in the interim condensed consolidated statement of profit or loss are as
+follows:
+For the six-month period ended
+30 June 2026 (Reviewed)
+Revenue
+Purchases
+and services
+Management
+fee
+QR QR QR
+Yemek Doha Catering Services W.L.L. 12,022,078 - -
+Aura Hospitality W.L.L. 1,846,657 - -
+Elegancia Group W.L.L. 877,085 - -
+Elegancia Facility Management Limited W.L.L. 162,753 555,296 -
+Elegancia Steel Trading W.L.L. * - 7,003,307 -
+Power International Holding W.L.L. - 6,093,873    4,500,000
+Golden Bay Trading and Contracting W.L.L. - 3,170,000 -
+Joury Tour & Travels W.L.L. - 2,541,619 -
+Urbacon Plant, Machinery and Vehicles (A Branch of
+Urbacon Trading and Contracting Company W.L.L.) - 186,760 -
+Newrest Gulf L.L.C - 3,963,184 -
+QLM Life and Medical Insurance - 1,480,050 -
+Gemini-X Trading - 1,076,888 -
+Stark Security W.L.L. - 819,249 -
+General Pension and Social Security Authority - 107,352 -
+Aura Entertainment W.L.L. - 15,000 -
+Others 400,833 198,375 -
+15,309,406 27,210,953   4,500,000
+For the six-month period ended
+30 June 2025 (Reviewed)
+Revenue
+Purchases and
+services
+Management
+fee
+QR QR QR
+Yemek Doha Catering Services W.L.L. 13,245,528 - -
+Aura Hospitality W.L.L. 2,265,557 174,975 -
+Elegancia Group W.L.L. 992,270 - -
+Power International Holding W.L.L. - 7,633,078 4,500,000
+Newrest Gulf L.L.C - 4,226,131 -
+Joury Tour & Travels W.L.L. - 1,601,695 -
+Stark Security W.L.L. - 812,827 -
+Urbacon Plant, Machinery and Vehicles (A Branch of
+Urbacon Trading and Contracting Company W.L.L.) - 488,800 -
+Credo Trading Company W.L.L. - 206,920 -
+Aura Entertainment W.L.L. - 173,616 -
+Aura International for Hospitality Services W.L.L. - 161,720 -
+General Pension and Social Security Authority - 148,221 -
+Elegancia Facility Management Limited W.L.L. - 193,994 -
+Others 307,088 107,359 -
+16,810,443 15,929,336 4,500,000
+=== página 21
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+19
+18 RELATED PARTY DISCLOSURES (CONTINUED)
+Note i:
+As at the reporting date, trade and other payables include accruals amounting to QR 5,544,172 (2025: QR 5,615,915)
+relating to related parties for goods or services received from related parties.
+Note ii:
+Additions and capital work in progress to the property, plant and equipment during the period include amount of
+QR 142,474,036 (2025: QR 10,737,947 relating to the transactions with related parties.
+Compensation of key management personnel
+The remuneration of key management personnel during the period was as follows:
+For the six-month period ended
+30 June
+2026
+30 June
+2025
+(Reviewed) (Reviewed)
+QR QR
+Salaries and short-term benefits 9,971,794 9,364,713
+Pension benefits - 69,300
+Employees’ end of service benefits 179,124 292,217
+10,150,918 9,726,230
+19  DIVIDENDS
+The shareholders of the Parent at the Extraordinary General Meetings held on 9 March 2025 and 6 November 2025
+approved to issue bonus shares to existing shareholders in the ratio of one bonus share for every nineteen shares
+held [1:19] and one bonus share for every fourteen shares held [1:14] from the profit of 2024 and 2025 amounting
+to QR 100,052,631 and QR 142,932,331 respectively.
+20 BASIC AND DILUTED EARNINGS PER SHARE
+Basic earnings per share is calculated by dividing the profit for the period attributable to equity holders of the Parent
+by the weighted average number of ordinary shares outstanding during the period as follows:
+For the six-month period ended
+30 June
+2026
+30 June
+2025
+(Reviewed) (Reviewed)
+(Restated)
+Net profit attributable to equity holder of the Parent (QR) 364,614,040 331,010,557
+Number of shares outstanding during the period after bonus share
+adjustment (Note 15) 2,143,984,962 2,143,984,962
+Basic and diluted earnings per share (QR) 0.170 0.154
+21 COMMITMENT AND CONTINGENT LIABILITIES
+Commitments
+30 June
+2026
+31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Capital commitments related to domestic and international projects 2,848,505,737 847,943,058
+=== página 22
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+20
+21 COMMITMENT AND CONTINGENT LIABILITIES (CONTINUED)
+Contingent liabilities
+The Group has contingent liabilities in respect of banks’ letters of credit and other guarantees arising in the ordinary
+course of business from which it is anticipated that no material liabilities will arise are as follows:
+30 June
+2026
+31 December
+2025
+(Reviewed) (Audited)
+QR QR
+Letters of credits 136,198,464 62,768,111
+Guarantees 18,447,717 25,489,949
+Bill for collection - 1,089,608
+22 SEGMENT INFORMATION
+The Group's principal activity is the production and sale of dairy products. Management has determined that the
+Group operates as a single business segment. The following tables present revenue information by geographical
+segment.
+For the six-month period ended 30 June 2026
+State of
+Qatar Algeria Others Eliminations Total
+QR QR QR QR QR
+Revenue from contract with
+customers
+External customers 642,984,561 1,128,386 - - 644,112,947
+Inter segments 15,309,406 - 1,103,354  (1,103,354) 15,309,406
+658,293,967 1,128,386 1,103,354  (1,103,354) 659,422,353
+For the six-month period ended 30 June 2025
+State of
+Qatar Algeria Others Eliminations Total
+QR QR QR QR QR
+Revenue from contract with
+customers
+External customers 625,697,517 - - - 625,697,517
+Inter segments 16,810,443 - - - 16,810,443
+642,507,960 - - - 642,507,960
+The following tables present assets and liabilities information by geographical segment.
+State of
+Qatar Algeria Others Eliminations Total
+QR QR QR QR QR
+Assets
+At 30 June 2026 6,333,015,615 1,425,122,597 122,508,739 (734,153,146) 7,146,493,805
+At 31 December 2025 6,448,630,301 55,670,229 2,406,277 (398,442,185) 6,108,264,622
+Liabilities
+At 30 June 2026 2,852,301,413 349,413,790 121,052,279 (1,630,035) 3,321,137,447
+At 31 December 2025 2,786,179,753 120,229 2,850,225 (1,248,777) 2,787,901,430
+=== página 23
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+21
+23 FAIR VALUE OF FINANCIAL INSTRUMENTS
+Financial assets consist of financial investment at fair value through profit or loss, cash and bank balances, due from
+related parties and trade and other receivables. Financial liabilities consist of Islamic financing contracts, trade and
+other payables, due to related parties and lease liabilities.
+Fair value is the price that would be received to sell an asset or paid to transfer a liability in an orderly transaction
+between market participants at the measurement date. Differences can therefore arise between book value under
+historical cost method and fair value estimates.
+Fair value hierarchy
+The Group uses the following hierarchy for determining and disclosing the fair value of financial instruments by
+valuation technique:
+ Level 1: quoted (unadjusted) prices in active markets for identical assets or liabilities;
+ Level 2: other techniques for which all inputs which have a significant effect on the recorded fair value are
+observable, either directly or indirectly; and
+ Level 3: techniques which use inputs which have a significant effect on the recorded fair value that are not based
+on observable market data.
+The following table shows an analysis of financial instruments and biological assets recorded at fair value by level
+of the fair value hierarchy excluding those whose carrying amounts are reasonably estimates of their fair value:
+30 June 2026 (Reviewed) Total Level 1 Level 2 Level 3
+QR QR QR QR
+Investment in financial assets at fair
+value through profit or loss 1,303,722,593 1,303,722,593 - -
+Biological assets 195,985,158 - 195,985,158 -
+1,499,707,751 1,303,722,593 195,985,158 -
+31 December 2025 (Audited) Total Level 1 Level 2 Level 3
+QR QR QR QR
+Investment in financial assets at fair
+value through profit or loss 994,476,800 994,476,800 - -
+Biological assets 194,107,472 - 194,107,472 -
+1,188,584,272 994,476,800 194,107,472 -
+During the period, there were no transfers between Level 1 and Level 2 fair value measurements, and no transfers
+into and out of Level 3 fair value measurement.
+Biological assets are measured at fair value less cost to sell, based on local and international market prices, whenever
+available, of livestock of similar age, breed and genetic merit with adjustments, where necessary, to reflect the
+differences.
+The Group’s biological assets comprise of both immature and mature livestock. Immature livestock comprises dairy
+cows that are intended to be reared to maturity. These immature cows are held to produce milk or offspring but have
+not yet produced their first calf and begun milk production.
+The fair value of immature livestock is determined by reference to meat price of veal, adjusted to reflect the age of
+the calves and to the landed cost of a heifer by reference to the recent purchases of the Group. The fair value of
+mature cows is determined by reference to latest landed cost of a heifer by reference to the recent purchases adjusted
+to reflect the decline in productivity through the lactation cycles, the meat price at the point of slaughter.
+=== página 24
+Baladna Q.P.S.C.
+NOTES TO THE INTERIM CONDENSED CONSOLIDATED FINANCIAL STATEMENTS
+For the six-month period ended 30 June 2026
+22
+24 SIGNIFICANT EVENTS
+During the six-month period ended 30 June 2026, military conflict in the Middle East affected several GCC
+countries, including Qatar, resulting in disruptions to regional airspace, transport routes and certain infrastructure.
+The conflict led to increased logistics and transportation costs due to the use of alternative shipping and transport
+routes. As a result, group’s operational cost has increased due to additional logistics related expenditure for the
+period ended 30 June 2026. In response, the Government of Qatar implemented support measures to corporates to
+mitigate the impact of these disruptions. Accordingly, the Group has submitted claims related to the incremental
+logistic costs.
+While the Group's financial position as at 30 June 2026 has not been materially affected, the conflict has created
+operational challenges and increased uncertainty in the business environment. Management continues to
+continuously monitor developments and assess any potential impact on the Group's operations, financial
+performance and cash flows.
+25 SUBSEQUENT EVENTS
+Subsequent to the reporting date, at the adjourned Extraordinary General Meeting ("EGM") held on 22 July 2026,
+the shareholders approved a rights issue whereby shareholders are entitled to subscribe for one (1) new ordinary
+share for every four (4) existing ordinary shares held. The rights issue is intended to increase the Company's issued
+and paid-up share capital, subject to the completion of the relevant regulatory and procedural requirements. This
+event did not have any impact on the Group's financial position as at 30 June 2026.

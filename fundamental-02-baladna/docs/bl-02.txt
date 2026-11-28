@@ -1,0 +1,2693 @@
+=== página 1
+Baladna Q.P.S.C.
+CONSOLIDATED FINANCIAL STATEMENTS
+31 DECEMBER 2025
+=== página 2
+INDEPENDENT AUDITOR'S REPORT
+TO THE SHAREHOLDERS OF BALADNA Q.P.S.C.
+Report on the audit of the consolidated financial statements
+Opinion
+We have audited the consolidated financial statements of Baladna Q.P.S.C. (the “Company”) and its subsidiaries
+(together referred as the “Group”), which comprise the consolidated statement of financial position as at 31
+December 2025, and the consolidated statement of profit or loss, consolidated statement of other comprehensive
+income, consolidated statement of changes in equity and consolidated statement of cash flows for the year then
+ended, and notes to the consolidated financial statements, including material accounting policy information.
+In our opinion, the accompanying consolidated financial statements present fairly, in all material respects, the
+consolidated financial position of the Group as at 31 December 2025 and its consolidated financial performance
+and its consolidated cash flows for the year then ended in accordance with IFRS Accounting Standards as issued by
+the International Accounting Standards Board (“IASB”).
+Basis for opinion
+We conducted our audit in accordance with International Standards on Auditing (“ISAs”). Our responsibilities under
+those standards are further described in the Auditor’s responsibilities for the audit of the consolidated financial
+statements section of our report. We are independent of the Group in accordance with the International Ethics
+Standard Board for Accountants’ International Code of Ethics for Professional Accountants (including
+International Independence Standards) (“IESBA Code”) as applicable to audits of consolidated financial statements
+of public interest entities, together with the ethical requirements that are relevant to our audit of the consolidated
+financial statements of public interest entities in the State of Qatar, and we have fulfilled our other ethical
+responsibilities in accordance with these requirements and the IESBA Code. We believe that the audit evidence we
+have obtained is sufficient and appropriate to provide a basis for our opinion.
+Other matter
+The consolidated financial statements of the Group as at and for the year ended 31 December 2024 were audited
+by another auditor, whose audit report dated 6 February 2025, expressed an unmodified audit opinion on those
+consolidated financial statements.
+Key audit matters
+Key audit matters are those matters that, in our professional judgment, were of most significance in our audit of the
+consolidated financial statements of the current year. These matters were addressed in the context of our audit of
+the consolidated financial statements as a whole, and in forming our opinion thereon, and we do not provide a
+separate opinion on these matters. For each matter below our description of how our audit addressed the matter is
+provided in that context.
+We have fulfilled the responsibilities described in the Auditor’s responsibilities for the audit of the consolidated
+financial statements section of our report, including in relation to these matters. Accordingly, our audit included the
+performance of procedures designed to respond to our assessment of the risks of material misstatement of the
+consolidated financial statements. The results of our audit procedures, including the procedures performed to
+address the matter below, provide the basis for our audit opinion on the accompanying consolidated financial
+statements.
+=== página 3
+Page 2
+INDEPENDENT AUDITOR'S REPORT
+TO THE SHAREHOLDERS OF BALADNAQ.P.S.C. (CONTINUED)
+Report on the audit of the consolidated financial statements (continued)
+Key audit matters (continued)
+Key audit matter How our audit addresses the key audit matter
+Valuation of biological assets
+The Group holds biological assets that are measured at
+fair value. As at 31 December 2025, the fair value of
+the Group’s biological assets amounted to QR 194.1
+million (2024: QR 177.4 million). For the year ended
+31 December 2025, the Group recognised a net fair
+value gain of QR 56.4 million (2024: QR 45.3 million).
+IAS 41 “Agriculture” requires biological assets to be
+measured at fair value less costs to sell, unless the fair
+value cannot be reliably measured. Management has
+used valuation method developed based on past
+information, assumptions, market prices of livestock of
+similar age, pregnancy, lactations and milk production.
+We identified the valuation of biological assets as a
+Key Audit Matter as the calculation of the fair value of
+biological assets involves a significant degree of
+judgement, particularly in respect of landed cost,
+market prices for calves and heifers.
+The Group’s accounting policies, together with the
+related judgements, estimates, and disclosures, are
+presented in Note 3, Note 15, and Note 34 to the
+consolidated financial statements.
+Our audit procedures included the following key areas,
+among others:
+ We performed walkthrough procedures and
+obtained understanding of the controls relating to
+the valuation of biological assets.  We also checked
+the management’s process for collecting
+information to support the key assumptions and
+inputs used in the valuation of biological assets and
+assessed the appropriateness of information based
+on our knowledge of the Group and other audit
+procedures performed.
+ We reconciled the biological assets subledger with
+the general ledger account balances and.
+investigated any unusual and reconciling items
+based on the established testing threshold.
+ We attended the physical count of biological assets
+and observed the count process. Further, we
+obtained count results and compared with general
+ledger and sub ledger.
+ We assessed on a sample basis, the input data used
+in the valuations of biological assets, including
+landed cost, breeding costs, number of lactation
+cycles and culling rates, based on available
+historical data.
+ We assessed the adequacy of the related disclosures
+in the consolidated financial statements, including
+the disclosure of key assumptions and judgments.
+=== página 4
+Page 3
+INDEPENDENT AUDITOR'S REPORT
+TO THE SHAREHOLDERS OF BALADNAQ.P.S.C. (CONTINUED)
+Report on the audit of the consolidated financial statements (continued)
+Key audit matters (continued)
+Key audit matter How our audit addresses the key audit matter
+Property, plant and equipment
+As at 31 December 2025, the Group’s property, plant
+and equipment (“PPE”) amounted to QR 3,285,605,491
+(2024: QR 3,188,264,216), representing 53.79% of the
+Group’s total assets (2024: 65.06%).
+The major classes of PPE include land, buildings and
+structures, production machinery, and capital work in
+progress, which are fundamental to the Group’s dairy,
+juice and related production activities.
+We identified PPE as a Key Audit Matter due to its
+significance to the Group’s total asset base and the scale
+of ongoing capital investments supporting core
+operations. The magnitude of these balances required
+increased auditor attention, including assessing the
+existence and valuation of assets and evaluating the
+appropriateness of capitalisation and depreciation
+policies applied by management.
+The Group’s accounting policies relating to property,
+plant and equipment and the related disclosures are
+presented in Note 3 and Note 11 to the consolidated
+financial statements
+Our audit procedures included the following key areas,
+among others:
+ We performed walkthrough procedures and
+obtained understanding of the controls relating to
+the PPE including capitalization, depreciation,
+depreciation methods, useful lives, and residual
+values , retirement and impairment review process.
+ We read and understood Group’s internal controls
+and accounting policies related to the recognition,
+capitalisation, depreciation, and impairment
+assessment of PPE
+ We performed test of controls relating to additions
+to PPE by inspecting supporting documentation
+such as contracts, purchase invoices, payment
+evidence, and internal approvals to determine
+whether the expenditures had been appropriately
+capitalized.
+ We checked the capital work in progress by
+reviewing project status and management’s
+assessment of when assets are ready for their
+intended use.
+ We checked the depreciation methods, useful lives,
+and residual values applied to significant categories
+of assets and assessing whether they reflect the
+pattern of economic benefits derived from those
+assets and appropriateness.
+ We checked whether there are any indicators of
+impairment existed for major asset groups and
+reviewing the reasonableness of management’s
+judgments in this area.
+ We reviewed the consolidated financial statement
+disclosures to assess whether the information
+presented regarding PPE, related judgements, and
+estimates was complete and appropriate
+=== página 5
+Page 4
+INDEPENDENT AUDITOR'S REPORT
+TO THE SHAREHOLDERS OF BALADNAQ.P.S.C. (CONTINUED)
+Report on the audit of the consolidated financial statements (continued)
+Other information included in the Group’s 2025 Annual Report
+Other information consists of the information included in the Group’s 2025 Annual Report, other than the
+consolidated financial statements and our auditor’s report thereon. Management is responsible for the other
+information. The Group’s 2025 Annual Report is expected to be made available to us after the date of this auditor’s
+report.
+Our opinion on the consolidated financial statements does not cover the other information and we do not express
+any form of assurance conclusion thereon.
+In connection with our audit of the consolidated financial statements, our responsibility is to read the other
+information and, in doing so, consider whether the other information is materially inconsistent with the consolidated
+financial statements, or our knowledge obtained in the audit, or otherwise appears to be materially misstated.
+Responsibilities of management and the Board of Directors for the consolidated financial statements
+Management is responsible for the preparation and fair presentation of the consolidated financial statements in
+accordance with IFRS Accounting Standards, and for such internal control as management determines is necessary
+to enable the preparation of consolidated financial statements that are free from material misstatement, whether due
+to fraud or error.
+In preparing the consolidated financial statements, management is responsible for assessing the Group’s ability to
+continue as a going concern, disclosing, as applicable, matters related to going concern and using the going concern
+basis of accounting unless management either intends to liquidate the Group or to cease operations, or has no
+realistic alternative but to do so.
+The Board of Directors is responsible for overseeing the Group’s financial reporting process.
+Auditor’s responsibilities for the audit of the consolidated financial statements
+Our objectives are to obtain reasonable assurance about whether the consolidated financial statements as a whole
+are free from material misstatement, whether due to fraud or error, and to issue an auditor’s report that includes our
+opinion. Reasonable assurance is a high level of assurance, but is not a guarantee that an audit conducted in
+accordance with ISAs will always detect a material misstatement when it exists. Misstatements can arise from fraud
+or error and are considered material if, individually or in the aggregate, they could reasonably be expected to
+influence the economic decisions of users taken on the basis of these consolidated financial statements.
+As part of an audit in accordance with ISAs, we exercise professional judgment and maintain professional
+skepticism throughout the audit. We also:
+ Identify and assess the risks of material misstatement of the consolidated financial statements, whether due to
+fraud or error, design and perform audit procedures responsive to those risks, and obtain audit evidence that is
+sufficient and appropriate to provide a basis for our opinion. The risk of not detecting a material misstatement
+resulting from fraud is higher than for one resulting from error, as fraud may involve collusion, forgery,
+intentional omissions, misrepresentations, or the override of internal control.
+ Obtain an understanding of internal control relevant to the audit in order to design audit procedures that are
+appropriate in the circumstances, but not for the purpose of expressing an opinion on the effectiveness of the
+Group’s internal control.
+ Evaluate the appropriateness of accounting policies used and the reasonableness of accounting estimates and
+related disclosures made by management.
+=== página 6
+Page 5
+INDEPENDENT AUDITOR'S REPORT
+TO THE SHAREHOLDERS OF BALADNAQ.P.S.C. (CONTINUED)
+Report on the audit of the consolidated financial statements (continued)
+Auditor’s responsibilities for the audit of the consolidated financial statements (continued)
+ Conclude on the appropriateness of management’s use of the going concern basis of accounting and, based on
+the audit evidence obtained, whether a material uncertainty exists related to events or conditions that may cast
+significant doubt on the Group’s ability to continue as a going concern. If we conclude that a material uncertainty
+exists, we are required to draw attention in our auditor’s report to the related disclosures in the consolidated
+financial statements or, if such disclosures are inadequate, to modify our opinion. Our conclusions are based on
+the audit evidence obtained up to the date of our auditor’s report. However, future events or conditions may
+cause the Group to cease to continue as a going concern.
+ Evaluate the overall presentation, structure and content of the consolidated financial statements, including the
+disclosures, and whether the consolidated financial statements represent the underlying transactions and events
+in a manner that achieves fair presentation.
+ Plan and perform the group audit to obtain sufficient appropriate audit evidence regarding the financial
+information of the entities or business units within the group as a basis for forming an opinion on the
+consolidated financial statements. We are responsible for the direction, supervision and review of the audit work
+performed for the purposes of the group audit. We remain solely responsible for our audit opinion.
+We communicate with the Board of Directors regarding, among other matters, the planned scope and timing of the
+audit and significant audit findings, including any significant deficiencies in internal control that we identify during
+our audit.
+We also provide the Board of Directors with a statement that we have complied with relevant ethical requirements
+regarding independence, and to communicate with them all relationships and other matters that may reasonably be
+thought to bear on our independence, and where applicable, actions taken to eliminate threats or safeguards applied.
+From the matters communicated with the Board of Directors, we determine those matters that were of most
+significance in the audit of the consolidated financial statements of the current period and are therefore the key audit
+matters. We describe these matters in our auditor’s report unless law or regulation precludes public disclosure about
+the matter or when, in extremely rare circumstances, we determine that a matter should not be communicated in our
+report because the adverse consequences of doing so would reasonably be expected to outweigh the public interest
+benefits of such communication.
+Report on legal and other regulatory requirements
+Furthermore, in our opinion, proper books of account have been kept by the Company, an inventory count has been
+conducted in accordance with established principles and the consolidated financial statements comply with the Qatar
+Commercial Companies’ Law No. 11 of 2015, whose certain provisions were subsequently amended by Law No. 8 of
+2021 and the Company’s Articles of Association. We have obtained all the information and explanations we required
+for the purpose of our audit, and are not aware of any violations of the above mentioned law or the Articles of
+Association having occurred during the year, which might have had a material adverse effect on the Group’s financial
+position or performance.
+Ahmed Sayed
+of Ernst and Young
+Auditor's Registration No. 326
+Date: 11 February 2026
+Doha
+
+=== página 7
+Baladna Q.P.S.C.
+The attached notes from 1 to 36 are an integral part of these consolidated financial statements.
+6
+CONSOLIDATED STATEMENT OF PROFIT OR LOSS
+For the year ended 31 December 2025
+2025 2024
+Notes QR QR
+Revenue from contract with customers 4 1,267,847,003 1,145,227,183
+Cost of sales 5 (938,068,987) (884,890,199)
+GROSS PROFIT 329,778,016 260,336,984
+Other income 6 93,232,041 114,170,691
+Gain on investment in financial assets at fair value through profit or
+loss 14 408,007,466 37,956,908
+Selling and distribution expenses 7 (95,389,019) (92,919,349)
+General and administrative expenses 8 (81,298,969) (74,436,384)
+Net write off of advances for projects (35,789,509) -
+Operating profit for the year 618,540,026 245,108,850
+Finance cost 9 (78,471,415) (58,915,256)
+Profit before income tax 540,068,611 186,193,594
+Income tax expense 10 (1,293,253) (893,288)
+NET PROFIT FOR THE YEAR 538,775,358 185,300,306
+Net profit for the year attributable to:
+Equity holders of the parent 539,736,320 185,012,156
+Non-controlling interests (960,962) 288,150
+538,775,358 185,300,306
+Basic and diluted earnings per share
+Basic and diluted earnings per share (2024: restated) 26 0.252 0.086
+
+=== página 8
+Baladna Q.P.S.C.
+The attached notes from 1 to 36 are an integral part of these consolidated financial statements.
+7
+CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME
+For the year ended 31 December 2025
+2025 2024
+QR QR
+Profit for the year 538,775,358 185,300,306
+Other comprehensive income
+Other comprehensive income that may be reclassified to
+profit or loss in subsequent periods (net of tax):
+Exchange difference on translation of foreign operation (198,961) -
+TOTAL COMPREHENSIVE INCOME FOR THE YEAR 538,576,397 185,300,306
+Total comprehensive income for the year attributable to:
+Equity holders of the parent 539,537,359 185,012,156
+Non-controlling interests (960,962) 288,150
+538,576,397 185,300,306
+
+=== página 9
+Baladna Q.P.S.C.
+The attached notes from 1 to 36 are an integral part of these consolidated financial statements.
+8
+CONSOLIDATED STATEMENT OF FINANCIAL POSITION
+At 31 December 2025
+2025 2024
+Notes QR QR
+ASSETS
+Non-current assets
+Property, plant and equipment 11 3,285,605,491 3,188,264,216
+Right-of-use assets 12 105,276,839 110,394,944
+Intangible assets 13 4,914,015 7,948,693
+Investments in financial assets at fair value through profit or loss 14 994,476,800 523,694,449
+Biological assets 15 193,661,272 176,904,780
+Goodwill 16 6,792,635 6,792,635
+Advance to suppliers 18 372,583,615 -
+Other non-current assets 3,524,427 -
+4,966,835,094 4,013,999,717
+Current assets
+Inventories 17 400,494,534 430,058,802
+Trade and other receivables 18 336,242,665 404,279,931
+Biological assets 15 446,200 482,800
+Due from related parties 27 29,457,007 24,316,462
+Cash and bank balances 19 374,789,122 27,623,729
+1,141,429,528 886,761,724
+TOTAL ASSETS 6,108,264,622 4,900,761,441
+
+=== página 10
+
+=== página 11
+Baladna Q.P.S.C.
+The attached notes from 1 to 36 are an integral part of these consolidated financial statements.
+10
+CONSOLIDATED STATEMENT OF CHANGES IN EQUITY
+For the year ended 31 December 2025
+Attributable to the equity holders of the Parent
+Share
+capital
+Legal
+reserve
+Acquisition
+reserve
+Retained
+earnings
+Translation
+reserve Total
+Non-
+controlling
+interests
+Total
+equity
+QR QR QR QR QR QR QR QR
+As at 1 January 2024 1,901,000,000 48,120,521 201,123,011 205,519,477 - 2,355,763,009 2,361,082 2,358,124,091
+Profit for the year - - - 185,012,156 - 185,012,156 288,150 185,300,306
+Other comprehensive income - - - - - - - -
+Total comprehensive income for the year - - - 185,012,156 - 185,012,156 288,150 185,300,306
+Dividend (Note 28) - - - (132,119,500) - (132,119,500) - (132,119,500)
+Increase in investment - - - - - - 361,970 361,970
+Transfer to legal reserve (Note 21) - 18,501,216 - (18,501,216) - - - -
+Transfer to social and sport fund (Note 29) - - - (4,625,304) - (4,625,304) - (4,625,304)
+As at 31 December 2024 1,901,000,000 66,621,737 201,123,011 235,285,613 - 2,404,030,361 3,011,202 2,407,041,563
+Incorporation of a subsidiary - - - - - - 388,166,140 388,166,140
+Increase in investment - - - - - - 72,500 72,500
+Profit for the year - - - 539,736,320 - 539,736,320 (960,962) 538,775,358
+Other comprehensive income - - - - (198,961) (198,961) - (198,961)
+Total Comprehensive income for the year - - - 539,736,320 (198,961) 539,537,359 (960,962) 538,576,397
+Bonus share issued (Note 28) 242,984,962 - - (242,984,962) - - - -
+Transfer to legal reserve (Note 21) - 53,973,632 - (53,973,632) - - - -
+Transfer to social and sport fund (Note 29) - - - (13,493,408) - (13,493,408) - (13,493,408)
+As at 31 December 2025 2,143,984,962 120,595,369 201,123,011 464,569,931 (198,961) 2,930,074,312 390,288,880 3,320,363,192
+
+=== página 12
+Baladna Q.P.S.C.
+The attached notes from 1 to 36 are an integral part of these consolidated financial statements.
+11
+CONSOLIDATED STATEMENT OF CASH FLOWS
+For the year ended 31 December 2025
+2025 2024
+Notes QR QR
+OPERATING ACTIVITIES
+Profit before tax for the year 540,068,611 186,193,594
+Adjustments for:
+Depreciation of property, plant and equipment 11 136,468,596 120,264,308
+Depreciation of right-of-use assets 12 11,825,665 11,122,165
+Amortization of intangible assets 13 3,272,968 3,422,895
+Provision for employees’ end of service benefits 24 5,391,918 5,193,918
+(Reversal) / allowance for expected credit losses 18 (75,433) 78,561
+Provision of slow-moving inventories 17 1,000,000 5,472,343
+Gain on disposal of property, plant and equipment 6 (196,925) (123,585)
+Gain on investments in financial assets at fair value through
+profit or loss 14 (408,007,466) (37,956,908)
+Dividend income 6 (3,299,277) (2,224,890)
+Net fair value gain on biological assets 15 (56,413,733) (45,297,535)
+Loss from death and disposal of livestock 12,059,179 16,174,161
+Finance cost 9 78,471,415 58,915,256
+Net write off of advances for projects 35,789,509 -
+Operating cashflow before working capital changes 356,355,027 321,234,283
+Changes in:
+Inventories 28,564,268 (35,201,750)
+Due from related parties (5,140,545) 53,673,970
+Trade and other receivables 17,323,190 6,716,851
+Due to related parties 3,312,268 (407,433)
+Trade and other payables (7,314,321) 2,640,795
+Cash generated from operating activities 393,099,887 348,656,716
+Employees’ end of service benefit paid 24 (2,204,776) (2,138,322)
+Finance cost paid (116,296,565) (120,975,266)
+Finance cost on lease liabilities paid (322,970) (2,179,581)
+Income tax paid (952,674) (213,959)
+Net cash generated from operating activities 273,322,902 223,149,588
+INVESTING ACTIVITIES
+Additions to property, plant and equipment 11 (227,489,513) (112,991,577)
+Proceeds from disposal of property, plant and equipment 781,856 717,366
+Additions to intangible assets 13 (29,894) (1,090,630)
+Net movement in advance to suppliers – non-current (372,583,615) -
+Acquisition of financial assets at fair value through profit or loss 14 (62,774,885) (116,108,854)
+Disposal of financial assets at fair value through profit or loss 14 - 2,212,437
+Dividend received 3,299,277 2,224,890
+Additions to biological assets 15 (34,581,698) -
+Additions to other non-current assets (3,524,427) -
+Movement in biological assets 62,216,360 50,446,888
+Net cash used in investing activities (634,686,539) (174,589,480)
+
+=== página 13
+Baladna Q.P.S.C.
+The attached notes from 1 to 36 are an integral part of these consolidated financial statements.
+12
+CONSOLIDATED STATEMENT OF CASH FLOWS (CONTINUED)
+For the year ended 31 December 2025
+2025 2024
+Note QR QR
+FINANCING ACTIVITIES
+Net movement in Islamic financing 406,777,235 80,144,874
+Payment of principal portion of lease liabilities (77,030) (43,944,295)
+Change in non-controlling interest 386,945,387 361,970
+Dividend paid (1,093,820) (134,411,095)
+Net movement in restricted bank balances (129,845,288) (10,287,484)
+Net cash from / (used in) financing activities 662,706,484 (108,136,030)
+Net increase / (decrease) in cash and cash equivalents 301,342,847 (59,575,922)
+Foreign exchange differences (198,961) -
+Cash and cash equivalents at 1 January (92,941,383) (33,365,461)
+CASH AND CASH EQUIVALENTS AT 31 DECEMBER 19 208,202,503 (92,941,383)
+Non-cash transactions:
+Borrowing costs capitalized to property, plant and equipment amounted to QR 7,113,685 (2024: QR 10,080,203)
+has been adjusted with finance cost as non-cash transactions.
+
+=== página 14
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+13
+1 CORPORATE INFORMATION AND PRINCIPAL ACTIVITIES
+Baladna Q.P.S.C. (the “Company” or the “Parent”) was incorporated in the State of Qatar under commercial
+registration number 140310, as Qatari Public Shareholding Company. The Company finalized legal documentation
+for the process of establishment and issuance of the Commercial registration on 2 December 2019 (the
+“Establishment Date”), pursuant to the provisions of Qatar Commercial Companies Law. The Company’s registered
+office is at P.O Box 3382, Um Alhawaya Farm, State of Qatar.
+The principal activities of the Company and its subsidiaries (together referred as the “Group”) are agricultural
+activities of production and sales of milk, juice, slaughter of animal, sale of meats and detergent. The Group is also
+engaged in the investment and management of agricultural projects, along with investments outside the State of
+Qatar.
+2 BASIS OF CONSOLIDATION
+The consolidated financial statements comprise the financial statements of the Parent and its all subsidiaries as at
+31 December at each year. Control is achieved when the Group is exposed, or has rights, to variable returns from
+its involvement with the investee and has the ability to affect those returns through its power over the investee.
+Specifically, the Group controls an investee if and only if the Group has:
+ Power over the investee (i.e. existing rights that give it the current ability to direct the relevant activities of the
+ investee)
+ Exposure, or rights, to variable returns from its involvement with the investee
+ The ability to use its power over the investee to affect its returns
+Generally, there is a presumption that a majority of voting rights results in control. To support this presumption and
+when the Group has less than a majority of the voting or similar rights of an investee, the Group considers all
+relevant facts and circumstances in assessing whether it has power over an investee,
+including:
+ The contractual arrangement with the other vote holders of the investee
+ Rights arising from other contractual arrangements
+ The Group’s voting rights and potential voting rights
+The Group re-assesses whether or not it controls an investee if facts and circumstances indicate that there are
+changes to one or more of the three elements of control. Consolidation of a subsidiary begins when the Group
+obtains control over the subsidiary and ceases when the Group loses control of the subsidiary. Assets, liabilities,
+income and expenses of a subsidiary acquired or disposed of during the year are included in the consolidated
+financial statements from the date the Group gains control until the date the Group ceases to control the subsidiary.
+Profit or loss and each component of other comprehensive income (“OCI”) are attributed to the equity holders of
+the parent of the Group and to the non-controlling interests, even if this results in the non-controlling interests
+having a deficit balance. When necessary, adjustments are made to the financial statements of subsidiaries to bring
+their accounting policies into in line with the Group’s accounting policies.
+All intra-group assets and liabilities, equity, income, expenses and cash flows relating to transactions between
+members of the Group are eliminated in full on consolidation.
+A change in the ownership interest of a subsidiary, without a loss of control, is accounted for as an equity transaction.
+If the Group loses control over a subsidiary, it derecognises the related assets (including goodwill), liabilities, non-
+controlling interest and other components of equity, while any resultant gain or loss is recognised in profit or loss.
+Any investment retained is recognised at fair value.
+=== página 15
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+14
+2 BASIS OF CONSOLIDATION (CONTINUED)
+These consolidated financial statements comprise of the financial statements of the Company and its subsidiaries
+(collectively, the “Group”) as at 31 December 2025 as follows. The financial statements of the subsidiaries are
+prepared for the same reporting period as the Parent Company using consistent accounting policies.
+Subsidiary Name
+Country of
+incorporation
+Percentage of
+effective control
+2025 2024
+Baladna Food Industries W.L.L. (Note i) Qatar 100% 100%
+Baladna Food Trading W.L.L. (Note ii) Qatar 100% 100%
+Baladna Business and Trading L.L.C. (Note iii) Oman 100% 100%
+Awafi W.L.L. (Note iv) Qatar 100% 100%
+Baladna for Trading and Investment W.L.L. (Note v) Qatar 100% 100%
+Agrocare Development S.R.L (Note vi) Romania 100% 100%
+E-Life Detergent Factory W.L.L. (Note vii) Qatar 75% 75%
+Baladna for Trading and Investment L.L.C. (QFC) (Note viii) Qatar 100% 100%
+Baladna Algeria S.P.A. (ix) Algeria 51% -
+Qatar Vision for Support and Services (x) Egypt 100% -
+Baladna Food Industries L.L.C. (xi) Syria 100% -
+Notes:
+(i) Baladna Food Industries W.L.L. is a limited liability company registered in the State of Qatar under
+Commercial Registration No. 64756 and is 100% owned by Baladna Q.P.S.C. The principal activity is
+production and sales of milk, juice, slaughter of animal and sale of meats.
+(ii) Baladna Food Trading W.L.L. is a limited liability company registered in the State of Qatar under Commercial
+Registration No. 133592 and is 100% owned by Baladna Food Industries W.L.L. The principal activity is
+trading in the food materials.
+(iii) Baladna Business and Trading L.L.C. is a limited liability registered in the Sultanate of Oman incorporated
+under Commercial Registration No.1343623 and is owned 99% by Baladna Food Industries W.L.L. and 1%
+by Baladna Food Trading W.L.L.  The principal activities are as follows:
+- Retail sale in specialized stores of dairy products, eggs, olive and pickles;
+- Activities of export and import offices; and
+- Wholesale of soft drinks, juices and mineral water.
+(iv) Awafi W.L.L. is a limited liability company registered in the State of Qatar under Commercial Registration
+No. 141419 and is 100% owned by Baladna Q.P.S.C. The principal activity is trading in food materials,
+packaging and dairy products.
+(v) Baladna for Trading and Investment W.L.L. is a limited liability company registered in the State of Qatar
+under Commercial Registration No. 157435 and is 100% owned by Baladna Q.P.S.C. The principal activity is
+trading feed, investment and management of agricultural projects and investment outside Qatar.
+(vi) Agrocare Development S.R.L. is a limited liability company registered in Romania under Commercial
+Registration No. 593753 and is 100% owned by Baladna for Trading and Investment W.L.L. The principal
+activity of the company is growing of cereals, leguminous Crops and Oil Seeds.
+(vii) E-Life Detergent Factory W.L.L. is a limited liability Company registered in the State of Qatar under
+Commercial Registration No. 106993 and is 75% owned by Baladna Food Industries W.L.L. During the year,
+there was an increase in the investment amounting to QR 290,000 (2024: QR 1,447,875). The principal activity
+is trading in medical cosmetics and production of liquid and powder detergents.
+(viii) Baladna for Trading and Investment L.L.C, is a limited liability company registered in the State of Qatar under
+Qatar Financial Centre Authority License No. 02713 and is 100% owned by Baladna Q.P.S.C. The principal
+activity of the company is holding subsidiary companies. The principal activities of the Group are agricultural
+activities of production and sales of milk, juice, slaughter of animal, sale of meat and detergent.
+=== página 16
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+15
+2 BASIS OF CONSOLIDATION (CONTINUED)
+Notes: (continued)
+(ix) Baladna Algeria S.P.A. is a joint stock Company registered in Algeria under Commercial Registration No.
+16/00-1282922B25. It is 51% owned by Baladna for Trading and Investment L.L.C. The principal activities
+are agricultural production and sales of powder milk.
+(x) Qatar Vision for Support and Services. is a limited liability Company registered in Egypt under Commercial
+Registration No. 272138 and is 100% owned by Baladna for Trading and Investment L.L.C. The company’s
+principal activities are providing technical support and related consulting services, excluding legal consulting,
+valuation-related studies for capital increases or acquisitions, and financial consulting on securities.
+(xi) Baladna Food Industries L.L.C is a limited liability Company registered in Syria under Commercial
+Registration No. 341 and is 99% owned by Baladna for Trading and Investment L.L.C. and 1% owned by
+Baladna Food Industries W.L.L. The principal activities of the company are the production and sale of dairy
+products, beverages, and fruit‑based items, along with related wholesale, retail, import, export, and related
+activities.
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+3.1 Basis of preparation
+The consolidated financial statements have been prepared in accordance with IFRS Accounting Standards as issued
+by the International Accounting Standards Board (“IASB”).
+The consolidated financial statements have been prepared on a historical cost basis except for investment in financial
+assets at fair value through profit or loss and biological assets which have been measured at fair value.
+These consolidated financial statements have been prepared in Qatari Riyals (“QR”), which is the Group’s
+functional and presentation currency.
+3.2 Statement of compliance
+The consolidated financial statements are in compliance with the requirements of the Commercial Companies Law
+No. 11 of 2015, whose certain provisions were subsequently amended by Law No.8 of 2021 and the Company's
+Articles of Association.
+3.3 New and amended standards and interpretations
+The accounting policies adopted are consistent with those of the previous financial period, except for the following
+new and amended standard and amendment, which are effective for annual periods beginning on or after 1 January
+2025. The Group has not early adopted any other standard, interpretation or amendment that has been issued but is
+not yet effective.
+Content Effective date
+Lack of exchangeability – Amendments to IAS 21 1 January 2025
+Lack of exchangeability – Amendments to IAS 21
+For annual reporting periods beginning on or after 1 January 2025, Lack of Exchangeability – Amendments to IAS
+21 The Effects of Changes in Foreign Exchange Rates specifies how an entity should assess whether a currency is
+exchangeable and how it should determine a spot exchange rate when exchangeability is lacking. The amendments
+also require disclosure of information that enables users of its financial statements to understand how the currency
+not being exchangeable into the other currency affects, or is expected to affect, the entity’s financial performance,
+financial position and cash flows.
+The amendments did not have any impact on the Group’s financial statements.
+=== página 17
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+16
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.4 New and amended standards issued but not yet effective and not early implemented
+The new and amended standards and interpretations that are issued, but not yet effective, up to the date of issuance
+of the Group’s consolidated financial statements are disclosed below. The Group intends to adopt these standards,
+if applicable, when they become effective.
+Content Effective date
+Annual Improvements to IFRS Accounting Standards – Volume 11 1 January 2026
+Amendments to IFRS 9 & IFRS 7 – Classification and Measurement of Financial Instruments 1 January 2026
+Contracts Referencing Nature-dependent Electricity - Amendments to IFRS 9 and IFRS 7 1 January 2026
+IFRS 18 - Presentation and Disclosure in Financial Statements 1 January 2027
+IFRS 19 - Subsidiaries without Public Accountability: Disclosures 1 January 2027
+The Group did not early adopt any other standards, interpretations or amendments that have been issued but are not
+yet effective.
+3.5 Material accounting policy information
+Business combinations and goodwill
+Business combinations are accounted for using the acquisition method. The cost of an acquisition is measured as the
+aggregate of the consideration transferred, which is measured at acquisition date fair value, and the amount of any
+non-controlling interests in the acquiree. For each business combination, the Group elects whether to measure the
+non-controlling interests in the acquiree at fair value or at the proportionate share of the acquiree’s identifiable net
+assets. Acquisition-related costs are expensed as incurred and included in administrative expenses.
+The Group determines that it has acquired a business when the acquired set of activities and assets include an input
+and a substantive process that together significantly contribute to the ability to create outputs. The acquired process
+is considered substantive if it is critical to the ability to continue producing outputs, and the inputs acquired include
+an organised workforce with the necessary skills, knowledge, or experience to perform that process or it significantly
+contributes to the ability to continue producing outputs and is considered unique or scarce or cannot be replaced
+without significant cost, effort, or delay in the ability to continue producing outputs.
+When the Group acquires a business, it assesses the financial assets and liabilities assumed for appropriate
+classification and designation in accordance with the contractual terms, economic circumstances and pertinent
+conditions as at the acquisition date. This includes the separation of embedded derivatives in host contracts by the
+acquiree.
+Any contingent consideration to be transferred by the acquirer will be recognised at fair value at the acquisition
+date. Contingent consideration classified as equity is not remeasured and its subsequent settlement is accounted for
+within equity. Contingent consideration classified as an asset or liability that is a financial instrument and within
+the scope of IFRS 9 Financial Instruments, is measured at fair value with the changes in fair value recognised in the
+statement of profit or loss in accordance with IFRS 9. Other contingent consideration that is not within the scope of
+IFRS 9 is measured at fair value at each reporting date with changes in fair value recognised in profit or loss.
+Goodwill is initially measured at cost (being the excess of the aggregate of the consideration transferred and the
+amount recognised for non-controlling interests and any previous interest held over the net identifiable assets
+acquired and liabilities assumed). If the fair value of the net assets acquired is in excess of the aggregate
+consideration transferred, the Group re-assesses whether it has correctly identified all of the assets acquired and all
+of the liabilities assumed and reviews the procedures used to measure the amounts to be recognised at the acquisition
+date. If the reassessment still results in an excess of the fair value of net assets acquired over the aggregate
+consideration transferred, then the gain is recognised in profit or loss.
+After initial recognition, goodwill is measured at cost less any accumulated impairment losses. For the purpose of
+impairment testing, goodwill acquired in a business combination is, from the acquisition date, allocated to each of
+the Group’s cash-generating units that are expected to benefit from the combination, irrespective of whether other
+assets or liabilities of the acquiree are assigned to those units.
+=== página 18
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+17
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.5 Material accounting policy information (continued)
+Business combinations and goodwill (continued)
+Where goodwill has been allocated to a cash-generating unit (CGU) and part of the operation within that unit is
+disposed of, the goodwill associated with the disposed operation is included in the carrying amount of the operation
+when determining the gain or loss on disposal. Goodwill disposed in these circumstances is measured based on the
+relative values of the disposed operation and the portion of the cash-generating unit retained.
+Non-controlling interests
+Non-controlling interests represent the portion of profit or loss and net assets not owned, directly or indirectly, by
+the Group and are presented separately in the consolidated profit or loss and within equity in the consolidated
+statement of financial position, separately from parent partners’ equity. Acquisitions of non-controlling interests are
+accounted for using the parent entity extension method, whereby, the difference between the consideration and the
+fair value of the share of the net assets acquired is recognised as goodwill. Any deficiency of the cost of acquisition
+below the fair values of the identifiable net assets acquired (i.e. a discount on acquisition) is recognised directly in
+the consolidated statement of profit or loss and other comprehensive income in the year of acquisition.
+Revenue from contracts with customers
+Sale of dairy, livestock for meat and consumables
+The Group is in the business of producing milk from cows for the sale of fresh milk, long life milk, cheese, yoghurt
+and other dairy products and the slaughter of cows for the sale of meat, production and sale of chilled and long-life
+juices and production and sale of liquid and powder detergents and other cleaning agents. Revenue from contracts
+with customers is recognised at point in time when control of goods or services are transferred to the customer,
+generally upon delivery of the goods and acceptance by the customer at an amount that reflects the consideration to
+which the Company expects to be entitled in exchange for goods or services.
+The Group has concluded that it is the principal in its revenue arrangements because it typically controls the products
+before transferring them to the customer.
+Products are sold principally on a sale or return basis. Allowances for expected sales returns are calculated based on
+the forecasted return of expired products based on historical experience. Expected sales returns are netted off against
+revenue with the corresponding impact in trade and other payables.
+Variable consideration
+If the consideration in a contract includes a variable amount, the Group estimates the amount of consideration to
+which it will be entitled in exchange for transferring the goods to the customer. The variable consideration is
+estimated at contract inception and constrained until it is highly probable that a significant revenue reversal in the
+amount of cumulative revenue recognised will not occur when the associated uncertainty with the variable
+consideration is subsequently resolved. Some contracts for the sale of goods provide customers with a right to return
+the goods within a specified period. The Group also provides retrospective volume rebates to certain customers once
+the quantity of goods purchased during the period exceeds the threshold specified in the contract. The rights of return
+and volume rebates give rise to variable consideration.
+Right of return
+The Group uses the expected value method to estimate the variable consideration given the large number of contracts
+that have similar characteristics. The Group then applies the requirements on constraining estimates of variable
+consideration in order to determine the amount of variable consideration that can be included in the transaction price
+and recognised as revenue. A refund liability is recognised for the goods that are expected to be returned (i.e., the
+amount not included in the transaction price). A right of return asset (and corresponding adjustment to cost of sales)
+is also recognised for the right to recover the goods from the customer.
+Volume rebates
+The Group applies either the most likely amount method or the expected value method to estimate the variable
+consideration in the contract. The selected method that best predicts the amount of variable consideration is primarily
+driven by the number of volume thresholds contained in the contract. The most likely amount is used for those
+contracts with a single volume threshold, while the expected value method is used for those with more than one
+volume threshold.
+=== página 19
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+18
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.5 Material accounting policy information (continued)
+Revenue from contracts with customers (continued)
+Volume rebates (continued)
+The Group then applies the requirements on constraining estimates of variable consideration in order to determine
+the amount of variable consideration that can be included in the transaction price and recognised as revenue. A
+refund liability is recognised for the expected future rebates (i.e., the amount not included in the transaction price).
+Contract balances
+Trade receivables
+A receivable is recognised if an amount of consideration that is unconditional is due from the customer (i.e., only
+the passage of time is required before payment of the consideration is due).
+Contract liabilities
+A contract liability is recognised if a payment is received or a payment is due (whichever is earlier) from a customer
+before the Group transfers the related goods or services. Contract liabilities are recognised as revenue when the
+Group performs under the contract (i.e., transfers control of the related goods or services to the customer).
+Assets and liabilities arising from rights of return
+Right of return assets
+A right of return asset is recognised for the right to recover the goods expected to be returned by customers. The
+asset is measured at the former carrying amount of the inventory, less any expected costs to recover the goods and
+any potential decreases in value. The Group updates the measurement of the asset for any revisions to the expected
+level of returns and any additional decreases in the value of the returned products.
+Refund liabilities
+A refund liability is recognised for the obligation to refund some or all of the consideration received (or receivable)
+from a customer. The Group’s refund liabilities arise from customers’ right of return and volume rebates. The
+liability is measured at the amount the Group ultimately expects it will have to return to the customer. The Group
+updates its estimates of refund liabilities (and the corresponding change in the transaction price) at the end of each
+reporting period.
+Other income
+Other income represents income generated by the Group that arises from activities outside of the principal activities
+of the Group. Key components of other income are recognised as follows:
+Government grants/support
+Government grants are recognized when there is reasonable assurance that grants will be received and the Group
+will comply with all conditions attached to the grants. When the grants relates to an asset, it is recognised as income
+in equal amount over the expected useful life of the related assets.
+The Group receives government grant related to the investments made in the field of dairy production in the State
+of Qatar. Government grant is recognized in the consolidated statement of profit or loss and other comprehensive
+income when there is reasonable assurance that it will be received and the Group will comply with the conditions
+associated with the support.
+The Group has elected to present the grant in the consolidated statement of financial position which is recognised in
+the conolidated statement of profit or loss and other comprehensive income on a systematic and rational basis.
+Rental income
+Rental income arising from operating leases on properties is accounted for on a straight-line basis over the lease
+terms.
+Dividend income
+Dividend income is recognised when the Group’s right to receive the dividend is established.
+=== página 20
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+19
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.5 Material accounting policy information (continued)
+Finance cost
+Finance costs are costs that the Group incurs in connection with the borrowing of funds and lease liabilities. The
+Group recognises it as an expense in the period incurred. The Group capitalises financing costs that are directly
+attributable to the acquisition, construction or production of a qualifying asset as part of the cost of that asset. A
+qualifying asset for finance cost capitalisation is an asset that necessarily takes a substantial period of time to get
+ready for its intended use or sale.
+The Group begins capitalising financing costs as part of the cost of a qualifying asset on the commencement date.
+The commencement date for capitalisation is the date when the Group first meets all of the following conditions:
+a) incurs expenditures for the asset;
+b) incurs borrowing costs; and
+c) undertakes activities that are necessary to prepare the asset for its intended use or sale.
+To the extent that the Group borrows funds specifically for the purpose of obtaining a qualifying asset, the Group
+determines the amount of financing costs eligible for capitalisation as the actual financing costs incurred on that
+financing during the period less any investment income on the temporary investment of those financings, if any. The
+financing costs applicable to the financing of the Group that are outstanding during the period, are capitalised by
+applying a capitalisation rate to the expenditures on that asset.
+The amount of financing costs that the Group capitalises during the period is not to exceed the amount of financing
+costs it incurred during that period. The Group suspends capitalisation of borrowing costs during extended periods
+in which it suspends active development of a qualifying asset, and ceases capitalising borrowing costs when
+substantially all the activities necessary to prepare the qualifying asset for its intended use or sale are complete.
+Taxation
+Current income tax
+Current income tax assets and liabilities are measured at the amount expected to be recovered from or paid to the
+taxation authorities. The tax rates and tax laws used to compute the amount are those that are enacted or substantively
+enacted at the reporting date in the countries where the Group operates and generates taxable income.
+Current income tax relating to items recognised directly in equity is recognised in equity and not in the statement of
+profit or loss. Management periodically evaluates positions taken in the tax returns with respect to situations in
+which applicable tax regulations are subject to interpretation and establishes provisions where appropriate.
+BEPS Pillar Two
+On 27 March 2025, the State of Qatar published Law No. (22) of 2024 amending the Income Tax Law No. (24) of
+2018 in the Official Gazette. These amendments introduce an Income Inclusion Rule (IIR) and a Domestic Minimum
+Top-up Tax (DMTT) applicable to multinational groups, in accordance with the Base Erosion and Profit Shifting
+(BEPS) Pillar Two Global Anti-Base Erosion framework (GloBE Rules or Pillar Two). The GloBE Rules in Qatar
+are effective for accounting periods beginning on or after 1 January 2025.
+These rules incorporate various mechanisms that were introduced into domestic legislation with the aim to ensure
+that large multinational enterprises maintain a minimum effective tax rate of 15% calculated on the profits in every
+jurisdiction that they operate.
+The Group has performed a preliminary assessment on the applicability of the GloBE Rules and assessed that it does
+not meet the requirements.  Accordingly, the Group is out of scope of Pillar Two and is not subject to Pillar Two
+top up taxes for the year ended 31 December 2025.
+The Group will continue to monitor developments in Pillar Two tax legislation and related regulations in Qatar and
+other jurisdictions in which it operates. The Group will continue to assess the applicability of the GloBE Rules and
+evaluate any potential future impact on its consolidated income statement, financial position and cash flows should
+circumstances change.
+=== página 21
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+20
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.5 Material accounting policy information (continued)
+Taxation (continued)
+Deferred tax
+Deferred tax is provided using the liability method on temporary differences between the tax bases of assets and
+liabilities and their carrying amounts for financial reporting purposes at the reporting date.
+Deferred tax liabilities are recognised for all taxable temporary differences, except:
+ When the deferred tax liability arises from the initial recognition of goodwill or an asset or liability in a
+transaction that is not a business combination and, at the time of the transaction, affects neither the accounting
+profit nor taxable profit or loss and does not give rise to equal taxable and deductible temporary differences
+ In respect of taxable temporary differences associated with investments in subsidiaries, associates and interests
+in joint arrangements, when the timing of the reversal of the temporary differences can be controlled and it is
+probable that the temporary differences will not reverse in the foreseeable future.
+Deferred tax assets are recognised for all deductible temporary differences, the carry forward of unused tax credits
+and any unused tax losses. Deferred tax assets are recognised to the extent that it is probable that taxable profit will
+be available against which the deductible temporary differences, and the carry forward of unused tax credits and
+unused tax losses can be utilised, except:
+ When the deferred tax asset relating to the deductible temporary difference arises from the initial recognition of
+an asset or liability in a transaction that is not a business combination and, at the time of the transaction, affects
+neither the accounting profit nor taxable profit or loss and does not give rise to equal taxable and deductible
+temporary differences,
+ In respect of deductible temporary differences associated with investments in subsidiaries, deferred tax assets
+are recognised only to the extent that it is probable that the temporary differences will reverse in the foreseeable
+future and taxable profit will be available against which the temporary differences can be utilized.
+The carrying amount of deferred tax assets is reviewed at each reporting date and reduced to the extent that it is no
+longer probable that sufficient taxable profit will be available to allow all or part of the deferred tax asset to be
+utilised. Unrecognised deferred tax assets are re-assessed at each reporting date and are recognised to the extent that
+it has become probable that future taxable profits will allow the deferred tax asset to be recovered.
+In assessing the recoverability of deferred tax assets, the Group relies on the same forecast assumptions used
+elsewhere in the financial statements and in other management reports, which, among other things, reflect the
+potential impact of climate-related development on the business, such as increased cost of production as a result of
+measures to reduce carbon emission.
+Deferred tax assets and liabilities are measured at the tax rates that are expected to apply in the year when the asset
+is realised or the liability is settled, based on tax rates (and tax laws) that have been enacted or substantively enacted
+at the reporting date.
+The Group offsets deferred tax assets and deferred tax liabilities if and only if it has a legally enforceable right to
+set off current tax assets and current tax liabilities and the deferred tax assets and deferred tax liabilities relate to
+income taxes levied by the same taxation authority on either the same taxable entity or different taxable entities
+which intend either to settle current tax liabilities and assets on a net basis, or to realise the assets and settle the
+liabilities simultaneously, in each future period in which significant amounts of deferred tax liabilities or assets are
+expected to be settled or recovered.
+=== página 22
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+21
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.5 Material accounting policy information (continued)
+Foreign currency transactions
+The Group’s consolidated financial statements are presented in Qatari Riyals, which is also the parent company’s
+functional currency. For each entity, the Group determines the functional currency and items included in the
+financial statements of each entity are measured using that functional currency. The Group uses the direct method
+of consolidation and on disposal of a foreign operation, the gain or loss that is reclassified to profit or loss reflects
+the amount that arises from using this method.
+Transactions in foreign currencies are initially recorded by the Group’s entities at their respective functional
+currency spot rates at the date the transaction first qualifies for recognition. Monetary assets and liabilities
+denominated in foreign currencies are translated at the functional currency spot rates of exchange at the reporting
+date.
+Differences arising on settlement or translation of monetary items are recognised in profit or loss. Non-monetary
+items that are measured in terms of historical cost in a foreign currency are translated using the exchange rates at
+the dates of the initial transactions. Non-monetary items measured at fair value in a foreign currency are translated
+using the exchange rates at the date when the fair value is determined.
+The gain or loss arising on translation of non-monetary items measured at fair value is treated in line with the
+recognition of the gain or loss on the change in fair value of the item (i.e., translation differences on items whose
+fair value gain or loss is recognised in OCI or profit or loss are also recognised in OCI or profit or loss, respectively).
+On consolidation, the assets and liabilities of foreign operations are translated into Qatari Riyals at the rate of
+exchange prevailing at the reporting date and their statements of profit or loss are translated at exchange rates
+prevailing at the dates of the transactions. The exchange differences arising on translation for consolidation are
+recognised in OCI. On disposal of a foreign operation, the component of OCI relating to that particular foreign
+operation is reclassified to profit or loss.
+Property, plant and equipment
+Property, plant and equipment are stated at cost, net of accumulated depreciation and accumulated impairment
+losses, if any. Such cost includes the cost of replacing part of the property and equipment. When significant parts of
+property, plant and equipment are required to be replaced at intervals, the Group depreciates them separately based
+on their specific useful lives. All other repair and maintenance costs are recognised in profit or loss as incurred.
+Depreciation is calculated on a straight-line basis over the estimated useful life of the assets as follows:
+Buildings and structures 5 - 40 years
+Machineries 2 - 25 years
+Motor vehicles 5 - 12 years
+Furniture and fixtures 3 - 5 years
+Land and capital work-in-progress are not depreciated.
+The carrying amounts of property, plant and equipment are reviewed for impairment when events or changes in
+circumstances indicate that the carrying value may not be recoverable. If any such indication exists and where the
+carrying values exceed the estimated recoverable amount, the assets are written down to their recoverable amount,
+being the higher of their fair value less costs to sell and their value in use.
+The useful lives are reviewed at each financial reporting date. The change in estimated useful life of assets affects
+depreciation expense for the year in which the change has occurred and for each future year during the assets'
+remaining useful life.
+Expenditure incurred to replace a component of an item of property, plant and equipment that is accounted for
+separately is capitalised and the carrying amount of the component that is replaced is written off. Other subsequent
+expenditure is capitalised only when it increases future economic benefits of the related item of property, plant and
+equipment. All other expenditure is recognised in the consolidated statement of profit or loss and other
+comprehensive income as the expense is incurred.
+=== página 23
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+22
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.5 Material accounting policy information (continued)
+Property, plant and equipment (continued)
+Capital work-in-progress comprises cost incurred for property, plant and equipment and will be transferred to the
+appropriate classification of property, plant and equipment upon its completion. Capital work in progress is not
+depreciated.
+An item of property, plant and equipment is derecognised upon disposal or when no future economic benefits are
+expected from its use or disposal. Any gain or loss arising on derecognition of the asset is included in the con
+statement of profit or loss and other comprehensive income in the year the asset is derecognised.
+Leases
+The Group assesses at contract inception whether a contract is, or contains, a lease. That is, if the contract conveys
+the right to control the use of an identified asset for a period of time in exchange for consideration.
+Group as a lessee
+The Group applies a single recognition and measurement approach for all leases, except for short-term leases and
+leases of low-value assets. The Group recognises lease liabilities to make lease payments and right-of-use assets
+representing the right to use the underlying assets.
+Right-of-use assets
+The Group recognises right of use assets at the commencement date of the lease (i.e., the date the underlying asset
+is available for use). Right-of-use assets are measured at cost, less any accumulated depreciation and impairment
+losses, and adjusted for any remeasurement of lease liabilities.
+The cost of right-of-use assets includes the amount of lease liabilities recognised, initial direct costs incurred, and
+lease payments made at or before the commencement date less any lease incentives received.
+Right-of-use assets are depreciated on a straight-line basis over the shorter of the lease term and the estimated useful
+lives of the assets, as follows:
+Buildings 10 years
+Lands 5-48 years
+If ownership of the leased asset transfers to the Group at the end of the lease term or the cost reflects the exercise of
+a purchase option, depreciation is calculated using the estimated useful life of the asset.
+Lease liabilities
+At the commencement date of the lease, the Group recognises lease liabilities measured at the present value of lease
+payments to be made over the lease term. The lease payments include fixed payments (including in-substance fixed
+payments) less any lease incentives receivable, variable lease payments that depend on an index or a rate, and
+amounts expected to be paid under residual value guarantees. The lease payments also include the exercise price of
+a purchase option reasonably certain to be exercised by the Group and payments of penalties for terminating the
+lease, if the lease term reflects the Group exercising the option to terminate.
+Variable lease payments that do not depend on an index or a rate are recognised as expenses (unless they are incurred
+to produce inventories) in the period in which the event or condition that triggers the payment occurs.
+In calculating the present value of lease payments, the Group uses its incremental borrowing rate at the lease
+commencement date because the interest rate implicit in the lease is not readily determinable. After the
+commencement date, the amount of lease liabilities is increased to reflect the accretion of interest and reduced for
+the lease payments made. In addition, the carrying amount of lease liabilities is remeasured if there is a modification,
+a change in the lease term, a change in the lease payments (e.g., changes to future payments resulting from a change
+in an index or rate used to determine such lease payments) or a change in the assessment of an option to purchase
+the underlying asset.
+The Group’s lease liabilities are recorded in a separate line item in the consolidated statements of financial position
+under current and non-current.
+=== página 24
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+23
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.5 Material accounting policy information (continued)
+Leases (continued)
+Short-term leases and leases of low-value assets
+The Group applies the short-term lease recognition exemption to its short-term leases (i.e., those leases that have a
+lease term of 12 months or less from the commencement date and do not contain a purchase option). Lease payments
+on short-term leases and leases of low-value assets are recognised as expense on a straight-line basis over the lease
+term.
+Intangible assets
+Intangible assets acquired separately are measured on initial recognition at cost. Following initial recognition,
+intangible assets are carried at cost less any accumulated amortisation and accumulated impairment losses.
+The useful lives of intangible assets are assessed as either finite or indefinite.
+Intangible assets with finite lives are amortised over the useful economic life and assessed for impairment whenever
+there is an indication that the intangible asset may be impaired. The amortisation period and the amortisation method
+for an intangible asset with a finite useful life are reviewed at least at the end of each reporting period and any change
+in estimate is accounted for on prospective basis.
+Intangible assets with indefinite useful lives are not amortised but are tested for impairment annually. Gains or losses
+arising from derecognition of an intangible asset are measured as the difference between the net disposal proceeds
+and the carrying amount of the asset and are recognised in the consolidated statement of profit or loss and other
+comprehensive income when the asset is derecognised.
+Amortisation is calculated using the straight-line method. The amortization expense on intangible assets with finite
+lives is recognised as an expense in the consolidated statement of profit or loss and other comprehensive income.
+Gains or losses arising from derecognition of an intangible asset are measured as the difference between the net
+disposal proceeds and the carrying amount of the asset and are recognised in the consolidated income statement
+when the asset is derecognised.
+Amortisation is calculated on a straight-line basis over the estimated useful economic life of the assets as follows:
+Trademark/license 3 to 10 years
+Biological assets
+Biological asset is a living animal or plant. Biological assets of the Group consist of cows. Biological assets are
+measured at fair value less cost to sell except when fair value cannot be measured reliably. Where fair value cannot
+be measured reliably, in such a case, that biological asset shall be measured at its cost less any accumulated
+depreciation and any accumulated impairment losses.
+The fair value of immature livestock is determined by reference to meat price of veal, adjusted to reflect the age of
+the calves and to the landed cost of a heifer by reference to the recent purchases of the Group. The fair value of
+mature cows is determined by reference to the latest landed cost of a heifer by reference to the recent purchases
+adjusted to reflect the decline in productivity through the lactation cycles, the meat price at the point of slaughter.
+The Group expenses out all the costs incurred in raising immature biological assets and appreciates their values from
+birth till their first calving considering the costs incurred on rearing or raising them to their respective age. The
+appreciation is carried out on a basis considering that immature biological assets would mature by the age of 25
+months by benchmarking on the cost incurred to acquire the biological assets.
+Once the biological asset is matured and enters the lactation cycle it is depreciated on a straight-line basis over 5
+lactation cycles till it reached its residual value.
+=== página 25
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+24
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.5 Material accounting policy information (continued)
+Impairment of non-financial assets
+The Group assesses at each reporting date whether there is an indication that an asset may be impaired. If any
+indication exists, or when annual impairment testing for an asset is required, the Group estimates the asset’s
+recoverable amount. An asset’s recoverable amount is the higher of an asset’s fair value less costs to sell and its
+value in use and is determined for an individual asset, unless the asset does not generate cash inflows that are largely
+independent of those from other assets or groups of assets. Where the carrying amount of an asset exceeds its
+recoverable amount, the asset is considered impaired and is written down to its recoverable amount.
+In assessing value in use, the estimated future cash flows are discounted to their present value using a discount rate
+that reflects current market assessments of the time value of money and the risks specific to the asset. In determining
+fair value less costs to sell, an appropriate valuation model is used. These calculations are corroborated by valuation
+multiples or other available fair value indicators.
+Impairment losses are recognised in the consolidated statement of profit or loss and other comprehensive income in
+those expense categories consistent with the function of the impaired asset, except for assets previously revalued
+where the revaluation was taken to other comprehensive income. In this case, the impairment is also recognised in
+other comprehensive income up to the amount of any previous revaluation. An assessment is made at each reporting
+date as to whether there is any indication that previously recognised impairment losses may no longer exist or may
+have decreased. If such indication exists, the Group estimates the asset’s recoverable amount. A previously
+recognised impairment loss is reversed only if there has been a change in the assumptions used to determine the
+asset’s recoverable amount since the last impairment loss was recognised.The reversal is limited so that the carrying
+amount of the asset does not exceed its recoverable amount, nor exceed the carrying amount that would have been
+determined, net of depreciation, had no impairment loss been recognised for the asset in prior years. Such reversal
+is recognised in the consolidated statement of profit or loss and other comprehensive income unless the asset is
+carried at a revalued amount, in which case the reversal is treated as a revaluation increase.
+Financial instruments
+A financial instrument is any contract that gives rise to a financial asset of one entity and a financial liability or
+equity instrument of another entity.
+Financial assets
+Financial assets are classified, at initial recognition, as subsequently measured at amortised cost, fair value through
+other comprehensive income “(OCI)”, and fair value through profit or loss.
+Classification
+The classification of financial assets at initial recognition depends on the financial asset’s contractual cash flow
+characteristics and the Group’s business model for managing them. With the exception of trade receivables that do
+not contain a significant financing component, the Group initially measures a financial asset at its fair value plus, in
+the case of a financial asset not at fair value through profit or loss, transaction costs. Trade receivables do not contain
+a significant financing component or for which the Group has applied the practical expedient are measured at the
+transaction price determined under IFRS 15.
+In order for a financial asset to be classified and measured at amortised cost or fair value through OCI, it needs to
+give rise to cash flows that are ‘solely payments of principal and interest (SPPI)’ on the principal amount
+outstanding. This assessment is referred to as the SPPI test and is performed at an instrument level.
+Business model: the business model reflects how the Group manages the assets in order to generate cash flows.
+That is, whether the Group’s objective is solely to collect the contractual cash flows from the assets or is to collect
+both the contractual cash flows and cash flows arising from the sale of assets. If neither of these is applicable (e.g.
+financial assets are held for trading purposes), then the financial assets are classified as part of ‘other’ business
+model and measured at fair value through profit or loss (‘FVTPL”). Factors considered by the Group in determining
+the business model for a Group of assets include past experience on how the cash flows for these assets were
+collected, how the asset’s performance is evaluated and reported to key management personnel, how risks are
+assessed and managed and how managers are compensated.
+=== página 26
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+25
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.5 Material accounting policy information (continued)
+Financial instruments (continued)
+Financial assets (continued)
+SPPI: Where the business model is to hold assets to collect contractual cash flows or to collect contractual cash
+flows and sell, the Group assesses whether the financial instruments’ cash flows represent solely payments of
+principal and interest (the ‘SPPI test’). In making this assessment, the Company considers whether the contractual
+cash flows are consistent with a basic lending arrangement, i.e. interest includes only consideration for the time
+value of money, credit risk, other basic lending risks and a profit margin that is consistent with a basic lending
+arrangement. Where the contractual terms introduce exposure to risk or volatility that are inconsistent with a basic
+lending arrangement, the related financial asset is classified and measured at Fair value through profit or loss
+“(FVTPL)”.
+Subsequent measurement
+For purposes of subsequent measurement, financial assets are classified in four categories:
+ Financial assets at amortised cost (debt instruments)
+ Financial assets at fair value through OCI with recycling of cumulative gains and losses (debt instruments)
+ Financial assets designated at fair value through OCI with no recycling of cumulative gains and losses upon
+derecognition (equity instruments)
+ Financial assets at fair value through profit or loss
+Financial assets at amortised cost (debt instruments)
+The Group measures financial assets at amortised cost if both of the following conditions are met:
+ The financial asset is held within a business model with the objective to hold financial assets in order to collect
+contractual cash flows and
+ The contractual terms of the financial asset give rise on specified dates to cash flows that are solely payments
+of principal and interest on the principal amount outstanding.
+Financial assets at amortised cost are subsequently measured using the effective interest rate “(EIR)” method and
+are subject to impairment. Gains and losses are recognised in profit or loss when the asset is derecognised, modified
+or impaired. The Group’s financial assets at amortised cost include trade receivables, amount due from related
+parties, government support, accrued income, staff receivables, other receivables, bank balances and cash.
+Financial assets at fair value through profit or loss
+Financial assets at fair value through profit or loss are carried in the consolidated statement of financial position at
+fair value with net changes in fair value recognised in the statement of profit or loss.
+This category includes listed equity investments which the Group had not irrevocably elected to classify at fair value
+through OCI. Dividends on listed equity investments are recognised as other income in the statement of profit or
+loss and other comprehensive income when the right of payment has been established.
+Derecognition
+A financial asset (or, where applicable, a part of a financial asset or part of a group of similar financial assets) is
+primarily derecognised (i.e., removed from the Group’s statement of financial position) when:
+ The rights to receive cash flows from the asset have expired; or
+ The Group has transferred its rights to receive cash flows from the asset or has assumed an obligation to pay the
+received cash flows in full without material delay to a third party under a ‘pass-through’ arrangement; and either
+(a) the Group has transferred substantially all the risks and rewards of the asset, or (b) the Group has neither
+transferred nor retained substantially all the risks and rewards of the asset, but has transferred control of the
+asset.
+=== página 27
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+26
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.5 Material accounting policy information (continued)
+Financial instruments (continued)
+Financial assets (continued)
+Derecognition (continued)
+When the Group has transferred its rights to receive cash flows from an asset or has entered into a pass-through
+arrangement, it evaluates if, and to what extent, it has retained the risks and rewards of ownership. When it has
+neither transferred nor retained substantially all of the risks and rewards of the asset, nor transferred control of the
+asset, the Group continues to recognise the transferred asset to the extent of its continuing involvement. In that case,
+the Group also recognises an associated liability. The transferred asset and the associated liability are measured on
+a basis that reflects the rights and obligations that the Group has retained.
+Continuing involvement that takes the form of a guarantee over the transferred asset is measured at the lower of the
+original carrying amount of the asset and the maximum amount of consideration that the Group could be required
+to repay.
+Impairment of financial assets
+The Group recognises an allowance for expected credit losses “(ECLs)” for all debt instruments not held at fair
+value through profit or loss. ECLs are based on the difference between the contractual cash flows due in accordance
+with the contract and all the cash flows that the Group expects to receive, discounted at an approximation of the
+original effective interest rate. The expected cash flows will include cash flows from the sale of collateral held or
+other credit enhancements that are integral to the contractual terms.
+ECLs are recognised in two stages. For credit exposures for which there has not been a significant increase in credit
+risk since initial recognition, ECLs are provided for credit losses that result from default events that are possible
+within the next 12-months (a 12-month ECL). For those credit exposures for which there has been a significant
+increase in credit risk since initial recognition, a loss allowance is required for credit losses expected over the
+remaining life of the exposure, irrespective of the timing of the default (a lifetime ECL).
+For trade receivables, staff receivables, other receivables, government support, accrued income, and amount due
+from related parties, the Group applies a simplified approach in calculating ECLs. Therefore, the Group does not
+track changes in credit risk, but instead recognises a loss allowance based on lifetime ECLs at each reporting date.
+The Group has established a provision matrix that is based on its historical credit loss experience, adjusted for
+forward-looking factors specific to the debtors and the economic environment.
+Financial liabilities
+Initial recognition and measurement
+Financial liabilities are classified, at initial recognition, as financial liabilities at fair value through profit or loss,
+Islamic financing contracts, payables, or as derivatives designated as hedging instruments in an effective hedge, as
+appropriate. All financial liabilities are recognised initially at fair value and, in the case of Islamic financing contracts
+and payables, net of directly attributable transaction cost.
+The Group’s financial liabilities include trade payable, amount due to related parties, Islamic financing contracts,
+bank overdraft, lease liabilities, accrued expenses and other payables.
+Subsequent measurement
+The measurement of financial liabilities depends on their classification.
+Islamic financing contracts (Amortised cost)
+This is the category most relevant to the Group. After initial recognition, finance-bearing Islamic financing contracts
+are subsequently measured at amortised cost using the EIR method. Gains and losses are recognised in the separate
+statement of profit or loss and other comprehensive income when the liabilities are derecognised as well as through
+the EIR amortisation process.
+=== página 28
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+27
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.5 Material accounting policy information (continued)
+Subsequent measurement (continued)
+Islamic financing contracts (Amortised cost) (continued)
+Amortised cost is calculated by taking into account any discount or premium on acquisition and fees or costs that
+are an integral part of the EIR. The EIR amortisation is included as finance costs in the statement of profit or loss.
+Derecognition
+A financial liability is derecognised when the obligation under the liability is discharged or cancelled or expired.
+When an existing financial liability is replaced by another from the same lender on substantially different terms, or
+the terms of an existing liability are substantially modified, such an exchange or modification is treated as the
+derecognition of the original liability and the recognition of a new liability. The difference in the respective carrying
+amounts is recognised in the separate statement of profit or loss and other comprehensive income.
+Offsetting of financial instruments
+Financial assets and financial liabilities are offset and the net amount is reported in the consolidated statement of
+financial position if there is a currently enforceable legal right to offset the recognised amounts and there is an
+intention to settle on a net basis, to realise the assets and settle the liabilities simultaneously.
+Inventories
+Inventories are stated at the lower of cost and net realizable value. Costs are those expenses incurred in bringing
+each item to its present location and condition. Cost of the inventory is determined  as follows;
+- Raw material: by the weighted average cost methods and includes invoiced cost and other expenditures incurred
+in bringing the inventories to their present location and condition.
+- Finished goods and semi-finished goods: cost of direct materials and labour and a proportion of manufacturing
+overheads based on the normal operating capacity, but excluding borrowing costs
+Net realisable value is the estimated selling price in the ordinary course of business, less the estimated costs of
+completion and selling expenses.
+Agriculture produce harvested from biological assets are measured at fair value less cost to sell at the point of
+harvest.
+Cash and cash equivalents
+Cash and bank balances in the consolidated statement of financial position comprise cash at banks and on hand and
+short-term deposits with a remaining maturity of less than 1 year, that are readily convertible to a known amount of
+cash. For the purpose of the consolidated statement of cash flows, cash and cash equivalents consist of cash and
+bank balances, short-term deposits with an original maturity of three months or less, net of bank overdrafts and
+restricted cash if any as they are considered an integral part of the Group’s cash management.
+Dividends
+The Group recognises a liability to make cash distributions to equity holders of the Parent when the cash distribution
+is authorised and the distribution is no longer at the discretion of the Group. As per the Qatar Commercial Companies
+Law No. 11 of 2015, whose certain provisions were subsequently amended by Law No.8 of 2021, a distribution is
+authorised when it is approved by the shareholders. A corresponding amount is recognised directly in equity.
+Dividends for the year that are approved after the reporting date of the consolidated financial statements are
+considered as an event after the reporting date.
+Bonus shares
+Bonus shares represent a capitalisation of the parent company’s reserves and do not involve any inflow or outflow
+of cash or other assets. Accordingly, the issue of bonus shares does not result in any change in the total equity of the
+Group. When bonus shares are issued, an amount equal to the nominal value of the shares issued is transferred from
+retained earnings or other distributable reserves to share capital. No consideration is received from shareholders in
+respect of bonus shares and no gain or loss is recognised in profit or loss.
+=== página 29
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+28
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.5 Material accounting policy information (continued)
+Provision for employees’ end of service benefits
+The Group provides end of service benefits to its employees. The entitlement to these benefits is based upon the
+employees’ final salary and length of service, subject to the completion of a minimum service period. The expected
+costs of these benefits are accrued over the period of employment. The Group has no expectation of settling all its
+employees’ end of service benefits within the next 12 month period and hence has classified the same as a non-
+current liability.
+Under Law No. 14 of 2014 on Retirement and Pension, the Company is required to make contributions to a
+Government fund scheme for Qatari employees calculated as a percentage of the Qatari employees’ salaries. The
+Company’s obligations are limited to these contributions, which are expensed when due.
+Provisions
+Provisions are recognised when the Group has a present obligation (legal or constructive) as a result of a past event,
+it is probable that an outflow of resources embodying economic benefits will be required to settle the obligation and
+a reliable estimate can be made of the amount of the obligation. The expense relating to a provision is presented in
+the statement of profit or loss net of any reimbursement. Provisions are recognised when the Group has a present
+obligation (legal or constructive) as a result of a past event, and the costs to settle the obligation are both probable
+and able to be reliably measured.
+Contingent liabilities and contingent assets
+Contingent liabilities are not recognised in the consolidated financial statements, but are disclosed unless the
+possibility of an outflow of resources embodying economic benefits is remote. Contingent assets are not recognised
+in the consolidated financial statements but are disclosed when an inflow of economic benefits is probable.
+Fair value measurements
+Fair value is the price that would be received to sell an asset or paid to transfer a liability in an orderly transaction
+between market participants at the measurement date. The fair value measurement is based on the presumption that
+the transaction to sell the asset or transfer the liability takes place either:
+ In the principal market for the asset or liability, or
+ In the absence of a principal market, in the most advantageous market for the asset or liability
+The principal or the most advantageous market must be accessible to by the Group.
+The fair value of an asset or a liability is measured using the assumptions that market participants would use when
+pricing the asset or liability, assuming that market participants act in their economic best interest.
+A fair value measurement of a non-financial asset takes into account a market participant’s ability to generate
+economic benefits by using the asset in its highest and best use or by selling it to another market participant that
+would use the asset in its highest and best use.
+The Group uses valuation techniques that are appropriate in the circumstances and for which sufficient data are
+available to measure fair value, maximising the use of relevant observable inputs and minimising the use of
+unobservable inputs.
+All assets and liabilities for which fair value is measured or disclosed in the consolidated financial statements are
+categorised within the fair value hierarchy, described as follows, based on the lowest level input that is significant
+to the fair value measurement as a whole:
+ Level 1 - Quoted (unadjusted) market prices in active markets for identical assets or liabilities.
+ Level 2 - Valuation techniques for which the lowest level input that is significant to the fair value
+measurement is directly or indirectly observable.
+ Level 3 -  Valuation techniques for which the lowest level input that is significant to the fair value
+measurement is unobservable.
+=== página 30
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+29
+3 BASIS OF PREPARATION AND MATERIAL ACCOUNTING POLICY INFORMATION
+(CONTINUED)
+3.5 Material accounting policy information (continued)
+Current versus non-current classification (continued)
+For assets that are recognised in the consolidated financial statements on a recurring basis, the Group determines
+whether transfers have occurred between Levels in the hierarchy by re-assessing categorisation (based on the lowest
+level input that is significant to the fair value measurement as a whole) at the end of each reporting period.
+Current versus non-current classification
+The Group presents assets and liabilities based on current/non-current classification.
+An asset is classified as current when it is:
+ Expected to be realised or intended to be sold or consumed in normal operating cycle
+ Held primarily for the purpose of trading
+ Expected to be realised within twelve months after the reporting period, or
+ Cash or cash equivalent unless restricted from being exchanged or used to settle a liability for at least twelve
+months after the reporting period
+All other assets are classified as non-current.
+A liability is classified as current when it is:
+ It is expected to be settled in normal operating cycle;
+ It is held primarily for the purpose of trading;
+ It is due to be settled within twelve months after the reporting period; or
+ There is no unconditional right to defer the settlement of the liability for at least twelve months after the reporting
+period.
+All other liabilities are classified as non-current.
+Segmental reporting
+An operating segment is a component of the Group that engages in the business activities from which it may earn
+revenues and incur expenses, including revenue and expenses that relate to transactions with any of Group’s other
+components. The segmental results that are reported to the Group’s chief operating decision makers (“CODM”) to
+make decision about the resources to be allocated to segment and to assess its performance and for which discrete
+financial information is available. Operating segments are reported in a manner consistent with the internal reporting
+provided to the chief operating decision maker.
+Events after the reporting date
+The Group receives information after the reporting period, but prior to the date of authorisation for issue, about
+conditions that existed at the end of the reporting period, it will assess whether the information affects the amounts
+that it recognises in its separate financial statements. The Group will adjust the amounts recognised in its
+consolidated financial statements to reflect any adjusting events after the reporting period and update the disclosures
+that relate to those conditions in light of the new information. For non-adjusting events after the reporting period,
+the Group will not change the amounts recognised in its consolidated financial statements, but will disclose the
+nature of the non-adjusting event and an estimate of its financial effect, or a statement that such an estimate cannot
+be made, if applicable.
+Earnings per share (“EPS”)
+Basic EPS is calculated by dividing the profit for the year attributable to ordinary equity holders of the parent by the
+weighted average number of ordinary shares outstanding during the year.
+Diluted EPS is calculated by dividing the profit attributable to ordinary equity holders of the parent (after adjusting
+for interest on the convertible preference shares) by the weighted average number of ordinary shares outstanding
+during the year plus the weighted average number of ordinary shares that would be issued on conversion of all the
+dilutive potential ordinary shares into ordinary shares.
+=== página 31
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+30
+4 REVENUE FROM CONTRACT WITH CUSTOMERS
+The following sets out the disaggregation of the Group’s revenue from contracts with customers:
+2025 2024
+QR QR
+Type of goods
+Dairy sales 1,132,924,050 1,012,218,029
+Juice sales 70,699,654 73,935,069
+Livestock sales 38,031,308 35,910,139
+Detergent sales 20,403,033 17,767,256
+Plastic sales 3,224,198 2,816,729
+Compost and manure sales 2,564,760 2,565,275
+Feed sales - 14,686
+1,267,847,003 1,145,227,183
+2025 2024
+QR QR
+Timing of satisfaction of performance obligation
+Goods transferred at point in time 1,267,847,003 1,145,227,183
+Geographical location
+State of Qatar 1,259,795,642 1,138,094,131
+Outside of Qatar 8,051,361 7,133,052
+1,267,847,003 1,145,227,183
+Type of customers
+External customers 1,234,469,928 1,107,209,557
+Related parties (Note 27) 33,377,075 38,017,626
+1,267,847,003 1,145,227,183
+Contract balances
+The Company’s contract balances at gross amounts are as follows:
+2025 2024
+QR QR
+Contract asset
+Trade receivables (Note 18) 133,871,323 115,537,249
+Contract liabilities
+Refund liabilities
+Arising from volume rebates (Note 25) 11,143,959 7,844,206
+Unsatisfied performance obligations:
+Details of unsatisfied performance obligations at the reporting date are as follows:
+2025 2024
+QR QR
+Unsatisfied performance obligation relating to the delivery of goods 2,223,596 2,319,394
+=== página 32
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+31
+5 COST OF SALES
+2025 2024
+QR QR
+Cost of materials 573,113,618 513,308,766
+Depreciation of property, plant and equipment (Note 11) 131,660,123 114,081,287
+Direct labour cost and related expenses 81,998,850 83,925,218
+Rent and maintenance 58,855,427 65,554,438
+Cost of sale, death, slaughter, disposal and transfer of biological asset
+(Note 15) 74,275,539 66,621,049
+Utilities 28,700,942 35,357,963
+Production related indirect expenses 24,171,870 21,612,796
+Depreciation of right-of-use assets (Note 12) 8,402,873 7,994,847
+Insurance expenses 7,602,139 7,278,769
+Provision for slow moving inventories (Note 17) 1,000,000 5,472,343
+New product development cost 425,150 825,657
+Inventory written off 89,309 -
+Amortization of intangible assets (Note 13) 4,091 32,836
+Others 4,182,789 8,121,765
+994,482,720 930,187,734
+Net fair value gain on biological assets (Note 15) (56,413,733) (45,297,535)
+938,068,987 884,890,199
+6 OTHER INCOME
+2025 2024
+QR QR
+Government support (Note i) 83,752,375 104,933,491
+Dividend income 3,299,277 2,224,890
+Rental income 69,521 816,788
+Gain on disposal of property, plant and equipment 196,925 123,585
+Stock holding charges 3,600,000 3,600,000
+Miscellaneous income 2,313,943 2,471,937
+93,232,041 114,170,691
+Note i:
+During the year, the Group’s has recognised a support from the Government amounting to QR 83,752,375 (2024:
+104,933,491). The support is granted to the Group on account of the investment made in the field of dairy
+manufacturing to ensure the country's food supplies. There are certain conditions that need to be met by the Group
+in order to be entitled to the government support. As at 31 December 2025, management believes that these
+conditions have been satisfactorily achieved, accordingly, the support has been recognised on an accrued basis (Note
+18).
+=== página 33
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+32
+7 SELLING AND DISTRIBUTION EXPENSES
+2025 2024
+QR QR
+Staff cost 42,390,465 43,135,985
+Advertising and promotion expenses 36,853,329 31,037,599
+Utilities and maintenance expenses 7,206,682 6,617,487
+Depreciation of property, plant and equipment (Note 11) 3,141,845 3,760,849
+Depreciation of right-of-use assets (Note 12) 3,381,611 3,064,470
+(Reversal) / allowance for expected credit losses (Note 18) (75,433) 78,561
+Insurance expenses 422,805 438,063
+Amortization of intangible assets (Note 13) 267,239 287,897
+Others 1,800,476 4,498,438
+95,389,019 92,919,349
+8 GENERAL AND ADMINISTRATIVE EXPENSES
+2025 2024
+QR QR
+Staff cost 35,672,185 29,216,915
+Professional charges 14,527,436 13,446,646
+Communication and SAP expenses 7,572,529 9,513,080
+Management fees (Note 27) 9,000,000 9,000,000
+Board remuneration (Note 27) 6,504,353 3,142,883
+Amortization of intangible assets (Note 13) 3,001,638 3,102,162
+Depreciation of property, plant and equipment (Note 11) 1,666,628 2,422,172
+Bank charges 1,083,057 2,054,780
+Insurance expenses 895,887 975,209
+Utilities, rent and maintenance expenses 958,266 913,313
+Stationery and printing expenses 184,710 316,816
+Governmental fees 191,099 269,560
+Depreciation of right-of-use assets (Note 12) 41,181 62,848
+81,298,969 74,436,384
+9 FINANCE COST
+2025 2024
+QR QR
+Finance cost on Islamic financing contracts 72,540,997 62,546,943
+Finance cost on bank overdrafts 10,141,542 4,268,935
+Finance cost on lease liabilities (Note 12) 2,902,561 2,179,581
+85,585,100 68,995,459
+Finance costs capitalised (Note 11) (7,113,685) (10,080,203)
+78,471,415 58,915,256
+=== página 34
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+33
+10 INCOME TAX
+Income tax
+In December 2019, a new Executive Regulations for the tax was introduced in the State of Qatar, replacing the
+previous executive regulations. The tax exemption provided under Article 4 (paragraph 13) of the New Tax Law in
+relation to non-Qatari investors’ share in profits in listed entities shall not be extended to subsidiaries/associates of
+listed entities. Accordingly, if a listed entity holds shares in a non-listed entity, the share of profits in the non-listed
+entity attributable to the listed entity would be subject to tax to the extent of the profit share attributable to non-
+Qatari shareholders in the listed entity.
+Current year income tax details of the Group are as follows:
+2025 2024
+QR QR
+Current income tax
+Income tax expense Note (i) 1,293,253 893,288
+Reconciliation between profit before income tax expense as per the statement of comprehensive income and taxable
+profit of a subsidiary is as follows:
+2025 2024
+QR QR
+Accounting profit before tax 157,091,363 146,270,199
+Add: Non-deductible expense 4,907,960 17,998,460
+Less: deductible provisions (31,499,523) (60,397,961)
+Taxable income 130,499,800 103,870,698
+Effective tax rate applicable foreign partners share of profit 0.9910% 0.8600%
+Income tax expenses for the year 1,293,253 893,288
+The movement of income tax payable is as below;
+2025 2024
+QR QR
+At 1 January 1,460,031 780,702
+Provided during the year 1,293,253 893,288
+Payment during the year (952,674) (213,959)
+At 31 December (Note 25) 1,800,610 1,460,031
+Note (i):
+The income tax represents amounts recognised by a subsidiary company.
+Deferred tax
+The Group has not recognised deferred tax assets relating to temporary differences amounted to QR 9,589,444 as at
+31 December 2025 (2024: QR 8,496,227).
+=== página 35
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+34
+11 PROPERTY, PLANT AND EQUIPMENT
+Land
+Building and
+structures Machineries
+Motor
+vehicles
+Furniture
+and fixtures
+Capital
+work in
+progress Total
+QR QR QR QR QR QR QR
+Cost:
+As at 1 January 2025 55,200,100 1,991,059,772 1,065,064,858 84,340,010 47,644,169 668,452,052 3,911,760,961
+Additions - 8,183,575 16,258,124 4,213,448 500,307 205,447,744 234,603,198
+Transfers - 255,536,215 185,006,864 4,717,934 3,238,911 (448,499,924) -
+Disposals - - (597,162) (1,890,074) (1,719,123) - (4,206,359)
+Transfer to intangible assets (Note 13) - - - - - (208,396) (208,396)
+As at 31 December 2025 55,200,100 2,254,779,562 1,265,732,684 91,381,318 49,664,264 425,191,476 4,141,949,404
+Accumulated depreciation:
+As at 1 January 2025 - 348,701,831 290,063,313 44,095,017 40,636,584 - 723,496,745
+Charge for the year - 63,082,085 59,675,870 8,732,961 4,977,680 - 136,468,596
+Related to disposals - - (535,946) (1,370,155) (1,715,327) - (3,621,428)
+As at 31 December 2025 - 411,783,916 349,203,237 51,457,823 43,898,937 - 856,343,913
+Net book value:
+As at 31 December 2025 55,200,100 1,842,995,646 916,529,447 39,923,495 5,765,327 425,191,476 3,285,605,491
+=== página 36
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+35
+11 PROPERTY, PLANT AND EQUIPMENT (CONTINUED)
+Land
+Building and
+structures Machineries
+Motor
+vehicles
+Furniture
+and fixtures
+Capital
+work in
+progress Total
+QR QR QR QR QR QR QR
+Cost:
+As at 1 January 2024 55,200,100 1,974,208,136 1,050,792,985 78,864,491 46,909,042 592,781,076 3,798,755,830
+Additions - 1,290,912 6,548,964 7,702,404 2,176,198 105,353,302 123,071,780
+Transfers - 15,560,724 11,127,042 112,645 92,744 (26,893,155) -
+Disposals - - (3,404,133) (2,339,530) (1,533,815) - (7,277,478)
+Transfer to intangible assets (Note 13) - - - - - (2,789,171) (2,789,171)
+As at 31 December 2024 55,200,100 1,991,059,772 1,065,064,858 84,340,010 47,644,169 668,452,052 3,911,760,961
+Accumulated depreciation:
+As at 1 January 2024 - 294,719,273 240,935,057 38,191,227 36,070,577 - 609,916,134
+Charge for the year - 53,982,558 52,533,068 7,653,166 6,095,516 - 120,264,308
+Related to disposals during the year - - (3,404,133) (1,750,055) (1,529,509) - (6,683,697)
+As at 31 December 2024 - 348,701,831 290,063,992 44,094,338 40,636,584 - 723,496,745
+Net book value:
+As at 31 December 2024 55,200,100 1,642,357,941 775,000,866 40,245,672 7,007,585 668,452,052 3,188,264,216
+Notes:
+i. Depreciation expenses charged for the year have been allocated as follows:
+2025 2024
+QR QR
+Cost of sales (Note 5) 131,660,123 114,081,287
+Selling and distribution expenses (Note 7) 3,141,845 3,760,849
+General and administrative expenses (Note 8) 1,666,628 2,422,172
+136,468,596 120,264,308
+ii. Capital work-in-progress represents expenses incurred by the Group in respect of construction of farm and factories.
+iii. Additions during the year included borrowing capitalized amounted to QR 7,113,685 (2024: QR 10,080,203).
+=== página 37
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+36
+12 RIGHT-OF-USE ASSETS AND LEASE LIABILITIES
+Right-of-use assets
+The Group leases land used for farm and leasehold building for employee accommodation. Information about the
+leases for which the Group is a lessee is presented below:
+Land Building Total
+QR QR QR
+Cost:
+As at 1 January 2025 8,544,215 138,326,847 146,871,062
+Expiration (578,964) - (578,964)
+Remeasurement - 6,707,560 6,707,560
+As at 31 December 2025 7,965,251 145,034,407 152,999,658
+Accumulated depreciation:
+As at 1 January 2025 804,161 35,671,957 36,476,118
+Relating to expiration (578,964) - (578,964)
+Charge for the year 177,006 11,648,659 11,825,665
+As at 31 December 2025 402,203 47,320,616 47,722,819
+Net carrying amounts:
+As at 31 December 2025 7,563,048 97,713,791 105,276,839
+Land Building Total
+QR QR QR
+Cost:
+As at 1 January 2024 8,544,215 138,326,847 146,871,062
+As at 31 December 2024 8,544,215 138,326,847 146,871,062
+Accumulated depreciation:
+As at 1 January 2024 531,017 24,822,936 25,353,953
+Charge for the year 273,144 10,849,021 11,122,165
+As at 31 December 2024 804,161 35,671,957 36,476,118
+Net carrying amounts:
+As at 31 December 2024 7,740,054 102,654,890 110,394,944
+Depreciation expenses of right of use assets have been allocated in the statement of profit and loss are as follows:
+2025 2024
+QR QR
+Cost of sales (Note 5) 8,402,873 7,994,847
+Selling and distribution expenses (Note 7) 3,381,611 3,064,470
+General and administrative expenses (Note 8) 41,181 62,848
+11,825,665 11,122,165
+=== página 38
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+37
+12 RIGHT-OF-USE ASSETS AND LEASE LIABILITIES (CONTINUED)
+Lease liabilities
+Below are the carrying amounts of lease liabilities and the movements during the year:
+2025 2024
+QR QR
+As at 1 January 78,118,721 122,063,016
+Remeasurement 6,707,560 -
+Finance cost charged (Note 9) 2,902,561 2,179,581
+Repayments during the year (400,000) (46,123,876)
+As at 31 December 87,328,842 78,118,721
+The lease liabilities are presented in the consolidated statement of financial position as follows:
+2025 2024
+QR QR
+Non-current 87,245,526 78,041,691
+Current  83,316 77,030
+87,328,842 78,118,721
+The following are the amounts recognised in consolidated statements of profit or loss and other comprehensive
+income for the year:
+2025 2024
+QR QR
+Depreciation on right-of-use assets 11,825,665 11,122,165
+Finance cost on lease liabilities (Note 9) 2,902,561 2,179,581
+Short term and variable leases rent 16,739,496 20,934,944
+31,467,722 34,236,690
+13 INTANGIBLE ASSETS
+2025 2024
+QR QR
+Cost:
+As at 1 January 21,086,043 17,206,242
+Additions 29,894 1,090,630
+Transfer from property, plant and equipment (Note 11) 208,396 2,789,171
+As at 31 December 21,324,333 21,086,043
+Accumulated depreciation:
+As at 1 January 13,137,350 9,714,455
+Charge for the year 3,272,968 3,422,895
+As at 31 December 16,410,318 13,137,350
+Net carrying amounts:
+As at 31 December 4,914,015 7,948,693
+=== página 39
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+38
+13 INTANGIBLE ASSETS (CONTINUED)
+Amortization expenses charged for the year ended 31 December is allocated as follows:
+2025 2024
+QR QR
+Cost of sales (Note 5) 4,091 32,836
+Selling and distribution expenses (Note 7) 267,239 287,897
+General and administrative expenses (Note 8) 3,001,638 3,102,162
+3,272,968 3,422,895
+14 INVESTMENTS IN FINANCIAL ASSETS AT FAIR VALUE THROUGH PROFIT OR LOSS
+The movement in investment in financial assets at fair value through profit or loss is as follows:
+2025 2024
+QR QR
+As at 1 January 523,694,449 371,841,124
+Addition during the year 62,774,885 116,108,854
+Cost of disposal during the year - (1,820,715)
+Net change in fair value of financial investments (Note i) 408,007,466 37,565,186
+As at 31 December 994,476,800 523,694,449
+As at 31 December 2025 and 31 December 2024, investment in financial assets at fair value through profit and loss
+represent equity shares quoted in the Qatar Stock Exchange and the Egyptian Exchange.
+Note i
+During 2024, net change in fair value of financial investments include a realized gain amounted to QR 391,722.
+15 BIOLOGICAL ASSETS
+The Group’s livestock balance primarily comprises cows which are used in the production of milk and meat. The
+Group’s biological assets stock comprises both immature and mature biological assets.
+Immature biological assets comprise of calves that are intended to be reared to mature. These calves are held to
+produce milk, but have not started to produce milk. The fair value of the immature biological assets is determined
+by reference to meat price of veal, adjusted to reflect the age of the immature biological assets and cost to acquire
+a heifer.
+Mature biological assets include cows, which have begun milk production. The fair value of the matured cows is
+determined by reference to the latest landed cost of a heifer adjusted to reflect the decline in productivity through
+the lactation cycles and the meat price at the point of slaughter.
+The movement in the value of biological assets during the year is as follows:
+2025 2024
+QR QR
+As at 1 January 177,387,580 198,711,094
+Addition 34,581,698 -
+Net fair value gain on biological assets (Note 5) 56,413,733 45,297,535
+Cost of sale, death, slaughter, disposal and transfer of biological asset (Note 5) (74,275,539) (66,621,049)
+As at 31 December 194,107,472 177,387,580
+=== página 40
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+39
+15 BIOLOGICAL ASSETS (CONTINUED)
+The value of biological assets presented in the consolidated statement of financial position is as follows:
+2025 2024
+QR QR
+Current 446,200 482,800
+Non-current 193,661,272 176,904,780
+194,107,472 177,387,580
+2025 2024
+QR QR
+Mature biological assets 131,786,202 115,662,580
+Immature biological assets 62,321,270 61,725,000
+194,107,472 177,387,580
+The quantity (number) of biological assets owned by the Group is as follows:
+2025 2024
+QR QR
+Mature biological assets 10,369 9,818
+Immature biological assets 9,581 8,762
+19,950 18,580
+16 GOODWILL
+During 2023, the Group acquired 75% shareholding in the subsidiary E-Life Detergent Factory W.L.L for purchase
+consideration of QR 13,840,000. The net asset value of the Groups share of subsidiary as of the date of acquisition
+was QR 7,047,365. The Group has therefore, recognised goodwill of QR 6,792,635 on acquisition.
+The Group has considered the acquired subsidiary as a single cash-generating unit. The recoverable amount of this
+cash-generating unit has been determined based on value-in-use calculations, based on projected cash flows and
+forecasted revenues prepared and approved internally by management.
+17 INVENTORIES
+2025 2024
+QR QR
+Packaging and raw material 195,577,664 228,770,150
+Feed inventories 85,854,572 72,407,162
+Spare parts 77,163,487 72,286,341
+Finished goods 22,498,836 34,551,079
+Others 20,446,898 25,670,502
+401,541,457 433,685,234
+Less: Provision for slow moving inventories (1,046,923) (3,626,432)
+400,494,534 430,058,802
+=== página 41
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+40
+17 INVENTORIES (CONTINUED)
+At 31 December 2025, the provision for slow-moving inventories amounted to QR 1,046,923 (2024: QR 3,626,432).
+The movement in provision for slow moving inventories is recognized in the consolidated statement of financial
+position as follows:
+2025 2024
+QR QR
+As at 1 January 3,626,432 9,574,827
+Provision during the year (Note 5) 1,000,000 5,472,343
+Write-off during the year (3,579,509) (11,420,738)
+As at 31 December 1,046,923 3,626,432
+18 TRADE AND OTHER RECEIVABLES
+2025 2024
+QR QR
+Trade receivables (Note 4) 133,871,323 115,537,249
+Government support (Note 6) 83,752,375 104,933,491
+Prepayments, other advances and receivables (Note ii) 90,921,125 150,355,259
+Advances to suppliers (Note iii) 23,175,372 30,571,376
+Deferred expenses 4,055,111 4,336,690
+Staff receivables 31,065 30,413
+Other receivables 1,845,408 -
+337,651,779 405,764,478
+Less: Allowance for expected credit loss (Note i) (1,409,114) (1,484,547)
+336,242,665 404,279,931
+Note i
+Allowance for expected credit loss as at 31 December 2025 is QR 1,409,114 (2024: QR 1,484,547). The movement
+in expected credit loss on receivables is as follows:
+2025 2024
+QR QR
+As at 1 January 1,484,547 1,484,636
+(Reversal) / provided during the year (Note 7) (75,433) 78,561
+Written off during the year - (78,650)
+As at 31 December 1,409,114 1,484,547
+Note ii
+During the year, the Group has written off a net amount of QR 35,789,509 in the statement of profit or loss relating
+to advances for projects and excess budgetary accruals.
+=== página 42
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+41
+18 TRADE AND OTHER RECEIVABLES (CONTINUED)
+Note iii
+Advance to suppliers
+Advances to suppliers is presented in the consolidated statement of financial position as follows:
+2025 2024
+QR QR
+Current 23,175,372 30,571,376
+Non-current* 372,583,615 -
+395,758,987 30,571,376
+* These are the capital advances paid to various contractors mainly relating to the construction of plant in a
+subsidiary located in Algeria.
+* This includes QR 71,200,547 paid to Urbacon Trading and Contracting W.L.L., a related party of the Group.
+19 CASH AND BANK BALANCES
+2025 2024
+QR QR
+Cash on hand 415,367 452,708
+Cash in transit 674,653 74,760
+Bank balances (Note i) 373,699,102 27,096,261
+Cash and bank balances 374,789,122 27,623,729
+Bank overdrafts (21,022,878) (104,846,659)
+Restricted bank balances (Note i) (145,563,741) (15,718,453)
+Cash and cash equivalents 208,202,503 (92,941,383)
+Note i
+Restricted bank balances are primarily related to unclaimed dividends amounting to QR 14,624,633 (2024:
+15,718,453) and an amount of QR 130,939,108 pertaining to a letter of credit issued for the Algeria project, which
+was established against a cash margin.
+20 SHARE CAPITAL
+2025 2024
+No of
+shares
+Amount
+QR
+No of
+shares
+Amount
+QR
+Authorised, issued and paid-up ordinary
+and special shares QR 1 per each share
+As at 1 January 1,901,000,000 1,901,000,000 1,901,000,000 1,901,000,000
+Bonus share issued (1:19) (Note 28) 100,052,631 100,052,631 - -
+Bonus share issued (1:14) (Note 28) 142,932,331 142,932,331 - -
+2,143,984,962 2,143,984,962 1,901,000,000 1,901,000,000
+The Group’s authorized, issued and paid-up share capital amounting to QR 2,143,984,962 (2024: QR
+1,901,000,000) is divided into 2,143,984,961 (2024: 1,900,9999) ordinary shares and one special share, the nominal
+value is QR 1 of each share.
+The bonus shares were issued by capitalizing an equivalent amount from retained earnings (Note 28).
+=== página 43
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+42
+20 SHARE CAPITAL (CONTINUED)
+There was no impact on the total earnings attributable to shareholders, however, the number of shares used in the
+EPS calculation increased, resulting in a proportionate decrease in EPS (Note 26).
+Special share
+The State of Qatar, represented by the Ministry of Commerce and Industry, has been allotted one Special Share,
+and the Special Share will have specific rights to appoint certain Directors, veto particular decisions of the Company,
+and other rights. The Special Shareholder, as holder of the Special Share, has the rights set out in Article 28 of
+Company’s Article of Association.
+21 LEGAL RESERVE
+In accordance with Qatar Commercial Companies’ Law No. 11 of 2015, whose certain provisions were subsequently
+amended by Law No.8 of 2021 and the Company’s Article of Association, 10% of the profit for the year is to be
+transferred to the legal reserve. The Group may resolve to discontinue such annual transfers when the reserve totals
+50% of the share capital. This reserve is not available for distribution except in the manner stated in Qatar Commercial
+Companies' Law No. 11 of 2015, whose certain provisions were subsequently amended by Law No.8 of 2021.
+22 ACQUISITION RESERVE
+This balance represents the issuance of shares to the founders against the transferring of ownership in capital of
+Baladna Food Industries W.L.L. and settling of their current account. The reserve is recognized directly in equity
+and is not subject to subsequent remeasurement.
+23 ISLAMIC FINANCING CONTRACTS
+2025 2024
+QR QR
+Long term financing (Note a) 834,327,521 892,327,525
+Long term financing (Note b) 834,975,960 888,240,384
+Long term financing (Note c) 71,012,467 77,769,637
+Long term financing (Note d) 372,113,685 60,339,185
+Short term financing (Note e) 334,914,105 155,503,798
+2,447,343,738 2,074,180,529
+Islamic financing is presented in the consolidated statement of financial position as follows:
+2025 2024
+QR QR
+Non-current 1,939,005,167 1,707,522,765
+Current 508,338,571 366,657,764
+2,447,343,738 2,074,180,529
+The movement in Islamic financing contracts during the year is as follows:
+2025 2024
+QR QR
+At 1 January 2,074,180,529 1,994,035,655
+Drawdowns during the year 515,524,376 256,938,950
+Repayments during the year (142,361,167) (176,794,076)
+At 31 December 2,447,343,738 2,074,180,529
+=== página 44
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+43
+23 ISLAMIC FINANCING CONTRACTS (CONTINUED)
+Notes:
+(a) This represents an Islamic finance (Murabaha) facility obtained from a bank in the State of Qatar to finance
+the construction of cow farm and working capital requirements. The facility is repayable in agreed quarterly
+instalments maturing in 2036. This facility carries an annual profit rate of 5.25%.
+(b) This represents an Islamic finance facility obtained from a bank in the State of Qatar to finance the property,
+plant and equipment. The facility is repayable at agreed quarterly instalments maturing in 2038. This facility
+carries an annual profit rate of 4.9%.
+(c) This represents an Islamic finance facility obtained from a bank in the State of Qatar to finance the construction
+of cow farm and working capital requirements. The facility is repayable in agreed quarterly instalments
+maturing in 2034. The bank facility carries an annual profit rate of 5.15%.
+(d) This represents an Islamic finance facility (Murabaha) obtained from a bank in State of Qatar (through a
+foreign branch) to finance the Algeria projects. The total facility is USD 570 million of which USD 100 million
+has been drawn down as at 31 December 2025. The facility is expected to be re-paid from 2035 to 2044. The
+expected Murabaha profit rates during the repayment period is US$ 3 months SOFR + 2.75% margin with a
+minimum profit rate of 5.25%. The Master Murabaha agreement is still awaiting formal sign off from the
+Bank. This facility is secured against corporate guarantee of Baladna for Trading and investment L.L.C.,
+Baladna Food Industries W.L.L. and bank account of the project Company.
+(e) Short-term financing is maintained to provide working capital support, primarily for meeting supplier payment
+obligations through trade finance instruments and direct fund transfers. The Group currently maintains two
+such short‑term working capital facilities: (i) a QR denominated working capital facility with a bank bearing
+a fixed interest rate of 5.25% per annum; and (ii) a USD denominated working capital facility with a bank
+priced at EIBOR 6M, transitioning to a flat rate of 5.00% per annum in 2025. Both facilities are structured
+with a repayment tenor of 180 days.
+There are no securities and collaterals against the long-term financing except stated otherwise.
+24 EMPLOYEES’ END OF SERVICE BENEFITS
+2025 2024
+QR QR
+As at 1 January 19,057,564 16,001,968
+Provided during the year 5,391,918 5,193,918
+Paid during the year (2,204,776) (2,138,322)
+As at 31 December 22,244,706 19,057,564
+25 TRADE AND OTHER PAYABLES
+2025 2024
+QR QR
+Trade payables 85,582,302 111,262,582
+Accrued expenses 73,033,689 71,772,653
+Refund liabilities relating to volume rebates (Note 4) 11,143,959 7,844,206
+Dividend payable 14,624,633 15,718,453
+Provision for social and sports fund (Note 29) 13,493,408 4,625,304
+Income tax payable (Note 10) 1,800,610 1,460,031
+Other liabilities 2,285,274 148,053
+201,963,875 212,831,282
+=== página 45
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+44
+26 BASIC AND DILUTED EARNINGS PER SHARE
+Basic earnings per share is calculated by dividing the net profit for the year attributable to equity holders of the
+Parent by the weighted average number of ordinary shares outstanding during the year.
+There were no potentially diluted shares outstanding at any time during the year and, therefore, the diluted earnings
+per share is equal to the basic earnings per share.
+The following reflects the profit and share data used in the basic and diluted earnings per share computations:
+2025 2024
+QR QR
+(Restated)
+Profit attributable to equity holders of the parent (QR) 539,736,320 185,012,156
+Number of shares outstanding during the period after bonus share
+adjustment (Note 20 & 28) 2,143,984,962 2,143,984,962
+Basic and diluted earnings per share (QR) 0.252 0.086
+27 RELATED PARTY DISCLOSURES
+Related parties represent associates, affiliate entities, partners, directors and key management personnel of the
+Group, and entities controlled, jointly controlled or significantly influenced by such parties. Pricing policies and
+terms of these transactions are approved by the Group’s management.
+Related party transactions
+Transactions with related parties included in the consolidated income statement are as follows:
+31 December 2025
+Revenue  Purchases  Services
+QR QR QR
+Affiliate
+Yemek Doha Catering Services W.L.L. 25,653,809 - -
+Aura Hospitality W.L.L. 4,312,696 - 174,975
+Elegancia Group W.L.L. 1,752,987 - -
+Distri Mart L.L.C. 872,992 - -
+Elegancia Facility Management Limited W.L.L. 356,809 - 1,010,966
+Assets Real Estate Development Co. W.L.L. 225,763 - -
+Elegancia Landscape W.L.L. 132,400 - -
+Power International Holding W.L.L. (Note i) - - 16,924,679
+Aura Entertainment W.L.L. - - 985,016
+Aura International for Hospitality Services W.L.L. - 19,152 219,032
+Urbacon Plant, Machinery and Vehicles (A Branch of Urbacon
+Trading and Contracting Company W.L.L.) - - 574,443
+Joury Tour & Travels W.L.L. - - 4,008,180
+Stark Security W.L.L. - - 2,161,334
+Printshop for Printing Services W.L.L. - - 82,737
+Credo Trading Company W.L.L. - 206,920 -
+General Pension and Social Security Authority - - 276,802
+Newrest Gulf L.L.C. - - 8,179,550
+Gemini-X Trading - - 215,250
+Others 69,619 9,493 450,203
+33,377,075 235,565 35,263,167
+=== página 46
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+45
+27 RELATED PARTY DISCLOSURES (CONTINUED)
+Related party transactions (continued)
+31 December 2024
+Revenue Services
+QR QR
+Affiliates
+Yemek Doha Catering Services W.L.L. 29,192,389 -
+Aura Hospitality W.L.L. 6,001,625 1,249,958
+Elegancia Group W.L.L. 1,724,540 -
+Aura Entertainment W.L.L. 729,654 1,780,500
+Elegancia Facility Management Limited W.L.L. 148,153 861,472
+QA Aura Restaurant 100,496 -
+Urbacon Trading and Contracting W.L.L. 38,200 -
+Power International Holding W.L.L. (Note i) - 12,587,853
+Aura International for Hospitality Services W.L.L. - 153,611
+Urbacon Plant, Machinery and Vehicles (A Branch of Urbacon Trading
+and Contracting Company W.L.L.) - 117,600
+Joury Tour & Travels W.L.L. - 2,207,806
+Stark Security W.L.L. - 2,096,018
+Credo Trading Company W.L.L. - 357,708
+Mall of Qatar W.L.L. - 1,000,000
+General Pension and Social Security Authority - 279,993
+Other 82,569 158,555
+38,017,626 22,851,074
+Note i:
+This includes management fee amounted to QR 9,000,000 (2024: QR 9,000,000) charged by Power International
+Holding (PIH) for providing the HR, IT, and other support services to the Group as per the signed agreement by the
+Group and PIH.
+Note ii:
+The Group has a contract with a related party, Urbacon Trading and Contracting W.L.L., for the lease of staff
+accommodation as disclosed in Note 12. The Company did not make any lease payment during the year (2024: QR
+45,606,588).
+Note iii:
+Additions and capital work in progress to the property, plant and equipment during the year included the following
+transactions with related parties:
+Nature of 2025 2024
+Related party transactions QR QR
+Urbacon Trading and Contracting W.L.L. Construction work 3,137,048 1,366,666
+Elegancia Electro Mechanical Services W.L.L.
+Supply and installation
+of utilities 3,056,513 4,099,531
+Golden Bay Trading and Contracting W.L.L. Construction work 1,909,293 1,580,100
+Aura Entertainment W.L.L. Construction work 1,530,837 -
+Joury Tour & Travels W.L.L.
+Logistics for
+Construction work 923,207 2,521,618
+Elegancia Water Solutions W.L.L. (previously
+Watermaster Qatar W.L.L.) Construction work 107,171 1,071,712
+Credo Trading Company W.L.L. Construction work 43,878 437,878
+Others 30,000 78,613
+=== página 47
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+46
+27 RELATED PARTY DISCLOSURES (CONTINUED)
+Related party balances
+Balances with related parties included in the consolidated statement of financial position are as follows:
+Due from related parties:
+2025 2024
+QR QR
+Affiliates
+Aura Hospitality and Food Services W.L.L. 10,028,939 4,592,122
+Eleganica Steel Trading W.L.L. 7,050,000 -
+Yemek Doha Catering Services W.L.L. 5,952,405 8,579,127
+Golden Bay Trading and Contracting W.L.L. 1,505,000 -
+Urbacon Trading and Contracting W.L.L. 1,315,776 -
+Elegancia Group W.L.L. 1,089,985 1,021,513
+Distri Mart L.L.C 872,992 -
+Power International Holding W.L.L. 547,911 6,713,303
+Elegancia Landscape W.L.L. 364,920 232,520
+Assets Real Estate Development Co. WLL 275,243 44,282
+Aura Lifestyle W.L.L. 179,262 -
+Elegancia Facility Management W.L.L. 151,091 -
+Al Maha Island W.L.L. 69,516 -
+Printshop for Printing Services W.L.L. 46,057 130,594
+Aura Entertainment W.L.L. - 2,604,047
+Sazeli Restaurant W.L.L. - 230,816
+Damasca Restaurant W.L.L. - 134,091
+Ghassan Khalid Al Salama - 26,047
+Retaj Baywalk Residence W.L.L. - 8,000
+Others
+QLM Life and Medical Insurance 7,910 -
+29,457,007 24,316,462
+Due to related parties:
+2025 2024
+QR QR
+Affiliates
+Elegancia Electro Mechanical Services W.L.L. 2,546,290 2,386,868
+Aura Entertainment W.L.L 2,523,349 -
+Power International Holding W.L.L. 1,190,000 -
+Newrest Gulf L.L.C. 640,276 9,000
+Aura International for Hospitality Services W.L.L. 458,178 25,800
+Joury Tour & Travels W.L.L. 227,555 67,035
+Elegancia Water Solutions W.L.L. (previously Watermaster Qatar W.L.L.) 118,371 479,412
+Gemini-X Trading L.L.C. 117,950 -
+The Zone Gym W.L.L 50,000 -
+Urbacon Plant, Machinery and Vehicles (A Branch of Urbacon Trading and
+Contracting Company W.L.L.) 43,950 117,600
+Credo Trading Company W.L.L. 43,788 32,423
+Stark Security W.L.L. 29,200 -
+Elegancia Gabro Trading and Transport W.L.L. 7,693 -
+Union Iron Steel L.L.C. (United Arab Emirates) 791 -
+Urbacon Trading and Contracting W.L.L. - 1,015,989
+Golden Bay Trading and Contracting W.L.L. - 197,900
+Elegancial Facility Management W.L.L. - 191,320
+Others
+Essa Ahmed Jabor Ali Abdullah - 161,776
+7,997,391 4,685,123
+=== página 48
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+47
+27 RELATED PARTY DISCLOSURES (CONTINUED)
+Terms and conditions of transactions with related parties
+Transactions with related parties are made at normal market prices or contractually agreed terms. Outstanding
+balances as of 31 December 2025 are unsecured, interest-free and the settlement normally occurs in cash. This
+condition is being yearly monitored based on the financial decision and economic condition of the management.
+Compensation of key management personnel
+2025 2024
+QR QR
+Salaries and short-term benefits 13,389,951 12,029,980
+Employees' end of service benefits 786,573 368,290
+14,176,524 12,398,270
+Director’s remuneration (Note i) 6,504,353 3,142,883
+Note i
+Directors’ remuneration for the year 2025 is subject to the approval of the Group's Annual General Assembly (2024:
+QR 3,142,883, approved by the shareholders of the Group at the Annual General Meeting held on 3 March 2025).
+During 2025, an amount of QR 810,353 (2024: Nil) related to sitting fees for a subsidiary’s board of directors.
+28 DIVIDENDS
+The shareholders of the Parent at the Extraordinary General Meetings held on 9 March 2025 and 6 November 2025
+approved to issue bonus shares to existing shareholders in the ratio of one bonus share for every nineteen shares
+held [1:19] and one bonus share for every twenty-four shares held [1:14] from the profit of 2024 and 2025 amounting
+to QR 100,052,631 and QR 142,932,331 respectively.
+The shareholders of the Parent at the General Assembly held on 19 March 2024 approved a cash dividend of QR
+0.0695 per ordinary share, amounting to a total of QR 132,119,500.
+29 SOCIAL AND SPORTS FUND
+In accordance with Law No. 13 of 2008, the Group is required to provide a provision for the support of sports,
+social, cultural, and charitable activities with an amount equivalent to 2.5% of the annual net profit. This social and
+sports contribution is considered as an appropriation of retained earnings of the Group and presented in the
+consolidated statement of changes in the equity. The Group appropriated accounted for QR 13,493,408 for the social
+contribution funds during the year ended 31 December 2025 (2024: QR 4,625,304) (Refer Note 25).
+30 NON-CONTROLLING INTERESTS
+The financial information of Group’s material non-controlling interests are provided below:
+2025 2024
+QR QR
+Name of the subsidiary
+E-Life Detergent Factory W.L.L. 25% 25%
+Baladna Algeria S.P.A. 49% -
+=== página 49
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+48
+30 NON-CONTROLLING INTERESTS (CONTINUED)
+Proportion of equity interest held by non-controlling interests are as follows:
+2025 2024
+QR QR
+Name of the subsidiary
+E-Life Detergent Factory W.L.L. 3,384,315 3,011,202
+Baladna Algeria S.P.A. 386,904,565 -
+390,288,880 3,011,202
+Summarised statement of comprehensive income for the year ended 31 December:
+2025 2024
+E life
+Detergent
+Factory
+W.L.L.
+Baladna
+Algeria
+S.P.A.
+E life
+Detergent
+Factory
+W.L.L.
+Baladna
+Algeria
+S.P.A.
+QR QR QR QR
+Revenues and gains 20,518,779 - 17,946,171 -
+Expenses and losses (19,316,322) (2,574,646) (16,793,572) -
+Profit / (loss) for the year 1,202,457 (2,574,646) 1,152,599 -
+Total comprehensive loss for the year 1,202,457 (2,574,646) 1,152,599 -
+Attributable to:
+Equity holders of the parent 901,843 (1,313,070) 864,449 -
+Non-controlling interests 300,614 (1,261,576) 288,150 -
+Summarised statement of financial position as at 31 December:
+2025 2024
+E life
+Detergent
+Factory
+W.L.L.
+Baladna
+Algeria
+S.P.A.
+E life
+Detergent
+Factory
+W.L.L.
+Baladna
+Algeria
+S.P.A.
+QR QR QR QR
+Non-current assets    9,812,745 482,787,409 9,711,684 -
+Current assets  12,803,020 327,734,835 10,700,022 -
+Non-current liabilities      (456,522) - (348,530) -
+Current liabilities  (8,621,985) (20,921,095) (8,018,375) -
+Total equity  13,537,258  789,601,149 12,044,801 -
+Attributable to:
+Equity holders of the parent  10,152,942  402,696,585 9,033,599 -
+Non-controlling interests    3,384,316  386,904,564 3,011,202 -
+=== página 50
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+49
+30 NON-CONTROLLING INTERESTS (CONTINUED)
+Summarised statement of cash flows for the year ended 31 December:
+2025 2024
+QR QR
+Operating activities 12,963,724 (237,528)
+Investing activities (483,565,815) (714,176)
+Financing activities 660,108,574 1,447,875
+Net increase in cash and cash equivalents 189,506,483 496,171
+31 COMMITMENT AND CONTINGENT LIABILITIES
+Commitments
+As at 31 December 2025, the Group had the following capital commitments relating to the projects in progress.
+2025 2024
+QR QR
+Capital commitments 847,943,058 49,515,550
+Contingent liabilities
+The Group has contingent liabilities in respect of banks’ letters of credit and other guarantees arising in the ordinary
+course of business from which it is anticipated that no material liabilities will arise are as follows:
+2025 2024
+QR QR
+Letters of credits 62,768,111 38,944,378
+Guarantees 25,489,949 25,352,713
+Bill for collection 1,089,608 2,427,112
+32 FINANCIAL RISK MANAGEMENT
+Objective and policies
+The Group’s principal financial liabilities comprise trade payables, amounts due to related parties, accrued expenses,
+lease liabilities, Islamic financing contracts, bank overdrafts and other payables. The main purpose of these financial
+liabilities is to manage the working capital requirements for the Group’s operations. The Group has various financial
+assets such as trade receivables, amounts due from related parties, government support, accrued income, staff
+receivables, other receivables, cash and bank balances and investment in financial assets at fair value through profit
+or loss, which arise directly from its operations.
+The main risks arising from the Group’s financial instruments are market risk, credit risk and liquidity risk and other
+risk. The Board of Directors reviews and agrees policies for managing each of these risks, which are summarised
+below.
+Market risk
+Market risk is the risk that the fair value or future cash flows of a financial instrument will fluctuate because of
+changes in market prices. Market risk comprises two types of risk: interest rate risk and currency risk.
+Interest rate risk
+Interest rate risk is the risk that the fair value or future cash flows of a financial instrument will fluctuate due to changes
+in market interest rates. The Group’s exposure to the risk of changes in market interest rate relates primarily to the
+Group’s financial instruments with floating interest rates.
+=== página 51
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+50
+32 FINANCIAL RISK MANAGEMENT (CONTINUED)
+Market risk (continued)
+Interest rate risk (continued)
+The following table demonstrates the sensitivity of the consolidated statement of profit or loss to reasonably possible
+changes in interest rates by 25 basis points, with all other variables held constant. The sensitivity on the consolidated
+income statement is the effect of the assumed changes in interest rates for one year, based on the floating rate financial
+instruments held at 31 December.
+The effect of decreases in interest rates is expected to be equal and opposite to the effect of the increases shown.
+Increase in
+basis points
+Effect on
+profit
+QR
+2025 +25 1,997,658
+2024 +25 845,300
+Currency risk
+Currency risk is the risk that the value of financial instruments will fluctuate due to changes in foreign exchange
+rates. As the Qatari Riyal is pegged to the US Dollar, balances in US Dollars are not considered to represent
+significant currency risk. In addition, as other GCC currencies, with the exception of Kuwaiti Dinar, are pegged to
+the US Dollar, balances in other GCC currencies are also not considered to represent significant currency risk. The
+Group does not have any balances in Kuwaiti Dinar as at 31 December 2025. GCC countries comprise the members
+of the Gulf Co-operation Council being Kingdom of Bahrain, State of Kuwait, Sultanate of Oman, State of Qatar,
+Kingdom of Saudi Arabia and the United Arab Emirates.
+The following table illustrates the effect of a reasonable possible change of the material relevant foreign currencies
+against the Qatari Riyal, with all other variables held constant, on the consolidated statement of profit or loss. An
+equal decrease in each of the below mentioned currencies against the Qatari Riyal is expected to have an equal but
+opposite impact.
+Percentage 2025 2024
+change QR QR
+EUR 5%  (140,437) (177,749)
+GBP 5%  (3,135) (4,158)
+EGP 5% 18,126,800 19,216,504
+DZD 5% 15,928,442 -
+Equity price risk
+Equity price risk arises from fluctuations in equity indices and prices. The following table demonstrates the
+sensitivity of the effect of cumulative changes in fair values recognised in the equity to reasonably possible changes
+in equity prices, with all other variables held constant. The effect of decreases in equity prices is expected to be
+equal and opposite to the effect of the increases shown.
+The following table demonstrates the sensitivity of the effect of cumulative changes in fair values recognised in the
+equity to reasonably possible changes in equity prices, with all other variables held constant. The effect of decreases
+in equity prices is expected to be equal and opposite to the effect of the increases shown.
+Changes in
+equity prices
+Effect on
+equity
+QR
+2025
+Investment in financial assets at fair value through profit or loss -+5% 49,723,840
+2024
+Investment in financial assets at fair value through profit or loss -+5% 26,184,722
+=== página 52
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+51
+32 FINANCIAL RISK MANAGEMENT (CONTINUED)
+Credit risk
+Credit risk is the risk that one party to a financial instrument will fail to discharge an obligation and cause the other
+party to incur a financial loss. The Group is exposed to credit risk on its trade receivables, amounts due from related
+parties, deposits, other receivables, bank balances and certain other assets as reflected in the consolidated statement
+of financial position.
+With respect to credit risk arising from the financial assets of the Group, the exposure to credit risk arises from
+default of the counterparty, with a maximum exposure equal to the carrying amount of these instruments as follows:
+2025 2024
+QR QR
+Amounts due from related parties  29,457,007 24,316,462
+Trade receivables  132,462,209 104,933,491
+Bank balances 373,699,102 27,096,261
+Staff receivables  31,065 30,413
+Other receivables  1,845,408 -
+537,494,791 156,376,627
+Group manages the credit risk based on the Group’s established policies and procedures. Outstanding customer
+receivables are regularly monitored by the Group and the Group seeks to limit its credit risk with respect to
+customers by setting credit limits for individual customers.
+An impairment analysis is performed at each reporting date using a provision matrix to measure expected credit
+losses. The provision rates are based on days past due for groupings of various customers with similar loss patterns.
+The calculation reflects the probability-weighted outcome and reasonable and supportable information that is
+available at the reporting date about past events, current conditions and forecasts of future economic conditions.
+The maximum exposure to credit risk at the reporting date is the carrying value of trade receivables, Government
+support, accrued income, staff receivables, other receivables, amount due from related parties and bank balances.
+The following table provides information about the exposure to credit risk and ECLs for trade receivables from
+customers as at 31 December.
+Days past due
+2025 Current
+31 - 60
+days
+61-90
+days
+91-120
+days
+121-365
+days
+Over 365
+days Total
+QR QR QR QR QR QR QR
+Expected credit loss rate 0% 1% 3% 4% 69% 100% 0.2%
+Trade receivables  125,997,633  4,851,955  970,540  765,397  933,323  352,475  133,871,323
+Government support  83,752,375 - - - - -  83,752,375
+Bank balances 373,699,102 - - - - - 373,699,102
+Staff receivables  31,065 - - - - -  31,065
+Other receivables  1,845,408 - - - - -  1,845,408
+Due from related parties 29,457,007 - - - - - 29,457,007
+Loss allowance  (315,119)  (38,463)  (28,908)  (28,999)  (645,150)  (352,475)  (1,409,114)
+Net trade receivables 614,467,471 4,813,492 941,632 736,398 288,173 - 621,247,166
+=== página 53
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+52
+32 FINANCIAL RISK MANAGEMENT (CONTINUED)
+Credit risk (continued)
+Days past due
+2024 Current
+31 - 60
+days
+61-90
+days
+91-120
+days
+121-365
+days
+Over 365
+days Total
+QR QR QR QR QR QR QR
+Expected credit loss rate - - 15% 72% 100% 100% 0.4%
+Trade receivables 100,188,320 10,379,569 3,988,722 367,322 438,075 175,241 115,537,249
+Government support 104,933,491 - - - - - 104,933,491
+Bank balances 27,096,261 - - - - - 27,096,261
+Staff receivables 30,413 - - - - - 30,413
+Due from related parties 24,316,462 - - - - - 24,316,462
+Loss allowance - - (605,340) (265,891) (438,075) (175,241) (1,484,547)
+Net trade receivables 256,564,947 10,379,569 3,383,382 101,431 - - 270,429,329
+Liquidity risk
+Liquidity risk is the risk that the Group will not be able to meet its financial obligations as they fall due. The Group’s
+approach to managing liquidity risk is to ensure, as far as possible, that it will always have sufficient liquidity to
+meet its liabilities when due, under both normal and stressed conditions, without incurring unacceptable losses or
+risking damage to its reputation.
+The Group limits its liquidity risk by ensuring bank facilities are available. The Group’s terms of sale require
+amounts to be settled within its specified terms in the contract and invoices. Trade payables are normally settled
+within the terms of purchase from the supplier.
+The table below summarises the maturities of the Group’s undiscounted financial liabilities at 31 December, based
+on contractual payment dates and current market rates.
+Less than
+1 year
+ Between
+1 and 5 years
+Over
+5 years Total
+31 December 2025 QR QR QR QR
+Islamic Financing contracts 593,831,526 1,135,814,025 1,719,288,993 3,448,934,544
+Bank overdraft  21,022,878 - -  21,022,878
+Trade payables 85,582,302 - - 85,582,302
+Accrued expenses 73,033,689 - -  73,033,689
+Refund liabilities relating rebates 11,143,959 - -  11,143,959
+Dividend payable 14,624,633 - - 14,624,633
+Other liabilities 2,285,274 - - 2,285,274
+Due to related parties 7,997,391 - -  7,997,391
+Lease liabilities 400,000 79,918,000 27,453,000 107,771,000
+809,921,652 1,215,732,025 1,746,741,993 3,772,395,670
+Less than
+1 year
+Between
+1 and 5 years
+Over
+5 years Total
+31 December 2024 QR QR QR QR
+Islamic Financing contracts 467,421,694 930,456,043 1,280,806,341 2,678,684,078
+Bank overdraft 104,846,659 - - 104,846,659
+Trade payables 111,262,582 - - 111,262,582
+Accrued expenses 71,772,653 - - 71,772,653
+Refund liabilities relating rebates 7,844,206 - - 7,844,206
+Dividend payable 15,718,453 - - 15,718,453
+Other liabilities 148,053 - - 148,053
+Due to related parties 4,685,123 - - 4,685,123
+Lease liabilities 400,000 40,759,000 67,012,000 108,171,000
+784,099,423 971,215,043 1,347,818,341 3,103,132,807
+=== página 54
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+53
+32 FINANCIAL RISK MANAGEMENT (CONTINUED)
+Agriculture risk
+(a) Failure to secure long-term production of fodder
+The Group has developed an extensive supply chain network in North America and South America, to source fodder,
+to ensure continuous supply of fodder for its biological assets. The Group’s farms also carry a large Inventory of
+forage to ensure no disruption of supply. In addition, its Algeria agricultural project has commenced with soil
+preparation and cropping, with the first harvest expected in 2026.
+(b) Large scale loss of biological assets due to disease/pandemic
+Strong bio-security procedures, cows located in different barns to reduce risk, disease control and vaccination
+program are in place along with screening and quarantine of incoming animals. Professional vet group within the
+farming division ensure large scale losses do not occur.
+(c) Severe operational disruption (Fire, Flood, etc.)
+The Group is prepared to respond to operational disruptions to minimise losses and remain viable.  An effective
+Business Continuity Plan is continually reviewed and adapted for the changing nature of operational disruptions.
+Risk assessments are continually performed to identify possible events that could cause significant disruptions. Risk
+of business disruption from flood has been removed through farm design. Farm buildings are constructed in areas
+that do not have flash floods and also elevated above ground level.
+Commodity price risk
+Commodity price risk is the risk associated with changes in prices to certain commodities including corn, sugar and
+soya etc. that the Group is exposed to and its unfavourable effect on the Group’s costs and cash flow. This
+commodity price risk arises from forecasted purchases of certain commodities that the Group uses as raw material.
+To mitigate commodity price volatility, the Group has diversified its feed sourcing strategy by initiating an
+agricultural project in Algeria. Soil preparation and cropping are underway, with the first harvest expected in 2026,
+providing a natural hedge against market fluctuations.
+The sensitivity of the commodity prices to reasonably possible changes in rates by 5% would have increased is as
+follows.
+Increase in
+price
+Effect on
+profit
+QR
+2025 +5% 16,166,552
+2024 +5% 17,888,623
+Capital management
+The Group’s objective when managing capital is to ensure its ability to maintain a strong credit rating and healthy
+capital ratios in order to support its business to provide returns for its shareholders and to provide best returns on
+capital investment by pricing goods and services commensurately with the level of risk.
+The Group sets the amount of capital funds in accordance with the planned level of operations and in proportion to
+the levels of risk. The Group manages the shareholder’s funds and makes adjustments to it in the light of changes
+in economic conditions and the risk characteristics of the underlying assets. In order to maintain or adjust the capital
+structure, the Group may adjust the amount of dividends paid to shareholder, return capital to shareholder, issue
+new shares in order to reduce debt. The Group’s equity comprises share capital, legal reserve, retained earnings,
+acquisition reserve and is measured at QR 2,930,273,273 (2024: QR 2,404,030,361).
+The Group is not subject to externally-imposed capital requirements.
+33 SEGMENT REPORTING
+The Group has a single significant business operation located in the State of Qatar which is an agricultural activity
+of production and sales of dairy products in addition to other insignificant products and activities. There are no other
+significant business segments at 31 December 2025 and 2024.
+=== página 55
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+54
+34 FAIR VALUE MEASUREMENTS
+Financial assets consist of trade receivables, amounts due from related parties, government support, accrued income,
+staff receivables, other receivables, cash and bank balances and investment in financial assets at fair value through
+profit or loss. Financial liabilities consist of Islamic financing contracts, payables, and accrued expenses. trade
+payables, amounts due to related parties, accrued expenses, lease liabilities, Islamic financing contracts, overdrafts
+and other payables.
+Fair value is the price that would be received to sell an asset or paid to transfer a liability in an orderly transaction
+between market participants at the measurement date. Differences can therefore arise between book value under
+historical cost method and fair value estimates.
+Fair value hierarchy
+The Group uses the following hierarchy for determining and disclosing the financial assets held at fair value through
+profit of loss and biological assets by following valuation technique:
+Level 1: Quoted (unadjusted) prices in active markets for identical assets or liabilities;
+Level 2: Other techniques for which all inputs which have a significant effect on the recorded fair value are
+observable, either directly or indirectly; and
+Level 3: Techniques which use inputs which have a significant effect on the recorded fair value that are not based
+on observable market data.
+As at 31 December, the Group held the following financial and non-financial assets measured at fair value:
+Total Level 1 Level 2 Level 3
+31 December 2025 QR QR QR QR
+Financial assets
+Financial investments held at fair
+value through profit or loss 994,476,800 994,476,800 - -
+Non-financial assets
+Biological assets 194,107,472 - 194,107,472 -
+1,188,584,272 994,476,800 194,107,472 -
+Total Level 1 Level 2 Level 3
+31 December 2024 QR QR QR QR
+Financial assets
+Financial investments held at fair
+value through profit or loss 523,694,449 523,694,449 - -
+Non-financial assets
+Biological assets 177,387,580 - 177,387,580 -
+701,082,029 523,694,449 177,387,580 -
+Biological assets are measured at fair value less cost to sell, based on local and international market prices, whenever
+available, of livestock of similar age, breed and genetic merit with adjustments, where necessary, to reflect the
+differences.
+The Group’s biological assets comprise of both immature and mature livestock. Immature livestock comprises dairy
+cows that are intended to be reared to maturity. These immature cows are held to produce milk or offspring but have
+not yet produced their first calf and begun milk production.
+The fair value of immature livestock is determined by reference to meat price of veal, adjusted to reflect the age of
+the calves and to the landed cost of a heifer by reference to the recent purchases of the Group. The fair value of
+mature cows is determined by reference to latest landed cost of a heifer by reference to the recent purchases adjusted
+to reflect the decline in productivity through the lactation cycles, the meat price at the point of slaughter.
+=== página 56
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+55
+35 SIGNIFICANT ACCOUNTING JUDGEMENTS, ESTIMATES AND ASSUMPTIONS
+Use of estimates and judgments
+The preparation of consolidated financial statements in conformity with IFRS Accounting Standards requires
+management to make estimates and assumptions that affect the reported amounts of assets and liabilities and
+disclosure of contingent assets and liabilities at the date of the consolidated financial statements and the reported
+amounts of revenues and expenses during the reporting period. Although these estimates are based on management's
+best knowledge of current events and actions, actual results may ultimately differ from those estimates.
+The estimates and underlying assumptions are reviewed regularly. Revisions to accounting estimates are recognised
+in the period in which the estimate is revised if the revision affects only that period or in the period of the revision
+and future periods if the revision affects both current and future periods.
+The Group based its assumptions and estimates on parameters available when the consolidated financial statements
+were prepared. Existing circumstances and assumptions about future developments, however, may change due to
+market changes or circumstances arising beyond the control of the Group. Such changes are reflected in the
+assumptions when they occur. The key assumptions concerning the future and other key sources of estimation
+uncertainty at the reporting date, that have a significant risk of causing a material adjustment to the carrying amounts
+of assets and liabilities within the next financial year, are described below:
+Satisfaction of performance obligation
+The Group is required to assess each of its contracts with customers to determine whether performance obligations
+are satisfied over time or at a point in time in order to determine the appropriate method of recognizing revenue.
+For sale of goods through retail outlets, hotels, restaurants and cafeteria’s revenue recognized by the Group at a
+point in time when the goods are sold and control is transferred to customer.
+Significant increase in credit risk
+The Group uses a provision matrix to calculate ECLs for receivables including Government support, staff
+receivables, other receivables and due from related parties. The provision rates are based on days past due for
+groupings of various customer segments that have similar loss patterns.
+The provision matrix is initially based on the Group’s historical observed default rates. The Group calibrates the
+matrix to adjust the historical credit loss experience with forward-looking information. At every reporting date, the
+historical observed default rates are updated and changes in the forward-looking estimates are analysed.
+The assessment of the correlation between historical observed default rates, forecast economic conditions and ECLs
+is a significant estimate. The amount of ECLs is sensitive to changes in circumstances and of forecast economic
+conditions. The Group’s historical credit loss experience and forecast of economic conditions may also not be
+representative of customer’s actual default in the future.
+Determining the lease term
+In determining the lease term, management considers all facts and circumstances that create an economic incentive
+to exercise an extension option, or not exercise a termination option. Extension options (or periods after termination
+options) are only included in the lease term if the lease is reasonably certain to be extended (or not terminated).
+The lease term is reassessed if an option is actually exercised (or not exercised) or the Group becomes obliged to
+exercise (or not exercise) it. The assessment of reasonable certainty is only revised if a significant event or a
+significant change in circumstances occurs, which affects this assessment, and that is within the control of the lessee.
+During the current financial year, there has been no revision in the lease terms.
+Estimating the incremental borrowing rate on leases
+The Group cannot readily determine the financing rate implicit in the lease, therefore, it uses its incremental
+borrowing rate “(IBR)” to measure lease liabilities. The IBR is the rate of interest that the Group would have to pay
+to borrow over a similar term, and with a similar security, the funds necessary to obtain an asset of a similar value
+to the right-of-use asset in a similar economic environment. The IBR therefore reflects what the Group ‘would have
+to pay’ which requires estimation when no observable rates are available or when they need to be adjusted to reflect
+the terms and conditions of the lease. The Group estimates the IBR using observable inputs (such as market interest
+rates) when available and is required to make certain entity-specific estimates.
+=== página 57
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+56
+35 SIGNIFICANT ACCOUNTING JUDGEMENTS, ESTIMATES AND ASSUMPTIONS (CONTINUED)
+Use of estimates and judgments (continued)
+Classification of investments
+Management exercised significant judgement in determining the appropriate classification of the Company’s
+investments in listed equity securities under IFRS 9 Financial Instruments. Based on the Company’s investment
+strategy and the characteristics of these instruments, the investments have been classified as fair value through profit
+or loss (FVTPL).
+In reaching this conclusion, management considered that the listed shares are not held for long‑term strategic
+purposes, nor do they provide contractual cash flows that meet the requirements for amortised cost or fair value
+through other comprehensive income (FVOCI) classification. Instead, these investments are actively managed and
+monitored with the objective of realising fair value changes through trading activities. Accordingly, changes in fair
+value are recognised directly in profit or loss in the period in which they arise, consistent with the requirements of
+IFRS 9.
+Impairment of financial assets
+Allowance for expected credit losses of receivables
+At the reporting date, the gross amount receivables were QR 622,656,280 (2024: QR 271,913,876) with allowance
+for expected credit loss amounting to QR 1,409,114 (2024: QR 1,484,547). Any difference between the amounts
+actually collected in future periods and the amounts expected will be recognised in the consolidated statement of
+income.
+ECLs are recognised in two stages. For credit exposures for which there has not been a significant increase in credit
+risk since initial recognition, ECLs are provided for credit losses that result from default events that are possible
+within the next 12-months (a 12-month ECL). For those credit exposures for which there has been a significant
+increase in credit risk since initial recognition, a loss allowance is required for credit losses expected over the
+remaining life of the exposure, irrespective of the timing of the default (a lifetime ECL).
+For trade receivables, Government support, staff receivables, other receivables, and due from related parties, the
+Group applies a simplified approach in calculating ECLs. Therefore, the Group does not track changes in credit
+risk, but instead recognises a loss allowance based on lifetime ECLs at each reporting date. The Group has
+established a provision matrix that is based on its historical credit loss experience, adjusted for forward-looking
+factors specific to the debtors and the economic environment. Purchases or sales of financial assets that require
+delivery of assets within a time frame established by regulation or convention in the market place (regular way
+trades) are recognised on the trade date, i.e., the date that the Group commits to purchase or sell the asset.
+Useful lives of property, plant and equipment and intangible assets
+The Group's management determines the estimated useful lives of its property, plant and equipment and intangible
+assets for calculating depreciation and amortisation. This estimate is determined after considering the expected
+usage of the asset or physical wear and tear. Management reviews the residual value and useful lives annually and
+future depreciation charge would be adjusted where the management believes the useful lives differ from previous
+estimates.
+Provision for slow moving inventories
+Inventories are held at the lower of cost or net realisable value. When inventories become old or obsolete, an
+estimate is made of their net realisable value. For individually significant amounts this estimation is performed on
+an individual basis. Amounts which are not individually significant, but which are old or obsolete, are assessed
+collectively and a provision applied according to the inventory type and the degree of ageing or obsolescence.
+At the reporting date, gross inventories were QR 401,541,457 (2024: QR 433,685,234) with provision for slow-
+moving inventories amounting to QR 1,046,923 (2024: QR 3,626,432). Any difference between the amounts
+actually realised in future periods and the amounts expected will be recognised in the consolidated statement of
+income.
+=== página 58
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+57
+35 SIGNIFICANT ACCOUNTING JUDGEMENTS, ESTIMATES AND ASSUMPTIONS (CONTINUED)
+Use of estimates and judgments (continued)
+Measurement of biological assets
+Biological assets are measured at fair value less cost to sell, with any change therein recognised in consolidated
+statement of profit or loss and other comprehensive income. The fair value of immature livestock is determined by
+reference to meat price of veal, adjusted to reflect the age of the calves and to the landed cost of a heifer by reference
+to the recent purchases of the Group. The fair value of mature cows is determined by reference to landed cost of a
+heifer by reference to the recent purchases adjusted to reflect the decline in productivity through the lactation cycles,
+the meat price at the point of slaughter. Where the fair value cannot be measured reliably, in such a case, that
+biological asset shall be measured at its cost less any accumulated depreciation and any accumulated impairment
+losses. Once the fair value of such a biological asset becomes reliably measurable, an entity shall measure it at its
+fair value less costs to sell.
+Goodwill
+Determining whether goodwill is impaired requires an estimation of the value in use of the cash generating units to
+which the goodwill has been allocated. Management tests annually whether goodwill has suffered any impairment,
+in accordance with the accounting policy.
+Taxes
+Uncertainties exist with respect to the interpretation of complex tax regulations, changes in tax laws, and the amount
+and timing of future taxable income. The Group establishes provisions, based on reasonable estimates, for possible
+consequences of audits by the tax authorities of the respective country in which it operates. The amount of such
+provisions is based on various factors, such as differing interpretations of tax regulations by the taxable entity and
+the responsible tax authority. Such differences of interpretation may arise on a wide variety of issues depending on
+the conditions prevailing in the respective country of operations.
+Going concern
+The Group’s management has made an assessment of the Group’s ability to continue as a going concern and is
+satisfied that the Group has the resources to continue in business for the foreseeable future. Furthermore, the
+management is not aware of any material uncertainties that may cast significant doubt upon the Group’s ability to
+continue as a going concern. Therefore, the consolidated financial statements continue to be prepared on a going
+concern basis.
+36 COMPARATIVE FINANCIAL INFORMATION
+Certain comparative information in the consolidated financial statements has been reclassified to conform to the
+current year presentation and classification. The changes have been made to improve the quality of the information
+presented and do not affect the previously reported net profit or equity.
+Effects of the reclassification to the consolidated financial statements are summarized below:
+Effect on the consolidated statement of financial position as at 31 December 2024:
+As previously
+reported Reclassified
+31 December
+2024 Reclassification
+ 31 December
+2024
+QR QR QR
+Reclassification of bank overdrafts
+Bank overdrafts 175,098,166 (70,251,507) 104,846,659
+Islamic financing contracts - current 296,406,257 70,251,507 366,657,764
+Net effect 471,504,423 - 471,504,423
+=== página 59
+Baladna Q.P.S.C.
+NOTES TO CONSOLIDATED FINANCIAL STATEMENTS
+At 31 December 2025
+58
+36 COMPARATIVE FINANCIAL INFORMATION (CONTINUED)
+As previously
+reported Reclassified
+31 December
+2024 Reclassification
+31 December
+2024
+QR QR QR
+Reclassification of due from related parties to lease
+liability and due to related parties
+Due from related parties 57,020,723 (32,704,261) 24,316,462
+Lease liabilities
+Current (9,114,108) 9,037,078 (77,030)
+Non-current (102,724,863) 24,683,172 (78,041,691)
+Due to related parties (3,669,134) (1,015,989) (4,685,123)
+Net effect (58,487,382) - (58,487,382)
+Effect on the consolidated statement of cashflows for the year ended 31 December 2024:
+As previously
+reported Reclassified
+31 December
+2024 Reclassification
+ 31 December
+2024
+QR QR QR
+Operating activities 189,429,338 33,720,250 223,149,588
+Financing activities (128,948,834) 20,812,804 (108,136,030)
+Cash and cash equivalent as at 31 December (147,474,437) 54,533,054 (92,941,383)
