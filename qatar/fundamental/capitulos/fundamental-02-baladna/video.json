@@ -1,0 +1,60 @@
+{
+ "base": "fundamental-02-baladna",
+ "capitulo_n": 2,
+ "simbolo": "QSE:BLDN",
+ "simbolos_extra": [
+  "QSE:QFLS",
+  "QSE:IQCD"
+ ],
+ "documentos": [
+  {
+   "id": "bl-00",
+   "url": "https://baladna.com/storage/uploads/iKUuHjMbSSYZfRre3VkWieoWq.pdf"
+  },
+  {
+   "id": "bl-01",
+   "url": "https://baladna.com/storage/uploads/WyqNQIzyado3RZO63tjQRqToJ.pdf"
+  },
+  {
+   "id": "bl-02",
+   "url": "https://baladna.com/storage/uploads/ClVS6iqgigIVbUcRJKHDcHaQx.pdf"
+  },
+  {
+   "id": "bl-03",
+   "url": "https://baladna.com/storage/uploads/rYcHfvewAm235JScBzfxwbCGO.pdf"
+  },
+  {
+   "id": "bl-04",
+   "url": "https://baladna.com/storage/uploads/gJwwDtgloUbOO2igGN9ujI2nY.pdf"
+  },
+  {
+   "id": "bl-05",
+   "url": "https://baladna.com/storage/uploads/mgU4WqSeUgRNiGiQeHQGOfYjD.pdf"
+  },
+  {
+   "id": "bl-06",
+   "url": "https://baladna.com/storage/uploads/Ah7KIJWZN74dJ2W3V9gyas9gv.pdf"
+  },
+  {
+   "id": "bl-07",
+   "url": "https://baladna.com/storage/uploads/ul8Vc8CapecKppvnqWQjdkbMr.pdf"
+  },
+  {
+   "id": "bl-08",
+   "url": "https://baladna.com/storage/uploads/PeE0RzQQI4f3JIsoeRVRqEneT.pdf"
+  },
+  {
+   "id": "bl-09",
+   "url": "https://baladna.com/storage/uploads/aNz84aLnp1mJvHmeBcvnsTFFl.pdf"
+  },
+  {
+   "id": "gt-fy25",
+   "url": "https://www.gulf-times.com/article/720421/business/baladna-reports-record-fy2025-results-as-international-expansion-and-strategically-diversified-investments-accelerate-growth"
+  },
+  {
+   "id": "pen-h126",
+   "url": "https://www.thepeninsulaqatar.com/article/29/07/2026/baladna-reports-h1-2026-results-with-surges-in-all-financial-and-operational-indicators"
+  }
+ ],
+ "escenas": []
+}
