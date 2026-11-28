@@ -7,7 +7,7 @@ de resultados, en pausa hasta enero). Daniel pidió (19-nov-2026) que, tras el c
 Copia de `eau/fundamental/` (mismo formato y escenas). Instrucciones en español; lo que ve y oye el público, en árabe.
 
 Plan de 10 temas en `plan.json` (empresa sugerida; se puede cambiar si otra enseña mejor el concepto o tiene resultados más recientes):
-1 ingresos y beneficio neto (QNB) · 2 márgenes (Industries Qatar) · 3 PER (Ooredoo) · 4 deuda (Barwa) · 5 flujo de caja libre (Nakilat) ·
+1 ingresos y beneficio neto (QNB) · 2 márgenes (Baladna; IQ descartada: participadas) · 3 PER (Ooredoo) · 4 deuda (Barwa) · 5 flujo de caja libre (Nakilat) ·
 6 dividendos (QEWC) · 7 ROE (QIB) · 8 balance (Woqod) · 9 valoración P/VC y EV/EBITDA (MPHC) · 10 todo junto (QNB frente a QIB).
 
 ## Reglas de contenido

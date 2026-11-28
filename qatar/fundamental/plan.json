@@ -2,15 +2,93 @@
  "serie": "التحليل الأساسي ببساطة",
  "dia": "sábado, ~17:50 hora de Doha (el diario va de domingo a jueves a las 14:15; la rutina de resultados está en pausa hasta enero)",
  "capitulos": [
-  {"n": 1, "fecha": "2026-11-21", "tema": "الإيرادات وصافي الربح", "tema_es": "Ingresos y beneficio neto: cómo leer una cuenta de resultados (la de un banco)", "empresa": "بنك قطر الوطني", "simbolo": "QSE:QNBK", "base": "fundamental-01-qnb"},
-  {"n": 2, "fecha": "2026-11-28", "tema": "هوامش الربح", "tema_es": "Márgenes: bruto, operativo y neto (cuánto queda de cada riyal)", "empresa": "صناعات قطر", "simbolo": "QSE:IQCD", "nota": "contraste con el banco del capítulo 1: empresa industrial con coste de ventas"},
-  {"n": 3, "fecha": "2026-12-05", "tema": "مكرر الربحية", "tema_es": "PER: precio entre beneficio por acción", "empresa": "أريد (Ooredoo)", "simbolo": "QSE:ORDS"},
-  {"n": 4, "fecha": "2026-12-12", "tema": "الديون والرافعة المالية", "tema_es": "Deuda: deuda neta, deuda/patrimonio, cobertura de intereses", "empresa": "بروة العقارية", "simbolo": "QSE:BRES"},
-  {"n": 5, "fecha": "2026-12-19", "tema": "التدفق النقدي الحر", "tema_es": "Flujo de caja: operativo, inversión (capex) y flujo de caja libre", "empresa": "ناقلات", "simbolo": "QSE:QGTS"},
-  {"n": 6, "fecha": "2026-12-26", "tema": "توزيعات الأرباح", "tema_es": "Dividendos: rentabilidad por dividendo y payout", "empresa": "الكهرباء والماء القطرية", "simbolo": "QSE:QEWS"},
-  {"n": 7, "fecha": "2027-01-02", "tema": "العائد على حقوق المساهمين", "tema_es": "ROE (y ROA): rentabilidad sobre el patrimonio", "empresa": "مصرف قطر الإسلامي", "simbolo": "QSE:QIBK"},
-  {"n": 8, "fecha": "2027-01-09", "tema": "الميزانية العمومية", "tema_es": "Balance: activos, pasivos, patrimonio y liquidez", "empresa": "قطر للوقود (وقود)", "simbolo": "QSE:QFLS"},
-  {"n": 9, "fecha": "2027-01-16", "tema": "التقييم: القيمة الدفترية وقيمة المنشأة", "tema_es": "Valoración: precio/valor contable y EV/EBITDA", "empresa": "مسيعيد للبتروكيماويات", "simbolo": "QSE:MPHC"},
-  {"n": 10, "fecha": "2027-01-23", "tema": "كيف نجمع كل ذلك معًا", "tema_es": "Todo junto: comparar dos empresas del mismo sector con las 9 herramientas", "empresa": "بنك قطر الوطني ومصرف قطر الإسلامي", "simbolo": "QSE:QNBK", "simbolos_extra": ["QSE:QIBK"]}
+  {
+   "n": 1,
+   "fecha": "2026-11-21",
+   "tema": "الإيرادات وصافي الربح",
+   "tema_es": "Ingresos y beneficio neto: cómo leer una cuenta de resultados (la de un banco)",
+   "empresa": "بنك قطر الوطني",
+   "simbolo": "QSE:QNBK",
+   "base": "fundamental-01-qnb",
+   "publicado": "2026-11-21 Bm3sQlqBnSU / zHzpyiQ4c2M"
+  },
+  {
+   "n": 2,
+   "fecha": "2026-11-28",
+   "tema": "هوامش الربح",
+   "tema_es": "Márgenes: bruto, operativo y neto (cuánto queda de cada riyal)",
+   "empresa": "بلدنا",
+   "simbolo": "QSE:BLDN",
+   "nota": "cambiada de Industries Qatar (sus filiales petroquímicas y de fertilizantes son participadas: márgenes poco legibles); contraste con Woqod",
+   "base": "fundamental-02-baladna",
+   "publicado": "2026-11-28 JdIHwPNXP58 / 4sYfq7Nt23A"
+  },
+  {
+   "n": 3,
+   "fecha": "2026-12-05",
+   "tema": "مكرر الربحية",
+   "tema_es": "PER: precio entre beneficio por acción",
+   "empresa": "أريد (Ooredoo)",
+   "simbolo": "QSE:ORDS"
+  },
+  {
+   "n": 4,
+   "fecha": "2026-12-12",
+   "tema": "الديون والرافعة المالية",
+   "tema_es": "Deuda: deuda neta, deuda/patrimonio, cobertura de intereses",
+   "empresa": "بروة العقارية",
+   "simbolo": "QSE:BRES"
+  },
+  {
+   "n": 5,
+   "fecha": "2026-12-19",
+   "tema": "التدفق النقدي الحر",
+   "tema_es": "Flujo de caja: operativo, inversión (capex) y flujo de caja libre",
+   "empresa": "ناقلات",
+   "simbolo": "QSE:QGTS"
+  },
+  {
+   "n": 6,
+   "fecha": "2026-12-26",
+   "tema": "توزيعات الأرباح",
+   "tema_es": "Dividendos: rentabilidad por dividendo y payout",
+   "empresa": "الكهرباء والماء القطرية",
+   "simbolo": "QSE:QEWS"
+  },
+  {
+   "n": 7,
+   "fecha": "2027-01-02",
+   "tema": "العائد على حقوق المساهمين",
+   "tema_es": "ROE (y ROA): rentabilidad sobre el patrimonio",
+   "empresa": "مصرف قطر الإسلامي",
+   "simbolo": "QSE:QIBK"
+  },
+  {
+   "n": 8,
+   "fecha": "2027-01-09",
+   "tema": "الميزانية العمومية",
+   "tema_es": "Balance: activos, pasivos, patrimonio y liquidez",
+   "empresa": "قطر للوقود (وقود)",
+   "simbolo": "QSE:QFLS"
+  },
+  {
+   "n": 9,
+   "fecha": "2027-01-16",
+   "tema": "التقييم: القيمة الدفترية وقيمة المنشأة",
+   "tema_es": "Valoración: precio/valor contable y EV/EBITDA",
+   "empresa": "مسيعيد للبتروكيماويات",
+   "simbolo": "QSE:MPHC"
+  },
+  {
+   "n": 10,
+   "fecha": "2027-01-23",
+   "tema": "كيف نجمع كل ذلك معًا",
+   "tema_es": "Todo junto: comparar dos empresas del mismo sector con las 9 herramientas",
+   "empresa": "بنك قطر الوطني ومصرف قطر الإسلامي",
+   "simbolo": "QSE:QNBK",
+   "simbolos_extra": [
+    "QSE:QIBK"
+   ]
+  }
  ]
 }
