@@ -78,6 +78,17 @@ if g.get("medias"):   # medias móviles (berechnet) en la miniatura, con las ses
     for m in g["medias"]:
         ma = np.convolve(ca, np.ones(m) / m, "valid")[i0 - m + 1:]
         ax.plot(xs, ma, color={20: BLUE, 50: GOLD, 200: "#C084FC"}.get(m, FG), lw=3.5); lo_, hi_ = min(lo_, ma.min()), max(hi_, ma.max())
+if g.get("lineas"):   # líneas de tendencia (eingezeichnet) y su paralela, con anclas que pueden caer antes de `desde`
+    FA = [fv(v["t"]) for v in VEL]; a0 = FA.index(fv(V[0]["t"])); gi = {d: j - a0 for j, d in enumerate(FA)}
+    for L in g["lineas"]:
+        (d1, p1), (d2, p2) = L["de"], L["a"]; x1, x2 = gi[d1], gi[d2]; k = (p2 - p1) / (x2 - x1)
+        xe = gi.get(L.get("hasta", fv(V[-1]["t"])), len(V) - 1); xx = np.array([max(x1, 0), xe]); yy = p1 + k * (xx - x1)
+        ax.plot(xx, yy, color=col(L.get("color", "gold")), lw=4)
+        if L.get("paralela"):
+            dp, pp = L["paralela"]; off = pp - (p1 + k * (gi[dp] - x1))
+            ax.plot(xx, yy + off, color=col(L.get("color", "gold")), lw=4, ls="--"); ax.fill_between(xx, yy, yy + off, color=col(L.get("color", "gold")), alpha=0.12, lw=0)
+            lo_, hi_ = min(lo_, *(yy + off)), max(hi_, *(yy + off))
+        lo_, hi_ = min(lo_, *yy), max(hi_, *yy)
 ax.set_xlim(-1, len(V)); ax.set_ylim(lo_ * 0.98, hi_ * 1.01)
 p = f"{D}/miniatura-{BASE}-GE.png"; f.savefig(p, dpi=100, facecolor=BG); plt.close(f)
 im = Image.open(p).convert("RGBA"); lg = Image.open(LOGO).convert("RGBA").resize((150, 150), Image.LANCZOS); im.alpha_composite(lg, (1280 - 170, 4)); im.convert("RGB").save(p)
