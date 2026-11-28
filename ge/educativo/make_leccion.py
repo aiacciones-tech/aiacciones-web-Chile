@@ -81,6 +81,8 @@ def _zigzag(modo):
         pts = [(0, 40), (8, 78), (15, 32), (24, 80), (31, 30), (40, 79), (47, 33), (55, 70)]
     elif modo == "rollentausch":
         pts = [(0, 30), (8, 58), (14, 36), (22, 60), (28, 40), (36, 82), (42, 62), (48, 61), (56, 92)]
+    elif modo == "trendkanal":   # Aufwärtstrend: höhere Hochs und höhere Tiefs
+        pts = [(0, 23), (7, 47), (12, 32), (20, 57), (26, 43), (34, 67.5), (40, 54), (48, 78.5), (53, 64), (56, 71)]
     else:  # fehlausbruch
         pts = [(0, 40), (8, 76), (15, 35), (24, 79), (30, 50), (37, 86), (41, 72), (48, 45), (56, 38)]
     x = np.arange(0, 57); y = np.interp(x, [p[0] for p in pts], [p[1] for p in pts])
@@ -100,6 +102,14 @@ def s_esquema(i, e, t):
         ax.axhspan(57, 63, color=GOLD, alpha=0.28 * za)
         ax.text(1, 65, "erst Widerstand …", color=NEG, fontsize=20, weight="bold", alpha=za)
         ax.text(57, 50, "… dann Unterstützung", color=TEAL, fontsize=20, weight="bold", ha="right", alpha=ease((t - 0.6) / 0.3))
+    elif modo == "trendkanal":
+        lo_ = lambda xx: 22 + (63 - 22) / 53 * xx   # Trendlinie durch die Tiefs (0, 22) und (53, 63)
+        ax.plot([0, 57], [lo_(0), lo_(57)], color=TEAL, lw=3, alpha=za)
+        ax.text(57, lo_(57) - 16, "Trendlinie (Tiefs)", color=TEAL, fontsize=20, weight="bold", ha="right", alpha=za)
+        b2 = ease((t - 0.6) / 0.3)
+        ax.plot([0, 57], [lo_(0) + 20.5, lo_(57) + 20.5], color=GOLD, lw=2.6, ls="--", alpha=b2)
+        ax.fill_between([0, 57], [lo_(0), lo_(57)], [lo_(0) + 20.5, lo_(57) + 20.5], color=GOLD, alpha=0.08 * b2, lw=0)
+        ax.text(57, lo_(57) + 26, "Parallele (Hochs): Trendkanal", color=GOLD, fontsize=20, weight="bold", ha="right", alpha=b2)
     else:
         ax.axhspan(76, 81, color=NEG, alpha=0.25 * za)
         ax.text(1, 84, "Widerstand", color=NEG, fontsize=20, weight="bold", alpha=za)
@@ -170,6 +180,29 @@ def s_grafico(i, e, t):
                 ha="right", va="center", alpha=a, linespacing=1.15,
                 bbox=dict(boxstyle="round,pad=0.25", fc=BG, ec="none", alpha=0.85 * a))
     idx = {fecha_v(v["t"]).isoformat(): j for j, v in enumerate(V)}
+    for k, L in enumerate(e.get("lineas", [])):
+        # línea de tendencia entre dos puntos [fecha, precio] (eingezeichnet), prolongada en discontinua hasta "hasta" (fecha) o el final;
+        # "paralela": [fecha, precio] dibuja la paralela por ese punto y sombrea el canal
+        a = ease((t - 0.3 - k * 0.15) / 0.35)
+        if a <= 0: continue
+        # índices sobre toda la serie (los anclajes pueden quedar antes del rango visible), relativos al inicio del rango
+        S_, a0, _ = _rango(e, True); gi = {fecha_v(v["t"]).isoformat(): jj - a0 for jj, v in enumerate(S_)}
+        (f1, p1), (f2, p2) = L["de"], L["a"]; j1, j2 = gi[f1], gi[f2]; m_ = (p2 - p1) / (j2 - j1)
+        j3 = gi.get(L.get("hasta"), n - 1); cc = col(L.get("color", "gold"))
+        y = lambda j, b=p1: b + m_ * (j - j1)
+        k1, k2 = max(j1, 0), max(j2, 0)
+        if j2 > 0: ax.plot([k1, k2], [y(k1), y(k2)], color=cc, lw=3, alpha=a, solid_capstyle="round")
+        if j3 > k2: ax.plot([k2, j3], [y(k2), y(j3)], color=cc, lw=2.4, ls="--" if j2 >= 0 else "-", alpha=a)
+        for jj, pp in ((j1, p1), (j2, p2)):
+            if jj >= 0: ax.plot([jj], [pp], "o", color=cc, ms=9, alpha=a)
+        if L.get("paralela"):
+            fp, pp = L["paralela"]; b2 = pp - m_ * (gi[fp] - j1)
+            ax.plot([k1, j3], [y(k1, b2), y(j3, b2)], color=cc, lw=2.4, ls=(0, (6, 4)), alpha=a)
+            ax.fill_between([k1, j3], [y(k1), y(j3)], [y(k1, b2), y(j3, b2)], color=cc, alpha=0.08 * a, lw=0)
+        if L.get("texto"):
+            jt = L.get("texto_en", j3); jt = gi.get(jt, jt) if isinstance(jt, str) else jt
+            ax.text(jt, y(jt) + (ymax - ymin) * L.get("texto_dy", 0.05), L["texto"], color=cc, fontsize=16, weight="bold", ha="center", va="center", alpha=a,
+                    bbox=dict(boxstyle="round,pad=0.2", fc=BG, ec="none", alpha=0.8 * a))
     for k, m in enumerate(e.get("marcas", [])):
         j = idx.get(m["fecha"])
         if j is None: continue
@@ -267,6 +300,11 @@ def control():
                 if np.isnan(ma[0]): err.append(f"escena {k}: no hay sesiones previas suficientes para la GD {m}")
             if len(V) < 20: err.append(f"escena {k}: menos de 20 velas en el rango")
             fechas = {fecha_v(v["t"]).isoformat() for v in V}
+            todas = {fecha_v(v["t"]).isoformat() for v in _serie(e)}
+            for L in e.get("lineas", []):
+                for fch in [L["de"][0], L["a"][0]] + ([L["paralela"][0]] if L.get("paralela") else []):
+                    if fch not in todas: err.append(f"escena {k}: línea con fecha {fch} sin vela")
+                if L.get("hasta") and L["hasta"] not in fechas: err.append(f"escena {k}: «hasta» {L['hasta']} fuera del rango")
             for m in e.get("marcas", []):
                 if m["fecha"] not in fechas: err.append(f"escena {k}: marca {m['fecha']} sin vela")
     if VJ.get("ultima_vela") and VJ["ultima_vela"] != ULT.isoformat(): err.append(f"velas.json acaba el {ULT}, video.json espera {VJ['ultima_vela']}")

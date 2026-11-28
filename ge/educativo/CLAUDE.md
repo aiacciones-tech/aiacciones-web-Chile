@@ -19,7 +19,7 @@ Plan de temas (orden propuesto): 1 Unterstützung und Widerstand (NVDA) · 2 Gle
 
 ## Piezas
 - `video.json` por lección en `lecciones/<base>/`: base, folge, simbolo (TradingView), ticker, nombre, tema, ultima_vela, escenas, info, miniatura.
-  Escenas (`tipo`): `portada`, `esquema` (modo sr / rollentausch / fehlausbruch), `puntos` (≤5 [título, texto]), `grafico` (desde, hasta, zonas
+  Escenas (`tipo`): `portada`, `esquema` (modo sr / rollentausch / fehlausbruch / trendkanal), `puntos` (≤5 [título, texto]), `grafico` (desde, hasta, zonas
   [{de, a, texto, color}], marcas [{fecha, tipo techo|suelo, texto}], nota, volumen, ultimo, animar_velas), `fin` (claves ≤4, siguiente).
   `capitulo` en una escena = capítulo de YouTube y tramo de la barra de progreso. Para un tema nuevo que necesite otro dibujo (medias, RSI…),
   se añade una opción a `s_grafico` o un tipo nuevo en `make_leccion.py`.
@@ -27,6 +27,8 @@ Plan de temas (orden propuesto): 1 Unterstützung und Widerstand (NVDA) · 2 Gle
   y genera la voz Azure de-DE-ConradNeural (mismo recurso y secretos que el diario) en `<base>/` de la rama `voz-ge-educativo`.
 - `niveles.py <velas.json> [ventana] [tolerancia %] [sesiones]`: pivotes y zonas candidatas con toques y fechas, para escribir el guion.
 - Escena `grafico`: `medias` [20, 50, 200] (GD simples, berechnet) y `simbolo`+`nombre`+`ticker` para otra acción (añádela a `simbolos_extra`; pide `velas_n` 700 para la GD 200).
+- Escena `grafico`: `lineas` [{de:[fecha,precio], a:[fecha,precio], hasta, paralela:[fecha,precio], color, texto}]: línea de tendencia entre dos
+  anclas (pueden caer antes de `desde`), prolongada a trazos hasta `hasta`; `paralela` dibuja el canal. Las anclas deben existir en velas.json.
 - `make_leccion.py <carpeta> [preview]` (con `AUD`, `VELAS`, `VOZ_DIR`): 4-9 min, control de calidad, escribe mp4, times.json y guion.
 - `meta_leccion.py <carpeta>`: meta de YouTube (language de), posts de Telegram, X, LinkedIn, TikTok e Instagram (Reel), miniatura (gráfico de la escena `miniatura.grafico`).
 - `encolar.sh <carpeta>`: `cola-ge/<base>/` en `youtube-cola`; `youtube-GE.yml` sube, `telegram-GE.yml` y `buffer-GE.yml` publican.
