@@ -1,0 +1,93 @@
+{
+ "cabecera": "Wall Street über Nacht · 27. November 2026",
+ "out": "short-bolsa-2026-11-27-GE.mp4",
+ "fuente": "Quellen: TradingView, N Globe News\nund StockTitan (27. November 2026).",
+ "escenas": [
+  {
+   "tipo": "titulo",
+   "kicker": "Wall Street · Sitzung vom",
+   "fecha": "Fr., 27. November 2026",
+   "indices": [
+    [
+     "S&P 500",
+     "+1,60 %",
+     "7.297,49",
+     "teal"
+    ],
+    [
+     "Nasdaq",
+     "+2,31 %",
+     "24.129,50",
+     "teal"
+    ]
+   ],
+   "pregunta": "Beste Woche seit April 2025",
+   "voz": "Wall Street, Freitag, 27. November. Die beste Woche seit April 2025. Drei Punkte."
+  },
+  {
+   "tipo": "cifra",
+   "n": 1,
+   "label": "S&P 500 in der Woche",
+   "big": "+5,6 %",
+   "delta": "Beste Woche seit April 2025",
+   "color": "teal",
+   "barras": [
+    [
+     "S&P 500",
+     5.6
+    ],
+    [
+     "Nasdaq",
+     6.68
+    ],
+    [
+     "Dow Jones",
+     5.46
+    ]
+   ],
+   "nota": "Laut N Globe News.\nDow: stärkste Woche seit 2022.",
+   "voz": "Eins. Der S&P 500 gewinnt in dieser Woche 5,6 Prozent, so viel wie seit April 2025 nicht mehr."
+  },
+  {
+   "tipo": "cifra",
+   "n": 2,
+   "label": "Sandisk",
+   "big": "+15,96 %",
+   "delta": "Schluss 85,36 $",
+   "color": "teal",
+   "nota": "Speicherwerte vorn (StockTitan).\nMicron +7,60 %.",
+   "voz": "Zwei. Speicherwerte führen: Sandisk steigt um 16 Prozent, Micron um 7,6 Prozent."
+  },
+  {
+   "tipo": "kpis",
+   "n": 3,
+   "label": "Charttechnik S&P 500",
+   "items": [
+    [
+     "45",
+     "RSI 14",
+     "blue"
+    ],
+    [
+     "−0,8 %",
+     "unter der 200-Tage-Linie",
+     "neg"
+    ],
+    [
+     "−7,0 %",
+     "unter dem Rekordhoch",
+     "neg"
+    ]
+   ],
+   "nota": "Verkürzter Handel, geringes Volumen.\nDas sind Daten, keine Kauf- oder Verkaufssignale.",
+   "voz": "Drei. Der S&P 500 liegt nur noch 0,8 Prozent unter der 200-Tage-Linie."
+  },
+  {
+   "tipo": "fin",
+   "nombre": "Wall Street auf Deutsch",
+   "titular": "Nächste Sitzung:\nMontag",
+   "cta": "Das ganze Video auf dem Kanal",
+   "voz": "Die nächste Sitzung ist am Montag. Das ganze Video finden Sie auf unserem Kanal. Keine Anlageberatung."
+  }
+ ]
+}

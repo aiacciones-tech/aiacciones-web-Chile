@@ -1,0 +1,164 @@
+{
+ "fecha": "2026-11-27",
+ "titular": "Beste Woche seit April 2025: S&P 500 +5,6 %",
+ "nombres": {},
+ "ticker": [
+  "S&P 500 +1,60 %, Nasdaq Composite +2,31 %",
+  "Woche: S&P 500 +5,6 %, beste Woche seit April 2025",
+  "Sandisk +15,96 %, Micron +7,60 %",
+  "Amazon +3,96 % am Black Friday",
+  "VIX −15,8 % auf 23,8",
+  "Nächste Sitzung: Montag, 30. November"
+ ],
+ "voz": {
+  "s_title": "Willkommen zum Tagesbericht von Wall Street auf Deutsch, an diesem Samstag, dem 28. November. Die Wall Street hat gestern, am Freitag nach Thanksgiving, eine kurze, aber starke Sitzung erlebt. Bis zum frühen Handelsschluss um 13 Uhr New Yorker Zeit stieg der S&P 500 um 1,6 Prozent auf rund 7.297 Punkte, der Nasdaq Composite um 2,31 Prozent. Auf Wochensicht gewann der S&P 500 5,6 Prozent, laut N Globe News die beste Woche seit April 2025. Vorn lagen erneut die Chip- und Speicherwerte.",
+  "s_indices": "Die großen Indizes im Überblick. Der S&P 500 schloss am Freitag bei 7.297,49 Punkten, ein Plus von 115 Punkten. Der Nasdaq 100 stieg um 2,61 Prozent auf 26.726 Punkte, der Dow Jones um 592 Punkte oder 1,18 Prozent auf 50.775 Punkte. Der Russell 2000 legte um 1,71 Prozent zu. Die Breite war sehr stark: Im S&P 500 stiegen 404 Werte, nur 93 fielen, berechnet. Wegen des verkürzten Handels lag das Volumen allerdings rund die Hälfte unter dem Schnitt der letzten zehn Tage. Laut N Globe News war es für den Dow mit plus 5,5 Prozent die stärkste Woche seit 2022. Der S&P 500 liegt jetzt noch 7 Prozent unter seinem Rekordhoch vom 6. Oktober.",
+  "s_grandes": "Wer hat die Indizes bewegt? Alle großen Werte im Nasdaq 100 stiegen. Tesla legte 5,2 Prozent zu, Amazon knapp 4 Prozent und Meta 3,1 Prozent. Apple, Nvidia, Alphabet und Microsoft gewannen jeweils knapp 1 Prozent. Im Dow Jones brachte Caterpillar allein rund 107 Punkte, berechnet aus den Tagesdaten. Dahinter folgten Goldman Sachs mit 70 und Amazon mit 58 Punkten. Nur wenige Dow-Werte gaben leicht nach, etwa McDonald's und Procter & Gamble.",
+  "s_news": "Warum ist der Markt gestiegen? Erstens: Laut JournalArta griffen Anleger nach dem starken Rückgang der Technologiewerte im November wieder zu, vor allem bei Chipaktien. Zweitens: China. Laut JournalArta versprach der chinesische Staatsrat mehr Unterstützung für die Kapitalmärkte; der Shanghai Composite stieg um 3,74 Prozent. Laut CNBC, zitiert von StockTitan, verzeichneten chinesische Chipwerte den größten Tagesgewinn ihrer Geschichte. Drittens: Laut JournalArta nahm ein US-Zollplan Halbleiter aus, das stützte etwa TSMC. Und der Black Friday: Laut Adobe Analytics, zitiert von N Globe News, sollten die Online-Ausgaben in den USA um 9,2 Prozent auf 12,9 Milliarden Dollar steigen.",
+  "s_sectores": "Zu den Sektoren. Alle sechs Sektor-ETFs stiegen. Technologie lag mit plus 2,8 Prozent vorn, zyklischer Konsum mit 2,1 Prozent dahinter, getragen von Amazon und Tesla. Industrie gewann 1,6 Prozent, Energie 1,3 Prozent und Finanzen 1,2 Prozent. Am schwächsten war Gesundheit mit plus 0,28 Prozent. Trotz der Erholung liegt Technologie auf Monatssicht noch 16 Prozent im Minus.",
+  "s_macro": "Zu Zinsen, Dollar und Rohstoffen. Die Rendite der 10-jährigen US-Staatsanleihe stieg um 7 Basispunkte auf 4,94 Prozent. Der Dollar-Index DXY legte um 0,25 Prozent auf 104,0 zu. Der Volatilitätsindex VIX fiel um fast 16 Prozent auf 23,8 Punkte. Beim US-Ölpreis WTI zeigen unsere Daten zuletzt, mit Stand Donnerstag, 83,32 Dollar, ein Minus von 1 Prozent; Gold stieg um 2 Prozent auf rund 3.654 Dollar. Für Anleger im Euroraum: Der Euro gab 0,33 Prozent auf 1,0933 Dollar nach, deshalb gewann der S&P 500 in Euro gerechnet sogar 1,94 Prozent, berechnet. Und Europa? Der DAX schloss am Freitag mit plus 0,9 Prozent bei 25.441 Punkten, der Euro Stoxx 50 mit plus 1,24 Prozent. Der Xetra-Handel beginnt wieder am Montag um 9 Uhr.",
+  "s_tech_spx": "Zur Charttechnik. Der S&P 500 liegt nur noch 0,8 Prozent unter seiner 200-Tage-Linie bei rund 7.354 Punkten. Zur 20-Tage-Linie fehlen 1,4 Prozent, zur 50-Tage-Linie 3,9 Prozent. Der RSI stieg auf 45 und liegt im neutralen Bereich. Das Volumen war wegen des verkürzten Handels gering, rund 50 Prozent unter dem Zehn-Tage-Schnitt.",
+  "s_esc_spx": "Drei Szenarien für den S&P 500. Im positiven Szenario würde ein Schluss über der 200-Tage-Linie bei rund 7.354 Punkten die Erholung bestätigen; die nächste Marke wäre die 20-Tage-Linie bei rund 7.402. Im neutralen Szenario pendelt der Index zwischen dem Tief vom 20. November bei 6.883 und der 200-Tage-Linie. Im negativen Szenario würde ein Schluss unter 6.883 Punkten die Erholung in Frage stellen; dann rückte das 52-Wochen-Tief bei rund 6.317 in den Blick. Das sind Bedingungen, keine Prognosen.",
+  "s_tech_ndx": "Der Nasdaq 100 liegt 4,9 Prozent unter seiner 200-Tage-Linie und 7,9 Prozent unter der 50-Tage-Linie. Der RSI liegt bei 44. Das Volumen lag 46 Prozent unter dem Zehn-Tage-Schnitt. Zum Rekordhoch vom 6. Oktober fehlen knapp 15 Prozent.",
+  "s_esc_ndx": "Für den Nasdaq 100 beginnt das positive Szenario über dem Hoch vom 23. November bei rund 27.019 Punkten; darüber wäre die 20-Tage-Linie bei rund 27.273 die nächste Marke. Im neutralen Szenario bleibt der Index zwischen dem Tief vom 20. November bei 24.910 und dem Hoch vom 23. November. Im negativen Szenario würde ein Schluss unter 24.910 Punkten den Blick auf das 52-Wochen-Tief bei 22.841 lenken.",
+  "s_agenda": "Was steht an? Die nächste Sitzung an der Wall Street beginnt am Montag um 9:30 Uhr New Yorker Zeit, 15:30 Uhr bei uns. Am Dienstag folgen laut JournalArta und StockTitan der ISM-Index für die Industrie und die offenen Stellen, jeweils um 10 Uhr New Yorker Zeit, 16 Uhr bei uns. Am Freitag kommt der Arbeitsmarktbericht für November, um 8:30 Uhr New Yorker Zeit, 14:30 Uhr bei uns. Unter den Quartalszahlen der Woche: CrowdStrike und Marvell am Dienstag, Salesforce am Mittwoch. Die Zinsentscheidung der Fed folgt am 9. Dezember.",
+  "s_fin": "Unser Fazit: Nach dem schwachen Vormonat holte die Wall Street in dieser kurzen Woche kräftig auf. Der S&P 500 steht kurz unter seiner 200-Tage-Linie, und das Volumen war am Freitag gering. Die neue Woche bringt mit dem Arbeitsmarktbericht einen wichtigen Test. Folgen Sie uns kostenlos auf Telegram, der Link steht in der Videobeschreibung. Wichtiger Hinweis: Das ist keine Anlageberatung, sondern nur Information. Text, Stimme und Grafiken sind mit KI erstellt. Wir sehen uns am Dienstag mit dem Bericht zur Montagssitzung, auf Wiedersehen."
+ },
+ "indices": {
+  "titulo": "Beste Woche seit April 2025: S&P 500 +5,6 %, Nasdaq +6,7 %"
+ },
+ "grandes": {
+  "titulo": "Tesla +5,2 %, Amazon +4,0 % · Caterpillar bringt 107 Punkte"
+ },
+ "noticias": {
+  "titulo": "Chips gefragt, China hilft, Black Friday",
+  "fuente": "Quellen: JournalArta, CNBC via StockTitan, N Globe News, Adobe Analytics (27. November 2026).",
+  "items": [
+   [
+    "Chips",
+    "Anleger kaufen nach dem Ausverkauf im November zu"
+   ],
+   [
+    "China",
+    "Staatsrat verspricht Hilfe für Kapitalmärkte · Shanghai +3,74 %"
+   ],
+   [
+    "Zölle",
+    "US-Zollplan nimmt Halbleiter aus (JournalArta)"
+   ],
+   [
+    "Black Friday",
+    "Adobe: Online-Ausgaben 12,9 Mrd. $ (+9,2 %)"
+   ]
+  ]
+ },
+ "sectores": {
+  "titulo": "Alle Sektoren im Plus · Technologie +2,8 %",
+  "items": [
+   [
+    "Technologie vorn",
+    "Technologie +2,80 %; Zyklischer Konsum +2,11 %; Industrie +1,60 %",
+    "teal"
+   ],
+   [
+    "Gesundheit hinten",
+    "Gesundheit +0,28 %; Technologie im Monat −16 %",
+    "neg"
+   ]
+  ]
+ },
+ "acciones": [
+  {
+   "ticker": "SNDK",
+   "noticia": "Keine eigene Meldung; Speicherwerte vorn (StockTitan), China-Chips mit Rekordgewinn (CNBC).",
+   "lectura": "Bester Wert im S&P 500, 8,4 Mrd. $ Umsatz.",
+   "fuente": "Kurs und Volumen: TradingView. Einordnung: StockTitan, CNBC via StockTitan (27. November 2026).",
+   "voz": "Die erste Aktie: Sandisk, ein Hersteller von Flash-Speichern. Die Aktie stieg um 15,96 Prozent auf 85,36 Dollar, umgerechnet rund 78 Euro, der beste Wert im S&P 500. Eine eigene Meldung zu Sandisk fanden wir nicht. Laut StockTitan führten Speicherwerte die Erholung der Chipaktien an."
+  },
+  {
+   "ticker": "MU",
+   "noticia": "Keine eigene Meldung; Erholung der Speicher- und Chipwerte (StockTitan).",
+   "lectura": "17,4 Mrd. $ Handelsumsatz.",
+   "fuente": "Kurs und Volumen: TradingView. Einordnung: StockTitan (27. November 2026).",
+   "voz": "Die zweite Aktie: Micron Technology. Die Aktie stieg um 7,6 Prozent auf 646,95 Dollar, bei 17 Milliarden Dollar Handelsumsatz. Auch hier gab es keine eigene Meldung; Micron stieg mit den anderen Speicherwerten."
+  },
+  {
+   "ticker": "AMZN",
+   "noticia": "N Globe News verbindet das Plus mit starker Nachfrage am Black Friday; Adobe: 12,9 Mrd. $ online.",
+   "lectura": "Brachte dem Dow rund 58 Punkte (berechnet).",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: N Globe News, Adobe Analytics (27. November 2026).",
+   "voz": "Die dritte Aktie: Amazon. Die Aktie stieg um 3,96 Prozent auf 254,12 Dollar. Laut N Globe News half die starke Nachfrage am Black Friday. Adobe Analytics erwartete für den Tag Online-Ausgaben von 12,9 Milliarden Dollar in den USA, 9,2 Prozent mehr als im Vorjahr."
+  },
+  {
+   "ticker": "NVDA",
+   "noticia": "CNBC (via StockTitan): Für China gesperrte Blackwell-Chips in einem Rechenzentrum in Shanghai.",
+   "lectura": "8,8 % unter dem Schluss vom Montag (StockTitan).",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: CNBC via StockTitan (27. November 2026).",
+   "voz": "Die vierte Aktie: Nvidia. Die Aktie stieg nur um 0,8 Prozent auf 150,49 Dollar und blieb damit hinter dem Chipsektor zurück. Laut CNBC, zitiert von StockTitan, wurden Blackwell-Chips, die nicht nach China geliefert werden dürfen, in einem Rechenzentrum in Shanghai installiert. Die letzten Quartalszahlen von Nvidia erklären wir in unserer Serie «Die Wall-Street-Giganten»."
+  },
+  {
+   "ticker": "VRTX",
+   "noticia": "FDA verlängert Prüfung von Povetacicept; Entscheidung bis 28. Februar 2027 statt 30. November (Vertex).",
+   "lectura": "Schwächster Wert im S&P 500, 1,5-faches Volumen.",
+   "fuente": "Kurs und Volumen: TradingView. Meldung: Vertex via StockTitan (25. November 2026).",
+   "voz": "Die fünfte Aktie: Vertex Pharmaceuticals. Gegen den Markt fiel die Aktie um 5,24 Prozent auf 534,57 Dollar, der schwächste Wert im S&P 500. Laut StockTitan teilte Vertex am Mittwochabend mit, dass die US-Arzneimittelbehörde FDA ihre Prüfung des Nierenmittels Povetacicept verlängert. Die Entscheidung fällt nun bis zum 28. Februar 2027 statt bis zum 30. November."
+  }
+ ],
+ "macro": {
+  "titulo": "VIX −15,8 % auf 23,8 · Gold +2 %",
+  "items": {
+   "TVC:US10Y": "Rendite steigt wieder",
+   "TVC:DXY": "Dollar etwas fester",
+   "TVC:VIX": "Nervosität lässt nach",
+   "TVC:USOIL": "Ölpreis leicht schwächer",
+   "TVC:GOLD": "Gold steigt"
+  },
+  "europa": "DAX +0,90 % und Euro Stoxx 50 +1,24 %: Xetra öffnet am Montag um 9:00 Uhr."
+ },
+ "tecnico": {
+  "spx": {
+   "titulo": "0,8 % unter der 200-Tage-Linie, RSI 45",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  },
+  "ndx": {
+   "titulo": "4,9 % unter der 200-Tage-Linie, RSI 44",
+   "rsi_txt": "neutral",
+   "leyenda": "lower left"
+  }
+ },
+ "agenda": {
+  "titulo": "Neue Woche: ISM, offene Stellen, Arbeitsmarkt",
+  "fuente": "Quellen: JournalArta, StockTitan (27. November 2026); NYSE-Handelskalender. Deutsche Zeit berechnet.",
+  "filas": [
+   [
+    "2026-11-30",
+    "Nächste Sitzung an der Wall Street",
+    "09:30",
+    "geplant"
+   ],
+   [
+    "2026-12-01",
+    "ISM Industrie, offene Stellen (JOLTS)",
+    "10:00",
+    "geplant"
+   ],
+   [
+    "2026-12-04",
+    "Arbeitsmarktbericht November",
+    "08:30",
+    "geplant"
+   ],
+   [
+    "2026-12-09",
+    "Fed-Zinsentscheid",
+    "",
+    "geplant"
+   ]
+  ]
+ },
+ "fin": {
+  "titular": "Beste Woche seit April 2025: S&P 500 +5,6 %",
+  "fuentes": "TradingView, JournalArta, StockTitan, CNBC, N Globe News, Adobe Analytics, Vertex"
+ }
+}
